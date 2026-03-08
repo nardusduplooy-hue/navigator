@@ -9,7 +9,7 @@ import os
 load_dotenv()
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-CHAT_ID = 1357019604
+CHAT_IDS = [1357019604, 285802287]
 
 PODCASTS = [
     ("Dr. Tali Režun — Understanding LLMs", "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301"),
@@ -43,57 +43,40 @@ async def send_daily_briefing():
     bot = Bot(token=BOT_TOKEN)
     today = datetime.now().strftime("%A, %d %B %Y")
     
-    # Load channel data
     try:
         with open('navigator_data.json', 'r') as f:
             messages = json.load(f)
-        deadlines = [m for m in messages if any(kw in m['text'].lower() 
-                    for kw in ['due', 'deadline', 'submit', 'by march', 'by april', '19:00', 'cet'])]
-        zoom_msgs = [m for m in messages if 'zoom' in m['text'].lower() and 'http' in m['text'].lower()]
     except:
-        deadlines = []
-        zoom_msgs = []
+        messages = []
 
-    # Pick random podcasts and articles
     today_podcasts = random.sample(PODCASTS, 2)
     today_articles = random.sample(ARTICLES, 3)
 
-    # Build briefing
     msg = f"🧭 *NAVIGATOR DAILY BRIEFING*\n_{today}_\n\n"
-
-    # Deadlines
     msg += "🔴 *DEADLINES*\n"
     msg += "• Future of Work essay — March 23, 19:00 CET\n\n"
-
-    # Next session
     msg += "📅 *NEXT SESSION*\n"
     msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n\n"
-
-    # Status
     msg += "✅ *STATUS*\n"
     msg += "• All JTBDs current\n"
     msg += "• Hult — Submitted & Under Review\n\n"
-
-    # Podcasts
     msg += "🎧 *TODAY'S LISTENING — 2 x 15-30 min*\n"
     for name, url in today_podcasts:
         msg += f"• [{name}]({url})\n"
     msg += "\n"
-
-    # Articles
     msg += "📰 *TODAY'S READING — 3 ARTICLES*\n"
     for name, url in today_articles:
         msg += f"• [{name}]({url})\n"
     msg += "\n"
-
     msg += "⚡ _Navigator out._"
 
-    await bot.send_message(
-        chat_id=CHAT_ID,
-        text=msg,
-        parse_mode='Markdown',
-        disable_web_page_preview=True
-    )
-    print(f"✅ Daily briefing sent at {datetime.now().strftime('%H:%M')}")
+    for chat_id in CHAT_IDS:
+        await bot.send_message(
+            chat_id=chat_id,
+            text=msg,
+            parse_mode='Markdown',
+            disable_web_page_preview=True
+        )
+        print(f"✅ Briefing sent to {chat_id}")
 
 asyncio.run(send_daily_briefing())
