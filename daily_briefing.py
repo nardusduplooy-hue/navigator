@@ -14,14 +14,15 @@ CHAT_IDS = [1357019604, 285802287]
 PODCASTS = [
     ("Dr. Tali Režun — Understanding LLMs", "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301"),
     ("Dr. Tali Režun — From Prompts to Precision", "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701"),
-    ("Lex Fridman — Andrej Karpathy on LLMs", "https://open.spotify.com/episode/4LgBEBRSgaGN4VqYGKGiNH"),
-    ("Lex Fridman — Sam Altman: OpenAI & AGI", "https://open.spotify.com/episode/6PxpRmEEQhiJSE0pQSiFjE"),
-    ("Practical AI — AI Agents in Production", "https://open.spotify.com/show/1LaCr5TFAgYPK5qHjP3XDp"),
-    ("Cognitive Revolution — AI in Business", "https://open.spotify.com/show/6yHyok3M3BmIHDtBZyNBpF"),
-    ("No Priors — AI Founders & Builders", "https://open.spotify.com/show/0bZNDmcaUSjFCaVdmDTJeP"),
-    ("Latent Space — AI Engineering", "https://open.spotify.com/show/2p22p2Z3tLRgHtEJFmECQc"),
-    ("The AI Breakdown — Daily AI News", "https://open.spotify.com/show/6LbQ4bRQESmrRSFkFHwKNG"),
-    ("Eye on AI — Weekly Industry News", "https://open.spotify.com/show/7fl4AnOhBqKCfRfHJnrUQg"),
+    ("Lex Fridman — Andrej Karpathy: Deep Dive into LLMs", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
+    ("Lex Fridman — Sam Altman on OpenAI & AGI", "https://www.youtube.com/watch?v=jvqFAi7vkBc"),
+    ("Lex Fridman — Demis Hassabis: DeepMind & AGI", "https://www.youtube.com/watch?v=Gfr50f6ZBvo"),
+    ("Andrej Karpathy — Intro to Large Language Models", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
+    ("Cognitive Revolution — AI in Business", "https://www.youtube.com/@CognitiveRevolutionPodcast"),
+    ("Latent Space — AI Engineering Podcast", "https://www.latent.space/podcast"),
+    ("Practical AI — Changelog Podcast", "https://changelog.com/practicalai"),
+    ("Eye on AI — Weekly Industry News", "https://www.eye-on.ai/podcast-archive"),
+    ("TWIML AI Podcast", "https://twimlai.com/podcast/twimlai/"),
 ]
 
 ARTICLES = [
@@ -42,12 +43,6 @@ ARTICLES = [
 async def send_daily_briefing():
     bot = Bot(token=BOT_TOKEN)
     today = datetime.now().strftime("%A, %d %B %Y")
-    
-    try:
-        with open('navigator_data.json', 'r') as f:
-            messages = json.load(f)
-    except:
-        messages = []
 
     today_podcasts = random.sample(PODCASTS, 2)
     today_articles = random.sample(ARTICLES, 3)
