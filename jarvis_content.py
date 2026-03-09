@@ -1,154 +1,166 @@
-# Module 1 ONLY
+# CHASING JARVIS — CONTENT LIBRARY
+# Every item traces to official course materials only
+# Current focus: Module 1. Module 2 preview only — session March 21
 
-DR_TALI_ARTICLES = [
+MODULE_1_TALI = [
+    {
+        "title": "Understanding LLMs: AI-Generated Research Podcast",
+        "url": "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301",
+        "note": "Listen before Module 1, Session 1 — audio version"
+    },
     {
         "title": "Understanding Large Language Models: A Complete Manual",
         "url": "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00",
-        "focus": "Core Module 1 reading — LLMs, SLMs, open-source vs closed-source, context windows"
-    },
-    {
-        "title": "From Prompts to Precision: The Art & Science of Context Engineering",
-        "url": "https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c",
-        "focus": "How context engineering succeeds prompt engineering — directly relevant to Navigator"
-    },
-    {
-        "title": "Understanding AI Agents: From Chatbots to Autonomous Digital Workers",
-        "url": "https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695",
-        "focus": "What makes an AI agent — the theory behind what you are building"
-    },
-    {
-        "title": "The Year I Started Coding with AI: My Coding Agent Journey",
-        "url": "https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1",
-        "focus": "Dr. Tali's personal journey — context for the entire Chasing Jarvis course"
-    },
-    {
-        "title": "The Claude Desktop Coding Agent Experiment: Context Management Lessons",
-        "url": "https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be",
-        "focus": "How to manage context with Claude — directly applicable to Navigator build"
-    },
-    {
-        "title": "Chasing Jarvis: The Three Missing Pieces in AI Coding Agents",
-        "url": "https://medium.com/@talirezun/chasing-jarvis-the-three-missing-pieces-in-ai-coding-agents-0343ee95356f",
-        "focus": "Why context engineering is the bottleneck — the problem Navigator solves"
-    },
-    {
-        "title": "From One Agent to Coding Agent Armies: My 15-Month Journey to AI Orchestration",
-        "url": "https://medium.com/@talirezun/from-one-agent-to-coding-agent-armies-my-15-month-journey-to-ai-orchestration-b9138675a075",
-        "focus": "Latest article — where AI agent development is heading in 2026"
+        "note": "Read before Module 1, Session 1 — core text"
     },
 ]
 
-MODULE_1_PREREADING = [
+MODULE_2_TALI = [
     {
-        "title": "Understanding Large Language Models: A Complete Manual",
-        "author": "Dr. Tali Režun",
-        "url": "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00",
-        "focus": "Core Module 1 reading — LLMs, SLMs, open-source vs closed-source, context windows",
-        "module": 1
+        "title": "The Context Engineer's Toolkit: Essential AI Tools for All Levels",
+        "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
+        "note": "Read before Module 2 — session March 21"
     },
     {
-        "title": "From Lab to Life Podcast — Understanding LLMs (Audio version)",
-        "author": "Dr. Tali Režun",
-        "url": "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301",
-        "focus": "30 min audio version of the Module 1 manual",
-        "module": 1
-    },
-    {
-        "title": "Intro to Large Language Models — Andrej Karpathy (YouTube, 1hr)",
-        "author": "Andrej Karpathy, ex-OpenAI",
-        "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
-        "focus": "How LLMs actually work under the hood — essential technical foundation",
-        "module": 1
+        "title": "Data Sovereignty in the AI Age: Building Your Own Private ChatGPT",
+        "url": "https://medium.com/@talirezun/data-sovereignty-in-the-ai-age-building-your-own-private-chatgpt-a83c96e342a0",
+        "note": "Read before the LM Studio session in Module 2"
     },
 ]
 
 MODULE_1_ASSIGNMENTS = [
     {
         "assignment": "Define and differentiate between LLMs, SLMs, open-source, and closed-source models",
-        "why": "Foundation of the course — you cannot evaluate any AI tool without this",
+        "why": "The foundation of every tool decision you make in Modules 2 through 5",
         "prep_links": [
-            ("LLM vs SLM — key differences explained (Red Hat article)", "https://www.redhat.com/en/topics/ai/llm-vs-slm"),
-            ("Open vs Closed Source AI — why it matters (Euronews)", "https://www.euronews.com/next/2024/02/20/open-source-vs-closed-source-ai-whats-the-difference-and-why-does-it-matter"),
-            ("MIT Sloan — Open vs Closed models: performance and cost data", "https://mitsloan.mit.edu/ideas-made-to-matter/ai-open-models-have-benefits-so-why-arent-they-more-widely-used"),
+            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
+            ("LLM vs SLM: key differences — Red Hat article", "https://www.redhat.com/en/topics/ai/llm-vs-slm"),
+            ("Open vs Closed Source AI explained — Euronews", "https://www.euronews.com/next/2024/02/20/open-source-vs-closed-source-ai-whats-the-difference-and-why-does-it-matter"),
         ],
-        "module": 1
+    },
+    {
+        "assignment": "Explain the fundamental architecture of neural networks and transformer models",
+        "why": "Claude, GPT-4, and Gemini all run on transformer architecture — this gives you an edge in every module",
+        "prep_links": [
+            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
+            ("3Blue1Brown — Attention in Transformers visualised (YouTube, 26 min)", "https://www.youtube.com/watch?v=wjZofJX0v4M"),
+        ],
     },
     {
         "assignment": "Compare human cognitive processes with AI equivalents — context windows, training data, inference",
         "why": "Context windows are the foundation of Module 4 context engineering",
         "prep_links": [
+            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
             ("What is a Context Window — McKinsey plain-English explainer", "https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-a-context-window"),
-            ("Context Windows explained in depth — IBM Think", "https://www.ibm.com/think/topics/context-window"),
+            ("Andrej Karpathy — Intro to LLMs (YouTube, 1hr)", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
         ],
-        "module": 1
     },
     {
         "assignment": "Evaluate the strengths and limitations of current LLM technology",
         "why": "Knowing when NOT to use AI is as important as knowing when to use it",
         "prep_links": [
+            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
             ("AI Snake Oil — Princeton researchers on what AI cannot do", "https://www.aisnakeoil.com"),
-            ("LLM vs SLM limitations compared — GeeksforGeeks", "https://www.geeksforgeeks.org/artificial-intelligence/llms-vs-slms-comparative-analysis-of-language-model-architectures/"),
         ],
-        "module": 1
     },
     {
-        "assignment": "Identify real-world entrepreneurial applications of LLMs",
-        "why": "You are already doing this — Navigator is your live answer to this assignment",
+        "assignment": "Apply foundational knowledge to make informed decisions about AI tool selection",
+        "why": "Direct preparation for Module 2 — you will select tools for your Module 5 MVP",
         "prep_links": [
-            ("Dr. Tali — Understanding AI Agents: From Chatbots to Autonomous Workers", "https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695"),
-            ("Andrej Karpathy — LLMs as the new operating system (YouTube)", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
+            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
+            ("MIT Sloan — Open vs Closed models: performance and cost data", "https://mitsloan.mit.edu/ideas-made-to-matter/ai-open-models-have-benefits-so-why-arent-they-more-widely-used"),
         ],
-        "module": 1
     },
 ]
 
 TOOLS_EXPLAINED = [
     {
-        "tool": "Claude AI — what it is and how it differs",
-        "why": "The model powering Navigator — understand what you are already using",
-        "link": "https://www.anthropic.com/research/core-views-on-ai-safety",
-        "description": "Anthropic's own paper on why they built Claude differently — safety-first vs capability-first"
+        "tool": "Claude AI",
+        "module": "All modules",
+        "why": "The model powering Navigator — you are already using it",
+        "link": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "description": "Anthropic's official prompt engineering guide — how to get better outputs from Claude right now"
     },
     {
-        "tool": "GitHub — version control for your build",
+        "tool": "Google NotebookLM",
+        "module": "Module 2 + Module 4",
+        "why": "Required for Module 2 and your Module 4 MVP research",
+        "link": "https://notebooklm.google.com/",
+        "description": "Sign up free at notebooklm.google.com — upload Dr. Tali's articles and ask questions directly from the source"
+    },
+    {
+        "tool": "Google AI Studio",
+        "module": "Module 2 + Module 4 + Module 5",
+        "why": "Required for Modules 2, 4 and 5 — the beginner MVP build track",
+        "link": "https://aistudio.google.com/",
+        "description": "Sign up free at aistudio.google.com — this is where you prototype your Module 5 MVP"
+    },
+    {
+        "tool": "n8n Workflow Automation",
+        "module": "Module 2 + Module 3",
+        "why": "Required for Modules 2 and 3 — automates Navigator without code",
+        "link": "https://docs.n8n.io/try-it-out/",
+        "description": "n8n quickstart — build your first automated workflow in 5 minutes. Free tier at n8n.io"
+    },
+    {
+        "tool": "GitHub",
+        "module": "Module 2 + Module 4 + Module 5",
         "why": "Navigator already lives here — understand what it is doing",
         "link": "https://www.youtube.com/watch?v=RGOj5yH7evk",
-        "description": "Git and GitHub explained for beginners — 12 min YouTube by freeCodeCamp"
+        "description": "Git and GitHub for beginners — freeCodeCamp YouTube, 12 min"
     },
     {
-        "tool": "Tokens and context windows — the currency of LLMs",
-        "why": "Every API call costs tokens — you need this for Module 4 context engineering",
-        "link": "https://www.datacamp.com/blog/context-window",
-        "description": "DataCamp — tokens, context windows, and how LLMs process text, explained clearly"
+        "tool": "LM Studio",
+        "module": "Module 2",
+        "why": "Run AI models locally on your MacBook — no data leaves your machine",
+        "link": "https://lmstudio.ai/",
+        "description": "Download free at lmstudio.ai — required for the Module 2 LM Studio session"
     },
     {
         "tool": "Model Context Protocol (MCP)",
-        "why": "What turns Claude into an agent — core of Module 3",
+        "module": "Module 3",
+        "why": "What turns Claude into an agent — the core of Module 3",
         "link": "https://modelcontextprotocol.io/introduction",
-        "description": "Official MCP introduction — the architecture behind Navigator's agent layer"
+        "description": "Official MCP introduction — read before Module 3. The architecture behind Navigator's agent layer"
     },
     {
-        "tool": "Transformer architecture — how LLMs actually think",
-        "why": "The underlying architecture of every model — Claude, GPT-4, Gemini all use this",
-        "link": "https://www.youtube.com/watch?v=wjZofJX0v4M",
-        "description": "3Blue1Brown — Attention in Transformers explained visually (YouTube, 26 min)"
+        "tool": "VS Code",
+        "module": "Module 3 + Module 4 + Module 5",
+        "why": "Required for Modules 3, 4 and 5 coding sessions",
+        "link": "https://code.visualstudio.com/",
+        "description": "Download free at code.visualstudio.com — install before Module 3"
+    },
+]
+
+SUPPLEMENTARY = [
+    {
+        "title": "Building Effective AI Agents — Anthropic",
+        "url": "https://www.anthropic.com/research/building-effective-agents",
+        "module": "Module 3",
+        "note": "Technical deep dive from Anthropic's engineering team"
     },
     {
-        "tool": "Prompt Engineering — getting better outputs from Claude",
-        "why": "You are already doing this — now learn the theory behind it",
-        "link": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "description": "Anthropic's official prompt engineering guide — the techniques behind effective AI interaction"
+        "title": "Effective Context Engineering for AI Agents — Anthropic",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+        "module": "Module 4",
+        "note": "Technical deep dive from Anthropic's engineering team"
     },
     {
-        "tool": "n8n — workflow automation without code",
-        "why": "The engine that will automate Navigator — connects Telegram to Claude",
-        "link": "https://docs.n8n.io/try-it-out/",
-        "description": "n8n quickstart guide — try your first automated workflow in 5 minutes"
+        "title": "The New Skill in AI is Not Prompting, It's Context Engineering — Philipp Schmid",
+        "url": "https://www.philschmid.de/context-engineering",
+        "module": "Module 4",
+        "note": "Industry perspective on context engineering"
     },
     {
-        "tool": "LM Studio — run AI locally on your Mac",
-        "why": "Privacy-first AI — no data leaves your machine",
-        "link": "https://lmstudio.ai/",
-        "description": "Download LM Studio and run open-source LLMs on your MacBook — no internet required"
+        "title": "Context Engineering for AI Agents: Lessons from Building Manus",
+        "url": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
+        "module": "Module 4",
+        "note": "Practical insights from production deployment"
+    },
+    {
+        "title": "Markdown Guide — complete reference",
+        "url": "https://www.markdownguide.org/",
+        "module": "Module 4",
+        "note": "Required for context engineering — markdown structures your agent instructions"
     },
 ]
