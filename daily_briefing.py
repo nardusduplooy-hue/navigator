@@ -5,25 +5,16 @@ from datetime import datetime
 from telegram import Bot
 from dotenv import load_dotenv
 import os
+from jarvis_content import (
+    MODULE_1_PREREADING, MODULE_2_PREREADING,
+    MODULE_1_ASSIGNMENTS, MODULE_2_ASSIGNMENTS,
+    TOOLS_EXPLAINED
+)
 
 load_dotenv()
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [1357019604, 285802287]
-
-PODCASTS = [
-    ("Dr. Tali Režun — Understanding LLMs", "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301"),
-    ("Dr. Tali Režun — From Prompts to Precision", "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701"),
-    ("Lex Fridman — Andrej Karpathy: Deep Dive into LLMs", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
-    ("Lex Fridman — Sam Altman on OpenAI & AGI", "https://www.youtube.com/watch?v=jvqFAi7vkBc"),
-    ("Lex Fridman — Demis Hassabis: DeepMind & AGI", "https://www.youtube.com/watch?v=Gfr50f6ZBvo"),
-    ("Andrej Karpathy — Intro to Large Language Models", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
-    ("Cognitive Revolution — AI in Business", "https://www.youtube.com/@CognitiveRevolutionPodcast"),
-    ("Latent Space — AI Engineering Podcast", "https://www.latent.space/podcast"),
-    ("Practical AI — Changelog Podcast", "https://changelog.com/practicalai"),
-    ("Eye on AI — Weekly Industry News", "https://www.eye-on.ai/podcast-archive"),
-    ("TWIML AI Podcast", "https://twimlai.com/podcast/twimlai/"),
-]
 
 ARTICLES = [
     ("Anthropic Research Blog", "https://www.anthropic.com/research"),
@@ -44,25 +35,60 @@ async def send_daily_briefing():
     bot = Bot(token=BOT_TOKEN)
     today = datetime.now().strftime("%A, %d %B %Y")
 
-    today_podcasts = random.sample(PODCASTS, 2)
+    # Pick content
+    prereading = random.choice(MODULE_1_PREREADING + MODULE_2_PREREADING)
+    m1_assignment = random.choice(MODULE_1_ASSIGNMENTS)
+    m2_assignment = random.choice(MODULE_2_ASSIGNMENTS)
+    tool = random.choice(TOOLS_EXPLAINED)
     today_articles = random.sample(ARTICLES, 3)
 
     msg = f"🧭 *NAVIGATOR DAILY BRIEFING*\n_{today}_\n\n"
+
+    # Deadlines
     msg += "🔴 *DEADLINES*\n"
     msg += "• Future of Work essay — March 23, 19:00 CET\n\n"
+
+    # Next session
     msg += "📅 *NEXT SESSION*\n"
     msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n\n"
+
+    # Status
     msg += "✅ *STATUS*\n"
     msg += "• All JTBDs current\n"
     msg += "• Hult — Submitted & Under Review\n\n"
-    msg += "🎧 *TODAY'S LISTENING — 2 x 15-30 min*\n"
-    for name, url in today_podcasts:
+
+    # Chasing Jarvis section
+    msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
+
+    msg += f"📖 *Pre-reading (Module {prereading['module']}):*\n"
+    msg += f"[{prereading['title']}]({prereading['url']})\n"
+    msg += f"_{prereading['focus']}_\n\n"
+
+    msg += f"🔧 *Tool to understand today:*\n"
+    msg += f"*{tool['tool']}* — {tool['why']}\n"
+    msg += f"[Watch/Read explanation]({tool['link']})\n"
+    msg += f"_{tool['description']}_\n\n"
+
+    msg += f"📝 *Module 1 Assignment to prepare:*\n"
+    msg += f"_{m1_assignment['assignment']}_\n"
+    msg += f"Why it matters: {m1_assignment['why']}\n"
+    for name, url in m1_assignment['prep_links']:
         msg += f"• [{name}]({url})\n"
     msg += "\n"
-    msg += "📰 *TODAY'S READING — 3 ARTICLES*\n"
+
+    msg += f"📝 *Module 2 Assignment to prepare:*\n"
+    msg += f"_{m2_assignment['assignment']}_\n"
+    msg += f"Why it matters: {m2_assignment['why']}\n"
+    for name, url in m2_assignment['prep_links']:
+        msg += f"• [{name}]({url})\n"
+    msg += "\n"
+
+    # Articles
+    msg += "📰 *TODAY'S AI READING — 3 ARTICLES*\n"
     for name, url in today_articles:
         msg += f"• [{name}]({url})\n"
     msg += "\n"
+
     msg += "⚡ _Navigator out._"
 
     for chat_id in CHAT_IDS:
