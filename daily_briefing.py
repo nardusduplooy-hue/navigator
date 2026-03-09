@@ -1,46 +1,108 @@
 import json
 import asyncio
 import random
+import os
 from datetime import datetime
 from telegram import Bot
 from dotenv import load_dotenv
-import os
 from jarvis_content import (
-    MODULE_1_TALI,
-    MODULE_2_TALI,
-    MODULE_1_ASSIGNMENTS,
-    TOOLS_EXPLAINED,
-    SUPPLEMENTARY
+    MODULE_4_TALI,
+    KAPUSTA_ARTICLES,
+    MODULE_4_TALI,
+    KAPUSTA_ARTICLES,
+    MODULE_1_TALI, MODULE_2_TALI, MODULE_1_ASSIGNMENTS, TOOLS_EXPLAINED, SUPPLEMENTARY
 )
 
-load_dotenv()
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_IDS = [1357019604, 285802287]
+
+# Noise blocks to filter out from portal scraping
+NOISE_BLOCKS = [
+    "re: intro to the vanguard",
+    "your next zook session is on saturday (january 10",
+    "by the end of this course, students will be able to",
+    "discussion of individual assignments is encouraged",
+]
+
+def get_portal_data():
+    """Load and filter portal_data.json if it exists."""
+    zoom_link = None
+    deadlines = []
+
+    try:
+        with open("portal_data.json") as f:
+            pages = json.load(f)
+
+        # Get most recent Zoom meeting link (highest session number)
+        best_session = 0
+        for page in pages:
+            for z in page["zoom_links"]:
+                if "/zoom/meetings/" in z["url"]:
+                    try:
+                        num = int(z["url"].rstrip("/").split("/")[-1].split("?")[0])
+                        if num > best_session:
+                            best_session = num
+                            zoom_link = z
+                    except:
+                        pass
+
+        # Get deadline blocks — filter noise, deduplicate
+        seen = set()
+        future_keywords = ["march", "april", "may", "june", "2026", "2027"]
+        for page in pages:
+            for d in page["deadlines"]:
+                d_lower = d.lower()
+                # Skip noise
+                if any(noise in d_lower for noise in NOISE_BLOCKS):
+                    continue
+                # Prefer blocks with future dates
+                if any(kw in d_lower for kw in future_keywords):
+                    if d not in seen and len(d) > 30:
+                        seen.add(d)
+                        deadlines.append(d[:200])
+
+    except FileNotFoundError:
+        pass
+
+    return zoom_link, deadlines[:5]
 
 async def send_daily_briefing():
     bot = Bot(token=BOT_TOKEN)
     today = datetime.now().strftime("%A, %d %B %Y")
 
-    # Always both Module 1 Tali articles + 1 Module 2 preview
-    tali_m1 = MODULE_1_TALI  # both, always
+    tali_m1 = MODULE_1_TALI
     tali_m2_preview = random.choice(MODULE_2_TALI)
     assignment = random.choice(MODULE_1_ASSIGNMENTS)
     tool = random.choice(TOOLS_EXPLAINED)
     supp = random.choice(SUPPLEMENTARY)
 
+    zoom_link, portal_deadlines = get_portal_data()
+
     msg = f"🧭 *NAVIGATOR DAILY BRIEFING*\n_{today}_\n\n"
 
+    # DEADLINES
     msg += "🔴 *DEADLINES*\n"
-    msg += "• Future of Work essay — March 23, 19:00 CET\n\n"
+    msg += "• Future of Work essay — March 23, 19:00 CET\n"
+    if portal_deadlines:
+        for d in portal_deadlines[:2]:
+            msg += f"• {d[:150]}\n"
+    msg += "\n"
 
+    # NEXT SESSION
     msg += "📅 *NEXT SESSION*\n"
-    msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n\n"
+    msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n"
+    if zoom_link:
+        msg += f"• [Latest Zoom Link — {zoom_link['text']}]({zoom_link['url']})\n"
+    msg += "\n"
 
+    # STATUS
     msg += "✅ *STATUS*\n"
     msg += "• All JTBDs current\n"
     msg += "• Hult — Submitted & Under Review\n\n"
 
+    # CHASING JARVIS
     msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
 
     msg += "📖 *Module 1 — Dr. Tali's required reading:*\n"
@@ -56,7 +118,7 @@ async def send_daily_briefing():
     msg += f"📝 *Module 1 assignment to prepare:*\n"
     msg += f"_{assignment['assignment']}_\n\n"
     msg += f"Why it matters: {assignment['why']}\n\n"
-    msg += f"Prepare with:\n"
+    msg += "Prepare with:\n"
     for name, url in assignment['prep_links']:
         msg += f"• [{name}]({url})\n"
     msg += "\n"
@@ -70,6 +132,11 @@ async def send_daily_briefing():
     msg += f"[{supp['title']}]({supp['url']})\n"
     msg += f"_{supp['note']}_\n\n"
 
+    msg += "🏛️ *Vanguard Leadership — Kapusta reading:*\n"
+    for article in KAPUSTA_ARTICLES:
+        msg += f"• [{article['title']}]({article['url']})\n"
+        msg += f"  _{article['note']}_\n"
+    msg += "\n"
     msg += "⚡ _Navigator out._"
 
     for chat_id in CHAT_IDS:

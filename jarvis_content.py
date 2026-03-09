@@ -164,3 +164,59 @@ SUPPLEMENTARY = [
         "note": "Required for context engineering — markdown structures your agent instructions"
     },
 ]
+
+
+# DR. TALI — ADDITIONAL MEDIUM ARTICLES
+MODULE_4_TALI = [
+    {
+        "title": "From Prompts to Precision: The Art & Science of Context Engineering",
+        "url": "https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c",
+        "note": "Read before Module 4 — context engineering deep dive by Dr. Tali"
+    },
+    {
+        "title": "From Google AI Studio to Production: Building Lumina v1 in 48 Hours",
+        "url": "https://medium.com/@talirezun/from-google-ai-studio-to-production-d928bb00edbd",
+        "note": "Read before Module 5 — Dr. Tali builds a production app with AI"
+    },
+]
+
+# DRAZEN KAPUSTA — LINKEDIN ARTICLES
+KAPUSTA_ARTICLES = [
+    {
+        "title": "Intro to the NEO Era — Dražen Kapusta",
+        "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f",
+        "note": "Vanguard Leadership framework — foundational reading from the Principal"
+    },
+    {
+        "title": "Neo-Cotruglian Philosophy of Leadership",
+        "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
+        "note": "The philosophical foundation of the Vanguard MBA — read early"
+    },
+]
+
+
+MODULE_4_TALI = [
+    {
+        "title": "From Prompts to Precision: The Art & Science of Context Engineering",
+        "url": "https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c",
+        "note": "Read before Module 4 — context engineering deep dive by Dr. Tali"
+    },
+    {
+        "title": "From Google AI Studio to Production: Building Lumina v1 in 48 Hours",
+        "url": "https://medium.com/@talirezun/from-google-ai-studio-to-production-d928bb00edbd",
+        "note": "Read before Module 5 — Dr. Tali builds a production app with AI"
+    },
+]
+
+KAPUSTA_ARTICLES = [
+    {
+        "title": "Intro to the NEO Era — Dražen Kapusta",
+        "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f",
+        "note": "Vanguard Leadership framework — foundational reading from the Principal"
+    },
+    {
+        "title": "Neo-Cotruglian Philosophy of Leadership",
+        "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
+        "note": "The philosophical foundation of the Vanguard MBA — read early"
+    },
+]

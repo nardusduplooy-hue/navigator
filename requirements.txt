@@ -3,3 +3,5 @@ anthropic
 python-dotenv
 python-telegram-bot==22.6
 schedule
+beautifulsoup4
+requests
