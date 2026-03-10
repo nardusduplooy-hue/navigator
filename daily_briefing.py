@@ -16,10 +16,19 @@ from jarvis_content import (
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-CHAT_IDS = [1357019604, 285802287]
+CHAT_IDS = [1357019604, 285802287, 6155007593]
 
 # Noise blocks to filter out from portal scraping
 NOISE_BLOCKS = [
+    "the moment we've been building toward",
+    "officially kicks off",
+    "february 20",
+    "february 21",
+    "february 22",
+    "dates:february",
+    "mandatory prework to be submitted by",
+    "students are required to complete graded prework",
+    "students were required to complete graded prework",
     "re: intro to the vanguard",
     "your next zook session is on saturday (january 10",
     "by the end of this course, students will be able to",
@@ -83,18 +92,26 @@ async def send_daily_briefing():
     msg = f"🧭 *NAVIGATOR DAILY BRIEFING*\n_{today}_\n\n"
 
     # DEADLINES
+    import json as _json
+    try:
+        with open("deadlines.json") as _f:
+            _deadlines = _json.load(_f)
+    except:
+        _deadlines = []
     msg += "🔴 *DEADLINES*\n"
-    msg += "• Future of Work essay — March 23, 19:00 CET\n"
-    if portal_deadlines:
-        for d in portal_deadlines[:2]:
-            msg += f"• {d[:150]}\n"
+    for _d in _deadlines:
+        if _d["status"] in ["active", "upcoming"]:
+            msg += f"• *{_d['name']}* — {_d['display_due']}\n"
+            msg += f"  {_d['details']}\n"
+            if _d.get("link"):
+                msg += f"  [Submit here]({_d['link']})\n"
     msg += "\n"
 
     # NEXT SESSION
-    msg += "📅 *NEXT SESSION*\n"
+    msg += "📅 *NEXT ZOOM SESSION*\n"
     msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n"
     if zoom_link:
-        msg += f"• [Latest Zoom Link — {zoom_link['text']}]({zoom_link['url']})\n"
+        msg += f"• [Last Zoom Session — Vanguard Session 7 · Chasing Jarvis Module 1 · Sat March 7]({zoom_link['url']})\n"
     msg += "\n"
 
     # STATUS

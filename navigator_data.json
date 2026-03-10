@@ -128,6 +128,41 @@
   {
     "topic_id": 1480,
     "topic_name": "Chasing Jarvis",
+    "date": "2026-03-09 13:26",
+    "text": "Nardus is on the path to new Vanguard rank- Q",
+    "important": false
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
+    "date": "2026-03-09 13:00",
+    "text": "very cool tool - hopefully everyone will use it soon!",
+    "important": false
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
+    "date": "2026-03-09 12:05",
+    "text": "Dr. Tali \u2014 it's a live build so no polished interface yet, but here's the repo: https://github.com/nardusduplooy-hue/navigator\nNavigator is already reading the Vanguard Telegram channels, storing messages, and sending daily briefings with deadlines, session updates, and curated AI reading. Claude answers questions about the programme in real time from the actual channel data.\nIf you'd like to receive the daily briefing directly \u2014 search for @Northstarbot on Telegram, send any message, and I'll add you. Building the web interface and portal integration next, through Chasing Jarvis.",
+    "important": true
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
+    "date": "2026-03-09 11:32",
+    "text": "I just published a new article, perfect for building your AI Coding agents general knowdledge. The forum in the comments is open. Here is the post link: https://www.linkedin.com/posts/talirezun_intent-fromlabtolife-ai-activity-7436733387706605569-GUOl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg",
+    "important": true
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
+    "date": "2026-03-09 11:31",
+    "text": "Super nice, where is it posted so I can interact?",
+    "important": false
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
     "date": "2026-03-07 19:11",
     "text": "Thanks a lot Dr. Tali",
     "important": false
@@ -215,41 +250,6 @@
     "date": "2026-03-07 16:04",
     "text": "has to use a VPN - does not make any sense - absolutely not",
     "important": false
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 16:01",
-    "text": "@PeraCAR I'm in the waiting room please could someone let me in?",
-    "important": false
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 16:00",
-    "text": "Click on the link @du_jannes",
-    "important": false
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 15:59",
-    "text": "Zoomlink ??",
-    "important": true
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 15:57",
-    "text": "[https://cotrugli.online/groups/vanguard/zoom/meetings/7/?action=bp_mark_read&group_id=5&meeting_id=7&_wpnonce=474aef7031](https://cotrugli.online/groups/vanguard/zoom/meetings/7/?action=bp_mark_read&group_id=5&meeting_id=7&_wpnonce=474aef7031)",
-    "important": true
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 15:56",
-    "text": "please paste the zoom link for the meeting here?",
-    "important": true
   },
   {
     "topic_id": 456,

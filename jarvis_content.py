@@ -6,12 +6,12 @@ MODULE_1_TALI = [
     {
         "title": "Understanding LLMs: AI-Generated Research Podcast",
         "url": "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301",
-        "note": "Listen before Module 1, Session 1 — audio version"
+        "note": "Listen to audio version on Red Circle"
     },
     {
         "title": "Understanding Large Language Models: A Complete Manual",
         "url": "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00",
-        "note": "Read before Module 1, Session 1 — core text"
+        "note": "Read with comprehension"
     },
 ]
 
@@ -24,7 +24,7 @@ MODULE_2_TALI = [
     {
         "title": "Data Sovereignty in the AI Age: Building Your Own Private ChatGPT",
         "url": "https://medium.com/@talirezun/data-sovereignty-in-the-ai-age-building-your-own-private-chatgpt-a83c96e342a0",
-        "note": "Read before the LM Studio session in Module 2"
+        "note": "Read before upcoming Zoom session for Module 2"
     },
 ]
 
