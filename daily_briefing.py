@@ -16,7 +16,8 @@ from jarvis_content import (
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-CHAT_IDS = [1357019604, 285802287, 6155007593]
+# Chat IDs now loaded from subscribers.json
+CHAT_IDS = []
 
 # Noise blocks to filter out from portal scraping
 NOISE_BLOCKS = [
@@ -80,6 +81,15 @@ def get_portal_data():
 async def send_daily_briefing():
     bot = Bot(token=BOT_TOKEN)
     today = datetime.now().strftime("%A, %d %B %Y")
+
+    # Load subscribers dynamically
+    try:
+        import json as _subjson
+        with open("subscribers.json") as _subf:
+            _subs = _subjson.load(_subf)
+        CHAT_IDS = [s["chat_id"] for s in _subs]
+    except:
+        CHAT_IDS = [1357019604]
 
     tali_m1 = MODULE_1_TALI
     tali_m2_preview = random.choice(MODULE_2_TALI)
