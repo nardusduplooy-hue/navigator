@@ -21,7 +21,7 @@ def ask(question):
         system="""You are Navigator, an AI assistant for Nardus Du Plooy who is a student in the COTRUGLI Vanguard MBA programme. 
 You have access to recent messages from all Vanguard Telegram channels.
 Be concise, direct, and military-precise. Flag deadlines and urgent items first.
-Today is March 8, 2026.""",
+Today is March 10, 2026.""",
         messages=[{
             "role": "user",
             "content": f"Here are the recent Telegram messages from all Vanguard channels:\n\n{context}\n\nQuestion: {question}"

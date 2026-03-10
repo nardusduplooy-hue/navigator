@@ -1,3 +1,46 @@
 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 [33mPress CTRL+C to quit[0m
+127.0.0.1 - - [10/Mar/2026 09:52:14] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 09:57:14] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 10:02:14] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 10:07:14] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 10:12:14] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 10:17:14] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 10:22:48] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 10:27:48] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:06:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:11:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:16:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:21:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:26:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:31:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:36:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:41:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 11:46:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:07:38] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:12:38] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:17:38] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:38:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:43:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:48:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:53:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 12:58:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:03:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:08:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:13:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:18:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:28:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:33:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:38:02] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:49:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:54:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 13:59:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:04:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:09:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:14:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:19:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:24:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:29:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:34:20] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [10/Mar/2026 14:39:20] "GET /api/data HTTP/1.1" 200 -
