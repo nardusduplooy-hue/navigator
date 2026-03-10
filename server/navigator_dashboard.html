@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigator — Command Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="/static/logo.png" alt="Navigator" width="48" height="48" style="border-radius:50%;border:2px solid var(--accent);box-shadow:0 0 16px rgba(0,212,255,0.4);">
+    <div>
+      <div class="logo-text">Navigator</div>
+      <div class="logo-sub">COTRUGLI Vanguard MBA</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="status-indicator"><div class="dot"></div><span id="live-label">LIVE</span></div>
+    <div class="current-time" id="clock">--:-- CAT</div>
+    <button class="refresh-btn" onclick="loadData()">↻ Refresh</button>
+  </div>
+</header>
+<div class="dashboard">
+  <div class="panel">
+    <div class="panel-label">🔴 Deadlines & Sessions</div>
+    <div id="deadlines-feed"><div class="loading">LOADING CHANNEL DATA...</div></div>
+    <div style="height:18px;"></div>
+    <div class="panel-label">📡 Channel Activity</div>
+    <div id="important-feed"><div class="loading">SCANNING CHANNELS...</div></div>
+  </div>
+  <div class="center-panel">
+    <div class="north-star-hero panel">
+      <div class="hero-date" id="hero-date">LOADING...</div>
+      <div class="hero-title">North Star</div>
+      <div class="hero-sub">COTRUGLI VANGUARD MBA · 2025–2027</div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-val" id="stat-messages">--</div><div class="hero-stat-label">Messages</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="stat-channels">--</div><div class="hero-stat-label">Channels</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="stat-important">--</div><div class="hero-stat-label">Flagged</div></div>
+      </div>
+    </div>
+    <div class="calendar-section panel">
+      <div class="panel-label">📆 Calendar</div>
+      <div class="cal-header">
+        <button class="cal-nav" onclick="prevMonth()">◀</button>
+        <div class="cal-month" id="cal-month-label">MARCH 2026</div>
+        <button class="cal-nav" onclick="nextMonth()">▶</button>
+      </div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div>TODAY</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--danger)"></div>DEADLINE</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--accent3)"></div>SESSION</div>
+      </div>
+    </div>
+    <div class="panel quote-panel">
+      "We don't build in secret. We build together."
+      <div class="quote-author">— DR. TALI REŽUN · VICE DEAN · COTRUGLI BUSINESS SCHOOL</div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-label">✅ JTBD Tracker</div>
+    <div class="jtbd-item"><div class="jtbd-check done" onclick="toggleCheck(this)"></div><div><div class="jtbd-name">Navigator Sprint 1</div><div class="jtbd-detail">Channel reader + daily briefing</div></div></div>
+    <div class="jtbd-item"><div class="jtbd-check in-progress" onclick="toggleCheck(this)"></div><div><div class="jtbd-name">Web Dashboard</div><div class="jtbd-detail">Live data connected</div></div></div>
+    <div class="jtbd-item"><div class="jtbd-check" onclick="toggleCheck(this)"></div><div><div class="jtbd-name">Module 1 Assignments</div><div class="jtbd-detail">All 5 assignments prepared</div></div></div>
+    <div class="jtbd-item"><div class="jtbd-check" onclick="toggleCheck(this)"></div><div><div class="jtbd-name">Future of Work Essay</div><div class="jtbd-detail">Due 23 March · 19:00 CET</div></div></div>
+    <div class="jtbd-item"><div class="jtbd-check done" onclick="toggleCheck(this)"></div><div><div class="jtbd-name">Hult Prize</div><div class="jtbd-detail">Submitted · Under review</div></div></div>
+    <div style="height:18px;"></div>
+    <div class="panel-label">🚀 Sprint Status</div>
+    <div class="sprint-item"><div class="sprint-dot complete"></div><div class="sprint-name">Sprint 1 · Channel Reader</div><div class="sprint-tag complete">Done</div></div>
+    <div class="sprint-item"><div class="sprint-dot active"></div><div class="sprint-name">Sprint 2 · Web Dashboard</div><div class="sprint-tag active">Active</div></div>
+    <div class="sprint-item"><div class="sprint-dot pending"></div><div class="sprint-name">Sprint 3 · Portal Scraper</div><div class="sprint-tag pending">Next</div></div>
+    <div class="sprint-item"><div class="sprint-dot pending"></div><div class="sprint-name">Sprint 4 · CPN Layer</div><div class="sprint-tag pending">Future</div></div>
+    <div style="height:18px;"></div>
+    <div class="panel-label">📊 Module Progress</div>
+    <div class="progress-row"><div class="progress-header"><span class="progress-label">Module 1 · LLM Foundations</span><span class="progress-pct">75%</span></div><div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div></div>
+    <div class="progress-row"><div class="progress-header"><span class="progress-label">Module 2 · Context Engineering</span><span class="progress-pct" style="color:var(--text-dim)">Starts 21 Mar</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div></div>
+    <div class="progress-row"><div class="progress-header"><span class="progress-label">Module 3 · Agent Architecture</span><span class="progress-pct" style="color:var(--text-dim)">Locked</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--text-dim);box-shadow:none;"></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="panel-label">📡 Vanguard Channels</div>
+    <div id="channels-list"><div class="loading">LOADING...</div></div>
+  </div>
+  <div class="panel">
+    <div class="panel-label">🎓 Programme</div>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--text-dim);line-height:2;">
+      <div>Cohort: <span style="color:var(--text)">Vanguard MBA 2025–2027</span></div>
+      <div>Role: <span style="color:var(--accent)">Vanguard Chief · Team Chiron</span></div>
+      <div>Location: <span style="color:var(--text)">Cape Town, South Africa</span></div>
+      <div>Format: <span style="color:var(--text)">African & Asian Online Cohort</span></div>
+      <div>Data updated: <span id="last-updated" style="color:var(--accent3)">--</span></div>
+    </div>
+    <div style="height:18px;"></div>
+    <div class="panel-label">⏰ Countdowns</div>
+    <div style="font-family:var(--mono);font-size:12px;line-height:2.2;">
+      <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim)">Future of Work Essay</span><span id="cd-essay" style="color:var(--danger)">--</span></div>
+      <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim)">Chasing Jarvis S2</span><span id="cd-session" style="color:var(--warn)">--</span></div>
+      <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-dim)">Module 2 Start</span><span id="cd-module2" style="color:var(--accent)">--</span></div>
+    </div>
+  </div>
+</div>
+<script src="/static/dashboard.js"></script>
+</body>
+</html>

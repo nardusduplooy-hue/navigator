@@ -2,13 +2,18 @@ from flask import Flask, jsonify, send_from_directory
 import json, os
 from datetime import datetime
 
-app = Flask(__name__, static_folder='.')
+SERVER_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(SERVER_DIR)
+
+STATIC_DIR = os.path.join(SERVER_DIR, 'static')
+
+app = Flask(__name__)
 
 DEADLINE_KEYWORDS = ['deadline', 'due', 'submit', 'submission', 'essay', 'assignment', 'march', 'april', 'cet', 'by ', 'before ']
 SESSION_KEYWORDS  = ['zoom', 'session', 'saturday', 'meeting', 'link', 'cotrugli.zoom', 'cotrugli.online/groups']
 
 def load_data():
-    with open('navigator_data.json', 'r') as f:
+    with open(os.path.join(ROOT_DIR, 'navigator_data.json'), 'r') as f:
         return json.load(f)
 
 def classify_message(msg):
@@ -47,9 +52,13 @@ def api_data():
 
 @app.route('/')
 def index():
-    return send_from_directory('.', 'navigator_dashboard.html')
+    return send_from_directory(SERVER_DIR, 'navigator_dashboard.html')
+
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory(STATIC_DIR, filename)
 
 if __name__ == '__main__':
-    print("🧭 Navigator server starting...")
-    print("📊 Dashboard: http://localhost:5000")
+    print("Navigator server starting...")
+    print("Dashboard: http://localhost:5000")
     app.run(debug=False, port=5000, host="127.0.0.1")

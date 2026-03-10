@@ -1,3 +1,4 @@
+flask
 telethon==1.42.0
 anthropic
 python-dotenv
