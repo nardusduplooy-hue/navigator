@@ -8,8 +8,7 @@ from dotenv import load_dotenv
 from jarvis_content import (
     MODULE_4_TALI,
     KAPUSTA_ARTICLES,
-    MODULE_4_TALI,
-    KAPUSTA_ARTICLES,
+    KAPUSTA_WFR_ARTICLE,
     MODULE_1_TALI, MODULE_2_TALI, MODULE_1_ASSIGNMENTS, TOOLS_EXPLAINED, SUPPLEMENTARY
 )
 
@@ -164,6 +163,9 @@ async def send_daily_briefing():
         msg += f"• [{article['title']}]({article['url']})\n"
         msg += f"  _{article['note']}_\n"
     msg += "\n"
+    msg += "📰 *Must-read — NEO World & AI Commerce:*\n"
+    msg += f"[{KAPUSTA_WFR_ARTICLE['title']}]({KAPUSTA_WFR_ARTICLE['url']})\n"
+    msg += f"_{KAPUSTA_WFR_ARTICLE['note']}_ — {KAPUSTA_WFR_ARTICLE['authors']}\n\n"
     msg += "⚡ _Navigator out._"
 
     for chat_id in CHAT_IDS:

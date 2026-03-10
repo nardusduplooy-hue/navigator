@@ -220,3 +220,12 @@ KAPUSTA_ARTICLES = [
         "note": "The philosophical foundation of the Vanguard MBA — read early"
     },
 ]
+
+KAPUSTA_WFR_ARTICLE = {
+    "title": "Not for Now — For the Future: Why the Next Decade of AI Commerce Needs a Trust Layer",
+    "authors": "Dražen Kapusta & Terence Tse",
+    "url": "https://worldfinancialreview.com/not-for-now-for-the-future-why-the-next-decade-of-ai-commerce-needs-a-trust-layer/",
+    "source": "World Financial Review",
+    "date": "8 March 2026",
+    "note": "Read before upcoming Zoom session — core NEO World philosophy from Dr. Kapusta"
+}
