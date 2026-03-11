@@ -3,6 +3,7 @@ import asyncio
 import random
 import os
 from datetime import datetime
+import anthropic
 from telegram import Bot
 from dotenv import load_dotenv
 from jarvis_content import (
@@ -13,6 +14,47 @@ from jarvis_content import (
 )
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+
+def generate_daily_question_and_answer(assignment_text, why_it_matters):
+    """Use Claude to generate a creative question AND model answer based on yesterday's assignment."""
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    prompt = f"""You are Navigator, an AI tutor for MBA students in the COTRUGLI Vanguard programme.
+
+Yesterday's assignment was: {assignment_text}
+Why it matters: {why_it_matters}
+
+Generate ONE creative, thought-provoking test question and a model answer.
+
+Requirements for the question:
+- Tests deep understanding, not just recall
+- Uses a real-world analogy or scenario (like comparing AI to something unexpected)
+- Is specific enough that a vague answer would not suffice
+- Is 1-3 sentences maximum
+
+Requirements for the answer:
+- Practical and opinionated, not textbook
+- 3-4 sentences maximum
+- Written in Navigator's voice — direct, confident, MBA-level
+
+Return ONLY this exact format:
+QUESTION: [your question here]
+ANSWER: [your answer here]"""
+
+    response = client.messages.create(
+        model="claude-opus-4-6",
+        max_tokens=400,
+        messages=[{"role": "user", "content": prompt}]
+    )
+    text = response.content[0].text.strip()
+    lines = text.split("\n")
+    question = ""
+    answer = ""
+    for line in lines:
+        if line.startswith("QUESTION:"):
+            question = line.replace("QUESTION:", "").strip()
+        elif line.startswith("ANSWER:"):
+            answer = line.replace("ANSWER:", "").strip()
+    return question, answer
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 # Chat IDs now loaded from subscribers.json
@@ -166,6 +208,20 @@ async def send_daily_briefing():
     msg += "📰 *Must-read — NEO World & AI Commerce:*\n"
     msg += f"[{KAPUSTA_WFR_ARTICLE['title']}]({KAPUSTA_WFR_ARTICLE['url']})\n"
     msg += f"_{KAPUSTA_WFR_ARTICLE['note']}_ — {KAPUSTA_WFR_ARTICLE['authors']}\n\n"
+    # Generate daily knowledge question based on yesterday's assignment
+    yesterday_assignment = random.choice([a for a in MODULE_1_ASSIGNMENTS if a != assignment])
+    daily_question = ""
+    daily_answer = ""
+    try:
+        daily_question, daily_answer = generate_daily_question_and_answer(
+            yesterday_assignment['assignment'],
+            yesterday_assignment['why']
+        )
+        msg += "🧠 *Test your knowledge from yesterday's reading:*\n"
+        msg += f"_{daily_question}_\n\n"
+    except Exception as e:
+        pass
+
     msg += "⚡ _Navigator out._"
 
     for chat_id in CHAT_IDS:
@@ -176,5 +232,18 @@ async def send_daily_briefing():
             disable_web_page_preview=True
         )
         print(f"✅ Briefing sent to {chat_id}")
+
+    # Wait 30 minutes then send the model answer
+    if daily_answer:
+        await asyncio.sleep(1800)
+        answer_msg = f"🧠 *Model answer to this morning's question:*\n\n_{daily_answer}_\n\n⚡ _Navigator out._"
+        for chat_id in CHAT_IDS:
+            await bot.send_message(
+                chat_id=chat_id,
+                text=answer_msg,
+                parse_mode="Markdown",
+                disable_web_page_preview=True
+            )
+            print(f"✅ Answer sent to {chat_id}")
 
 asyncio.run(send_daily_briefing())
