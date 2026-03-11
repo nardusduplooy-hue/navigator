@@ -128,6 +128,27 @@
   {
     "topic_id": 1480,
     "topic_name": "Chasing Jarvis",
+    "date": "2026-03-10 10:59",
+    "text": "Do we know when we are going to have the final group members?",
+    "important": false
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
+    "date": "2026-03-10 09:29",
+    "text": "Just a heads up for all Context engineers and vibe coders, the augment code Intent app is now offering free GPT 5.4 credits (limited time), which is amazing because otherwise this is quite costly. Check https://www.augmentcode.com/product/intent\n\nI describe this amazing coding agent orchestration tool in my latest article.",
+    "important": true
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
+    "date": "2026-03-10 09:26",
+    "text": "Great work, Nardus. I think this is an excellent idea and an excellent implementation of AI in a useful task. We need to talk a little bit about the tag behind. So I recommend to power this by the Google Gemini models. You have the light line, which is close to zero cost. There is a new Gemini 3.1 flash light model just came out, or you can also use Gemini flash 2.5 light, which is also very, very good. The Gemini flashlight models were made for exactly tasks like this. in regards to the static document based knowledge from the school I recommend that you feed it directly into the context window if you are using jamini flash 2.5 you have one million context window the light version has a smaller context window but still powerful enough. In this way you will avoid hallucinations. Retrieval Augmented Generation approaches just prove to be unreliable. So it's better to just feed the knowledge directly to the context window of an LLM. I will explain this further so don't worry just few points to get you going.",
+    "important": true
+  },
+  {
+    "topic_id": 1480,
+    "topic_name": "Chasing Jarvis",
     "date": "2026-03-09 13:26",
     "text": "Nardus is on the path to new Vanguard rank- Q",
     "important": false
@@ -228,27 +249,6 @@
     "topic_name": "Chasing Jarvis",
     "date": "2026-03-07 17:35",
     "text": "Hello Guy",
-    "important": false
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 16:12",
-    "text": "i am still suspect to latest security updates ow OS and even more of browser...",
-    "important": false
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 16:11",
-    "text": "we don't have any restrictions to our servers...",
-    "important": false
-  },
-  {
-    "topic_id": 1480,
-    "topic_name": "Chasing Jarvis",
-    "date": "2026-03-07 16:04",
-    "text": "has to use a VPN - does not make any sense - absolutely not",
     "important": false
   },
   {
@@ -1024,6 +1024,41 @@
   {
     "topic_id": 2,
     "topic_name": "Announcements",
+    "date": "2026-03-10 14:21",
+    "text": "Done \u2705",
+    "important": false
+  },
+  {
+    "topic_id": 2,
+    "topic_name": "Announcements",
+    "date": "2026-03-10 14:02",
+    "text": "https://form.typeform.com/to/SuZgQXne",
+    "important": true
+  },
+  {
+    "topic_id": 2,
+    "topic_name": "Announcements",
+    "date": "2026-03-10 14:02",
+    "text": "Hello! \nI\u2019m part of a community building Kaphera - a startup creating data infrastructure where people and organizations stay in control of their own data. The vision is to unlock data for good: enabling collaboration on things like rare disease research, sustainable agriculture, and smarter cities, without surveillance or extraction. We\u2019re doing quick research on how people actually share data at work today. If you work in manufacturing, automotive, logistics, services, or supply chains, if you have until Friday 12th 10 minutes of your time would help shape something rooted in trust and transparency \ud83d\ude4f",
+    "important": false
+  },
+  {
+    "topic_id": 2,
+    "topic_name": "Announcements",
+    "date": "2026-03-10 09:28",
+    "text": "https://wellcome.org",
+    "important": true
+  },
+  {
+    "topic_id": 2,
+    "topic_name": "Announcements",
+    "date": "2026-03-10 09:25",
+    "text": "https://project-spark.africa/joint-innovation-facility/",
+    "important": true
+  },
+  {
+    "topic_id": 2,
+    "topic_name": "Announcements",
     "date": "2026-03-08 14:04",
     "text": "Then the link/website of the start-up m.mama",
     "important": false
@@ -1124,41 +1159,6 @@
     "topic_name": "Announcements",
     "date": "2026-02-27 06:20",
     "text": "Jack the Ripper",
-    "important": false
-  },
-  {
-    "topic_id": 2,
-    "topic_name": "Announcements",
-    "date": "2026-02-27 05:48",
-    "text": "It is happening",
-    "important": false
-  },
-  {
-    "topic_id": 2,
-    "topic_name": "Announcements",
-    "date": "2026-02-27 05:48",
-    "text": "https://x.com/jack/status/2027129697092731343?s=48",
-    "important": true
-  },
-  {
-    "topic_id": 2,
-    "topic_name": "Announcements",
-    "date": "2026-02-25 15:42",
-    "text": "interesting reading about modern leadership https://www.forbes.com/sites/cherylrobinson/2026/02/23/the-eileen-gu-effect-a-framework-for-modern-day-leadership/",
-    "important": true
-  },
-  {
-    "topic_id": 2,
-    "topic_name": "Announcements",
-    "date": "2026-02-24 11:05",
-    "text": "Global Grants And Opportunities For Africa(GGA)\nhttps://www.linkedin.com/company/global-grants-and-opportunities-for-africa-gga/",
-    "important": true
-  },
-  {
-    "topic_id": 2,
-    "topic_name": "Announcements",
-    "date": "2026-02-23 10:33",
-    "text": "yeah sure",
     "important": false
   },
   {
