@@ -8,7 +8,7 @@ import sys
 def job():
     print(f"⏰ Running Navigator at {datetime.now().strftime('%H:%M')}")
     subprocess.run([sys.executable, "read_channels.py"])
-    asyncio.run(__import__('daily_briefing').send_daily_briefing())
+    subprocess.run([sys.executable, "daily_briefing.py"])
 
 # 05:30 Cape Town (UTC+2) = 03:30 UTC
 schedule.every().day.at("03:30").do(job)

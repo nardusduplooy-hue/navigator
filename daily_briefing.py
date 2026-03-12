@@ -246,4 +246,10 @@ async def send_daily_briefing():
             )
             print(f"✅ Answer sent to {chat_id}")
 
-asyncio.run(send_daily_briefing())
+if __name__ == "__main__":
+    import sys
+    TEST_MODE = "--test" in sys.argv
+    if TEST_MODE:
+        CHAT_IDS = [1357019604]  # Only Nardus
+        print("🧪 TEST MODE — sending only to Nardus")
+    asyncio.run(send_daily_briefing())
