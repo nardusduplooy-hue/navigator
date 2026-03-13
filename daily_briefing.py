@@ -10,7 +10,7 @@ from jarvis_content import (
     MODULE_4_TALI,
     KAPUSTA_ARTICLES,
     KAPUSTA_WFR_ARTICLE,
-    MODULE_1_TALI, MODULE_2_TALI, MODULE_1_ASSIGNMENTS, TOOLS_EXPLAINED, SUPPLEMENTARY
+    MODULE_1_TALI, MODULE_2_TALI, MODULE_1_ASSIGNMENTS, TOOLS_EXPLAINED, SUPPLEMENTARY, LLM_MANUAL_CHAPTERS, NEO_WORLD_ARTICLES
 )
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
@@ -119,18 +119,22 @@ def get_portal_data():
 
     return zoom_link, deadlines[:5]
 
-async def send_daily_briefing():
+async def send_daily_briefing(test_mode=False):
     bot = Bot(token=BOT_TOKEN)
+    if test_mode:
+        global CHAT_IDS
+        CHAT_IDS = [1357019604]
     today = datetime.now().strftime("%A, %d %B %Y")
 
     # Load subscribers dynamically
-    try:
-        import json as _subjson
-        with open("subscribers.json") as _subf:
-            _subs = _subjson.load(_subf)
-        CHAT_IDS = [s["chat_id"] for s in _subs]
-    except:
-        CHAT_IDS = [1357019604]
+    if not test_mode:
+        try:
+            import json as _subjson
+            with open("subscribers.json") as _subf:
+                _subs = _subjson.load(_subf)
+            CHAT_IDS = [s["chat_id"] for s in _subs]
+        except:
+            CHAT_IDS = [1357019604]
 
     tali_m1 = MODULE_1_TALI
     tali_m2_preview = random.choice(MODULE_2_TALI)
@@ -152,7 +156,18 @@ async def send_daily_briefing():
     msg += "🔴 *DEADLINES*\n"
     for _d in _deadlines:
         if _d["status"] in ["active", "upcoming"]:
-            msg += f"• *{_d['name']}* — {_d['display_due']}\n"
+            from datetime import timezone
+            _due_dt = None
+            try:
+                from datetime import datetime as _dt
+                _due_dt = _dt.fromisoformat(_d['due'].replace('Z','+00:00'))
+                _diff = _due_dt - _dt.now(timezone.utc)
+                _days = _diff.days
+                _hours = _diff.seconds // 3600
+                _countdown = f" *(T-{_days}d {_hours}h)*" if _diff.total_seconds() > 0 else " *(OVERDUE)*"
+            except:
+                _countdown = ""
+            msg += f"• *{_d['name']}* — {_d['display_due']}{_countdown}\n"
             msg += f"  {_d['details']}\n"
             if _d.get("link"):
                 msg += f"  [Submit here]({_d['link']})\n"
@@ -161,8 +176,7 @@ async def send_daily_briefing():
     # NEXT SESSION
     msg += "📅 *NEXT ZOOM SESSION*\n"
     msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n"
-    if zoom_link:
-        msg += f"• [Last Zoom Session — Vanguard Session 7 · Chasing Jarvis Module 1 · Sat March 7]({zoom_link['url']})\n"
+    msg += "• [Zoom Recordings — all sessions](https://cotrugli.online/groups/vanguard/zoom/meetings/4)\n"
     msg += "\n"
 
     # STATUS
@@ -175,8 +189,13 @@ async def send_daily_briefing():
 
     msg += "📖 *Module 1 — Dr. Tali's required reading:*\n"
     for article in tali_m1:
-        msg += f"• [{article['title']}]({article['url']})\n"
-        msg += f"  _{article['note']}_\n"
+        if article['title'] == "Understanding Large Language Models: A Complete Manual":
+            _chapter = LLM_MANUAL_CHAPTERS[datetime.now().timetuple().tm_yday % len(LLM_MANUAL_CHAPTERS)]
+            msg += f"• [{article['title']}]({article['url']})\n"
+            msg += f"  _{_chapter['note']}: {_chapter['title']}_\n"
+        else:
+            msg += f"• [{article['title']}]({article['url']})\n"
+            msg += f"  _{article['note']}_\n"
     msg += "\n"
 
     msg += "🔜 *Module 2 preview — coming March 21:*\n"
@@ -202,12 +221,13 @@ async def send_daily_briefing():
 
     msg += "🏛️ *Vanguard Leadership — Kapusta reading:*\n"
     for article in KAPUSTA_ARTICLES:
-        msg += f"• [{article['title']}]({article['url']})\n"
-        msg += f"  _{article['note']}_\n"
+            msg += f"• [{article['title']}]({article['url']})\n"
+            msg += f"  _{article['note']}_\n"
     msg += "\n"
+    _neo = NEO_WORLD_ARTICLES[datetime.now().timetuple().tm_yday % len(NEO_WORLD_ARTICLES)]
     msg += "📰 *Must-read — NEO World & AI Commerce:*\n"
-    msg += f"[{KAPUSTA_WFR_ARTICLE['title']}]({KAPUSTA_WFR_ARTICLE['url']})\n"
-    msg += f"_{KAPUSTA_WFR_ARTICLE['note']}_ — {KAPUSTA_WFR_ARTICLE['authors']}\n\n"
+    msg += f"[{_neo['title']}]({_neo['url']})\n"
+    msg += f"_{_neo['note']}_ — {_neo['authors']}\n\n"
     # Generate daily knowledge question based on yesterday's assignment
     yesterday_assignment = random.choice([a for a in MODULE_1_ASSIGNMENTS if a != assignment])
     daily_question = ""
@@ -252,4 +272,4 @@ if __name__ == "__main__":
     if TEST_MODE:
         CHAT_IDS = [1357019604]  # Only Nardus
         print("🧪 TEST MODE — sending only to Nardus")
-    asyncio.run(send_daily_briefing())
+    asyncio.run(send_daily_briefing(test_mode=TEST_MODE))

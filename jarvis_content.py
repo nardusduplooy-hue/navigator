@@ -8,6 +8,7 @@ MODULE_1_TALI = [
         "url": "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301",
         "note": "Listen to audio version on Red Circle"
     },
+
     {
         "title": "Understanding Large Language Models: A Complete Manual",
         "url": "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00",
@@ -15,7 +16,28 @@ MODULE_1_TALI = [
     },
 ]
 
+LLM_MANUAL_CHAPTERS = [
+    {"chapter": 1, "title": "What Are Large Language Models?", "note": "Chapter 1 — Start here if you haven't already"},
+    {"chapter": 2, "title": "The Architecture Behind LLMs", "note": "Chapter 2 — How transformers are structured"},
+    {"chapter": 3, "title": "How LLMs Learn — Pre-training & Fine-tuning", "note": "Chapter 3 — Teaching machines to understand"},
+    {"chapter": 4, "title": "Tokenisation & Embeddings", "note": "Chapter 4 — How text becomes numbers"},
+    {"chapter": 5, "title": "Context Windows & Memory", "note": "Chapter 5 — Why context engineering matters"},
+    {"chapter": 6, "title": "Training — Teaching Machines to Understand Language", "note": "Chapter 6 — The learning process in detail"},
+    {"chapter": 7, "title": "Prompting & Inference", "note": "Chapter 7 — How models generate responses"},
+    {"chapter": 8, "title": "Open vs Closed Source Models", "note": "Chapter 8 — Choosing the right model for the job"},
+    {"chapter": 9, "title": "Limitations & Failure Modes", "note": "Chapter 9 — When NOT to trust an LLM"},
+    {"chapter": 10, "title": "The Future of LLMs", "note": "Chapter 10 — Where this is all heading"},
+]
+
+_PLACEHOLDER = [
+]
+
 MODULE_2_TALI = [
+    {
+        "title": "Context Engineering — AI-Generated Research Podcast",
+        "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
+        "note": "Listen to audio version on Red Circle — Module 2 preparation"
+    },
     {
         "title": "The Context Engineer's Toolkit: Essential AI Tools for All Levels",
         "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
@@ -64,16 +86,23 @@ MODULE_1_ASSIGNMENTS = [
         ],
     },
     {
-        "assignment": "Apply foundational knowledge to make informed decisions about AI tool selection",
-        "why": "Direct preparation for Module 2 — you will select tools for your Module 5 MVP",
+        "assignment": "Differentiate between frontier LLM models and select appropriate tools for specific tasks",
+        "why": "Understanding transformer architecture gives you an edge in every module — Claude, GPT-4, and Gemini all run on this foundation",
         "prep_links": [
             ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
-            ("MIT Sloan — Open vs Closed models: performance and cost data", "https://mitsloan.mit.edu/ideas-made-to-matter/ai-open-models-have-benefits-so-why-arent-they-more-widely-used"),
+            ("Harvard Business Review — Choosing the Right AI Model for Your Business", "https://hbr.org/2023/11/how-to-choose-the-right-ai-model-for-your-use-case"),
         ],
     },
 ]
 
 TOOLS_EXPLAINED = [
+    {
+        "tool": "Google Gemini",
+        "module": "All modules",
+        "why": "Google's frontier AI model — recommended by Dr. Tali for close to zero cost",
+        "link": "https://gemini.google.com",
+        "description": "Google Gemini — explore the model Dr. Tali recommends for AI-powered tasks"
+    },
     {
         "tool": "Claude AI",
         "module": "All modules",
@@ -114,7 +143,7 @@ TOOLS_EXPLAINED = [
         "module": "Module 2",
         "why": "Run AI models locally on your MacBook — no data leaves your machine",
         "link": "https://lmstudio.ai/",
-        "description": "Download free at lmstudio.ai — required for the Module 2 LM Studio session"
+        "description": "Download free at lmstudio.ai — run powerful AI models privately on your own machine, no internet required"
     },
     {
         "tool": "Model Context Protocol (MCP)",
@@ -133,6 +162,18 @@ TOOLS_EXPLAINED = [
 ]
 
 SUPPLEMENTARY = [
+    {
+        "title": "What is a Transformer Model? — IBM",
+        "url": "https://www.ibm.com/topics/transformer-model",
+        "module": "Module 1",
+        "note": "Plain-English explainer on transformer architecture — read before Module 2"
+    },
+    {
+        "title": "A Beginner's Guide to Large Language Models — NVIDIA",
+        "url": "https://www.nvidia.com/en-us/glossary/large-language-models/",
+        "module": "Module 1",
+        "note": "Solid foundation on how LLMs work — essential Module 1 reference"
+    },
     {
         "title": "Building Effective AI Agents — Anthropic",
         "url": "https://www.anthropic.com/research/building-effective-agents",
@@ -181,20 +222,6 @@ MODULE_4_TALI = [
 ]
 
 # DRAZEN KAPUSTA — LINKEDIN ARTICLES
-KAPUSTA_ARTICLES = [
-    {
-        "title": "Intro to the NEO Era — Dražen Kapusta",
-        "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f",
-        "note": "Vanguard Leadership framework — foundational reading from the Principal"
-    },
-    {
-        "title": "Neo-Cotruglian Philosophy of Leadership",
-        "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
-        "note": "The philosophical foundation of the Vanguard MBA — read early"
-    },
-]
-
-
 MODULE_4_TALI = [
     {
         "title": "From Prompts to Precision: The Art & Science of Context Engineering",
@@ -210,9 +237,9 @@ MODULE_4_TALI = [
 
 KAPUSTA_ARTICLES = [
     {
-        "title": "Intro to the NEO Era — Dražen Kapusta",
-        "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f",
-        "note": "Vanguard Leadership framework — foundational reading from the Principal"
+        "title": "Signals — Dražen Kapusta",
+        "url": "https://www.linkedin.com/pulse/signals-drazen-kapusta-kibxf/",
+        "note": "The future could arrive faster than you expect"
     },
     {
         "title": "Neo-Cotruglian Philosophy of Leadership",
@@ -221,11 +248,26 @@ KAPUSTA_ARTICLES = [
     },
 ]
 
-KAPUSTA_WFR_ARTICLE = {
-    "title": "Not for Now — For the Future: Why the Next Decade of AI Commerce Needs a Trust Layer",
-    "authors": "Dražen Kapusta & Terence Tse",
-    "url": "https://worldfinancialreview.com/not-for-now-for-the-future-why-the-next-decade-of-ai-commerce-needs-a-trust-layer/",
-    "source": "World Financial Review",
-    "date": "8 March 2026",
-    "note": "Read before upcoming Zoom session — core NEO World philosophy from Dr. Kapusta"
-}
+NEO_WORLD_ARTICLES = [
+    {
+        "title": "A Merchant's Wisdom, Half a Millennium Late",
+        "authors": "Dražen Kapusta",
+        "url": "https://www.linkedin.com/pulse/merchants-wisdom-half-millennium-late-drazen-kapusta-noqxe/",
+        "note": "Cotrugli's ledger principle applied to the AI age — essential NEO World reading"
+    },
+    {
+        "title": "Not for Now — For the Future: Why the Next Decade of AI Commerce Needs a Trust Layer",
+        "authors": "Dražen Kapusta & Terence Tse",
+        "url": "https://worldfinancialreview.com/not-for-now-for-the-future-why-the-next-decade-of-ai-commerce-needs-a-trust-layer/",
+        "note": "Core NEO World philosophy — the trust layer every AI economy needs"
+    },
+    {
+        "title": "Intro to the NEO Era",
+        "authors": "Dražen Kapusta",
+        "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f",
+        "note": "Kapusta's introduction to the NEO World — start here if you haven't already"
+    },
+]
+
+# Keep backward compatibility
+KAPUSTA_WFR_ARTICLE = NEO_WORLD_ARTICLES[0]
