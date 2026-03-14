@@ -241,3 +241,89 @@ Traceback (most recent call last):
   File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
     raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
 telegram.error.NetworkError: httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+Traceback (most recent call last):
+  File "/Users/nardusduplooy/Documents/navigator/read_channels.py", line 82, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/nardusduplooy/Documents/navigator/read_channels.py", line 40, in main
+    await client.start()
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telethon/client/auth.py", line 167, in _start
+    value = phone()
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telethon/client/auth.py", line 22, in <lambda>
+    phone: typing.Union[typing.Callable[[], str], str] = lambda: input('Please enter your phone (or bot token): '),
+                                                                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line
+Traceback (most recent call last):
+  File "/Users/nardusduplooy/Documents/navigator/scheduler.py", line 20, in <module>
+    schedule.run_pending()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/schedule/__init__.py", line 854, in run_pending
+    default_scheduler.run_pending()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/schedule/__init__.py", line 101, in run_pending
+    self._run_job(job)
+    ~~~~~~~~~~~~~^^^^^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/schedule/__init__.py", line 173, in _run_job
+    ret = job.run()
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/schedule/__init__.py", line 691, in run
+    ret = self.job_func()
+  File "/Users/nardusduplooy/Documents/navigator/scheduler.py", line 11, in job
+    subprocess.run([sys.executable, "daily_briefing.py"])
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/nardusduplooy/Documents/navigator/daily_briefing.py", line 228, in send_daily_briefing
+    msg += "📰 *Must-read — NEO World & AI Commerce:*\n"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    daily_question = ""
+    ^^^^^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/_bot.py", line 1122, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/_bot.py", line 819, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/nardusduplooy/Documents/navigator/venv/lib/python3.14/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.Forbidden: Forbidden: user is deactivated
