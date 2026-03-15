@@ -123,7 +123,7 @@ async def send_daily_briefing(test_mode=False):
     bot = Bot(token=BOT_TOKEN)
     if test_mode:
         global CHAT_IDS
-        CHAT_IDS = [1357019604]
+        CHAT_IDS = [8536765390]
     today = datetime.now().strftime("%A, %d %B %Y")
 
     # Load subscribers dynamically
@@ -134,7 +134,7 @@ async def send_daily_briefing(test_mode=False):
                 _subs = _subjson.load(_subf)
             CHAT_IDS = [s["chat_id"] for s in _subs]
         except:
-            CHAT_IDS = [1357019604]
+            CHAT_IDS = [8536765390]
 
     tali_m1 = MODULE_1_TALI
     tali_m2_preview = random.choice(MODULE_2_TALI)
@@ -270,6 +270,6 @@ if __name__ == "__main__":
     import sys
     TEST_MODE = "--test" in sys.argv
     if TEST_MODE:
-        CHAT_IDS = [1357019604]  # Only Nardus
+        CHAT_IDS = [8536765390]  # Only Nardus
         print("🧪 TEST MODE — sending only to Nardus")
     asyncio.run(send_daily_briefing(test_mode=TEST_MODE))
