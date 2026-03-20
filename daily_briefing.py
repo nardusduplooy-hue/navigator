@@ -15,6 +15,24 @@ from jarvis_content import (
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
+def fetch_rundown_headline():
+    """Fetch the latest headline from The Rundown AI RSS feed."""
+    try:
+        import urllib.request
+        import xml.etree.ElementTree as ET
+        url = "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            xml_data = response.read()
+        root = ET.fromstring(xml_data)
+        channel = root.find("channel")
+        item = channel.find("item")
+        title = item.find("title").text.strip()
+        link = item.find("link").text.strip()
+        return title, link
+    except Exception:
+        return None, None
+
 def generate_daily_question_and_answer(assignment_text, why_it_matters):
     """Use Claude to generate a creative question AND model answer based on yesterday's assignment."""
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
@@ -233,6 +251,13 @@ async def send_daily_briefing(test_mode=False):
     msg += "📰 *Must-read — NEO World & AI Commerce:*\n"
     msg += f"[{_neo['title']}]({_neo['url']})\n"
     msg += f"_{_neo['note']}_ — {_neo['authors']}\n\n"
+    # Fetch Rundown AI headline
+    rundown_title, rundown_link = fetch_rundown_headline()
+    if rundown_title and rundown_link:
+        msg += "🌐 *AI News — The Rundown:*\n"
+        msg += f"[{rundown_title}]({rundown_link})\n"
+        msg += "_therundown.ai — free to read_\n\n"
+
     # Generate daily knowledge question based on yesterday's assignment
     yesterday_assignment = random.choice([a for a in MODULE_1_ASSIGNMENTS if a != assignment])
     daily_question = ""
