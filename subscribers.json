@@ -1,8 +1,14 @@
 [
-    {
-        "chat_id": 8536765390,
-        "name": "Nardus Du Plooy (Cell C)",
-        "username": "nardusduplooy",
-        "joined": "2026-03-15 00:00"
-    }
+  {
+    "chat_id": 8536765390,
+    "name": "Nardus Du Plooy (Cell C)",
+    "username": "nardusduplooy",
+    "joined": "2026-03-15 00:00"
+  },
+  {
+    "chat_id": 285802287,
+    "name": "Jannes | onepiece @du_jannes",
+    "username": "du_jannes",
+    "joined": "2026-03-19 16:35"
+  }
 ]

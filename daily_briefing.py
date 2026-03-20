@@ -170,19 +170,24 @@ async def send_daily_briefing(test_mode=False):
             msg += f"• *{_d['name']}* — {_d['display_due']}{_countdown}\n"
             msg += f"  {_d['details']}\n"
             if _d.get("link"):
-                msg += f"  [Submit here]({_d['link']})\n"
+                if 'zoom' in _d.get('link', '').lower():
+                    msg += f"  [Zoom Link]({_d['link']})\n"
+                else:
+                    msg += f"  [Submit here]({_d['link']})\n"
     msg += "\n"
 
     # NEXT SESSION
     msg += "📅 *NEXT ZOOM SESSION*\n"
-    msg += "• Chasing Jarvis Session 2 — Saturday March 21 (estimated)\n"
+    msg += "• [Vanguard Session 8 — Chasing Jarvis Module 2](https://cotrugli.online/groups/vanguard/zoom/meetings/8/?wm=1&mi=85210945788) — Sat March 21, 17:00 CET / 18:00 CAT\n"
+    msg += "  Passcode: vanguard8\n"
     msg += "• [Zoom Recordings — all sessions](https://cotrugli.online/groups/vanguard/zoom/meetings/4)\n"
     msg += "\n"
 
     # STATUS
     msg += "✅ *STATUS*\n"
     msg += "• All JTBDs current\n"
-    msg += "• Hult — Submitted & Under Review\n\n"
+    msg += "• Hult — Submitted & Under Review\n"
+    msg += "• Awaiting Future of Work multiple choice exam results\n\n"
 
     # CHASING JARVIS
     msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
