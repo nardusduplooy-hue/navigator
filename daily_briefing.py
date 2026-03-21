@@ -200,8 +200,8 @@ async def send_daily_briefing(test_mode=False):
 
     # NEXT SESSION
     msg += "📅 *NEXT ZOOM SESSION*\n"
-    msg += "• [Vanguard Session 8 — Chasing Jarvis Module 2](https://cotrugli.online/groups/vanguard/zoom/meetings/8/?wm=1&mi=85210945788) — Sat March 21, 17:00 CET / 18:00 CAT\n"
-    msg += "  Passcode: vanguard8\n"
+    msg += "• Vanguard Session 9 — Chasing Jarvis Module 3 — Sat April 4 (estimated)\n"
+    msg += "  Zoom link to be confirmed\n"
     msg += "• [Zoom Recordings — all sessions](https://cotrugli.online/groups/vanguard/zoom/meetings/4)\n"
     msg += "\n"
 
