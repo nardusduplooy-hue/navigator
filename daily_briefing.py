@@ -16,22 +16,26 @@ from jarvis_content import (
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 def fetch_rundown_headline():
-    """Fetch the latest headline from The Rundown AI RSS feed."""
-    try:
-        import urllib.request
-        import xml.etree.ElementTree as ET
-        url = "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as response:
-            xml_data = response.read()
-        root = ET.fromstring(xml_data)
-        channel = root.find("channel")
-        item = channel.find("item")
-        title = item.find("title").text.strip()
-        link = item.find("link").text.strip()
-        return title, link
-    except Exception:
-        return None, None
+    """Fetch the latest headline from The Rundown AI RSS feed with retry."""
+    import urllib.request
+    import xml.etree.ElementTree as ET
+    import time as _time
+    url = "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as response:
+                xml_data = response.read()
+            root = ET.fromstring(xml_data)
+            channel = root.find("channel")
+            item = channel.find("item")
+            title = item.find("title").text.strip()
+            link = item.find("link").text.strip()
+            return title, link
+        except Exception:
+            if attempt < 2:
+                _time.sleep(10)
+    return None, None
 
 def generate_daily_question_and_answer(assignment_text, why_it_matters):
     """Use Claude to generate a creative question AND model answer based on yesterday's assignment."""
