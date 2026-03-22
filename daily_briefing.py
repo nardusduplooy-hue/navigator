@@ -225,7 +225,7 @@ async def send_daily_briefing(test_mode=False):
             msg += f"  _{article['note']}_\n"
     msg += "\n"
 
-    msg += "🔜 *Module 2 preview — coming March 21:*\n"
+    msg += "🔜 *Module 2 preview — coming April 4:*\n"
     msg += f"• [{tali_m2_preview['title']}]({tali_m2_preview['url']})\n"
     msg += f"  _{tali_m2_preview['note']}_\n\n"
 

@@ -4,9 +4,9 @@
 
 MODULE_1_TALI = [
     {
-        "title": "Understanding LLMs: AI-Generated Research Podcast",
-        "url": "https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301",
-        "note": "Listen to audio version on Red Circle"
+        "title": "Context Engineering: AI-Generated Research Podcast",
+        "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
+        "note": "Listen to audio version on Red Circle — Module 2 preparation"
     },
 
     {
@@ -33,6 +33,11 @@ _PLACEHOLDER = [
 ]
 
 MODULE_2_TALI = [
+    {
+        "title": "The Context Engineer's Toolkit: Essential AI Tools for All Levels",
+        "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
+        "note": "Read before Module 2 — session April 4"
+    },
     {
         "title": "Context Engineering — AI-Generated Research Podcast",
         "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
@@ -97,11 +102,11 @@ MODULE_1_ASSIGNMENTS = [
 
 TOOLS_EXPLAINED = [
     {
-        "tool": "Google Gemini",
-        "module": "All modules",
-        "why": "Google's frontier AI model — recommended by Dr. Tali for close to zero cost",
-        "link": "https://gemini.google.com",
-        "description": "Google Gemini — explore the model Dr. Tali recommends for AI-powered tasks"
+        "tool": "Perplexity AI",
+        "module": "Module 2 + Module 4",
+        "why": "AI-powered search that cites sources — essential for research and context engineering",
+        "link": "https://www.perplexity.ai",
+        "description": "Perplexity AI — ask any question and get cited, up-to-date answers. Free tier available at perplexity.ai"
     },
     {
         "tool": "Claude AI",
@@ -187,10 +192,16 @@ SUPPLEMENTARY = [
         "note": "Technical deep dive from Anthropic's engineering team"
     },
     {
-        "title": "The New Skill in AI is Not Prompting, It's Context Engineering — Philipp Schmid",
+        "title": "What is Context Engineering? — Philipp Schmid",
         "url": "https://www.philschmid.de/context-engineering",
-        "module": "Module 4",
-        "note": "Industry perspective on context engineering"
+        "module": "Module 2 + Module 4",
+        "note": "The definitive guide to context engineering — read before Module 2 session"
+    },
+    {
+        "title": "How to Get the Most Out of AI Tools — Harvard Business Review",
+        "url": "https://hbr.org/2023/06/how-to-use-ai-to-do-stuff-an-opinionated-guide",
+        "module": "Module 2",
+        "note": "Practical guide to selecting and using AI tools effectively — essential Module 2 reading"
     },
     {
         "title": "Context Engineering for AI Agents: Lessons from Building Manus",
@@ -238,8 +249,8 @@ MODULE_4_TALI = [
 KAPUSTA_ARTICLES = [
     {
         "title": "Signals — Dražen Kapusta",
-        "url": "https://www.linkedin.com/pulse/signals-drazen-kapusta-kibxf/",
-        "note": "The future could arrive faster than you expect"
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7438543789570412544/",
+        "note": "Kapusta on reading weak signals before they become obvious — essential Vanguard thinking"
     },
     {
         "title": "Neo-Cotruglian Philosophy of Leadership",
