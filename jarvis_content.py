@@ -89,118 +89,125 @@ MODULE_1_ASSIGNMENTS = MODULE_2_ASSIGNMENTS
 
 TOOLS_EXPLAINED = [
     {
-        "tool": "Perplexity AI",
-        "module": "Module 2 + Module 4",
-        "why": "AI-powered search that cites sources — essential for research and context engineering",
-        "link": "https://www.perplexity.ai",
-        "description": "Perplexity AI — ask any question and get cited, up-to-date answers. Free tier available at perplexity.ai"
-    },
-    {
-        "tool": "Claude AI",
-        "module": "All modules",
-        "why": "The model powering Navigator — you are already using it",
-        "link": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
-        "description": "Anthropic's official prompt engineering guide — how to get better outputs from Claude right now"
-    },
-    {
-        "tool": "Google NotebookLM",
-        "module": "Module 2 + Module 4",
-        "why": "Required for Module 2 and your Module 4 MVP research",
-        "link": "https://notebooklm.google.com/",
-        "description": "Sign up free at notebooklm.google.com — upload Dr. Tali's articles and ask questions directly from the source"
-    },
-    {
-        "tool": "Google AI Studio",
-        "module": "Module 2 + Module 4 + Module 5",
-        "why": "Required for Modules 2, 4 and 5 — the beginner MVP build track",
-        "link": "https://aistudio.google.com/",
-        "description": "Sign up free at aistudio.google.com — this is where you prototype your Module 5 MVP"
-    },
-    {
-        "tool": "n8n Workflow Automation",
-        "module": "Module 2 + Module 3",
-        "why": "Required for Modules 2 and 3 — automates Navigator without code",
-        "link": "https://docs.n8n.io/try-it-out/",
-        "description": "n8n quickstart — build your first automated workflow in 5 minutes. Free tier at n8n.io"
-    },
-    {
-        "tool": "GitHub",
-        "module": "Module 2 + Module 4 + Module 5",
-        "why": "Navigator already lives here — understand what it is doing",
-        "link": "https://www.youtube.com/watch?v=RGOj5yH7evk",
-        "description": "Git and GitHub for beginners — freeCodeCamp YouTube, 12 min"
+        "tool": "Qwen",
+        "module": "Module 2",
+        "why": "Open-source LLM from Alibaba — run it locally via LM Studio or use the web interface",
+        "link": "https://chat.qwen.ai/",
+        "description": "Sign up at chat.qwen.ai — or run locally via LM Studio. One of the best open-source models available right now"
     },
     {
         "tool": "LM Studio",
         "module": "Module 2",
-        "why": "Run AI models locally on your MacBook — no data leaves your machine",
+        "why": "Run AI models locally on your Mac — no data leaves your machine",
         "link": "https://lmstudio.ai/",
-        "description": "Download free at lmstudio.ai — run powerful AI models privately on your own machine, no internet required"
+        "description": "Download free at lmstudio.ai — run Qwen, Llama, Mistral and more privately on your own machine"
     },
     {
-        "tool": "Model Context Protocol (MCP)",
-        "module": "Module 3",
-        "why": "What turns Claude into an agent — the core of Module 3",
-        "link": "https://modelcontextprotocol.io/introduction",
-        "description": "Official MCP introduction — read before Module 3. The architecture behind Navigator's agent layer"
+        "tool": "Hugging Face",
+        "module": "Module 2",
+        "why": "The GitHub of AI — every open-source model lives here",
+        "link": "https://huggingface.co/",
+        "description": "Sign up free at huggingface.co — browse, download, and test thousands of open-source models"
     },
     {
-        "tool": "VS Code",
-        "module": "Module 3 + Module 4 + Module 5",
-        "why": "Required for Modules 3, 4 and 5 coding sessions",
-        "link": "https://code.visualstudio.com/",
-        "description": "Download free at code.visualstudio.com — install before Module 3"
+        "tool": "GitHub",
+        "module": "Module 2",
+        "why": "Navigator already lives here — you need to understand what it is doing",
+        "link": "https://github.com/",
+        "description": "Sign up at github.com — Git and GitHub for beginners: youtube.com/watch?v=RGOj5yH7evk (12 min)"
+    },
+    {
+        "tool": "GitBook",
+        "module": "Module 2",
+        "why": "Docs + AI integrations — used for building knowledge bases that AI can read",
+        "link": "https://www.gitbook.com/",
+        "description": "Sign up free at gitbook.com — create your personal knowledge base with AI integrations built in"
+    },
+    {
+        "tool": "Cloudflare",
+        "module": "Module 2",
+        "why": "AI on the edge — run models at the network layer, not just in the cloud",
+        "link": "https://www.cloudflare.com/",
+        "description": "Sign up free at cloudflare.com — explore Cloudflare Workers AI for running models at the edge"
+    },
+    {
+        "tool": "Claude Desktop Agent",
+        "module": "Module 2",
+        "why": "Claude running locally as an agent on your machine — the bridge to MCP in Module 3",
+        "link": "https://claude.ai/download",
+        "description": "Download at claude.ai/download — install and connect to local tools. Foundation for Module 3 agent work"
+    },
+    {
+        "tool": "VS Code + Augment Code",
+        "module": "Module 2",
+        "why": "Your AI-powered development environment — required for Modules 3, 4 and 5",
+        "link": "https://www.augmentcode.com/",
+        "description": "Install VS Code at code.visualstudio.com, then add Augment Code extension at augmentcode.com"
+    },
+    {
+        "tool": "Claude Code",
+        "module": "Module 2",
+        "why": "Agentic coding in your terminal — this is how Navigator was built",
+        "link": "https://docs.anthropic.com/en/docs/claude-code/overview",
+        "description": "Docs at docs.anthropic.com/claude-code — install and run your first agentic coding session"
+    },
+    {
+        "tool": "Veo",
+        "module": "Module 2",
+        "why": "Google DeepMind's video generation model — understand what multimodal AI can do",
+        "link": "https://deepmind.google/technologies/veo/",
+        "description": "Explore at deepmind.google/technologies/veo/ — video generation from text prompts"
     },
 ]
 
 SUPPLEMENTARY = [
     {
-        "title": "What is a Transformer Model? — IBM",
-        "url": "https://www.ibm.com/topics/transformer-model",
-        "module": "Module 1",
-        "note": "Plain-English explainer on transformer architecture — read before Module 2"
+        "title": "Dr. Tali — The Context Engineer's Toolkit",
+        "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
+        "module": "Module 2",
+        "note": "The tool map for Module 2 — read this before setting up your stack"
     },
     {
-        "title": "A Beginner's Guide to Large Language Models — NVIDIA",
-        "url": "https://www.nvidia.com/en-us/glossary/large-language-models/",
-        "module": "Module 1",
-        "note": "Solid foundation on how LLMs work — essential Module 1 reference"
-    },
-    {
-        "title": "Building Effective AI Agents — Anthropic",
-        "url": "https://www.anthropic.com/research/building-effective-agents",
-        "module": "Module 3",
-        "note": "Technical deep dive from Anthropic's engineering team"
-    },
-    {
-        "title": "Effective Context Engineering for AI Agents — Anthropic",
-        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
-        "module": "Module 4",
-        "note": "Technical deep dive from Anthropic's engineering team"
+        "title": "Dr. Tali — Data Sovereignty in the AI Age",
+        "url": "https://medium.com/@talirezun/data-sovereignty-in-the-ai-age-building-your-own-private-chatgpt-a83c96e342a0",
+        "module": "Module 2",
+        "note": "Why running models locally matters — essential before LM Studio setup"
     },
     {
         "title": "What is Context Engineering? — Philipp Schmid",
         "url": "https://www.philschmid.de/context-engineering",
-        "module": "Module 2 + Module 4",
-        "note": "The definitive guide to context engineering — read before Module 2 session"
+        "module": "Module 2",
+        "note": "The definitive guide to context engineering — read before Session 9"
     },
     {
         "title": "How to Get the Most Out of AI Tools — Harvard Business Review",
         "url": "https://hbr.org/2023/06/how-to-use-ai-to-do-stuff-an-opinionated-guide",
         "module": "Module 2",
-        "note": "Practical guide to selecting and using AI tools effectively — essential Module 2 reading"
+        "note": "Practical guide to selecting and using AI tools effectively"
     },
     {
-        "title": "Context Engineering for AI Agents: Lessons from Building Manus",
-        "url": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
-        "module": "Module 4",
-        "note": "Practical insights from production deployment"
+        "title": "Git and GitHub for Beginners — freeCodeCamp",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk",
+        "module": "Module 2",
+        "note": "12 min video — watch before touching the Navigator codebase"
     },
     {
-        "title": "Markdown Guide — complete reference",
-        "url": "https://www.markdownguide.org/",
-        "module": "Module 4",
-        "note": "Required for context engineering — markdown structures your agent instructions"
+        "title": "Hugging Face — Getting Started",
+        "url": "https://huggingface.co/docs/hub/index",
+        "module": "Module 2",
+        "note": "How to find, download, and run open-source models from the Hub"
+    },
+    {
+        "title": "Cloudflare Workers AI — Getting Started",
+        "url": "https://developers.cloudflare.com/workers-ai/",
+        "module": "Module 2",
+        "note": "Run AI models at the edge — Cloudflare's developer docs"
+    },
+    {
+        "title": "Augment Code — Documentation",
+        "url": "https://docs.augmentcode.com/",
+        "module": "Module 2",
+        "note": "Set up Augment Code in VS Code — your AI pair programmer for the build modules"
     },
 ]
 

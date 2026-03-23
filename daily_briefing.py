@@ -208,33 +208,29 @@ async def send_daily_briefing(test_mode=False):
     # STATUS
     msg += "✅ *STATUS*\n"
     msg += "• All JTBDs current\n"
+    msg += "• JTBD — [Comment posted on Dr. Tali LinkedIn](https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-share-7441742562106966016-nmBH)\n"
     msg += "• Hult — Submitted & Under Review\n"
     msg += "• Awaiting Future of Work multiple choice exam results\n\n"
 
     # CHASING JARVIS
     msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
 
-    msg += "📖 *Module 1 — Dr. Tali's required reading:*\n"
-    for article in tali_m1:
-        if article['title'] == "Understanding Large Language Models: A Complete Manual":
-            _chapter = LLM_MANUAL_CHAPTERS[datetime.now().timetuple().tm_yday % len(LLM_MANUAL_CHAPTERS)]
-            msg += f"• [{article['title']}]({article['url']})\n"
-            msg += f"  _{_chapter['note']}: {_chapter['title']}_\n"
-        else:
-            msg += f"• [{article['title']}]({article['url']})\n"
-            msg += f"  _{article['note']}_\n"
-    msg += "\n"
-
     msg += "🔜 *Module 2 preview — coming April 4:*\n"
     msg += f"• [{tali_m2_preview['title']}]({tali_m2_preview['url']})\n"
     msg += f"  _{tali_m2_preview['note']}_\n\n"
 
-    msg += f"📝 *Module 1 assignment to prepare:*\n"
-    msg += f"_{assignment['assignment']}_\n\n"
-    msg += f"Why it matters: {assignment['why']}\n\n"
-    msg += "Prepare with:\n"
-    for name, url in assignment['prep_links']:
-        msg += f"• [{name}]({url})\n"
+    msg += "📝 *Module 2 — Prepare for Session 9 (April 4):*\n"
+    msg += "_Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:_\n\n"
+    msg += "→ [Qwen](https://chat.qwen.ai/) & [LM Studio](https://lmstudio.ai/) — run LLMs locally\n"
+    msg += "→ [Hugging Face](https://huggingface.co/) — open-source model hub\n"
+    msg += "→ [GitHub](https://github.com/) & [GitBook](https://www.gitbook.com/) — code + docs + AI integrations\n"
+    msg += "→ [Cloudflare](https://www.cloudflare.com/) — AI on the edge\n"
+    msg += "→ [Nano Banana Pro](https://nanobananago.com/) & [Veo](https://deepmind.google/technologies/veo/) — explore\n"
+    msg += "→ [Claude Desktop Agent](https://claude.ai/download) — local agent\n"
+    msg += "→ [VS Code](https://code.visualstudio.com/) + [Augment Code](https://www.augmentcode.com/) — your dev environment\n"
+    msg += "→ [Google Antigravity](https://sites.research.google/antigravity/) — explore\n"
+    msg += "→ [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) — agentic coding\n\n"
+    msg += "_Explore, break things, and decide what goes into YOUR personal AI stack._\n\n"
     msg += "\n"
 
     msg += f"🔧 *Tool to understand today — {tool['module']}:*\n"
