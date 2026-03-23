@@ -1,18 +1,18 @@
 [
-    {
-        "name": "Future of Work Essay",
-        "due": "2026-03-23T17:00:00Z",
-        "display_due": "March 23, 19:00 CET",
-        "details": "Max 1000 words. Individual submission. Don't submit AI content without personal input.",
-        "link": "https://cotrugli.online/courses/vanguard-future-of-work/lessons/final-assignment-upload-written-essay",
-        "status": "active"
-    },
-    {
-        "name": "Chasing Jarvis Session 2",
-        "due": "2026-03-21T16:00:00Z",
-        "display_due": "Saturday March 21, 17:00 CET / 18:00 CAT",
-        "details": "Vanguard Session 8 \u2014 Chasing Jarvis Module 2. Zoom link confirmed.",
-        "link": "https://cotrugli.online/groups/vanguard/zoom/meetings/8/?wm=1&mi=85210945788",
-        "status": "completed"
-    }
+  {
+    "name": "Future of Work Essay",
+    "due": "2026-03-23T17:00:00Z",
+    "display_due": "March 23, 19:00 CET",
+    "details": "Max 1000 words. Individual submission. Don't submit AI content without personal input.",
+    "link": "https://cotrugli.online/courses/vanguard-future-of-work/lessons/final-assignment-upload-written-essay",
+    "status": "completed"
+  },
+  {
+    "name": "Chasing Jarvis Session 2",
+    "due": "2026-03-21T16:00:00Z",
+    "display_due": "Saturday March 21, 17:00 CET / 18:00 CAT",
+    "details": "Vanguard Session 8 — Chasing Jarvis Module 2. Zoom link confirmed.",
+    "link": "https://cotrugli.online/groups/vanguard/zoom/meetings/8/?wm=1&mi=85210945788",
+    "status": "completed"
+  }
 ]

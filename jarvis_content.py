@@ -1,18 +1,13 @@
 # CHASING JARVIS — CONTENT LIBRARY
 # Every item traces to official course materials only
-# Current focus: Module 1. Module 2 preview only — session March 21
+# Current focus: Module 2 (tool setup). Module 3 preview — session April 4
+# Last updated: 23 March 2026
 
 MODULE_1_TALI = [
     {
-        "title": "Context Engineering: AI-Generated Research Podcast",
-        "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
-        "note": "Listen to audio version on Red Circle — Module 2 preparation"
-    },
-
-    {
         "title": "Understanding Large Language Models: A Complete Manual",
         "url": "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00",
-        "note": "Read with comprehension"
+        "note": "Read with comprehension — Module 1 foundation"
     },
 ]
 
@@ -29,76 +24,68 @@ LLM_MANUAL_CHAPTERS = [
     {"chapter": 10, "title": "The Future of LLMs", "note": "Chapter 10 — Where this is all heading"},
 ]
 
-_PLACEHOLDER = [
-]
-
 MODULE_2_TALI = [
     {
         "title": "The Context Engineer's Toolkit: Essential AI Tools for All Levels",
         "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
-        "note": "Read before Module 2 — session April 4"
-    },
-    {
-        "title": "Context Engineering — AI-Generated Research Podcast",
-        "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
-        "note": "Listen to audio version on Red Circle — Module 2 preparation"
-    },
-    {
-        "title": "The Context Engineer's Toolkit: Essential AI Tools for All Levels",
-        "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
-        "note": "Read before Module 2 — session March 21"
+        "note": "Read before Module 2 — the tool map for every session ahead"
     },
     {
         "title": "Data Sovereignty in the AI Age: Building Your Own Private ChatGPT",
         "url": "https://medium.com/@talirezun/data-sovereignty-in-the-ai-age-building-your-own-private-chatgpt-a83c96e342a0",
-        "note": "Read before upcoming Zoom session for Module 2"
+        "note": "Read before Module 2 — why running models locally matters"
+    },
+    {
+        "title": "Context Engineering — AI-Generated Research Podcast",
+        "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
+        "note": "Listen on Red Circle — audio version of the context engineering material"
     },
 ]
 
-MODULE_1_ASSIGNMENTS = [
+MODULE_2_ASSIGNMENTS = [
     {
-        "assignment": "Define and differentiate between LLMs, SLMs, open-source, and closed-source models",
-        "why": "The foundation of every tool decision you make in Modules 2 through 5",
+        "assignment": "Set up Google NotebookLM and upload Dr. Tali's 'Understanding Large Language Models' article — ask it 5 questions you couldn't answer before",
+        "why": "NotebookLM is your personal AI research assistant. Getting it loaded with course material before the session puts you 3 steps ahead.",
         "prep_links": [
+            ("Google NotebookLM — sign up free", "https://notebooklm.google.com/"),
             ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
-            ("LLM vs SLM: key differences — Red Hat article", "https://www.redhat.com/en/topics/ai/llm-vs-slm"),
-            ("Open vs Closed Source AI explained — Euronews", "https://www.euronews.com/next/2024/02/20/open-source-vs-closed-source-ai-whats-the-difference-and-why-does-it-matter"),
         ],
     },
     {
-        "assignment": "Explain the fundamental architecture of neural networks and transformer models",
-        "why": "Claude, GPT-4, and Gemini all run on transformer architecture — this gives you an edge in every module",
+        "assignment": "Sign up for Google AI Studio and run your first prompt — experiment with system instructions and compare outputs from different Gemini models",
+        "why": "Google AI Studio is the beginner MVP build track for Modules 4 and 5. Knowing where the buttons are before the session matters.",
         "prep_links": [
-            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
-            ("3Blue1Brown — Attention in Transformers visualised (YouTube, 26 min)", "https://www.youtube.com/watch?v=wjZofJX0v4M"),
+            ("Google AI Studio — sign up free", "https://aistudio.google.com/"),
+            ("Dr. Tali — The Context Engineer's Toolkit", "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07"),
         ],
     },
     {
-        "assignment": "Compare human cognitive processes with AI equivalents — context windows, training data, inference",
-        "why": "Context windows are the foundation of Module 4 context engineering",
+        "assignment": "Download and run LM Studio — load a small open-source model (Mistral 7B or Llama 3.2 3B) and run it fully offline on your machine",
+        "why": "Data sovereignty starts here. Running a model locally means no data leaves your machine — this is the practical foundation of Dr. Tali's privacy module.",
         "prep_links": [
-            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
-            ("What is a Context Window — McKinsey plain-English explainer", "https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-a-context-window"),
-            ("Andrej Karpathy — Intro to LLMs (YouTube, 1hr)", "https://www.youtube.com/watch?v=zjkBMFhNj_g"),
+            ("LM Studio — download free", "https://lmstudio.ai/"),
+            ("Dr. Tali — Data Sovereignty in the AI Age", "https://medium.com/@talirezun/data-sovereignty-in-the-ai-age-building-your-own-private-chatgpt-a83c96e342a0"),
         ],
     },
     {
-        "assignment": "Evaluate the strengths and limitations of current LLM technology",
-        "why": "Knowing when NOT to use AI is as important as knowing when to use it",
+        "assignment": "Complete the n8n quickstart — build your first automated workflow connecting two apps without writing any code",
+        "why": "n8n is the automation layer required for Modules 2 and 3. Building one workflow before the session means you're not starting from zero in class.",
         "prep_links": [
-            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
-            ("AI Snake Oil — Princeton researchers on what AI cannot do", "https://www.aisnakeoil.com"),
+            ("n8n quickstart — try it free", "https://docs.n8n.io/try-it-out/"),
+            ("Dr. Tali — The Context Engineer's Toolkit", "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07"),
         ],
     },
     {
-        "assignment": "Differentiate between frontier LLM models and select appropriate tools for specific tasks",
-        "why": "Understanding transformer architecture gives you an edge in every module — Claude, GPT-4, and Gemini all run on this foundation",
+        "assignment": "Install VS Code and the GitHub Copilot extension — open Navigator's codebase and read one Python file end to end",
+        "why": "VS Code is required for Modules 3, 4 and 5. Reading real code before you write any is the fastest way to stop being afraid of it.",
         "prep_links": [
-            ("Dr. Tali — Understanding Large Language Models: A Complete Manual", "https://medium.com/@talirezun/understanding-large-language-models-a-complete-manual-8b18463b6f00"),
-            ("Harvard Business Review — Choosing the Right AI Model for Your Business", "https://hbr.org/2023/11/how-to-choose-the-right-ai-model-for-your-use-case"),
+            ("VS Code — download free", "https://code.visualstudio.com/"),
+            ("Git and GitHub for beginners — freeCodeCamp, 12 min", "https://www.youtube.com/watch?v=RGOj5yH7evk"),
         ],
     },
 ]
+
+MODULE_1_ASSIGNMENTS = MODULE_2_ASSIGNMENTS
 
 TOOLS_EXPLAINED = [
     {
@@ -217,22 +204,6 @@ SUPPLEMENTARY = [
     },
 ]
 
-
-# DR. TALI — ADDITIONAL MEDIUM ARTICLES
-MODULE_4_TALI = [
-    {
-        "title": "From Prompts to Precision: The Art & Science of Context Engineering",
-        "url": "https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c",
-        "note": "Read before Module 4 — context engineering deep dive by Dr. Tali"
-    },
-    {
-        "title": "From Google AI Studio to Production: Building Lumina v1 in 48 Hours",
-        "url": "https://medium.com/@talirezun/from-google-ai-studio-to-production-d928bb00edbd",
-        "note": "Read before Module 5 — Dr. Tali builds a production app with AI"
-    },
-]
-
-# DRAZEN KAPUSTA — LINKEDIN ARTICLES
 MODULE_4_TALI = [
     {
         "title": "From Prompts to Precision: The Art & Science of Context Engineering",
@@ -253,9 +224,9 @@ KAPUSTA_ARTICLES = [
         "note": "Kapusta on reading weak signals before they become obvious — essential Vanguard thinking"
     },
     {
-        "title": "Neo-Cotruglian Philosophy of Leadership",
-        "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
-        "note": "The philosophical foundation of the Vanguard MBA — read early"
+        "title": "Business as the Ultimate Form of Art: Vanguard Leadership in the AI Era",
+        "url": "https://www.linkedin.com/pulse/business-ultimate-form-art-vanguard-leadership-ai-era-drazen-kapusta-lfsdf",
+        "note": "Kapusta on what AI-era leadership actually looks like in practice — read before Module 3"
     },
 ]
 
@@ -278,7 +249,12 @@ NEO_WORLD_ARTICLES = [
         "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f",
         "note": "Kapusta's introduction to the NEO World — start here if you haven't already"
     },
+    {
+        "title": "Art of Trade by Benedetto Cotrugli",
+        "authors": "Dražen Kapusta",
+        "url": "https://www.linkedin.com/pulse/art-trade-benedetto-cotrugli-drazen-kapusta-adxlf",
+        "note": "The 15th-century merchant handbook that founded COTRUGLI — Kapusta's modern reading of it"
+    },
 ]
 
-# Keep backward compatibility
 KAPUSTA_WFR_ARTICLE = NEO_WORLD_ARTICLES[0]
