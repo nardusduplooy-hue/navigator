@@ -36,9 +36,9 @@ MODULE_2_TALI = [
         "note": "Read before Module 2 — why running models locally matters"
     },
     {
-        "title": "Context Engineering — AI-Generated Research Podcast",
-        "url": "https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701",
-        "note": "Listen on Red Circle — audio version of the context engineering material"
+        "title": "The Context Engineer's Toolkit: Essential AI Tools for All Levels",
+        "url": "https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07",
+        "note": "Read before Module 2"
     },
 ]
 
@@ -89,25 +89,32 @@ MODULE_1_ASSIGNMENTS = MODULE_2_ASSIGNMENTS
 
 TOOLS_EXPLAINED = [
     {
-        "tool": "Qwen",
+        "tool": "Google Gemini",
         "module": "Module 2",
-        "why": "Open-source LLM from Alibaba — run it locally via LM Studio or use the web interface",
-        "link": "https://chat.qwen.ai/",
-        "description": "Sign up at chat.qwen.ai — or run locally via LM Studio. One of the best open-source models available right now"
+        "why": "Google's flagship AI assistant — your starting point for prompt engineering and model comparison",
+        "link": "https://gemini.google.com/",
+        "description": "Login at gemini.google.com — explore prompting, compare models and get familiar with Google's AI ecosystem"
     },
     {
-        "tool": "LM Studio",
+        "tool": "Google AI Studio",
         "module": "Module 2",
-        "why": "Run AI models locally on your Mac — no data leaves your machine",
-        "link": "https://lmstudio.ai/",
-        "description": "Download free at lmstudio.ai — run Qwen, Llama, Mistral and more privately on your own machine"
+        "why": "The beginner MVP build track — where you experiment with system instructions and Gemini models directly",
+        "link": "https://aistudio.google.com/",
+        "description": "Sign up free at aistudio.google.com — run prompts, set system instructions and compare Gemini model outputs"
     },
     {
-        "tool": "Hugging Face",
+        "tool": "Google NotebookLM",
         "module": "Module 2",
-        "why": "The GitHub of AI — every open-source model lives here",
-        "link": "https://huggingface.co/",
-        "description": "Sign up free at huggingface.co — browse, download, and test thousands of open-source models"
+        "why": "Your personal AI research assistant — upload course material and interrogate it",
+        "link": "https://notebooklm.google.com/",
+        "description": "Login at notebooklm.google.com — upload Dr. Tali's articles and ask questions you couldn't answer before"
+    },
+    {
+        "tool": "Anthropic Claude Desktop",
+        "module": "Module 2",
+        "why": "Claude running locally as an agent on your machine — the bridge to MCP in Module 3",
+        "link": "https://claude.ai/download",
+        "description": "Download at claude.ai/download — install and connect to local tools. Foundation for Module 3 agent work"
     },
     {
         "tool": "GitHub",
@@ -117,46 +124,18 @@ TOOLS_EXPLAINED = [
         "description": "Sign up at github.com — Git and GitHub for beginners: youtube.com/watch?v=RGOj5yH7evk (12 min)"
     },
     {
-        "tool": "GitBook",
+        "tool": "LM Studio",
         "module": "Module 2",
-        "why": "Docs + AI integrations — used for building knowledge bases that AI can read",
-        "link": "https://www.gitbook.com/",
-        "description": "Sign up free at gitbook.com — create your personal knowledge base with AI integrations built in"
+        "why": "Run AI models locally on your Mac — no data leaves your machine",
+        "link": "https://lmstudio.ai/",
+        "description": "Download free at lmstudio.ai — run Llama, Mistral and more privately on your own machine"
     },
     {
-        "tool": "Cloudflare",
+        "tool": "n8n",
         "module": "Module 2",
-        "why": "AI on the edge — run models at the network layer, not just in the cloud",
-        "link": "https://www.cloudflare.com/",
-        "description": "Sign up free at cloudflare.com — explore Cloudflare Workers AI for running models at the edge"
-    },
-    {
-        "tool": "Claude Desktop Agent",
-        "module": "Module 2",
-        "why": "Claude running locally as an agent on your machine — the bridge to MCP in Module 3",
-        "link": "https://claude.ai/download",
-        "description": "Download at claude.ai/download — install and connect to local tools. Foundation for Module 3 agent work"
-    },
-    {
-        "tool": "VS Code + Augment Code",
-        "module": "Module 2",
-        "why": "Your AI-powered development environment — required for Modules 3, 4 and 5",
-        "link": "https://www.augmentcode.com/",
-        "description": "Install VS Code at code.visualstudio.com, then add Augment Code extension at augmentcode.com"
-    },
-    {
-        "tool": "Claude Code",
-        "module": "Module 2",
-        "why": "Agentic coding in your terminal — this is how Navigator was built",
-        "link": "https://docs.anthropic.com/en/docs/claude-code/overview",
-        "description": "Docs at docs.anthropic.com/claude-code — install and run your first agentic coding session"
-    },
-    {
-        "tool": "Veo",
-        "module": "Module 2",
-        "why": "Google DeepMind's video generation model — understand what multimodal AI can do",
-        "link": "https://deepmind.google/technologies/veo/",
-        "description": "Explore at deepmind.google/technologies/veo/ — video generation from text prompts"
+        "why": "Automation layer for Modules 2 and 3 — connect apps and build workflows without code",
+        "link": "https://n8n.io/",
+        "description": "Try free at n8n.io — build your first automated workflow connecting two apps in under 10 minutes"
     },
 ]
 

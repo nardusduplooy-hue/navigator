@@ -176,6 +176,7 @@ async def send_daily_briefing(test_mode=False):
     except:
         _deadlines = []
     msg += "🔴 *DEADLINES*\n"
+    msg += "• Prepare for Module 2 before next Zoom session\n"
     for _d in _deadlines:
         if _d["status"] in ["active", "upcoming"]:
             from datetime import timezone
@@ -209,7 +210,6 @@ async def send_daily_briefing(test_mode=False):
     msg += "✅ *STATUS*\n"
     msg += "• All JTBDs current\n"
     msg += "• JTBD — [Comment posted on Dr. Tali LinkedIn](https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-share-7441742562106966016-nmBH)\n"
-    msg += "• Hult — Submitted & Under Review\n"
     msg += "• Awaiting Future of Work multiple choice exam results\n"
     msg += "• Future of Work Essay — Submitted, awaiting results and feedback\n"
     msg += "\n"
@@ -219,19 +219,17 @@ async def send_daily_briefing(test_mode=False):
 
     msg += "🔜 *Module 2 preview — coming April 4:*\n"
     msg += f"• [{tali_m2_preview['title']}]({tali_m2_preview['url']})\n"
-    msg += f"  _{tali_m2_preview['note']}_\n\n"
+    msg += "  _Read before Module 2_\n\n"
 
     msg += "📝 *Module 2 — Prepare for Session 9 (April 4):*\n"
     msg += "_Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:_\n\n"
-    msg += "→ [Qwen](https://chat.qwen.ai/) & [LM Studio](https://lmstudio.ai/) — run LLMs locally\n"
-    msg += "→ [Hugging Face](https://huggingface.co/) — open-source model hub\n"
-    msg += "→ [GitHub](https://github.com/) & [GitBook](https://www.gitbook.com/) — code + docs + AI integrations\n"
-    msg += "→ [Cloudflare](https://www.cloudflare.com/) — AI on the edge\n"
-    msg += "→ [Nano Banana Pro](https://nanobananago.com/) & [Veo](https://deepmind.google/technologies/veo/) — explore\n"
-    msg += "→ [Claude Desktop Agent](https://claude.ai/download) — local agent\n"
-    msg += "→ [VS Code](https://code.visualstudio.com/) + [Augment Code](https://www.augmentcode.com/) — your dev environment\n"
-    msg += "→ [Google Antigravity](https://sites.research.google/antigravity/) — explore\n"
-    msg += "→ [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) — agentic coding\n\n"
+    msg += "→ [Google Gemini](https://gemini.google.com/) — Login & Explore\n"
+    msg += "→ [Google AI Studio](https://aistudio.google.com/) — Login & Explore\n"
+    msg += "→ [Google NotebookLM](https://notebooklm.google.com/) — Login & Explore\n"
+    msg += "→ [Anthropic Claude Desktop](https://claude.ai/download) — Create Account & Explore\n"
+    msg += "→ [GitHub](https://github.com/) — Create Account & Explore\n"
+    msg += "→ [LM Studio](https://lmstudio.ai/) — Download & Install (advanced)\n"
+    msg += "→ [n8n](https://n8n.io/) — Login & Explore\n\n"
     msg += "_Explore, break things, and decide what goes into YOUR personal AI stack._\n\n"
     msg += "\n"
 
