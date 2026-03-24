@@ -274,6 +274,7 @@ async def send_daily_briefing(test_mode=False):
     except Exception as e:
         pass
 
+    msg += "📲 _Vanguard — want this briefing every morning at 05:30 CAT? Message_ `/addme` _to @CotNavigatorBot on Telegram and you're in._\n\n"
     msg += "⚡ _Navigator out._"
 
     for chat_id in CHAT_IDS:
