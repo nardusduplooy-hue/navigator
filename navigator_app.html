@@ -335,7 +335,7 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
   <button class="nav-tab" onclick="switchTab('status',this)"><span class="nav-icon">✅</span><span class="nav-label">Status</span></button>
 </nav>
 <script>
-const ANTHROPIC_API_KEY='YOUR_API_KEY_HERE';
+const ANTHROPIC_API_KEY='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';
 function updateClock(){const t=new Date().toLocaleTimeString('en-ZA',{timeZone:'Africa/Johannesburg',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});document.getElementById('clock').textContent=t+' CAT';}
 setInterval(updateClock,1000);updateClock();
 function updateDate(){const days=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];const months=['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];const now=new Date();document.getElementById('hero-day').textContent=days[now.getDay()]+' · '+now.getDate()+' '+months[now.getMonth()]+' '+now.getFullYear();}
