@@ -231,9 +231,9 @@ KAPUSTA_ARTICLES = [
         "note": "Kapusta on reading weak signals before they become obvious — essential Vanguard thinking"
     },
     {
-        "title": "Business as the Ultimate Form of Art: Vanguard Leadership in the AI Era",
-        "url": "https://www.linkedin.com/pulse/business-ultimate-form-art-vanguard-leadership-ai-era-drazen-kapusta-lfsdf",
-        "note": "Kapusta on what AI-era leadership actually looks like in practice — read before Module 3"
+        "title": "Subsidiary Alliance Reforged: How the 1798 Playbook Defines Modern AI Strategy",
+        "url": "https://www.linkedin.com/pulse/subsidiary-alliance-reforged-how-1798-playbook-defines-drazen-kapusta-jj0nf/",
+        "note": "Kapusta on how historical alliance structures map directly to AI partnership strategy today"
     },
 ]
 

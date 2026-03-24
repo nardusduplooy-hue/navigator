@@ -210,7 +210,9 @@ async def send_daily_briefing(test_mode=False):
     msg += "• All JTBDs current\n"
     msg += "• JTBD — [Comment posted on Dr. Tali LinkedIn](https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-share-7441742562106966016-nmBH)\n"
     msg += "• Hult — Submitted & Under Review\n"
-    msg += "• Awaiting Future of Work multiple choice exam results\n\n"
+    msg += "• Awaiting Future of Work multiple choice exam results\n"
+    msg += "• Future of Work Essay — Submitted, awaiting results and feedback\n"
+    msg += "\n"
 
     # CHASING JARVIS
     msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
@@ -242,7 +244,7 @@ async def send_daily_briefing(test_mode=False):
     msg += f"[{supp['title']}]({supp['url']})\n"
     msg += f"_{supp['note']}_\n\n"
 
-    msg += "🏛️ *Vanguard Leadership — Kapusta reading:*\n"
+    msg += "🏛️ *VANGUARD LEADERSHIP — Kapusta reading:*\n"
     for article in KAPUSTA_ARTICLES:
             msg += f"• [{article['title']}]({article['url']})\n"
             msg += f"  _{article['note']}_\n"
@@ -254,7 +256,7 @@ async def send_daily_briefing(test_mode=False):
     # Fetch Rundown AI headline
     rundown_title, rundown_link = fetch_rundown_headline()
     if rundown_title and rundown_link:
-        msg += "🌐 *AI News — The Rundown:*\n"
+        msg += "🌐 *AI NEWS — THE RUNDOWN:*\n"
         msg += f"[{rundown_title}]({rundown_link})\n"
         msg += "_therundown.ai — free to read_\n\n"
 
