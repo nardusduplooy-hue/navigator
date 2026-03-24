@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Navigator · COTRUGLI Vanguard MBA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+:root{--bg:#080c10;--bg2:#0d1117;--bg3:#111820;--border:#1e2d3d;--accent:#00d4ff;--accent2:#ff6b35;--accent3:#39ff14;--danger:#ff3b5c;--warn:#ffaa00;--text:#e8edf2;--text-dim:#4a6275;--text-mid:#8ba3b5;--mono:'Space Mono',monospace;--sans:'Syne',sans-serif;--radius:12px;--tab-h:64px;}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;max-width:480px;margin:0 auto;overflow-x:hidden;}
+.app-header{position:sticky;top:0;z-index:100;background:rgba(8,12,16,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;}
+.header-brand{display:flex;align-items:center;gap:10px;}
+.header-logo{width:32px;height:32px;background:linear-gradient(135deg,var(--accent),#0070ff);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;font-weight:700;color:#000;}
+.header-title{font-size:16px;font-weight:800;letter-spacing:0.05em;}
+.header-sub{font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:0.12em;margin-top:1px;}
+.header-right{display:flex;align-items:center;gap:10px;}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent3);box-shadow:0 0 8px var(--accent3);animation:pulse 2s infinite;}
+.clock{font-family:var(--mono);font-size:11px;color:var(--text-mid);}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.app-body{padding:16px 16px calc(var(--tab-h) + 24px);display:flex;flex-direction:column;gap:12px;}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+.card-header{padding:12px 16px 10px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);}
+.card-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.14em;color:var(--text-mid);text-transform:uppercase;}
+.card-body{padding:14px 16px;}
+.date-hero{background:linear-gradient(135deg,#0d1117 0%,#0a1628 100%);border:1px solid var(--border);border-radius:var(--radius);padding:20px 16px;text-align:center;position:relative;overflow:hidden;}
+.date-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,0.08),transparent);}
+.date-day{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:0.18em;margin-bottom:4px;}
+.date-title{font-size:28px;font-weight:800;letter-spacing:-0.02em;}
+.date-sub{font-family:var(--mono);font-size:9px;color:var(--text-dim);letter-spacing:0.12em;margin-top:6px;}
+.countdown-strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;}
+.countdown-strip::-webkit-scrollbar{display:none;}
+.cd-chip{flex-shrink:0;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px 12px;min-width:110px;}
+.cd-name{font-size:10px;color:var(--text-mid);margin-bottom:3px;}
+.cd-val{font-family:var(--mono);font-size:13px;font-weight:700;}
+.cd-val.overdue{color:var(--danger);}.cd-val.soon{color:var(--warn);}.cd-val.ok{color:var(--accent3);}
+.status-list{display:flex;flex-direction:column;gap:6px;}
+.status-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.4;padding:8px 0;border-bottom:1px solid var(--border);}
+.status-item:last-child{border-bottom:none;}
+.status-dot{width:6px;height:6px;border-radius:50%;margin-top:5px;flex-shrink:0;}
+.status-dot.green{background:var(--accent3);box-shadow:0 0 6px var(--accent3);}
+.status-dot.cyan{background:var(--accent);box-shadow:0 0 6px var(--accent);}
+.status-dot.orange{background:var(--warn);}.status-dot.dim{background:var(--text-dim);}
+.status-text a{color:var(--accent);text-decoration:none;}
+.section-label{font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:10px;}
+.tool-grid{display:flex;flex-direction:column;gap:6px;}
+.tool-row{display:flex;align-items:center;gap:10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;text-decoration:none;transition:border-color 0.15s;}
+.tool-row:active{border-color:var(--accent);}
+.tool-arrow{font-size:11px;color:var(--accent);margin-right:2px;flex-shrink:0;}
+.tool-name{font-size:13px;color:var(--text);font-weight:600;flex:1;}
+.tool-desc{font-family:var(--mono);font-size:10px;color:var(--text-dim);}
+.tool-link-icon{color:var(--text-dim);font-size:11px;}
+.article-list{display:flex;flex-direction:column;gap:8px;}
+.article-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;text-decoration:none;display:block;transition:border-color 0.15s;}
+.article-card:active{border-color:var(--accent);}
+.article-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:4px;}
+.article-note{font-family:var(--mono);font-size:10px;color:var(--text-dim);line-height:1.4;}
+.article-author{font-family:var(--mono);font-size:9px;color:var(--accent);margin-top:4px;}
+.test-card{background:linear-gradient(135deg,#0d1117,#0a1628);border:1px solid rgba(0,212,255,0.2);border-radius:var(--radius);padding:16px;}
+.test-question{font-size:14px;line-height:1.6;color:var(--text);font-style:italic;margin-bottom:14px;}
+.test-btn{background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.25);border-radius:8px;color:var(--accent);font-family:var(--mono);font-size:11px;letter-spacing:0.08em;padding:10px 16px;cursor:pointer;width:100%;text-align:left;transition:background 0.15s;}
+.test-btn:active{background:rgba(0,212,255,0.15);}
+.test-answer{display:none;margin-top:12px;padding:12px;background:var(--bg);border-radius:8px;font-size:13px;line-height:1.6;color:var(--text-mid);border-left:2px solid var(--accent3);}
+.chat-area{display:flex;flex-direction:column;gap:10px;min-height:80px;margin-bottom:10px;}
+.chat-bubble{max-width:88%;padding:10px 13px;border-radius:12px;font-size:13px;line-height:1.5;}
+.chat-bubble.user{background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2);align-self:flex-end;color:var(--text);}
+.chat-bubble.nav{background:var(--bg3);border:1px solid var(--border);align-self:flex-start;color:var(--text);}
+.chat-bubble.nav.thinking{color:var(--text-dim);font-family:var(--mono);font-size:11px;}
+.chat-input-row{display:flex;gap:8px;align-items:flex-end;}
+.chat-input{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:var(--sans);font-size:14px;padding:10px 13px;resize:none;min-height:42px;max-height:100px;outline:none;transition:border-color 0.15s;}
+.chat-input:focus{border-color:var(--accent);}
+.chat-input::placeholder{color:var(--text-dim);}
+.chat-send{width:42px;height:42px;background:var(--accent);border:none;border-radius:10px;color:#000;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.15s;}
+.chat-send:active{opacity:0.7;}.chat-send:disabled{opacity:0.3;cursor:not-allowed;}
+.quick-prompts{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.qp-btn{background:var(--bg3);border:1px solid var(--border);border-radius:20px;color:var(--text-mid);font-family:var(--mono);font-size:10px;padding:6px 11px;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.qp-btn:active{border-color:var(--accent);color:var(--accent);}
+.linkedin-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px;}
+.li-post-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;}
+.li-post-meta{font-family:var(--mono);font-size:10px;color:var(--text-dim);margin-bottom:10px;}
+.li-btn{background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);border-radius:8px;color:var(--accent);font-family:var(--mono);font-size:10px;letter-spacing:0.06em;padding:8px 12px;cursor:pointer;width:100%;text-align:center;text-decoration:none;display:block;transition:background 0.15s;}
+.li-btn:active{background:rgba(0,212,255,0.15);}
+.li-draft-area{display:none;margin-top:10px;}
+.li-draft-text{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;padding:10px 12px;resize:vertical;min-height:80px;outline:none;font-family:var(--sans);line-height:1.5;margin-bottom:8px;}
+.li-draft-text:focus{border-color:var(--accent);}
+.li-actions{display:flex;gap:8px;}
+.li-action-btn{flex:1;padding:9px;border-radius:8px;font-family:var(--mono);font-size:10px;cursor:pointer;text-align:center;text-decoration:none;border:1px solid var(--border);color:var(--text-mid);background:var(--bg3);transition:all 0.15s;}
+.li-action-btn.primary{background:rgba(0,212,255,0.1);border-color:rgba(0,212,255,0.3);color:var(--accent);}
+.li-action-btn:active{opacity:0.7;}
+.jtbd-list{display:flex;flex-direction:column;}
+.jtbd-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
+.jtbd-item:last-child{border-bottom:none;}
+.jtbd-check{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--border);flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+.jtbd-check.done{background:var(--accent3);border-color:var(--accent3);}
+.jtbd-check.done::after{content:'✓';font-size:11px;color:#000;font-weight:700;}
+.jtbd-check.progress{border-color:var(--warn);}
+.jtbd-check.progress::after{content:'◐';font-size:11px;color:var(--warn);}
+.jtbd-info{flex:1;}
+.jtbd-name{font-size:13px;font-weight:600;color:var(--text);}
+.jtbd-detail{font-family:var(--mono);font-size:10px;color:var(--text-dim);margin-top:2px;}
+.sprint-list{display:flex;flex-direction:column;}
+.sprint-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.sprint-item:last-child{border-bottom:none;}
+.sprint-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.sprint-dot.done{background:var(--accent3);box-shadow:0 0 6px var(--accent3);}
+.sprint-dot.active{background:var(--accent);box-shadow:0 0 6px var(--accent);animation:pulse 1.5s infinite;}
+.sprint-dot.future{background:var(--text-dim);}
+.sprint-name{flex:1;font-size:12px;color:var(--text);}
+.sprint-badge{font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.sprint-badge.done{background:rgba(57,255,20,0.1);color:var(--accent3);border:1px solid rgba(57,255,20,0.2);}
+.sprint-badge.active{background:rgba(0,212,255,0.1);color:var(--accent);border:1px solid rgba(0,212,255,0.2);}
+.sprint-badge.future{background:rgba(74,98,117,0.15);color:var(--text-dim);border:1px solid var(--border);}
+.progress-list{display:flex;flex-direction:column;gap:12px;}
+.prog-header{display:flex;justify-content:space-between;margin-bottom:5px;}
+.prog-label{font-size:12px;color:var(--text);}
+.prog-pct{font-family:var(--mono);font-size:11px;color:var(--accent3);}
+.prog-pct.dim{color:var(--text-dim);}
+.prog-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent3));box-shadow:0 0 8px var(--accent);transition:width 0.8s ease;}
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;height:var(--tab-h);background:rgba(8,12,16,0.97);backdrop-filter:blur(16px);border-top:1px solid var(--border);display:flex;z-index:100;}
+.nav-tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;border:none;background:none;color:var(--text-dim);transition:color 0.15s;padding:0;}
+.nav-tab.active{color:var(--accent);}
+.nav-tab .nav-icon{font-size:20px;line-height:1;}
+.nav-tab .nav-label{font-family:var(--mono);font-size:8px;letter-spacing:0.1em;text-transform:uppercase;}
+.view{display:none;}.view.active{display:block;}
+.quote-block{text-align:center;padding:20px 16px;font-size:13px;font-style:italic;color:var(--text-mid);line-height:1.6;border-top:1px solid var(--border);}
+.quote-author{font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:0.1em;margin-top:8px;font-style:normal;}
+.prog-info{display:flex;flex-direction:column;gap:8px;}
+.prog-row-info{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);}
+.prog-row-info:last-child{border-bottom:none;}
+.prog-key{font-family:var(--mono);font-size:10px;color:var(--text-dim);}
+.prog-val{font-size:12px;font-weight:600;color:var(--text);text-align:right;}
+.prog-val.cyan{color:var(--accent);}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+</style>
+</head>
+<body>
+<header class="app-header">
+  <div class="header-brand">
+    <div class="header-logo">N</div>
+    <div><div class="header-title">NAVIGATOR</div><div class="header-sub">COTRUGLI VANGUARD MBA</div></div>
+  </div>
+  <div class="header-right"><div class="live-dot"></div><div class="clock" id="clock">--:-- CAT</div></div>
+</header>
+<div class="app-body">
+  <div class="view active" id="view-briefing">
+    <div class="date-hero">
+      <div class="date-day" id="hero-day">TUESDAY · 24 MARCH 2026</div>
+      <div class="date-title">North Star</div>
+      <div class="date-sub">COTRUGLI VANGUARD MBA · 2025–2027</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-label">⏰ Countdowns</div></div>
+      <div class="card-body">
+        <div class="countdown-strip">
+          <div class="cd-chip"><div class="cd-name">Next Session</div><div class="cd-val ok" id="cd-session">--</div></div>
+          <div class="cd-chip"><div class="cd-name">Module 2 Start</div><div class="cd-val ok" id="cd-module2">--</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-label">✅ Status</div></div>
+      <div class="card-body">
+        <div class="status-list">
+          <div class="status-item"><div class="status-dot green"></div><div class="status-text">All JTBDs current</div></div>
+          <div class="status-item"><div class="status-dot cyan"></div><div class="status-text">JTBD — <a href="https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-share-7441742562106966016-nmBH" target="_blank">Comment posted on Dr. Tali LinkedIn</a></div></div>
+          <div class="status-item"><div class="status-dot green"></div><div class="status-text">Hult — Submitted & Under Review</div></div>
+          <div class="status-item"><div class="status-dot orange"></div><div class="status-text">Awaiting Future of Work multiple choice exam results</div></div>
+          <div class="status-item"><div class="status-dot green"></div><div class="status-text">Future of Work Essay — Submitted, awaiting results and feedback</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-label">📝 Module 2 — Session 9 · April 4</div></div>
+      <div class="card-body">
+        <div class="section-label">Create accounts · explore · build your stack</div>
+        <div class="tool-grid">
+          <a class="tool-row" href="https://chat.qwen.ai/" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">Qwen & LM Studio</span><span class="tool-desc">Run LLMs locally</span><span class="tool-link-icon">↗</span></a>
+          <a class="tool-row" href="https://huggingface.co/" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">Hugging Face</span><span class="tool-desc">Open-source model hub</span><span class="tool-link-icon">↗</span></a>
+          <a class="tool-row" href="https://github.com/" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">GitHub & GitBook</span><span class="tool-desc">Code + docs + AI integrations</span><span class="tool-link-icon">↗</span></a>
+          <a class="tool-row" href="https://www.cloudflare.com/" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">Cloudflare</span><span class="tool-desc">AI on the edge</span><span class="tool-link-icon">↗</span></a>
+          <a class="tool-row" href="https://claude.ai/download" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">Claude Desktop Agent</span><span class="tool-desc">Local agent</span><span class="tool-link-icon">↗</span></a>
+          <a class="tool-row" href="https://code.visualstudio.com/" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">VS Code + Augment Code</span><span class="tool-desc">Your dev environment</span><span class="tool-link-icon">↗</span></a>
+          <a class="tool-row" href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank"><span class="tool-arrow">→</span><span class="tool-name">Claude Code</span><span class="tool-desc">Agentic coding</span><span class="tool-link-icon">↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-label">🔜 Module 2 Preview · April 4</div></div>
+      <div class="card-body">
+        <div class="article-list">
+          <a class="article-card" href="https://medium.com/@talirezun/the-context-engineers-toolkit-essential-ai-tools-for-all-levels-3f383a6f1c07" target="_blank"><div class="article-title">The Context Engineer's Toolkit: Essential AI Tools for All Levels</div><div class="article-note">Read before Module 2 — the tool map for every session ahead</div><div class="article-author">Dr. Tali Režun</div></a>
+          <a class="article-card" href="https://medium.com/@talirezun/data-sovereignty-in-the-ai-age-building-your-own-private-chatgpt-a83c96e342a0" target="_blank"><div class="article-title">Data Sovereignty in the AI Age: Building Your Own Private ChatGPT</div><div class="article-note">Why running models locally matters — essential before LM Studio setup</div><div class="article-author">Dr. Tali Režun</div></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-label">🏛️ VANGUARD LEADERSHIP — Kapusta</div></div>
+      <div class="card-body">
+        <div class="article-list">
+          <a class="article-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7438543789570412544/" target="_blank"><div class="article-title">Signals</div><div class="article-note">Kapusta on reading weak signals before they become obvious</div><div class="article-author">Dražen Kapusta</div></a>
+          <a class="article-card" href="https://www.linkedin.com/pulse/subsidiary-alliance-reforged-how-1798-playbook-defines-drazen-kapusta-jj0nf/" target="_blank"><div class="article-title">Subsidiary Alliance Reforged: How the 1798 Playbook Defines Modern AI Strategy</div><div class="article-note">How historical alliance structures map directly to AI partnership strategy today</div><div class="article-author">Dražen Kapusta</div></a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-label">📰 NEO World & AI Commerce</div></div>
+      <div class="card-body">
+        <div class="article-list">
+          <a class="article-card" href="https://www.linkedin.com/pulse/merchants-wisdom-half-millennium-late-drazen-kapusta-noqxe/" target="_blank"><div class="article-title">A Merchant's Wisdom, Half a Millennium Late</div><div class="article-note">Cotrugli's ledger principle applied to the AI age</div><div class="article-author">Dražen Kapusta</div></a>
+        </div>
+      </div>
+    </div>
+    <div class="quote-block">"We don't build in secret. We build together."<div class="quote-author">— DR. TALI REŽUN · VICE DEAN · COTRUGLI BUSINESS SCHOOL</div></div>
+  </div>
+
+  <div class="view" id="view-test">
+    <div class="card">
+      <div class="card-header"><div class="card-label">🧠 Test Your Knowledge</div></div>
+      <div class="card-body">
+        <div class="test-card">
+          <div class="test-question">You tested the same prompt across different Gemini models in Google AI Studio and got noticeably different outputs — if you were a chef tasting two wines from the same vineyard but different vintages, what specifically would you be looking for to decide which model to use for a customer-facing AI product, and why does the system instruction act as the sommelier in this analogy?</div>
+          <button class="test-btn" onclick="toggleAnswer()">▶ Reveal model answer</button>
+          <div class="test-answer" id="test-answer">You should be evaluating tone consistency, hallucination risk, response length control, and how literally each model follows nuanced instructions. The system instruction is your sommelier because it frames the context before any user input arrives — without it you're letting the model freelance, which is fine for experimentation but reckless for production.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="card-header"><div class="card-label">💼 LinkedIn — Post a Comment</div></div>
+      <div class="card-body">
+        <div class="linkedin-card">
+          <div class="li-post-title">Dr. Tali Režun — JTBD Post</div>
+          <div class="li-post-meta">Intent · Chasing Jarvis · Share your JTBD</div>
+          <button class="li-btn" onclick="draftLinkedIn('jtbd')">✦ Draft my comment with Navigator</button>
+          <div class="li-draft-area" id="li-draft-jtbd">
+            <textarea class="li-draft-text" id="li-text-jtbd" placeholder="Navigator is drafting your comment..."></textarea>
+            <div class="li-actions">
+              <button class="li-action-btn" onclick="regenerateDraft('jtbd')">↻ Redraft</button>
+              <a class="li-action-btn primary" href="https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-share-7441742562106966016-nmBH" target="_blank">→ Open Post</a>
+            </div>
+          </div>
+        </div>
+        <div class="linkedin-card">
+          <div class="li-post-title">Kapusta — Subsidiary Alliance Reforged</div>
+          <div class="li-post-meta">AI Strategy · Vanguard Leadership</div>
+          <button class="li-btn" onclick="draftLinkedIn('kapusta')">✦ Draft my comment with Navigator</button>
+          <div class="li-draft-area" id="li-draft-kapusta">
+            <textarea class="li-draft-text" id="li-text-kapusta" placeholder="Navigator is drafting your comment..."></textarea>
+            <div class="li-actions">
+              <button class="li-action-btn" onclick="regenerateDraft('kapusta')">↻ Redraft</button>
+              <a class="li-action-btn primary" href="https://www.linkedin.com/pulse/subsidiary-alliance-reforged-how-1798-playbook-defines-drazen-kapusta-jj0nf/" target="_blank">→ Open Post</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view" id="view-ask">
+    <div class="card">
+      <div class="card-header"><div class="card-label">🤖 Ask Navigator</div></div>
+      <div class="card-body">
+        <div class="quick-prompts">
+          <button class="qp-btn" onclick="quickPrompt('Summarise today\'s Module 2 reading list')">📖 Summarise reading</button>
+          <button class="qp-btn" onclick="quickPrompt('What tools do I need before Session 9?')">🔧 Tool setup</button>
+          <button class="qp-btn" onclick="quickPrompt('Explain what LM Studio is and why I need it')">💡 What is LM Studio?</button>
+          <button class="qp-btn" onclick="quickPrompt('What is the JTBD framework and how does it relate to AI?')">🎯 JTBD explained</button>
+          <button class="qp-btn" onclick="quickPrompt('What is context engineering in plain English?')">🧠 Context engineering</button>
+          <button class="qp-btn" onclick="quickPrompt('What is Vanguard Leadership according to Kapusta?')">🏛️ Vanguard Leadership</button>
+        </div>
+        <div class="chat-area" id="chat-area">
+          <div class="chat-bubble nav">👋 I'm Navigator. Ask me anything about today's briefing, your assignments, tools, or the Vanguard programme.</div>
+        </div>
+        <div class="chat-input-row">
+          <textarea class="chat-input" id="chat-input" placeholder="Ask Navigator anything..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+          <button class="chat-send" id="chat-send" onclick="sendMessage()">↑</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="view" id="view-status">
+    <div class="card">
+      <div class="card-header"><div class="card-label">✅ JTBD Tracker</div></div>
+      <div class="card-body">
+        <div class="jtbd-list">
+          <div class="jtbd-item"><div class="jtbd-check done" onclick="toggleJTBD(this)"></div><div class="jtbd-info"><div class="jtbd-name">Navigator Sprint 1</div><div class="jtbd-detail">Channel reader + daily briefing</div></div></div>
+          <div class="jtbd-item"><div class="jtbd-check progress" onclick="toggleJTBD(this)"></div><div class="jtbd-info"><div class="jtbd-name">Web Dashboard / App</div><div class="jtbd-detail">Sprint 2 — in progress</div></div></div>
+          <div class="jtbd-item"><div class="jtbd-check" onclick="toggleJTBD(this)"></div><div class="jtbd-info"><div class="jtbd-name">Module 2 Tool Setup</div><div class="jtbd-detail">10 accounts to create before April 4</div></div></div>
+          <div class="jtbd-item"><div class="jtbd-check done" onclick="toggleJTBD(this)"></div><div class="jtbd-info"><div class="jtbd-name">Future of Work Essay</div><div class="jtbd-detail">Submitted — awaiting feedback</div></div></div>
+          <div class="jtbd-item"><div class="jtbd-check done" onclick="toggleJTBD(this)"></div><div class="jtbd-info"><div class="jtbd-name">Hult Prize</div><div class="jtbd-detail">Submitted · Under review</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="card-header"><div class="card-label">🚀 Sprint Status</div></div>
+      <div class="card-body">
+        <div class="sprint-list">
+          <div class="sprint-item"><div class="sprint-dot done"></div><div class="sprint-name">Sprint 1 · Channel Reader + Daily Briefing</div><div class="sprint-badge done">Done</div></div>
+          <div class="sprint-item"><div class="sprint-dot active"></div><div class="sprint-name">Sprint 2 · Web App</div><div class="sprint-badge active">Now</div></div>
+          <div class="sprint-item"><div class="sprint-dot future"></div><div class="sprint-name">Sprint 3 · Portal Scraper</div><div class="sprint-badge future">Next</div></div>
+          <div class="sprint-item"><div class="sprint-dot future"></div><div class="sprint-name">Sprint 4 · CPN Layer</div><div class="sprint-badge future">Future</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="card-header"><div class="card-label">📊 Module Progress</div></div>
+      <div class="card-body">
+        <div class="progress-list">
+          <div class="prog-row"><div class="prog-header"><span class="prog-label">Module 1 · LLM Foundations</span><span class="prog-pct">75%</span></div><div class="prog-bar"><div class="prog-fill" style="width:75%"></div></div></div>
+          <div class="prog-row"><div class="prog-header"><span class="prog-label">Module 2 · Context Engineering</span><span class="prog-pct dim">Starts April 4</span></div><div class="prog-bar"><div class="prog-fill" style="width:0%"></div></div></div>
+          <div class="prog-row"><div class="prog-header"><span class="prog-label">Module 3 · Agent Architecture</span><span class="prog-pct dim">Locked</span></div><div class="prog-bar"><div class="prog-fill" style="width:0%;background:var(--text-dim);box-shadow:none"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="card-header"><div class="card-label">🎓 Programme</div></div>
+      <div class="card-body">
+        <div class="prog-info">
+          <div class="prog-row-info"><span class="prog-key">Cohort</span><span class="prog-val">Vanguard MBA 2025–2027</span></div>
+          <div class="prog-row-info"><span class="prog-key">Role</span><span class="prog-val cyan">Vanguard Chief · Team Chiron</span></div>
+          <div class="prog-row-info"><span class="prog-key">Location</span><span class="prog-val">Cape Town, South Africa</span></div>
+          <div class="prog-row-info"><span class="prog-key">Format</span><span class="prog-val">African & Asian Online Cohort</span></div>
+          <div class="prog-row-info"><span class="prog-key">Bot</span><span class="prog-val cyan">@CotNavigatorBot</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="bottom-nav">
+  <button class="nav-tab active" onclick="switchTab('briefing',this)"><span class="nav-icon">🧭</span><span class="nav-label">Briefing</span></button>
+  <button class="nav-tab" onclick="switchTab('test',this)"><span class="nav-icon">🧠</span><span class="nav-label">Test Me</span></button>
+  <button class="nav-tab" onclick="switchTab('ask',this)"><span class="nav-icon">💬</span><span class="nav-label">Ask</span></button>
+  <button class="nav-tab" onclick="switchTab('status',this)"><span class="nav-icon">✅</span><span class="nav-label">Status</span></button>
+</nav>
+<script>
+const ANTHROPIC_API_KEY='YOUR_API_KEY_HERE';
+function updateClock(){const t=new Date().toLocaleTimeString('en-ZA',{timeZone:'Africa/Johannesburg',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});document.getElementById('clock').textContent=t+' CAT';}
+setInterval(updateClock,1000);updateClock();
+function updateDate(){const days=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];const months=['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];const now=new Date();document.getElementById('hero-day').textContent=days[now.getDay()]+' · '+now.getDate()+' '+months[now.getMonth()]+' '+now.getFullYear();}
+updateDate();
+function getCountdown(target){const diff=new Date(target)-new Date();if(diff<0)return'OVERDUE';const d=Math.floor(diff/86400000);const h=Math.floor((diff%86400000)/3600000);const m=Math.floor((diff%3600000)/60000);if(d>0)return'T−'+d+'d '+h+'h';if(h>0)return'T−'+h+'h '+m+'m';return'T−'+m+'m';}
+function updateCountdowns(){const sv=getCountdown('2026-04-04T08:00:00Z');const mv=getCountdown('2026-04-04T08:00:00Z');const se=document.getElementById('cd-session');const me=document.getElementById('cd-module2');se.textContent=sv;me.textContent=mv;se.className='cd-val '+(sv==='OVERDUE'?'overdue':'ok');me.className='cd-val '+(mv==='OVERDUE'?'overdue':'ok');}
+updateCountdowns();setInterval(updateCountdowns,60000);
+function switchTab(name,btn){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));document.getElementById('view-'+name).classList.add('active');btn.classList.add('active');window.scrollTo(0,0);}
+function toggleAnswer(){const ans=document.getElementById('test-answer');const btn=document.querySelector('.test-btn');if(ans.style.display==='block'){ans.style.display='none';btn.textContent='▶ Reveal model answer';}else{ans.style.display='block';btn.textContent='▲ Hide answer';}}
+function toggleJTBD(el){if(el.classList.contains('done')){el.classList.remove('done');el.classList.add('progress');}else if(el.classList.contains('progress')){el.classList.remove('progress');}else{el.classList.add('done');}}
+const chatHistory=[];
+const SYSTEM_PROMPT=`You are Navigator, the AI study companion for Nardus Du Plooy, Vanguard Chief at COTRUGLI Business School, Vanguard MBA 2025-2027. Be direct, confident, and practical. Current context: Module 2 preparation, Session 9 is April 4 2026. Tools to set up: Qwen, LM Studio, Hugging Face, GitHub, GitBook, Cloudflare, Claude Desktop, VS Code + Augment Code, Google Antigravity, Claude Code. Key reading: Dr. Tali Rezun Context Engineering Toolkit and Data Sovereignty articles. Nardus is in Cape Town CAT timezone. Future of Work Essay submitted. Hult Prize submitted. Keep answers concise and mobile-friendly.`;
+async function sendMessage(text){const input=document.getElementById('chat-input');const msg=text||input.value.trim();if(!msg)return;if(!text){input.value='';autoResize(input);}appendBubble(msg,'user');chatHistory.push({role:'user',content:msg});const thinking=appendBubble('thinking…','nav thinking');document.getElementById('chat-send').disabled=true;try{const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,system:SYSTEM_PROMPT,messages:chatHistory})});const data=await res.json();const reply=data.content?.[0]?.text||'Something went wrong.';thinking.textContent=reply;thinking.classList.remove('thinking');chatHistory.push({role:'assistant',content:reply});}catch(e){thinking.textContent='Connection error. Check your API key is set in the file.';thinking.classList.remove('thinking');}document.getElementById('chat-send').disabled=false;document.getElementById('chat-area').scrollTop=999999;}
+function appendBubble(text,type){const area=document.getElementById('chat-area');const div=document.createElement('div');div.className='chat-bubble '+type;div.textContent=text;area.appendChild(div);area.scrollTop=999999;return div;}
+function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}}
+function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,100)+'px';}
+function quickPrompt(text){switchTab('ask',document.querySelectorAll('.nav-tab')[2]);sendMessage(text);}
+const liContexts={jtbd:{post:"Dr. Tali Rezun LinkedIn post about JTBD and intent in Chasing Jarvis",context:"Draft a thoughtful authentic LinkedIn comment 3-4 sentences showing genuine engagement with the JTBD framework and AI tool adoption. First person as Nardus Du Plooy, Vanguard MBA student. Be specific not generic."},kapusta:{post:"Drazen Kapusta article Subsidiary Alliance Reforged: How the 1798 Playbook Defines Modern AI Strategy",context:"Draft a thoughtful LinkedIn comment 3-4 sentences engaging with Kapusta thesis about historical alliance structures and modern AI strategy. First person as Nardus Du Plooy, Vanguard Chief at COTRUGLI. Sound like you actually read it."}};
+async function draftLinkedIn(type){const draftArea=document.getElementById('li-draft-'+type);const textarea=document.getElementById('li-text-'+type);draftArea.style.display='block';textarea.value='Navigator is drafting your comment…';const ctx=liContexts[type];try{const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':ANTHROPIC_API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:300,messages:[{role:'user',content:'Help Nardus Du Plooy draft a LinkedIn comment on '+ctx.post+'. '+ctx.context+' Return only the comment text.'}]})});const data=await res.json();textarea.value=data.content?.[0]?.text||'Error generating draft.';}catch(e){textarea.value='Connection error. Check your API key.';}}
+async function regenerateDraft(type){await draftLinkedIn(type);}
+</script>
+</body>
+</html>
