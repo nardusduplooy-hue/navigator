@@ -63,7 +63,7 @@ QUESTION: [your question here]
 ANSWER: [your answer here]"""
 
     response = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-sonnet-4-6",
         max_tokens=400,
         messages=[{"role": "user", "content": prompt}]
     )
@@ -270,7 +270,7 @@ async def send_daily_briefing(test_mode=False):
         msg += "🧠 *Test your knowledge from yesterday's reading:*\n"
         msg += f"_{daily_question}_\n\n"
     except Exception as e:
-        pass
+        print(f"❌ Knowledge question error: {e}")
 
     if test_mode and not daily_question:
         msg += "🧠 *Test your knowledge from yesterday's reading:*\n"
