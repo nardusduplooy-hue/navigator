@@ -218,8 +218,13 @@ async def send_daily_briefing(test_mode=False):
     msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
 
     msg += "🔜 *Module 2 preview — coming April 4:*\n"
-    msg += f"• [{tali_m2_preview['title']}]({tali_m2_preview['url']})\n"
-    msg += "  _Read before Module 2_\n\n"
+    msg += "_𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 — Five articles. One complete system. No computer science degree required._\n\n"
+    msg += "→ *STEP 1* — [The Three-Phase Methodology](https://medium.com/@talirezun/behind-the-curtain-the-three-phase-process-i-use-to-build-every-ai-coded-product-bf4671f2c4b4)\n"
+    msg += "→ *STEP 2* — [From Prototype to Production](https://medium.com/@talirezun/from-prototype-to-production-building-an-ai-widget-platform-in-30-days-23c603c91475)\n"
+    msg += "→ *STEP 3* — [The Insight That Changed Everything](https://medium.com/@talirezun/why-i-ditched-rag-pipelines-for-1m-token-context-windows-d5a2982f7cce)\n"
+    msg += "→ *STEP 4* — [The Orchestration Leap](https://medium.com/@talirezun/from-writing-code-to-directing-intelligence-five-days-inside-augment-codes-intent-7b04863808bf)\n"
+    msg += "→ *STEP 5* — [The Marketing Layer](https://medium.com/@talirezun/how-i-built-an-ai-marketing-team-that-actually-works-from-memes-to-technical-content-in-minutes-87f646608c60)\n\n"
+    msg += "_Read and work through before Module 2 — and comment on Dr. Tali Režun's LinkedIn articles._\n\n"
 
     msg += "📝 *Module 2 — Prepare for Session 9 (April 4):*\n"
     msg += "_Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:_\n\n"
@@ -271,6 +276,10 @@ async def send_daily_briefing(test_mode=False):
         msg += f"_{daily_question}_\n\n"
     except Exception as e:
         print(f"❌ Knowledge question error: {e}")
+
+    # Fixed question for Module 2 series
+    daily_question = "Dr. Tali's 5-step playbook moves from Three-Phase Methodology → Prototype to Production → Ditching RAG → Orchestration → Marketing Layer — if you had to identify the single insight that makes the whole system work, which step contains it and why?"
+    daily_answer = "Step 3 is the pivot point — ditching RAG pipelines for 1M token context windows. Everything before it is setup; everything after it only works because of that architectural decision. Most people building AI products default to RAG because it's what the tutorials teach, but Tali's insight is that when your context window is large enough, retrieval complexity becomes unnecessary friction. That's not a technical preference — it's a strategic choice that simplifies the entire stack, speeds up the build, and removes a category of failure. The non-developer's superpower isn't knowing how to code; it's knowing which complexity to eliminate before you start."
 
     if test_mode and not daily_question:
         msg += "🧠 *Test your knowledge from yesterday's reading:*\n"
