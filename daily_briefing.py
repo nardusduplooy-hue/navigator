@@ -44,31 +44,38 @@ def build_briefing():
 
     lines = []
 
+    # ── HEADER ──
     lines.append("🧭 <b>NAVIGATOR DAILY BRIEFING</b>")
     lines.append(today_label())
     lines.append("")
 
+    # ── DEADLINES ──
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("• Prepare for Module 2 before Session 9")
     lines.append("• Session 9 — Chasing Jarvis Module 2 — <b>Sat 4 April</b> (estimated)")
     lines.append("")
 
+    # ── NEXT ZOOM ──
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
     lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — Sat 4 April (estimated)")
     lines.append("  Zoom link to be confirmed")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
+    # ── STATUS ──
     lines.append("✅ <b>STATUS</b>")
     lines.append("• All JTBDs current")
-    lines.append("• JTBD — Comment posted on Dr. Tali LinkedIn")
+    lines.append("• JTBD — <a href='https://medium.com/@talirezun/behind-the-curtain-the-three-phase-process-i-use-to-build-every-ai-coded-product-bf4671f2c4b4'>Comment posted on Dr. Tali LinkedIn</a>")
     lines.append("• Awaiting Future of Work multiple choice exam results")
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
 
+    # ── CHASING JARVIS ──
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
     lines.append("")
-    lines.append("𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀")
-    lines.append("Five articles. One complete system. No computer science degree required.")
+    lines.append("🔜 <b>Module 2 preview — coming April 4:</b>")
+    lines.append("<b>𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀</b>")
+    lines.append("<b>Five articles. One complete system. No computer science degree required.</b>")
     lines.append("")
 
     if tali:
@@ -77,40 +84,46 @@ def build_briefing():
         lines.append("")
         lines.append(f"<b>Focus:</b> {tali['focus']}")
         lines.append("")
-        lines.append("Read and comment on Dr. Tali Režun's LinkedIn articles.")
-    else:
-        lines.append("→ All 5 steps complete — review your notes before Session 9 on 4 April.")
-    lines.append("")
+        lines.append("Read and work through before Module 2 — and comment on Dr. Tali Režun's LinkedIn articles.")
+        lines.append("")
 
+    # ── MODULE 2 TOOLS ──
+    lines.append("📝 <b>Module 2 — Prepare for Session 9 (April 4):</b>")
+    lines.append("Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:")
+    lines.append("")
     if tool:
-        lines.append(f"📝 <b>Module 2 — Tool spotlight today: {tool['name']}</b>")
         lines.append(f"→ <a href='{tool['url']}'>{tool['name']} — {tool['action']}</a>")
         lines.append("")
         lines.append(tool["what_its_good_for"])
         lines.append("")
-        lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
-        lines.append("")
+    lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
+    lines.append("")
 
+    # ── SUPPLEMENTARY RESOURCE ──
     lines.append("📚 <b>Supplementary resource — Module 2:</b>")
     lines.append(f"<a href='{SUPPLEMENTARY_RESOURCE['url']}'>{SUPPLEMENTARY_RESOURCE['title']}</a>")
     lines.append(SUPPLEMENTARY_RESOURCE["description"])
     lines.append("")
 
+    # ── KAPUSTA ──
     lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta reading:</b>")
     lines.append(f"• <a href='{KAPUSTA_TODAY['url']}'>{KAPUSTA_TODAY['title']}</a>")
     lines.append(f"  {KAPUSTA_TODAY['description']}")
     lines.append("")
 
+    # ── AI NEWS ──
     lines.append("🌐 <b>AI NEWS — THE RUNDOWN:</b>")
     lines.append(AI_NEWS_TODAY["headline"])
     lines.append(AI_NEWS_TODAY["source"])
     lines.append("")
 
+    # ── KNOWLEDGE QUESTION ──
     if tali:
         lines.append("🧠 <b>Test your knowledge from today's reading:</b>")
         lines.append(tali["question"])
         lines.append("")
 
+    # ── ADDME ──
     lines.append("📲 Vanguard — want this briefing every morning at 05:30 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
     lines.append("")
     lines.append("⚡ Navigator out.")
@@ -130,21 +143,35 @@ def build_model_answer():
     lines.append("⚡ Navigator out.")
     return "\n".join(lines)
 
+def send_test():
+    MY_CHAT_ID = 8536765390
+    briefing = build_briefing()
+    answer = build_model_answer()
+    r = send_message(MY_CHAT_ID, briefing)
+    print(f"Briefing → {MY_CHAT_ID}: {'✅' if r else '❌'}")
+    if answer:
+        r = send_message(MY_CHAT_ID, answer)
+        print(f"Answer → {MY_CHAT_ID}: {'✅' if r else '❌'}")
+
 def send_briefing():
     briefing = build_briefing()
     answer = build_model_answer()
-    for chat_id in SUBSCRIBERS:
+    for sub in SUBSCRIBERS:
+        chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
         ok = send_message(chat_id, briefing)
         print(f"Briefing → {chat_id}: {'✅' if ok else '❌'}")
     if answer:
         import time
         time.sleep(1800)
-        for chat_id in SUBSCRIBERS:
+        for sub in SUBSCRIBERS:
+            chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
             ok = send_message(chat_id, answer)
             print(f"Answer → {chat_id}: {'✅' if ok else '❌'}")
 
 if __name__ == "__main__":
-    if "--test" in sys.argv:
+    if "--test-send" in sys.argv:
+        send_test()
+    elif "--test" in sys.argv:
         print("─── BRIEFING PREVIEW ───")
         print(build_briefing())
         print("")
