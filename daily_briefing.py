@@ -10,6 +10,9 @@ from jarvis_content import (
     SUPPLEMENTARY_RESOURCE,
     AI_NEWS_TODAY,
 )
+import urllib.request
+import xml.etree.ElementTree as ET
+
 
 with open(".env") as f:
     env = dict(line.strip().split("=", 1) for line in f if "=" in line and not line.startswith("#"))
@@ -36,6 +39,20 @@ def send_message(chat_id, text):
     }
     r = requests.post(url, json=payload)
     return r.ok
+
+
+def fetch_ai_news():
+    try:
+        url = 'https://feeds.feedburner.com/venturebeat/SZYF'
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        res = urllib.request.urlopen(req, timeout=5)
+        root = ET.fromstring(res.read())
+        item = root.find('./channel/item')
+        title = item.find('title').text
+        link = item.find('link').text
+        return {"headline": title, "url": link, "source": "VentureBeat AI"}
+    except Exception:
+        return {"headline": AI_NEWS_TODAY["headline"], "url": "", "source": AI_NEWS_TODAY["source"]}
 
 def build_briefing():
     date_key = today_str()
@@ -124,10 +141,15 @@ def build_briefing():
     lines.append("")
 
     # ── AI NEWS ──
-    lines.append("🌐 <b>AI NEWS — THE RUNDOWN:</b>")
-    lines.append(AI_NEWS_TODAY["headline"])
-    lines.append(AI_NEWS_TODAY["source"])
+    news = fetch_ai_news()
+    lines.append("🌐 <b>AI NEWS — VENTUREBEAT:</b>")
+    if news["url"]:
+        lines.append(f"<a href='{news['url']}'>{news['headline']}</a>")
+    else:
+        lines.append(news["headline"])
+    lines.append(news["source"])
     lines.append("")
+
 
     # ── KNOWLEDGE QUESTION ──
     if tali:
