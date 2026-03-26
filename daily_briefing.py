@@ -1,316 +1,155 @@
+# daily_briefing.py
+import requests
 import json
-import asyncio
-import random
-import os
-from datetime import datetime
-import anthropic
-from telegram import Bot
-from dotenv import load_dotenv
+import sys
+from datetime import datetime, timezone, timedelta
 from jarvis_content import (
-    MODULE_4_TALI,
-    KAPUSTA_ARTICLES,
-    KAPUSTA_WFR_ARTICLE,
-    MODULE_1_TALI, MODULE_2_TALI, MODULE_1_ASSIGNMENTS, TOOLS_EXPLAINED, SUPPLEMENTARY, LLM_MANUAL_CHAPTERS, NEO_WORLD_ARTICLES
+    TALI_STEPS,
+    TOOL_SPOTLIGHT,
+    KAPUSTA_TODAY,
+    SUPPLEMENTARY_RESOURCE,
+    AI_NEWS_TODAY,
 )
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+with open(".env") as f:
+    env = dict(line.strip().split("=", 1) for line in f if "=" in line and not line.startswith("#"))
 
-def fetch_rundown_headline():
-    """Fetch the latest headline from The Rundown AI RSS feed with retry."""
-    import urllib.request
-    import xml.etree.ElementTree as ET
-    import time as _time
-    url = "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
-    for attempt in range(3):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as response:
-                xml_data = response.read()
-            root = ET.fromstring(xml_data)
-            channel = root.find("channel")
-            item = channel.find("item")
-            title = item.find("title").text.strip()
-            link = item.find("link").text.strip()
-            return title, link
-        except Exception:
-            if attempt < 2:
-                _time.sleep(10)
-    return None, None
+BOT_TOKEN = env.get("TELEGRAM_BOT_TOKEN", "")
+with open("subscribers.json") as f:
+    SUBSCRIBERS = json.load(f)
 
-def generate_daily_question_and_answer(assignment_text, why_it_matters):
-    """Use Claude to generate a creative question AND model answer based on yesterday's assignment."""
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-    prompt = f"""You are Navigator, an AI tutor for MBA students in the COTRUGLI Vanguard programme.
+CAT = timezone(timedelta(hours=2))
 
-Yesterday's assignment was: {assignment_text}
-Why it matters: {why_it_matters}
+def today_str():
+    return datetime.now(CAT).strftime("%Y-%m-%d")
 
-Generate ONE creative, thought-provoking test question and a model answer.
+def today_label():
+    return datetime.now(CAT).strftime("%A, %-d %B %Y")
 
-Requirements for the question:
-- Tests deep understanding, not just recall
-- Uses a real-world analogy or scenario (like comparing AI to something unexpected)
-- Is specific enough that a vague answer would not suffice
-- Is 1-3 sentences maximum
+def send_message(chat_id, text):
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True,
+    }
+    r = requests.post(url, json=payload)
+    return r.ok
 
-Requirements for the answer:
-- Practical and opinionated, not textbook
-- 3-4 sentences maximum
-- Written in Navigator's voice — direct, confident, MBA-level
+def build_briefing():
+    date_key = today_str()
+    tali = TALI_STEPS.get(date_key)
+    tool = TOOL_SPOTLIGHT.get(date_key)
 
-Return ONLY this exact format:
-QUESTION: [your question here]
-ANSWER: [your answer here]"""
+    lines = []
 
-    response = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=400,
-        messages=[{"role": "user", "content": prompt}]
-    )
-    text = response.content[0].text.strip()
-    lines = text.split("\n")
-    question = ""
-    answer = ""
-    for line in lines:
-        if line.startswith("QUESTION:"):
-            question = line.replace("QUESTION:", "").strip()
-        elif line.startswith("ANSWER:"):
-            answer = line.replace("ANSWER:", "").strip()
-    return question, answer
+    lines.append("🧭 <b>NAVIGATOR DAILY BRIEFING</b>")
+    lines.append(today_label())
+    lines.append("")
 
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-# Chat IDs now loaded from subscribers.json
-CHAT_IDS = []
+    lines.append("🔴 <b>DEADLINES</b>")
+    lines.append("• Prepare for Module 2 before Session 9")
+    lines.append("• Session 9 — Chasing Jarvis Module 2 — <b>Sat 4 April</b> (estimated)")
+    lines.append("")
 
-# Noise blocks to filter out from portal scraping
-NOISE_BLOCKS = [
-    "the moment we've been building toward",
-    "officially kicks off",
-    "february 20",
-    "february 21",
-    "february 22",
-    "dates:february",
-    "mandatory prework to be submitted by",
-    "students are required to complete graded prework",
-    "students were required to complete graded prework",
-    "re: intro to the vanguard",
-    "your next zook session is on saturday (january 10",
-    "by the end of this course, students will be able to",
-    "discussion of individual assignments is encouraged",
-]
+    lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+    lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — Sat 4 April (estimated)")
+    lines.append("  Zoom link to be confirmed")
+    lines.append("")
 
-def get_portal_data():
-    """Load and filter portal_data.json if it exists."""
-    zoom_link = None
-    deadlines = []
+    lines.append("✅ <b>STATUS</b>")
+    lines.append("• All JTBDs current")
+    lines.append("• JTBD — Comment posted on Dr. Tali LinkedIn")
+    lines.append("• Awaiting Future of Work multiple choice exam results")
+    lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
+    lines.append("")
 
-    try:
-        with open("portal_data.json") as f:
-            pages = json.load(f)
+    lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
+    lines.append("")
+    lines.append("𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀")
+    lines.append("Five articles. One complete system. No computer science degree required.")
+    lines.append("")
 
-        # Get most recent Zoom meeting link (highest session number)
-        best_session = 0
-        for page in pages:
-            for z in page["zoom_links"]:
-                if "/zoom/meetings/" in z["url"]:
-                    try:
-                        num = int(z["url"].rstrip("/").split("/")[-1].split("?")[0])
-                        if num > best_session:
-                            best_session = num
-                            zoom_link = z
-                    except:
-                        pass
+    if tali:
+        lines.append(f"→ <b>STEP {tali['step']} — {tali['title']}</b>")
+        lines.append(f"<a href='{tali['url']}'>Read on Medium</a>")
+        lines.append("")
+        lines.append(f"<b>Focus:</b> {tali['focus']}")
+        lines.append("")
+        lines.append("Read and comment on Dr. Tali Režun's LinkedIn articles.")
+    else:
+        lines.append("→ All 5 steps complete — review your notes before Session 9 on 4 April.")
+    lines.append("")
 
-        # Get deadline blocks — filter noise, deduplicate
-        seen = set()
-        future_keywords = ["march", "april", "may", "june", "2026", "2027"]
-        for page in pages:
-            for d in page["deadlines"]:
-                d_lower = d.lower()
-                # Skip noise
-                if any(noise in d_lower for noise in NOISE_BLOCKS):
-                    continue
-                # Prefer blocks with future dates
-                if any(kw in d_lower for kw in future_keywords):
-                    if d not in seen and len(d) > 30:
-                        seen.add(d)
-                        deadlines.append(d[:200])
+    if tool:
+        lines.append(f"📝 <b>Module 2 — Tool spotlight today: {tool['name']}</b>")
+        lines.append(f"→ <a href='{tool['url']}'>{tool['name']} — {tool['action']}</a>")
+        lines.append("")
+        lines.append(tool["what_its_good_for"])
+        lines.append("")
+        lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
+        lines.append("")
 
-    except FileNotFoundError:
-        pass
+    lines.append("📚 <b>Supplementary resource — Module 2:</b>")
+    lines.append(f"<a href='{SUPPLEMENTARY_RESOURCE['url']}'>{SUPPLEMENTARY_RESOURCE['title']}</a>")
+    lines.append(SUPPLEMENTARY_RESOURCE["description"])
+    lines.append("")
 
-    return zoom_link, deadlines[:5]
+    lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta reading:</b>")
+    lines.append(f"• <a href='{KAPUSTA_TODAY['url']}'>{KAPUSTA_TODAY['title']}</a>")
+    lines.append(f"  {KAPUSTA_TODAY['description']}")
+    lines.append("")
 
-async def send_daily_briefing(test_mode=False):
-    bot = Bot(token=BOT_TOKEN)
-    if test_mode:
-        global CHAT_IDS
-        CHAT_IDS = [8536765390]
-    today = datetime.now().strftime("%A, %d %B %Y")
+    lines.append("🌐 <b>AI NEWS — THE RUNDOWN:</b>")
+    lines.append(AI_NEWS_TODAY["headline"])
+    lines.append(AI_NEWS_TODAY["source"])
+    lines.append("")
 
-    # Load subscribers dynamically
-    if not test_mode:
-        try:
-            import json as _subjson
-            with open("subscribers.json") as _subf:
-                _subs = _subjson.load(_subf)
-            CHAT_IDS = [s["chat_id"] for s in _subs]
-        except:
-            CHAT_IDS = [8536765390]
+    if tali:
+        lines.append("🧠 <b>Test your knowledge from today's reading:</b>")
+        lines.append(tali["question"])
+        lines.append("")
 
-    tali_m1 = MODULE_1_TALI
-    tali_m2_preview = random.choice(MODULE_2_TALI)
-    assignment = random.choice(MODULE_1_ASSIGNMENTS)
-    tool = random.choice(TOOLS_EXPLAINED)
-    supp = random.choice(SUPPLEMENTARY)
+    lines.append("📲 Vanguard — want this briefing every morning at 05:30 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
+    lines.append("")
+    lines.append("⚡ Navigator out.")
 
-    zoom_link, portal_deadlines = get_portal_data()
+    return "\n".join(lines)
 
-    msg = f"🧭 *NAVIGATOR DAILY BRIEFING*\n_{today}_\n\n"
+def build_model_answer():
+    date_key = today_str()
+    tali = TALI_STEPS.get(date_key)
+    if not tali:
+        return None
+    lines = []
+    lines.append("🧠 <b>Model answer to this morning's question:</b>")
+    lines.append("")
+    lines.append(tali["model_answer"])
+    lines.append("")
+    lines.append("⚡ Navigator out.")
+    return "\n".join(lines)
 
-    # DEADLINES
-    import json as _json
-    try:
-        with open("deadlines.json") as _f:
-            _deadlines = _json.load(_f)
-    except:
-        _deadlines = []
-    msg += "🔴 *DEADLINES*\n"
-    msg += "• Prepare for Module 2 before next Zoom session\n"
-    for _d in _deadlines:
-        if _d["status"] in ["active", "upcoming"]:
-            from datetime import timezone
-            _due_dt = None
-            try:
-                from datetime import datetime as _dt
-                _due_dt = _dt.fromisoformat(_d['due'].replace('Z','+00:00'))
-                _diff = _due_dt - _dt.now(timezone.utc)
-                _days = _diff.days
-                _hours = _diff.seconds // 3600
-                _countdown = f" *(T-{_days}d {_hours}h)*" if _diff.total_seconds() > 0 else " *(OVERDUE)*"
-            except:
-                _countdown = ""
-            msg += f"• *{_d['name']}* — {_d['display_due']}{_countdown}\n"
-            msg += f"  {_d['details']}\n"
-            if _d.get("link"):
-                if 'zoom' in _d.get('link', '').lower():
-                    msg += f"  [Zoom Link]({_d['link']})\n"
-                else:
-                    msg += f"  [Submit here]({_d['link']})\n"
-    msg += "\n"
-
-    # NEXT SESSION
-    msg += "📅 *NEXT ZOOM SESSION*\n"
-    msg += "• Vanguard Session 9 — Chasing Jarvis Module 2 — Sat April 4 (estimated)\n"
-    msg += "  Zoom link to be confirmed\n"
-    msg += "• [Zoom Recordings — all sessions](https://cotrugli.online/groups/vanguard/zoom/meetings/4)\n"
-    msg += "\n"
-
-    # STATUS
-    msg += "✅ *STATUS*\n"
-    msg += "• All JTBDs current\n"
-    msg += "• JTBD — [Comment posted on Dr. Tali LinkedIn](https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-share-7441742562106966016-nmBH)\n"
-    msg += "• Awaiting Future of Work multiple choice exam results\n"
-    msg += "• Future of Work Essay — Submitted, awaiting results and feedback\n"
-    msg += "\n"
-
-    # CHASING JARVIS
-    msg += "🎯 *CHASING JARVIS — TODAY'S FOCUS*\n\n"
-
-    msg += "🔜 *Module 2 preview — coming April 4:*\n"
-    msg += "_𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 — Five articles. One complete system. No computer science degree required._\n\n"
-    msg += "→ *STEP 1* — [The Three-Phase Methodology](https://medium.com/@talirezun/behind-the-curtain-the-three-phase-process-i-use-to-build-every-ai-coded-product-bf4671f2c4b4)\n"
-    msg += "→ *STEP 2* — [From Prototype to Production](https://medium.com/@talirezun/from-prototype-to-production-building-an-ai-widget-platform-in-30-days-23c603c91475)\n"
-    msg += "→ *STEP 3* — [The Insight That Changed Everything](https://medium.com/@talirezun/why-i-ditched-rag-pipelines-for-1m-token-context-windows-d5a2982f7cce)\n"
-    msg += "→ *STEP 4* — [The Orchestration Leap](https://medium.com/@talirezun/from-writing-code-to-directing-intelligence-five-days-inside-augment-codes-intent-7b04863808bf)\n"
-    msg += "→ *STEP 5* — [The Marketing Layer](https://medium.com/@talirezun/how-i-built-an-ai-marketing-team-that-actually-works-from-memes-to-technical-content-in-minutes-87f646608c60)\n\n"
-    msg += "_Read and work through before Module 2 — and comment on Dr. Tali Režun's LinkedIn articles._\n\n"
-
-    msg += "📝 *Module 2 — Prepare for Session 9 (April 4):*\n"
-    msg += "_Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:_\n\n"
-    msg += "→ [Google Gemini](https://gemini.google.com/) — Login & Explore\n"
-    msg += "→ [Google AI Studio](https://aistudio.google.com/) — Login & Explore\n"
-    msg += "→ [Google NotebookLM](https://notebooklm.google.com/) — Login & Explore\n"
-    msg += "→ [Anthropic Claude Desktop](https://claude.ai/download) — Create Account & Explore\n"
-    msg += "→ [GitHub](https://github.com/) — Create Account & Explore\n"
-    msg += "→ [LM Studio](https://lmstudio.ai/) — Download & Install (advanced)\n"
-    msg += "→ [n8n](https://n8n.io/) — Login & Explore\n\n"
-    msg += "_Explore, break things, and decide what goes into YOUR personal AI stack._\n\n"
-    msg += "\n"
-
-    msg += f"🔧 *Tool to understand today — {tool['module']}:*\n"
-    msg += f"*{tool['tool']}*\n"
-    msg += f"[Access here]({tool['link']})\n"
-    msg += f"_{tool['description']}_\n\n"
-
-    msg += f"📚 *Supplementary resource — {supp['module']}:*\n"
-    msg += f"[{supp['title']}]({supp['url']})\n"
-    msg += f"_{supp['note']}_\n\n"
-
-    msg += "🏛️ *VANGUARD LEADERSHIP — Kapusta reading:*\n"
-    for article in KAPUSTA_ARTICLES:
-            msg += f"• [{article['title']}]({article['url']})\n"
-            msg += f"  _{article['note']}_\n"
-    msg += "\n"
-    _neo = NEO_WORLD_ARTICLES[datetime.now().timetuple().tm_yday % len(NEO_WORLD_ARTICLES)]
-    msg += "📰 *Must-read — NEO World & AI Commerce:*\n"
-    msg += f"[{_neo['title']}]({_neo['url']})\n"
-    msg += f"_{_neo['note']}_ — {_neo['authors']}\n\n"
-    # Fetch Rundown AI headline
-    rundown_title, rundown_link = fetch_rundown_headline()
-    if rundown_title and rundown_link:
-        msg += "🌐 *AI NEWS — THE RUNDOWN:*\n"
-        msg += f"[{rundown_title}]({rundown_link})\n"
-        msg += "_therundown.ai — free to read_\n\n"
-
-    # Generate daily knowledge question based on yesterday's assignment
-    yesterday_assignment = random.choice([a for a in MODULE_1_ASSIGNMENTS if a != assignment])
-    daily_question = ""
-    daily_answer = ""
-    try:
-        daily_question, daily_answer = generate_daily_question_and_answer(
-            yesterday_assignment['assignment'],
-            yesterday_assignment['why']
-        )
-    except Exception as e:
-        print(f"❌ Knowledge question error: {e}")
-
-    # Fixed question for Module 2 series
-    daily_question = "Dr. Tali's 5-step playbook moves from Three-Phase Methodology → Prototype to Production → Ditching RAG → Orchestration → Marketing Layer — if you had to identify the single insight that makes the whole system work, which step contains it and why?"
-    daily_answer = "Step 3 is the pivot point — ditching RAG pipelines for 1M token context windows. Everything before it is setup; everything after it only works because of that architectural decision. Most people building AI products default to RAG because it's what the tutorials teach, but Tali's insight is that when your context window is large enough, retrieval complexity becomes unnecessary friction. That's not a technical preference — it's a strategic choice that simplifies the entire stack, speeds up the build, and removes a category of failure. The non-developer's superpower isn't knowing how to code; it's knowing which complexity to eliminate before you start."
-    msg += "🧠 *Test your knowledge from yesterday's reading:*\n"
-    msg += f"_{daily_question}_\n\n"
-
-
-    msg += "📲 _Vanguard — want this briefing every morning at 05:30 CAT? Message_ `/addme` _to @CotNavigatorBot on Telegram and you're in._\n\n"
-    msg += "⚡ _Navigator out._"
-
-    for chat_id in CHAT_IDS:
-        await bot.send_message(
-            chat_id=chat_id,
-            text=msg,
-            parse_mode='Markdown',
-            disable_web_page_preview=True
-        )
-        print(f"✅ Briefing sent to {chat_id}")
-
-    # Wait 30 minutes then send the model answer
-    if daily_answer:
-        await asyncio.sleep(1800)
-        answer_msg = f"🧠 *Model answer to this morning's question:*\n\n_{daily_answer}_\n\n⚡ _Navigator out._"
-        for chat_id in CHAT_IDS:
-            await bot.send_message(
-                chat_id=chat_id,
-                text=answer_msg,
-                parse_mode="Markdown",
-                disable_web_page_preview=True
-            )
-            print(f"✅ Answer sent to {chat_id}")
+def send_briefing():
+    briefing = build_briefing()
+    answer = build_model_answer()
+    for chat_id in SUBSCRIBERS:
+        ok = send_message(chat_id, briefing)
+        print(f"Briefing → {chat_id}: {'✅' if ok else '❌'}")
+    if answer:
+        import time
+        time.sleep(1800)
+        for chat_id in SUBSCRIBERS:
+            ok = send_message(chat_id, answer)
+            print(f"Answer → {chat_id}: {'✅' if ok else '❌'}")
 
 if __name__ == "__main__":
-    import sys
-    TEST_MODE = "--test" in sys.argv
-    if TEST_MODE:
-        CHAT_IDS = [8536765390]  # Only Nardus
-        print("🧪 TEST MODE — sending only to Nardus")
-    asyncio.run(send_daily_briefing(test_mode=TEST_MODE))
+    if "--test" in sys.argv:
+        print("─── BRIEFING PREVIEW ───")
+        print(build_briefing())
+        print("")
+        print("─── MODEL ANSWER PREVIEW ───")
+        answer = build_model_answer()
+        print(answer if answer else "(No model answer for today)")
+    else:
+        send_briefing()
