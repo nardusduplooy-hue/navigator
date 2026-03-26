@@ -15,7 +15,7 @@ TALI_STEPS = {
         ),
         "question": (
             "Dr. Tali's Three-Phase Methodology — Concept, Build, Refine — "
-            "is the foundation of her non-developer playbook. "
+            "is the foundation of his non-developer playbook. "
             "Which phase do most people skip, and what goes wrong when they do?"
         ),
         "model_answer": (
