@@ -132,6 +132,13 @@ def build_briefing():
     lines.append(SUPPLEMENTARY_RESOURCE["description"])
     lines.append("")
 
+    # ── WEEKEND READING ──
+    lines.append("📖 <b>Weekend reading — Dr. Tali Režun:</b>")
+    lines.append("<a href='https://www.linkedin.com/posts/talirezun_intent-ide-activity-7442966876311379968-gIEU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>Two Worlds of Code</a>")
+    lines.append("")
+    lines.append("Demonstrate your engagement by leaving your reflection, question, or reaction in the LinkedIn comments under the post. Not as a formality — but because the best learning in this space happens in the exchange.")
+    lines.append("")
+
     # ── KAPUSTA ──
     lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta reading:</b>")
     lines.append(f"• <a href='{KAPUSTA_TODAY['url']}'>{KAPUSTA_TODAY['title']}</a>")
