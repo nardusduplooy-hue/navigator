@@ -202,6 +202,7 @@ def send_briefing():
             ok = send_message(chat_id, answer)
             print(f"Answer → {chat_id}: {'✅' if ok else '❌'}")
 
+
 if __name__ == "__main__":
     if "--test-send" in sys.argv:
         send_test()
@@ -212,5 +213,20 @@ if __name__ == "__main__":
         print("─── MODEL ANSWER PREVIEW ───")
         answer = build_model_answer()
         print(answer if answer else "(No model answer for today)")
+    elif "--briefing-only" in sys.argv:
+        briefing = build_briefing()
+        for sub in SUBSCRIBERS:
+            chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
+            ok = send_message(chat_id, briefing)
+            print(f"Briefing → {chat_id}: {'✅' if ok else '❌'}")
+    elif "--answer-only" in sys.argv:
+        answer = build_model_answer()
+        if answer:
+            for sub in SUBSCRIBERS:
+                chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
+                ok = send_message(chat_id, answer)
+                print(f"Answer → {chat_id}: {'✅' if ok else '❌'}")
+        else:
+            print("No model answer for today")
     else:
         send_briefing()
