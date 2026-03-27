@@ -7,7 +7,7 @@ TALI_STEPS = {
     "2026-03-27": {
         "step": 1,
         "title": "The Three-Phase Methodology",
-        "url": "https://medium.com/@talirezun/behind-the-curtain-the-three-phase-process-i-use-to-build-every-ai-coded-product-bf4671f2c4b4",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/?originTrackingId=nVrfQLx%2BhzdhoIHjRcjVrw%3D%3D",
         "focus": (
             "This is the foundation the entire playbook sits on. "
             "Dr. Tali builds every AI product in three phases: Concept, Build, Refine. "
@@ -227,15 +227,15 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/centaur-doctrine-how-vanguard-leaders-win-neo-drazen-kapusta-ytnzf/",
-    "title": "The Centaur Doctrine: How Vanguard Leaders Win the NEO Battlefield",
-    "description": "Kapusta on the human-AI hybrid model that defines Vanguard leadership — essential reading before Session 9.",
+    "url": "https://www.linkedin.com/pulse/centaur-doctrine-part-ii-iran-war-runs-long-what-should-kapusta-2xmxf/",
+    "title": "The Centaur Doctrine Part II: Iran, War Runs Long — What Should Vanguard Leaders Do?",
+    "description": "Kapusta on what Vanguard leaders must do when conflict runs long — essential strategic reading.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
-    "title": "How To Master Google Gemini in 2026",
-    "url": "https://www.youtube.com/watch?v=-_FizlRlfYs&t=140s",
-    "description": "Your foundation resource for the week — watch before or alongside the Gemini tool spotlight.",
+    "title": "Google AI Studio Quickstart — Official Guide",
+    "url": "https://ai.google.dev/gemini-api/docs/quickstart",
+    "description": "The official Google AI Studio quickstart — log in, run your first prompt, and understand what the platform can do.",
 }
 
 AI_NEWS_TODAY = {
@@ -251,4 +251,65 @@ MODULE_2_TOOLS_FULL = [
     {"name": "GitHub",                   "url": "https://github.com",                 "action": "Create Account & Explore"},
     {"name": "LM Studio",                "url": "https://lmstudio.ai",                "action": "Download & Install (advanced)"},
     {"name": "n8n",                      "url": "https://n8n.io",                      "action": "Login & Explore"},
+]
+
+# ─────────────────────────────────────────────
+# FUTURE LAB LEARNING — daily drip 28 Mar onwards
+# ─────────────────────────────────────────────
+
+FUTURE_LAB = {
+    "2026-03-28": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
+    "2026-03-29": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+    ],
+    "2026-03-30": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
+}
+
+FUTURE_LAB_FULL = [
+    {
+        "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+        "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+        "author": "Cotrugli Business School",
+    },
+    {
+        "title": "The Six-Month Hormuz Scenario",
+        "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+        "author": "Dražen Kapusta",
+    },
+    {
+        "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+        "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+        "author": "Kapusta & Stručić",
+    },
 ]

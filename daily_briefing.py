@@ -4,6 +4,8 @@ import json
 import sys
 from datetime import datetime, timezone, timedelta
 from jarvis_content import (
+    FUTURE_LAB,
+    FUTURE_LAB_FULL,
     TALI_STEPS,
     TOOL_SPOTLIGHT,
     KAPUSTA_TODAY,
@@ -130,15 +132,13 @@ def build_briefing():
 
 
     # ── FUTURE LAB LEARNING ──
+    lab_articles = FUTURE_LAB.get(date_key, FUTURE_LAB_FULL)
     lines.append("🔬 <b>FUTURE LAB LEARNING — Kapusta &amp; Cotrugli:</b>")
-    lines.append("• <a href='https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing'>The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud</a>")
-    lines.append("  Cotrugli Business School")
-    lines.append("• <a href='https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true'>The Six-Month Hormuz Scenario</a>")
-    lines.append("  Dražen Kapusta")
-    lines.append("• <a href='https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing'>Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era</a>")
-    lines.append("  Kapusta &amp; Stručić")
+    for article in lab_articles:
+        lines.append(f"• <a href='{article['url']}'>{article['title']}</a>")
+        lines.append(f"  {article['author']}")
     lines.append("")
-    lines.append("")
+
 
     # ── AI NEWS ──
     news = fetch_ai_news()
