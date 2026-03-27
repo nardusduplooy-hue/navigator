@@ -89,6 +89,14 @@ def build_briefing():
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
 
+    # ── DEAN'S MESSAGE ──
+    lines.append("📣 <b>MESSAGE FROM DEAN DRAŽEN KAPUSTA</b>")
+    lines.append("")
+    lines.append("We have an experimental Future Labs group — now 19 Vanguards strong. We start experimenting with advanced concepts. We will open 20 more spots for those who want to go the extra mile.")
+    lines.append("")
+    lines.append("→ Interested? <a href='https://t.me/c/2421053554/330/1618'>Send a Telegram message here</a>")
+    lines.append("")
+
     # ── CHASING JARVIS ──
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
     lines.append("")
