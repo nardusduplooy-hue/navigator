@@ -227,15 +227,15 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/centaur-doctrine-part-ii-iran-war-runs-long-what-should-kapusta-2xmxf/",
-    "title": "The Centaur Doctrine Part II: Iran, War Runs Long — What Should Vanguard Leaders Do?",
-    "description": "Kapusta on what Vanguard leaders must do when conflict runs long — essential strategic reading.",
+    "url": "https://www.linkedin.com/pulse/merchants-wisdom-half-millennium-late-drazen-kapusta-noqxe/?trackingId=lZtCsgh3DDGUf2s0jDmspQ%3D%3D",
+    "title": "A Merchant's Wisdom, Half a Millennium Late",
+    "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
-    "title": "Google AI Studio Quickstart — Official Guide",
+    "title": "Google NotebookLM — Official Guide",
     "url": "https://ai.google.dev/gemini-api/docs/quickstart",
-    "description": "The official Google AI Studio quickstart — log in, run your first prompt, and understand what the platform can do.",
+    "description": "The official NotebookLM guide — upload your sources, ask questions, and unlock your documents.",
 }
 
 AI_NEWS_TODAY = {
