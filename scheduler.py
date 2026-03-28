@@ -16,8 +16,8 @@ def send_answer():
     print(f"⏰ Sending model answer at {cat_time.strftime('%H:%M')} CAT")
     subprocess.run([sys.executable, "daily_briefing.py", "--answer-only"])
 
-schedule.every().day.at("03:30").do(send_briefing)  # 03:30 UTC = 05:30 CAT
-schedule.every().day.at("04:00").do(send_answer)    # 04:00 UTC = 06:00 CAT
+schedule.every().day.at("05:30").do(send_briefing)
+schedule.every().day.at("06:00").do(send_answer)
 
 print("🧭 Navigator scheduler running...")
 print("📅 Briefing: 05:30 CAT | Model answer: 06:00 CAT")
