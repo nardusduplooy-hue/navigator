@@ -11,6 +11,7 @@ from jarvis_content import (
     KAPUSTA_TODAY,
     SUPPLEMENTARY_RESOURCE,
     AI_NEWS_TODAY,
+    JTBD_STATUS,
 )
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -84,7 +85,7 @@ def build_briefing():
     # ── STATUS ──
     lines.append("✅ <b>STATUS</b>")
     lines.append("• All JTBDs current")
-    lines.append("• JTBD — <a href='https://medium.com/@talirezun/behind-the-curtain-the-three-phase-process-i-use-to-build-every-ai-coded-product-bf4671f2c4b4'>Comment posted on Dr. Tali LinkedIn</a>")
+    lines.append(f"• <a href='https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/?originTrackingId=pO%2Fw8vwhIdjLEwbFFiYXBQ%3D%3D'>JTBD: Read the 5 series articles and engage on LinkedIn</a>")
     lines.append("• Awaiting Future of Work multiple choice exam results")
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
@@ -145,7 +146,6 @@ def build_briefing():
     lines.append(f"  {KAPUSTA_TODAY['description']}")
     lines.append("")
 
-
     # ── FUTURE LAB LEARNING ──
     lab_articles = FUTURE_LAB.get(date_key, FUTURE_LAB_FULL)
     lines.append("🔬 <b>FUTURE LAB LEARNING — Kapusta &amp; Cotrugli:</b>")
@@ -153,7 +153,6 @@ def build_briefing():
         lines.append(f"• <a href='{article['url']}'>{article['title']}</a>")
         lines.append(f"  {article['author']}")
     lines.append("")
-
 
     # ── AI NEWS ──
     news = fetch_ai_news()
@@ -164,7 +163,6 @@ def build_briefing():
         lines.append(news["headline"])
     lines.append(news["source"])
     lines.append("")
-
 
     # ── KNOWLEDGE QUESTION ──
     if tali:

@@ -81,30 +81,32 @@ TALI_STEPS = {
     },
     "2026-03-30": {
         "step": 4,
-        "title": "From Writing Code to Directing Intelligence",
+        "title": "The Orchestration Leap — From Writing Code to Directing Intelligence",
         "url": "https://medium.com/@talirezun/from-writing-code-to-directing-intelligence-five-days-inside-augment-codes-intent-7b04863808bf",
         "focus": (
-            "The shift from building with AI to directing AI is the orchestration leap. "
-            "Read to understand what it means to move from prompt-by-prompt interaction "
-            "to designing systems where AI agents hand off work to each other — "
-            "and why this is the unlock for non-developers who want to build at scale."
+            "This is where it clicks — the shift from writing code to directing intelligence. "
+            "Read to understand what orchestration actually means in practice, "
+            "and why it changes the role of the non-developer from observer to conductor. "
+            "This is the unlock for building at scale without an engineering background."
         ),
         "question": (
-            "Dr. Tali describes a shift from writing code to directing intelligence. "
-            "In practice, what does orchestration mean for a non-developer — "
-            "and what breaks if you try to scale a single-agent system instead?"
+            "Dr. Tali describes the Orchestration Leap as the moment a non-developer "
+            "stops writing instructions and starts directing intelligence. "
+            "What is the critical difference between prompting an AI and orchestrating one — "
+            "and why does that distinction determine whether you become a Vanguard builder or remain a power user?"
         ),
         "model_answer": (
-            "Orchestration means designing the handoffs — deciding which agent does what, "
-            "in what order, and what it passes to the next agent. "
-            "For a non-developer, this is closer to management than to engineering: "
-            "you define the roles, the inputs, and the success criteria, "
-            "and the agents execute. "
-            "A single-agent system breaks at scale because one agent trying to do everything "
-            "hits context limits, loses coherence, and produces inconsistent outputs. "
-            "Orchestration solves this by keeping each agent focused on a narrow task — "
-            "which also makes the system easier to debug, because when something goes wrong "
-            "you know exactly which agent failed and why."
+            "Prompting is a single conversation — you give an instruction, you get an output, the interaction ends. "
+            "Orchestration is a system — you define roles, handoffs, and success criteria for multiple agents "
+            "working in sequence or in parallel. "
+            "The difference is permanence and scale: a prompt disappears when the session ends, "
+            "an orchestrated system runs without you. "
+            "A power user gets better outputs from a single model. "
+            "A Vanguard builder designs systems where models hand work to each other, "
+            "check each other's outputs, and produce results no single prompt could achieve. "
+            "The distinction is not technical — it is architectural. "
+            "You stop asking what the AI can do for you right now, "
+            "and start designing what it can do for you while you sleep."
         ),
     },
     "2026-03-31": {
@@ -185,7 +187,9 @@ TOOL_SPOTLIGHT = {
             "Unlike browser-based tools, the desktop app stays open alongside your work "
             "and handles very long documents without losing context. "
             "It is also the foundation of the Navigator Ask tab — "
-            "so understanding how Claude thinks is understanding your own tool."
+            "so understanding how Claude thinks is understanding your own tool. "
+            "This is Step 4 in action: you are not just using a tool, "
+            "you are learning to direct one."
         ),
     },
     "2026-03-31": {
@@ -227,21 +231,26 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/merchants-wisdom-half-millennium-late-drazen-kapusta-noqxe/?trackingId=lZtCsgh3DDGUf2s0jDmspQ%3D%3D",
+    "url": "https://www.linkedin.com/pulse/seeing-future-what-vanguard-leaders-can-learn-from-israels-kapusta-2iosf/?trackingId=jjWcktGKUCITqnGTfxBHyg%3D%3D",
     "title": "A Merchant's Wisdom, Half a Millennium Late",
     "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
-    "title": "Google NotebookLM — Official Guide",
-    "url": "https://ai.google.dev/gemini-api/docs/quickstart",
-    "description": "The official NotebookLM guide — upload your sources, ask questions, and unlock your documents.",
+    "title": "Anthropic Claude — Official Documentation",
+    "url": "https://docs.anthropic.com",
+    "description": "Explore how Claude works as an orchestration layer — directly relevant to Step 4 in action.",
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI's Sora gets the axe",
-    "source": "therundown.ai — free to read",
+    "headline": "When AI turns software development inside-out: 170% throughput at 80% headcount",
+    "source": "VentureBeat AI",
 }
+
+JTBD_STATUS = (
+    "JTBD: Read the 5 series articles and engage on LinkedIn — "
+    "https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/"
+)
 
 MODULE_2_TOOLS_FULL = [
     {"name": "Google Gemini",            "url": "https://gemini.google.com",         "action": "Login & Explore"},
