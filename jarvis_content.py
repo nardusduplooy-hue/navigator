@@ -231,19 +231,19 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/seeing-future-what-vanguard-leaders-can-learn-from-israels-kapusta-2iosf/?trackingId=jjWcktGKUCITqnGTfxBHyg%3D%3D",
-    "title": "A Merchant's Wisdom, Half a Millennium Late",
-    "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
+    "url": "https://www.linkedin.com/pulse/neo-world-its-waiting-you-drazen-kapusta-v8wje/?trackingId=6ZIu00UPXfE%2BAyZsGAyCZw%3D%3D",
+    "title": "The NEO World — It's Not Waiting for You",
+    "description": "Kapusta on the urgency of the NEO Era — the world is not pausing for those who hesitate.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
-    "title": "Anthropic Claude — Official Documentation",
-    "url": "https://docs.anthropic.com",
-    "description": "Explore how Claude works as an orchestration layer — directly relevant to Step 4 in action.",
+    "title": "GitHub — Official Getting Started Guide",
+    "url": "https://docs.github.com/en/get-started",
+    "description": "Learn how GitHub works — version control, repos, and commits explained for non-developers.",
 }
 
 AI_NEWS_TODAY = {
-    "headline": "When AI turns software development inside-out: 170% throughput at 80% headcount",
+    "headline": "When product managers ship code: AI just broke the software org chart",
     "source": "VentureBeat AI",
 }
 
