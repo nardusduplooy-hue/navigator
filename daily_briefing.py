@@ -64,33 +64,28 @@ def build_briefing():
 
     lines = []
 
-    # ── HEADER ──
     lines.append("🧭 <b>NAVIGATOR DAILY BRIEFING</b>")
     lines.append(today_label())
     lines.append("")
 
-    # ── DEADLINES ──
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("• Prepare for Module 2 before Session 9")
     lines.append("• Session 9 — Chasing Jarvis Module 2 — <b>Sat 4 April</b> (estimated)")
     lines.append("")
 
-    # ── NEXT ZOOM ──
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
     lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — Sat 4 April (estimated)")
     lines.append("  Zoom link to be confirmed")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
-    # ── STATUS ──
     lines.append("✅ <b>STATUS</b>")
     lines.append("• All JTBDs current")
-    lines.append(f"• <a href='https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/?originTrackingId=pO%2Fw8vwhIdjLEwbFFiYXBQ%3D%3D'>JTBD: Read the 5 series articles and engage on LinkedIn</a>")
+    lines.append("• <a href='https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/?originTrackingId=pO%2Fw8vwhIdjLEwbFFiYXBQ%3D%3D'>JTBD: Read the 5 series articles and engage on LinkedIn</a>")
     lines.append("• Awaiting Future of Work multiple choice exam results")
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
 
-    # ── DEAN'S MESSAGE ──
     lines.append("📣 <b>MESSAGE FROM DEAN DRAŽEN KAPUSTA</b>")
     lines.append("")
     lines.append("We have an experimental Future Labs group — now 19 Vanguards strong. We start experimenting with advanced concepts. We will open 20 more spots for those who want to go the extra mile.")
@@ -98,7 +93,6 @@ def build_briefing():
     lines.append("→ Interested? <a href='https://t.me/c/2421053554/330/1618'>Send a Telegram message here</a>")
     lines.append("")
 
-    # ── CHASING JARVIS ──
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
     lines.append("")
     lines.append("🔜 <b>Module 2 preview — coming April 4:</b>")
@@ -115,7 +109,6 @@ def build_briefing():
         lines.append("Read and work through before Module 2 — and comment on Dr. Tali Režun's LinkedIn articles.")
         lines.append("")
 
-    # ── MODULE 2 TOOLS ──
     lines.append("📝 <b>Module 2 — Prepare for Session 9 (April 4):</b>")
     lines.append("Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:")
     lines.append("")
@@ -127,26 +120,26 @@ def build_briefing():
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
     lines.append("")
 
-    # ── SUPPLEMENTARY RESOURCE ──
     lines.append("📚 <b>Supplementary resource — Module 2:</b>")
     lines.append(f"<a href='{SUPPLEMENTARY_RESOURCE['url']}'>{SUPPLEMENTARY_RESOURCE['title']}</a>")
     lines.append(SUPPLEMENTARY_RESOURCE["description"])
     lines.append("")
 
-    # ── WEEKEND READING ──
-    lines.append("📖 <b>Weekend reading — Dr. Tali Režun:</b>")
+    lines.append("📖 <b>Additional reading — Chasing Jarvis:</b>")
     lines.append("<a href='https://www.linkedin.com/posts/talirezun_intent-ide-activity-7442966876311379968-gIEU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>Two Worlds of Code</a>")
     lines.append("")
     lines.append("Demonstrate your engagement by leaving your reflection, question, or reaction in the LinkedIn comments under the post. Not as a formality — but because the best learning in this space happens in the exchange.")
     lines.append("")
 
-    # ── KAPUSTA ──
+    lines.append("🗺️ <b>Turning complexity into a navigable path:</b>")
+    lines.append("Visit <a href='https://roadmap.sh/dashboard'>roadmap.sh</a> and create an account.")
+    lines.append("")
+
     lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta reading:</b>")
     lines.append(f"• <a href='{KAPUSTA_TODAY['url']}'>{KAPUSTA_TODAY['title']}</a>")
     lines.append(f"  {KAPUSTA_TODAY['description']}")
     lines.append("")
 
-    # ── FUTURE LAB LEARNING ──
     lab_articles = FUTURE_LAB.get(date_key, FUTURE_LAB_FULL)
     lines.append("🔬 <b>FUTURE LAB LEARNING — Kapusta &amp; Cotrugli:</b>")
     for article in lab_articles:
@@ -154,7 +147,6 @@ def build_briefing():
         lines.append(f"  {article['author']}")
     lines.append("")
 
-    # ── AI NEWS ──
     news = fetch_ai_news()
     lines.append("🌐 <b>AI NEWS — VENTUREBEAT:</b>")
     if news["url"]:
@@ -164,13 +156,11 @@ def build_briefing():
     lines.append(news["source"])
     lines.append("")
 
-    # ── KNOWLEDGE QUESTION ──
     if tali:
         lines.append("🧠 <b>Test your knowledge from today's reading:</b>")
         lines.append(tali["question"])
         lines.append("")
 
-    # ── ADDME ──
     lines.append("📲 Vanguard — want this briefing every morning at 05:30 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
     lines.append("")
     lines.append("⚡ Navigator out.")
