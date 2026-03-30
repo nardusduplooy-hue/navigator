@@ -775,11 +775,11 @@ textarea::placeholder { color: var(--text-muted); }
     <div id="work-assignments"></div>
 
     <div class="section-label">Tool of the Day</div>
-    <div class="card card-amber" onclick="openUrl('https://notebooklm.google.com')" style="cursor:pointer;">
+    <div class="card card-amber" onclick="openUrl('https://claude.ai/download')" style="cursor:pointer;">
       <div style="display:flex;align-items:center;gap:10px;">
         <span style="font-size:20px;">⚙️</span>
         <div style="flex:1;">
-          <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--amber);">Google NotebookLM</div>
+          <div style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--amber);">Anthropic Claude Desktop</div>
           <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Tap to access →</div>
         </div>
       </div>
@@ -989,7 +989,7 @@ textarea::placeholder { color: var(--text-muted); }
           <span class="briefing-emoji">✅</span>
           <div class="briefing-content">
             <div class="briefing-title">Status</div>
-            All JTBDs current · JTBD comment posted on Dr. Tali LinkedIn · <strong>Future of Work Essay submitted</strong> · Awaiting exam results
+            All JTBDs current · <strong>JTBD:</strong> Read the 5 series articles and <a href="https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/" style="color:var(--accent);">engage on LinkedIn</a> · <strong>Future of Work Essay submitted</strong> · Awaiting exam results
           </div>
         </div>
         <div class="briefing-row">
@@ -1003,35 +1003,59 @@ textarea::placeholder { color: var(--text-muted); }
           <span class="briefing-emoji">🎯</span>
           <div class="briefing-content">
             <div class="briefing-title">Today's Focus — Chasing Jarvis Module 2</div>
-            Read <strong>STEP 3 — Why I Ditched RAG Pipelines for 1M Token Context Windows</strong> on Medium. Comment on Dr. Tali's LinkedIn articles. Explore Google NotebookLM.
+            Read <strong>STEP 4 — The Orchestration Leap</strong> on <a href="https://medium.com/@talirezun/from-writing-code-to-directing-intelligence-five-days-inside-augment-codes-intent-7b04863808bf" style="color:var(--accent);">Medium →</a><br>
+            <span style="font-size:11px;color:var(--text-muted);">This is where it clicks — the shift from writing code to directing intelligence. Read to understand what orchestration actually means in practice, and why it changes the role of the non-developer from observer to conductor.</span>
           </div>
         </div>
         <div class="briefing-row">
           <span class="briefing-emoji">🔧</span>
           <div class="briefing-content">
             <div class="briefing-title">Tool of the Day</div>
-            Google NotebookLM — upload Dr. Tali's 5 Medium articles and ask questions
+            <a href="https://claude.ai/download" style="color:var(--accent);">Anthropic Claude Desktop</a> — Create account and explore · Your AI orchestration command centre
+          </div>
+        </div>
+        <div class="briefing-row">
+          <span class="briefing-emoji">📚</span>
+          <div class="briefing-content">
+            <div class="briefing-title">Supplementary</div>
+            <a href="https://docs.anthropic.com" style="color:var(--accent);">Claude Documentation</a> — explore how Claude works as an orchestration layer · relevant to Step 4 in action
           </div>
         </div>
         <div class="briefing-row">
           <span class="briefing-emoji">🏛️</span>
           <div class="briefing-content">
             <div class="briefing-title">Kapusta Reading</div>
-            A Merchant's Wisdom, Half a Millennium Late
+            <a href="https://www.linkedin.com/pulse/seeing-future-what-vanguard-leaders-can-learn-from-israels-kapusta-2iosf/" style="color:var(--accent);">A Merchant's Wisdom, Half a Millennium Late</a> — Kapusta on the enduring principles of trade, trust, and strategy
           </div>
         </div>
         <div class="briefing-row">
-          <span class="briefing-emoji">📰</span>
+          <span class="briefing-emoji">🔬</span>
           <div class="briefing-content">
             <div class="briefing-title">Future Lab</div>
-            The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud · The Six-Month Hormuz Scenario
+            The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud<br>
+            The Six-Month Hormuz Scenario — Dražen Kapusta<br>
+            <strong>Vanguard Intelligence Systems (VIS):</strong> An AI-Augmented Framework for Decision-Making in the NEO Era — Kapusta &amp; Stručić
+          </div>
+        </div>
+        <div class="briefing-row">
+          <span class="briefing-emoji">🌐</span>
+          <div class="briefing-content">
+            <div class="briefing-title">AI News — VentureBeat</div>
+            When AI turns software development inside-out: 170% throughput at 80% headcount
           </div>
         </div>
         <div class="briefing-row">
           <span class="briefing-emoji">🧠</span>
           <div class="briefing-content">
             <div class="briefing-title">Knowledge Question</div>
-            Dr. Tali ditched RAG pipelines in favour of 1M token context windows. What category of failure does it eliminate, and why does that matter more to a non-developer than to an engineer?
+            Dr. Tali describes the Orchestration Leap as the moment a non-developer stops writing instructions and starts directing intelligence. What is the critical difference between prompting an AI and orchestrating one — and why does that distinction determine whether you become a Vanguard builder or remain a power user?
+          </div>
+        </div>
+        <div class="briefing-row">
+          <span class="briefing-emoji">💡</span>
+          <div class="briefing-content">
+            <div class="briefing-title">Model Answer — Yesterday's Question</div>
+            RAG eliminates retrieval failure — the errors that happen when your system fetches the wrong chunk or misses the relevant piece entirely. For an engineer, retrieval failure is a debugging problem: tune the embeddings, adjust chunking, rebuild the index. For a non-developer, it is a dead end — you cannot tune what you cannot see. A 1M token context window sidesteps the entire category by loading everything at once. No retrieval logic means no retrieval failure. The non-developer's superpower is not knowing how to fix complex systems — it is knowing which complexity to eliminate before it becomes a problem.
           </div>
         </div>
       </div>
@@ -1153,7 +1177,7 @@ const PROGRAMME_DATA = {
     syllabusUrl: "https://cotrugli.online",
     notesUrl: "https://cotrugli.online",
     readings: [
-      { title: "STEP 3 — Why I Ditched RAG Pipelines for 1M Token Context Windows", url: "https://medium.com/@talirezun" },
+      { title: "STEP 4 — The Orchestration Leap", url: "https://medium.com/@talirezun/from-writing-code-to-directing-intelligence-five-days-inside-augment-codes-intent-7b04863808bf" },
       { title: "Two Worlds of Code — Dr. Tali Rezun", url: "https://www.linkedin.com/in/talirezun/" },
       { title: "Google NotebookLM — Official Guide", url: "https://notebooklm.google.com" }
     ]
@@ -1186,8 +1210,8 @@ const PROGRAMME_DATA = {
     }
   ],
   toolOfDay: {
-    name: "Google NotebookLM",
-    url: "https://notebooklm.google.com"
+    name: "Anthropic Claude Desktop",
+    url: "https://claude.ai/download"
   },
   kapustaReading: {
     title: "A Merchant's Wisdom, Half a Millennium Late",
@@ -1207,7 +1231,7 @@ const PROGRAMME_DATA = {
     pending: "Awaiting Future of Work multiple choice exam results",
     completed: "JTBD — Comment posted on Dr. Tali LinkedIn"
   },
-  knowledgeQuestion: "Dr. Tali ditched RAG pipelines in favour of 1M token context windows. This is not just a technical preference — it is a strategic choice. What category of failure does it eliminate, and why does that matter more to a non-developer than to an engineer?",
+  knowledgeQuestion: "Dr. Tali describes the Orchestration Leap as the moment a non-developer stops writing instructions and starts directing intelligence. What is the critical difference between prompting an AI and orchestrating one — and why does that distinction determine whether you become a Vanguard builder or remain a power user?",
   deanMessage: "Future Labs group — now 19 Vanguards strong. 20 more spots opening for those who want to go the extra mile. Send a Telegram message to @CotNavigatorBot to join."
 };
 // ===== UPDATE EACH MODULE — END =====
