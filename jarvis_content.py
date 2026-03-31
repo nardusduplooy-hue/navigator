@@ -138,6 +138,32 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-01": {
+        "step": "1-5",
+        "title": "The Complete Non-Developer’s Playbook — All Five Steps",
+        "url": "https://medium.com/@talirezun",
+        "focus": (
+            "You have now read all five steps of the Non-Developer’s Playbook. "
+            "Today is about synthesis — connecting the arc from Concept to Orchestration to Distribution "
+            "and understanding how these five steps form one complete system for building with AI."
+        ),
+        "question": (
+            "Having read all five steps of Dr. Tali’s Non-Developer’s Playbook, "
+            "describe the arc of the system in your own words. "
+            "What is the single most important insight from the series — "
+            "and how will you apply it before Session 9 on Saturday?"
+        ),
+        "model_answer": (
+            "The arc moves from clarity to construction to scale: "
+            "Step 1 establishes the three-phase discipline that prevents you from building the wrong thing. "
+            "Step 2 closes the gap between prototype and production by constraining scope ruthlessly. "
+            "Step 3 eliminates retrieval complexity by loading full context — simplicity as a strategic choice. "
+            "Step 4 makes the leap from prompting to orchestration — from one-off interactions to systems that run without you. "
+            "Step 5 extends that same logic to distribution — marketing is not a separate activity, it is another system to design. "
+            "The single most important insight: every step is about eliminating a category of complexity before it becomes a problem. "
+            "The non-developer’s advantage is not technical skill — it is the willingness to ask which complexity should not exist at all."
+        ),
+    },
 }
 
 TOOL_SPOTLIGHT = {
@@ -231,19 +257,19 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-world-its-waiting-you-drazen-kapusta-v8wje/?trackingId=6ZIu00UPXfE%2BAyZsGAyCZw%3D%3D",
-    "title": "The NEO World — It's Not Waiting for You",
-    "description": "Kapusta on the urgency of the NEO Era — the world is not pausing for those who hesitate.",
+    "url": "https://www.linkedin.com/pulse/from-cotrugli-ncte-why-machine-economy-needs-third-entry-kapusta-z6apf/?trackingId=fJSxTFbVq5a4QRX2k6BpIQ%3D%3D",
+    "title": "From Cotrugli to NCTE: Why the Machine Economy Needs a Third Entry",
+    "description": "Kapusta on why the machine economy demands a new accounting layer — and what NCTE means for Vanguard leaders.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
-    "title": "GitHub — Official Getting Started Guide",
-    "url": "https://docs.github.com/en/get-started",
-    "description": "Learn how GitHub works — version control, repos, and commits explained for non-developers.",
+    "title": "LM Studio — Run AI Models Locally",
+    "url": "https://lmstudio.ai",
+    "description": "Download and install LM Studio to run AI models on your own machine — no internet, no API costs, complete privacy.",
 }
 
 AI_NEWS_TODAY = {
-    "headline": "When product managers ship code: AI just broke the software org chart",
+    "headline": "Midjourney engineer debuts new vibe coded, open source standard Pretext to revolutionise web design",
     "source": "VentureBeat AI",
 }
 
