@@ -128,6 +128,9 @@ def build_briefing():
         lines.append("")
         lines.append(tool["what_its_good_for"])
         lines.append("")
+        lines.append("<b>𝗧𝗵𝗶𝘀 𝗦𝗮𝘁𝘂𝗿𝗱𝗮𝘆, 𝘄𝗲 𝗴𝗼 𝘁𝗼𝗼𝗹-𝗱𝗲𝗲𝗽. 🛠️</b>")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7445030971264917504/?originTrackingId=TstswaWRSLICwAtqpbGEHg%3D%3D'>See the full tool breakdown on LinkedIn</a>")
+        lines.append("")
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
     lines.append("")
 

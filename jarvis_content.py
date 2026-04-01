@@ -138,6 +138,39 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-02": {
+        "step": "1-5 + n8n",
+        "title": "The Complete Playbook Meets Orchestration — n8n as Your First System",
+        "url": "https://n8n.io",
+        "focus": (
+            "You have read the full Non-Developer's Playbook. "
+            "Today's question connects the orchestration leap from Step 4 "
+            "to the tool you are exploring today — n8n. "
+            "The question is not theoretical: it is about what you will actually build."
+        ),
+        "question": (
+            "Dr. Tali's Step 4 describes the shift from prompting to orchestration — "
+            "from single interactions to systems that run without you. "
+            "n8n is a visual workflow tool that lets non-developers build exactly those systems. "
+            "Describe one concrete workflow you would build in n8n "
+            "that would save you real time before Session 9 on Saturday. "
+            "What are the trigger, the steps, and the output?"
+        ),
+        "model_answer": (
+            "A strong answer names a specific, small workflow — not an ambitious future system. "
+            "Example: a morning briefing filter that monitors a specific LinkedIn hashtag, "
+            "pulls the top post of the day, and sends a summary to your Telegram at 07:00. "
+            "Trigger: a schedule node firing at 07:00 each morning. "
+            "Steps: an HTTP request node hitting the LinkedIn feed or RSS equivalent, "
+            "a Claude API node summarising the result in two sentences, "
+            "a Telegram node delivering it to your chat. "
+            "Output: a daily 07:00 Telegram message with one sentence on what the AI community is talking about. "
+            "The key insight is that orchestration is not abstract — "
+            "it is a trigger, a sequence, and an output. "
+            "If you can describe those three things, you can build it. "
+            "That is what Session 9 is preparing you to do."
+        ),
+    },
     "2026-04-01": {
         "step": "1-5",
         "title": "The Complete Non-Developer’s Playbook — All Five Steps",
@@ -257,19 +290,19 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/from-cotrugli-ncte-why-machine-economy-needs-third-entry-kapusta-z6apf/?trackingId=fJSxTFbVq5a4QRX2k6BpIQ%3D%3D",
-    "title": "From Cotrugli to NCTE: Why the Machine Economy Needs a Third Entry",
-    "description": "Kapusta on why the machine economy demands a new accounting layer — and what NCTE means for Vanguard leaders.",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=rB1vq8mnQ38wOPl0bRZR1Q%3D%3D",
+    "title": "The NEO Cotruglian Philosophy: A Leadership Operating System for the NEO Era",
+    "description": "Kapusta on the philosophy that sits beneath the entire Vanguard programme — and what it means to lead in the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
-    "title": "LM Studio — Run AI Models Locally",
-    "url": "https://lmstudio.ai",
-    "description": "Download and install LM Studio to run AI models on your own machine — no internet, no API costs, complete privacy.",
+    "title": "n8n — Workflow Automation for Technical People",
+    "url": "https://n8n.io",
+    "description": "n8n is the visual orchestration layer for your AI stack — connect apps, triggers, and agents without writing code. Create a free account and explore what a workflow node actually looks like before Session 9.",
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Midjourney engineer debuts new vibe coded, open source standard Pretext to revolutionise web design",
+    "headline": "Hackers slipped a trojan into the code library behind most of the internet. Your team is probably affected",
     "source": "VentureBeat AI",
 }
 
