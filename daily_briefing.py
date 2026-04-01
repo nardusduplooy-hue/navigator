@@ -147,10 +147,10 @@ def build_briefing():
 
     # NEW DEVELOPMENT
     lines.append("📖 <b>New development — Chasing Jarvis:</b>")
-    lines.append("<b>𝗚𝗼𝗼𝗴𝗹𝗲 𝗷𝘂𝘀𝘁 𝗿𝗲𝗱𝗿𝗲𝘄 𝘁𝗵𝗲 𝗺𝗮𝗽 𝗳𝗼𝗿 𝗔𝗜-𝗮𝘀𝘀𝗶𝘀𝘁𝗲𝗱 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗺𝗲𝗻𝘁. 𝗧𝗵𝗶𝘀 𝘄𝗲𝗲𝗸.</b>")
-    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7444640981506842624/?originTrackingId=GnURTieJRVPQKZaRxmIZtg%3D%3D'>Read on LinkedIn</a>")
+    lines.append("<b>🚨 𝗨𝗿𝗴𝗲𝗻𝘁 𝗳𝗼𝗿 𝗮𝗹𝗹 𝗯𝘂𝗶𝗹𝗱𝗲𝗿𝘀. 𝗧𝗵𝗲 𝗔𝘅𝗶𝗼𝘀 𝗻𝗽𝗺 𝗽𝗮𝗰𝗸𝗮𝗴𝗲 𝘄𝗮𝘀 𝗵𝗶𝘁 𝗯𝘆 𝗮 𝘀𝘂𝗽𝗽𝗹𝘆 𝗰𝗵𝗮𝗶𝗻 𝗮𝘁𝘁𝗮𝗰𝗸 𝘁𝗵𝗶𝘀 𝘄𝗲𝗲𝗸.</b>")
+    lines.append("<a href='https://www.linkedin.com/posts/talirezun_chasingjarvis-vanguardmba-cotrugli-share-7445132124875206656-8Vb9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>Dr. Tali breaks down what happened, which versions are compromised, and how to fix it — read on LinkedIn</a>")
     lines.append("")
-    lines.append("Demonstrate your engagement by leaving your reflection, question, or reaction in the LinkedIn comments under the post. Not as a formality — but because the best learning in this space happens in the exchange.")
+    lines.append("If you've run <code>npm install</code> recently, check your version today. Drop a comment on the post confirming you've checked — this counts as your Module 5 security awareness checkpoint.")
     lines.append("")
 
     # KAPUSTA
