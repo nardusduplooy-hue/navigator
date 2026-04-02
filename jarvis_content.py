@@ -138,6 +138,40 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-03": {
+        "step": "Module 2 Prep",
+        "title": "Module 2 — AI Tools, Context Engineering & Business Strategy",
+        "url": "https://medium.com/@talirezun",
+        "focus": (
+            "Session 9 is tomorrow. Today is about connecting what you've read "
+            "to what you'll be expected to think, build, and decide as a Vanguard leader."
+        ),
+        "question": (
+            "You have explored several AI tools this week — from Claude and NotebookLM "
+            "to LM Studio and n8n. Module 2 asks you to do more than explore: "
+            "it asks you to select, design, and deploy. "
+            "Choose ONE specific business problem you face in your current role or venture. "
+            "Which tool from your personal AI stack would you use to address it, "
+            "and what context engineering strategy would you apply to maximise its effectiveness? "
+            "Be specific: name the tool, describe the context you would load, "
+            "and explain how this creates a business advantage."
+        ),
+        "model_answer": (
+            "A strong answer is specific and personal — not generic. "
+            "Example: a business development professional facing slow proposal generation "
+            "would choose Claude Desktop for its long-context reasoning. "
+            "Context engineering strategy: load the client's annual report, "
+            "the company's service catalogue, and three winning proposals as reference documents "
+            "before prompting — giving the model the full picture rather than a bare instruction. "
+            "This eliminates the back-and-forth of under-specified prompts "
+            "and produces a first draft that already reflects client language and priorities. "
+            "The business advantage: proposal turnaround drops from two days to two hours, "
+            "and quality improves because the context is richer than any single human could hold in working memory. "
+            "The Module 2 insight: the tool is rarely the differentiator — "
+            "the context you bring to it is. "
+            "That is context engineering as business strategy."
+        ),
+    },
     "2026-04-02": {
         "step": "1-5 + n8n",
         "title": "The Complete Playbook Meets Orchestration — n8n as Your First System",
@@ -290,9 +324,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=rB1vq8mnQ38wOPl0bRZR1Q%3D%3D",
-    "title": "The NEO Cotruglian Philosophy: A Leadership Operating System for the NEO Era",
-    "description": "Kapusta on the philosophy that sits beneath the entire Vanguard programme — and what it means to lead in the NEO Era.",
+    "url": "https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=RhB2T07Bl%2F3N%2BtvtaRgECw%3D%3D",
+    "title": "Benedetto Cotrugli — The Original",
+    "description": "Cotrugli Business School on the merchant philosopher who started it all — and why his thinking still shapes what it means to lead with integrity in the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -302,7 +336,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Hackers slipped a trojan into the code library behind most of the internet. Your team is probably affected",
+    "headline": "Anthropic's Claude gains memory and can now remember details across conversations",
     "source": "VentureBeat AI",
 }
 

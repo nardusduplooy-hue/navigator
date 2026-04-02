@@ -9,7 +9,6 @@ from jarvis_content import (
     TALI_STEPS,
     TOOL_SPOTLIGHT,
     KAPUSTA_TODAY,
-    SUPPLEMENTARY_RESOURCE,
     AI_NEWS_TODAY,
     JTBD_STATUS,
 )
@@ -32,6 +31,20 @@ def today_str():
 def today_label():
     return datetime.now(CAT).strftime("%A, %-d %B %Y")
 
+def wait_for_network(max_attempts=10, delay=15):
+    """Wait until the Telegram API is reachable — handles Mac waking before network is ready."""
+    import time
+    for attempt in range(1, max_attempts + 1):
+        try:
+            urllib.request.urlopen("https://api.telegram.org", timeout=5)
+            print("Network ready.")
+            return True
+        except Exception:
+            print(f"Network not ready (attempt {attempt}/{max_attempts}) — retrying in {delay}s...")
+            time.sleep(delay)
+    print("Network unavailable after all attempts — aborting.")
+    return False
+
 def send_message(chat_id, text):
     url = "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage"
     payload = {
@@ -40,8 +53,18 @@ def send_message(chat_id, text):
         "parse_mode": "HTML",
         "disable_web_page_preview": True,
     }
-    r = requests.post(url, json=payload)
-    return r.ok
+    try:
+        r = requests.post(url, json=payload, timeout=15)
+        if not r.ok:
+            data = r.json()
+            err = data.get("description", "")
+            if "deactivated" in err or "blocked" in err or "not found" in err:
+                print(f"Skipping {chat_id}: {err}")
+                return True  # Skip silently — don't crash the run
+        return r.ok
+    except Exception as e:
+        print(f"Error sending to {chat_id}: {e}")
+        return False
 
 
 def fetch_ai_news():
@@ -123,34 +146,15 @@ def build_briefing():
     lines.append("📝 <b>Module 2 — Prepare for Session 9 (April 4):</b>")
     lines.append("Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:")
     lines.append("")
-    if tool:
-        lines.append("<a href='" + tool["url"] + "'>→ " + tool["name"] + " — " + tool["action"] + "</a>")
-        lines.append("")
-        lines.append(tool["what_its_good_for"])
-        lines.append("")
-        lines.append("<b>𝗧𝗵𝗶𝘀 𝗦𝗮𝘁𝘂𝗿𝗱𝗮𝘆, 𝘄𝗲 𝗴𝗼 𝘁𝗼𝗼𝗹-𝗱𝗲𝗲𝗽. 🛠️</b>")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7445030971264917504/?originTrackingId=TstswaWRSLICwAtqpbGEHg%3D%3D'>See the full tool breakdown on LinkedIn</a>")
-        lines.append("")
+    lines.append("<b>𝗧𝗵𝗶𝘀 𝗦𝗮𝘁𝘂𝗿𝗱𝗮𝘆, 𝘄𝗲 𝗴𝗼 𝘁𝗼𝗼𝗹-𝗱𝗲𝗲𝗽. 🛠️</b>")
+    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7445030971264917504/?originTrackingId=TstswaWRSLICwAtqpbGEHg%3D%3D'>See the full tool breakdown on LinkedIn</a>")
+    lines.append("")
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
     lines.append("")
 
     # ROADMAP.SH
     lines.append("🗺️ <b>Turning complexity into a navigable path:</b>")
     lines.append("Visit <a href='https://roadmap.sh/dashboard'>roadmap.sh</a> and create an account.")
-    lines.append("")
-
-    # SUPPLEMENTARY
-    lines.append("📚 <b>Supplementary resource — Module 2:</b>")
-    lines.append("<a href='" + SUPPLEMENTARY_RESOURCE["url"] + "'>" + SUPPLEMENTARY_RESOURCE["title"] + "</a>")
-    lines.append(SUPPLEMENTARY_RESOURCE["description"])
-    lines.append("")
-
-    # NEW DEVELOPMENT
-    lines.append("📖 <b>New development — Chasing Jarvis:</b>")
-    lines.append("<b>🚨 𝗨𝗿𝗴𝗲𝗻𝘁 𝗳𝗼𝗿 𝗮𝗹𝗹 𝗯𝘂𝗶𝗹𝗱𝗲𝗿𝘀. 𝗧𝗵𝗲 𝗔𝘅𝗶𝗼𝘀 𝗻𝗽𝗺 𝗽𝗮𝗰𝗸𝗮𝗴𝗲 𝘄𝗮𝘀 𝗵𝗶𝘁 𝗯𝘆 𝗮 𝘀𝘂𝗽𝗽𝗹𝘆 𝗰𝗵𝗮𝗶𝗻 𝗮𝘁𝘁𝗮𝗰𝗸 𝘁𝗵𝗶𝘀 𝘄𝗲𝗲𝗸.</b>")
-    lines.append("<a href='https://www.linkedin.com/posts/talirezun_chasingjarvis-vanguardmba-cotrugli-share-7445132124875206656-8Vb9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>Dr. Tali breaks down what happened, which versions are compromised, and how to fix it — read on LinkedIn</a>")
-    lines.append("")
-    lines.append("If you've run <code>npm install</code> recently, check your version today. Drop a comment on the post confirming you've checked — this counts as your Module 5 security awareness checkpoint.")
     lines.append("")
 
     # KAPUSTA
@@ -214,6 +218,8 @@ def send_test():
         print("Answer sent: OK" if r else "Answer sent: FAILED")
 
 def send_briefing():
+    if not wait_for_network():
+        return
     briefing = build_briefing()
     answer = build_model_answer()
     for sub in SUBSCRIBERS:
