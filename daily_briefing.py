@@ -100,7 +100,7 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — <b>Sat 4 April 2026 at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
+    lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — <b>TODAY at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
     lines.append("  <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/9/?wm=1&mi=84405931387'>Join Zoom</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
@@ -116,7 +116,7 @@ def build_briefing():
     # CHASING JARVIS — all 5 steps
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
     lines.append("")
-    lines.append("🔜 <b>Module 2 preview — coming April 4:</b>")
+    lines.append("🔜 <b>Module 2 preview — coming TODAY:</b>")
     lines.append("<b>𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀</b>")
     lines.append("<b>Five articles. One complete system. No computer science degree required.</b>")
     lines.append("")
@@ -146,7 +146,7 @@ def build_briefing():
     lines.append("📝 <b>Module 2 — Prepare for Session 9 (April 4):</b>")
     lines.append("Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:")
     lines.append("")
-    lines.append("<b>𝗧𝗵𝗶𝘀 𝗦𝗮𝘁𝘂𝗿𝗱𝗮𝘆, 𝘄𝗲 𝗴𝗼 𝘁𝗼𝗼𝗹-𝗱𝗲𝗲𝗽. 🛠️</b>")
+    lines.append("<b>𝗧𝗢𝗗𝗔𝗬, 𝘄𝗲 𝗴𝗼 𝘁𝗼𝗼𝗹-𝗱𝗲𝗲𝗽. 🛠️</b>")
     lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7445030971264917504/?originTrackingId=TstswaWRSLICwAtqpbGEHg%3D%3D'>See the full tool breakdown on LinkedIn</a>")
     lines.append("")
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")

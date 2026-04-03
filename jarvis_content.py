@@ -138,6 +138,42 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-04": {
+        "step": "Session 9",
+        "title": "Module 2 — Build, Deploy, Evaluate",
+        "url": "https://medium.com/@talirezun",
+        "focus": (
+            "Session 9 is today. Before you join, sharpen your thinking on "
+            "what it means to move from exploring tools to actually building with them."
+        ),
+        "question": (
+            "Module 2 asks you to build and deploy AI-powered applications "
+            "using no-code and low-code tools — and to evaluate AI agent maturity "
+            "before committing them to real business use. "
+            "Think about a workflow or process in your business or role "
+            "that you could hand to an AI agent today. "
+            "What is the task, what tool would you use to build it, "
+            "and how would you evaluate whether the agent is ready "
+            "to run that task without your supervision? "
+            "What would failure look like — and how would you catch it before it causes damage?"
+        ),
+        "model_answer": (
+            "A strong answer identifies a bounded, repetitive task — not an open-ended one. "
+            "Example: a weekly competitive intelligence summary. "
+            "The task: monitor three competitor LinkedIn pages, summarise new posts, "
+            "and deliver a digest every Monday at 08:00. "
+            "Tool: n8n with a Claude API node for summarisation and a Telegram delivery node. "
+            "Evaluating readiness: run the agent in parallel with your own manual process for two weeks. "
+            "Compare outputs. If the agent misses a post, misattributes a quote, "
+            "or produces a summary you would not send to a colleague — it is not ready unsupervised. "
+            "Failure modes to watch: hallucinated content presented as fact, "
+            "missed posts due to feed changes, and summaries that lose critical nuance. "
+            "The maturity test is simple: would you stake your professional reputation on this output "
+            "without reading it first? "
+            "If yes — deploy. If no — refine the prompt, tighten the context, and test again. "
+            "That loop is what Module 2 is training you to run."
+        ),
+    },
     "2026-04-03": {
         "step": "Module 2 Prep",
         "title": "Module 2 — AI Tools, Context Engineering & Business Strategy",
@@ -336,7 +372,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's Claude gains memory and can now remember details across conversations",
+    "headline": "Arcee's new, open source Trinity-Large-Thinking is the rare, powerful U.S.-made AI model that enterprises can download and customize",
     "source": "VentureBeat AI",
 }
 
