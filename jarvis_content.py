@@ -138,6 +138,38 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-05": {
+        "step": "Module 3",
+        "title": "AI Agents — From Chatbots to Autonomous Workers",
+        "url": "https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695",
+        "focus": (
+            "Module 3 opens with the foundational question: what is an AI agent, "
+            "and how is it different from a chatbot? "
+            "Read Dr. Tali's core article before answering today's question."
+        ),
+        "question": (
+            "Dr. Tali distinguishes between chatbots and autonomous AI agents. "
+            "A chatbot responds. An agent acts. "
+            "In your own words, what is the critical difference between the two — "
+            "and what does an agent need that a chatbot does not? "
+            "Give one example from your own business or role where an agent "
+            "would do something a chatbot simply cannot."
+        ),
+        "model_answer": (
+            "The critical difference is autonomy over action. "
+            "A chatbot waits for a prompt and returns a response — the human remains in the loop for every step. "
+            "An agent is given a goal and a set of tools, and it decides how to achieve that goal "
+            "across multiple steps without waiting for human input at each one. "
+            "What an agent needs that a chatbot does not: tool access (the ability to take actions in the world — "
+            "search, write, send, create), memory (to retain context across steps), "
+            "and a planning loop (to evaluate its own progress and adjust). "
+            "Example: a chatbot can draft a competitive analysis when asked. "
+            "An agent can be given the goal 'monitor our top three competitors and alert me to any pricing changes' "
+            "— and run that task every day, unsupervised, flagging only when something changes. "
+            "The chatbot answers questions. The agent handles workflows. "
+            "That distinction is what Module 3 is built on."
+        ),
+    },
     "2026-04-04": {
         "step": "Session 9",
         "title": "Module 2 — Build, Deploy, Evaluate",
@@ -372,7 +404,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Arcee's new, open source Trinity-Large-Thinking is the rare, powerful U.S.-made AI model that enterprises can download and customize",
+    "headline": "Karpathy shares 'LLM Knowledge Base' architecture that bypasses RAG with an evolving markdown library maintained by AI",
     "source": "VentureBeat AI",
 }
 
@@ -396,6 +428,27 @@ MODULE_2_TOOLS_FULL = [
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-05": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
+    "2026-04-06": [
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
+    "2026-04-07": [
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+    ],
     "2026-03-28": [
         {
             "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",

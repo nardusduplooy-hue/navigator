@@ -94,14 +94,17 @@ def build_briefing():
 
     # DEADLINES
     lines.append("🔴 <b>DEADLINES</b>")
-    lines.append("• Prepare for Module 2 before Session 9")
-    lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — <b>Sat 4 April 2026 at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
+    lines.append("")
+    lines.append("<b>HOMEWORK</b>")
+    lines.append("Build an interactive dashboard with the specific data you have on your concept MVP using an AI tool of your choice — OR create a Knowledge Research Podcast in NotebookLM. Explain what you did in 2 sentences on the Chasing Jarvis Telegram channel and provide the link to the podcast or dashboard.")
+    lines.append("")
+    lines.append("• Prepare for Module 3 before Session 10")
+    lines.append("• Vanguard Session 10 — Chasing Jarvis Module 3 — <b>Sat 18 April 2026 at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
     lines.append("")
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• Vanguard Session 9 — Chasing Jarvis Module 2 — <b>TODAY at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
-    lines.append("  <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/9/?wm=1&mi=84405931387'>Join Zoom</a>")
+    lines.append("• Vanguard Session 10 — Chasing Jarvis Module 3 — <b>Sat 18 April 2026 at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
@@ -113,41 +116,31 @@ def build_briefing():
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
 
-    # CHASING JARVIS — all 5 steps
+    # CHASING JARVIS — Module 3
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
     lines.append("")
-    lines.append("🔜 <b>Module 2 preview — coming TODAY:</b>")
-    lines.append("<b>𝗧𝗵𝗲 𝗡𝗼𝗻-𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿'𝘀 𝗣𝗹𝗮𝘆𝗯𝗼𝗼𝗸 𝗳𝗼𝗿 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘄𝗶𝘁𝗵 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀</b>")
-    lines.append("<b>Five articles. One complete system. No computer science degree required.</b>")
+    lines.append("<a href='https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/'><b>MODULE 3: AI AGENTS — FROM CHATBOTS TO AUTONOMOUS WORKERS</b></a>")
+    lines.append("")
+    lines.append("<b>Core reading — essential for understanding agent fundamentals:</b>")
+    lines.append("<a href='https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695'>→ Understanding AI Agents: From Chatbots to Autonomous Digital Workers — Dr. Tali Režun</a>")
+    lines.append("")
+    lines.append("<b>Read before coding agent sessions:</b>")
+    lines.append("<a href='https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1'>→ The Year I Started Coding with AI: My Coding Agent Journey — Dr. Tali Režun</a>")
+    lines.append("")
+    lines.append("<b>Read before hands-on labs:</b>")
+    lines.append("<a href='https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be'>→ From English to Code: Building Production SaaS with Claude Desktop — Dr. Tali Režun</a>")
+    lines.append("")
+    lines.append("<b>Read before AGI discussion session:</b>")
+    lines.append("<a href='https://medium.com/@talirezun/exploring-early-indicators-of-agi-in-coding-agents-bc671f98eddc'>→ Exploring Early Indicators of AGI in Coding Agents — Dr. Tali Režun</a>")
+    lines.append("")
+    lines.append("<b>Supplementary resources (recommended):</b>")
+    lines.append("<a href='https://modelcontextprotocol.io/'>→ Anthropic's Model Context Protocol Documentation — essential for understanding MCP architecture</a>")
+    lines.append("<a href='https://www.anthropic.com/research/building-effective-agents'>→ Building Effective AI Agents — Anthropic — technical deep dive</a>")
     lines.append("")
 
-    s1 = TALI_STEPS.get("2026-03-27", {})
-    s2 = TALI_STEPS.get("2026-03-28", {})
-    s3 = TALI_STEPS.get("2026-03-29", {})
-    s4 = TALI_STEPS.get("2026-03-30", {})
-    s5 = TALI_STEPS.get("2026-03-31", {})
-
-    if s1:
-        lines.append("<a href='" + s1["url"] + "'>→ STEP 1 — " + s1["title"] + "</a>")
-    if s2:
-        lines.append("<a href='" + s2["url"] + "'>→ STEP 2 — " + s2["title"] + "</a>")
-    if s3:
-        lines.append("<a href='" + s3["url"] + "'>→ STEP 3 — " + s3["title"] + "</a>")
-    if s4:
-        lines.append("<a href='" + s4["url"] + "'>→ STEP 4 — " + s4["title"] + "</a>")
-    if s5:
-        lines.append("<a href='" + s5["url"] + "'>→ STEP 5 — " + s5["title"] + "</a>")
-
-    lines.append("")
-    lines.append("Read and work through all five before Module 2 — and comment on Dr. Tali Režun's LinkedIn articles.")
-    lines.append("")
-
-    # MODULE 2 TOOLS
-    lines.append("📝 <b>Module 2 — Prepare for Session 9 (April 4):</b>")
-    lines.append("Create accounts and explore these tools — then decide what goes into YOUR personal AI stack:")
-    lines.append("")
-    lines.append("<b>𝗧𝗢𝗗𝗔𝗬, 𝘄𝗲 𝗴𝗼 𝘁𝗼𝗼𝗹-𝗱𝗲𝗲𝗽. 🛠️</b>")
-    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7445030971264917504/?originTrackingId=TstswaWRSLICwAtqpbGEHg%3D%3D'>See the full tool breakdown on LinkedIn</a>")
+    # MODULE 3 TOOLS
+    lines.append("📝 <b>Module 3 — Prepare for Session 10 (18 April):</b>")
+    lines.append("Create accounts and explore tools — then decide what goes into YOUR personal AI stack:")
     lines.append("")
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
     lines.append("")
