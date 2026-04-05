@@ -11,6 +11,7 @@ from jarvis_content import (
     KAPUSTA_TODAY,
     AI_NEWS_TODAY,
     JTBD_STATUS,
+    MODULE3_ARTICLES,
 )
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -95,11 +96,17 @@ def build_briefing():
     # DEADLINES
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
-    lines.append("<b>HOMEWORK</b>")
-    lines.append("Build an interactive dashboard with the specific data you have on your concept MVP using an AI tool of your choice — OR create a Knowledge Research Podcast in NotebookLM. Explain what you did in 2 sentences on the Chasing Jarvis Telegram channel and provide the link to the podcast or dashboard.")
+    lines.append("🚀 <b>MODULE 2 HOMEWORK — due Wednesday 15 April</b>")
+    lines.append("Deep research your MVP concept and share with the group. Choose one:")
     lines.append("")
-    lines.append("• Prepare for Module 3 before Session 10")
-    lines.append("• Vanguard Session 10 — Chasing Jarvis Module 3 — <b>Sat 18 April 2026 at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
+    lines.append("🟢 <b>Option 1</b> — Build a NotebookLM knowledge base and share the presentation link.")
+    lines.append("")
+    lines.append("🟠 <b>Option 2</b> — Use Claude or any LLM to build an interactive research dashboard and share the link.")
+    lines.append("")
+    lines.append("🟣 <b>Option 3</b> — Create a short product video using a text-to-video tool and share the link.")
+    lines.append("")
+    lines.append("When posting: include your group members' full names and a max 2-sentence elevator pitch. Let the work do the talking.")
+    lines.append("<a href='https://cotrugli.online/groups/vanguard/'>More information on the homework</a>")
     lines.append("")
 
     # NEXT ZOOM
@@ -121,27 +128,21 @@ def build_briefing():
     lines.append("")
     lines.append("<a href='https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/'><b>MODULE 3: AI AGENTS — FROM CHATBOTS TO AUTONOMOUS WORKERS</b></a>")
     lines.append("")
-    lines.append("<b>Core reading — essential for understanding agent fundamentals:</b>")
-    lines.append("<a href='https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695'>→ Understanding AI Agents: From Chatbots to Autonomous Digital Workers — Dr. Tali Režun</a>")
+    lines.append("<b><a href='https://www.linkedin.com/feed/update/urn:li:activity:7445785130864103424/?originTrackingId=vXV3mtLY%2FnFs9juKOI1%2BGQ%3D%3D'>𝗬𝗼𝘂 𝗯𝘂𝗶𝗹𝘁 𝘀𝗼𝗺𝗲𝘁𝗵𝗶𝗻𝗴. 𝗜𝘁 𝘄𝗼𝗿𝗸𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗲𝘄 𝘄𝗶𝗻𝗱𝗼𝘄. 𝗡𝗼𝘄 𝘄𝗵𝗮𝘁?</a></b>")
     lines.append("")
-    lines.append("<b>Read before coding agent sessions:</b>")
-    lines.append("<a href='https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1'>→ The Year I Started Coding with AI: My Coding Agent Journey — Dr. Tali Režun</a>")
-    lines.append("")
-    lines.append("<b>Read before hands-on labs:</b>")
-    lines.append("<a href='https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be'>→ From English to Code: Building Production SaaS with Claude Desktop — Dr. Tali Režun</a>")
-    lines.append("")
-    lines.append("<b>Read before AGI discussion session:</b>")
-    lines.append("<a href='https://medium.com/@talirezun/exploring-early-indicators-of-agi-in-coding-agents-bc671f98eddc'>→ Exploring Early Indicators of AGI in Coding Agents — Dr. Tali Režun</a>")
-    lines.append("")
+
+    mod3 = MODULE3_ARTICLES.get(date_key, [])
+    for article in mod3:
+        lines.append("<b>" + article["label"] + "</b>")
+        lines.append("<a href='" + article["url"] + "'>→ " + article["title"] + " — Dr. Tali Režun</a>")
+        lines.append("")
+
     lines.append("<b>Supplementary resources (recommended):</b>")
     lines.append("<a href='https://modelcontextprotocol.io/'>→ Anthropic's Model Context Protocol Documentation — essential for understanding MCP architecture</a>")
     lines.append("<a href='https://www.anthropic.com/research/building-effective-agents'>→ Building Effective AI Agents — Anthropic — technical deep dive</a>")
     lines.append("")
 
     # MODULE 3 TOOLS
-    lines.append("📝 <b>Module 3 — Prepare for Session 10 (18 April):</b>")
-    lines.append("Create accounts and explore tools — then decide what goes into YOUR personal AI stack:")
-    lines.append("")
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
     lines.append("")
 

@@ -138,6 +138,37 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-06": {
+        "step": "Module 3 — Day 1",
+        "title": "Understanding AI Agents: From Chatbots to Autonomous Digital Workers",
+        "url": "https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695",
+        "focus": (
+            "The foundation of Module 3. Read Dr. Tali's core article "
+            "before answering today's question."
+        ),
+        "question": (
+            "Dr. Tali distinguishes between chatbots and autonomous AI agents. "
+            "A chatbot responds. An agent acts. "
+            "In your own words, what is the critical difference between the two — "
+            "and what does an agent need that a chatbot does not? "
+            "Give one example from your own business or role where an agent "
+            "would do something a chatbot simply cannot."
+        ),
+        "model_answer": (
+            "The critical difference is autonomy over action. "
+            "A chatbot waits for a prompt and returns a response — the human remains in the loop for every step. "
+            "An agent is given a goal and a set of tools, and it decides how to achieve that goal "
+            "across multiple steps without waiting for human input at each one. "
+            "What an agent needs that a chatbot does not: tool access (the ability to take actions in the world — "
+            "search, write, send, create), memory (to retain context across steps), "
+            "and a planning loop (to evaluate its own progress and adjust). "
+            "Example: a chatbot can draft a competitive analysis when asked. "
+            "An agent can be given the goal 'monitor our top three competitors and alert me to any pricing changes' "
+            "— and run that task every day, unsupervised, flagging only when something changes. "
+            "The chatbot answers questions. The agent handles workflows. "
+            "That distinction is what Module 3 is built on."
+        ),
+    },
     "2026-04-05": {
         "step": "Module 3",
         "title": "AI Agents — From Chatbots to Autonomous Workers",
@@ -392,9 +423,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=RhB2T07Bl%2F3N%2BtvtaRgECw%3D%3D",
-    "title": "Benedetto Cotrugli — The Original",
-    "description": "Cotrugli Business School on the merchant philosopher who started it all — and why his thinking still shapes what it means to lead with integrity in the NEO Era.",
+    "url": "https://www.linkedin.com/posts/cotrugli_chasing-neo-mba-activity-7446250263922847744-04hv/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
+    "title": "From Tool Use to Strategic Command",
+    "description": "Kapusta on why tool skills alone won't keep you valuable — and what Vanguard leaders are being trained to do instead: move from tool use to orchestration, from prompting to judgment, from automation to accountability.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -404,7 +435,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Karpathy shares 'LLM Knowledge Base' architecture that bypasses RAG with an evolving markdown library maintained by AI",
+    "headline": "OCSF explained: The shared data language security teams have been missing",
     "source": "VentureBeat AI",
 }
 
@@ -422,6 +453,41 @@ MODULE_2_TOOLS_FULL = [
     {"name": "LM Studio",                "url": "https://lmstudio.ai",                "action": "Download & Install (advanced)"},
     {"name": "n8n",                      "url": "https://n8n.io",                      "action": "Login & Explore"},
 ]
+
+# ─────────────────────────────────────────────
+# MODULE 3 ARTICLES — daily drip 6-9 April
+# ─────────────────────────────────────────────
+
+MODULE3_ARTICLES = {
+    "2026-04-06": [
+        {
+            "label": "Core reading — essential for understanding agent fundamentals:",
+            "title": "Understanding AI Agents: From Chatbots to Autonomous Digital Workers",
+            "url": "https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695",
+        },
+    ],
+    "2026-04-07": [
+        {
+            "label": "Read before coding agent sessions:",
+            "title": "The Year I Started Coding with AI: My Coding Agent Journey",
+            "url": "https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1",
+        },
+    ],
+    "2026-04-08": [
+        {
+            "label": "Read before hands-on labs:",
+            "title": "From English to Code: Building Production SaaS with Claude Desktop",
+            "url": "https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be",
+        },
+    ],
+    "2026-04-09": [
+        {
+            "label": "Read before AGI discussion session:",
+            "title": "Exploring Early Indicators of AGI in Coding Agents",
+            "url": "https://medium.com/@talirezun/exploring-early-indicators-of-agi-in-coding-agents-bc671f98eddc",
+        },
+    ],
+}
 
 # ─────────────────────────────────────────────
 # FUTURE LAB LEARNING — daily drip 28 Mar onwards
