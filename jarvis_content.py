@@ -138,6 +138,35 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-07": {
+        "step": "Module 3 — Day 2",
+        "title": "The Year I Started Coding with AI: My Coding Agent Journey",
+        "url": "https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1",
+        "focus": (
+            "Dr. Tali's coding agent journey — read before your first hands-on coding session."
+        ),
+        "question": (
+            "Dr. Tali spent a year coding with AI before writing about it. "
+            "He describes a shift in how he thinks about building — not writing code, but directing it. "
+            "What is the most important mindset shift a non-developer needs to make "
+            "before their first coding agent session — "
+            "and what is the biggest mistake to avoid?"
+        ),
+        "model_answer": (
+            "The most important mindset shift is from author to director. "
+            "A non-developer approaching a coding agent for the first time "
+            "instinctively tries to understand every line of code produced — "
+            "as if they need to earn the right to use it. That instinct is wrong and slows everything down. "
+            "The coding agent is not a teacher. It is a contractor. "
+            "Your job is to specify the outcome clearly, review whether it works, and iterate — "
+            "not to understand the implementation. "
+            "The biggest mistake is over-specifying the how instead of the what. "
+            "When you tell the agent exactly how to solve a problem, "
+            "you constrain it to your own limited technical knowledge. "
+            "When you describe what you need clearly, you unlock its full capability. "
+            "The non-developer's advantage is not knowing enough to get in the way."
+        ),
+    },
     "2026-04-06": {
         "step": "Module 3 — Day 1",
         "title": "Understanding AI Agents: From Chatbots to Autonomous Digital Workers",
