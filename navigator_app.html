@@ -370,6 +370,39 @@ textarea::placeholder { color: var(--text-muted); }
 .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 6px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loading-row { display: flex; align-items: center; font-size: 13px; color: var(--text-muted); padding: 14px 0; }
+
+.post-picker {
+  display: none;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.post-picker.open { display: block; }
+.post-picker-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+.post-picker-title { font-size: 12px; font-weight: 600; color: var(--accent); }
+.post-picker-close { background: none; border: none; cursor: pointer; color: var(--text-muted); font-size: 18px; line-height: 1; padding: 0 4px; }
+.post-picker-profile { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--accent-light); }
+.post-picker-profile a { font-size: 12px; color: var(--accent); font-weight: 500; text-decoration: none; }
+.post-list { max-height: 280px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.post-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 11px 14px; border-bottom: 0.5px solid var(--border);
+  cursor: pointer; transition: background 0.15s; gap: 10px;
+}
+.post-item:last-child { border-bottom: none; }
+.post-item:active { background: var(--accent-light); }
+.post-item-title { font-size: 12px; color: var(--text); line-height: 1.4; flex: 1; }
+.post-item-arrow { color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
+.post-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.post-btn-open { font-size: 10px; color: var(--text-muted); padding: 3px 8px; border: 0.5px solid var(--border); border-radius: 20px; background: none; cursor: pointer; }
+.post-btn-select { font-size: 10px; color: var(--accent); padding: 3px 8px; border: 0.5px solid var(--border-accent); border-radius: 20px; background: var(--accent-light); cursor: pointer; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -521,15 +554,32 @@ textarea::placeholder { color: var(--text-muted); }
       <button class="pill-tab" onclick="switchEngageMode('metrics',this)">Metrics</button>
     </div>
     <div id="engage-comment">
-      <div class="section-label">Article Input</div>
-      <textarea id="article-input" rows="5" placeholder="Paste article text or summary here..."></textarea>
-      <div class="sel-label">Author</div>
+      <div class="section-label">Author</div>
       <div class="selector-group" id="author-selector">
-        <button class="sel-btn active" data-val="Kapusta" onclick="selectBtn(this,'author-selector')">Kapusta</button>
-        <button class="sel-btn" data-val="Tali" onclick="selectBtn(this,'author-selector')">Dr. Tali</button>
-        <button class="sel-btn" data-val="Other" onclick="selectBtn(this,'author-selector')">Other</button>
+        <button class="sel-btn active" data-val="Kapusta" onclick="selectAuthorBtn(this,'Kapusta')">Kapusta</button>
+        <button class="sel-btn" data-val="Tali" onclick="selectAuthorBtn(this,'Tali')">Dr. Tali</button>
+        <button class="sel-btn" data-val="Other" onclick="selectAuthorBtn(this,'Other')">Other</button>
       </div>
-      <div class="sel-label" style="margin-top:10px;">Tone</div>
+
+      <div id="post-picker-kapusta" class="post-picker open">
+        <div class="post-picker-header">
+          <span class="post-picker-title">Kapusta — recent posts</span>
+          <a href="https://www.linkedin.com/in/cotrugli/" target="_blank" style="font-size:11px;color:var(--accent);">Profile →</a>
+        </div>
+        <div class="post-list" id="post-list-kapusta"></div>
+      </div>
+
+      <div id="post-picker-tali" class="post-picker">
+        <div class="post-picker-header">
+          <span class="post-picker-title">Dr. Tali — recent posts</span>
+          <a href="https://www.linkedin.com/in/talirezun/" target="_blank" style="font-size:11px;color:var(--accent);">Profile →</a>
+        </div>
+        <div class="post-list" id="post-list-tali"></div>
+      </div>
+
+      <div class="section-label">Article Input</div>
+      <textarea id="article-input" rows="4" placeholder="Select a post above, or paste article text here..."></textarea>
+      <div class="sel-label">Tone</div>
       <div class="selector-group" id="tone-selector">
         <button class="sel-btn active" data-val="Analytical" onclick="selectBtn(this,'tone-selector')">Analytical</button>
         <button class="sel-btn" data-val="Personal" onclick="selectBtn(this,'tone-selector')">Personal</button>
@@ -662,6 +712,7 @@ const PROGRAMME_DATA = {
     sprint: "Sprint 10",
     syllabusUrl: "https://cotrugli.online",
     notesUrl: "https://cotrugli.online",
+    coreReading: { title: "Understanding AI Agents: From Chatbots to Autonomous Digital Workers", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
     readings: [
       { title: "Anthropic's Model Context Protocol Documentation", url: "https://modelcontextprotocol.io" },
       { title: "Building Effective AI Agents — Anthropic", url: "https://www.anthropic.com/research/building-effective-agents" }
@@ -701,8 +752,8 @@ const PROGRAMME_DATA = {
   },
 
   futureLab: {
-    title: "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
-    source: "Cotrugli Business School",
+    title: "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+    source: "Kapusta & Stručić",
     url: "https://cotrugli.online"
   },
 
@@ -712,7 +763,7 @@ const PROGRAMME_DATA = {
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Sunday, 5 April 2026",
+  briefingDate: "Monday, 6 April 2026",
 
   status: [
     "All JTBDs current",
@@ -727,7 +778,75 @@ const PROGRAMME_DATA = {
 
   aiPodcasts: [
     { title: "The Six-Month Hormuz Scenario — Kapusta", date: "2026-03-29", url: "#" }
-  ]
+  ],
+
+  facultyPosts: {
+    kapusta: {
+      name: "Dražen Kapusta",
+      profileUrl: "https://www.linkedin.com/in/cotrugli/",
+      posts: [
+        { title: "Intro to the NEO Era", url: "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/" },
+        { title: "From Prediction to Reality — Genesis Mission Strategic Pivot", url: "https://www.linkedin.com/pulse/from-prediction-reality-genesis-mission-strategic-pivot-kapusta-ubf6f/" },
+        { title: "Ten Trillion in the Fog — Could the AI Revolution Stall?", url: "https://www.linkedin.com/posts/cotrugli_ten-trillion-in-the-fog-could-the-ai-revolution-activity-7395836049488498688--1hB" },
+        { title: "The Invisible Economy — Can Banks Afford to Ignore It?", url: "https://www.linkedin.com/posts/cotrugli_the-invisible-economy-can-banks-afford-to-activity-7395880725146902530-ZWFB" },
+        { title: "Vanguard Leadership — NEO Era", url: "https://www.linkedin.com/posts/cotrugli_vanguardleadership-neoera-activity-7407485658497359872--T6K" },
+        { title: "Leadership — Machiavelli vs Cotrugli", url: "https://www.linkedin.com/posts/cotrugli-business-school_leadership-machiavelli-cotrugli-ugcPost-7401352666351759361-Nol_" },
+        { title: "Vanguard AI — Future of Work", url: "https://www.linkedin.com/posts/cotrugli_vanguard-ai-futureofwork-activity-7423657286025236480-kCQC" },
+        { title: "NCTE — Triple Entry Trust Infrastructure", url: "https://www.linkedin.com/posts/cotrugli_ncte-tripleentry-trustinfrastructure-activity-7427832913896873984-oqZM" },
+        { title: "Short Update on the NEO Era", url: "https://www.linkedin.com/posts/cotrugli_i-just-published-a-short-update-on-theneo-activity-7428829491386286080-F23L" },
+        { title: "Humans Are Not Wired to Win in NEO Markets", url: "https://www.linkedin.com/posts/cotrugli_humans-are-not-wired-to-win-in-neos-markets-activity-7430339574872252416-sa93" },
+        { title: "Two Events, One Problem — Brussels and the AI Governance Gap", url: "https://www.linkedin.com/posts/cotrugli_two-events-one-problem-this-week-in-brussels-activity-7430933182251831296-grWt" },
+        { title: "The Future Could Arrive Faster Than You Expect", url: "https://www.linkedin.com/posts/cotrugli_the-future-could-arrive-faster-than-you-expect-activity-7433150019030941696-wZGW" },
+        { title: "NEO Era — Still Sounds Surreal to Most", url: "https://www.linkedin.com/posts/cotrugli_the-neo-era-still-sounds-surreal-to-most-activity-7434250379283808256-DGb6" },
+        { title: "A Small Pivot — Most Articles Deal with NEO Ambiguity", url: "https://www.linkedin.com/posts/cotrugli_a-small-pivot-most-of-my-articles-here-deal-activity-7434272948330393600-93vg" },
+        { title: "Digital Dollars, Real Impact — Dialogue Review", url: "https://www.linkedin.com/posts/cotrugli_digital-dollars-real-impact-dialogue-review-activity-7437086069239549952-t00c" },
+        { title: "Business History — NEO Ambiguity — Vanguard", url: "https://www.linkedin.com/posts/cotrugli_businesshistory-neoambiguity-vanguard-activity-7441875924570185728-cbVB" },
+        { title: "Stronger Together — Leadership & AI", url: "https://www.linkedin.com/posts/cotrugli_strongertogether-leadership-ai-activity-7443686016810385408-Pefu" },
+        { title: "WRL Leadership & Mentorship", url: "https://www.linkedin.com/posts/cotrugli-business-school_wrl-leadership-mentorship-activity-7445841165108678656-RDzt" },
+        { title: "Chasing NEO — MBA", url: "https://www.linkedin.com/posts/cotrugli_chasing-neo-mba-activity-7446250263922847744-04hv" },
+        { title: "From Tool Use to Strategic Command", url: "https://www.linkedin.com/posts/cotrugli_vanguardleadership-neoera-activity-7407485658497359872--T6K" }
+      ]
+    },
+    tali: {
+      name: "Dr. Tali Režun",
+      profileUrl: "https://www.linkedin.com/in/talirezun/",
+      posts: [
+        { title: "My First AI Product Is Live", url: "https://www.linkedin.com/posts/talirezun_my-first-ai-product-is-live-after-two-activity-7414290097354817537-GyfJ" },
+        { title: "AI & Customer Experience", url: "https://www.linkedin.com/posts/talirezun_ai-artificialintelligence-customerexperience-activity-7415369024944926720-MVbC" },
+        { title: "AI Content Creator & Automation", url: "https://www.linkedin.com/posts/talirezun_ai-contentcreator-automation-activity-7416407580442353664-N7I7" },
+        { title: "Vanguard MBA — AI Leadership", url: "https://www.linkedin.com/posts/talirezun_vanguardmba-cotrugli-aileadership-activity-7416470391776481281-WWmK" },
+        { title: "AI Text-to-Video & Context Engineering", url: "https://www.linkedin.com/posts/talirezun_ai-texttovideo-contextengineering-activity-7417473560912297984-TsAS" },
+        { title: "AI Video — From Lab to Life", url: "https://www.linkedin.com/posts/talirezun_aivideo-fromlabtolife-productiontechnology-activity-7418201257003335680-E6MZ" },
+        { title: "Knowledge Management & AI Customer Support", url: "https://www.linkedin.com/posts/talirezun_knowledgemanagement-ai-customersupport-activity-7419329824898498560-ojOy" },
+        { title: "AI, Machine Learning & RAG", url: "https://www.linkedin.com/posts/talirezun_ai-machinelearning-rag-activity-7419719923393810432-QSeA" },
+        { title: "MBA Program — Vanguard MBA — Cotrugli", url: "https://www.linkedin.com/posts/talirezun_mbaprogram-vanguardmba-cotruglibusinessschool-activity-7420045081174458368-wYSv" },
+        { title: "Chasing Jarvis — AI Education & LLM", url: "https://www.linkedin.com/posts/talirezun_chasingjarvis-aieducation-llm-activity-7421483695787847680-XlnM" },
+        { title: "Chasing Jarvis — AI Tools & Context Engineering", url: "https://www.linkedin.com/posts/talirezun_chasingjarvis-aitools-contextengineering-activity-7421821166044164096-dOK8" },
+        { title: "There's a Difference Between an AI That Answers and One That Acts", url: "https://www.linkedin.com/posts/talirezun_theres-a-difference-between-an-ai-that-answers-activity-7422250209184976896-WNul" },
+        { title: "Electrical Engineering, Power Grid & Field Service AI", url: "https://www.linkedin.com/posts/talirezun_electricalengineering-powergrid-fieldservice-activity-7422284492859666432-DDWO" },
+        { title: "Module 1 — Building an MVP", url: "https://www.linkedin.com/posts/talirezun_%F0%9D%97%A0%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%82%F0%9D%97%B9%F0%9D%97%B2-%F0%9D%9F%B1-%F0%9D%97%95%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B9%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-%F0%9D%97%AE%F0%9D%97%BB-%F0%9D%97%A0%F0%9D%97%A9%F0%9D%97%A3-activity-7423998568560185344-80rx" },
+        { title: "RAG 2.0 — The Breakthrough", url: "https://www.linkedin.com/posts/talirezun_rag-20-the-breakthrough-for-the-past-activity-7428331154304335872-Xp1K" },
+        { title: "The Evolution of Coding Agent Workspaces", url: "https://www.linkedin.com/posts/talirezun_the-evolution-of-coding-agent-workspaces-activity-7429051974463082496-XtIh" },
+        { title: "AI for Everyone — No-Code AI Transformation", url: "https://www.linkedin.com/posts/talirezun_aiforeveryone-nocode-aitransformation-activity-7429091571997995009-CH0A" },
+        { title: "Intent — AI & Software Development", url: "https://www.linkedin.com/posts/talirezun_intent-ai-softwaredevelopment-activity-7429478181490888704-8Ug6" },
+        { title: "From Lab to Life — AI Strategy", url: "https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-aistrategy-activity-7430545896129449984-4Nwq" },
+        { title: "Intent — AI & Marketing Automation", url: "https://www.linkedin.com/posts/talirezun_intent-ai-marketingautomation-activity-7431631023529934848-aSih" },
+        { title: "From MVP to Product", url: "https://www.linkedin.com/posts/talirezun_%F0%9D%97%99%F0%9D%97%BF%F0%9D%97%BC%F0%9D%97%BA-%F0%9D%97%A0%F0%9D%97%A9%F0%9D%97%A3-%F0%9D%98%81%F0%9D%97%BC-%F0%9D%97%A3%F0%9D%97%BF%F0%9D%97%BC%F0%9D%97%B1%F0%9D%98%82%F0%9D%97%B0%F0%9D%98%81%F0%9D%97%B6-activity-7432393251216834560-Bb-r" },
+        { title: "Vanguard MBA — From Lab to Life", url: "https://www.linkedin.com/posts/talirezun_vanguardmba-ai-fromlabtolife-activity-7433776528573919232-VOnr" },
+        { title: "ILJ — Vanguard Leadership & AI", url: "https://www.linkedin.com/posts/talirezun_ilj-vanguardleadership-ai-activity-7435624381600456704-In--" },
+        { title: "Chasing Jarvis — AI Education — Cotrugli", url: "https://www.linkedin.com/posts/talirezun_chasingjarvis-aieducation-cotrugli-activity-7438919210497511424-JhcS" },
+        { title: "Intent — From Lab to Life", url: "https://www.linkedin.com/posts/talirezun_intent-fromlabtolife-ai-activity-7439251648981639168-pWwo" },
+        { title: "From Lab to Life — Software Development", url: "https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-softwaredevelopment-activity-7439628975955509248-wgmj" },
+        { title: "Intent — Chasing Jarvis", url: "https://www.linkedin.com/posts/talirezun_intent-chasingjarvis-chasingjarvis-activity-7441742565575614464-3r-E" },
+        { title: "RAG, Intent & From Lab to Life", url: "https://www.linkedin.com/posts/talirezun_rag-intent-fromlabtolife-activity-7442446986844217344-KmsM" },
+        { title: "Intent — IDE", url: "https://www.linkedin.com/posts/talirezun_intent-ide-activity-7442966876311379968-gIEU" },
+        { title: "Google Just Rewrote the Rules", url: "https://www.linkedin.com/posts/talirezun_%F0%9D%97%9A%F0%9D%97%BC%F0%9D%97%BC%F0%9D%97%B4%F0%9D%97%B9%F0%9D%97%B2-%F0%9D%97%B7%F0%9D%98%82%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%BF%F0%9D%97%B2%F0%9D%97%B1%F0%9D%97%BF%F0%9D%97%B2%F0%9D%98%84-%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2-activity-7444640981506842624-ou1r" },
+        { title: "Vanguard MBA — Intent — Chasing Jarvis", url: "https://www.linkedin.com/posts/talirezun_vanguardmba-intent-chasingjarvis-activity-7445030971264917504-eIEl" },
+        { title: "You Built Something — Now What?", url: "https://www.linkedin.com/posts/talirezun_%F0%9D%97%AC%F0%9D%97%BC%F0%9D%98%82-%F0%9D%97%AF%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B9%F0%9D%98%81-%F0%9D%98%80%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-%F0%9D%97%9C%F0%9D%98%81-activity-7445785130864103424-qtC7" },
+        { title: "Axios npm Supply Chain Alert — Check Your Repos", url: "https://www.linkedin.com/posts/talirezun_chasingjarvis-vanguardmba-cotrugli-share-7445132124875206656-8Vb9" }
+      ]
+    }
+  }
 };
 // ===== UPDATE EACH MODULE — END =====
 
@@ -894,6 +1013,47 @@ function switchEngageMode(mode, btn) {
   if (mode === 'metrics') renderMetrics();
 }
 function selectBtn(btn, groupId) { document.getElementById(groupId).querySelectorAll('.sel-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
+
+function renderPostLists() {
+  ['kapusta','tali'].forEach(key => {
+    const faculty = PROGRAMME_DATA.facultyPosts[key];
+    const el = document.getElementById('post-list-' + key);
+    if (!el || !faculty) return;
+    el.innerHTML = faculty.posts.map((p, i) => `
+      <div class="post-item">
+        <span class="post-item-title">${p.title}</span>
+        <div class="post-item-actions">
+          <button class="post-btn-open" onclick="openUrl('${p.url}')">Open</button>
+          <button class="post-btn-select" onclick="selectPost('${p.title}', '${key}')">Use</button>
+        </div>
+      </div>`).join('');
+  });
+}
+
+function selectAuthorBtn(btn, author) {
+  document.getElementById('author-selector').querySelectorAll('.sel-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const kapusta = document.getElementById('post-picker-kapusta');
+  const tali = document.getElementById('post-picker-tali');
+  if (author === 'Kapusta') { kapusta.classList.add('open'); tali.classList.remove('open'); }
+  else if (author === 'Tali') { tali.classList.add('open'); kapusta.classList.remove('open'); }
+  else { kapusta.classList.remove('open'); tali.classList.remove('open'); }
+}
+
+function closePostPicker(key) {
+  document.getElementById('post-picker-' + key)?.classList.remove('open');
+}
+
+function selectPost(title, authorKey) {
+  const input = document.getElementById('article-input');
+  input.value = `[Selected: "${title}" — paste the full article text here to generate comments, or tap Generate to draft based on the title alone.]`;
+  input.focus();
+  const authorLabel = authorKey === 'kapusta' ? 'Kapusta' : 'Tali';
+  document.getElementById('author-selector').querySelectorAll('.sel-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.val === authorLabel);
+  });
+  showToast('Post selected — add article text or tap Generate');
+}
 function toggleFramework(btn) { btn.classList.toggle('active'); }
 
 async function generateComments() {
@@ -1006,7 +1166,7 @@ function renderBriefing() {
 
   if (d.status && d.status.length) rows.push(`<div class="briefing-row"><span class="briefing-emoji">✅</span><div class="briefing-content"><div class="briefing-title">Status</div>${d.status.join('<br>')}</div></div>`);
 
-  if (d.todaysFocus) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">${d.currentModule.name} — Today's Focus</div><strong>${d.currentModule.subtitle || ''}</strong>${d.currentModule.subtitle ? '<br>' : ''}${d.todaysFocus}${d.currentModule.readings && d.currentModule.readings.length ? '<div style="margin-top:8px;">' + d.currentModule.readings.map(r => `→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>') + '</div>' : ''}</div></div>`);
+  if (d.todaysFocus) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">${d.currentModule.name} — Today's Focus</div><strong>${d.currentModule.subtitle || ''}</strong>${d.currentModule.subtitle ? '<br><br>' : ''}${d.todaysFocus}${d.currentModule.coreReading ? `<div style="margin-top:10px;padding:10px 12px;background:var(--accent-light);border-radius:10px;border-left:3px solid var(--accent);"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Core reading</div><a href="${d.currentModule.coreReading.url}" style="color:var(--accent);font-weight:500;font-size:13px;">${d.currentModule.coreReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.currentModule.coreReading.author}</div></div>` : ''}${d.currentModule.readings && d.currentModule.readings.length ? `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r => `→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>` : ''}</div></div>`);
 
   rows.push(`<div class="briefing-row"><span class="briefing-emoji">🗺️</span><div class="briefing-content"><div class="briefing-title">Navigable Path</div>Turning complexity into a navigable path — <a href="${d.toolOfDay.url}" style="color:var(--accent);">${d.toolOfDay.name}</a> — create an account and explore</div></div>`);
 
@@ -1061,6 +1221,7 @@ function init() {
   renderWork();
   renderSessions();
   renderBriefing();
+  renderPostLists();
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
   setInterval(() => { renderNorthStar(); renderWork(); }, 60000);
