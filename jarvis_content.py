@@ -138,6 +138,39 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-08": {
+        "step": "Module 3 — Day 3",
+        "title": "From English to Code: Building Production SaaS with Claude Desktop",
+        "url": "https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be",
+        "focus": (
+            "Dr. Tali built a production SaaS product using nothing but English and Claude Desktop. "
+            "Read the article before answering today's question."
+        ),
+        "question": (
+            "Dr. Tali built a production SaaS product by describing what he wanted in plain English "
+            "and letting Claude Desktop handle the code. "
+            "What does this mean for how non-developers should think about the boundary "
+            "between their role and the machine's role in a build? "
+            "And what is the one thing a non-developer must still own — "
+            "that no coding agent can do for them?"
+        ),
+        "model_answer": (
+            "It means the boundary has moved — permanently. "
+            "The non-developer's role is no longer to stay out of the build. "
+            "It is to own the specification: what the product does, who it is for, "
+            "what good looks like, and when to stop. "
+            "The coding agent handles implementation. The non-developer handles intent. "
+            "That division is not a limitation — it is a leverage point. "
+            "The one thing a non-developer must still own is judgment about the output. "
+            "Does this work the way a real user would expect? "
+            "Is this solving the right problem? "
+            "Is this ready to ship, or does it just look ready? "
+            "A coding agent cannot answer those questions — "
+            "it has no skin in the game, no user empathy, no business context. "
+            "The non-developer who combines clear specification with honest output evaluation "
+            "is not a lesser builder. They are a more dangerous one."
+        ),
+    },
     "2026-04-07": {
         "step": "Module 3 — Day 2",
         "title": "The Year I Started Coding with AI: My Coding Agent Journey",
@@ -452,9 +485,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_chasing-neo-mba-activity-7446250263922847744-04hv/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
-    "title": "From Tool Use to Strategic Command",
-    "description": "Kapusta on why tool skills alone won't keep you valuable — and what Vanguard leaders are being trained to do instead: move from tool use to orchestration, from prompting to judgment, from automation to accountability.",
+    "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/?trackingId=DEtk7TehrOGcRl4Unt1wDw%3D%3D",
+    "title": "Intro to the NEO Era",
+    "description": "Kapusta on what it means to lead at the threshold of a new era — and why the rules of the game have fundamentally changed.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -464,7 +497,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OCSF explained: The shared data language security teams have been missing",
+    "headline": "How MassMutual and Mass General Brigham turned AI pilot sprawl into production results",
     "source": "VentureBeat AI",
 }
 
@@ -523,6 +556,13 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-08": [
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
     "2026-04-05": [
         {
             "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
