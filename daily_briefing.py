@@ -137,6 +137,11 @@ def build_briefing():
         lines.append("<a href='" + article["url"] + "'>→ " + article["title"] + " — Dr. Tali Režun</a>")
         lines.append("")
 
+    lines.append("<b>📚 Pre-Module 3 Reading — Essential for Track B, recommended for all:</b>")
+    lines.append("<a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-codingagents-share-7447218059364159489-zQSL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Augment Code vs Claude Code vs Codex CLI — Dr. Tali Režun</a>")
+    lines.append("An in-depth comparison of the three frontier coding frameworks: how each understands your codebase, how memory works across sessions, what multi-agent orchestration looks like in practice, and what each plan actually costs under real working conditions. Read it — then drop your reflections in the LinkedIn comments.")
+    lines.append("")
+
     lines.append("<b>Supplementary resources (recommended):</b>")
     lines.append("<a href='https://modelcontextprotocol.io/'>→ Anthropic's Model Context Protocol Documentation — essential for understanding MCP architecture</a>")
     lines.append("<a href='https://www.anthropic.com/research/building-effective-agents'>→ Building Effective AI Agents — Anthropic — technical deep dive</a>")
