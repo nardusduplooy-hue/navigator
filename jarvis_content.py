@@ -138,6 +138,41 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-09": {
+        "step": "Module 3 — Day 4",
+        "title": "Exploring Early Indicators of AGI in Coding Agents",
+        "url": "https://medium.com/@talirezun/exploring-early-indicators-of-agi-in-coding-agents-bc671f98eddc",
+        "focus": (
+            "The most provocative article in the Module 3 series. "
+            "Dr. Tali looks at what coding agents are already doing "
+            "that starts to look less like automation and more like reasoning."
+        ),
+        "question": (
+            "Dr. Tali identifies early indicators of AGI-like behaviour in coding agents — "
+            "moments where the agent does something the user did not explicitly ask for, "
+            "but that was clearly the right thing to do. "
+            "What is the significance of this for a non-developer building with AI today? "
+            "And what is the one question every builder should be asking "
+            "as agents move from executing instructions to exercising judgment?"
+        ),
+        "model_answer": (
+            "The significance is that the contract between human and machine is changing. "
+            "When an agent only executes instructions, the human is fully accountable — "
+            "they specified every step. "
+            "When an agent starts exercising judgment — filling gaps, making inferences, "
+            "choosing approaches the user never specified — accountability becomes shared. "
+            "For a non-developer, this is both an unlock and a risk. "
+            "The unlock: you no longer need to anticipate every step of the build. "
+            "The risk: you may not notice when the agent's judgment diverges from your intent. "
+            "The one question every builder should be asking is: "
+            "did the agent do what I wanted, or did it do what I said? "
+            "Those are not always the same thing. "
+            "As agents move closer to AGI-like behaviour, "
+            "the builder's most important skill is not prompting — "
+            "it is verification: the ability to look at an output and know "
+            "whether it actually serves the goal, not just the instruction."
+        ),
+    },
     "2026-04-08": {
         "step": "Module 3 — Day 3",
         "title": "From English to Code: Building Production SaaS with Claude Desktop",
@@ -497,7 +532,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "How MassMutual and Mass General Brigham turned AI pilot sprawl into production results",
+    "headline": "LLM-referred traffic converts at 30-40% — and most enterprises aren't optimizing for it",
     "source": "VentureBeat AI",
 }
 
@@ -556,6 +591,13 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-09": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
     "2026-04-08": [
         {
             "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
