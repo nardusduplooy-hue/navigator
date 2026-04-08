@@ -450,9 +450,9 @@ textarea::placeholder { color: var(--text-muted); }
           <div style="font-size:11px;color:var(--text-muted);margin-top:2px;" id="work-module-meta">—</div>
         </div>
       </div>
-      <div class="link-row" id="work-syllabus-link"><span class="link-row-label">📄 Syllabus (PDF)</span><span class="chevron">›</span></div>
       <div class="link-row" id="work-notes-link"><span class="link-row-label">📝 Module Notes</span><span class="chevron">›</span></div>
-      <div class="link-row" onclick="openUrl('https://cotrugli.online')"><span class="link-row-label">📚 Reading List</span><span class="chevron">›</span></div>
+      <div class="link-row" id="work-reading-link" onclick="openUrl(PROGRAMME_DATA.currentModule.readingListUrl)"><span class="link-row-label">📚 Reading List</span><span class="chevron">›</span></div>
+      <div class="link-row" id="work-prereadings-link" onclick="openUrl(PROGRAMME_DATA.currentModule.preReadingsUrl)"><span class="link-row-label">📖 Module 3 Pre-Readings</span><span class="chevron">›</span></div>
     </div>
     <div class="section-label">Active Assignments</div>
     <div id="work-assignments"></div>
@@ -710,9 +710,11 @@ const PROGRAMME_DATA = {
     subtitle: "AI Agents — From Chatbots to Autonomous Workers",
     week: 10,
     sprint: "Sprint 10",
-    syllabusUrl: "https://cotrugli.online",
-    notesUrl: "https://cotrugli.online",
-    coreReading: { title: "Understanding AI Agents: From Chatbots to Autonomous Digital Workers", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
+    notesUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
+    readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
+    preReadingsUrl: "https://cotrugli.online/groups/vanguard/",
+    coreReading: { title: "From English to Code: Building Production SaaS with Claude Desktop", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
+    preReading: { title: "Augment Code vs Claude Code vs Codex CLI", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun", note: "In-depth comparison of three frontier coding frameworks: how each understands your codebase, how memory works across sessions, what multi-agent orchestration looks like in practice, and what each plan actually costs under real working conditions." },
     readings: [
       { title: "Anthropic's Model Context Protocol Documentation", url: "https://modelcontextprotocol.io" },
       { title: "Building Effective AI Agents — Anthropic", url: "https://www.anthropic.com/research/building-effective-agents" }
@@ -725,7 +727,7 @@ const PROGRAMME_DATA = {
       name: "Module 2 Homework — MVP Deep Research",
       dueDate: "2026-04-15T23:59:00+02:00",
       status: "pending",
-      prepUrl: "https://cotrugli.online",
+      prepUrl: "https://cotrugli.online/groups/vanguard/",
       notes: "Deep research your MVP concept. Choose: NotebookLM knowledge base, interactive research dashboard (Claude/LLM), or product video. Include group members' full names and max 2-sentence elevator pitch."
     }
   ],
@@ -736,7 +738,7 @@ const PROGRAMME_DATA = {
       name: "Vanguard Session 10 — Chasing Jarvis Module 3",
       datetime: "2026-04-18T17:00:00+02:00",
       zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/10/",
-      recordingUrl: "https://cotrugli.online/groups/vanguard/zoom/recordings/"
+      recordingUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/9/"
     }
   ],
 
@@ -746,9 +748,9 @@ const PROGRAMME_DATA = {
   },
 
   kapustaReading: {
-    title: "From Tool Use to Strategic Command",
-    subtitle: "Why tool skills alone won't keep you valuable — move from tool use to orchestration, from prompting to judgment, from automation to accountability.",
-    url: "https://www.linkedin.com/in/drazenkapusta/"
+    title: "Intro to the NEO Era",
+    subtitle: "Kapusta on what it means to lead at the threshold of a new era — and why the rules of the game have fundamentally changed.",
+    url: "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/"
   },
 
   futureLab: {
@@ -758,12 +760,12 @@ const PROGRAMME_DATA = {
   },
 
   neoWorldArticle: {
-    title: "OCSF explained: The shared data language security teams have been missing",
+    title: "LLM-referred traffic converts at 30–40% — and most enterprises aren't optimizing for it",
     source: "VentureBeat AI",
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Monday, 6 April 2026",
+  briefingDate: "Wednesday, 8 April 2026",
 
   status: [
     "All JTBDs current",
@@ -772,12 +774,18 @@ const PROGRAMME_DATA = {
     "Future of Work Essay — Submitted, awaiting results and feedback"
   ],
 
-  knowledgeQuestion: "Dr. Tali distinguishes between chatbots and autonomous AI agents. A chatbot responds. An agent acts. In your own words, what is the critical difference between the two — and what does an agent need that a chatbot does not? Give one example from your own business or role where an agent would do something a chatbot simply cannot.",
+  knowledgeQuestion: "Dr. Tali built a production SaaS product by describing what he wanted in plain English and letting Claude Desktop handle the code. What does this mean for how non-developers should think about the boundary between their role and the machine's role in a build? And what is the one thing a non-developer must still own — that no coding agent can do for them?",
 
-  todaysFocus: "You built something. It works in the preview window. Now what? Module 3 moves from building to deploying — from chatbots to autonomous agents. Explore, break things, and decide what goes into YOUR personal AI stack.",
+  modelAnswer: "It means the boundary has moved — permanently. The non-developer's role is no longer to stay out of the build. It is to own the specification: what the product does, who it is for, what good looks like, and when to stop. The coding agent handles implementation. The non-developer handles intent. That division is not a limitation — it is a leverage point. The one thing a non-developer must still own is judgment about the output. Does this work the way a real user would expect? Is this solving the right problem? Is this ready to ship, or does it just look ready? A coding agent cannot answer those questions — it has no skin in the game, no user empathy, no business context. The non-developer who combines clear specification with honest output evaluation is not a lesser builder. They are a more dangerous one.",
+
+  todaysFocus: "You built something. It works in the preview window. Now what? Read before hands-on labs — then explore, break things, and decide what goes into YOUR personal AI stack.",
 
   aiPodcasts: [
-    { title: "The Six-Month Hormuz Scenario — Kapusta", date: "2026-03-29", url: "#" }
+    { title: "Chasing Jarvis: Step 1 — Context Engineering", date: "2026-03", url: "https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3" },
+    { title: "Chasing Jarvis: Step 2 — The Real Build", date: "2026-03", url: "https://stream.redcircle.com/episodes/1df6e253-8deb-41aa-b200-958f8cfc1665/stream.mp3" },
+    { title: "Chasing Jarvis: Step 3 — Ditching RAG", date: "2026-03", url: "https://stream.redcircle.com/episodes/e9c4ebd5-0041-4650-b787-5012115aa447/stream.mp3" },
+    { title: "Chasing Jarvis: Step 4 — Orchestrating", date: "2026-04", url: "https://stream.redcircle.com/episodes/a6f8c93e-d649-4abf-99b4-36d80ef8d7aa/stream.mp3" },
+    { title: "Chasing Jarvis: Step 5 — Marketing Agents", date: "2026-04", url: "https://stream.redcircle.com/episodes/92bb360b-12fd-446e-9460-aad10a08d1c1/stream.mp3" }
   ],
 
   facultyPosts: {
@@ -942,8 +950,9 @@ function renderWork() {
   const mod = PROGRAMME_DATA.currentModule;
   document.getElementById('work-module-name').textContent = mod.name;
   document.getElementById('work-module-meta').textContent = mod.subtitle ? mod.subtitle : `Session ${mod.week} · ${mod.sprint}`;
-  document.getElementById('work-syllabus-link').onclick = () => openUrl(mod.syllabusUrl);
   document.getElementById('work-notes-link').onclick = () => openUrl(mod.notesUrl);
+  const rlEl = document.getElementById('work-reading-link');
+  if (rlEl) rlEl.onclick = () => openUrl(mod.readingListUrl);
   document.getElementById('work-tool-name').textContent = PROGRAMME_DATA.toolOfDay.name;
   document.getElementById('work-tool-card').onclick = () => openUrl(PROGRAMME_DATA.toolOfDay.url);
   document.getElementById('work-kapusta-title').textContent = PROGRAMME_DATA.kapustaReading.title;
@@ -993,7 +1002,8 @@ function renderSessions() {
   const pl = document.getElementById('podcasts-list');
   pl.innerHTML = '';
   PROGRAMME_DATA.aiPodcasts.forEach(p => {
-    pl.innerHTML += `<div class="card" onclick="openUrl('${p.url}')" style="cursor:pointer;"><div style="display:flex;align-items:center;gap:12px;"><span style="font-size:18px;">🎙️</span><div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--text);">${p.title}</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.date}</div></div><span class="chevron">›</span></div></div>`;
+    const isAudio = p.url && p.url.endsWith('.mp3');
+    pl.innerHTML += `<div class="card" style="margin-bottom:10px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:${isAudio ? '10px' : '0'};"><span style="font-size:18px;">🎙️</span><div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--text);">${p.title}</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.date}</div></div>${!isAudio ? '<span class="chevron" onclick="openUrl(\''+p.url+'\')">›</span>' : ''}</div>${isAudio ? `<audio controls style="width:100%;height:36px;border-radius:8px;accent-color:var(--accent);" src="${p.url}"></audio>` : ''}</div>`;
   });
 }
 
@@ -1166,7 +1176,7 @@ function renderBriefing() {
 
   if (d.status && d.status.length) rows.push(`<div class="briefing-row"><span class="briefing-emoji">✅</span><div class="briefing-content"><div class="briefing-title">Status</div>${d.status.join('<br>')}</div></div>`);
 
-  if (d.todaysFocus) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">${d.currentModule.name} — Today's Focus</div><strong>${d.currentModule.subtitle || ''}</strong>${d.currentModule.subtitle ? '<br><br>' : ''}${d.todaysFocus}${d.currentModule.coreReading ? `<div style="margin-top:10px;padding:10px 12px;background:var(--accent-light);border-radius:10px;border-left:3px solid var(--accent);"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Core reading</div><a href="${d.currentModule.coreReading.url}" style="color:var(--accent);font-weight:500;font-size:13px;">${d.currentModule.coreReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.currentModule.coreReading.author}</div></div>` : ''}${d.currentModule.readings && d.currentModule.readings.length ? `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r => `→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>` : ''}</div></div>`);
+  if (d.todaysFocus) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">${d.currentModule.name} — Today's Focus</div><strong>${d.currentModule.subtitle || ''}</strong>${d.currentModule.subtitle ? '<br><br>' : ''}${d.todaysFocus}${d.currentModule.coreReading ? `<div style="margin-top:10px;padding:10px 12px;background:var(--accent-light);border-radius:10px;border-left:3px solid var(--accent);"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Read before hands-on labs</div><a href="${d.currentModule.coreReading.url}" style="color:var(--accent);font-weight:500;font-size:13px;">→ ${d.currentModule.coreReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.currentModule.coreReading.author}</div></div>` : ''}${d.currentModule.preReading ? `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module 3 Reading — Essential for Track B</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>` : ''}${d.currentModule.readings && d.currentModule.readings.length ? `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r => `→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>` : ''}</div></div>`);
 
   rows.push(`<div class="briefing-row"><span class="briefing-emoji">🗺️</span><div class="briefing-content"><div class="briefing-title">Navigable Path</div>Turning complexity into a navigable path — <a href="${d.toolOfDay.url}" style="color:var(--accent);">${d.toolOfDay.name}</a> — create an account and explore</div></div>`);
 
@@ -1177,6 +1187,8 @@ function renderBriefing() {
   if (d.neoWorldArticle) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🌐</span><div class="briefing-content"><div class="briefing-title">AI News — ${d.neoWorldArticle.source || 'VentureBeat'}</div><a href="${d.neoWorldArticle.url}" style="color:var(--accent);">${d.neoWorldArticle.title}</a></div></div>`);
 
   if (d.knowledgeQuestion) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🧠</span><div class="briefing-content"><div class="briefing-title">Knowledge Question</div>${d.knowledgeQuestion}</div></div>`);
+
+  if (d.modelAnswer) rows.push(`<div class="briefing-row"><span class="briefing-emoji">💡</span><div class="briefing-content"><div class="briefing-title">Model Answer</div><div style="font-size:12px;color:var(--text-dim);line-height:1.6;">${d.modelAnswer}</div></div></div>`);
 
   rows.push(`<div class="briefing-row" style="border-bottom:none;"><span class="briefing-emoji">📲</span><div class="briefing-content"><div class="briefing-title">Get this briefing daily</div>Message <strong>/addme</strong> to <strong>@CotNavigatorBot</strong> on Telegram — delivered at 05:30 CAT every morning.</div></div>`);
 
