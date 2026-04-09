@@ -26,3 +26,10 @@ Error sending to 1016388196: HTTPSConnectionPool(host='api.telegram.org', port=4
 Answer -> 1016388196: FAILED
 Error sending to 981015968: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8700142232:AAFKjcfGsf_LIP51biE8nK-K7rbUNFwc428/sendMessage (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno 8] nodename nor servname provided, or not known)"))
 Answer -> 981015968: FAILED
+Answer -> 8536765390: OK
+Answer -> 285802287: OK
+Answer -> 8244852934: OK
+Answer -> 1945469532: OK
+Answer -> 523516728: OK
+Answer -> 1016388196: OK
+Answer -> 981015968: OK

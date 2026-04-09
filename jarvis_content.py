@@ -138,6 +138,38 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-10": {
+        "step": "Module 3 — Day 5",
+        "title": "Second Brain — Building in the Open",
+        "url": "https://www.linkedin.com/posts/talirezun_opensource-secondbrain-obsidian-share-7447927944905347072-HyX3",
+        "focus": (
+            "Dr. Tali built a fully local, open-source AI app out of personal necessity "
+            "and shared it with the community from day one. "
+            "Today's question is about what that approach reveals about how builders think."
+        ),
+        "question": (
+            "Dr. Tali built Second Brain — a fully local, open-source AI app — "
+            "out of personal necessity, then immediately opened it to the community. "
+            "What does building in the open reveal about the mindset of a Vanguard builder? "
+            "And what is the strategic advantage of sharing your work before it is finished?"
+        ),
+        "model_answer": (
+            "Building in the open reveals that the Vanguard builder treats their own problems "
+            "as signals — not just personal frustrations, but indicators of what others need too. "
+            "Dr. Tali did not wait until Second Brain was polished. "
+            "He shipped it when it was useful, not when it was perfect. "
+            "That is a strategic choice, not just a generous one. "
+            "The advantage of sharing before you are finished is threefold: "
+            "you get real feedback before you build the wrong thing further, "
+            "you attract collaborators who improve the product faster than you could alone, "
+            "and you build an audience that is already invested by the time you are ready to scale. "
+            "The deeper insight for Module 3: the same principle applies to AI agents. "
+            "Deploy early, verify outputs, iterate with real users. "
+            "Waiting for perfection is how you miss the window. "
+            "The Vanguard builder's edge is not the finished product — "
+            "it is the feedback loop they build while everyone else is still planning."
+        ),
+    },
     "2026-04-09": {
         "step": "Module 3 — Day 4",
         "title": "Exploring Early Indicators of AGI in Coding Agents",
@@ -532,7 +564,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "LLM-referred traffic converts at 30-40% — and most enterprises aren't optimizing for it",
+    "headline": "Claude, OpenClaw and the new reality: AI agents are here — and so is the chaos",
     "source": "VentureBeat AI",
 }
 
@@ -591,6 +623,13 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-10": [
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+    ],
     "2026-04-09": [
         {
             "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",

@@ -137,6 +137,10 @@ def build_briefing():
         lines.append("<a href='" + article["url"] + "'>→ " + article["title"] + " — Dr. Tali Režun</a>")
         lines.append("")
 
+    lines.append("<b>🧠 New from Dr. Tali — Second Brain:</b>")
+    lines.append("<a href='https://www.linkedin.com/posts/talirezun_opensource-secondbrain-obsidian-share-7447927944905347072-HyX3'>→ Second Brain — a fully local, open-source AI app that turns your PDFs, notes and research into an interconnected Obsidian wiki. No cloud, no subscription. Community project — read, try it, and drop your thoughts in the comments.</a>")
+    lines.append("")
+
     lines.append("<b>📚 Pre-Module 3 Reading — Essential for Track B, recommended for all:</b>")
     lines.append("<a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-codingagents-share-7447218059364159489-zQSL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Augment Code vs Claude Code vs Codex CLI — Dr. Tali Režun</a>")
     lines.append("An in-depth comparison of the three frontier coding frameworks: how each understands your codebase, how memory works across sessions, what multi-agent orchestration looks like in practice, and what each plan actually costs under real working conditions. Read it — then drop your reflections in the LinkedIn comments.")
