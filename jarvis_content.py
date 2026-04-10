@@ -138,6 +138,62 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-12": {
+        "step": "Weekend — Module 1-3 Synthesis",
+        "title": "Weekend Briefing — Sunday Reflection",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Sunday synthesis — connecting all three modules before the week ahead.",
+        "question": (
+            "You are now three modules into Chasing Jarvis. "
+            "Module 1 gave you a methodology. Module 2 gave you tools. Module 3 is giving you agents. "
+            "If you had to describe the single thread that connects all three — "
+            "the underlying principle that makes each module build on the last — "
+            "what would it be? "
+            "And what does that principle mean for how you approach your MVP homework due 15 April?"
+        ),
+        "model_answer": (
+            "The thread is elimination of friction between intent and output. "
+            "Module 1 eliminated the friction of not knowing how to start — "
+            "the three-phase methodology gave you a process. "
+            "Module 2 eliminated the friction of not having the right tools — "
+            "you now have a personal AI stack. "
+            "Module 3 is eliminating the friction of having to be present for every step — "
+            "agents run workflows without you. "
+            "Each module removes one more layer between what you want to build and what actually gets built. "
+            "For your MVP homework, this means: "
+            "start with the clearest possible description of what you are building and who it is for (Module 1), "
+            "choose the tool that fits your current stage — NotebookLM, Claude, or video (Module 2), "
+            "and think about which parts of your research process could eventually run without you (Module 3). "
+            "The homework is not just a deliverable. "
+            "It is a rehearsal for the full Vanguard builder loop."
+        ),
+    },
+    "2026-04-11": {
+        "step": "Weekend — Module 1-3 Recap",
+        "title": "Weekend Briefing — Saturday Reflection",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Weekend recap — use today to catch up, revisit, and consolidate.",
+        "question": (
+            "Look back across all three modules of Chasing Jarvis so far. "
+            "Which single article, tool, or concept shifted your thinking the most — "
+            "and why? "
+            "Be specific: name it, describe what you thought before, "
+            "and explain what changed after you engaged with it."
+        ),
+        "model_answer": (
+            "A strong answer is honest and personal — not the most impressive-sounding choice. "
+            "Example: Step 3 of Module 1 — ditching RAG pipelines for 1M token context windows. "
+            "Before: assumed that AI systems needed complex retrieval architecture to work with large documents. "
+            "After: understood that simplicity is a strategic choice — "
+            "loading everything at once eliminates an entire category of failure. "
+            "The shift was not just technical. It was a new way of thinking about complexity: "
+            "instead of asking how to manage it, ask whether it needs to exist at all. "
+            "That question now applies to everything — "
+            "workflows, tools, processes, even the MVP itself. "
+            "The best Vanguard builders are not the ones who handle the most complexity. "
+            "They are the ones who eliminate it before it becomes a problem."
+        ),
+    },
     "2026-04-10": {
         "step": "Module 3 — Day 5",
         "title": "Second Brain — Building in the Open",
