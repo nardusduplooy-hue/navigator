@@ -369,6 +369,92 @@ textarea::placeholder { color: var(--text-muted); }
 .settings-hint { font-size: 11px; color: var(--text-muted); margin-top: 5px; line-height: 1.4; }
 .close-btn { background: var(--bg-elevated); border: none; cursor: pointer; color: var(--text-muted); font-size: 18px; padding: 4px 10px; border-radius: 20px; line-height: 1; }
 
+.kv-search-bar {
+  position: relative; margin-bottom: 14px;
+}
+.kv-search-bar input {
+  width: 100%; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 11px 14px 11px 38px;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text);
+  outline: none; transition: border-color 0.18s;
+}
+.kv-search-bar input:focus { border-color: var(--border-accent); }
+.kv-search-bar input::placeholder { color: var(--text-muted); }
+.kv-search-icon {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  width: 16px; height: 16px; color: var(--text-muted); pointer-events: none;
+}
+.kv-filters {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
+}
+.kv-filter {
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  color: var(--text-muted); font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 600; padding: 6px 14px;
+  border-radius: 20px; cursor: pointer; transition: all 0.18s;
+}
+.kv-filter.active {
+  background: var(--accent-light); border-color: var(--border-accent);
+  color: var(--accent);
+}
+.kv-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px; margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.18s;
+}
+.kv-card:active { box-shadow: none; }
+.kv-card-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 10px; margin-bottom: 8px;
+}
+.kv-card-title {
+  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+  color: var(--text); flex: 1; line-height: 1.3;
+}
+.kv-domain-badge {
+  font-size: 10px; font-weight: 600; padding: 3px 9px;
+  border-radius: 20px; white-space: nowrap; flex-shrink: 0;
+}
+.kv-domain-ai { background: var(--accent-light); color: #1e40af; border: 1px solid var(--border-accent); }
+.kv-domain-biz { background: #f0fdf4; color: #15803d; border: 1px solid rgba(34,197,94,0.25); }
+.kv-domain-personal { background: #fef9ee; color: #92400e; border: 1px solid rgba(212,168,83,0.3); }
+.kv-domain-programme { background: #f5f4ff; color: #3C3489; border: 1px solid rgba(127,119,221,0.3); }
+.kv-source {
+  font-size: 11px; color: var(--text-muted); margin-bottom: 10px;
+}
+.kv-source a { color: var(--accent); text-decoration: none; }
+.kv-points { list-style: none; margin-bottom: 10px; }
+.kv-points li {
+  font-size: 13px; color: var(--text-dim); line-height: 1.5;
+  padding: 4px 0 4px 16px; position: relative;
+  border-bottom: 0.5px solid var(--border);
+}
+.kv-points li:last-child { border-bottom: none; }
+.kv-points li::before {
+  content: ''; position: absolute; left: 0; top: 11px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+}
+.kv-tags {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+}
+.kv-tag {
+  font-size: 10px; color: var(--text-muted);
+  background: var(--bg-elevated); border: 0.5px solid var(--border);
+  padding: 2px 8px; border-radius: 20px;
+}
+.kv-toggle {
+  font-size: 11px; color: var(--accent); font-weight: 600;
+  cursor: pointer; margin-bottom: 8px; display: inline-block;
+}
+.kv-empty {
+  text-align: center; padding: 40px 20px; color: var(--text-muted);
+}
+.kv-empty-icon { font-size: 32px; margin-bottom: 12px; }
+.kv-empty-text { font-size: 14px; }
+.kv-count { font-size: 11px; color: var(--text-muted); margin-bottom: 12px; }
+
 .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 6px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loading-row { display: flex; align-items: center; font-size: 13px; color: var(--text-muted); padding: 14px 0; }
@@ -650,6 +736,27 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
+  <!-- TAB 6: KNOWLEDGE VAULT -->
+  <section id="tab-knowledge" class="tab-panel">
+    <div class="kv-search-bar">
+      <svg class="kv-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <input type="text" id="kv-search" placeholder="Search entries or tags..." oninput="filterKnowledge()">
+    </div>
+    <div class="kv-filters" id="kv-filters">
+      <button class="kv-filter active" data-domain="all" onclick="setKvDomain(this)">All</button>
+      <button class="kv-filter" data-domain="AI/Tech" onclick="setKvDomain(this)">AI / Tech</button>
+      <button class="kv-filter" data-domain="Business/Strategy" onclick="setKvDomain(this)">Business / Strategy</button>
+      <button class="kv-filter" data-domain="Personal Growth" onclick="setKvDomain(this)">Personal Growth</button>
+      <button class="kv-filter" data-domain="Programme" onclick="setKvDomain(this)">Programme</button>
+    </div>
+    <div class="kv-count" id="kv-count"></div>
+    <div id="kv-list"></div>
+  </section>
+
+</main>
+
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -670,6 +777,10 @@ textarea::placeholder { color: var(--text-muted); }
   <button class="nav-btn" data-tab="briefing" onclick="switchTab('briefing',this)">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 10h16M4 14h12M4 18h8"/></svg>
     <span class="nav-label">Briefing</span>
+  </button>
+  <button class="nav-btn" data-tab="knowledge" onclick="switchTab('knowledge',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 5.5-3 7H8c-.5-1.5-3-3.5-3-7a7 7 0 0 1 7-7z"/><path d="M9 21h6M10 17h4"/></svg>
+    <span class="nav-label">Knowledge</span>
   </button>
 </nav>
 
@@ -856,7 +967,106 @@ const PROGRAMME_DATA = {
         { title: "Axios npm Supply Chain Alert — Check Your Repos", url: "https://www.linkedin.com/posts/talirezun_chasingjarvis-vanguardmba-cotrugli-share-7445132124875206656-8Vb9" }
       ]
     }
-  }
+  },
+
+  KNOWLEDGE_VAULT: [
+    {
+      id: 'kv001',
+      title: 'RAG — Retrieval Augmented Generation',
+      domain: 'AI/Tech',
+      source: 'Dr. Tali Režun — Second Brain',
+      sourceUrl: 'https://github.com/talirezun/second-brain',
+      tags: ['ai-agents', 'module-3', 'llm'],
+      keyPoints: [
+        'Combines retrieval with generation for grounded, cited answers',
+        'Avoids hallucination by anchoring responses in source documents',
+        'More flexible than fine-tuning for dynamic, frequently updated knowledge',
+        'Context window size is the key bottleneck — larger windows reduce need for chunking'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-04-10'
+    },
+    {
+      id: 'kv002',
+      title: 'Context Engineering — Three-Phase Methodology',
+      domain: 'AI/Tech',
+      source: 'Dr. Tali Režun — Non-Developer's Playbook',
+      sourceUrl: 'https://medium.com/@talirezun',
+      tags: ['context-engineering', 'module-3', 'chasing-jarvis'],
+      keyPoints: [
+        'Phase 1: Load everything — use large context windows to eliminate retrieval failure',
+        'Phase 2: Structure the context — system prompt, memory, tools, conversation history',
+        'Phase 3: Orchestrate — chain prompts, agents, and tools into production pipelines',
+        'Non-developer superpower: knowing which complexity to eliminate before it becomes a problem'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-04-10'
+    },
+    {
+      id: 'kv003',
+      title: 'AI Agents vs Chatbots',
+      domain: 'AI/Tech',
+      source: 'Dr. Tali Režun — Chasing Jarvis Module 3',
+      sourceUrl: 'https://medium.com/@talirezun',
+      tags: ['ai-agents', 'module-3', 'autonomy'],
+      keyPoints: [
+        'A chatbot responds. An agent acts.',
+        'Agents have memory, tools, and the ability to take multi-step autonomous actions',
+        'Key agent components: perception, reasoning, action, memory, tool use',
+        'Human role shifts from operator to director — judgment over execution'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-04-10'
+    },
+    {
+      id: 'kv004',
+      title: 'NEO Era — Core Principles',
+      domain: 'Business/Strategy',
+      source: 'Dražen Kapusta — LinkedIn / COTRUGLI',
+      sourceUrl: 'https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/',
+      tags: ['neo-world', 'vanguard-leadership', 'kapusta'],
+      keyPoints: [
+        'NEO = New Economic Order — characterised by machine-speed change and agentic AI',
+        'Human value shifts from execution to judgment, accountability, and orchestration',
+        'Wolf-Sheep-Sheepdog model: predators, prey, and those who protect and lead',
+        'Business as Craft: ethical coherence + strategic command over tool proficiency'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-04-10'
+    },
+    {
+      id: 'kv005',
+      title: 'JTBD — Jobs To Be Done',
+      domain: 'Business/Strategy',
+      source: 'Chasing Jarvis — Module 2',
+      sourceUrl: 'https://cotrugli.online',
+      tags: ['jtbd', 'module-2', 'product'],
+      keyPoints: [
+        'People hire products to do a job — the job is the unit of analysis, not the customer',
+        'Functional, social, and emotional dimensions of every job',
+        'Innovation fails when it optimises the product instead of the job',
+        'Ask: what progress is the person trying to make in their life?'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-04-10'
+    },
+    {
+      id: 'kv006',
+      title: 'MCP — Model Context Protocol',
+      domain: 'AI/Tech',
+      source: 'Anthropic Documentation',
+      sourceUrl: 'https://modelcontextprotocol.io',
+      tags: ['mcp', 'module-3', 'ai-agents', 'tools'],
+      keyPoints: [
+        'Open protocol for connecting AI models to external tools and data sources',
+        'Standardises how models call tools — replaces one-off custom integrations',
+        'Server/client architecture: MCP servers expose capabilities, clients (models) call them',
+        'Essential infrastructure for multi-agent orchestration systems'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-04-10'
+    }
+  ]
 };
 // ===== UPDATE EACH MODULE — END =====
 
@@ -1230,12 +1440,105 @@ function showToast(msg) {
   setTimeout(() => t.remove(), 2500);
 }
 
+// ═══════════════════════════════════════
+// KNOWLEDGE VAULT
+// ═══════════════════════════════════════
+let kvActiveDomain = 'all';
+
+function domainClass(domain) {
+  if (domain === 'AI/Tech') return 'kv-domain-ai';
+  if (domain === 'Business/Strategy') return 'kv-domain-biz';
+  if (domain === 'Personal Growth') return 'kv-domain-personal';
+  return 'kv-domain-programme';
+}
+
+function domainLabel(domain) {
+  if (domain === 'AI/Tech') return 'AI / Tech';
+  if (domain === 'Business/Strategy') return 'Biz / Strategy';
+  if (domain === 'Personal Growth') return 'Personal';
+  return 'Programme';
+}
+
+function renderKnowledge() {
+  const entries = PROGRAMME_DATA.KNOWLEDGE_VAULT || [];
+  renderKvList(entries);
+}
+
+function renderKvList(entries) {
+  const search = (document.getElementById('kv-search')?.value || '').toLowerCase();
+  const domain = kvActiveDomain;
+
+  const filtered = entries.filter(e => {
+    const matchDomain = domain === 'all' || e.domain === domain;
+    const matchSearch = !search ||
+      e.title.toLowerCase().includes(search) ||
+      e.tags.some(t => t.includes(search)) ||
+      e.source.toLowerCase().includes(search) ||
+      e.keyPoints.some(p => p.toLowerCase().includes(search));
+    return matchDomain && matchSearch;
+  });
+
+  const countEl = document.getElementById('kv-count');
+  if (countEl) countEl.textContent = filtered.length + ' of ' + entries.length + ' entries';
+
+  const list = document.getElementById('kv-list');
+  if (!list) return;
+
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="kv-empty">
+      <div class="kv-empty-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5">
+          <path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 5.5-3 7H8c-.5-1.5-3-3.5-3-7a7 7 0 0 1 7-7z"/>
+          <path d="M9 21h6M10 17h4"/>
+        </svg>
+      </div>
+      <div class="kv-empty-text">No entries match your search.</div>
+    </div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(e => `
+    <div class="kv-card" id="kv-card-${e.id}">
+      <div class="kv-card-header">
+        <div class="kv-card-title">${e.title}</div>
+        <span class="kv-domain-badge ${domainClass(e.domain)}">${domainLabel(e.domain)}</span>
+      </div>
+      <div class="kv-source">${e.sourceUrl ? `<a href="${e.sourceUrl}" onclick="openUrl('${e.sourceUrl}');return false;">${e.source}</a>` : e.source} · ${e.dateAdded}</div>
+      <span class="kv-toggle" onclick="toggleKvPoints('${e.id}')">▾ Key points</span>
+      <ul class="kv-points" id="kv-points-${e.id}">
+        ${e.keyPoints.map(p => `<li>${p}</li>`).join('')}
+      </ul>
+      ${e.tags.length ? `<div class="kv-tags">${e.tags.map(t => `<span class="kv-tag">#${t}</span>`).join('')}</div>` : ''}
+    </div>`).join('');
+}
+
+function toggleKvPoints(id) {
+  const el = document.getElementById('kv-points-' + id);
+  const toggle = el?.previousElementSibling;
+  if (!el) return;
+  const hidden = el.style.display === 'none';
+  el.style.display = hidden ? 'block' : 'none';
+  if (toggle) toggle.textContent = hidden ? '▾ Key points' : '▸ Key points';
+}
+
+function setKvDomain(btn) {
+  document.getElementById('kv-filters').querySelectorAll('.kv-filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  kvActiveDomain = btn.dataset.domain;
+  renderKvList(PROGRAMME_DATA.KNOWLEDGE_VAULT || []);
+}
+
+function filterKnowledge() {
+  renderKvList(PROGRAMME_DATA.KNOWLEDGE_VAULT || []);
+}
+
 function init() {
   renderNorthStar();
   renderWork();
   renderSessions();
   renderBriefing();
   renderPostLists();
+  renderKnowledge();
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
   setInterval(() => { renderNorthStar(); renderWork(); }, 60000);
