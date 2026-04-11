@@ -825,8 +825,33 @@ const PROGRAMME_DATA = {
     notesUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
     readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
     preReadingsUrl: "https://cotrugli.online/groups/vanguard/",
-    coreReading: { title: "From English to Code: Building Production SaaS with Claude Desktop", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
-    preReading: { title: "Augment Code vs Claude Code vs Codex CLI", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun", note: "In-depth comparison of three frontier coding frameworks: how each understands your codebase, how memory works across sessions, what multi-agent orchestration looks like in practice, and what each plan actually costs under real working conditions." },
+    weekendReading: {
+      module1: [
+        { title: "STEP 1 — The Three-Phase Methodology", url: "https://medium.com/@talirezun" },
+        { title: "STEP 2 — From Prototype to Production", url: "https://medium.com/@talirezun" },
+        { title: "STEP 3 — Why I Ditched RAG Pipelines for 1M Token Context Windows", url: "https://medium.com/@talirezun" },
+        { title: "STEP 4 — The Orchestration Leap — From Writing Code to Directing Intelligence", url: "https://medium.com/@talirezun" },
+        { title: "STEP 5 — How I Built an AI Marketing Team That Actually Works", url: "https://medium.com/@talirezun" }
+      ],
+      module2: [
+        { title: "Google Gemini — Login & Explore", url: "https://gemini.google.com" },
+        { title: "Google AI Studio — Login & Explore", url: "https://aistudio.google.com" },
+        { title: "Google NotebookLM — Login & Explore", url: "https://notebooklm.google.com" },
+        { title: "Anthropic Claude Desktop — Create Account & Explore", url: "https://claude.ai" },
+        { title: "GitHub — Create Account & Explore", url: "https://github.com" },
+        { title: "LM Studio — Download & Install (advanced)", url: "https://lmstudio.ai" },
+        { title: "n8n — Login & Explore", url: "https://n8n.io" }
+      ],
+      module3: [
+        { title: "Module 3 portal", url: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/" },
+        { title: "Understanding AI Agents: From Chatbots to Autonomous Digital Workers", url: "https://medium.com/@talirezun" },
+        { title: "The Year I Started Coding with AI: My Coding Agent Journey", url: "https://medium.com/@talirezun" },
+        { title: "From English to Code: Building Production SaaS with Claude Desktop", url: "https://medium.com/@talirezun" },
+        { title: "Exploring Early Indicators of AGI in Coding Agents", url: "https://medium.com/@talirezun" }
+      ],
+      preModule3: { title: "Augment Code vs Claude Code vs Codex CLI", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
+      secondBrain: { title: "Second Brain — A fully local, open-source AI app that turns your research into an interconnected Obsidian wiki. Try it and drop your thoughts in the comments.", url: "https://github.com/talirezun/second-brain" }
+    },
     readings: [
       { title: "Anthropic's Model Context Protocol Documentation", url: "https://modelcontextprotocol.io" },
       { title: "Building Effective AI Agents — Anthropic", url: "https://www.anthropic.com/research/building-effective-agents" }
@@ -865,19 +890,19 @@ const PROGRAMME_DATA = {
     url: "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/"
   },
 
-  futureLab: {
-    title: "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
-    source: "Kapusta & Stručić",
-    url: "https://cotrugli.online"
-  },
+  futureLab: [
+    { title: "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud", source: "Cotrugli Business School", url: "https://cotrugli.online" },
+    { title: "The Six-Month Hormuz Scenario", source: "Dražen Kapusta", url: "https://cotrugli.online" },
+    { title: "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era", source: "Kapusta & Stručić", url: "https://cotrugli.online" }
+  ],
 
   neoWorldArticle: {
-    title: "LLM-referred traffic converts at 30–40% — and most enterprises aren't optimizing for it",
+    title: "AI agent credentials live in the same box as untrusted code. Two new architectures show where the blast radius actually stops.",
     source: "VentureBeat AI",
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Wednesday, 8 April 2026",
+  briefingDate: "Saturday, 11 April 2026",
 
   status: [
     "All JTBDs current",
@@ -886,11 +911,11 @@ const PROGRAMME_DATA = {
     "Future of Work Essay — Submitted, awaiting results and feedback"
   ],
 
-  knowledgeQuestion: "Dr. Tali built a production SaaS product by describing what he wanted in plain English and letting Claude Desktop handle the code. What does this mean for how non-developers should think about the boundary between their role and the machine's role in a build? And what is the one thing a non-developer must still own — that no coding agent can do for them?",
+  knowledgeQuestion: "Look back across all three modules of Chasing Jarvis so far. Which single article, tool, or concept shifted your thinking the most — and why? Be specific: name it, describe what you thought before, and explain what changed after you engaged with it.",
 
-  modelAnswer: "It means the boundary has moved — permanently. The non-developer's role is no longer to stay out of the build. It is to own the specification: what the product does, who it is for, what good looks like, and when to stop. The coding agent handles implementation. The non-developer handles intent. That division is not a limitation — it is a leverage point. The one thing a non-developer must still own is judgment about the output. Does this work the way a real user would expect? Is this solving the right problem? Is this ready to ship, or does it just look ready? A coding agent cannot answer those questions — it has no skin in the game, no user empathy, no business context. The non-developer who combines clear specification with honest output evaluation is not a lesser builder. They are a more dangerous one.",
+  modelAnswer: "A strong answer is honest and personal — not the most impressive-sounding choice. Example: Step 3 of Module 1 — ditching RAG pipelines for 1M token context windows. Before: assumed that AI systems needed complex retrieval architecture to work with large documents. After: understood that simplicity is a strategic choice — loading everything at once eliminates an entire category of failure. The shift was not just technical. It was a new way of thinking about complexity: instead of asking how to manage it, ask whether it needs to exist at all. That question now applies to everything — workflows, tools, processes, even the MVP itself. The best Vanguard builders are not the ones who handle the most complexity. They are the ones who eliminate it before it becomes a problem.",
 
-  todaysFocus: "You built something. It works in the preview window. Now what? Read before hands-on labs — then explore, break things, and decide what goes into YOUR personal AI stack.",
+  todaysFocus: "Weekend Briefing — your complete Chasing Jarvis reading list. Use the weekend to catch up, revisit, and go deeper. Everything covered so far — in one place.",
 
   aiPodcasts: [
     { title: "Chasing Jarvis: Step 1 — Context Engineering", date: "2026-03", url: "https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3" },
@@ -1387,13 +1412,33 @@ function renderBriefing() {
 
   if (d.status && d.status.length) rows.push(`<div class="briefing-row"><span class="briefing-emoji">✅</span><div class="briefing-content"><div class="briefing-title">Status</div>${d.status.join('<br>')}</div></div>`);
 
-  if (d.todaysFocus) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">${d.currentModule.name} — Today's Focus</div><strong>${d.currentModule.subtitle || ''}</strong>${d.currentModule.subtitle ? '<br><br>' : ''}${d.todaysFocus}${d.currentModule.coreReading ? `<div style="margin-top:10px;padding:10px 12px;background:var(--accent-light);border-radius:10px;border-left:3px solid var(--accent);"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Read before hands-on labs</div><a href="${d.currentModule.coreReading.url}" style="color:var(--accent);font-weight:500;font-size:13px;">→ ${d.currentModule.coreReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.currentModule.coreReading.author}</div></div>` : ''}${d.currentModule.preReading ? `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module 3 Reading — Essential for Track B</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>` : ''}${d.currentModule.readings && d.currentModule.readings.length ? `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r => `→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>` : ''}</div></div>`);
+  if (d.todaysFocus) {
+    const wr = d.currentModule.weekendReading;
+    let focusHtml = `<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">${d.currentModule.name} — Today's Focus</div>${d.todaysFocus}`;
+    if (wr) {
+      const modStyle = 'margin-top:10px;padding:10px 12px;border-radius:10px;border-left:3px solid';
+      if (wr.module1) focusHtml += `<div style="${modStyle} var(--accent);background:var(--accent-light);margin-top:12px;"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Module 1 — The Non-Developer's Playbook</div>${wr.module1.map(r=>`→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>`;
+      if (wr.module2) focusHtml += `<div style="${modStyle} #22c55e;background:#f0fdf4;margin-top:8px;"><div style="font-size:10px;font-weight:600;color:#15803d;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Module 2 — Tools & Orchestration</div>${wr.module2.map(r=>`→ <a href="${r.url}" style="color:#15803d;">${r.title}</a>`).join('<br>')}</div>`;
+      if (wr.module3) focusHtml += `<div style="${modStyle} #7F77DD;background:#f5f4ff;margin-top:8px;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Module 3 — AI Agents</div>${wr.module3.map(r=>`→ <a href="${r.url}" style="color:#534AB7;">${r.title}</a>`).join('<br>')}</div>`;
+      if (wr.preModule3) focusHtml += `<div style="${modStyle} #7F77DD;background:#f5f4ff;margin-top:8px;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module 3 Reading — Essential for Track B</div>→ <a href="${wr.preModule3.url}" style="color:#534AB7;">${wr.preModule3.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${wr.preModule3.author}</div></div>`;
+      if (wr.secondBrain) focusHtml += `<div style="${modStyle} #1a56db;background:var(--accent-light);margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Second Brain — New from Dr. Tali</div><a href="${wr.secondBrain.url}" style="color:var(--accent);">${wr.secondBrain.title}</a></div>`;
+    } else {
+      if (d.currentModule.coreReading) focusHtml += `<div style="margin-top:10px;padding:10px 12px;background:var(--accent-light);border-radius:10px;border-left:3px solid var(--accent);"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Read before hands-on labs</div><a href="${d.currentModule.coreReading.url}" style="color:var(--accent);font-weight:500;font-size:13px;">→ ${d.currentModule.coreReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.currentModule.coreReading.author}</div></div>`;
+      if (d.currentModule.preReading) focusHtml += `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module 3 Reading — Essential for Track B</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>`;
+    }
+    if (d.currentModule.readings && d.currentModule.readings.length) focusHtml += `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r=>`→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>`;
+    focusHtml += `</div></div>`;
+    rows.push(focusHtml);
+  }
 
   rows.push(`<div class="briefing-row"><span class="briefing-emoji">🗺️</span><div class="briefing-content"><div class="briefing-title">Navigable Path</div>Turning complexity into a navigable path — <a href="${d.toolOfDay.url}" style="color:var(--accent);">${d.toolOfDay.name}</a> — create an account and explore</div></div>`);
 
   if (d.kapustaReading) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🏛️</span><div class="briefing-content"><div class="briefing-title">Vanguard Leadership &amp; NEO World — Kapusta</div><a href="${d.kapustaReading.url}" style="color:var(--accent);font-weight:600;">${d.kapustaReading.title}</a>${d.kapustaReading.subtitle ? `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.kapustaReading.subtitle}</div>` : ''}</div></div>`);
 
-  if (d.futureLab) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔬</span><div class="briefing-content"><div class="briefing-title">Future Lab Learning</div><a href="${d.futureLab.url}" style="color:var(--accent);font-weight:600;">${d.futureLab.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.futureLab.source}</div></div></div>`);
+  if (d.futureLab) {
+    const flItems = Array.isArray(d.futureLab) ? d.futureLab : [d.futureLab];
+    rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔬</span><div class="briefing-content"><div class="briefing-title">Future Lab Learning</div>${flItems.map(fl => `<div style="margin-bottom:6px;"><a href="${fl.url}" style="color:var(--accent);font-weight:500;">${fl.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${fl.source}</div></div>`).join('')}</div></div>`);
+  }
 
   if (d.neoWorldArticle) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🌐</span><div class="briefing-content"><div class="briefing-title">AI News — ${d.neoWorldArticle.source || 'VentureBeat'}</div><a href="${d.neoWorldArticle.url}" style="color:var(--accent);">${d.neoWorldArticle.title}</a></div></div>`);
 
