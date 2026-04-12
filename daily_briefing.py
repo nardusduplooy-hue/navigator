@@ -123,13 +123,15 @@ def build_briefing():
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
 
+    lines.append("⚡⚡SPLIT⚡⚡")
+
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
     lines.append("")
 
     if date_key in ("2026-04-11", "2026-04-12"):
         # WEEKEND BRIEFING — full programme recap
-        lines.append("🗓️ <b>WEEKEND BRIEFING — Your complete Chasing Jarvis reading list</b>")
+        lines.append("<b>Your complete Chasing Jarvis reading list</b>")
         lines.append("Use the weekend to catch up, revisit, and go deeper. Everything we've covered so far — in one place.")
         lines.append("")
 
@@ -170,15 +172,57 @@ def build_briefing():
         lines.append("<a href='https://www.linkedin.com/posts/talirezun_opensource-secondbrain-obsidian-share-7447927944905347072-HyX3'>→ A fully local, open-source AI app that turns your research into an interconnected Obsidian wiki. Try it and drop your thoughts in the comments.</a>")
         lines.append("")
         lines.append("<b>Supplementary resources:</b>")
-        lines.append("<a href='https://modelcontextprotocol.io/'>→ Anthropic's Model Context Protocol Documentation</a>")
-        lines.append("<a href='https://www.anthropic.com/research/building-effective-agents'>→ Building Effective AI Agents — Anthropic</a>")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_i-recently-wrote-an-article-comparing-augment-activity-7448967589017366528-q3qe/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
         lines.append("")
 
     else:
-        # WEEKDAY BRIEFING — Module 3 daily drip
-        lines.append("<a href='https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/'><b>MODULE 3: AI AGENTS — FROM CHATBOTS TO AUTONOMOUS WORKERS</b></a>")
+        # WEEKDAY BRIEFING — full reading list permanently
+        lines.append("<b>Your complete Chasing Jarvis reading list</b>")
         lines.append("")
-        lines.append("<b><a href='https://www.linkedin.com/feed/update/urn:li:activity:7445785130864103424/?originTrackingId=vXV3mtLY%2FnFs9juKOI1%2BGQ%3D%3D'>𝗬𝗼𝘂 𝗯𝘂𝗶𝗹𝘁 𝘀𝗼𝗺𝗲𝘁𝗵𝗶𝗻𝗴. 𝗜𝘁 𝘄𝗼𝗿𝗸𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗲𝘄 𝘄𝗶𝗻𝗱𝗼𝘄. 𝗡𝗼𝘄 𝘄𝗵𝗮𝘁?</a></b>")
+
+        lines.append("<b>📗 MODULE 1 — The Non-Developer's Playbook for Building with AI</b>")
+        s1 = TALI_STEPS.get("2026-03-27", {})
+        s2 = TALI_STEPS.get("2026-03-28", {})
+        s3 = TALI_STEPS.get("2026-03-29", {})
+        s4 = TALI_STEPS.get("2026-03-30", {})
+        s5 = TALI_STEPS.get("2026-03-31", {})
+        if s1: lines.append("<a href='" + s1["url"] + "'>→ STEP 1 — " + s1["title"] + "</a>")
+        if s2: lines.append("<a href='" + s2["url"] + "'>→ STEP 2 — " + s2["title"] + "</a>")
+        if s3: lines.append("<a href='" + s3["url"] + "'>→ STEP 3 — " + s3["title"] + "</a>")
+        if s4: lines.append("<a href='" + s4["url"] + "'>→ STEP 4 — " + s4["title"] + "</a>")
+        if s5: lines.append("<a href='" + s5["url"] + "'>→ STEP 5 — " + s5["title"] + "</a>")
+        lines.append("")
+
+        lines.append("<b>📘 MODULE 2 — Tools & Orchestration</b>")
+        lines.append("<a href='https://gemini.google.com'>→ Google Gemini — Login & Explore</a>")
+        lines.append("<a href='https://aistudio.google.com'>→ Google AI Studio — Login & Explore</a>")
+        lines.append("<a href='https://notebooklm.google.com'>→ Google NotebookLM — Login & Explore</a>")
+        lines.append("<a href='https://claude.ai/download'>→ Anthropic Claude Desktop — Create Account & Explore</a>")
+        lines.append("<a href='https://github.com'>→ GitHub — Create Account & Explore</a>")
+        lines.append("<a href='https://lmstudio.ai'>→ LM Studio — Download & Install (advanced)</a>")
+        lines.append("<a href='https://n8n.io'>→ n8n — Login & Explore</a>")
+        lines.append("")
+
+        lines.append("<b>📙 MODULE 3 — AI Agents: From Chatbots to Autonomous Workers</b>")
+        lines.append("<a href='https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/'>→ Module 3 portal</a>")
+        lines.append("<a href='https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695'>→ Understanding AI Agents: From Chatbots to Autonomous Digital Workers</a>")
+        lines.append("<a href='https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1'>→ The Year I Started Coding with AI: My Coding Agent Journey</a>")
+        lines.append("<a href='https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be'>→ From English to Code: Building Production SaaS with Claude Desktop</a>")
+        lines.append("<a href='https://medium.com/@talirezun/exploring-early-indicators-of-agi-in-coding-agents-bc671f98eddc'>→ Exploring Early Indicators of AGI in Coding Agents</a>")
+        lines.append("")
+
+        lines.append("<b>📚 Pre-Module 3 Reading — Essential for Track B:</b>")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-codingagents-share-7447218059364159489-zQSL'>→ Augment Code vs Claude Code vs Codex CLI — Dr. Tali Režun</a>")
+        lines.append("")
+
+        lines.append("<b>🧠 Second Brain — New from Dr. Tali:</b>")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ A fully local, open-source AI app that turns your research into an interconnected Obsidian wiki. Try it and drop your thoughts in the comments.</a>")
+        lines.append("")
+
+        lines.append("<b>Supplementary resources:</b>")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_i-recently-wrote-an-article-comparing-augment-activity-7448967589017366528-q3qe/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
         lines.append("")
 
         mod3 = MODULE3_ARTICLES.get(date_key, [])
@@ -186,20 +230,6 @@ def build_briefing():
             lines.append("<b>" + article["label"] + "</b>")
             lines.append("<a href='" + article["url"] + "'>→ " + article["title"] + " — Dr. Tali Režun</a>")
             lines.append("")
-
-        lines.append("<b>🧠 New from Dr. Tali — Second Brain:</b>")
-        lines.append("<a href='https://www.linkedin.com/posts/talirezun_opensource-secondbrain-obsidian-share-7447927944905347072-HyX3'>→ Second Brain — a fully local, open-source AI app that turns your PDFs, notes and research into an interconnected Obsidian wiki. No cloud, no subscription. Community project — read, try it, and drop your thoughts in the comments.</a>")
-        lines.append("")
-
-        lines.append("<b>📚 Pre-Module 3 Reading — Essential for Track B, recommended for all:</b>")
-        lines.append("<a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-codingagents-share-7447218059364159489-zQSL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Augment Code vs Claude Code vs Codex CLI — Dr. Tali Režun</a>")
-        lines.append("An in-depth comparison of the three frontier coding frameworks: how each understands your codebase, how memory works across sessions, what multi-agent orchestration looks like in practice, and what each plan actually costs under real working conditions. Read it — then drop your reflections in the LinkedIn comments.")
-        lines.append("")
-
-        lines.append("<b>Supplementary resources (recommended):</b>")
-        lines.append("<a href='https://modelcontextprotocol.io/'>→ Anthropic's Model Context Protocol Documentation — essential for understanding MCP architecture</a>")
-        lines.append("<a href='https://www.anthropic.com/research/building-effective-agents'>→ Building Effective AI Agents — Anthropic — technical deep dive</a>")
-        lines.append("")
 
     # MODULE 3 TOOLS
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
@@ -262,10 +292,12 @@ def build_model_answer():
 
 def send_test():
     MY_CHAT_ID = 8536765390
-    briefing = build_briefing()
+    full = build_briefing()
+    parts = full.split("⚡⚡SPLIT⚡⚡\n")
     answer = build_model_answer()
-    r = send_message(MY_CHAT_ID, briefing)
-    print("Briefing sent: OK" if r else "Briefing sent: FAILED")
+    for i, part in enumerate(parts):
+        r = send_message(MY_CHAT_ID, part.strip())
+        print(f"Briefing part {i+1} sent: {'OK' if r else 'FAILED'}")
     if answer:
         r = send_message(MY_CHAT_ID, answer)
         print("Answer sent: OK" if r else "Answer sent: FAILED")
@@ -273,12 +305,14 @@ def send_test():
 def send_briefing():
     if not wait_for_network():
         return
-    briefing = build_briefing()
+    full = build_briefing()
+    parts = full.split("⚡⚡SPLIT⚡⚡\n")
     answer = build_model_answer()
     for sub in SUBSCRIBERS:
         chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
-        ok = send_message(chat_id, briefing)
-        print("Briefing -> " + str(chat_id) + ": " + ("OK" if ok else "FAILED"))
+        for i, part in enumerate(parts):
+            ok = send_message(chat_id, part.strip())
+            print(f"Briefing part {i+1} -> {chat_id}: {'OK' if ok else 'FAILED'}")
     if answer:
         import time
         time.sleep(1800)
@@ -299,11 +333,13 @@ if __name__ == "__main__":
         answer = build_model_answer()
         print(answer if answer else "(No model answer for today)")
     elif "--briefing-only" in sys.argv:
-        briefing = build_briefing()
+        full = build_briefing()
+        parts = full.split("⚡⚡SPLIT⚡⚡\n")
         for sub in SUBSCRIBERS:
             chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
-            ok = send_message(chat_id, briefing)
-            print("Briefing -> " + str(chat_id) + ": " + ("OK" if ok else "FAILED"))
+            for i, part in enumerate(parts):
+                ok = send_message(chat_id, part.strip())
+                print(f"Briefing part {i+1} -> {chat_id}: {'OK' if ok else 'FAILED'}")
     elif "--answer-only" in sys.argv:
         answer = build_model_answer()
         if answer:

@@ -138,6 +138,36 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-13": {
+        "step": "Module 3 — Week 2",
+        "title": "Chasing Jarvis — Full Programme Synthesis",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Week 2 of Module 3 begins. Homework due Wednesday. Use today to connect the dots.",
+        "question": (
+            "You are now three modules into Chasing Jarvis. "
+            "Module 1 gave you a methodology. Module 2 gave you tools. Module 3 is giving you agents. "
+            "If you had to describe the single thread that connects all three — "
+            "the underlying principle that makes each module build on the last — "
+            "what would it be? "
+            "And what does that principle mean for how you approach your MVP homework due 15 April?"
+        ),
+        "model_answer": (
+            "The thread is elimination of friction between intent and output. "
+            "Module 1 eliminated the friction of not knowing how to start — "
+            "the three-phase methodology gave you a process. "
+            "Module 2 eliminated the friction of not having the right tools — "
+            "you now have a personal AI stack. "
+            "Module 3 is eliminating the friction of having to be present for every step — "
+            "agents run workflows without you. "
+            "Each module removes one more layer between what you want to build and what actually gets built. "
+            "For your MVP homework, this means: "
+            "start with the clearest possible description of what you are building and who it is for (Module 1), "
+            "choose the tool that fits your current stage — NotebookLM, Claude, or video (Module 2), "
+            "and think about which parts of your research process could eventually run without you (Module 3). "
+            "The homework is not just a deliverable. "
+            "It is a rehearsal for the full Vanguard builder loop."
+        ),
+    },
     "2026-04-12": {
         "step": "Weekend — Module 1-3 Synthesis",
         "title": "Weekend Briefing — Sunday Reflection",
@@ -608,9 +638,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/?trackingId=DEtk7TehrOGcRl4Unt1wDw%3D%3D",
-    "title": "Intro to the NEO Era",
-    "description": "Kapusta on what it means to lead at the threshold of a new era — and why the rules of the game have fundamentally changed.",
+    "url": "https://www.linkedin.com/pulse/sun-also-rages-drazen-kapusta-ytlff/",
+    "title": "The Sun Also Rages",
+    "description": "In 1859, a solar storm fried the Victorian Internet overnight. A Carrington Event today would be the most expensive natural disaster in human history. Kapusta on why resilience is not optional for NEO Era leaders.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -620,7 +650,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude, OpenClaw and the new reality: AI agents are here — and so is the chaos",
+    "headline": "AI agent credentials live in the same box as untrusted code. Two new architectures show where the blast radius actually stops.",
     "source": "VentureBeat AI",
 }
 
