@@ -178,32 +178,6 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING — full reading list permanently
-        lines.append("<b>Your complete Chasing Jarvis reading list</b>")
-        lines.append("")
-
-        lines.append("<b>📗 MODULE 1 — The Non-Developer's Playbook for Building with AI</b>")
-        s1 = TALI_STEPS.get("2026-03-27", {})
-        s2 = TALI_STEPS.get("2026-03-28", {})
-        s3 = TALI_STEPS.get("2026-03-29", {})
-        s4 = TALI_STEPS.get("2026-03-30", {})
-        s5 = TALI_STEPS.get("2026-03-31", {})
-        if s1: lines.append("<a href='" + s1["url"] + "'>→ STEP 1 — " + s1["title"] + "</a>")
-        if s2: lines.append("<a href='" + s2["url"] + "'>→ STEP 2 — " + s2["title"] + "</a>")
-        if s3: lines.append("<a href='" + s3["url"] + "'>→ STEP 3 — " + s3["title"] + "</a>")
-        if s4: lines.append("<a href='" + s4["url"] + "'>→ STEP 4 — " + s4["title"] + "</a>")
-        if s5: lines.append("<a href='" + s5["url"] + "'>→ STEP 5 — " + s5["title"] + "</a>")
-        lines.append("")
-
-        lines.append("<b>📘 MODULE 2 — Tools & Orchestration</b>")
-        lines.append("<a href='https://gemini.google.com'>→ Google Gemini — Login & Explore</a>")
-        lines.append("<a href='https://aistudio.google.com'>→ Google AI Studio — Login & Explore</a>")
-        lines.append("<a href='https://notebooklm.google.com'>→ Google NotebookLM — Login & Explore</a>")
-        lines.append("<a href='https://claude.ai/download'>→ Anthropic Claude Desktop — Create Account & Explore</a>")
-        lines.append("<a href='https://github.com'>→ GitHub — Create Account & Explore</a>")
-        lines.append("<a href='https://lmstudio.ai'>→ LM Studio — Download & Install (advanced)</a>")
-        lines.append("<a href='https://n8n.io'>→ n8n — Login & Explore</a>")
-        lines.append("")
-
         lines.append("<b>📙 MODULE 3 — AI Agents: From Chatbots to Autonomous Workers</b>")
         lines.append("<a href='https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/'>→ Module 3 portal</a>")
         lines.append("<a href='https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695'>→ Understanding AI Agents: From Chatbots to Autonomous Digital Workers</a>")
@@ -222,7 +196,7 @@ def build_briefing():
 
         lines.append("<b>Supplementary resources:</b>")
         lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
-        lines.append("<a href='https://www.linkedin.com/posts/talirezun_i-recently-wrote-an-article-comparing-augment-activity-7448967589017366528-q3qe/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7448967589017366528/?originTrackingId=B8EgV0YfthSbRIKYDegTgQ%3D%3D'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
         lines.append("")
 
         mod3 = MODULE3_ARTICLES.get(date_key, [])
@@ -293,10 +267,10 @@ def build_model_answer():
 def send_test():
     MY_CHAT_ID = 8536765390
     full = build_briefing()
-    parts = full.split("⚡⚡SPLIT⚡⚡\n")
+    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
     answer = build_model_answer()
     for i, part in enumerate(parts):
-        r = send_message(MY_CHAT_ID, part.strip())
+        r = send_message(MY_CHAT_ID, part)
         print(f"Briefing part {i+1} sent: {'OK' if r else 'FAILED'}")
     if answer:
         r = send_message(MY_CHAT_ID, answer)
@@ -306,12 +280,12 @@ def send_briefing():
     if not wait_for_network():
         return
     full = build_briefing()
-    parts = full.split("⚡⚡SPLIT⚡⚡\n")
+    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
     answer = build_model_answer()
     for sub in SUBSCRIBERS:
         chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
         for i, part in enumerate(parts):
-            ok = send_message(chat_id, part.strip())
+            ok = send_message(chat_id, part)
             print(f"Briefing part {i+1} -> {chat_id}: {'OK' if ok else 'FAILED'}")
     if answer:
         import time
@@ -334,11 +308,11 @@ if __name__ == "__main__":
         print(answer if answer else "(No model answer for today)")
     elif "--briefing-only" in sys.argv:
         full = build_briefing()
-        parts = full.split("⚡⚡SPLIT⚡⚡\n")
+        parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
         for sub in SUBSCRIBERS:
             chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
             for i, part in enumerate(parts):
-                ok = send_message(chat_id, part.strip())
+                ok = send_message(chat_id, part)
                 print(f"Briefing part {i+1} -> {chat_id}: {'OK' if ok else 'FAILED'}")
     elif "--answer-only" in sys.argv:
         answer = build_model_answer()

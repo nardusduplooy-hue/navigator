@@ -138,6 +138,23 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-14": {
+        "step": "Module 3 — Homework eve",
+        "title": "Module 3 — One day before homework deadline",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Homework due tomorrow. Today's question is about your MVP concept.",
+        "question": (
+            "Your Module 2 homework is due tomorrow. "
+            "You are building or researching an MVP concept. "
+            "Describe your concept in two sentences — what it does and who it is for. "
+            "Then answer: which of the three homework options did you choose, "
+            "and what was the single most surprising insight your research produced?"
+        ),
+        "model_answer": (
+            "A strong answer is specific and honest — not polished or generic. "
+            "Example: 'I am building a daily AI briefing tool for MBA students that surfaces relevant industry news and learning prompts automatically. It is for busy professionals who want to stay current without spending an hour searching. I chose Option 2 — the interactive dashboard — because it forced me to structure my research visually, which revealed that my original concept was too broad: I was trying to serve five different user types with one product. The most surprising insight was that my real user is not a student — it is someone already in a senior role who wants to learn faster, not someone trying to break in.' The homework is not a deliverable. It is a mirror. What it shows you about your concept is more valuable than the output itself."
+        ),
+    },
     "2026-04-13": {
         "step": "Module 3 — Week 2",
         "title": "Chasing Jarvis — Full Programme Synthesis",
@@ -638,9 +655,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/sun-also-rages-drazen-kapusta-ytlff/",
-    "title": "The Sun Also Rages",
-    "description": "In 1859, a solar storm fried the Victorian Internet overnight. A Carrington Event today would be the most expensive natural disaster in human history. Kapusta on why resilience is not optional for NEO Era leaders.",
+    "url": "https://www.linkedin.com/pulse/joker-ace-hearts-merchant-republic-5-month-siege-drazen-kapusta-uttif/",
+    "title": "The Joker, The Ace of Hearts, the Merchant Republic, and the 5-Month Siege",
+    "description": "Kapusta on power, strategy, and survival — a historical allegory for leaders navigating uncertainty in the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -650,7 +667,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "AI agent credentials live in the same box as untrusted code. Two new architectures show where the blast radius actually stops.",
+    "headline": "Five signs data drift is already undermining your security models",
     "source": "VentureBeat AI",
 }
 
@@ -709,6 +726,27 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-16": [
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
+    "2026-04-15": [
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+    ],
+    "2026-04-14": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
     "2026-04-10": [
         {
             "title": "The Six-Month Hormuz Scenario",
