@@ -138,6 +138,30 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-15": {
+        "step": "Module 3 — Homework due",
+        "title": "Module 2 Homework Due — Final Check",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Homework due today. Use this question as your final submission check.",
+        "question": (
+            "Today your Module 2 homework is due. "
+            "Before you submit, do a final check: does your MVP concept clearly answer three things — "
+            "what it does, who it is for, and why AI is the right tool for this specific problem? "
+            "If you can answer all three in two sentences, you are ready. "
+            "If you cannot, that is your work for the next hour. "
+            "What is your two-sentence pitch?"
+        ),
+        "model_answer": (
+            "A strong submission is specific, not aspirational. "
+            "The two-sentence test is not about polish — it is about clarity. "
+            "If 'what it does' requires three qualifications to explain, the concept is not tight enough yet. "
+            "If 'who it is for' is 'everyone' or 'businesses,' it is not defined. "
+            "The AI question is the sharpest filter: if you replaced the AI component with a spreadsheet "
+            "and the product still works, the AI is decoration, not architecture. "
+            "The best submissions today will have a user who is real, a problem that is felt, "
+            "and an AI component that is load-bearing — something the product cannot function without."
+        ),
+    },
     "2026-04-14": {
         "step": "Module 3 — Homework eve",
         "title": "Module 3 — One day before homework deadline",
@@ -667,7 +691,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Five signs data drift is already undermining your security models",
+    "headline": "Agentic coding at enterprise scale demands spec-driven development",
     "source": "VentureBeat AI",
 }
 

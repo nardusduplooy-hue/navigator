@@ -111,7 +111,7 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• Vanguard Session 10 — Chasing Jarvis Module 3 — <b>Sat 18 April 2026 at 5:00 PM</b> (Belgrade, Bratislava, Ljubljana)")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/11/?wm=1&mi=87497940375'>Next Zoom session confirmed — Saturday 18 April</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
