@@ -825,33 +825,8 @@ const PROGRAMME_DATA = {
     notesUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
     readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
     preReadingsUrl: "https://cotrugli.online/groups/vanguard/",
-    weekendReading: {
-      module1: [
-        { title: "STEP 1 — The Three-Phase Methodology", url: "https://medium.com/@talirezun" },
-        { title: "STEP 2 — From Prototype to Production", url: "https://medium.com/@talirezun" },
-        { title: "STEP 3 — Why I Ditched RAG Pipelines for 1M Token Context Windows", url: "https://medium.com/@talirezun" },
-        { title: "STEP 4 — The Orchestration Leap — From Writing Code to Directing Intelligence", url: "https://medium.com/@talirezun" },
-        { title: "STEP 5 — How I Built an AI Marketing Team That Actually Works", url: "https://medium.com/@talirezun" }
-      ],
-      module2: [
-        { title: "Google Gemini — Login & Explore", url: "https://gemini.google.com" },
-        { title: "Google AI Studio — Login & Explore", url: "https://aistudio.google.com" },
-        { title: "Google NotebookLM — Login & Explore", url: "https://notebooklm.google.com" },
-        { title: "Anthropic Claude Desktop — Create Account & Explore", url: "https://claude.ai" },
-        { title: "GitHub — Create Account & Explore", url: "https://github.com" },
-        { title: "LM Studio — Download & Install (advanced)", url: "https://lmstudio.ai" },
-        { title: "n8n — Login & Explore", url: "https://n8n.io" }
-      ],
-      module3: [
-        { title: "Module 3 portal", url: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/" },
-        { title: "Understanding AI Agents: From Chatbots to Autonomous Digital Workers", url: "https://medium.com/@talirezun" },
-        { title: "The Year I Started Coding with AI: My Coding Agent Journey", url: "https://medium.com/@talirezun" },
-        { title: "From English to Code: Building Production SaaS with Claude Desktop", url: "https://medium.com/@talirezun" },
-        { title: "Exploring Early Indicators of AGI in Coding Agents", url: "https://medium.com/@talirezun" }
-      ],
-      preModule3: { title: "Augment Code vs Claude Code vs Codex CLI", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
-      secondBrain: { title: "Second Brain — A fully local, open-source AI app that turns your research into an interconnected Obsidian wiki. Try it and drop your thoughts in the comments.", url: "https://github.com/talirezun/second-brain" }
-    },
+    coreReading: { title: "From English to Code: Building Production SaaS with Claude Desktop", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
+    preReading: { title: "Three Philosophies, One Goal: Augment Code vs Claude Code vs Codex CLI", author: "Dr. Tali Režun", url: "https://www.linkedin.com/feed/update/urn:li:activity:7448631044594995200/", note: "A practitioner's comparison of three frontier coding frameworks. Which one, for what kind of work, at what stage, at what cost?" },
     readings: [
       { title: "Anthropic's Model Context Protocol Documentation", url: "https://modelcontextprotocol.io" },
       { title: "Building Effective AI Agents — Anthropic", url: "https://www.anthropic.com/research/building-effective-agents" }
@@ -885,24 +860,20 @@ const PROGRAMME_DATA = {
   },
 
   kapustaReading: {
-    title: "Intro to the NEO Era",
-    subtitle: "Kapusta on what it means to lead at the threshold of a new era — and why the rules of the game have fundamentally changed.",
-    url: "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/"
+    title: "The Joker, The Ace of Hearts, the Merchant Republic, and the 5-Month Siege",
+    subtitle: "Kapusta on power, strategy, and survival — a historical allegory for leaders navigating uncertainty in the NEO Era.",
+    url: "https://www.linkedin.com/pulse/joker-ace-hearts-merchant-republic-5-month-siege-drazen-kapusta-uttif/"
   },
 
-  futureLab: [
-    { title: "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud", source: "Cotrugli Business School", url: "https://cotrugli.online" },
-    { title: "The Six-Month Hormuz Scenario", source: "Dražen Kapusta", url: "https://cotrugli.online" },
-    { title: "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era", source: "Kapusta & Stručić", url: "https://cotrugli.online" }
-  ],
+  futureLab: { title: "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud", source: "Cotrugli Business School", url: "https://cotrugli.online" },
 
   neoWorldArticle: {
-    title: "AI agent credentials live in the same box as untrusted code. Two new architectures show where the blast radius actually stops.",
+    title: "Agentic coding at enterprise scale demands spec-driven development",
     source: "VentureBeat AI",
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Saturday, 11 April 2026",
+  briefingDate: "Tuesday, 14 April 2026",
 
   status: [
     "All JTBDs current",
@@ -911,11 +882,11 @@ const PROGRAMME_DATA = {
     "Future of Work Essay — Submitted, awaiting results and feedback"
   ],
 
-  knowledgeQuestion: "Look back across all three modules of Chasing Jarvis so far. Which single article, tool, or concept shifted your thinking the most — and why? Be specific: name it, describe what you thought before, and explain what changed after you engaged with it.",
+  knowledgeQuestion: "Your Module 2 homework is due tomorrow. You are building or researching an MVP concept. Describe your concept in two sentences — what it does and who it is for. Then answer: which of the three homework options did you choose, and what was the single most surprising insight your research produced?",
 
-  modelAnswer: "A strong answer is honest and personal — not the most impressive-sounding choice. Example: Step 3 of Module 1 — ditching RAG pipelines for 1M token context windows. Before: assumed that AI systems needed complex retrieval architecture to work with large documents. After: understood that simplicity is a strategic choice — loading everything at once eliminates an entire category of failure. The shift was not just technical. It was a new way of thinking about complexity: instead of asking how to manage it, ask whether it needs to exist at all. That question now applies to everything — workflows, tools, processes, even the MVP itself. The best Vanguard builders are not the ones who handle the most complexity. They are the ones who eliminate it before it becomes a problem.",
+  modelAnswer: "A strong answer is specific and honest — not polished or generic. Example: I am building a daily AI briefing tool for MBA students that surfaces relevant industry news and learning prompts automatically. It is for busy professionals who want to stay current without spending an hour searching. I chose Option 2 — the interactive dashboard — because it forced me to structure my research visually, which revealed that my original concept was too broad: I was trying to serve five different user types with one product. The most surprising insight was that my real user is not a student — it is someone already in a senior role who wants to learn faster, not someone trying to break in. The homework is not a deliverable. It is a mirror. What it shows you about your concept is more valuable than the output itself.",
 
-  todaysFocus: "Weekend Briefing — your complete Chasing Jarvis reading list. Use the weekend to catch up, revisit, and go deeper. Everything covered so far — in one place.",
+  todaysFocus: "You built something. It works in the preview window. Now what? Module 2 homework is due tomorrow — wed 15 April. Read before hands-on labs, then explore, break things, and decide what goes into YOUR personal AI stack.",
 
   aiPodcasts: [
     { title: "Chasing Jarvis: Step 1 — Context Engineering", date: "2026-03", url: "https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3" },
@@ -930,6 +901,7 @@ const PROGRAMME_DATA = {
       name: "Dražen Kapusta",
       profileUrl: "https://www.linkedin.com/in/cotrugli/",
       posts: [
+        { title: "The Joker, The Ace of Hearts, the Merchant Republic, and the 5-Month Siege", url: "https://www.linkedin.com/pulse/joker-ace-hearts-merchant-republic-5-month-siege-drazen-kapusta-uttif/" },
         { title: "Intro to the NEO Era", url: "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/" },
         { title: "From Prediction to Reality — Genesis Mission Strategic Pivot", url: "https://www.linkedin.com/pulse/from-prediction-reality-genesis-mission-strategic-pivot-kapusta-ubf6f/" },
         { title: "Ten Trillion in the Fog — Could the AI Revolution Stall?", url: "https://www.linkedin.com/posts/cotrugli_ten-trillion-in-the-fog-could-the-ai-revolution-activity-7395836049488498688--1hB" },
@@ -956,6 +928,7 @@ const PROGRAMME_DATA = {
       name: "Dr. Tali Režun",
       profileUrl: "https://www.linkedin.com/in/talirezun/",
       posts: [
+        { title: "Three Philosophies, One Goal: Augment Code vs Claude Code vs Codex CLI", url: "https://www.linkedin.com/feed/update/urn:li:activity:7448631044594995200/" },
         { title: "My First AI Product Is Live", url: "https://www.linkedin.com/posts/talirezun_my-first-ai-product-is-live-after-two-activity-7414290097354817537-GyfJ" },
         { title: "AI & Customer Experience", url: "https://www.linkedin.com/posts/talirezun_ai-artificialintelligence-customerexperience-activity-7415369024944926720-MVbC" },
         { title: "AI Content Creator & Automation", url: "https://www.linkedin.com/posts/talirezun_ai-contentcreator-automation-activity-7416407580442353664-N7I7" },
