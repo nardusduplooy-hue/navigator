@@ -96,18 +96,6 @@ def build_briefing():
     # DEADLINES
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
-    lines.append("🚀 <b>MODULE 2 HOMEWORK — due Wednesday 15 April</b>")
-    lines.append("Deep research your MVP concept and share with the group. Choose one:")
-    lines.append("")
-    lines.append("🟢 <b>Option 1</b> — Build a NotebookLM knowledge base and share the presentation link.")
-    lines.append("")
-    lines.append("🟠 <b>Option 2</b> — Use Claude or any LLM to build an interactive research dashboard and share the link.")
-    lines.append("")
-    lines.append("🟣 <b>Option 3</b> — Create a short product video using a text-to-video tool and share the link.")
-    lines.append("")
-    lines.append("When posting: include your group members' full names and a max 2-sentence elevator pitch. Let the work do the talking.")
-    lines.append("<a href='https://cotrugli.online/groups/vanguard/'>More information on the homework</a>")
-    lines.append("")
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
@@ -118,12 +106,9 @@ def build_briefing():
     # STATUS
     lines.append("✅ <b>STATUS</b>")
     lines.append("• All JTBDs current")
-    lines.append("• <a href='https://www.linkedin.com/feed/update/urn:li:activity:7442446986844217344/?originTrackingId=pO%2Fw8vwhIdjLEwbFFiYXBQ%3D%3D'>JTBD: Read the 5 series articles and engage on LinkedIn</a>")
     lines.append("• Awaiting Future of Work multiple choice exam results")
     lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
-
-    lines.append("⚡⚡SPLIT⚡⚡")
 
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
     lines.append("🎯 <b>CHASING JARVIS — TODAY'S FOCUS</b>")
@@ -177,33 +162,18 @@ def build_briefing():
         lines.append("")
 
     else:
-        # WEEKDAY BRIEFING — full reading list permanently
-        lines.append("<b>📙 MODULE 3 — AI Agents: From Chatbots to Autonomous Workers</b>")
-        lines.append("<a href='https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/'>→ Module 3 portal</a>")
-        lines.append("<a href='https://medium.com/@talirezun/understanding-ai-agents-from-chatbots-to-autonomous-digital-workers-407217d84695'>→ Understanding AI Agents: From Chatbots to Autonomous Digital Workers</a>")
-        lines.append("<a href='https://medium.com/@talirezun/the-year-i-started-coding-with-ai-my-coding-agent-journey-431f6f25afe1'>→ The Year I Started Coding with AI: My Coding Agent Journey</a>")
-        lines.append("<a href='https://medium.com/@talirezun/from-english-to-code-building-production-saas-with-claude-desktop-3ee9c787f5be'>→ From English to Code: Building Production SaaS with Claude Desktop</a>")
-        lines.append("<a href='https://medium.com/@talirezun/exploring-early-indicators-of-agi-in-coding-agents-bc671f98eddc'>→ Exploring Early Indicators of AGI in Coding Agents</a>")
+        # WEEKDAY BRIEFING
+        lines.append("<b>🎯 To my Chasing Jarvis students and all others 👇</b>")
+        lines.append("You've been building. Now show the world.")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7450038803278516224/?originTrackingId=7yxHJmXb%2FgqeXvGeiAxwQw%3D%3D'>→ Drop in the comments:</a>")
         lines.append("")
-
-        lines.append("<b>📚 Pre-Module 3 Reading — Essential for Track B:</b>")
-        lines.append("<a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-codingagents-share-7447218059364159489-zQSL'>→ Augment Code vs Claude Code vs Codex CLI — Dr. Tali Režun</a>")
+        lines.append("✅ A 2–3 sentence elevator pitch of your project")
+        lines.append("✅ A link to your interactive dashboard, deck, or pitch")
         lines.append("")
-
-        lines.append("<b>🧠 Second Brain — New from Dr. Tali:</b>")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ A fully local, open-source AI app that turns your research into an interconnected Obsidian wiki. Try it and drop your thoughts in the comments.</a>")
-        lines.append("")
-
-        lines.append("<b>Supplementary resources:</b>")
+        lines.append("<b>Dr Tali Režun links:</b>")
         lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
         lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7448967589017366528/?originTrackingId=B8EgV0YfthSbRIKYDegTgQ%3D%3D'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
         lines.append("")
-
-        mod3 = MODULE3_ARTICLES.get(date_key, [])
-        for article in mod3:
-            lines.append("<b>" + article["label"] + "</b>")
-            lines.append("<a href='" + article["url"] + "'>→ " + article["title"] + " — Dr. Tali Režun</a>")
-            lines.append("")
 
     # MODULE 3 TOOLS
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")

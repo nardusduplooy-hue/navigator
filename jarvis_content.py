@@ -138,6 +138,30 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-16": {
+        "step": "Module 3 — Session 10 prep",
+        "title": "Session 10 Prep — Your Agent Use Case",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Session 10 is in two days. Come prepared with a concrete agent use case.",
+        "question": (
+            "Session 10 is in two days. Module 3 has taken you from understanding what an agent is "
+            "to seeing one built in plain English. "
+            "Before you show up on Saturday, do one thing: identify a single workflow in your business or role "
+            "that you would hand to an agent today — not eventually, today. "
+            "What is the task, what triggers it, and what does the output look like? "
+            "Come to Session 10 with that answer ready."
+        ),
+        "model_answer": (
+            "The best preparation for Session 10 is not more reading — it is a concrete use case you own. "
+            "A strong answer names a specific, bounded task: not 'automate my marketing' but "
+            "'every Monday morning, pull the three most-shared posts from my industry on LinkedIn, "
+            "summarise each in one sentence, and send the digest to my Telegram by 07:00.' "
+            "That is a trigger, a sequence, and an output — the three components of every agent workflow. "
+            "The reason to have this ready before Saturday is simple: Module 3 sessions are hands-on. "
+            "The students who get the most out of them arrive with a real problem, not a theoretical one. "
+            "Your use case does not need to be impressive. It needs to be yours."
+        ),
+    },
     "2026-04-15": {
         "step": "Module 3 — Homework due",
         "title": "Module 2 Homework Due — Final Check",
@@ -680,8 +704,8 @@ TOOL_SPOTLIGHT = {
 
 KAPUSTA_TODAY = {
     "url": "https://www.linkedin.com/pulse/joker-ace-hearts-merchant-republic-5-month-siege-drazen-kapusta-uttif/",
-    "title": "The Joker, The Ace of Hearts, the Merchant Republic, and the 5-Month Siege",
-    "description": "Kapusta on power, strategy, and survival — a historical allegory for leaders navigating uncertainty in the NEO Era.",
+    "title": "A Merchant's Wisdom, Half a Millennium Late",
+    "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -691,7 +715,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Agentic coding at enterprise scale demands spec-driven development",
+    "headline": "Anthropic's Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk",
     "source": "VentureBeat AI",
 }
 
