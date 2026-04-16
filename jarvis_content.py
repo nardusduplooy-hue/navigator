@@ -138,6 +138,32 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-17": {
+        "step": "Module 3 — Session 10 eve",
+        "title": "Your Vanguard Story — the night before Session 10",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Session 10 is tomorrow. One question to sit with today.",
+        "question": (
+            "Session 10 is tomorrow. You have submitted your homework, you have your agent use case ready, "
+            "and you have been building for three modules. "
+            "Tomorrow is not a lecture — it is a reckoning. "
+            "One question to sit with today: what is the one thing you built, learned, or decided "
+            "in this programme so far that you would not have done without it? "
+            "Be specific. That answer is your Vanguard story — "
+            "and it is worth knowing before you walk into the room tomorrow."
+        ),
+        "model_answer": (
+            "The strongest answers tomorrow will not be about tools or techniques — "
+            "they will be about moments of clarity. "
+            "The student who says 'I realised my original MVP was solving my problem, not my user's problem' "
+            "has learned something no textbook teaches. "
+            "The one who says 'I stopped waiting to understand the code and started directing the output' "
+            "has made the orchestration leap for real. "
+            "Your Vanguard story is not what you built. It is what changed in how you think. "
+            "That is what Module 3 — and this entire programme — has been building toward. "
+            "Come tomorrow knowing yours."
+        ),
+    },
     "2026-04-16": {
         "step": "Module 3 — Session 10 prep",
         "title": "Session 10 Prep — Your Agent Use Case",
@@ -703,9 +729,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/joker-ace-hearts-merchant-republic-5-month-siege-drazen-kapusta-uttif/",
-    "title": "A Merchant's Wisdom, Half a Millennium Late",
-    "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-meditation-retardmaxxing-drazen-kapusta-cleje/",
+    "title": "NEO Cotruglian Meditation on Retardmaxxing",
+    "description": "Kapusta on the NEO Cotruglian Meditation on Retardmaxxing.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -715,7 +741,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk",
+    "headline": "OpenAI expands operator controls as agentic AI moves deeper into enterprise workflows",
     "source": "VentureBeat AI",
 }
 
@@ -774,6 +800,13 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-17": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
     "2026-04-16": [
         {
             "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",

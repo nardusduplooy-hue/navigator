@@ -215,7 +215,7 @@ def build_briefing():
         lines.append("")
 
     # ADDME
-    lines.append("📲 Vanguard — want this briefing every morning at 05:30 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
+    lines.append("📲 Vanguard — want this briefing every morning at 08:00 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
     lines.append("")
     lines.append("⚡ Navigator out.")
 
