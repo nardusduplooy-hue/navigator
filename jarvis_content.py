@@ -138,6 +138,30 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-18": {
+        "step": "Session 10 — Chasing Jarvis Module 3",
+        "title": "Session 10 — What capability are you walking in for?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Session 10 is today. Come with a specific capability you want to leave with.",
+        "question": (
+            "Session 10 is today. Three modules in, you are no longer someone who wonders whether AI is relevant "
+            "to their work — you are someone who has built with it, directed it, "
+            "and started to see where it can run without you. "
+            "Before you join today: what is the one capability you are walking into this session wanting to leave with? "
+            "Name it specifically. Not a concept — a capability. "
+            "Something you can use on Monday."
+        ),
+        "model_answer": (
+            "The best sessions are the ones where you arrive knowing what you need, not just what you want to learn. "
+            "A capability is specific and actionable: not 'understand agents better' but "
+            "'know how to set up a trigger-based workflow in n8n that runs without me.' "
+            "Not 'get inspired' but 'leave with a clear next step for my MVP.' "
+            "Session 10 is the bridge between Module 3 and what you build next. "
+            "The students who get the most out of it today are the ones who treat it like a tool, not a lecture — "
+            "they come with a specific gap and they leave with it closed. "
+            "What is yours?"
+        ),
+    },
     "2026-04-17": {
         "step": "Module 3 — Session 10 eve",
         "title": "Your Vanguard Story — the night before Session 10",
@@ -741,7 +765,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI expands operator controls as agentic AI moves deeper into enterprise workflows",
+    "headline": "Salesforce launches Headless 360 to turn its entire platform into infrastructure for AI agents",
     "source": "VentureBeat AI",
 }
 

@@ -172,7 +172,8 @@ def build_briefing():
         lines.append("")
         lines.append("<b>Dr Tali Režun links:</b>")
         lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7448967589017366528/?originTrackingId=B8EgV0YfthSbRIKYDegTgQ%3D%3D'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7450842258486063104/'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
+        lines.append("<a href='https://github.com/talirezun/the-curator'>→ The Curator — star it, fork it, make it your own</a>")
         lines.append("")
 
     # MODULE 3 TOOLS
