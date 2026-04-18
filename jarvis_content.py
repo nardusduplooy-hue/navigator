@@ -138,6 +138,30 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-19": {
+        "step": "Post Session 10 — Sunday reflection",
+        "title": "Post-Session 10 — What are you doing with it this week?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Session 10 is done. One question before the week begins.",
+        "question": (
+            "Session 10 is done. You have now completed three full modules of Chasing Jarvis. "
+            "Before the week ahead begins, one question: "
+            "what is the single most useful thing you are walking away with from yesterday's session — "
+            "not from the whole programme, just from yesterday? "
+            "And what is the first thing you will do with it this week?"
+        ),
+        "model_answer": (
+            "The most useful Session 10 takeaways are always specific and immediate — "
+            "not inspirational, but actionable. "
+            "'I now know how to set up a trigger in n8n' is more valuable than 'I feel more confident about AI.' "
+            "The second part of the question is the harder one: what will you actually do this week? "
+            "Not eventually. This week. "
+            "The gap between insight and action is where most learning dies. "
+            "The students who compound fastest through this programme are not the ones who absorb the most in sessions — "
+            "they are the ones who do something small with it before the next one. "
+            "What is your something small?"
+        ),
+    },
     "2026-04-18": {
         "step": "Session 10 — Chasing Jarvis Module 3",
         "title": "Session 10 — What capability are you walking in for?",
@@ -753,9 +777,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-meditation-retardmaxxing-drazen-kapusta-cleje/",
-    "title": "NEO Cotruglian Meditation on Retardmaxxing",
-    "description": "Kapusta on the NEO Cotruglian Meditation on Retardmaxxing.",
+    "url": "https://worldfinancialreview.com/not-for-now-for-the-future-why-the-next-decade-of-ai-commerce-needs-a-trust-layer/",
+    "title": "Not for Now — For the Future: Why the Next Decade of AI Commerce Needs a Trust Layer",
+    "description": "Kapusta & Terence Tse on why AI-driven economies need a semantic trust layer — the missing infrastructure that determines whether our digital future actually works.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -765,7 +789,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Salesforce launches Headless 360 to turn its entire platform into infrastructure for AI agents",
+    "headline": "Train-to-Test scaling explained: How to optimize your end-to-end AI compute budget for inference",
     "source": "VentureBeat AI",
 }
 
@@ -824,6 +848,23 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-19": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
     "2026-04-17": [
         {
             "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",

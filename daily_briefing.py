@@ -99,7 +99,7 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/11/?wm=1&mi=87497940375'>Next Zoom session confirmed — Saturday 18 April</a>")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/11/?wm=1&mi=87497940375'>Next Zoom session — Saturday 2 May</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
@@ -163,12 +163,8 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("<b>🎯 To my Chasing Jarvis students and all others 👇</b>")
-        lines.append("You've been building. Now show the world.")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7450038803278516224/?originTrackingId=7yxHJmXb%2FgqeXvGeiAxwQw%3D%3D'>→ Drop in the comments:</a>")
-        lines.append("")
-        lines.append("✅ A 2–3 sentence elevator pitch of your project")
-        lines.append("✅ A link to your interactive dashboard, deck, or pitch")
+        lines.append("<b>🎯 Build your MVP</b>")
+        lines.append("Vibe code and play with the coding agents.")
         lines.append("")
         lines.append("<b>Dr Tali Režun links:</b>")
         lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
@@ -181,8 +177,8 @@ def build_briefing():
     lines.append("")
 
     # ROADMAP.SH
-    lines.append("🗺️ <b>Turning complexity into a navigable path:</b>")
-    lines.append("Visit <a href='https://roadmap.sh/dashboard'>roadmap.sh</a> and create an account.")
+    lines.append("🗺️ <b>Supplementary learning:</b>")
+    lines.append("<a href='https://anthropic.skilljar.com/introduction-to-agent-skills?next=%2Fintroduction-to-agent-skills%2F434525'>→ Introduction to Agent Skills — Anthropic</a> Free course. Do it this week.")
     lines.append("")
 
     # KAPUSTA
