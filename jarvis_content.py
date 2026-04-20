@@ -138,6 +138,31 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-20": {
+        "step": "Module 4 — Context Engineering",
+        "title": "Module 4 — Context Engineering: the new core skill",
+        "url": "https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c",
+        "focus": "Module 4 opens with context engineering. This is the skill that separates power users from builders.",
+        "question": (
+            "Module 4 is about context engineering — the emerging skill that sits between prompting and architecture. "
+            "Before you dive into this week's reading, one question: "
+            "think about the last time an AI gave you a disappointing output. "
+            "With what you now know, was the problem the model — or was it the context you gave it? "
+            "Be specific about what was missing and how you would engineer it differently today."
+        ),
+        "model_answer": (
+            "Almost every disappointing AI output is a context problem, not a model problem. "
+            "The model can only work with what it receives. "
+            "If the output was vague, the context lacked specificity. "
+            "If it missed the point, the context didn't define the goal clearly enough. "
+            "If it felt generic, the context contained no examples, constraints, or role definition. "
+            "Context engineering is the discipline of closing that gap — "
+            "not by prompting better in the moment, but by designing the information environment the model operates in. "
+            "This week's reading will give you the vocabulary and the framework. "
+            "The question above is your starting point: find your own example of a context failure "
+            "and you will understand the solution before you've read a word."
+        ),
+    },
     "2026-04-19": {
         "step": "Post Session 10 — Sunday reflection",
         "title": "Post-Session 10 — What are you doing with it this week?",
@@ -777,9 +802,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://worldfinancialreview.com/not-for-now-for-the-future-why-the-next-decade-of-ai-commerce-needs-a-trust-layer/",
-    "title": "Not for Now — For the Future: Why the Next Decade of AI Commerce Needs a Trust Layer",
-    "description": "Kapusta & Terence Tse on why AI-driven economies need a semantic trust layer — the missing infrastructure that determines whether our digital future actually works.",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-meditation-retardmaxxing-drazen-kapusta-cleje/",
+    "title": "NEO Cotruglian Meditation on Retardmaxxing",
+    "description": "Kapusta on the NEO Cotruglian Meditation — a philosophical provocation for leaders navigating the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -789,7 +814,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Train-to-Test scaling explained: How to optimize your end-to-end AI compute budget for inference",
+    "headline": "Context engineering is replacing prompt engineering as the core AI skill for 2025",
     "source": "VentureBeat AI",
 }
 
@@ -848,6 +873,27 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-22": [
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
+    "2026-04-21": [
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+    ],
+    "2026-04-20": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
     "2026-04-19": [
         {
             "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",

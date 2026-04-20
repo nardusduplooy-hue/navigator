@@ -166,10 +166,14 @@ def build_briefing():
         lines.append("<b>🎯 Build your MVP</b>")
         lines.append("Vibe code and play with the coding agents.")
         lines.append("")
-        lines.append("<b>Dr Tali Režun links:</b>")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7447927947971416064/?commentUrn=urn%3Ali%3Acomment%3A(activity%3A7447927947971416064%2C7448323986196897792)&dashCommentUrn=urn%3Ali%3Afsd_comment%3A(7448323986196897792%2Curn%3Ali%3Aactivity%3A7447927947971416064)'>→ Second Brain — community discussion: share your thoughts and see what others are building</a>")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7450842258486063104/'>→ Dr. Tali's coding frameworks comparison — Augment Code vs Claude Code vs Codex CLI: join the discussion</a>")
-        lines.append("<a href='https://github.com/talirezun/the-curator'>→ The Curator — star it, fork it, make it your own</a>")
+        lines.append("<b>Chasing Jarvis Module Pre-reading and podcast:</b>")
+        lines.append("<a href='https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701'>→ From Prompts to Precision: AI-Generated Research Podcast Discussion | From Lab to Life</a>")
+        lines.append("")
+        lines.append("<a href='https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c'>→ From Prompts to Precision: The Art &amp; Science of Context Engineering — Dr. Tali Režun</a>")
+        lines.append("Core reading — read thoroughly before Module 4")
+        lines.append("")
+        lines.append("<a href='https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents'>→ Effective Context Engineering for AI Agents — Anthropic</a>")
+        lines.append("Technical deep dive from Anthropic's engineering team")
         lines.append("")
 
     # MODULE 3 TOOLS
@@ -177,8 +181,12 @@ def build_briefing():
     lines.append("")
 
     # ROADMAP.SH
-    lines.append("🗺️ <b>Supplementary learning:</b>")
-    lines.append("<a href='https://anthropic.skilljar.com/introduction-to-agent-skills?next=%2Fintroduction-to-agent-skills%2F434525'>→ Introduction to Agent Skills — Anthropic</a> Free course. Do it this week.")
+    lines.append("🗺️ <b>Supplementary Resources (Recommended):</b>")
+    lines.append("<a href='https://www.markdownguide.org/'>→ Markdown Guide — Complete reference for markdown syntax</a>")
+    lines.append("<a href='https://www.philschmid.de/context-engineering'>→ The New Skill in AI is Not Prompting, It's Context Engineering — Philipp Schmid</a>")
+    lines.append("Industry perspective on context engineering")
+    lines.append("<a href='https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus'>→ Context Engineering for AI Agents: Lessons from Building Manus</a>")
+    lines.append("Practical insights from production deployment")
     lines.append("")
 
     # KAPUSTA
