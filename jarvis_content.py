@@ -138,6 +138,32 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-21": {
+        "step": "Module 3 Homework — Day 2",
+        "title": "Your one-sentence build brief",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Nine days to the homework deadline. Start with one sentence.",
+        "question": (
+            "The Module 3 homework deadline is Wednesday 29 April. You have nine days. "
+            "The task is simple: build something that works and runs in a browser. "
+            "Before you open a single tool, answer this: "
+            "what is the one thing your app or game needs to do — in one sentence? "
+            "Not what it might do eventually. "
+            "What does it do on day one, for one user, in one interaction? "
+            "That sentence is your build brief. Write it down before you start."
+        ),
+        "model_answer": (
+            "The biggest mistake in any first build is starting without a clear one-sentence brief. "
+            "'I want to build an AI tool that helps people' is not a brief — it is a wish. "
+            "'A browser game where you guess the country from three AI-generated clues' is a brief. "
+            "It names the format, the interaction, and the outcome. "
+            "Everything else — design, features, complexity — comes after that sentence exists. "
+            "The coding agents are powerful enough to build almost anything you can describe. "
+            "The constraint is never the tool. It is always the clarity of the instruction. "
+            "Write your one sentence today. That is the whole task. "
+            "The build follows naturally once you have it."
+        ),
+    },
     "2026-04-20": {
         "step": "Module 4 — Context Engineering",
         "title": "Module 4 — Context Engineering: the new core skill",
@@ -814,7 +840,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Context engineering is replacing prompt engineering as the core AI skill for 2025",
+    "headline": "Google launches new AI coding agent that writes, tests and deploys code autonomously",
     "source": "VentureBeat AI",
 }
 

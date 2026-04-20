@@ -163,8 +163,23 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("<b>🎯 Build your MVP</b>")
-        lines.append("Vibe code and play with the coding agents.")
+        lines.append("<b>🎯 Chasing Jarvis | Module 3 Homework</b>")
+        lines.append("")
+        lines.append("Time to build something real, people! 🚀")
+        lines.append("")
+        lines.append("Your task: use an AI coding tool of your choice — Google AI Studio, Cursor, Claude Code, Windsurf, Copilot — whatever feels right for you — and build a simple app or game.")
+        lines.append("")
+        lines.append("<b>Two paths:</b>")
+        lines.append("")
+        lines.append("1. Already have your MVP idea? → Build a first working version and give us a sneak peek 👀")
+        lines.append("")
+        lines.append("2. No MVP yet? → Build something fun! A game, a tool, anything that works and runs in a browser 🎮 that you can share with us.")
+        lines.append("")
+        lines.append("<b>Deadline: Wednesday, 29 April</b>")
+        lines.append("📎 Share your project link directly in the Chasing Jarvis group")
+        lines.append("👤 Tag your team leader and team members in the post")
+        lines.append("")
+        lines.append("Let's see what you've got! 💪")
         lines.append("")
         lines.append("<b>Chasing Jarvis Module Pre-reading and podcast:</b>")
         lines.append("<a href='https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701'>→ From Prompts to Precision: AI-Generated Research Podcast Discussion | From Lab to Life</a>")
@@ -183,10 +198,6 @@ def build_briefing():
     # ROADMAP.SH
     lines.append("🗺️ <b>Supplementary Resources (Recommended):</b>")
     lines.append("<a href='https://www.markdownguide.org/'>→ Markdown Guide — Complete reference for markdown syntax</a>")
-    lines.append("<a href='https://www.philschmid.de/context-engineering'>→ The New Skill in AI is Not Prompting, It's Context Engineering — Philipp Schmid</a>")
-    lines.append("Industry perspective on context engineering")
-    lines.append("<a href='https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus'>→ Context Engineering for AI Agents: Lessons from Building Manus</a>")
-    lines.append("Practical insights from production deployment")
     lines.append("")
 
     # KAPUSTA
