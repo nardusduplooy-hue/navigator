@@ -540,7 +540,7 @@ textarea::placeholder { color: var(--text-muted); }
       </div>
       <div class="link-row" id="work-notes-link"><span class="link-row-label">📝 Module Notes</span><span class="chevron">›</span></div>
       <div class="link-row" id="work-reading-link" onclick="openUrl(PROGRAMME_DATA.currentModule.readingListUrl)"><span class="link-row-label">📚 Reading List</span><span class="chevron">›</span></div>
-      <div class="link-row" id="work-prereadings-link" onclick="openUrl(PROGRAMME_DATA.currentModule.preReadingsUrl)"><span class="link-row-label">📖 Module 3 Pre-Readings</span><span class="chevron">›</span></div>
+      <div class="link-row" id="work-prereadings-link" onclick="openUrl(PROGRAMME_DATA.currentModule.preReadingsUrl)"><span class="link-row-label">📖 Module Pre-Readings</span><span class="chevron">›</span></div>
     </div>
     <div class="section-label">Active Assignments</div>
     <div id="work-assignments"></div>
@@ -818,22 +818,31 @@ const PROGRAMME_DATA = {
   role: "Vanguard Chief",
 
   currentModule: {
-    name: "Chasing Jarvis — Module 3",
-    subtitle: "AI Agents — From Chatbots to Autonomous Workers",
+    name: "Chasing Jarvis \u2014 Module 4",
+    subtitle: "Context Engineering \u2013 Orchestrating AI for Complex Tasks",
     week: 11,
     sprint: "Sprint 11",
-    notesUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
-    readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/ai-agents/",
+    notesUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/context-engineering/",
+    readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/context-engineering/",
     preReadingsUrl: "https://cotrugli.online/groups/vanguard/",
-    coreReading: { title: "Second Brain — Community Discussion", author: "Dr. Tali Režun", url: "https://medium.com/@talirezun" },
-    preReading: { title: "Three Philosophies, One Goal: Augment Code vs Claude Code vs Codex CLI", author: "Dr. Tali Režun", url: "https://www.linkedin.com/feed/update/urn:li:activity:7448631044594995200/", note: "Join the discussion — share your thoughts on which coding framework fits your stack." },
+    coreReading: { title: "From Prompts to Precision: The Art & Science of Context Engineering", author: "Dr. Tali Re\u017eun", url: "https://medium.com/@talirezun" },
+    preReading: { title: "From Prompts to Precision: AI-Generated Research Podcast Discussion | From Lab to Life", author: "Dr. Tali Re\u017eun", url: "https://medium.com/@talirezun", note: "Pre-module podcast discussion \u2014 listen before the hands-on labs." },
     readings: [
-      { title: "Introduction to Agent Skills — Anthropic Free Course", url: "https://www.anthropic.com" },
-      { title: "The Curator — star it, fork it, make it your own", url: "https://github.com/talirezun" }
+      { title: "Effective Context Engineering for AI Agents \u2014 Anthropic", url: "https://www.anthropic.com" },
+      { title: "Markdown Guide \u2014 Complete reference for markdown syntax", url: "https://www.markdownguide.org" }
     ]
   },
 
-  assignments: [],
+  assignments: [
+    {
+      id: "cj4-01",
+      name: "Module 3 Homework \u2014 Build a Browser App or Game",
+      dueDate: "2026-04-29T23:59:00+02:00",
+      status: "pending",
+      prepUrl: "https://cotrugli.online/groups/vanguard/",
+      notes: "Use any AI coding tool (Google AI Studio, Cursor, Claude Code, Windsurf, Copilot). Build a first working version of your MVP or a fun browser game. Share project link in the Chasing Jarvis group. Tag your team leader and team members."
+    }
+  ],
 
   sessions: [
     {
@@ -846,21 +855,17 @@ const PROGRAMME_DATA = {
   ],
 
   toolOfDay: {
-    name: "Introduction to Agent Skills — Anthropic",
-    url: "https://www.anthropic.com"
+    name: "Markdown Guide \u2014 Complete Syntax Reference",
+    url: "https://www.markdownguide.org"
   },
 
   kapustaReading: {
-    title: "Not for Now — For the Future: Why the Next Decade of AI Commerce Needs a Trust Layer",
-    subtitle: "Kapusta & Terence Tse on why AI-driven economies need a semantic trust layer — the missing infrastructure that determines whether our digital future actually works.",
+    title: "NEO Cotruglian Meditation on Retardmaxxing",
+    subtitle: "Kapusta on the NEO Cotruglian Meditation \u2014 a philosophical provocation for leaders navigating the NEO Era.",
     url: "https://www.linkedin.com/in/cotrugli/"
   },
 
-  futureLab: [
-    { title: "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud", source: "Cotrugli Business School", url: "https://cotrugli.online" },
-    { title: "The Six-Month Hormuz Scenario", source: "Dra\u017een Kapusta", url: "https://cotrugli.online" },
-    { title: "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era", source: "Kapusta & Stru\u010di\u0107", url: "https://cotrugli.online" }
-  ],
+  futureLab: { title: "The Six-Month Hormuz Scenario", source: "Dra\u017een Kapusta", url: "https://cotrugli.online" },
 
   neoWorldArticle: {
     title: "Train-to-Test scaling explained: How to optimize your end-to-end AI compute budget for inference",
@@ -868,19 +873,19 @@ const PROGRAMME_DATA = {
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Sunday, 19 April 2026",
+  briefingDate: "Tuesday, 21 April 2026",
 
   status: [
     "All JTBDs current",
     "Awaiting Future of Work multiple choice exam results",
-    "Future of Work Essay — Submitted, awaiting results and feedback"
+    "Future of Work Essay \u2014 Submitted, awaiting results and feedback"
   ],
 
-  knowledgeQuestion: "Session 10 is done. You have now completed three full modules of Chasing Jarvis. Before the week ahead begins, one question: what is the single most useful thing you are walking away with from yesterday\u2019s session \u2014 not from the whole programme, just from yesterday? And what is the first thing you will do with it this week?",
+  knowledgeQuestion: "The Module 3 homework deadline is Wednesday 29 April. You have nine days. The task is simple: build something that works and runs in a browser. Before you open a single tool, answer this: what is the one thing your app or game needs to do \u2014 in one sentence? Not what it might do eventually. What does it do on day one, for one user, in one interaction? That sentence is your build brief. Write it down before you start.",
 
-  modelAnswer: "The most useful Session 10 takeaways are always specific and immediate \u2014 not inspirational, but actionable. \u2018I now know how to set up a trigger in n8n\u2019 is more valuable than \u2018I feel more confident about AI.\u2019 The second part of the question is the harder one: what will you actually do this week? Not eventually. This week. The gap between insight and action is where most learning dies. The students who compound fastest through this programme are not the ones who absorb the most in sessions \u2014 they are the ones who do something small with it before the next one. What is your something small?",
+  modelAnswer: "The biggest mistake in any first build is starting without a clear one-sentence brief. \u2018I want to build an AI tool that helps people\u2019 is not a brief \u2014 it is a wish. \u2018A browser game where you guess the country from three AI-generated clues\u2019 is a brief. It names the format, the interaction, and the outcome. Everything else \u2014 design, features, complexity \u2014 comes after that sentence exists. The coding agents are powerful enough to build almost anything you can describe. The constraint is never the tool. It is always the clarity of the instruction. Write your one sentence today. That is the whole task. The build follows naturally once you have it.",
 
-  todaysFocus: "Build your MVP. Vibe code and play with the coding agents. Explore, break things, and decide what goes into YOUR personal AI stack.",
+  todaysFocus: "Build your MVP. Use an AI coding tool of your choice \u2014 Google AI Studio, Cursor, Claude Code, Windsurf, Copilot \u2014 and build something that works in a browser. Explore, break things, and decide what goes into YOUR personal AI stack.",
 
   aiPodcasts: [
     { title: "Chasing Jarvis: Step 1 — Context Engineering", date: "2026-03", url: "https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3" },
@@ -1163,7 +1168,7 @@ function renderWork() {
   document.getElementById('work-neo-title').textContent = PROGRAMME_DATA.neoWorldArticle.title;
   document.getElementById('work-neo-meta').textContent = PROGRAMME_DATA.neoWorldArticle.source || 'World Financial Review →';
   document.getElementById('work-neo-card').onclick = () => openUrl(PROGRAMME_DATA.neoWorldArticle.url);
-  const futureLab = Array.isArray(PROGRAMME_DATA.futureLab) ? PROGRAMME_DATA.futureLab[0] : PROGRAMME_DATA.futureLab;
+  const futureLab = PROGRAMME_DATA.futureLab;
   if (futureLab && document.getElementById('work-futurelab-card')) {
     document.getElementById('work-futurelab-title').textContent = futureLab.title;
     document.getElementById('work-futurelab-meta').textContent = futureLab.source + ' →';
@@ -1391,7 +1396,7 @@ function renderBriefing() {
       if (wr.secondBrain) focusHtml += `<div style="${modStyle} #1a56db;background:var(--accent-light);margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Second Brain — New from Dr. Tali</div><a href="${wr.secondBrain.url}" style="color:var(--accent);">${wr.secondBrain.title}</a></div>`;
     } else {
       if (d.currentModule.coreReading) focusHtml += `<div style="margin-top:10px;padding:10px 12px;background:var(--accent-light);border-radius:10px;border-left:3px solid var(--accent);"><div style="font-size:10px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Read before hands-on labs</div><a href="${d.currentModule.coreReading.url}" style="color:var(--accent);font-weight:500;font-size:13px;">→ ${d.currentModule.coreReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${d.currentModule.coreReading.author}</div></div>`;
-      if (d.currentModule.preReading) focusHtml += `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module 3 Reading — Essential for Track B</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>`;
+      if (d.currentModule.preReading) focusHtml += `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module Reading</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>`;
     }
     if (d.currentModule.readings && d.currentModule.readings.length) focusHtml += `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r=>`→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>`;
     focusHtml += `</div></div>`;
