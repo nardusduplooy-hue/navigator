@@ -138,6 +138,34 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-22": {
+        "step": "Module 3 Homework — Day 3",
+        "title": "Name your blocker",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Seven days to deadline. If you haven't started, name the blocker.",
+        "question": (
+            "Seven days to the homework deadline. Some of you have started. Some of you haven't. "
+            "If you are in the second group, this question is for you: "
+            "what is the specific thing that is stopping you? "
+            "Not a general feeling — a specific blocker. "
+            "Is it that you don't know which tool to use? "
+            "You can't decide what to build? "
+            "You started and it broke? "
+            "Name the blocker out loud. That is the first step to removing it."
+        ),
+        "model_answer": (
+            "Every build blocker falls into one of three categories: "
+            "decision paralysis, technical failure, or perfectionism. "
+            "Decision paralysis: you have too many options and haven't chosen one. "
+            "Fix — pick the simplest possible idea and start. You can change it later. "
+            "Technical failure: you tried something and it didn't work. "
+            "Fix — describe exactly what broke to your coding agent and ask it to fix it. That is the whole job. "
+            "Perfectionism: you have an idea but it doesn't feel good enough to build. "
+            "Fix — it doesn't need to be good. It needs to run in a browser and do one thing. "
+            "The homework is not a product launch. It is a proof that you can direct an AI to build something. "
+            "Seven days is enough. The blocker is not time."
+        ),
+    },
     "2026-04-21": {
         "step": "Module 3 Homework — Day 2",
         "title": "Your one-sentence build brief",
@@ -828,9 +856,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-meditation-retardmaxxing-drazen-kapusta-cleje/",
-    "title": "NEO Cotruglian Meditation on Retardmaxxing",
-    "description": "Kapusta on the NEO Cotruglian Meditation — a philosophical provocation for leaders navigating the NEO Era.",
+    "url": "https://www.linkedin.com/pulse/centaur-doctrine-how-vanguard-leaders-win-neo-drazen-kapusta-ytnzf/?trackingId=mc9%2BAO137bWk4QVmx948yA%3D%3D",
+    "title": "The Centaur Doctrine: How Vanguard Leaders Win the NEO Battlefield",
+    "description": "Kapusta on the Centaur Doctrine — how Vanguard leaders combine human judgment with AI capability to win in the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -840,7 +868,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google launches new AI coding agent that writes, tests and deploys code autonomously",
+    "headline": "Anthropic releases Claude 4 as AI coding race intensifies across enterprise market",
     "source": "VentureBeat AI",
 }
 

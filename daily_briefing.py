@@ -198,6 +198,7 @@ def build_briefing():
     # ROADMAP.SH
     lines.append("🗺️ <b>Supplementary Resources (Recommended):</b>")
     lines.append("<a href='https://www.markdownguide.org/'>→ Markdown Guide — Complete reference for markdown syntax</a>")
+    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7452253274394664960/?originTrackingId=GrYHRfBdZszWet7f1g6mRQ%3D%3D'>→ Claude Opus 4.7 — My Take After Week of Real Testing — Dr. Tali Režun</a>")
     lines.append("")
 
     # KAPUSTA
