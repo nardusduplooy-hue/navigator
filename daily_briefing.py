@@ -96,6 +96,12 @@ def build_briefing():
     # DEADLINES
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
+    lines.append("📚 <b>BUSINESS AGILITY MODULE</b>")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Thu 24 April — 10:30 AM CAT</a>")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Fri 25 April — 10:30 AM CAT</a>")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Sat 26 April — 10:30 AM CAT</a>")
+    lines.append("Meeting ID: 814 2566 0383 | Passcode: agilityVAN")
+    lines.append("")
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
