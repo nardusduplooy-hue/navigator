@@ -104,7 +104,7 @@ def build_briefing():
     lines.append("")
 
     # NEXT ZOOM
-    lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+    lines.append("📅 <b>NEXT JARVIS ZOOM SESSION</b>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/11/?wm=1&mi=87497940375'>Next Zoom session — Saturday 2 May</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
