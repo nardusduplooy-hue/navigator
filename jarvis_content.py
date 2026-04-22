@@ -138,6 +138,31 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-23": {
+        "step": "Module 3 Homework — Day 4",
+        "title": "One action today",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Six days to deadline. Stop planning. Start building.",
+        "question": (
+            "Six days to the homework deadline. Yesterday you named your blocker. Today is about one action. "
+            "Not a plan — one action. "
+            "Open your coding tool of choice right now and do one thing: "
+            "describe your app or game to it in plain English and ask it to build a first version. "
+            "Don't refine the prompt. Don't research first. Just send it. "
+            "What did you get?"
+        ),
+        "model_answer": (
+            "The first output from a coding agent is never the final product — it is a starting point. "
+            "Most people are disappointed by the first version and stop. The builders iterate. "
+            "The gap between a first attempt and a working product is not talent or technical skill — "
+            "it is the number of iterations. "
+            "Each prompt refines the output. Each broken version teaches you what to specify more clearly. "
+            "The student who sends ten imperfect prompts today is further ahead "
+            "than the one who spends the day planning the perfect first prompt. "
+            "Your task today is not to build something good. It is to build something that exists. "
+            "Start there."
+        ),
+    },
     "2026-04-22": {
         "step": "Module 3 Homework — Day 3",
         "title": "Name your blocker",
@@ -856,9 +881,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/centaur-doctrine-how-vanguard-leaders-win-neo-drazen-kapusta-ytnzf/?trackingId=mc9%2BAO137bWk4QVmx948yA%3D%3D",
-    "title": "The Centaur Doctrine: How Vanguard Leaders Win the NEO Battlefield",
-    "description": "Kapusta on the Centaur Doctrine — how Vanguard leaders combine human judgment with AI capability to win in the NEO Era.",
+    "url": "https://www.linkedin.com/pulse/merchants-wisdom-half-millennium-late-drazen-kapusta-noqxe/?trackingId=nYXYkcqOQj2EshV2mbNV6g%3D%3D",
+    "title": "A Merchant's Wisdom, Half a Millennium Late",
+    "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -868,7 +893,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic releases Claude 4 as AI coding race intensifies across enterprise market",
+    "headline": "Microsoft unveils autonomous AI agents that can operate computers without human input",
     "source": "VentureBeat AI",
 }
 
