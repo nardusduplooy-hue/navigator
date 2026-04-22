@@ -903,6 +903,27 @@ const PROGRAMME_DATA = {
 
   sessions: [
     {
+      id: "ba-session-1",
+      name: "Business Agility \u2014 Live Session 1",
+      datetime: "2026-04-24T10:30:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383",
+      recordingUrl: ""
+    },
+    {
+      id: "ba-session-2",
+      name: "Business Agility \u2014 Live Session 2",
+      datetime: "2026-04-25T10:30:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383",
+      recordingUrl: ""
+    },
+    {
+      id: "ba-session-3",
+      name: "Business Agility \u2014 Live Session 3",
+      datetime: "2026-04-26T10:30:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383",
+      recordingUrl: ""
+    },
+    {
       id: "session-11",
       name: "Vanguard Session 11",
       datetime: "2026-05-02T17:00:00+02:00",
@@ -1160,6 +1181,12 @@ function getCountdown(isoDate) {
   return { display, urgency, diff };
 }
 
+function getNextSession() {
+  const now = new Date();
+  const upcoming = PROGRAMME_DATA.sessions.filter(s => new Date(s.datetime) > now);
+  return upcoming.length > 0 ? upcoming[0] : PROGRAMME_DATA.sessions[PROGRAMME_DATA.sessions.length - 1];
+}
+
 function formatDate(isoDate) {
   return new Date(isoDate).toLocaleDateString('en-ZA', { timeZone: 'Africa/Johannesburg', weekday: 'short', day: 'numeric', month: 'short' });
 }
@@ -1187,7 +1214,7 @@ function renderNorthStar() {
     priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${urgencyColor[cd.urgency]};"></div><span class="priority-name">${a.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
   });
   if (PROGRAMME_DATA.sessions.length > 0) {
-    const s = PROGRAMME_DATA.sessions[0];
+    const s = getNextSession();
     const cd = getCountdown(s.datetime);
     priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#fde68a;"></div><span class="priority-name">${s.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
   }
@@ -1246,7 +1273,7 @@ function renderWork() {
 }
 
 function renderSessions() {
-  const s = PROGRAMME_DATA.sessions[0];
+  const s = getNextSession();
   if (!s) return;
   document.getElementById('zoom-session-name').textContent = s.name;
   document.getElementById('zoom-date-display').textContent = formatDate(s.datetime);
@@ -1282,7 +1309,7 @@ function filterSessions(period, btn) {
   btn.classList.add('active');
   renderSessions();
 }
-function joinZoom() { const s = PROGRAMME_DATA.sessions[0]; if (s && s.zoomUrl) openUrl(s.zoomUrl); }
+function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) openUrl(s.zoomUrl); }
 
 function switchEngageMode(mode, btn) {
   document.getElementById('engage-tabs').querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active'));
@@ -1445,7 +1472,7 @@ async function sendQA() {
 
 function renderBriefing() {
   const d = PROGRAMME_DATA;
-  const s = d.sessions[0];
+  const s = getNextSession();
   const a = d.assignments[0];
   const rows = [];
 
