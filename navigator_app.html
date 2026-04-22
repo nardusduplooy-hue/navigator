@@ -55,6 +55,18 @@ html, body {
   overscroll-behavior: none;
 }
 
+@media (min-width: 600px) {
+  body { background: #e2e8f0; }
+  #app-header, #app-body, #bottom-nav, #settings-modal {
+    max-width: 480px;
+    left: 50% !important;
+    transform: translateX(-50%);
+    right: auto !important;
+  }
+  #app-header { border-radius: 0; }
+  #settings-modal { border-radius: 24px 24px 0 0; }
+}
+
 #app-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: var(--header-h);
@@ -618,12 +630,12 @@ textarea::placeholder { color: var(--text-muted); }
     <div id="sessions-list"></div>
     <div class="section-label">Recordings</div>
     <div id="recordings-list">
-      <div class="card" onclick="openUrl('#')" style="cursor:pointer;">
+      <div class="card" onclick="openUrl('https://cotrugli.online/groups/vanguard/zoom/meetings/11/')" style="cursor:pointer;">
         <div style="display:flex;align-items:center;gap:12px;">
           <span style="font-size:18px;color:var(--accent);">▶</span>
           <div style="flex:1;">
-            <div style="font-size:13px;font-weight:500;color:var(--text);">Strategy Discussion</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Feb 8, 2026 · 45m</div>
+            <div style="font-size:13px;font-weight:500;color:var(--text);">Zoom Recordings</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">All sessions →</div>
           </div>
           <span class="chevron">›</span>
         </div>
@@ -672,6 +684,11 @@ textarea::placeholder { color: var(--text-muted); }
         <button class="sel-btn active" data-val="Analytical" onclick="selectBtn(this,'tone-selector')">Analytical</button>
         <button class="sel-btn" data-val="Personal" onclick="selectBtn(this,'tone-selector')">Personal</button>
         <button class="sel-btn" data-val="Questioning" onclick="selectBtn(this,'tone-selector')">Questioning</button>
+      </div>
+      <div style="margin-top:14px;padding:10px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;">
+        <div style="font-size:11px;font-weight:600;color:#92400e;margin-bottom:3px;">⚠ Participation requirement</div>
+        <div style="font-size:11px;color:#78350f;line-height:1.5;">Comments will not be generated unless you complete at least <strong>3 iterations</strong> — refine your input, change tone, or try a different post before generating a final draft.</div>
+        <div style="margin-top:6px;font-size:11px;color:#92400e;">Iterations this session: <strong id="iteration-count">0</strong> / 3</div>
       </div>
       <button class="btn btn-primary btn-full" style="margin-top:14px;" onclick="generateComments()">Generate Comments</button>
       <div id="comment-loading" style="display:none;"><div class="loading-row"><span class="spinner"></span> Navigator is drafting comments...</div></div>
@@ -892,7 +909,8 @@ const PROGRAMME_DATA = {
     { title: "Chasing Jarvis: Step 2 — The Real Build", date: "2026-03", url: "https://stream.redcircle.com/episodes/1df6e253-8deb-41aa-b200-958f8cfc1665/stream.mp3" },
     { title: "Chasing Jarvis: Step 3 — Ditching RAG", date: "2026-03", url: "https://stream.redcircle.com/episodes/e9c4ebd5-0041-4650-b787-5012115aa447/stream.mp3" },
     { title: "Chasing Jarvis: Step 4 — Orchestrating", date: "2026-04", url: "https://stream.redcircle.com/episodes/a6f8c93e-d649-4abf-99b4-36d80ef8d7aa/stream.mp3" },
-    { title: "Chasing Jarvis: Step 5 — Marketing Agents", date: "2026-04", url: "https://stream.redcircle.com/episodes/92bb360b-12fd-446e-9460-aad10a08d1c1/stream.mp3" }
+    { title: "Chasing Jarvis: Step 5 — Marketing Agents", date: "2026-04", url: "https://stream.redcircle.com/episodes/92bb360b-12fd-446e-9460-aad10a08d1c1/stream.mp3" },
+    { title: "Chasing Jarvis: Kanban", date: "2026-04", url: "https://stream.redcircle.com/episodes/1f01dc3c-14e2-49fd-a97e-ba49bbbe0c92/stream.mp3" }
   ],
 
   facultyPosts: {
@@ -1279,6 +1297,17 @@ async function generateComments() {
   if (!articleText) { showToast('Paste an article first'); return; }
   const author = document.querySelector('#author-selector .sel-btn.active')?.dataset.val || 'Other';
   const tone = document.querySelector('#tone-selector .sel-btn.active')?.dataset.val || 'Analytical';
+
+  // Iteration tracking
+  if (typeof window._engageIterations === 'undefined') window._engageIterations = 0;
+  window._engageIterations++;
+  const iterEl = document.getElementById('iteration-count');
+  if (iterEl) iterEl.textContent = Math.min(window._engageIterations, 3);
+
+  if (window._engageIterations < 3) {
+    document.getElementById('comment-results').innerHTML = `<div class="card" style="background:#fffbeb;border:1px solid #fde68a;"><div style="font-size:13px;font-weight:600;color:#92400e;">Iteration ${window._engageIterations} of 3</div><div style="font-size:12px;color:#78350f;margin-top:6px;line-height:1.5;">Keep refining — try adjusting your tone, selecting a different post, or rewording your input. Comments will generate on your 3rd iteration.</div></div>`;
+    return;
+  }
   document.getElementById('comment-loading').style.display = 'block';
   document.getElementById('comment-results').innerHTML = '';
   const apiKey = storage.get('cn_api_key');
