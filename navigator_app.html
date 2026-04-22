@@ -56,15 +56,30 @@ html, body {
 }
 
 @media (min-width: 600px) {
-  body { background: #e2e8f0; }
-  #app-header, #app-body, #bottom-nav, #settings-modal {
+  body { background: #e2e8f0; display: flex; justify-content: center; }
+  #app-header {
     max-width: 480px;
     left: 50% !important;
-    transform: translateX(-50%);
     right: auto !important;
+    transform: translateX(-50%);
   }
-  #app-header { border-radius: 0; }
-  #settings-modal { border-radius: 24px 24px 0 0; }
+  #app-body {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  #bottom-nav {
+    max-width: 480px;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+  #settings-modal {
+    max-width: 480px;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    border-radius: 24px 24px 0 0;
+  }
 }
 
 #app-header {
@@ -910,7 +925,9 @@ const PROGRAMME_DATA = {
     { title: "Chasing Jarvis: Step 3 — Ditching RAG", date: "2026-03", url: "https://stream.redcircle.com/episodes/e9c4ebd5-0041-4650-b787-5012115aa447/stream.mp3" },
     { title: "Chasing Jarvis: Step 4 — Orchestrating", date: "2026-04", url: "https://stream.redcircle.com/episodes/a6f8c93e-d649-4abf-99b4-36d80ef8d7aa/stream.mp3" },
     { title: "Chasing Jarvis: Step 5 — Marketing Agents", date: "2026-04", url: "https://stream.redcircle.com/episodes/92bb360b-12fd-446e-9460-aad10a08d1c1/stream.mp3" },
-    { title: "Chasing Jarvis: Kanban", date: "2026-04", url: "https://stream.redcircle.com/episodes/1f01dc3c-14e2-49fd-a97e-ba49bbbe0c92/stream.mp3" }
+    { title: "Business Agility: Kanban", date: "2026-04", url: "https://stream.redcircle.com/episodes/1f01dc3c-14e2-49fd-a97e-ba49bbbe0c92/stream.mp3" },
+    { title: "Watch video: What is Flight Levels", date: "2026-04", url: "https://youtu.be/l73yAdQOU84" },
+    { title: "Watch video: Klaus Leopold: Flight Levels in Action", date: "2026-04", url: "https://youtu.be/6JtRPjTMEWQ" }
   ],
 
   facultyPosts: {
@@ -1229,7 +1246,9 @@ function renderSessions() {
   pl.innerHTML = '';
   PROGRAMME_DATA.aiPodcasts.forEach(p => {
     const isAudio = p.url && p.url.endsWith('.mp3');
-    pl.innerHTML += `<div class="card" style="margin-bottom:10px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:${isAudio ? '10px' : '0'};"><span style="font-size:18px;">🎙️</span><div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--text);">${p.title}</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.date}</div></div>${!isAudio ? '<span class="chevron" onclick="openUrl(\''+p.url+'\')">›</span>' : ''}</div>${isAudio ? `<audio controls style="width:100%;height:36px;border-radius:8px;accent-color:var(--accent);" src="${p.url}"></audio>` : ''}</div>`;
+    const isVideo = p.url && (p.url.includes('youtu.be') || p.url.includes('youtube.com'));
+    const icon = isVideo ? '▶️' : '🎙️';
+    pl.innerHTML += `<div class="card" style="margin-bottom:10px;${!isAudio ? 'cursor:pointer;' : ''}" ${!isAudio ? `onclick="openUrl('${p.url}')"` : ''}><div style="display:flex;align-items:center;gap:12px;margin-bottom:${isAudio ? '10px' : '0'};"><span style="font-size:18px;">${icon}</span><div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--text);">${p.title}</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.date}</div></div>${!isAudio ? '<span class="chevron">›</span>' : ''}</div>${isAudio ? `<audio controls style="width:100%;height:36px;border-radius:8px;accent-color:var(--accent);" src="${p.url}"></audio>` : ''}</div>`;
   });
 }
 
