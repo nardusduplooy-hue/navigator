@@ -135,14 +135,14 @@ html, body {
 .nav-btn {
   flex: 1; display: flex; flex-direction: column;
   align-items: center; gap: 4px; background: none; border: none;
-  cursor: pointer; padding: 4px 0; color: var(--text-muted);
+  cursor: pointer; padding: 4px 0; color: #1a56db;
   transition: color 0.2s; min-height: 44px;
 }
 .nav-btn.active { color: var(--accent); }
 .nav-btn svg { width: 22px; height: 22px; }
 .nav-label {
   font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 500;
-  letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted);
+  letter-spacing: 0.04em; text-transform: uppercase; color: #1a56db;
 }
 .nav-btn.active .nav-label { color: var(--accent); }
 
@@ -548,9 +548,7 @@ textarea::placeholder { color: var(--text-muted); }
       <div class="stat-chip"><div class="stat-val" id="stat-module">—</div><div class="stat-lbl">Module</div></div>
       <div class="stat-chip"><div class="stat-val" id="stat-jtbd">All ✓</div><div class="stat-lbl">JTBD</div></div>
     </div>
-    <div class="section-label">This Week</div>
-    <div class="cal-strip" id="cal-strip"></div>
-    <div class="section-label">Active Deadlines</div>
+    <div class="section-label">Deadlines Countdown</div>
     <div id="ns-deadlines"></div>
   </section>
 
@@ -874,51 +872,27 @@ const PROGRAMME_DATA = {
       status: "pending",
       prepUrl: "https://cotrugli.online/groups/vanguard/",
       notes: "Use any AI coding tool (Google AI Studio, Cursor, Claude Code, Windsurf, Copilot). Build a first working version of your MVP or a fun browser game. Share project link in the Chasing Jarvis group. Tag your team leader and team members."
-    },
-    {
-      id: "ba-01",
-      name: "Business Agility \u2014 Live Session Fri 24 Apr",
-      dueDate: "2026-04-24T10:30:00+02:00",
-      status: "pending",
-      prepUrl: "https://cotrugli.online/groups/vanguard/",
-      notes: "Meeting ID: 814 2566 0383 | Passcode: agilityVAN"
-    },
-    {
-      id: "ba-02",
-      name: "Business Agility \u2014 Live Session Sat 25 Apr",
-      dueDate: "2026-04-25T10:30:00+02:00",
-      status: "pending",
-      prepUrl: "https://cotrugli.online/groups/vanguard/",
-      notes: "Meeting ID: 814 2566 0383 | Passcode: agilityVAN"
-    },
-    {
-      id: "ba-03",
-      name: "Business Agility \u2014 Live Session Sun 26 Apr",
-      dueDate: "2026-04-26T10:30:00+02:00",
-      status: "pending",
-      prepUrl: "https://cotrugli.online/groups/vanguard/",
-      notes: "Meeting ID: 814 2566 0383 | Passcode: agilityVAN"
     }
   ],
 
   sessions: [
     {
       id: "ba-session-1",
-      name: "Business Agility \u2014 Live Session 1",
+      name: "Business Agility \u2014 Live Session Fri 24 Apr",
       datetime: "2026-04-24T10:30:00+02:00",
       zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383",
       recordingUrl: ""
     },
     {
       id: "ba-session-2",
-      name: "Business Agility \u2014 Live Session 2",
+      name: "Business Agility \u2014 Live Session Sat 25 Apr",
       datetime: "2026-04-25T10:30:00+02:00",
       zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383",
       recordingUrl: ""
     },
     {
       id: "ba-session-3",
-      name: "Business Agility \u2014 Live Session 3",
+      name: "Business Agility \u2014 Live Session Sun 26 Apr",
       datetime: "2026-04-26T10:30:00+02:00",
       zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383",
       recordingUrl: ""
@@ -1217,18 +1191,6 @@ function renderNorthStar() {
     const s = getNextSession();
     const cd = getCountdown(s.datetime);
     priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#fde68a;"></div><span class="priority-name">${s.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
-  }
-
-  const strip = document.getElementById('cal-strip');
-  strip.innerHTML = '';
-  const dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
-  const catDate = cat.getDate();
-  for (let i = 0; i <= 6; i++) {
-    const d = new Date(cat);
-    d.setDate(catDate - cat.getDay() + i);
-    const isToday = d.getDate() === cat.getDate() && d.getMonth() === cat.getMonth();
-    const hasEvent = PROGRAMME_DATA.sessions.some(s => { const sd = new Date(s.datetime); return sd.getDate() === d.getDate() && sd.getMonth() === d.getMonth(); }) || PROGRAMME_DATA.assignments.some(a => { const ad = new Date(a.dueDate); return ad.getDate() === d.getDate() && ad.getMonth() === d.getMonth(); });
-    strip.innerHTML += `<div class="cal-day ${isToday ? 'today' : ''}"><span class="cal-day-name">${dayNames[d.getDay()]}</span><span class="cal-day-num">${d.getDate()}</span><div class="cal-dot" style="background:${hasEvent ? (isToday ? 'rgba(255,255,255,0.8)' : 'var(--amber)') : 'transparent'}"></div></div>`;
   }
 
   const dlEl = document.getElementById('ns-deadlines');
