@@ -1524,6 +1524,8 @@ function renderBriefing() {
 document.getElementById('qa-input').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendQA(); } });
 
 function openSettings() {
+  const activeTab = storage.get('cn_active_tab') || 'northstar';
+  if (activeTab !== 'engage' && activeTab !== 'briefing') return;
   document.getElementById('s-api-key').value = storage.get('cn_api_key') || '';
   document.getElementById('s-gh-token').value = storage.get('cn_github_token') || '';
   document.getElementById('s-gist-id').value = storage.get('cn_gist_id') || '';
