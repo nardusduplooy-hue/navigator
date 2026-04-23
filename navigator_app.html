@@ -668,10 +668,23 @@ textarea::placeholder { color: var(--text-muted); }
   <!-- TAB 4: ENGAGE -->
   <section id="tab-engage" class="tab-panel">
     <div class="engage-disclaimer">✦ Draft only — you review and post manually · No automated posting</div>
+
+    <!-- Orientation card — always visible -->
+    <div style="background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:14px;">
+      <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;">How to use Engage</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
+        <strong>1. Comment Assistant</strong> — Pick a faculty post, choose your tone, generate 3 comment options. Edit and post manually to LinkedIn.<br>
+        <strong>2. Article Assistant</strong> — Build a LinkedIn article grounded in your MBA frameworks.<br>
+        <strong>3. Ask Navigator</strong> — Ask what to engage with today, get coaching on your voice, or explore angles on any post.<br>
+        <span style="font-size:11px;color:var(--text-muted);">API key required for comment generation and Ask Navigator. Add it via Settings (tap header on Engage or Briefing tab).</span>
+      </div>
+    </div>
+
     <div class="pill-tabs" id="engage-tabs">
-      <button class="pill-tab active" onclick="switchEngageMode('comment',this)">Comment Assistant</button>
-      <button class="pill-tab" onclick="switchEngageMode('article',this)">Article Assistant</button>
+      <button class="pill-tab active" onclick="switchEngageMode('comment',this)">Comment</button>
+      <button class="pill-tab" onclick="switchEngageMode('article',this)">Article</button>
       <button class="pill-tab" onclick="switchEngageMode('metrics',this)">Metrics</button>
+      <button class="pill-tab" onclick="switchEngageMode('ask',this)">Ask Navigator</button>
     </div>
     <div id="engage-comment">
       <div class="section-label">Author</div>
@@ -744,6 +757,26 @@ textarea::placeholder { color: var(--text-muted); }
       <div id="m-modules" class="card"><div style="font-size:13px;color:var(--text-dim);text-align:center;padding:8px 0;">Log your first comment to start tracking module coverage.</div></div>
       <div style="margin-top:14px;"><div class="settings-hint" style="text-align:center;">Connect GitHub Gist in Settings to persist your engagement history across devices.</div></div>
     </div>
+
+    <!-- Ask Navigator panel -->
+    <div id="engage-ask" style="display:none;">
+      <div class="starter-chips" style="margin-top:6px;">
+        <div class="chip" onclick="askEngageStarter(this)">What should I engage with today?</div>
+        <div class="chip" onclick="askEngageStarter(this)">Help me find an angle on Kapusta</div>
+        <div class="chip" onclick="askEngageStarter(this)">Review my comment draft</div>
+        <div class="chip" onclick="askEngageStarter(this)">What frameworks fit this post?</div>
+      </div>
+      <div class="qa-messages" id="engage-qa-messages">
+        <div class="msg-nav"><strong>Navigator</strong> ready. Ask me anything about LinkedIn engagement, post angles, or your voice strategy.</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <textarea id="engage-qa-input" rows="2" placeholder="Ask about engagement strategy, post angles, comment coaching..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
+        <button class="qa-send" onclick="sendEngageQA()" style="align-self:flex-end;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Powered by Claude Sonnet 4.6 · Requires API key in Settings</div>
+    </div>
   </section>
 
   <!-- TAB 5: BRIEFING -->
@@ -752,23 +785,6 @@ textarea::placeholder { color: var(--text-muted); }
     <div class="card card-accent">
       <div id="briefing-content"></div>
     </div>
-    <div class="section-label" style="margin-top:22px;">Ask Navigator</div>
-    <div class="starter-chips">
-      <div class="chip" onclick="askStarter(this)">What's due this week?</div>
-      <div class="chip" onclick="askStarter(this)">What is an AI agent?</div>
-      <div class="chip" onclick="askStarter(this)">Next Zoom?</div>
-      <div class="chip" onclick="askStarter(this)">Who is Kapusta?</div>
-    </div>
-    <div class="qa-messages" id="qa-messages">
-      <div class="msg-nav"><strong>Navigator</strong> ready. Ask me anything about your programme, assignments, or modules.</div>
-    </div>
-    <div class="qa-input-row">
-      <textarea class="qa-input" id="qa-input" rows="1" placeholder="Ask Navigator anything..."></textarea>
-      <button class="qa-send" onclick="sendQA()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-      </button>
-    </div>
-    <div style="margin-top:10px;text-align:center;"><div class="settings-hint">Powered by Claude Sonnet 4.6 · Requires API key in Settings</div></div>
   </section>
 
 
@@ -1315,8 +1331,69 @@ function switchEngageMode(mode, btn) {
   document.getElementById('engage-comment').style.display = mode === 'comment' ? 'block' : 'none';
   document.getElementById('engage-article').style.display = mode === 'article' ? 'block' : 'none';
   document.getElementById('engage-metrics').style.display = mode === 'metrics' ? 'block' : 'none';
+  document.getElementById('engage-ask').style.display = mode === 'ask' ? 'block' : 'none';
   if (mode === 'metrics') renderMetrics();
 }
+
+function askEngageStarter(el) {
+  const input = document.getElementById('engage-qa-input');
+  input.value = el.textContent;
+  sendEngageQA();
+}
+
+async function sendEngageQA() {
+  const input = document.getElementById('engage-qa-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  const messages = document.getElementById('engage-qa-messages');
+  messages.innerHTML += `<div class="msg-user">${msg}</div>`;
+  input.value = '';
+  const loader = document.createElement('div');
+  loader.className = 'msg-nav';
+  loader.innerHTML = '<span class="spinner"></span> Thinking...';
+  messages.appendChild(loader);
+  messages.scrollTop = messages.scrollHeight;
+  const apiKey = storage.get('cn_api_key');
+  if (!apiKey) {
+    loader.style.color = 'var(--red)';
+    loader.textContent = 'Add your Anthropic API key in Settings first (tap the header).';
+    return;
+  }
+  try {
+    const systemPrompt = `You are the Cotrugli Navigator Engage Assistant for ${PROGRAMME_DATA.student}, ${PROGRAMME_DATA.role} in the ${PROGRAMME_DATA.programme}.
+
+Your role is to help the student with LinkedIn engagement strategy. You know:
+- Faculty: Dr. Tali Režun (Context Engineering, Chasing Jarvis, Non-Developer Playbook) and Dražen Kapusta (NEO Era, Centaur Doctrine, Wolf-Sheep-Sheepdog, Business as Craft)
+- Current module: ${PROGRAMME_DATA.currentModule.name}
+- Programme frameworks: NEO World, Vanguard Leadership, Centaur Doctrine, Context Engineering, JTBD
+
+Help with: what to engage with today, finding angles on posts, coaching comment drafts, identifying which frameworks apply, and developing the student's authentic voice.
+
+Keep responses concise and practical. Never post on behalf of the student — always coaching mode only.`;
+    const history = storage.getJSON('cn_engage_qa_history') || [];
+    history.push({ role: 'user', content: msg });
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: systemPrompt, messages: history.slice(-10) })
+    });
+    const data = await response.json();
+    if (data.error) throw new Error(data.error.message);
+    const reply = data.content[0].text;
+    history.push({ role: 'assistant', content: reply });
+    storage.setJSON('cn_engage_qa_history', history.slice(-20));
+    loader.className = 'msg-nav';
+    loader.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+  } catch(err) {
+    loader.className = 'msg-nav'; loader.style.color = 'var(--red)'; loader.textContent = 'Error: ' + err.message;
+  }
+  messages.scrollTop = messages.scrollHeight;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const engageInput = document.getElementById('engage-qa-input');
+  if (engageInput) engageInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendEngageQA(); } });
+});
 function selectBtn(btn, groupId) { document.getElementById(groupId).querySelectorAll('.sel-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
 
 function renderPostLists() {
