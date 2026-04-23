@@ -231,7 +231,7 @@ html, body {
   pointer-events: none;
 }
 .focus-date { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.65); text-transform: uppercase; margin-bottom: 4px; }
-.focus-day { font-family: 'Syne', sans-serif; font-size: 34px; font-weight: 800; color: #ffffff; line-height: 1; margin-bottom: 4px; }
+.focus-day { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: #ffffff; line-height: 1; margin-bottom: 4px; letter-spacing: 0.04em; }
 .focus-programme { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.02em; margin-bottom: 18px; }
 .focus-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-bottom: 10px; }
 .priority-item {
@@ -540,7 +540,7 @@ textarea::placeholder { color: var(--text-muted); }
     <div class="focus-hero">
       <div class="focus-date" id="ns-date-label">LOADING...</div>
       <div class="focus-day" id="ns-day-label">—</div>
-      <div class="focus-programme">Vanguard MBA 2025–2027 · Team Chiron</div>
+      <div class="focus-programme">Vanguard MBA 2025–2027</div>
       <div class="focus-label">Today's Priorities</div>
       <div id="ns-priorities"></div>
     </div>
@@ -1197,11 +1197,44 @@ function renderNorthStar() {
   const dlEl = document.getElementById('ns-deadlines');
   dlEl.innerHTML = '';
   const urgDotColor = { urgent: 'var(--red)', warning: 'var(--amber)', safe: 'var(--green)', past: 'var(--text-muted)' };
-  [...PROGRAMME_DATA.assignments, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).forEach(item => {
+  const items = [...PROGRAMME_DATA.assignments, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).filter(item => {
+    const dt = item.dueDate || item.datetime;
+    return new Date(dt) > new Date();
+  });
+  if (items.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:8px 0;">No upcoming deadlines</div>'; return; }
+  // Accordion wrapper
+  const accordion = document.createElement('div');
+  accordion.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;';
+  // Header row — always visible, shows next deadline
+  const next = items[0];
+  const nextDt = next.dueDate || next.datetime;
+  const nextCd = getCountdown(nextDt);
+  const header = document.createElement('div');
+  header.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--bg-card);cursor:pointer;user-select:none;';
+  header.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${next._isSession ? 'var(--gold)' : urgDotColor[nextCd.urgency]};"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${next.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${formatDate(nextDt)} · ${formatTime(nextDt)}</div></div></div><div style="display:flex;align-items:center;gap:10px;flex-shrink:0;"><span class="countdown ${nextCd.urgency}" style="font-size:13px;">${nextCd.display}</span><span id="dl-chevron" style="font-size:16px;color:var(--text-muted);transition:transform 0.2s;">›</span></div>`;
+  // Body — remaining items, hidden by default
+  const body = document.createElement('div');
+  body.id = 'dl-accordion-body';
+  body.style.cssText = 'max-height:0;overflow:hidden;transition:max-height 0.3s ease;';
+  items.slice(1).forEach(item => {
     const dt = item.dueDate || item.datetime;
     const cd = getCountdown(dt);
-    dlEl.innerHTML += `<div class="deadline-card"><div class="deadline-dot" style="background:${item._isSession ? 'var(--gold)' : urgDotColor[cd.urgency]};"></div><div class="deadline-info"><div class="deadline-name">${item.name}</div><div class="deadline-due">${formatDate(dt)} · ${formatTime(dt)}</div></div><span class="countdown ${cd.urgency}">${cd.display}</span></div>`;
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--border);background:var(--bg-card);';
+    row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${item._isSession ? 'var(--gold)' : urgDotColor[cd.urgency]};"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${formatDate(dt)} · ${formatTime(dt)}</div></div></div><span class="countdown ${cd.urgency}" style="font-size:13px;flex-shrink:0;margin-left:10px;">${cd.display}</span>`;
+    body.appendChild(row);
   });
+  // Toggle logic
+  let open = false;
+  header.addEventListener('click', () => {
+    open = !open;
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
+    const chev = document.getElementById('dl-chevron');
+    if (chev) chev.style.transform = open ? 'rotate(90deg)' : 'rotate(0deg)';
+  });
+  accordion.appendChild(header);
+  if (items.length > 1) accordion.appendChild(body);
+  dlEl.appendChild(accordion);
 }
 
 function renderWork() {
