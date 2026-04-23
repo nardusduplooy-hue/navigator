@@ -189,12 +189,6 @@ def build_briefing():
         lines.append("<b>Chasing Jarvis Module Pre-reading and podcast:</b>")
         lines.append("<a href='https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701'>→ From Prompts to Precision: AI-Generated Research Podcast Discussion | From Lab to Life</a>")
         lines.append("")
-        lines.append("<a href='https://medium.com/@talirezun/from-prompts-to-precision-the-art-science-of-context-engineering-cebd47462b1c'>→ From Prompts to Precision: The Art &amp; Science of Context Engineering — Dr. Tali Režun</a>")
-        lines.append("Core reading — read thoroughly before Module 4")
-        lines.append("")
-        lines.append("<a href='https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents'>→ Effective Context Engineering for AI Agents — Anthropic</a>")
-        lines.append("Technical deep dive from Anthropic's engineering team")
-        lines.append("")
 
     # MODULE 3 TOOLS
     lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
@@ -204,6 +198,7 @@ def build_briefing():
     lines.append("🗺️ <b>Supplementary Resources (Recommended):</b>")
     lines.append("<a href='https://www.markdownguide.org/'>→ Markdown Guide — Complete reference for markdown syntax</a>")
     lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7452253274394664960/?originTrackingId=GrYHRfBdZszWet7f1g6mRQ%3D%3D'>→ Claude Opus 4.7 — My Take After Week of Real Testing — Dr. Tali Režun</a>")
+    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7453015701977493504/'>→ Building Knowledge Immortality Through the Second Brain Architecture and The Curator — Dr. Tali Režun</a>")
     lines.append("")
 
     # KAPUSTA

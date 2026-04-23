@@ -138,6 +138,30 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-24": {
+        "step": "Module 3 Homework — Business Agility Day 1",
+        "title": "Two things, one lesson",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Business Agility starts today. Homework deadline in five days. Both are the same lesson.",
+        "question": (
+            "The Business Agility module starts today and your homework deadline is in five days. "
+            "Two things are competing for your attention. This is not a problem — it is the point. "
+            "A Vanguard leader does not choose between learning and building. They do both in parallel. "
+            "One question: what is the single most useful thing from the Business Agility session today "
+            "that you could apply directly to your homework build? "
+            "Come out of the session looking for that connection."
+        ),
+        "model_answer": (
+            "Business agility is not a theory — it is an operating principle for building under uncertainty. "
+            "The students who get the most out of today's session are the ones who walk in with a build in progress. "
+            "Why? Because every agility concept lands differently when you have a real project to map it to. "
+            "Iteration cycles, minimum viable output, adapting to feedback — "
+            "these are not abstract when you are three prompts into a coding agent session "
+            "and your first version broke. "
+            "The homework and the module are not competing. They are the same lesson from two different angles. "
+            "Pay attention to both today."
+        ),
+    },
     "2026-04-23": {
         "step": "Module 3 Homework — Day 4",
         "title": "One action today",
@@ -881,9 +905,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/merchants-wisdom-half-millennium-late-drazen-kapusta-noqxe/?trackingId=nYXYkcqOQj2EshV2mbNV6g%3D%3D",
-    "title": "A Merchant's Wisdom, Half a Millennium Late",
-    "description": "Kapusta on the enduring principles of trade, trust, and strategy — half a millennium later, still relevant.",
+    "url": "https://www.linkedin.com/pulse/neo-world-its-waiting-you-drazen-kapusta-v8wje/?trackingId=UDsE2BrQYntV%2FxsTUu9MXA%3D%3D",
+    "title": "The NEO World — It's Not Waiting for You",
+    "description": "Kapusta on urgency, agency, and what it means to lead in a world that will not pause for you to catch up.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -893,7 +917,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Microsoft unveils autonomous AI agents that can operate computers without human input",
+    "headline": "Meta releases open-source AI coding assistant as competition with OpenAI and Anthropic intensifies",
     "source": "VentureBeat AI",
 }
 
@@ -952,6 +976,34 @@ MODULE3_ARTICLES = {
 # ─────────────────────────────────────────────
 
 FUTURE_LAB = {
+    "2026-04-26": [
+        {
+            "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
+            "url": "https://drive.google.com/file/d/12Ni10rr9TCkkGI-hbJl9a6WZJxi7HdUY/view?usp=sharing",
+            "author": "Kapusta & Stručić",
+        },
+    ],
+    "2026-04-25": [
+        {
+            "title": "The Six-Month Hormuz Scenario",
+            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
+            "author": "Dražen Kapusta",
+        },
+    ],
+    "2026-04-24": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
+    "2026-04-23": [
+        {
+            "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
+            "url": "https://drive.google.com/file/d/1jfHOEs6Hlkp4YRdbcWGUNx_x8Qypq8cC/view?usp=sharing",
+            "author": "Cotrugli Business School",
+        },
+    ],
     "2026-04-22": [
         {
             "title": "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era",
