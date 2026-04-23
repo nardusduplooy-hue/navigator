@@ -1390,10 +1390,7 @@ Keep responses concise and practical. Never post on behalf of the student — al
   messages.scrollTop = messages.scrollHeight;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const engageInput = document.getElementById('engage-qa-input');
-  if (engageInput) engageInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendEngageQA(); } });
-});
+
 function selectBtn(btn, groupId) { document.getElementById(groupId).querySelectorAll('.sel-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
 
 function renderPostLists() {
@@ -1598,7 +1595,10 @@ function renderBriefing() {
   document.getElementById('briefing-content').innerHTML = rows.join('');
 }
 
-document.getElementById('qa-input').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendQA(); } });
+const _qaInput = document.getElementById('qa-input');
+if (_qaInput) _qaInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendQA(); } });
+const _engageQaInput = document.getElementById('engage-qa-input');
+if (_engageQaInput) _engageQaInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendEngageQA(); } });
 
 function openSettings() {
   const activeTab = storage.get('cn_active_tab') || 'northstar';
