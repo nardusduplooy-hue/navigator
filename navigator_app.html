@@ -549,8 +549,11 @@ textarea::placeholder { color: var(--text-muted); }
       <div class="stat-chip"><div class="stat-val" id="stat-module">—</div><div class="stat-lbl">Module</div></div>
       <div class="stat-chip"><div class="stat-val" id="stat-jtbd">All ✓</div><div class="stat-lbl">JTBD</div></div>
     </div>
-    <div class="section-label">Deadlines Countdown</div>
-    <div id="ns-deadlines"></div>
+    <div id="deadlines-accordion-header" onclick="toggleDeadlines()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:0;cursor:pointer;user-select:none;">
+      <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Deadlines Countdown</span>
+      <span id="dl-chevron" style="font-size:18px;color:#ffffff;transition:transform 0.25s;display:inline-block;">›</span>
+    </div>
+    <div id="ns-deadlines" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;"></div>
   </section>
 
   <!-- TAB 2: WORK -->
@@ -1197,44 +1200,19 @@ function renderNorthStar() {
   const dlEl = document.getElementById('ns-deadlines');
   dlEl.innerHTML = '';
   const urgDotColor = { urgent: 'var(--red)', warning: 'var(--amber)', safe: 'var(--green)', past: 'var(--text-muted)' };
-  const items = [...PROGRAMME_DATA.assignments, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).filter(item => {
-    const dt = item.dueDate || item.datetime;
-    return new Date(dt) > new Date();
-  });
-  if (items.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:8px 0;">No upcoming deadlines</div>'; return; }
-  // Accordion wrapper
-  const accordion = document.createElement('div');
-  accordion.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;';
-  // Header row — always visible, shows next deadline
-  const next = items[0];
-  const nextDt = next.dueDate || next.datetime;
-  const nextCd = getCountdown(nextDt);
-  const header = document.createElement('div');
-  header.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--bg-card);cursor:pointer;user-select:none;';
-  header.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${next._isSession ? 'var(--gold)' : urgDotColor[nextCd.urgency]};"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${next.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${formatDate(nextDt)} · ${formatTime(nextDt)}</div></div></div><div style="display:flex;align-items:center;gap:10px;flex-shrink:0;"><span class="countdown ${nextCd.urgency}" style="font-size:13px;">${nextCd.display}</span><span id="dl-chevron" style="font-size:16px;color:var(--text-muted);transition:transform 0.2s;">›</span></div>`;
-  // Body — remaining items, hidden by default
-  const body = document.createElement('div');
-  body.id = 'dl-accordion-body';
-  body.style.cssText = 'max-height:0;overflow:hidden;transition:max-height 0.3s ease;';
-  items.slice(1).forEach(item => {
+  const items = [...PROGRAMME_DATA.assignments, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).filter(item => new Date(item.dueDate||item.datetime) > new Date());
+  if (items.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:10px 4px;">No upcoming deadlines</div>'; return; }
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText = 'border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);overflow:hidden;margin-bottom:12px;';
+  items.forEach((item, i) => {
     const dt = item.dueDate || item.datetime;
     const cd = getCountdown(dt);
     const row = document.createElement('div');
-    row.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--border);background:var(--bg-card);';
+    row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-card);${i > 0 ? 'border-top:1px solid var(--border);' : ''}`;
     row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${item._isSession ? 'var(--gold)' : urgDotColor[cd.urgency]};"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${formatDate(dt)} · ${formatTime(dt)}</div></div></div><span class="countdown ${cd.urgency}" style="font-size:13px;flex-shrink:0;margin-left:10px;">${cd.display}</span>`;
-    body.appendChild(row);
+    wrapper.appendChild(row);
   });
-  // Toggle logic
-  let open = false;
-  header.addEventListener('click', () => {
-    open = !open;
-    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
-    const chev = document.getElementById('dl-chevron');
-    if (chev) chev.style.transform = open ? 'rotate(90deg)' : 'rotate(0deg)';
-  });
-  accordion.appendChild(header);
-  if (items.length > 1) accordion.appendChild(body);
-  dlEl.appendChild(accordion);
+  dlEl.appendChild(wrapper);
 }
 
 function renderWork() {
@@ -1306,6 +1284,15 @@ function filterSessions(period, btn) {
   renderSessions();
 }
 function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) openUrl(s.zoomUrl); }
+
+let _dlOpen = false;
+function toggleDeadlines() {
+  _dlOpen = !_dlOpen;
+  const dlEl = document.getElementById('ns-deadlines');
+  const chev = document.getElementById('dl-chevron');
+  if (dlEl) dlEl.style.maxHeight = _dlOpen ? dlEl.scrollHeight + 400 + 'px' : '0';
+  if (chev) chev.style.transform = _dlOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+}
 
 function switchEngageMode(mode, btn) {
   document.getElementById('engage-tabs').querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active'));
