@@ -673,10 +673,10 @@ textarea::placeholder { color: var(--text-muted); }
     <div style="background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:14px;">
       <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;">How to use Engage</div>
       <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
-        <strong>1. Comment Assistant</strong> — Pick a faculty post, choose your tone, generate 3 comment options. Edit and post manually to LinkedIn.<br>
+        <strong>1. Comment Assistant</strong> — Pick a faculty post, share your own take first, then refine through 3 draft iterations. Post manually to LinkedIn.<br>
         <strong>2. Article Assistant</strong> — Build a LinkedIn article grounded in your MBA frameworks.<br>
-        <strong>3. Ask Navigator</strong> — Ask what to engage with today, get coaching on your voice, or explore angles on any post.<br>
-        <span style="font-size:11px;color:var(--text-muted);">API key required for comment generation and Ask Navigator. Add it via Settings (tap header on Engage or Briefing tab).</span>
+        <strong>3. Questions?</strong> — Go to the <strong>2nd Brain</strong> tab to ask anything about frameworks, concepts, or post angles.<br>
+        <span style="font-size:11px;color:var(--text-muted);">API key required for comment generation. Add it via Settings (tap header on Engage or Briefing tab).</span>
       </div>
     </div>
 
@@ -684,7 +684,6 @@ textarea::placeholder { color: var(--text-muted); }
       <button class="pill-tab active" onclick="switchEngageMode('comment',this)">Comment</button>
       <button class="pill-tab" onclick="switchEngageMode('article',this)">Article</button>
       <button class="pill-tab" onclick="switchEngageMode('metrics',this)">Metrics</button>
-      <button class="pill-tab" onclick="switchEngageMode('ask',this)">Ask Navigator</button>
     </div>
     <div id="engage-comment">
       <div class="section-label">Author</div>
@@ -802,67 +801,35 @@ textarea::placeholder { color: var(--text-muted); }
   <!-- TAB 6: KNOWLEDGE VAULT -->
   <section id="tab-knowledge" class="tab-panel">
 
-    <!-- Second Brain gateway card -->
+    <!-- Second Brain hero card — no buttons -->
     <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:16px;position:relative;overflow:hidden;">
       <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
-      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Second Brain</div>
-      <div style="font-size:17px;font-weight:800;font-family:'Syne',sans-serif;color:#ffffff;margin-bottom:4px;">Knowledge Immortality</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;margin-bottom:14px;">Your expertise compounds inside your head for decades. The Curator turns it into a living, searchable, AI-powered knowledge graph.</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <button onclick="openUrl('https://www.linkedin.com/posts/talirezun_thecurator-secondbrain-knowledgemanagement-activity-7453377168731992064-tbVc')" style="background:#ffffff;color:var(--accent);border:none;border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">Read Tali\u2019s Article →</button>
-        <button onclick="openUrl('https://github.com/talirezun/the-curator')" style="background:rgba(255,255,255,0.15);color:#ffffff;border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">GitHub Repo →</button>
-      </div>
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Second Brain Vault</div>
+      <div style="font-size:17px;font-weight:800;font-family:'Syne',sans-serif;color:#ffffff;margin-bottom:4px;">Ask anything</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">Your knowledge vault is fed by the daily briefing, Kapusta\u2019s work, Tali\u2019s frameworks, and The Curator. Ask it anything about your programme, concepts, or frameworks.</div>
     </div>
 
-    <!-- Assignment prompt -->
-    <div style="background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:14px;">
-      <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;">This week\u2019s mission</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
-        1. Read Tali\u2019s article above.<br>
-        2. Star and study the GitHub repo \u2014 how it\u2019s structured, how the README is written.<br>
-        3. Install The Curator. Drop in one article, one paper, or your own notes. Watch what happens in Obsidian.<br>
-        4. Engage on LinkedIn \u2014 share what surprised you.
-      </div>
-    </div>
-
-    <!-- Knowledge Q&A -->
+    <!-- Knowledge Q&A — the entire interface -->
     <div style="margin-bottom:14px;">
-      <div style="font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;">Ask the Knowledge Vault</div>
       <div class="starter-chips" style="margin-bottom:8px;">
         <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
         <div class="chip" onclick="askKnowledge(this)">Explain Context Engineering</div>
         <div class="chip" onclick="askKnowledge(this)">What is NCTE?</div>
         <div class="chip" onclick="askKnowledge(this)">NEO Era in one paragraph</div>
+        <div class="chip" onclick="askKnowledge(this)">Wolf-Dog-Sheep explained</div>
+        <div class="chip" onclick="askKnowledge(this)">What is Cotruglian Philosophy?</div>
       </div>
-      <div class="qa-messages" id="kv-qa-messages" style="min-height:60px;">
-        <div class="msg-nav"><strong>Navigator</strong> ready. Ask me anything about programme concepts, frameworks, or key ideas.</div>
+      <div class="qa-messages" id="kv-qa-messages" style="min-height:80px;">
+        <div class="msg-nav"><strong>Second Brain Vault</strong> ready. Ask me anything about your programme, frameworks, Kapusta\u2019s work, or Tali\u2019s methodology.</div>
       </div>
       <div style="display:flex;gap:8px;margin-top:8px;">
-        <textarea id="kv-qa-input" rows="2" placeholder="Ask about any concept, framework, or idea from the programme..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
+        <textarea id="kv-qa-input" rows="2" placeholder="Ask about any concept, framework, or idea..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
         <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
       </div>
       <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Powered by Claude Sonnet 4.6 · Requires API key in Settings</div>
     </div>
-
-    <!-- Knowledge Vault library -->
-    <div style="font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Knowledge Vault</div>
-    <div class="kv-search-bar">
-      <svg class="kv-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-      </svg>
-      <input type="text" id="kv-search" placeholder="Search entries or tags..." oninput="filterKnowledge()">
-    </div>
-    <div class="kv-filters" id="kv-filters">
-      <button class="kv-filter active" data-domain="all" onclick="setKvDomain(this)">All</button>
-      <button class="kv-filter" data-domain="AI/Tech" onclick="setKvDomain(this)">AI / Tech</button>
-      <button class="kv-filter" data-domain="Business/Strategy" onclick="setKvDomain(this)">Business / Strategy</button>
-      <button class="kv-filter" data-domain="Personal Growth" onclick="setKvDomain(this)">Personal Growth</button>
-      <button class="kv-filter" data-domain="Programme" onclick="setKvDomain(this)">Programme</button>
-    </div>
-    <div class="kv-count" id="kv-count"></div>
-    <div id="kv-list"></div>
   </section>
 
 </main>
@@ -1534,7 +1501,6 @@ function switchEngageMode(mode, btn) {
   document.getElementById('engage-comment').style.display = mode === 'comment' ? 'block' : 'none';
   document.getElementById('engage-article').style.display = mode === 'article' ? 'block' : 'none';
   document.getElementById('engage-metrics').style.display = mode === 'metrics' ? 'block' : 'none';
-  document.getElementById('engage-ask').style.display = mode === 'ask' ? 'block' : 'none';
   if (mode === 'metrics') renderMetrics();
 }
 
