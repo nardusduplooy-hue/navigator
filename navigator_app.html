@@ -801,6 +801,53 @@ textarea::placeholder { color: var(--text-muted); }
 
   <!-- TAB 6: KNOWLEDGE VAULT -->
   <section id="tab-knowledge" class="tab-panel">
+
+    <!-- Second Brain gateway card -->
+    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:16px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Second Brain</div>
+      <div style="font-size:17px;font-weight:800;font-family:'Syne',sans-serif;color:#ffffff;margin-bottom:4px;">Knowledge Immortality</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;margin-bottom:14px;">Your expertise compounds inside your head for decades. The Curator turns it into a living, searchable, AI-powered knowledge graph.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button onclick="openUrl('https://www.linkedin.com/posts/talirezun_thecurator-secondbrain-knowledgemanagement-activity-7453377168731992064-tbVc')" style="background:#ffffff;color:var(--accent);border:none;border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">Read Tali\u2019s Article →</button>
+        <button onclick="openUrl('https://github.com/talirezun/the-curator')" style="background:rgba(255,255,255,0.15);color:#ffffff;border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">GitHub Repo →</button>
+      </div>
+    </div>
+
+    <!-- Assignment prompt -->
+    <div style="background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:14px;">
+      <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;">This week\u2019s mission</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
+        1. Read Tali\u2019s article above.<br>
+        2. Star and study the GitHub repo \u2014 how it\u2019s structured, how the README is written.<br>
+        3. Install The Curator. Drop in one article, one paper, or your own notes. Watch what happens in Obsidian.<br>
+        4. Engage on LinkedIn \u2014 share what surprised you.
+      </div>
+    </div>
+
+    <!-- Knowledge Q&A -->
+    <div style="margin-bottom:14px;">
+      <div style="font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;">Ask the Knowledge Vault</div>
+      <div class="starter-chips" style="margin-bottom:8px;">
+        <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
+        <div class="chip" onclick="askKnowledge(this)">Explain Context Engineering</div>
+        <div class="chip" onclick="askKnowledge(this)">What is NCTE?</div>
+        <div class="chip" onclick="askKnowledge(this)">NEO Era in one paragraph</div>
+      </div>
+      <div class="qa-messages" id="kv-qa-messages" style="min-height:60px;">
+        <div class="msg-nav"><strong>Navigator</strong> ready. Ask me anything about programme concepts, frameworks, or key ideas.</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <textarea id="kv-qa-input" rows="2" placeholder="Ask about any concept, framework, or idea from the programme..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
+        <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Powered by Claude Sonnet 4.6 · Requires API key in Settings</div>
+    </div>
+
+    <!-- Knowledge Vault library -->
+    <div style="font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Knowledge Vault</div>
     <div class="kv-search-bar">
       <svg class="kv-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
@@ -843,7 +890,7 @@ textarea::placeholder { color: var(--text-muted); }
   </button>
   <button class="nav-btn" data-tab="knowledge" onclick="switchTab('knowledge',this)">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 5.5-3 7H8c-.5-1.5-3-3.5-3-7a7 7 0 0 1 7-7z"/><path d="M9 21h6M10 17h4"/></svg>
-    <span class="nav-label">Knowledge</span>
+    <span class="nav-label">2nd Brain</span>
   </button>
 </nav>
 
@@ -1059,7 +1106,8 @@ const PROGRAMME_DATA = {
         { title: "Vanguard MBA — Intent — Chasing Jarvis", url: "https://www.linkedin.com/posts/talirezun_vanguardmba-intent-chasingjarvis-activity-7445030971264917504-eIEl" },
         { title: "You Built Something — Now What?", url: "https://www.linkedin.com/posts/talirezun_%F0%9D%97%AC%F0%9D%97%BC%F0%9D%98%82-%F0%9D%97%AF%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B9%F0%9D%98%81-%F0%9D%98%80%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B4-%F0%9D%97%9C%F0%9D%98%81-activity-7445785130864103424-qtC7" },
         { title: "Axios npm Supply Chain Alert — Check Your Repos", url: "https://www.linkedin.com/posts/talirezun_chasingjarvis-vanguardmba-cotrugli-share-7445132124875206656-8Vb9" },
-        { title: "Dr Tali — Latest Post", url: "https://www.linkedin.com/feed/update/urn:li:activity:7452253274394664960/" }
+        { title: "Dr Tali — Latest Post", url: "https://www.linkedin.com/feed/update/urn:li:activity:7452253274394664960/" },
+        { title: "Building Knowledge Immortality Through the Second Brain Architecture and The Curator App", url: "https://www.linkedin.com/posts/talirezun_thecurator-secondbrain-knowledgemanagement-activity-7453377168731992064-tbVc" }
       ]
     }
   },
@@ -1344,6 +1392,71 @@ function switchEngageMode(mode, btn) {
   document.getElementById('engage-metrics').style.display = mode === 'metrics' ? 'block' : 'none';
   document.getElementById('engage-ask').style.display = mode === 'ask' ? 'block' : 'none';
   if (mode === 'metrics') renderMetrics();
+}
+
+function askKnowledge(el) {
+  const input = document.getElementById('kv-qa-input');
+  input.value = el.textContent;
+  sendKvQA();
+}
+
+async function sendKvQA() {
+  const input = document.getElementById('kv-qa-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  const messages = document.getElementById('kv-qa-messages');
+  messages.innerHTML += `<div class="msg-user">${msg}</div>`;
+  input.value = '';
+  const loader = document.createElement('div');
+  loader.className = 'msg-nav';
+  loader.innerHTML = '<span class="spinner"></span> Thinking...';
+  messages.appendChild(loader);
+  messages.scrollTop = messages.scrollHeight;
+  const apiKey = storage.get('cn_api_key');
+  if (!apiKey) {
+    loader.style.color = 'var(--red)';
+    loader.textContent = 'Add your Anthropic API key in Settings first (tap the header).';
+    return;
+  }
+  // Build vault context from KNOWLEDGE_VAULT entries
+  const vaultContext = (PROGRAMME_DATA.KNOWLEDGE_VAULT || []).map(e =>
+    `**${e.title}** (${e.domain})\n${(e.keyPoints || []).join(' | ')}`
+  ).join('\n\n');
+
+  const systemPrompt = `You are the Cotrugli Navigator Knowledge Assistant for ${PROGRAMME_DATA.student}, a student in the ${PROGRAMME_DATA.programme}.
+
+You have access to the student's Knowledge Vault — a curated library of programme concepts and frameworks. Answer questions clearly and concisely, grounded in the vault content and programme context.
+
+Key faculty:
+- Dr. Tali Režun (he/him): Context Engineering, Three-Phase Methodology, Non-Developer Playbook, The Curator, Second Brain, Chasing Jarvis course lead
+- Dražen Kapusta: NEO Era, NEO World, Centaur Doctrine, Wolf-Sheep-Sheepdog, Business as Craft, NCTE, Vanguard Leadership
+
+Current module: ${PROGRAMME_DATA.currentModule.name}
+
+Knowledge Vault:
+${vaultContext}
+
+Keep answers concise and practical. Connect concepts to the student's programme context where relevant.`;
+
+  try {
+    const history = storage.getJSON('cn_kv_qa_history') || [];
+    history.push({ role: 'user', content: msg });
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: systemPrompt, messages: history.slice(-10) })
+    });
+    const data = await response.json();
+    if (data.error) throw new Error(data.error.message);
+    const reply = data.content[0].text;
+    history.push({ role: 'assistant', content: reply });
+    storage.setJSON('cn_kv_qa_history', history.slice(-20));
+    loader.className = 'msg-nav';
+    loader.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+  } catch(err) {
+    loader.className = 'msg-nav'; loader.style.color = 'var(--red)'; loader.textContent = 'Error: ' + err.message;
+  }
+  messages.scrollTop = messages.scrollHeight;
 }
 
 function askEngageStarter(el) {
@@ -1738,6 +1851,8 @@ const _qaInput = document.getElementById('qa-input');
 if (_qaInput) _qaInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendQA(); } });
 const _engageQaInput = document.getElementById('engage-qa-input');
 if (_engageQaInput) _engageQaInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendEngageQA(); } });
+const _kvQaInput = document.getElementById('kv-qa-input');
+if (_kvQaInput) _kvQaInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendKvQA(); } });
 
 function openSettings() {
   const activeTab = storage.get('cn_active_tab') || 'northstar';
