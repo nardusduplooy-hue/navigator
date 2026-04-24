@@ -97,10 +97,16 @@ def build_briefing():
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
     lines.append("📚 <b>BUSINESS AGILITY MODULE</b>")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Fri 24 April — 10:30 AM CAT</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Sat 25 April — 09:00 AM CAT</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Sun 26 April — 09:00 AM CAT</a>")
     lines.append("Meeting ID: 814 2566 0383 | Passcode: agilityVAN")
+    lines.append("")
+    lines.append("<b>Reads, Podcasts and Videos on Business Agility:</b>")
+    lines.append("<a href='https://cotrugli.online/courses/business-agility-vanguard/'>→ Business Agility course portal</a>")
+    lines.append("<a href='https://youtu.be/l73yAdQOU84'>→ Watch: What is Flight Levels?</a>")
+    lines.append("<a href='https://stream.redcircle.com/episodes/1f01dc3c-14e2-49fd-a97e-ba49bbbe0c92/stream.mp3'>→ Podcast episode</a>")
+    lines.append("<a href='https://cotrugli.online/wp-content/uploads/2025/03/Essential-Kanban-Condensed.pdf'>→ Essential Kanban Condensed (PDF)</a>")
+    lines.append("<a href='https://youtu.be/6JtRPjTMEWQ'>→ Watch: Klaus Leopold — Flight Levels in Action</a>")
     lines.append("")
 
     # NEXT ZOOM
@@ -169,14 +175,12 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("<b>🎯 Chasing Jarvis | Module 3 Homework</b>")
+        lines.append("<b>🎯 Module 3 Homework</b>")
         lines.append("")
         lines.append("Time to build something real, people! 🚀")
-        lines.append("")
         lines.append("Your task: use an AI coding tool of your choice — Google AI Studio, Cursor, Claude Code, Windsurf, Copilot — whatever feels right for you — and build a simple app or game.")
         lines.append("")
         lines.append("<b>Two paths:</b>")
-        lines.append("")
         lines.append("1. Already have your MVP idea? → Build a first working version and give us a sneak peek 👀")
         lines.append("2. No MVP yet? → Build something fun! A game, a tool, anything that works and runs in a browser 🎮 that you can share with us.")
         lines.append("")
@@ -186,20 +190,22 @@ def build_briefing():
         lines.append("")
         lines.append("Let's see what you've got! 💪")
         lines.append("")
-        lines.append("<b>Chasing Jarvis Module Pre-reading and podcast:</b>")
-        lines.append("<a href='https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701'>→ From Prompts to Precision: AI-Generated Research Podcast Discussion | From Lab to Life</a>")
+        lines.append("<b>🏆 Chasing Jarvis Weekend Challenge:</b>")
+        lines.append("Dr. Tali Režun has published a new article and issued a 3-step mission for the week.")
         lines.append("")
-
-    # MODULE 3 TOOLS
-    lines.append("Explore, break things, and decide what goes into YOUR personal AI stack.")
-    lines.append("")
-
-    # ROADMAP.SH
-    lines.append("🗺️ <b>Supplementary Resources (Recommended):</b>")
-    lines.append("<a href='https://www.markdownguide.org/'>→ Markdown Guide — Complete reference for markdown syntax</a>")
-    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7452253274394664960/?originTrackingId=GrYHRfBdZszWet7f1g6mRQ%3D%3D'>→ Claude Opus 4.7 — My Take After Week of Real Testing — Dr. Tali Režun</a>")
-    lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7453015701977493504/'>→ Building Knowledge Immortality Through the Second Brain Architecture and The Curator — Dr. Tali Režun</a>")
-    lines.append("")
+        lines.append("<b>Step 1 — Read the article</b>")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_thecurator-secondbrain-knowledgemanagement-activity-7453377168731992064-tbVc'>→ Building Knowledge Immortality Through the Second Brain Architecture and The Curator</a>")
+        lines.append("Your expertise is compounding inside your head for decades. This article explains how to make sure it survives.")
+        lines.append("")
+        lines.append("<b>Step 2 — Study the GitHub repo</b>")
+        lines.append("<a href='https://github.com/talirezun/the-curator'>→ github.com/talirezun/the-curator</a>")
+        lines.append("Don't just clone it. Study it. Add a Star. Look at how the README is written, how the repo is structured, how an open source project is built in public.")
+        lines.append("")
+        lines.append("<b>Step 3 — Install The Curator and start your Second Brain</b>")
+        lines.append("One command installs everything. Use the free Gemini API tier. Drop in one article, one paper, or your own session notes. Watch what happens in Obsidian.")
+        lines.append("")
+        lines.append("<b>Then engage on LinkedIn</b> — drop your thoughts in the comments on the post above.")
+        lines.append("")
 
     # KAPUSTA
     lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta reading:</b>")

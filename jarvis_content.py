@@ -138,6 +138,33 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-25": {
+        "step": "Business Agility Day 2 — Kanban & Flight Levels",
+        "title": "Where is your build stuck?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Business Agility Day 2. Use Kanban thinking to find your homework bottleneck.",
+        "question": (
+            "Business Agility Day 2. Yesterday you looked for the connection between the module and your build. "
+            "Today go one level deeper: Kanban and Flight Levels are not just project management tools — "
+            "they are a way of seeing where work gets stuck in any system. "
+            "Look at your homework build right now. Where is it stuck? "
+            "Not technically — systemically. "
+            "Is the bottleneck your clarity of vision, your ability to iterate, or your willingness to ship something imperfect? "
+            "Name it using the language from yesterday's session."
+        ),
+        "model_answer": (
+            "Every build has a bottleneck. Most builders blame the tool when the real constraint is upstream — "
+            "in how work is defined, prioritised, or handed off to the next stage. "
+            "Kanban makes this visible. A card that doesn't move is not a lazy developer — "
+            "it is a signal that something is unclear, blocked, or waiting for a decision. "
+            "Apply that lens to your homework: if your build isn't progressing, "
+            "the question is not 'how do I code this?' It is 'what decision am I avoiding?' "
+            "Flight Levels adds another layer — are you stuck at the task level "
+            "when the real problem is at the coordination level? "
+            "The most common homework blocker is not technical. "
+            "It is that the builder hasn't decided what done looks like."
+        ),
+    },
     "2026-04-24": {
         "step": "Module 3 Homework — Business Agility Day 1",
         "title": "Two things, one lesson",
@@ -905,9 +932,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-world-its-waiting-you-drazen-kapusta-v8wje/?trackingId=UDsE2BrQYntV%2FxsTUu9MXA%3D%3D",
-    "title": "The NEO World — It's Not Waiting for You",
-    "description": "Kapusta on urgency, agency, and what it means to lead in a world that will not pause for you to catch up.",
+    "url": "https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=ee4W08CP9h6QG7kIliCIPg%3D%3D",
+    "title": "Benedetto Cotrugli — Cotrugli Business School",
+    "description": "Kapusta on Benedetto Cotrugli — the merchant philosopher whose principles still define what it means to lead with integrity in the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -917,7 +944,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Meta releases open-source AI coding assistant as competition with OpenAI and Anthropic intensifies",
+    "headline": "Salesforce and Google deepen AI agent partnership as enterprise automation race accelerates",
     "source": "VentureBeat AI",
 }
 
