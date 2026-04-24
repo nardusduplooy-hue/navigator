@@ -718,14 +718,25 @@ textarea::placeholder { color: var(--text-muted); }
         <button class="sel-btn" data-val="Personal" onclick="selectBtn(this,'tone-selector')">Personal</button>
         <button class="sel-btn" data-val="Questioning" onclick="selectBtn(this,'tone-selector')">Questioning</button>
       </div>
-      <div style="margin-top:14px;padding:10px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;">
-        <div style="font-size:11px;font-weight:600;color:#92400e;margin-bottom:3px;">⚠ Participation requirement</div>
-        <div style="font-size:11px;color:#78350f;line-height:1.5;">Comments will not be generated unless you complete at least <strong>3 iterations</strong> — refine your input, change tone, or try a different post before generating a final draft.</div>
-        <div style="margin-top:6px;font-size:11px;color:#92400e;">Iterations this session: <strong id="iteration-count">0</strong> / 3</div>
+
+      <!-- Step 1 — mandatory opinion before any generation -->
+      <div style="margin-top:14px;padding:12px 14px;background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--radius-sm);">
+        <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;">Step 1 — Your take first</div>
+        <div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;line-height:1.5;">Read the post. What do you actually think? Your opinion must come first — Navigator drafts from your thinking, not instead of it.</div>
+        <textarea id="user-opinion" rows="3" placeholder="Share your own take on this post before Navigator generates anything..." style="width:100%;resize:none;padding:10px 12px;border:1px solid var(--accent-mid);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:#ffffff;"></textarea>
       </div>
-      <button class="btn btn-primary btn-full" style="margin-top:14px;" onclick="generateComments()">Generate Comments</button>
+
+      <!-- Draft history — visible iterations -->
+      <div id="draft-history" style="margin-top:14px;"></div>
+
+      <!-- Refinement input — shown after first draft -->
+      <div id="refine-section" style="display:none;margin-top:10px;">
+        <div style="font-size:11px;font-weight:600;color:var(--text-dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Refine Draft <span id="refine-label">2</span></div>
+        <textarea id="refine-input" rows="2" placeholder="Tell Navigator what to change — e.g. 'more personal', 'focus on NEO framework', 'shorter and punchier'..." style="width:100%;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
+      </div>
+
+      <button class="btn btn-primary btn-full" id="generate-btn" style="margin-top:12px;" onclick="generateComments()">Generate Draft 1</button>
       <div id="comment-loading" style="display:none;"><div class="loading-row"><span class="spinner"></span> Navigator is drafting comments...</div></div>
-      <div id="comment-results" style="margin-top:14px;"></div>
     </div>
     <div id="engage-article" style="display:none;">
       <div class="section-label">Topic / Module Theme</div>
@@ -1437,37 +1448,165 @@ function toggleFramework(btn) { btn.classList.toggle('active'); }
 
 async function generateComments() {
   const articleText = document.getElementById('article-input').value.trim();
-  if (!articleText) { showToast('Paste an article first'); return; }
-  const author = document.querySelector('#author-selector .sel-btn.active')?.dataset.val || 'Other';
-  const tone = document.querySelector('#tone-selector .sel-btn.active')?.dataset.val || 'Analytical';
-
-  // Iteration tracking
-  if (typeof window._engageIterations === 'undefined') window._engageIterations = 0;
-  window._engageIterations++;
-  const iterEl = document.getElementById('iteration-count');
-  if (iterEl) iterEl.textContent = Math.min(window._engageIterations, 3);
-
-  if (window._engageIterations < 3) {
-    document.getElementById('comment-results').innerHTML = `<div class="card" style="background:#fffbeb;border:1px solid #fde68a;"><div style="font-size:13px;font-weight:600;color:#92400e;">Iteration ${window._engageIterations} of 3</div><div style="font-size:12px;color:#78350f;margin-top:6px;line-height:1.5;">Keep refining — try adjusting your tone, selecting a different post, or rewording your input. Comments will generate on your 3rd iteration.</div></div>`;
+  if (!articleText) { showToast('Select a post or paste article text first'); return; }
+  const userOpinion = document.getElementById('user-opinion').value.trim();
+  if (_draftIteration === 0 && !userOpinion) {
+    showToast('Share your own take first — Step 1 is required');
+    document.getElementById('user-opinion').focus();
+    document.getElementById('user-opinion').style.border = '2px solid var(--red)';
+    setTimeout(() => { document.getElementById('user-opinion').style.border = '1px solid var(--accent-mid)'; }, 2000);
     return;
   }
-  document.getElementById('comment-loading').style.display = 'block';
-  document.getElementById('comment-results').innerHTML = '';
   const apiKey = storage.get('cn_api_key');
-  if (!apiKey) { document.getElementById('comment-loading').style.display = 'none'; showToast('Add API key in Settings first'); return; }
-  const systemPrompt = `You are the Cotrugli Navigator Social Media Engagement Subagent for ${PROGRAMME_DATA.student}, ${PROGRAMME_DATA.role} in the ${PROGRAMME_DATA.programme}.\n\nFACULTY:\n- DR. TALI REŽUN: Context Engineering, Centaur Doctrine, Non-Developer's Playbook, Three-Phase Methodology.\n- DRAŽEN KAPUSTA: NEO World, NCTE trust layers, Wolf-Sheep-Sheepdog, Business as Craft.\n\nCOMPLIANCE (NON-NEGOTIABLE): Draft only. No quotes over 15 words. No definitive claims without certainty. No negative statements about named individuals. Risk classify every output: LOW/MEDIUM/HIGH. Do not generate HIGH risk content.\n\nRespond ONLY with valid JSON. No preamble, no markdown fences.`;
-  const userPrompt = `Article by ${author}, tone: ${tone}.\n\nArticle:\n${articleText.substring(0,2000)}\n\nReturn JSON:\n{"classification":"support|community|question|opinion","risk_level":"low|medium|high","risk_notes":"brief note","short":"2-3 sentence comment","medium":"1-2 paragraph comment","long":"3-4 paragraph analytical comment","topic_tags":["tag1","tag2"]}`;
+  if (!apiKey) { showToast('Add your API key in Settings first'); return; }
+
+  const author = document.querySelector('#author-selector .sel-btn.active')?.dataset.val || 'Other';
+  const tone = document.querySelector('#tone-selector .sel-btn.active')?.dataset.val || 'Analytical';
+  const refineInput = document.getElementById('refine-input');
+  const refineText = refineInput ? refineInput.value.trim() : '';
+
+  _draftIteration++;
+  const draftNum = _draftIteration;
+
+  const btn = document.getElementById('generate-btn');
+  btn.disabled = true;
+  btn.textContent = `Generating Draft ${draftNum}...`;
+  document.getElementById('comment-loading').style.display = 'block';
+
+  if (draftNum === 1) {
+    _draftHistory = [];
+    const userMsg = `Post/article:\n"${articleText}"\n\nMy own take on this post: "${userOpinion}"\n\nAuthor: ${author}\nTone: ${tone}\n\nUsing my take as the foundation, generate 3 comment options (short, medium, long) that reflect my thinking in my voice. Return valid JSON with keys: short, medium, long, topic_tags, risk_level, risk_notes, classification.`;
+    _draftHistory.push({ role: 'user', content: userMsg });
+  } else {
+    const refineMsg = refineText
+      ? `Refine the comments based on this feedback: "${refineText}". Keep the same JSON format.`
+      : `Refine and improve the comments. Keep the same JSON format.`;
+    _draftHistory.push({ role: 'user', content: refineMsg });
+    if (refineInput) refineInput.value = '';
+  }
+
+  const facultyContext = author === 'Kapusta'
+    ? `Dražen Kapusta writes about: NEO Era, NCTE trust layers, Wolf-Sheep-Sheepdog, Business as Craft, Vanguard. Use these frameworks.`
+    : author === 'Tali'
+    ? `Dr. Tali Režun writes about: Context Engineering, Three-Phase Methodology, Non-Developer Playbook, Chasing Jarvis. Reference these themes.`
+    : `Unknown author — engage authentically with the content.`;
+
+  const systemPrompt = `You are a LinkedIn engagement coach for ${PROGRAMME_DATA.student}, ${PROGRAMME_DATA.role} in the COTRUGLI Vanguard MBA.
+
+${facultyContext}
+
+Generate comments that reflect genuine engagement — not generic praise. Student voice: direct, curious, grounded in MBA frameworks.
+
+COMPLIANCE: Never quote more than 15 words. No negative statements. Draft only — student posts manually.
+
+Respond ONLY with valid JSON:
+{
+  "classification": "support|community|question|opinion",
+  "risk_level": "low|medium|high",
+  "risk_notes": "...",
+  "short": "2-3 sentence comment",
+  "medium": "1-2 paragraph comment",
+  "long": "3-4 paragraph analytical comment",
+  "topic_tags": ["tag1", "tag2"]
+}`;
+
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', { method:'POST', headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}, body:JSON.stringify({ model:'claude-sonnet-4-6', max_tokens:1200, system:systemPrompt, messages:[{role:'user',content:userPrompt}] }) });
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 1200, system: systemPrompt, messages: _draftHistory })
+    });
     const data = await response.json();
     if (data.error) throw new Error(data.error.message);
-    const result = JSON.parse(data.content[0].text.replace(/```json|```/g,'').trim());
-    if (result.risk_level === 'high') { document.getElementById('comment-results').innerHTML = `<div class="card card-urgent"><div style="font-size:13px;color:var(--red);font-weight:600;">⚠ High Risk Content</div><div style="font-size:12px;color:var(--text-dim);margin-top:6px;">${result.risk_notes}</div></div>`; return; }
-    const riskClass = result.risk_level === 'low' ? 'risk-low' : 'risk-medium';
-    const types = [{key:'short',label:'Short (2–3 lines)',id:'c-short'},{key:'medium',label:'Medium (1–2 paragraphs)',id:'c-medium'},{key:'long',label:'Long (analytical)',id:'c-long'}];
-    document.getElementById('comment-results').innerHTML = types.map(t => `<div class="comment-card"><div class="comment-card-header"><span class="comment-type-label">${t.label}</span><span class="risk-badge ${riskClass}">${result.risk_level}</span></div><div class="comment-text" id="${t.id}">${result[t.key]}</div><div style="display:flex;flex-wrap:wrap;gap:6px;">${(result.topic_tags||[]).map(tag=>`<span style="font-size:10px;color:var(--accent);background:var(--accent-light);border:1px solid var(--border-accent);padding:2px 8px;border-radius:20px;">${tag}</span>`).join('')}</div><div style="display:flex;gap:8px;margin-top:10px;"><button class="btn btn-primary btn-sm" style="flex:1;" onclick="copyText('${t.id}')">Copy</button><button class="btn btn-ghost btn-sm" style="flex:1;" onclick="logPosted('${t.label}','${t.id}')">Log as Posted</button></div></div>`).join('');
-  } catch(err) { document.getElementById('comment-results').innerHTML = `<div class="card card-urgent"><div style="font-size:13px;color:var(--red);">Error: ${err.message}</div></div>`; }
-  finally { document.getElementById('comment-loading').style.display = 'none'; }
+    const raw = data.content[0].text.replace(/```json|```/g, '').trim();
+    const result = JSON.parse(raw);
+
+    // Add assistant reply to history
+    _draftHistory.push({ role: 'assistant', content: data.content[0].text });
+
+    // Render this draft into the history
+    renderDraft(draftNum, result, tone);
+
+    // Update UI state
+    document.getElementById('comment-loading').style.display = 'none';
+    const refineSection = document.getElementById('refine-section');
+
+    if (draftNum < 3) {
+      // Show refine section
+      refineSection.style.display = 'block';
+      document.getElementById('refine-label').textContent = draftNum + 1;
+      btn.textContent = `Generate Draft ${draftNum + 1}`;
+      btn.disabled = false;
+    } else {
+      // 3 drafts done — hide refine, change button to reset
+      refineSection.style.display = 'none';
+      btn.textContent = 'Start Over';
+      btn.onclick = resetComments;
+      btn.disabled = false;
+      btn.style.background = 'var(--text-dim)';
+      showToast('3 drafts complete — copy your best version');
+    }
+
+  } catch(err) {
+    document.getElementById('comment-loading').style.display = 'none';
+    showToast('Error: ' + err.message);
+    btn.textContent = draftNum === 1 ? 'Generate Draft 1' : `Generate Draft ${draftNum}`;
+    btn.disabled = false;
+    _draftIteration--;
+  }
+}
+
+function renderDraft(num, result, tone) {
+  const history = document.getElementById('draft-history');
+  const isLast = num === 3;
+  const riskColor = result.risk_level === 'high' ? 'var(--red)' : result.risk_level === 'medium' ? 'var(--amber)' : 'var(--green)';
+
+  const draftEl = document.createElement('div');
+  draftEl.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:14px;';
+  draftEl.innerHTML = `
+    <div style="background:var(--accent);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.06em;">Draft ${num}</span>
+      <span style="font-size:10px;color:rgba(255,255,255,0.7);">${tone} · <span style="color:${riskColor};">Risk: ${result.risk_level}</span></span>
+    </div>
+    ${result.risk_level === 'high' ? `<div style="padding:12px 14px;background:#fef2f2;color:var(--red);font-size:12px;">⚠ High risk: ${result.risk_notes}</div>` : `
+    <div style="padding:12px 14px;border-bottom:1px solid var(--border);">
+      <div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;">Short (2–3 sentences)</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.6;">${result.short}</div>
+      ${isLast ? `<button class="btn btn-primary" style="margin-top:8px;padding:6px 14px;font-size:12px;" onclick="copyText(this,'${result.short.replace(/'/g,"\\'")}')">Copy</button>` : ''}
+    </div>
+    <div style="padding:12px 14px;border-bottom:1px solid var(--border);">
+      <div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;">Medium (1–2 paragraphs)</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.6;">${result.medium}</div>
+      ${isLast ? `<button class="btn btn-primary" style="margin-top:8px;padding:6px 14px;font-size:12px;" onclick="copyText(this,'${result.medium.replace(/'/g,"\\'")}')">Copy</button>` : ''}
+    </div>
+    <div style="padding:12px 14px;">
+      <div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px;">Long (3–4 paragraphs)</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.6;">${result.long}</div>
+      ${isLast ? `<button class="btn btn-primary" style="margin-top:8px;padding:6px 14px;font-size:12px;" onclick="copyText(this,'${result.long.replace(/'/g,"\\'")}')">Copy</button><button class="btn" style="margin-top:8px;margin-left:8px;padding:6px 14px;font-size:12px;border:1px solid var(--border);" onclick="logEngagement('${result.topic_tags?.join(',') || ''}')">Log as Posted</button>` : ''}
+    </div>
+    `}`;
+  history.appendChild(draftEl);
+  draftEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function copyText(btn, text) {
+  navigator.clipboard.writeText(text).then(() => { btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 2000); });
+}
+
+function resetComments() {
+  _draftIteration = 0;
+  _draftHistory = [];
+  document.getElementById('draft-history').innerHTML = '';
+  document.getElementById('refine-section').style.display = 'none';
+  const btn = document.getElementById('generate-btn');
+  btn.textContent = 'Generate Draft 1';
+  btn.onclick = generateComments;
+  btn.disabled = false;
+  btn.style.background = '';
+  const refineInput = document.getElementById('refine-input');
+  if (refineInput) refineInput.value = '';
+  const opinionInput = document.getElementById('user-opinion');
+  if (opinionInput) opinionInput.value = '';
 }
 
 async function generateArticle() {
