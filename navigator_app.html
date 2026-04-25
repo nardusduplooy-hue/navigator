@@ -2114,6 +2114,7 @@ function filterSessions(period, btn) {
 }
 function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) { window.location.href = s.zoomUrl; } }
 
+let _dlOpen = false;
 let _coursesOpen = false;
 function toggleCourses() {
   _coursesOpen = !_coursesOpen;
