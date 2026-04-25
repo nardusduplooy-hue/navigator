@@ -1976,7 +1976,7 @@ function filterSessions(period, btn) {
   btn.classList.add('active');
   renderSessions();
 }
-function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) openUrl(s.zoomUrl); }
+function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) { window.location.href = s.zoomUrl; } }
 
 let _dlOpen = false;
 function toggleDeadlines() {
@@ -2480,7 +2480,7 @@ function clearQAHistory() {
   closeSettings(); showToast('Q&A history cleared');
 }
 
-function openUrl(url) { if (url && url !== '#') window.open(url, '_blank'); }
+function openUrl(url) { if (url && url !== '#') { try { window.open(url, '_blank'); } catch(e) { window.location.href = url; } } }
 function showToast(msg) {
   const t = document.createElement('div');
   t.textContent = msg;
