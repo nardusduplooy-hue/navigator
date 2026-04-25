@@ -2459,7 +2459,7 @@ if (_kvQaInput) _kvQaInput.addEventListener('keydown', e => { if (e.key === 'Ent
 
 function openSettings() {
   const activeTab = storage.get('cn_active_tab') || 'northstar';
-  if (activeTab !== 'engage' && activeTab !== 'briefing') return;
+  if (activeTab !== 'engage' && activeTab !== 'knowledge') return;
   document.getElementById('s-api-key').value = storage.get('cn_api_key') || '';
   document.getElementById('s-gh-token').value = storage.get('cn_github_token') || '';
   document.getElementById('s-gist-id').value = storage.get('cn_gist_id') || '';
