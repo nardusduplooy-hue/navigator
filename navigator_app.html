@@ -667,18 +667,20 @@ textarea::placeholder { color: var(--text-muted); }
 
   <!-- TAB 4: ENGAGE -->
   <section id="tab-engage" class="tab-panel">
-    <div class="engage-disclaimer">✦ Draft only — you review and post manually · No automated posting</div>
 
-    <!-- Orientation card — always visible -->
-    <div style="background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:14px;">
-      <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;">How to use Engage</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
-        <strong>1. Comment Assistant</strong> — Pick a faculty post, share your own take first, then refine through 3 draft iterations. Post manually to LinkedIn.<br>
-        <strong>2. Article Assistant</strong> — Build a LinkedIn article grounded in your MBA frameworks.<br>
-        <strong>3. Questions?</strong> — Go to the <strong>2nd Brain</strong> tab to ask anything about frameworks, concepts, or post angles.<br>
-        <span style="font-size:11px;color:var(--text-muted);">API key required for comment generation. Add it via Settings (tap header on Engage or Briefing tab).</span>
+    <!-- Orientation hero card — blue gradient, always visible -->
+    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">How to use Engage</div>
+      <div style="font-size:13px;color:#ffffff;line-height:1.65;">
+        <strong style="color:#ffffff;">1. Comment Assistant</strong> — Pick a faculty post, share your own take first, then refine through 3 draft iterations. Post manually to LinkedIn.<br>
+        <strong style="color:#ffffff;">2. Article Assistant</strong> — Build a LinkedIn article grounded in your MBA frameworks.<br>
+        <strong style="color:#ffffff;">3. Questions?</strong> — Go to the <strong style="color:#ffffff;">2nd Brain</strong> tab to ask anything about frameworks, concepts, or post angles.
       </div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:8px;">API key required. Add it via Settings (tap header on Engage or Briefing tab).</div>
     </div>
+
+    <div class="engage-disclaimer" style="margin-top:10px;">✦ Draft only — you review and post manually · No automated posting</div>
 
     <div class="pill-tabs" id="engage-tabs">
       <button class="pill-tab active" onclick="switchEngageMode('comment',this)">Comment</button>
