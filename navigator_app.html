@@ -518,8 +518,26 @@ textarea::placeholder { color: var(--text-muted); }
 .post-item-title { font-size: 12px; color: var(--text); line-height: 1.4; flex: 1; }
 .post-item-arrow { color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
 .post-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
-.post-btn-open { font-size: 10px; color: var(--text-muted); padding: 3px 8px; border: 0.5px solid var(--border); border-radius: 20px; background: none; cursor: pointer; }
-.post-btn-select { font-size: 10px; color: var(--accent); padding: 3px 8px; border: 0.5px solid var(--border-accent); border-radius: 20px; background: var(--accent-light); cursor: pointer; font-weight: 600; }
+.course-row {
+  display:flex;align-items:center;gap:12px;
+  padding:10px 16px;border-bottom:0.5px solid var(--border);
+  cursor:pointer;transition:background 0.15s;
+}
+.course-row:last-child { border-bottom:none; }
+.course-row:active { background:var(--accent-light); }
+.course-check {
+  width:22px;height:22px;border-radius:50%;
+  background:var(--accent);color:#ffffff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;flex-shrink:0;
+}
+.course-check.in-progress {
+  background:#f59e0b;color:#ffffff;font-size:13px;
+}
+.course-check.locked {
+  background:var(--bg-elevated);color:var(--text-muted);font-size:12px;
+}
+.course-name { font-size:12px;color:var(--text);line-height:1.4;flex:1; }
 </style>
 </head>
 <body>
@@ -555,7 +573,123 @@ textarea::placeholder { color: var(--text-muted); }
       <span id="dl-chevron" style="font-size:18px;color:#ffffff;transition:transform 0.25s;display:inline-block;">›</span>
     </div>
     <div id="ns-deadlines" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;"></div>
-    <div style="display:flex;align-items:center;justify-content:center;padding:80px 24px 20px;">
+
+    <!-- COURSE STATUS ACCORDION -->
+    <div id="courses-accordion-header" onclick="toggleCourses()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-top:8px;margin-bottom:0;cursor:pointer;user-select:none;">
+      <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Course Status</span>
+      <span id="courses-chevron" style="font-size:18px;color:#ffffff;transition:transform 0.25s;display:inline-block;">›</span>
+    </div>
+    <div id="ns-courses" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
+      <div style="background:var(--bg-card);border-radius:0 0 var(--radius-sm) var(--radius-sm);border:1px solid var(--border);border-top:none;padding:8px 0;">
+
+        <div style="padding:8px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Completed</div>
+        <div class="course-row" onclick="toggleCourse('c1')">
+          <span class="course-check" id="chk-c1">✓</span>
+          <span class="course-name">VANGUARD MBA – HULT PRIZE Preparations</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c2')">
+          <span class="course-check" id="chk-c2">✓</span>
+          <span class="course-name">VANGUARD MBA Complete Program Design</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c3')">
+          <span class="course-check" id="chk-c3">✓</span>
+          <span class="course-name">VANGUARD MBA Field Manual</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c4')">
+          <span class="course-check" id="chk-c4">✓</span>
+          <span class="course-name">VANGUARD MBA Leading and Building in the NEO Era</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c5')">
+          <span class="course-check" id="chk-c5">✓</span>
+          <span class="course-name">VANGUARD MBA The Future of Work</span>
+        </div>
+
+        <div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;border-top:1px solid var(--border);margin-top:4px;">In Progress</div>
+        <div class="course-row" onclick="toggleCourse('c6')">
+          <span class="course-check in-progress" id="chk-c6">◑</span>
+          <span class="course-name">Chasing Jarvis</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c7')">
+          <span class="course-check in-progress" id="chk-c7">◑</span>
+          <span class="course-name">VANGUARD MBA Business Agility</span>
+        </div>
+
+        <div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;border-top:1px solid var(--border);margin-top:4px;">Upcoming</div>
+        <div class="course-row" onclick="toggleCourse('c8')">
+          <span class="course-check locked" id="chk-c8">🔒</span>
+          <span class="course-name">Intro To NEO World</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c9')">
+          <span class="course-check locked" id="chk-c9">🔒</span>
+          <span class="course-name">Introduction</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c10')">
+          <span class="course-check locked" id="chk-c10">🔒</span>
+          <span class="course-name">Action Management</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c11')">
+          <span class="course-check locked" id="chk-c11">🔒</span>
+          <span class="course-name">Agile Management</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c12')">
+          <span class="course-check locked" id="chk-c12">🔒</span>
+          <span class="course-name">AI Hackathon</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c13')">
+          <span class="course-check locked" id="chk-c13">🔒</span>
+          <span class="course-name">AI-Embedded Innovation Boot Camp</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c14')">
+          <span class="course-check locked" id="chk-c14">🔒</span>
+          <span class="course-name">Analytics</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c15')">
+          <span class="course-check locked" id="chk-c15">🔒</span>
+          <span class="course-name">Business Battle Ground Boot Camp</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c16')">
+          <span class="course-check locked" id="chk-c16">🔒</span>
+          <span class="course-name">Entrepreneurship Boot Camp & Final Defense</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c17')">
+          <span class="course-check locked" id="chk-c17">🔒</span>
+          <span class="course-name">Finance 360</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c18')">
+          <span class="course-check locked" id="chk-c18">🔒</span>
+          <span class="course-name">Future of Work</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c19')">
+          <span class="course-check locked" id="chk-c19">🔒</span>
+          <span class="course-name">Marketing</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c20')">
+          <span class="course-check locked" id="chk-c20">🔒</span>
+          <span class="course-name">Operations Management</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c21')">
+          <span class="course-check locked" id="chk-c21">🔒</span>
+          <span class="course-name">Sales</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c22')">
+          <span class="course-check locked" id="chk-c22">🔒</span>
+          <span class="course-name">SDG Boot Camp</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c23')">
+          <span class="course-check locked" id="chk-c23">🔒</span>
+          <span class="course-name">Strategizing With Frontier TECH</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c24')">
+          <span class="course-check locked" id="chk-c24">🔒</span>
+          <span class="course-name">Vanguard Leadership 1</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c25')">
+          <span class="course-check locked" id="chk-c25">🔒</span>
+          <span class="course-name">Vanguard Leadership 2</span>
+        </div>
+
+      </div>
+    </div>
       <span style="font-family:'DM Sans',sans-serif;font-size:16px;font-style:italic;font-weight:700;color:var(--accent);letter-spacing:0.01em;text-align:center;line-height:1.5;">"Prosperity through ethical excellence"</span>
     </div>
   </section>
@@ -1979,7 +2113,46 @@ function filterSessions(period, btn) {
 }
 function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) { window.location.href = s.zoomUrl; } }
 
-let _dlOpen = false;
+let _coursesOpen = false;
+function toggleCourses() {
+  _coursesOpen = !_coursesOpen;
+  const el = document.getElementById('ns-courses');
+  const ch = document.getElementById('courses-chevron');
+  el.style.maxHeight = _coursesOpen ? el.scrollHeight + 'px' : '0';
+  ch.style.transform = _coursesOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+}
+
+// Default states: c1-c5 complete, c6-c7 in-progress, c8-c25 locked
+const COURSE_DEFAULTS = {
+  c1:'complete',c2:'complete',c3:'complete',c4:'complete',c5:'complete',
+  c6:'in-progress',c7:'in-progress',
+  c8:'locked',c9:'locked',c10:'locked',c11:'locked',c12:'locked',c13:'locked',
+  c14:'locked',c15:'locked',c16:'locked',c17:'locked',c18:'locked',c19:'locked',
+  c20:'locked',c21:'locked',c22:'locked',c23:'locked',c24:'locked',c25:'locked'
+};
+const COURSE_CYCLE = ['locked','in-progress','complete'];
+function toggleCourse(id) {
+  const saved = JSON.parse(localStorage.getItem('cn_courses') || '{}');
+  const current = saved[id] || COURSE_DEFAULTS[id] || 'locked';
+  const next = COURSE_CYCLE[(COURSE_CYCLE.indexOf(current) + 1) % COURSE_CYCLE.length];
+  saved[id] = next;
+  localStorage.setItem('cn_courses', JSON.stringify(saved));
+  applyCourseState(id, next);
+}
+function applyCourseState(id, state) {
+  const el = document.getElementById('chk-' + id);
+  if (!el) return;
+  if (state === 'complete') { el.textContent = '✓'; el.className = 'course-check'; }
+  else if (state === 'in-progress') { el.textContent = '◑'; el.className = 'course-check in-progress'; }
+  else { el.textContent = '🔒'; el.className = 'course-check locked'; }
+}
+function initCourses() {
+  const saved = JSON.parse(localStorage.getItem('cn_courses') || '{}');
+  for (let i = 1; i <= 25; i++) {
+    const id = 'c' + i;
+    applyCourseState(id, saved[id] || COURSE_DEFAULTS[id]);
+  }
+}
 function toggleDeadlines() {
   _dlOpen = !_dlOpen;
   const dlEl = document.getElementById('ns-deadlines');
@@ -2589,6 +2762,7 @@ function init() {
   renderBriefing();
   renderPostLists();
   renderKnowledge();
+  initCourses();
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
   setInterval(() => { renderNorthStar(); renderWork(); }, 60000);
