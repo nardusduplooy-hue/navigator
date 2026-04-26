@@ -96,18 +96,6 @@ def build_briefing():
     # DEADLINES
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
-    lines.append("📚 <b>BUSINESS AGILITY MODULE</b>")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Sat 25 April — 09:00 AM CAT</a>")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/13/?wm=1&mi=81425660383'>Sun 26 April — 09:00 AM CAT</a>")
-    lines.append("Meeting ID: 814 2566 0383 | Passcode: agilityVAN")
-    lines.append("")
-    lines.append("<b>Reads, Podcasts and Videos on Business Agility:</b>")
-    lines.append("<a href='https://cotrugli.online/courses/business-agility-vanguard/'>→ Business Agility course portal</a>")
-    lines.append("<a href='https://youtu.be/l73yAdQOU84'>→ Watch: What is Flight Levels?</a>")
-    lines.append("<a href='https://stream.redcircle.com/episodes/1f01dc3c-14e2-49fd-a97e-ba49bbbe0c92/stream.mp3'>→ Podcast episode</a>")
-    lines.append("<a href='https://cotrugli.online/wp-content/uploads/2025/03/Essential-Kanban-Condensed.pdf'>→ Essential Kanban Condensed (PDF)</a>")
-    lines.append("<a href='https://youtu.be/6JtRPjTMEWQ'>→ Watch: Klaus Leopold — Flight Levels in Action</a>")
-    lines.append("")
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT JARVIS ZOOM SESSION</b>")
@@ -205,6 +193,7 @@ def build_briefing():
         lines.append("One command installs everything. Use the free Gemini API tier. Drop in one article, one paper, or your own session notes. Watch what happens in Obsidian.")
         lines.append("")
         lines.append("<b>Then engage on LinkedIn</b> — drop your thoughts in the comments on the post above.")
+        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7454062600306319361/'>→ LinkedIn post — join the discussion</a>")
         lines.append("")
 
     # KAPUSTA

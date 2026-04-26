@@ -138,6 +138,35 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-26": {
+        "step": "Module 3 Homework — 3 days to go",
+        "title": "Your recovery loop",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Three days to deadline. Agility is not about moving fast — it is about recovering fast.",
+        "question": (
+            "Business Agility wrapped up yesterday. Three days to the homework deadline. "
+            "One question that connects both: agility is not about moving fast — it is about recovering fast. "
+            "When your build breaks, when the agent gives you something unusable, when you hit a wall — "
+            "how quickly do you get back to a working version? "
+            "That recovery speed is your real agility. "
+            "What is your current recovery time, and what is the one thing that slows it down most?"
+        ),
+        "model_answer": (
+            "The fastest builders are not the ones who never get stuck. "
+            "They are the ones who have a short, repeatable recovery loop. "
+            "When something breaks: describe the problem to the agent in plain language, "
+            "ask it to diagnose and fix, test the output, iterate. "
+            "That loop should take minutes, not hours. "
+            "What slows it down? Almost always one of three things: "
+            "not being able to describe the problem clearly, "
+            "not knowing what 'working' looks like so you can't tell if the fix worked, "
+            "or abandoning the current version and starting over instead of fixing incrementally. "
+            "The Business Agility module has given you the vocabulary for this — "
+            "minimum viable output, iteration cycles, recovery from failure. "
+            "Three days is enough time to ship something. "
+            "The question is whether your recovery loop is fast enough to make those three days count."
+        ),
+    },
     "2026-04-25": {
         "step": "Business Agility Day 2 — Kanban & Flight Levels",
         "title": "Where is your build stuck?",
@@ -944,7 +973,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Salesforce and Google deepen AI agent partnership as enterprise automation race accelerates",
+    "headline": "OpenAI's GPT-5 launch signals shift toward unified AI models as specialised agents proliferate",
     "source": "VentureBeat AI",
 }
 
@@ -1010,13 +1039,7 @@ FUTURE_LAB = {
             "author": "Kapusta & Stručić",
         },
     ],
-    "2026-04-25": [
-        {
-            "title": "The Six-Month Hormuz Scenario",
-            "url": "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit?usp=sharing&ouid=100173679485664698153&rtpof=true&sd=true",
-            "author": "Dražen Kapusta",
-        },
-    ],
+    "2026-04-25": [],
     "2026-04-24": [
         {
             "title": "The Fog of Federation — A European Consortium and the Battle for the Sovereign Cloud",
