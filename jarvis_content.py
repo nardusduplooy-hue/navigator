@@ -138,6 +138,32 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-30": {
+        "step": "Post Module 3 — The shift",
+        "title": "What shifted in how you think?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Module 3 is done. Before Module 4 begins — name the shift.",
+        "question": (
+            "The homework is submitted. Module 3 is done. "
+            "Before Module 4 begins, one question worth sitting with: "
+            "looking back at the three modules so far — "
+            "what is the single biggest shift in how you think about AI and your own work? "
+            "Not a tool you discovered. Not an article you read. A shift in thinking. "
+            "Name it in one sentence."
+        ),
+        "model_answer": (
+            "The most common shift reported after Module 3 is this: "
+            "people stop thinking about AI as something that answers questions "
+            "and start thinking about it as something that executes direction. "
+            "That is the orchestration leap — and it changes everything. "
+            "Once you see yourself as the director and the AI as the executor, "
+            "the question is never 'what can AI do?' "
+            "It is always 'what do I want done, and how clearly can I specify it?' "
+            "Module 4 — context engineering — is built entirely on that shift. "
+            "If you have made it, Module 4 will feel like a natural next step. "
+            "If you haven't, Module 4 is where it will happen."
+        ),
+    },
     "2026-04-29": {
         "step": "Module 3 Homework — Deadline Day",
         "title": "Ship it",
@@ -1032,9 +1058,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=ee4W08CP9h6QG7kIliCIPg%3D%3D",
-    "title": "Benedetto Cotrugli — Cotrugli Business School",
-    "description": "Kapusta on Benedetto Cotrugli — the merchant philosopher whose principles still define what it means to lead with integrity in the NEO Era.",
+    "url": "https://www.linkedin.com/pulse/ai-your-sam-colt-most-dont-see-drazen-kapusta-mytze/",
+    "title": "AI Is Your Sam Colt — Most Don't See It",
+    "description": "Kapusta on why AI is the great equaliser of our era — and why most leaders are still looking the wrong way.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -1044,7 +1070,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google NotebookLM expands to enterprise as AI-powered research tools go mainstream",
+    "headline": "Anthropic launches Claude for Work as enterprise AI adoption accelerates globally",
     "source": "VentureBeat AI",
 }
 
