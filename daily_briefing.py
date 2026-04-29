@@ -98,8 +98,8 @@ def build_briefing():
     lines.append("")
 
     # NEXT ZOOM
-    lines.append("📅 <b>NEXT JARVIS ZOOM SESSION</b>")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/11/?wm=1&mi=87497940375'>Next Zoom session — Saturday 2 May</a>")
+    lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/17/?wm=1&mi=88307847684'>Vanguard Program Review &amp; Upcoming Modules — Saturday 2 May, 5:00 PM Belgrade</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
@@ -178,7 +178,7 @@ def build_briefing():
         lines.append("")
         lines.append("Let's see what you've got! 💪")
         lines.append("")
-        lines.append("<b>🏆 Chasing Jarvis Weekend Challenge:</b>")
+        lines.append("<b>🏆 Chasing Jarvis Challenge:</b>")
         lines.append("Dr. Tali Režun has published a new article and issued a 3-step mission for the week.")
         lines.append("")
         lines.append("<b>Step 1 — Read the article</b>")
@@ -200,14 +200,6 @@ def build_briefing():
     lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta reading:</b>")
     lines.append("• <a href='" + KAPUSTA_TODAY["url"] + "'>" + KAPUSTA_TODAY["title"] + "</a>")
     lines.append("  " + KAPUSTA_TODAY["description"])
-    lines.append("")
-
-    # FUTURE LAB
-    lab_articles = FUTURE_LAB.get(date_key, FUTURE_LAB_FULL)
-    lines.append("🔬 <b>FUTURE LAB LEARNING — Kapusta &amp; Cotrugli:</b>")
-    for article in lab_articles:
-        lines.append("• <a href='" + article["url"] + "'>" + article["title"] + "</a>")
-        lines.append("  " + article["author"])
     lines.append("")
 
     # AI NEWS

@@ -138,6 +138,77 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-04-29": {
+        "step": "Module 3 Homework — Deadline Day",
+        "title": "Ship it",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Today is the deadline. Whatever you have built — ship it.",
+        "question": (
+            "Today is the deadline. Whatever you have built — ship it. "
+            "Not tomorrow, not after one more fix. Today. "
+            "A working link shared in the Chasing Jarvis group by end of day "
+            "is worth more than a perfect build that never gets submitted. "
+            "One question: what is the one thing you are most proud of in what you built, "
+            "and what is the one thing you would do differently if you started again tomorrow?"
+        ),
+        "model_answer": (
+            "The best submissions today will not be the most impressive technically. "
+            "They will be the ones that are specific, honest, and shipped. "
+            "'I built a quiz game that runs in a browser and asks five questions about AI' is a submission. "
+            "'I tried to build something but it's not ready' is not — "
+            "because ready is a decision, not a state. "
+            "The second part of the question matters as much as the first: "
+            "what you would do differently is your Module 4 brief. "
+            "Every builder who ships something today walks into the next module with a real reference point — "
+            "something they made, something that taught them something. "
+            "That is worth more than any grade. Ship it."
+        ),
+    },
+    "2026-04-28": {
+        "step": "Module 3 Homework — 1 day to go",
+        "title": "Final push",
+        "url": "https://medium.com/@talirezun",
+        "focus": "One day to deadline. Get it to a working state and prepare to ship.",
+        "question": (
+            "One day to the homework deadline. "
+            "Today is not about adding features — it is about getting to a working state. "
+            "One question: if you had to submit what you have right now, "
+            "what is the one thing that would make it feel unfinished? "
+            "Fix that one thing today. Nothing else."
+        ),
+        "model_answer": (
+            "The temptation on the day before a deadline is to add more. Resist it. "
+            "The builder who spends today fixing the one broken thing ships something coherent. "
+            "The builder who spends today adding features ships something half-finished. "
+            "A working app that does one thing cleanly is a better submission than "
+            "an ambitious app that half-works. "
+            "Find your one thing, fix it, and prepare your submission message. "
+            "Tomorrow you ship."
+        ),
+    },
+    "2026-04-27": {
+        "step": "Module 3 Homework — 2 days to go",
+        "title": "Two days left",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Two days to deadline. Time to get your build to a shareable state.",
+        "question": (
+            "Two days to the homework deadline. "
+            "At this point the question is not whether to build — it is whether what you have is shareable. "
+            "Can someone click your link, use your app or game, and understand what it does in under 30 seconds? "
+            "If yes — you are ready to submit. If no — that is your work for today. "
+            "What specifically needs to change for your build to pass the 30-second test?"
+        ),
+        "model_answer": (
+            "The 30-second test is the only user test that matters at this stage. "
+            "If someone opens your link and cannot figure out what to do within 30 seconds, "
+            "the problem is not the code — it is the clarity. "
+            "A button that says 'Start' fixes more than a week of refactoring. "
+            "A one-line description at the top of the page fixes more than a redesign. "
+            "The builds that pass the 30-second test are not the most complex ones. "
+            "They are the ones where the builder thought about the user, not just the code. "
+            "Two days is enough time to get there."
+        ),
+    },
     "2026-04-26": {
         "step": "Module 3 Homework — 3 days to go",
         "title": "Your recovery loop",
@@ -973,7 +1044,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI's GPT-5 launch signals shift toward unified AI models as specialised agents proliferate",
+    "headline": "Google NotebookLM expands to enterprise as AI-powered research tools go mainstream",
     "source": "VentureBeat AI",
 }
 
