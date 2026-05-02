@@ -100,6 +100,8 @@ def build_briefing():
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/17/?wm=1&mi=88307847684'>Vanguard Program Review &amp; Upcoming Modules — Saturday 2 May, 5:00 PM Belgrade</a>")
+    lines.append("  AI in B2B Sales — Saša Pavlaković. HubSpot, Apollo, ChatGPT in action. Real sales scenarios, a 90-day implementation plan, and how to build an AI-augmented sales engine.")
+    lines.append("  <a href='https://cotrugli.online/courses/ai-sales/'>→ AI in B2B Sales — course portal</a>")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 

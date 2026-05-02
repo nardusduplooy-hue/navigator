@@ -138,6 +138,56 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-02": {
+        "step": "AI in B2B Sales — Session day",
+        "title": "Your sales bottleneck",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Today's session is AI in B2B Sales. Come with a specific bottleneck in mind.",
+        "question": (
+            "Today's session is AI in B2B Sales with Saša Pavlaković. "
+            "Before you join: think about your current sales process — "
+            "or if you're not in sales, think about any process where you need to persuade, pitch, or influence someone. "
+            "Where does preparation take the most time? "
+            "That is where AI will have the biggest immediate impact today. "
+            "Come to the session with that specific bottleneck in mind."
+        ),
+        "model_answer": (
+            "The highest-leverage AI applications in B2B sales are almost always in preparation, not execution. "
+            "Researching a prospect, personalising an outreach message, preparing for an objection — "
+            "these are time-consuming, repetitive, and highly coachable for an AI. "
+            "The human judgment still lives in the conversation itself: "
+            "reading the room, building trust, knowing when to push and when to listen. "
+            "Today's session will show you the tools. "
+            "Your job is to map them to your specific bottleneck. "
+            "The students who get the most out of it are the ones who arrive with a real problem, "
+            "not a general curiosity."
+        ),
+    },
+    "2026-05-01": {
+        "step": "Post Module 3 — Pre-session reflection",
+        "title": "Where is your automation gap smallest?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Tomorrow's session introduces AI in B2B Sales. Today's question prepares you for it.",
+        "question": (
+            "Module 4 starts soon and tomorrow's session introduces AI in B2B Sales. "
+            "Two very different topics — but the same underlying skill: "
+            "knowing what to give the AI and what to keep for yourself. "
+            "One question before the weekend: where in your current work or role "
+            "does the gap between your human judgment and what an AI could do feel smallest? "
+            "That gap is your first automation candidate."
+        ),
+        "model_answer": (
+            "The easiest automations are always the ones where the task is repetitive, "
+            "the output is predictable, and the human judgment required is low. "
+            "In B2B sales that might be prospect research, email personalisation, or meeting prep. "
+            "In other roles it might be summarising reports, drafting first responses, or monitoring feeds. "
+            "The point of tomorrow's session is not to learn HubSpot — "
+            "it is to develop the habit of looking at your own workflow and asking: "
+            "what here does not require me? "
+            "That question, asked consistently, is worth more than any single tool. "
+            "Start asking it today."
+        ),
+    },
     "2026-04-30": {
         "step": "Post Module 3 — The shift",
         "title": "What shifted in how you think?",
@@ -1058,9 +1108,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/ai-your-sam-colt-most-dont-see-drazen-kapusta-mytze/",
-    "title": "AI Is Your Sam Colt — Most Don't See It",
-    "description": "Kapusta on why AI is the great equaliser of our era — and why most leaders are still looking the wrong way.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455920748063391744/",
+    "title": "The Rise of the Player Coach",
+    "description": "Kapusta on the player-coach model — the emerging leadership archetype for the NEO Era, where the best leaders stay in the game while directing others.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -1070,7 +1120,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launches Claude for Work as enterprise AI adoption accelerates globally",
+    "headline": "Alibaba's Metis agent cuts redundant AI tool calls from 98% to 2% — and gets more accurate doing it",
     "source": "VentureBeat AI",
 }
 
