@@ -2463,6 +2463,10 @@ Respond ONLY with valid JSON:
       headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 1200, system: systemPrompt, messages: _draftHistory })
     });
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error(`HTTP ${response.status}: ${errText}`);
+    }
     const data = await response.json();
     if (data.error) throw new Error(data.error.message);
     const raw = data.content[0].text.replace(/```json|```/g, '').trim();
@@ -2496,7 +2500,7 @@ Respond ONLY with valid JSON:
 
   } catch(err) {
     document.getElementById('comment-loading').style.display = 'none';
-    showToast('Error: ' + err.message);
+    showToast('Error: ' + err.message, 6000);
     btn.textContent = draftNum === 1 ? 'Generate Draft 1' : `Generate Draft ${draftNum}`;
     btn.disabled = false;
     _draftIteration--;
@@ -2716,12 +2720,12 @@ function clearQAHistory() {
 }
 
 function openUrl(url) { if (url && url !== '#') { try { window.open(url, '_blank'); } catch(e) { window.location.href = url; } } }
-function showToast(msg) {
+function showToast(msg, duration) {
   const t = document.createElement('div');
   t.textContent = msg;
-  Object.assign(t.style, { position:'fixed', bottom:'calc(80px + var(--safe-bottom))', left:'50%', transform:'translateX(-50%)', background:'var(--text)', color:'#ffffff', borderRadius:'20px', padding:'9px 20px', fontSize:'13px', fontFamily:"'DM Sans',sans-serif", zIndex:'300', whiteSpace:'nowrap', animation:'fadeUp 0.25s ease', boxShadow:'0 4px 16px rgba(0,0,0,0.15)' });
+  Object.assign(t.style, { position:'fixed', bottom:'calc(80px + var(--safe-bottom))', left:'50%', transform:'translateX(-50%)', background:'var(--text)', color:'#ffffff', borderRadius:'20px', padding:'9px 20px', fontSize:'13px', fontFamily:"'DM Sans',sans-serif", zIndex:'300', whiteSpace:'nowrap', animation:'fadeUp 0.25s ease', boxShadow:'0 4px 16px rgba(0,0,0,0.15)', maxWidth:'90vw', textOverflow:'ellipsis', overflow:'hidden' });
   document.body.appendChild(t);
-  setTimeout(() => t.remove(), 2500);
+  setTimeout(() => t.remove(), duration || 2500);
 }
 
 // ═══════════════════════════════════════
