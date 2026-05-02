@@ -697,18 +697,25 @@ textarea::placeholder { color: var(--text-muted); }
 
   <!-- TAB 2: WORK -->
   <section id="tab-work" class="tab-panel">
-    <div class="section-label">Current Course</div>
-    <div class="card card-accent">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-        <span style="font-size:22px;">📘</span>
-        <div>
-          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);" id="work-module-name">—</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:2px;" id="work-module-meta">—</div>
+    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:14px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Current Course</div>
+      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#ffffff;margin-bottom:4px;" id="work-module-name">—</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-bottom:16px;" id="work-module-meta">—</div>
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <div id="work-notes-link" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:rgba(255,255,255,0.12);border-radius:8px;cursor:pointer;">
+          <span style="font-size:13px;color:#ffffff;font-weight:500;">📝 Module Notes</span>
+          <span style="color:rgba(255,255,255,0.6);font-size:16px;">›</span>
+        </div>
+        <div id="work-reading-link" onclick="openUrl(PROGRAMME_DATA.currentModule.readingListUrl)" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:rgba(255,255,255,0.12);border-radius:8px;cursor:pointer;margin-top:4px;">
+          <span style="font-size:13px;color:#ffffff;font-weight:500;">📚 Personal AI Stack</span>
+          <span style="color:rgba(255,255,255,0.6);font-size:16px;">›</span>
+        </div>
+        <div id="work-prereadings-link" onclick="openUrl(PROGRAMME_DATA.currentModule.preReadingsUrl)" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:rgba(255,255,255,0.12);border-radius:8px;cursor:pointer;margin-top:4px;">
+          <span style="font-size:13px;color:#ffffff;font-weight:500;">📖 Module Pre-Readings</span>
+          <span style="color:rgba(255,255,255,0.6);font-size:16px;">›</span>
         </div>
       </div>
-      <div class="link-row" id="work-notes-link"><span class="link-row-label">📝 Module Notes</span><span class="chevron">›</span></div>
-      <div class="link-row" id="work-reading-link" onclick="openUrl(PROGRAMME_DATA.currentModule.readingListUrl)"><span class="link-row-label">📚 Reading List</span><span class="chevron">›</span></div>
-      <div class="link-row" id="work-prereadings-link" onclick="openUrl(PROGRAMME_DATA.currentModule.preReadingsUrl)"><span class="link-row-label">📖 Module Pre-Readings</span><span class="chevron">›</span></div>
     </div>
     <div class="section-label">Active Assignments</div>
     <div id="work-assignments"></div>
@@ -1039,8 +1046,8 @@ const PROGRAMME_DATA = {
     week: 12,
     sprint: "Sprint 12",
     notesUrl: "https://cotrugli.online/courses/ai-sales/",
-    readingListUrl: "https://cotrugli.online/courses/ai-sales/",
-    preReadingsUrl: "https://cotrugli.online/courses/ai-sales/",
+    readingListUrl: "https://cotrugli.online/courses/ai-sales/lessons/personal-ai-sales-stack/",
+    preReadingsUrl: "https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf",
     coreReading: { title: "From Graph to Intelligence: The My Curator MCP and the Art of Querying Your Second Brain", author: "Dr. Tali Re\u017eun", url: "https://medium.com/@talirezun" },
     preReading: { title: "Module 1 Pre-Reading \u2014 AI Force Multiplier (PDF)", author: "Sa\u0161a Pavlakovi\u0107", url: "https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf", note: "Required pre-reading for AI in B2B Sales. Download and read before the session." },
     readings: [
@@ -1086,7 +1093,7 @@ const PROGRAMME_DATA = {
   kapustaReading: {
     title: "The Rise of the Player Coach",
     subtitle: "Kapusta on the player-coach model \u2014 the emerging leadership archetype for the NEO Era, where the best leaders stay in the game while directing others.",
-    url: "https://www.linkedin.com/in/cotrugli/"
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7455920748063391744/"
   },
 
   futureLab: [
