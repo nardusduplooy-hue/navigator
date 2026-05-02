@@ -2406,6 +2406,7 @@ async function generateComments() {
   }
   const apiKey = storage.get('cn_api_key');
   if (!apiKey) { showToast('Add your API key in Settings first'); return; }
+  showToast('DEBUG: API key found, sending request...', 4000);
 
   const author = document.querySelector('#author-selector .sel-btn.active')?.dataset.val || 'Other';
   const tone = document.querySelector('#tone-selector .sel-btn.active')?.dataset.val || 'Analytical';
