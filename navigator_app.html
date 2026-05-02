@@ -1053,7 +1053,7 @@ const PROGRAMME_DATA = {
     {
       id: "ai-sales-01",
       name: "AI in B2B Sales \u2014 Sa\u0161a Pavlakovi\u0107",
-      dueDate: "2026-05-31T23:59:00+02:00",
+      dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/ai-sales/",
       notes: "HubSpot, Apollo, ChatGPT in action. Real sales scenarios and a 90-day AI-augmented sales implementation plan."
@@ -1061,7 +1061,7 @@ const PROGRAMME_DATA = {
     {
       id: "cj4-01",
       name: "Chasing Jarvis \u2014 Module 4: Context Engineering",
-      dueDate: "2026-05-31T23:59:00+02:00",
+      dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/chasing-jarvis/",
       notes: "Context Engineering \u2013 Orchestrating AI for Complex Tasks. Sprint 12."
@@ -2037,11 +2037,15 @@ function renderNorthStar() {
 
   const priEl = document.getElementById('ns-priorities');
   priEl.innerHTML = '';
-  const urgencyColor = { urgent: '#fca5a5', warning: '#fcd34d', safe: '#86efac', past: 'rgba(255,255,255,0.3)' };
+  const urgencyColor = { urgent: '#fca5a5', warning: '#fcd34d', safe: '#86efac', past: 'rgba(255,255,255,0.3)', current: '#86efac' };
 
-  PROGRAMME_DATA.assignments.slice(0,2).forEach(a => {
-    const cd = getCountdown(a.dueDate);
-    priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${urgencyColor[cd.urgency]};"></div><span class="priority-name">${a.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
+  PROGRAMME_DATA.assignments.slice(0,1).forEach(a => {
+    if (!a.dueDate) {
+      priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#86efac;"></div><span class="priority-name">${a.name}</span><span class="priority-countdown safe">Current</span></div>`;
+    } else {
+      const cd = getCountdown(a.dueDate);
+      priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${urgencyColor[cd.urgency]};"></div><span class="priority-name">${a.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
+    }
   });
   if (PROGRAMME_DATA.sessions.length > 0) {
     const s = getNextSession();
@@ -2051,16 +2055,26 @@ function renderNorthStar() {
 
   const dlEl = document.getElementById('ns-deadlines');
   dlEl.innerHTML = '';
-  const urgDotColor = { urgent: 'var(--red)', warning: 'var(--amber)', safe: 'var(--green)', past: 'var(--text-muted)' };
-  const items = [...PROGRAMME_DATA.assignments, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).filter(item => new Date(item.dueDate||item.datetime) > new Date());
-  if (items.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:10px 4px;">No upcoming deadlines</div>'; return; }
+  const urgDotColor = { urgent: 'var(--red)', warning: 'var(--amber)', safe: 'var(--green)', past: 'var(--text-muted)', current: 'var(--green)' };
+  const assignmentsWithDates = PROGRAMME_DATA.assignments.filter(a => a.dueDate);
+  const items = [...assignmentsWithDates, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).filter(item => new Date(item.dueDate||item.datetime) > new Date());
+  const noDatesAssignments = PROGRAMME_DATA.assignments.filter(a => !a.dueDate && a.status !== 'submitted');
+  if (items.length === 0 && noDatesAssignments.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:10px 4px;">No upcoming deadlines</div>'; return; }
   const wrapper = document.createElement('div');
   wrapper.style.cssText = 'border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);overflow:hidden;margin-bottom:12px;';
+  let rowIndex = 0;
+  noDatesAssignments.forEach(item => {
+    const row = document.createElement('div');
+    row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-card);${rowIndex > 0 ? 'border-top:1px solid var(--border);' : ''}`;
+    row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--green);"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">Current — no deadline set</div></div></div><span class="countdown safe" style="font-size:13px;flex-shrink:0;margin-left:10px;">Current</span>`;
+    wrapper.appendChild(row);
+    rowIndex++;
+  });
   items.forEach((item, i) => {
     const dt = item.dueDate || item.datetime;
     const cd = getCountdown(dt);
     const row = document.createElement('div');
-    row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-card);${i > 0 ? 'border-top:1px solid var(--border);' : ''}`;
+    row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-card);border-top:1px solid var(--border);`;
     row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${item._isSession ? 'var(--gold)' : urgDotColor[cd.urgency]};"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${formatDate(dt)} · ${formatTime(dt)}</div></div></div><span class="countdown ${cd.urgency}" style="font-size:13px;flex-shrink:0;margin-left:10px;">${cd.display}</span>`;
     wrapper.appendChild(row);
   });
@@ -2093,10 +2107,12 @@ function renderWork() {
   const el = document.getElementById('work-assignments');
   el.innerHTML = '';
   const statusMap = { pending: 'badge-pending', 'in-progress': 'badge-progress', submitted: 'badge-done' };
-  const statusLabel = { pending: 'Pending', 'in-progress': 'In Progress', submitted: 'Submitted ✓' };
+  const statusLabel = { pending: 'Pending', 'in-progress': 'In Progress', submitted: 'Submitted \u2713' };
   PROGRAMME_DATA.assignments.forEach(a => {
-    const cd = getCountdown(a.dueDate);
-    el.innerHTML += `<div class="card ${cd.urgency === 'urgent' ? 'card-urgent' : cd.urgency === 'warning' ? 'card-amber' : ''}"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;"><div style="flex:1;"><div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">${a.name}</div><div style="font-size:11px;color:var(--text-muted);">Due ${formatDate(a.dueDate)} · ${formatTime(a.dueDate)}</div></div><span class="countdown ${cd.urgency}">${cd.display}</span></div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;"><span class="badge ${statusMap[a.status]}">${statusLabel[a.status]}</span><button class="btn btn-ghost btn-sm" onclick="openUrl('${a.prepUrl}')">Prep →</button></div></div>`;
+    const hasDue = a.dueDate && a.dueDate !== '';
+    const cd = hasDue ? getCountdown(a.dueDate) : { urgency: 'safe', display: 'Current' };
+    const dueText = hasDue ? `Due ${formatDate(a.dueDate)} \u00b7 ${formatTime(a.dueDate)}` : 'Current \u2014 no deadline set';
+    el.innerHTML += `<div class="card"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;"><div style="flex:1;"><div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">${a.name}</div><div style="font-size:11px;color:var(--text-muted);">${dueText}</div></div>${hasDue ? `<span class="countdown ${cd.urgency}">${cd.display}</span>` : ''}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;"><span class="badge ${statusMap[a.status]}">${statusLabel[a.status]}</span><button class="btn btn-ghost btn-sm" onclick="openUrl('${a.prepUrl}')">Prep \u2192</button></div></div>`;
   });
 }
 
@@ -2182,7 +2198,7 @@ function initCourses() {
 }
 // Force refresh defaults if version changed
 (function() {
-  const ver = '2';
+  const ver = '3';
   if (localStorage.getItem('cn_courses_ver') !== ver) {
     localStorage.removeItem('cn_courses');
     localStorage.setItem('cn_courses_ver', ver);
@@ -2614,7 +2630,7 @@ function renderBriefing() {
   const pendingAssignments = d.assignments.filter(a => a.status !== 'submitted');
   if (pendingAssignments.length) {
     rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔴</span><div class="briefing-content"><div class="briefing-title">Deadlines</div>${
-      pendingAssignments.map(a => `<strong>${a.name}</strong> — due ${formatDate(a.dueDate)}<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${a.notes}</div>`).join('<br>')
+      pendingAssignments.map(a => `<strong>${a.name}</strong>${a.dueDate ? ` \u2014 due ${formatDate(a.dueDate)}` : ' \u2014 Current'}<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${a.notes}</div>`).join('<br>')
     }</div></div>`);
   }
 
