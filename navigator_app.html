@@ -812,8 +812,8 @@ textarea::placeholder { color: var(--text-muted); }
   <section id="tab-engage" class="tab-panel">
 
     <!-- Orientation hero card — blue gradient, always visible -->
-    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:0;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
+    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:0;position:relative;">
+      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
       <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">How to use Engage</div>
       <div style="font-size:13px;color:#ffffff;line-height:1.65;">
         <strong style="color:#ffffff;">1. Comment Assistant</strong> — Pick a faculty post, share your own take first, then refine through 3 draft iterations. Post manually to LinkedIn.<br>
@@ -879,7 +879,7 @@ textarea::placeholder { color: var(--text-muted); }
         <textarea id="refine-input" rows="2" placeholder="Tell Navigator what to change — e.g. 'more personal', 'focus on NEO framework', 'shorter and punchier'..." style="width:100%;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
       </div>
 
-      <button class="btn btn-primary btn-full" id="generate-btn" style="margin-top:12px;" onclick="generateComments()">Generate Draft 1</button>
+      <button class="btn btn-primary btn-full" id="generate-btn" style="margin-top:12px;position:relative;z-index:10;" onclick="generateComments()">Generate Draft 1</button>
       <div id="comment-loading" style="display:none;"><div class="loading-row"><span class="spinner"></span> Navigator is drafting comments...</div></div>
     </div>
     <div id="engage-article" style="display:none;">
