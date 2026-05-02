@@ -2219,6 +2219,9 @@ function toggleDeadlines() {
   if (chev) chev.style.transform = _dlOpen ? 'rotate(90deg)' : 'rotate(0deg)';
 }
 
+let _draftIteration = 0;
+let _draftHistory = [];
+
 function switchEngageMode(mode, btn) {
   document.getElementById('engage-tabs').querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -2406,7 +2409,6 @@ async function generateComments() {
   }
   const apiKey = storage.get('cn_api_key');
   if (!apiKey) { showToast('Add your API key in Settings first'); return; }
-  showToast('DEBUG: API key found, sending request...', 4000);
 
   const author = document.querySelector('#author-selector .sel-btn.active')?.dataset.val || 'Other';
   const tone = document.querySelector('#tone-selector .sel-btn.active')?.dataset.val || 'Analytical';
