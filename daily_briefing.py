@@ -99,9 +99,7 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/17/?wm=1&mi=88307847684'>Vanguard Program Review &amp; Upcoming Modules — Saturday 2 May, 5:00 PM Belgrade</a>")
-    lines.append("  AI in B2B Sales — Saša Pavlaković. HubSpot, Apollo, ChatGPT in action. Real sales scenarios, a 90-day implementation plan, and how to build an AI-augmented sales engine.")
-    lines.append("  <a href='https://cotrugli.online/courses/ai-sales/'>→ AI in B2B Sales — course portal</a>")
+    lines.append("• Next Zoom session — Saturday 16 May (approximate)")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
@@ -165,14 +163,11 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("<b>🏆 Chasing Jarvis Reading:</b>")
-        lines.append("Dr. Tali Režun has published a new article.")
+        lines.append("Reflect on what you have been building.")
+        lines.append("Gather your team and refine and iterate.")
         lines.append("")
-        lines.append("<b>From Graph to Intelligence: The My Curator MCP and the Art of Querying Your Second Brain</b>")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7455205641620480000/'>→ LinkedIn post</a>")
-        lines.append("<a href='https://medium.com/@talirezun/from-graph-to-intelligence-the-my-curator-mcp-and-the-art-of-querying-your-second-brain-230d28bad72d'>→ Read the full article on Medium</a>")
-        lines.append("")
-        lines.append("Then engage on LinkedIn — drop your thoughts in the comments on the post above.")
+        lines.append("<b>🏆 VANGUARD TEAMS</b>")
+        lines.append("If you are not yet in a team — reach out on Telegram and raise your hand.")
         lines.append("")
 
     # KAPUSTA

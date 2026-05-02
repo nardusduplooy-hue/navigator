@@ -138,6 +138,33 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-03": {
+        "step": "Post-session — The power of the tribe",
+        "title": "Your team is the curriculum",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Sunday reflection. The tribe is not a feature of this programme — it is the point.",
+        "question": (
+            "Yesterday's session on AI in B2B Sales showed what's possible when the right tools meet the right human. "
+            "Today's question is about the other side of that equation: your team. "
+            "The Vanguard programme is not a solo journey — it is a tribe. "
+            "Who in your team brings something you don't have? "
+            "And when last did you deliberately lean on that? "
+            "The strongest builds, the best submissions, and the sharpest thinking in this programme "
+            "have all come from people who used their team. Are you?"
+        ),
+        "model_answer": (
+            "The instinct to work alone is one of the hardest habits to break in a programme like this. "
+            "Solo feels faster — no coordination, no compromise, no waiting. "
+            "But it is slower in every way that matters. "
+            "A team catches the blind spots you don't know you have. "
+            "It brings energy when yours is low. "
+            "It creates accountability that self-discipline alone cannot sustain. "
+            "The Vanguard cohort is one of the most diverse, capable groups in this programme's history — "
+            "people from different industries, countries, and disciplines. "
+            "That is not a coincidence. It is the design. "
+            "The tribe is the curriculum. Use it."
+        ),
+    },
     "2026-05-02": {
         "step": "AI in B2B Sales — Session day",
         "title": "Your sales bottleneck",
@@ -1120,7 +1147,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Alibaba's Metis agent cuts redundant AI tool calls from 98% to 2% — and gets more accurate doing it",
+    "headline": "Salesforce launches Agentforce Operations to fix the workflows breaking enterprise AI",
     "source": "VentureBeat AI",
 }
 
