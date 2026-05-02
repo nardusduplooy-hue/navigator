@@ -1034,15 +1034,15 @@ const PROGRAMME_DATA = {
   role: "Vanguard Chief",
 
   currentModule: {
-    name: "Chasing Jarvis \u2014 Module 4",
-    subtitle: "Context Engineering \u2013 Orchestrating AI for Complex Tasks",
+    name: "AI in B2B Sales",
+    subtitle: "HubSpot, Apollo, ChatGPT in action \u2014 build an AI-augmented sales engine",
     week: 12,
     sprint: "Sprint 12",
-    notesUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/context-engineering/",
-    readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/lessons/context-engineering/",
-    preReadingsUrl: "https://cotrugli.online/groups/vanguard/",
-    coreReading: { title: "From Graph to Intelligence: The My Curator MCP and the Art of Querying Your Second Brain", author: "Dr. Tali Re\u017eun", url: "https://www.linkedin.com/in/talirezun/" },
-    preReading: { title: "AI in B2B Sales \u2014 course portal", author: "Sa\u0161a Pavlakovi\u0107", url: "https://cotrugli.online/courses/ai-in-b2b-sales/", note: "HubSpot, Apollo, ChatGPT in action. Real sales scenarios and a 90-day AI-augmented sales implementation plan." },
+    notesUrl: "https://cotrugli.online/courses/ai-sales/",
+    readingListUrl: "https://cotrugli.online/courses/ai-sales/",
+    preReadingsUrl: "https://cotrugli.online/courses/ai-sales/",
+    coreReading: { title: "From Graph to Intelligence: The My Curator MCP and the Art of Querying Your Second Brain", author: "Dr. Tali Re\u017eun", url: "https://medium.com/@talirezun" },
+    preReading: { title: "AI in B2B Sales \u2014 course portal", author: "Sa\u0161a Pavlakovi\u0107", url: "https://cotrugli.online/courses/ai-sales/", note: "HubSpot, Apollo, ChatGPT in action. Real sales scenarios and a 90-day AI-augmented sales implementation plan." },
     readings: [
       { title: "Read full article on Medium \u2014 From Graph to Intelligence: The My Curator MCP", url: "https://medium.com/@talirezun" },
       { title: "github.com/talirezun/the-curator \u2014 star it, study it", url: "https://github.com/talirezun/the-curator" }
@@ -1051,12 +1051,20 @@ const PROGRAMME_DATA = {
 
   assignments: [
     {
+      id: "ai-sales-01",
+      name: "AI in B2B Sales \u2014 Sa\u0161a Pavlakovi\u0107",
+      dueDate: "2026-05-31T23:59:00+02:00",
+      status: "in-progress",
+      prepUrl: "https://cotrugli.online/courses/ai-sales/",
+      notes: "HubSpot, Apollo, ChatGPT in action. Real sales scenarios and a 90-day AI-augmented sales implementation plan."
+    },
+    {
       id: "cj4-01",
-      name: "Module 3 Homework \u2014 Build a Browser App or Game",
-      dueDate: "2026-04-29T23:59:00+02:00",
-      status: "submitted",
-      prepUrl: "https://cotrugli.online/groups/vanguard/",
-      notes: "Submitted. Share your project link in the Chasing Jarvis group. Tag your team leader and team members."
+      name: "Chasing Jarvis \u2014 Module 4: Context Engineering",
+      dueDate: "2026-05-31T23:59:00+02:00",
+      status: "in-progress",
+      prepUrl: "https://cotrugli.online/courses/chasing-jarvis/",
+      notes: "Context Engineering \u2013 Orchestrating AI for Complex Tasks. Sprint 12."
     }
   ],
 
@@ -2144,8 +2152,8 @@ function toggleCourses() {
 // Default states: c1-c5 complete, c6-c7 in-progress, c8-c25 locked
 const COURSE_DEFAULTS = {
   c1:'complete',c2:'complete',c3:'complete',c4:'complete',c5:'complete',
-  c6:'in-progress',c7:'in-progress',
-  c8:'locked',c9:'locked',c10:'locked',c11:'locked',c12:'locked',c13:'locked',
+  c6:'in-progress',c7:'complete',
+  c8:'in-progress',c9:'locked',c10:'locked',c11:'locked',c12:'locked',c13:'locked',
   c14:'locked',c15:'locked',c16:'locked',c17:'locked',c18:'locked',c19:'locked',
   c20:'locked',c21:'locked',c22:'locked',c23:'locked',c24:'locked',c25:'locked'
 };
@@ -2172,6 +2180,14 @@ function initCourses() {
     applyCourseState(id, saved[id] || COURSE_DEFAULTS[id]);
   }
 }
+// Force refresh defaults if version changed
+(function() {
+  const ver = '2';
+  if (localStorage.getItem('cn_courses_ver') !== ver) {
+    localStorage.removeItem('cn_courses');
+    localStorage.setItem('cn_courses_ver', ver);
+  }
+})();
 function toggleDeadlines() {
   _dlOpen = !_dlOpen;
   const dlEl = document.getElementById('ns-deadlines');
@@ -2595,9 +2611,12 @@ function renderBriefing() {
   const a = d.assignments[0];
   const rows = [];
 
-  rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔴</span><div class="briefing-content"><div class="briefing-title">Deadlines</div>${
-    d.assignments.map(a => `<strong>${a.name}</strong> — due ${formatDate(a.dueDate)}<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${a.notes}</div>`).join('<br>')
-  }</div></div>`);
+  const pendingAssignments = d.assignments.filter(a => a.status !== 'submitted');
+  if (pendingAssignments.length) {
+    rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔴</span><div class="briefing-content"><div class="briefing-title">Deadlines</div>${
+      pendingAssignments.map(a => `<strong>${a.name}</strong> — due ${formatDate(a.dueDate)}<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${a.notes}</div>`).join('<br>')
+    }</div></div>`);
+  }
 
   if (s) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📅</span><div class="briefing-content"><div class="briefing-title">Next Zoom Session</div><strong>${s.name}</strong> — ${formatDate(s.datetime)} at ${formatTime(s.datetime)}${s.recordingUrl ? ` · <a href="${s.recordingUrl}" style="color:var(--accent);">Zoom Recordings</a>` : ''}</div></div>`);
 
