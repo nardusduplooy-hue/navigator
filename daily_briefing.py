@@ -91,6 +91,7 @@ def build_briefing():
     # HEADER
     lines.append("🧭 <b>NAVIGATOR DAILY BRIEFING</b>")
     lines.append(today_label())
+    lines.append("<i>Stronger Together</i>")
     lines.append("")
 
     # DEADLINES
@@ -164,7 +165,12 @@ def build_briefing():
     else:
         # WEEKDAY BRIEFING
         lines.append("Reflect on what you have been building.")
-        lines.append("Gather your team and refine and iterate.")
+        lines.append("Gather your team, refine and iterate — and use your new B2B Sales module to start thinking about how you will ship your product.")
+        lines.append("")
+        lines.append("<a href='https://anthropic.skilljar.com/introduction-to-claude'>→ Free Claude training — Anthropic's official Introduction to Claude</a>")
+        lines.append("")
+        lines.append("<b>📊 AI IN B2B SALES</b>")
+        lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
         lines.append("")
         lines.append("<b>🏆 VANGUARD TEAMS</b>")
         lines.append("If you are not yet in a team — reach out on Telegram and raise your hand.")

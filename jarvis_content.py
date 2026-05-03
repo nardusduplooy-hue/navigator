@@ -138,6 +138,52 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-05": {
+        "step": "Teams & Tribes — Week commitment",
+        "title": "Your commitment to your team",
+        "url": "https://medium.com/@talirezun",
+        "focus": "One week into May. Name your commitment to your team — out loud.",
+        "question": (
+            "One week into May. The B2B Sales module is open, your team is forming, and Module 4 is on the horizon. "
+            "One question to start the week: what is the one commitment you are making to your team this week — "
+            "not to the programme, not to yourself — to your team specifically? "
+            "Name it out loud. Commitments made publicly are kept more often than ones made privately."
+        ),
+        "model_answer": (
+            "A team commitment is different from a personal goal. It has a recipient. "
+            "Someone is counting on it. That is what makes it powerful — and what makes it uncomfortable to make. "
+            "The teams that move fastest in this programme are not the ones with the best ideas. "
+            "They are the ones where each member knows what the others are working on and holds each other to it. "
+            "Your commitment this week does not need to be large. It needs to be specific and directed at someone. "
+            "'I will share my build draft with my team by Wednesday' is a commitment. "
+            "'I will work harder this week' is not. Name yours."
+        ),
+    },
+    "2026-05-04": {
+        "step": "Teams & Tribes — Underused asset",
+        "title": "Who in your team have you not yet used?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Stronger together. Name the underused asset in your team.",
+        "question": (
+            "Vanguard is not a solo programme — it is a tribe. Stronger together is not a slogan, it is a strategy. "
+            "Today's question: who in your Vanguard team has a skill, perspective, or network "
+            "that you have not yet deliberately used? "
+            "Name one person and one specific way you could engage them this week. "
+            "The teams that win in this programme are not the ones with the most talented individuals — "
+            "they are the ones that figured out how to combine what they have."
+        ),
+        "model_answer": (
+            "Every team has an underused asset. "
+            "Sometimes it is a person with deep industry knowledge that nobody has thought to tap. "
+            "Sometimes it is someone with a network that could open a door. "
+            "Sometimes it is the quietest person in the group who has been thinking about the problem "
+            "differently from everyone else. "
+            "The Vanguard cohort was built for diversity — different countries, industries, disciplines. "
+            "That diversity is only valuable if it is activated. "
+            "Stronger together is not about harmony. It is about deliberate combination. "
+            "Name your person. Make the move this week."
+        ),
+    },
     "2026-05-03": {
         "step": "Post-session — The power of the tribe",
         "title": "Your team is the curriculum",
@@ -1135,9 +1181,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7455920748063391744/",
-    "title": "The Rise of the Player Coach",
-    "description": "Kapusta on the player-coach model — the emerging leadership archetype for the NEO Era, where the best leaders stay in the game while directing others.",
+    "url": "https://www.linkedin.com/pulse/centaur-doctrine-how-vanguard-leaders-win-neo-drazen-kapusta-ytnzf/?trackingId=pjGYioCcM3QSAAObnZiD5A%3D%3D",
+    "title": "The Centaur Doctrine: How Vanguard Leaders Win the NEO Battlefield",
+    "description": "Kapusta on the Centaur Doctrine — how Vanguard leaders combine human judgment with AI capability to win in the NEO Era.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -1147,7 +1193,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Salesforce launches Agentforce Operations to fix the workflows breaking enterprise AI",
+    "headline": "OpenAI announces GPT-5 with enhanced reasoning as the AI model race enters a new phase",
     "source": "VentureBeat AI",
 }
 
