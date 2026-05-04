@@ -1181,7 +1181,7 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/centaur-doctrine-how-vanguard-leaders-win-neo-drazen-kapusta-ytnzf/?trackingId=pjGYioCcM3QSAAObnZiD5A%3D%3D",
+    "url": "https://www.linkedin.com/pulse/centaur-doctrine-part-ii-iran-war-runs-long-what-should-kapusta-2xmxf/?trackingId=aoSi2FDrXBfNcbBnBWp3Cg%3D%3D",
     "title": "The Centaur Doctrine: How Vanguard Leaders Win the NEO Battlefield",
     "description": "Kapusta on the Centaur Doctrine — how Vanguard leaders combine human judgment with AI capability to win in the NEO Era.",
 }
