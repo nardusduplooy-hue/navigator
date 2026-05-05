@@ -278,6 +278,40 @@ def send_briefing():
             print("Answer -> " + str(chat_id) + ": " + ("OK" if ok else "FAILED"))
 
 
+def send_channel():
+    """Manually post today's briefing + model answer to the COTRUGLI Navigator channel topic.
+    Only run this after --test-send has been approved. Never called by cron."""
+    CHANNEL_CHAT_ID = -1002421053554
+    CHANNEL_THREAD_ID = 2201
+
+    def send_to_channel(text):
+        url = "https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage"
+        payload = {
+            "chat_id": CHANNEL_CHAT_ID,
+            "message_thread_id": CHANNEL_THREAD_ID,
+            "text": text,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        }
+        try:
+            r = requests.post(url, json=payload, timeout=15)
+            return r.ok
+        except Exception as e:
+            print(f"Error sending to channel: {e}")
+            return False
+
+    full = build_briefing()
+    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+    answer = build_model_answer()
+
+    for i, part in enumerate(parts):
+        ok = send_to_channel(part)
+        print(f"Channel briefing part {i+1}: {'OK' if ok else 'FAILED'}")
+    if answer:
+        ok = send_to_channel(answer)
+        print(f"Channel answer: {'OK' if ok else 'FAILED'}")
+
+
 if __name__ == "__main__":
     if "--test-send" in sys.argv:
         send_test()
@@ -305,5 +339,7 @@ if __name__ == "__main__":
                 print("Answer -> " + str(chat_id) + ": " + ("OK" if ok else "FAILED"))
         else:
             print("No model answer for today")
+    elif "--send-channel" in sys.argv:
+        send_channel()
     else:
         send_briefing()
