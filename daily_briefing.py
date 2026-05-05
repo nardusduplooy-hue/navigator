@@ -278,7 +278,21 @@ def send_briefing():
             print("Answer -> " + str(chat_id) + ": " + ("OK" if ok else "FAILED"))
 
 
-def send_channel():
+def test_channel():
+    """Preview the channel post — sends to Nardus DM only. Never touches the channel."""
+    MY_CHAT_ID = 8536765390
+    full = build_briefing()
+    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+    answer = build_model_answer()
+    print("--- CHANNEL TEST (to your DM only) ---")
+    for i, part in enumerate(parts):
+        ok = send_message(MY_CHAT_ID, part)
+        print(f"Channel test part {i+1}: {'OK' if ok else 'FAILED'}")
+    if answer:
+        ok = send_message(MY_CHAT_ID, answer)
+        print(f"Channel test answer: {'OK' if ok else 'FAILED'}")
+
+
     """Manually post today's briefing + model answer to the COTRUGLI Navigator channel topic.
     Only run this after --test-send has been approved. Never called by cron."""
     CHANNEL_CHAT_ID = -1002421053554
@@ -339,6 +353,8 @@ if __name__ == "__main__":
                 print("Answer -> " + str(chat_id) + ": " + ("OK" if ok else "FAILED"))
         else:
             print("No model answer for today")
+    elif "--test-channel" in sys.argv:
+        test_channel()
     elif "--send-channel" in sys.argv:
         send_channel()
     else:
