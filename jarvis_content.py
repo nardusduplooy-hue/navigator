@@ -1193,7 +1193,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI announces GPT-5 with enhanced reasoning as the AI model race enters a new phase",
+    "headline": "Inside AMEX's agentic commerce stack: How intent contracts and single-use tokens enforce AI transactions",
     "source": "VentureBeat AI",
 }
 
