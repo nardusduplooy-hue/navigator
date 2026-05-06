@@ -138,6 +138,27 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-06": {
+        "step": "Teams & Tribes — Cohesion",
+        "title": "One act that strengthens your tribe",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Tribe cohesion is built in small, consistent moments — not grand gestures.",
+        "question": (
+            "Vanguard is not just a programme — it is a tribe in formation. "
+            "Research consistently shows that the quality of a team's relationships predicts performance more reliably than individual talent. "
+            "Think about your own Vanguard team: what is one specific thing you could do this week — "
+            "not in your work, but in how you show up for your people — that would strengthen the cohesion of your tribe?"
+        ),
+        "model_answer": (
+            "Tribe cohesion is not built in big moments. It is built in small, consistent ones — "
+            "the message you send when someone shares an idea, the follow-up after a tough session, "
+            "the acknowledgement that someone did something well. "
+            "The teams that hold together under pressure are the ones that invested in the relationship before the pressure arrived. "
+            "You do not need a grand gesture this week. "
+            "You need one deliberate act of showing up for someone in your team. "
+            "That is how tribes are built — one moment at a time."
+        ),
+    },
     "2026-05-05": {
         "step": "Teams & Tribes — Week commitment",
         "title": "Your commitment to your team",

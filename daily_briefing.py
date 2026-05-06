@@ -293,6 +293,7 @@ def test_channel():
         print(f"Channel test answer: {'OK' if ok else 'FAILED'}")
 
 
+def send_channel():
     """Manually post today's briefing + model answer to the COTRUGLI Navigator channel topic.
     Only run this after --test-send has been approved. Never called by cron."""
     CHANNEL_CHAT_ID = -1002421053554
