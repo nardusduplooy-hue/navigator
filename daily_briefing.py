@@ -96,6 +96,11 @@ def build_briefing():
     lines.append("<i>Vanguard is a team sport. The cohort is forming active groups right now — find your people, find your Chief, and get to work. That is what this programme is built for.</i>")
     lines.append("")
 
+    # VANGUARD TEAMS
+    lines.append("🏆 <b>VANGUARD TEAMS</b>")
+    lines.append("<i>No one wins this alone. The teams that break through are the ones that show up for each other. If you are still on the outside — get in. Message someone today.</i>")
+    lines.append("")
+
     # DEADLINES
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
@@ -191,23 +196,14 @@ def build_briefing():
         lines.append("<b>📊 AI IN B2B SALES</b>")
         lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
         lines.append("")
-        lines.append("🏆 <b>VANGUARD TEAMS</b>")
-        lines.append("<i>No one wins this alone. The teams that break through are the ones that show up for each other. If you are still on the outside — get in. Message someone today.</i>")
-        lines.append("")
 
     # KAPUSTA
-    lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta just posted this:</b>")
+    lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta:</b>")
     lines.append("")
-    lines.append("<b>Trust as a Protocol — The Cotrugli Ledger</b>")
-    lines.append(
-        "Kapusta argues that trust will be one of the most important virtues in the NEO era — "
-        "not blind trust, not trust as a feeling, but engineered trust. A protocol. "
-        "He and his team at COlab have spent years developing this: the Cotrugli Ledger. "
-        "Not just a decentralised accounting and governance system — but the minimal trust layer "
-        "that AI needs right now. This is the first post in a series. Read it, and watch for what follows."
-    )
+    lines.append("<b>" + KAPUSTA_TODAY["title"] + "</b>")
+    lines.append(KAPUSTA_TODAY["description"])
     lines.append("")
-    lines.append("<a href='https://www.linkedin.com/posts/cotrugli_it-is-hard-to-explain-why-i-believe-trust-ugcPost-7457021692511424512-g8gj/'>→ Read Kapusta's post on LinkedIn</a>")
+    lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>→ Read on LinkedIn</a>")
     lines.append("")
 
     # AI NEWS

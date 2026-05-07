@@ -138,6 +138,26 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-07": {
+        "step": "Teams & Tribes — Honest audit",
+        "title": "Are you moving together or alone?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Stronger together is a strategy. Is your team executing it?",
+        "question": (
+            "Stronger together is not a slogan — it is a strategy. But strategy only works when it is executed. "
+            "Today's question: in the last 7 days, has your Vanguard team moved forward together, or have you been moving alone? "
+            "Be honest. What is the one thing that is stopping your team from operating as a real unit — "
+            "and what are you going to do about it this week?"
+        ),
+        "model_answer": (
+            "Most teams in programmes like this fall into the same trap: everyone is busy, so collaboration gets pushed to 'later.' "
+            "But later never comes. The teams that break through are not the ones that waited for the perfect moment to collaborate — "
+            "they are the ones that made collaboration the default, even when it was inconvenient. "
+            "If your team is not moving as a unit, the reason is almost always one of three things: "
+            "unclear roles, no shared rhythm, or nobody taking the initiative to call the team together. "
+            "You know which one it is. Fix that one thing this week."
+        ),
+    },
     "2026-05-06": {
         "step": "Teams & Tribes — Cohesion",
         "title": "One act that strengthens your tribe",
@@ -1202,9 +1222,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/centaur-doctrine-part-ii-iran-war-runs-long-what-should-kapusta-2xmxf/?trackingId=aoSi2FDrXBfNcbBnBWp3Cg%3D%3D",
-    "title": "The Centaur Doctrine: How Vanguard Leaders Win the NEO Battlefield",
-    "description": "Kapusta on the Centaur Doctrine — how Vanguard leaders combine human judgment with AI capability to win in the NEO Era.",
+    "url": "https://www.linkedin.com/pulse/trust-virtue-neo-era-drazen-kapusta-orhge/",
+    "title": "Trust as a Virtue in the NEO Era",
+    "description": "Kapusta argues that trust will be one of the most important virtues in the NEO era — not blind trust, not trust as a feeling, but engineered trust. A protocol. He and his team at COlab have spent years developing this: the Cotrugli Ledger. Not just a decentralised accounting and governance system — but the minimal trust layer that AI needs right now. This is the first post in a series. Read it, and watch for what follows.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -1214,7 +1234,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Inside AMEX's agentic commerce stack: How intent contracts and single-use tokens enforce AI transactions",
+    "headline": "Market research is too slow for the AI era, so Brox built 60,000 identical 'digital twins' of real people you can survey instantly, repeatedly",
     "source": "VentureBeat AI",
 }
 
