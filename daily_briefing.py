@@ -171,25 +171,23 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("📚 <b>REQUIRED READING — New from Dr. Tali Režun</b>")
+        lines.append("🎯 <b>MODULE 4 — CONTEXT ENGINEERING IS COMING</b>")
         lines.append("")
-        lines.append("<b>The Brain is Ready. The Body is the Problem.</b>")
+        lines.append("Next Saturday we dive into Module 4 — Context Engineering.")
+        lines.append("")
         lines.append(
-            "We've been learning how to build software with coding agents. "
-            "But there's a wall you're going to hit the moment you try to connect your agent to the real world. "
-            "APIs are locked. Data is siloed. Social platforms block agent access. "
-            "And the moment you give an agent access to sensitive data, privacy becomes a serious design decision — not an afterthought. "
-            "This article maps exactly that wall. Where it is, why it exists, and what the frontier labs are doing about it right now. "
-            "If you want to build useful agents — not just impressive demos — this is the context you need."
+            "Dr. Tali just posted a preview on LinkedIn with three slides straight from the module — "
+            "built around a real use case: The Curator, an open-source second brain app he has been developing. "
+            "The slides show exactly how context engineering works at every stage of building a real AI-powered product — "
+            "from the first idea all the way to video production."
         )
         lines.append("")
-        lines.append("<a href='https://medium.com/@talirezun/the-brain-is-ready-the-body-is-the-problem-f32f08e42b0d'>→ Read on Medium</a>")
-        lines.append("<a href='https://open.substack.com/pub/talirezun/p/the-brain-is-ready-the-body-is-the?r=68m2cw&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'>→ Read on Substack</a>")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_thecurator-thecurator-thecurator-ugcPost-7458163327240941568-_UwW'>→ Check it out before Saturday</a>")
         lines.append("")
-        lines.append("💬 After you read it — <a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-aiagents-activity-7456956758431875073-rRpZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>drop your thoughts on LinkedIn</a>. What's the biggest obstacle you would face trying to build around these constraints? Have you already hit any of these walls? Let's spin a real debate — not polite reactions.")
+        lines.append("This module is hands-on and practical. Not theory — the actual Claude Project, the actual code, the actual prompts and context files that made the app work. Come with questions. Come ready to build.")
         lines.append("")
-        lines.append("Reflect on what you have been building.")
-        lines.append("Gather your team, refine and iterate — and use your new B2B Sales module to start thinking about how you will ship your product.")
+        lines.append("💬 <b>Dr. Tali is also waiting for your feedback on his latest article:</b>")
+        lines.append("<a href='https://medium.com/@talirezun/the-brain-is-ready-the-body-is-the-problem-f32f08e42b0d'>The Brain is Ready. The Body is the Problem.</a> — drop your thoughts in the comments on <a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-aiagents-activity-7456956758431875073-rRpZ'>LinkedIn</a>.")
         lines.append("")
         lines.append("<a href='https://anthropic.skilljar.com/introduction-to-claude'>→ Free Claude training — Anthropic's official Introduction to Claude</a>")
         lines.append("")
