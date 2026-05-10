@@ -818,7 +818,7 @@ textarea::placeholder { color: var(--text-muted); }
       <div style="font-size:13px;color:#ffffff;line-height:1.65;">
         <strong style="color:#ffffff;">1. Comment Assistant</strong> — Pick a faculty post, share your own take first, then refine through 3 draft iterations. Post manually to LinkedIn.<br>
         <strong style="color:#ffffff;">2. Article Assistant</strong> — Build a LinkedIn article grounded in your MBA frameworks.<br>
-        <strong style="color:#ffffff;">3. Questions?</strong> — Go to the <strong style="color:#ffffff;">2nd Brain</strong> tab to ask anything about frameworks, concepts, or post angles.
+        <strong style="color:#ffffff;">3. Second Brain</strong> — Scroll down to ask anything about frameworks, concepts, or post angles.
       </div>
       <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:8px;">API key required. Add it via Settings (tap header on Engage or Briefing tab).</div>
     </div>
@@ -914,19 +914,28 @@ textarea::placeholder { color: var(--text-muted); }
     </div>
 
     <!-- Ask Navigator panel -->
-    <div id="engage-ask" style="display:none;">
-      <div class="starter-chips" style="margin-top:6px;">
+    <div id="engage-ask">
+      <div class="section-label" style="margin-top:20px;">Second Brain — Ask Anything</div>
+      <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:16px;margin-bottom:12px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
+        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Second Brain Vault</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.85);line-height:1.5;">Ask anything about your programme, frameworks, Kapusta\u2019s work, or Tali\u2019s methodology.</div>
+      </div>
+      <div class="starter-chips" style="margin-bottom:8px;">
+        <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
+        <div class="chip" onclick="askKnowledge(this)">Explain Context Engineering</div>
+        <div class="chip" onclick="askKnowledge(this)">What is NCTE?</div>
+        <div class="chip" onclick="askKnowledge(this)">NEO Era in one paragraph</div>
+        <div class="chip" onclick="askKnowledge(this)">Wolf-Dog-Sheep explained</div>
         <div class="chip" onclick="askEngageStarter(this)">What should I engage with today?</div>
         <div class="chip" onclick="askEngageStarter(this)">Help me find an angle on Kapusta</div>
-        <div class="chip" onclick="askEngageStarter(this)">Review my comment draft</div>
-        <div class="chip" onclick="askEngageStarter(this)">What frameworks fit this post?</div>
       </div>
-      <div class="qa-messages" id="engage-qa-messages">
-        <div class="msg-nav"><strong>Navigator</strong> ready. Ask me anything about LinkedIn engagement, post angles, or your voice strategy.</div>
+      <div class="qa-messages" id="kv-qa-messages" style="min-height:80px;">
+        <div class="msg-nav"><strong>Second Brain Vault</strong> ready. Ask me anything about your programme, frameworks, Kapusta\u2019s work, or Tali\u2019s methodology.</div>
       </div>
       <div style="display:flex;gap:8px;margin-top:8px;">
-        <textarea id="engage-qa-input" rows="2" placeholder="Ask about engagement strategy, post angles, comment coaching..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
-        <button class="qa-send" onclick="sendEngageQA()" style="align-self:flex-end;">
+        <textarea id="kv-qa-input" rows="2" placeholder="Ask about any concept, framework, or idea..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
+        <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
       </div>
@@ -943,38 +952,49 @@ textarea::placeholder { color: var(--text-muted); }
   </section>
 
 
-  <!-- TAB 6: KNOWLEDGE VAULT -->
-  <section id="tab-knowledge" class="tab-panel">
+  <!-- TAB 6: TRIBE -->
+  <section id="tab-tribe" class="tab-panel">
 
-    <!-- Second Brain hero card — no buttons -->
-    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:16px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);"></div>
-      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Second Brain Vault</div>
-      <div style="font-size:17px;font-weight:800;font-family:'Syne',sans-serif;color:#ffffff;margin-bottom:4px;">Ask anything</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">Your knowledge vault is fed by the daily briefing, Kapusta\u2019s work, Tali\u2019s frameworks, and The Curator. Ask it anything about your programme, concepts, or frameworks.</div>
+    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:20px;margin-bottom:16px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.06);pointer-events:none;"></div>
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Vanguard Chiefs Council</div>
+      <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#ffffff;margin-bottom:4px;">The Tribe</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">10 chiefs. One cohort. The tribe wins together or not at all.</div>
     </div>
 
-    <!-- Knowledge Q&A — the entire interface -->
-    <div style="margin-bottom:14px;">
-      <div class="starter-chips" style="margin-bottom:8px;">
-        <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
-        <div class="chip" onclick="askKnowledge(this)">Explain Context Engineering</div>
-        <div class="chip" onclick="askKnowledge(this)">What is NCTE?</div>
-        <div class="chip" onclick="askKnowledge(this)">NEO Era in one paragraph</div>
-        <div class="chip" onclick="askKnowledge(this)">Wolf-Dog-Sheep explained</div>
-        <div class="chip" onclick="askKnowledge(this)">What is Cotruglian Philosophy?</div>
-      </div>
-      <div class="qa-messages" id="kv-qa-messages" style="min-height:80px;">
-        <div class="msg-nav"><strong>Second Brain Vault</strong> ready. Ask me anything about your programme, frameworks, Kapusta\u2019s work, or Tali\u2019s methodology.</div>
-      </div>
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <textarea id="kv-qa-input" rows="2" placeholder="Ask about any concept, framework, or idea..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
-        <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </div>
-      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Powered by Claude Sonnet 4.6 · Requires API key in Settings</div>
+    <div class="pill-tabs" id="tribe-tabs">
+      <button class="pill-tab active" onclick="switchTribeView('teams',this)">Teams</button>
+      <button class="pill-tab" onclick="switchTribeView('chiefs',this)">Chiefs</button>
+      <button class="pill-tab" onclick="switchTribeView('pulse',this)">Pulse</button>
     </div>
+
+    <!-- TEAMS VIEW -->
+    <div id="tribe-teams">
+      <div id="tribe-teams-list"></div>
+    </div>
+
+    <!-- CHIEFS VIEW -->
+    <div id="tribe-chiefs" style="display:none;">
+      <div id="tribe-chiefs-list"></div>
+    </div>
+
+    <!-- PULSE VIEW -->
+    <div id="tribe-pulse" style="display:none;">
+      <div class="card card-accent" style="margin-bottom:12px;">
+        <div style="font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">This Week\u2019s Tribe Question</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.6;" id="tribe-pulse-question">Who in your team has a skill or network you haven\u2019t yet deliberately activated? Name them. Make the move this week.</div>
+      </div>
+      <div class="section-label">Engagement Signals</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+        <div class="metric-tile"><div class="metric-val" style="color:var(--accent);" id="tribe-active-count">—</div><div class="metric-lbl">Active Teams</div></div>
+        <div class="metric-tile"><div class="metric-val" style="color:var(--green);" id="tribe-chief-count">—</div><div class="metric-lbl">Chiefs Connected</div></div>
+      </div>
+      <div class="card" style="text-align:center;padding:24px;">
+        <div style="font-size:28px;margin-bottom:8px;">🔜</div>
+        <div style="font-size:13px;color:var(--text-dim);line-height:1.5;">Cohort pulse tracking goes live after the Chiefs\u2019 session on Saturday 16 May. Check back then.</div>
+      </div>
+    </div>
+
   </section>
 
 </main>
@@ -1000,9 +1020,9 @@ textarea::placeholder { color: var(--text-muted); }
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     <span class="nav-label">Engage</span>
   </button>
-  <button class="nav-btn" data-tab="knowledge" onclick="switchTab('knowledge',this)">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 5.5-3 7H8c-.5-1.5-3-3.5-3-7a7 7 0 0 1 7-7z"/><path d="M9 21h6M10 17h4"/></svg>
-    <span class="nav-label">2nd Brain</span>
+  <button class="nav-btn" data-tab="tribe" onclick="switchTab('tribe',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <span class="nav-label">Tribe</span>
   </button>
 </nav>
 
@@ -1060,11 +1080,11 @@ const PROGRAMME_DATA = {
   assignments: [
     {
       id: "b2b-m1-01",
-      name: "AI in B2B Sales \u2014 Module 1 exploration",
-      dueDate: "2026-05-16T23:59:00+02:00",
+      name: "AI in B2B Sales \u2014 Module 1",
+      dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/ai-sales/",
-      notes: "Reflect on what you have been building. Use your B2B Sales module to start thinking about how you will ship your product. If you are not yet in a Vanguard team \u2014 reach out on Telegram now."
+      notes: "Current module \u2014 no deadline set yet. Reflect on what you have been building. Use your B2B Sales module to start thinking about how you will ship your product."
     }
   ],
 
@@ -1072,7 +1092,7 @@ const PROGRAMME_DATA = {
     {
       id: "session-12",
       name: "Vanguard Session 12 \u2014 Module 4: Context Engineering",
-      datetime: "2026-05-16T09:00:00+02:00",
+      datetime: "2026-05-16T17:00:00+02:00",
       zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/11/",
       recordingUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/11/"
     }
@@ -2868,6 +2888,107 @@ function filterKnowledge() {
   renderKvList(PROGRAMME_DATA.KNOWLEDGE_VAULT || []);
 }
 
+// ═══════════════════════════════════════
+// TRIBE
+// ═══════════════════════════════════════
+
+const TRIBE_DATA = {
+  teams: [
+    { id: 'chiron', name: 'Team Chiron', chief: 'Nardus Du Plooy', chiefRole: 'Vanguard Chief', members: ['Nardus Du Plooy', 'Jannes Du Plooy'], status: 'active', project: 'Cotrugli Navigator + LoyaltyIQ + AI Notary', flag: '\ud83c\uddff\ud83c\udde6' },
+    { id: 'team2', name: 'Team 2', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
+    { id: 'team3', name: 'Team 3', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
+    { id: 'team4', name: 'Team 4', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
+    { id: 'team5', name: 'Team 5', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' }
+  ],
+  chiefs: [
+    { name: 'Nardus Du Plooy', team: 'Team Chiron', country: 'South Africa', flag: '\ud83c\uddff\ud83c\udde6', project: 'Cotrugli Navigator', whatsapp: '' }
+  ],
+  compact: 'The chiefs show up \u2014 together, visibly, and now. We align, we commit, and we make sure Cotrugli sees us leading. The tribe wins or we all lose.',
+  nextMeeting: '2026-05-16T17:00:00+02:00',
+  nextMeetingLabel: 'Chiefs + Vanguard Session 12'
+};
+
+function switchTribeView(view, btn) {
+  document.getElementById('tribe-tabs').querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tribe-teams').style.display = view === 'teams' ? 'block' : 'none';
+  document.getElementById('tribe-chiefs').style.display = view === 'chiefs' ? 'block' : 'none';
+  document.getElementById('tribe-pulse').style.display = view === 'pulse' ? 'block' : 'none';
+  if (view === 'pulse') renderTribePulse();
+}
+
+function renderTribe() {
+  renderTribeTeams();
+  renderTribeChiefs();
+  renderTribePulse();
+}
+
+function renderTribeTeams() {
+  const el = document.getElementById('tribe-teams-list');
+  if (!el) return;
+
+  const compactCard = `<div class="card card-gold" style="margin-bottom:12px;">
+    <div style="font-size:10px;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">\ud83e\udd1d Chiefs\u2019 Compact</div>
+    <div style="font-size:13px;color:#78350f;line-height:1.6;">${TRIBE_DATA.compact}</div>
+  </div>`;
+
+  const teamsHtml = TRIBE_DATA.teams.map(t => {
+    const isActive = t.status === 'active';
+    const memberCount = t.members.length;
+    return `<div class="card ${isActive ? 'card-accent' : ''}" style="margin-bottom:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:${isActive ? '10px' : '0'};">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:20px;">${t.flag || '\ud83c\udfc6'}</span>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">${t.name}</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">Chief: ${t.chief}</div>
+          </div>
+        </div>
+        <span class="badge ${isActive ? 'badge-done' : 'badge-pending'}">${isActive ? 'Active' : 'Forming'}</span>
+      </div>
+      ${isActive ? `
+      <div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;">
+        <strong>Project:</strong> ${t.project}
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        ${t.members.map(m => `<span style="font-size:11px;background:var(--accent-light);color:var(--accent);border:1px solid var(--border-accent);padding:3px 10px;border-radius:20px;">${m}</span>`).join('')}
+      </div>` : ''}
+    </div>`;
+  }).join('');
+
+  el.innerHTML = compactCard + teamsHtml + `<div class="card" style="text-align:center;padding:20px;border-style:dashed;">
+    <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Team data updates after the Chiefs\u2019 session on <strong>Saturday 16 May</strong>.<br>Chiefs \u2014 send your team details to Nardus on WhatsApp.</div>
+  </div>`;
+}
+
+function renderTribeChiefs() {
+  const el = document.getElementById('tribe-chiefs-list');
+  if (!el) return;
+  el.innerHTML = TRIBE_DATA.chiefs.map(c => `
+    <div class="card" style="margin-bottom:10px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">${c.flag || '\ud83d\udc64'}</div>
+        <div style="flex:1;">
+          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">${c.name}</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${c.team} \u00b7 ${c.country}</div>
+          <div style="font-size:11px;color:var(--accent);margin-top:2px;">${c.project}</div>
+        </div>
+        ${c.whatsapp ? `<button class="btn btn-primary btn-sm" onclick="openUrl('https://wa.me/${c.whatsapp}')">Message</button>` : ''}
+      </div>
+    </div>`).join('') + `<div class="card" style="text-align:center;padding:20px;border-style:dashed;">
+    <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">All 10 chiefs will appear here after Saturday\u2019s session.<br>Chiefs \u2014 share your WhatsApp with Nardus to be listed.</div>
+  </div>`;
+}
+
+function renderTribePulse() {
+  const activeTeams = TRIBE_DATA.teams.filter(t => t.status === 'active').length;
+  const chiefCount = TRIBE_DATA.chiefs.length;
+  const activeEl = document.getElementById('tribe-active-count');
+  const chiefEl = document.getElementById('tribe-chief-count');
+  if (activeEl) activeEl.textContent = activeTeams;
+  if (chiefEl) chiefEl.textContent = chiefCount + ' / 10';
+}
+
 function init() {
   renderNorthStar();
   renderWork();
@@ -2875,6 +2996,7 @@ function init() {
   renderBriefing();
   renderPostLists();
   renderKnowledge();
+  renderTribe();
   initCourses();
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
