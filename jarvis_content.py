@@ -138,6 +138,69 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-10": {
+        "step": "Teams & Tribes — NEO era orchestration",
+        "title": "Your network is your leverage",
+        "url": "https://medium.com/@talirezun",
+        "focus": "The NEO era rewards the most connected, coordinated, trust-driven team — not the smartest individual.",
+        "question": (
+            "We live in a networked, exponential, orchestrated world — "
+            "where value is no longer created by individuals working in isolation but by tribes that know how to combine their capabilities at speed. "
+            "The NEO era does not reward the smartest person in the room. It rewards the most connected, most coordinated, most trust-driven team. "
+            "Question: what is the one capability in your Vanguard tribe that — if deliberately activated this week — "
+            "would make your whole team stronger? Name it and name the person who holds it."
+        ),
+        "model_answer": (
+            "In an exponential world, your network is your leverage. Not your skills — your network. "
+            "The teams that compound fastest are not the ones with the best individuals. "
+            "They are the ones that figured out how to route the right problem to the right person at the right time. "
+            "That is orchestration. That is the NEO era in practice. "
+            "Every Vanguard tribe has an underused node — someone whose capability, network or perspective has not yet been deliberately activated. "
+            "Find yours. The tribes that win are the ones that stop working in parallel and start operating as a system."
+        ),
+    },
+    "2026-05-09": {
+        "step": "Teams & Tribes — Weekly honest audit",
+        "title": "Team or parallel workers?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "There is a difference between a group working in parallel and a tribe that moves together.",
+        "question": (
+            "Tomorrow the week resets. Before it does — one honest question: "
+            "did your Vanguard team actually function as a team this week, or did everyone just work in parallel? "
+            "There is a difference between a group of people doing individual work and a tribe that moves together. "
+            "Which one were you this week — and what will you change next week?"
+        ),
+        "model_answer": (
+            "Parallel work feels productive. Everyone is busy, tasks are getting done, progress is being made. "
+            "But it is not a team — it is a collection of individuals sharing a name. "
+            "A tribe moves differently. It has a shared pulse. "
+            "Members know what each other is working on, where the blockers are, and who needs support. "
+            "That shared awareness is what turns individual effort into collective momentum. "
+            "If this week felt like parallel work, next week pick one moment — "
+            "one check-in, one shared document, one voice note — and make it deliberate. "
+            "That is how the shift starts."
+        ),
+    },
+    "2026-05-08": {
+        "step": "Teams & Tribes — Weekend connection",
+        "title": "One real connection this weekend",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Tribes are built in the spaces between sessions.",
+        "question": (
+            "The Vanguard tribe is only as strong as the connections within it. "
+            "We are heading into the weekend — a natural pause before the next push. "
+            "Use it deliberately: reach out to one person in your cohort you have not spoken to this week. "
+            "Not to discuss work. Just to connect. Who is it, and what will you say?"
+        ),
+        "model_answer": (
+            "The strongest tribes are not built in sessions — they are built in the spaces between them. "
+            "A message on a Friday afternoon that says 'how are you doing?' is not small talk. "
+            "It is the invisible infrastructure that holds a team together when things get hard. "
+            "The Vanguard cohort has people from different countries, industries and backgrounds. "
+            "That diversity is only valuable if the connections are real. "
+            "This weekend, make one real connection. It does not need to be long. It just needs to be genuine."
+        ),
+    },
     "2026-05-07": {
         "step": "Teams & Tribes — Honest audit",
         "title": "Are you moving together or alone?",
@@ -1234,8 +1297,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Market research is too slow for the AI era, so Brox built 60,000 identical 'digital twins' of real people you can survey instantly, repeatedly",
-    "source": "VentureBeat AI",
+    "headline": "Microsoft Global AI Diffusion Report: global AI adoption hits 17.8% of working-age population in Q1 2026 — UAE leads at 70.1%, US sits 21st at 31.3%. The gap between leaders and laggards is widening fast.",
+    "source": "Microsoft",
 }
 
 JTBD_STATUS = (
