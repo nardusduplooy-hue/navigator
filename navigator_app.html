@@ -569,7 +569,10 @@ textarea::placeholder { color: var(--text-muted); }
       <div class="stat-chip"><div class="stat-val" id="stat-jtbd">All ✓</div><div class="stat-lbl">JTBD</div></div>
     </div>
     <div id="deadlines-accordion-header" onclick="toggleDeadlines()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:0;cursor:pointer;user-select:none;">
-      <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Deadlines Countdown</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Planning Horizon</span>
+        <span style="font-size:10px;color:rgba(255,255,255,0.65);font-weight:400;text-transform:none;letter-spacing:0;">— all tasks &amp; sessions</span>
+      </div>
       <span id="dl-chevron" style="font-size:18px;color:#ffffff;transition:transform 0.25s;display:inline-block;">›</span>
     </div>
     <div id="ns-deadlines" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;"></div>
@@ -699,7 +702,7 @@ textarea::placeholder { color: var(--text-muted); }
   <section id="tab-work" class="tab-panel">
     <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:14px;position:relative;overflow:hidden;">
       <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
-      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Current Course</div>
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Your Work — Current Course</div>
       <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#ffffff;margin-bottom:4px;" id="work-module-name">—</div>
       <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-bottom:16px;" id="work-module-meta">—</div>
       <div style="display:flex;flex-direction:column;gap:2px;">
@@ -717,7 +720,7 @@ textarea::placeholder { color: var(--text-muted); }
         </div>
       </div>
     </div>
-    <div class="section-label">Active Assignments</div>
+    <div class="section-label">Active Tasks</div>
     <div id="work-assignments"></div>
     <div class="section-label">Tool of the Day</div>
     <div class="card card-amber" id="work-tool-card" style="cursor:pointer;">
@@ -1079,7 +1082,20 @@ const PROGRAMME_DATA = {
 
   assignments: [
     {
+      id: "li-tali-brain-body",
+      type: "linkedin",
+      name: "Comment on Dr. Tali\u2019s article",
+      postTitle: "The Brain is Ready. The Body is the Problem.",
+      author: "Dr. Tali Re\u017eun",
+      dueDate: "",
+      status: "pending",
+      prepUrl: "https://medium.com/@talirezun",
+      linkedinUrl: "https://medium.com/@talirezun",
+      notes: "Drop your thoughts in the comments. What\u2019s the biggest obstacle you would face trying to build around these constraints? Have you already hit any of these walls? Let\u2019s spin a real debate."
+    },
+    {
       id: "b2b-m1-01",
+      type: "academic",
       name: "AI in B2B Sales \u2014 Module 1",
       dueDate: "",
       status: "in-progress",
@@ -2111,8 +2127,11 @@ function renderNorthStar() {
   priEl.innerHTML = '';
   const urgencyColor = { urgent: '#fca5a5', warning: '#fcd34d', safe: '#86efac', past: 'rgba(255,255,255,0.3)', current: '#86efac' };
 
-  PROGRAMME_DATA.assignments.slice(0,1).forEach(a => {
-    if (!a.dueDate) {
+  PROGRAMME_DATA.assignments.slice(0,2).forEach(a => {
+    if (a.type === 'linkedin') {
+      const isDone = a.status === 'commented' || a.status === 'submitted';
+      priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${isDone ? 'rgba(255,255,255,0.3)' : '#93c5fd'};"></div><span class="priority-name">💬 ${a.postTitle || a.name}</span><span class="priority-countdown ${isDone ? 'past' : 'safe'}">${isDone ? 'Done' : 'Comment'}</span></div>`;
+    } else if (!a.dueDate) {
       priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#86efac;"></div><span class="priority-name">${a.name}</span><span class="priority-countdown safe">Current</span></div>`;
     } else {
       const cd = getCountdown(a.dueDate);
@@ -2127,29 +2146,80 @@ function renderNorthStar() {
 
   const dlEl = document.getElementById('ns-deadlines');
   dlEl.innerHTML = '';
-  const urgDotColor = { urgent: 'var(--red)', warning: 'var(--amber)', safe: 'var(--green)', past: 'var(--text-muted)', current: 'var(--green)' };
-  const assignmentsWithDates = PROGRAMME_DATA.assignments.filter(a => a.dueDate);
-  const items = [...assignmentsWithDates, ...PROGRAMME_DATA.sessions.map(s => ({...s, name: s.name, dueDate: s.datetime, _isSession: true}))].sort((a,b) => new Date(a.dueDate||a.datetime) - new Date(b.dueDate||b.datetime)).filter(item => new Date(item.dueDate||item.datetime) > new Date());
-  const noDatesAssignments = PROGRAMME_DATA.assignments.filter(a => !a.dueDate && a.status !== 'submitted');
-  if (items.length === 0 && noDatesAssignments.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:10px 4px;">No upcoming deadlines</div>'; return; }
+
+  const nowDl = new Date();
+
+  // Build unified item list
+  const allItems = [];
+
+  // LinkedIn engagement assignments
+  PROGRAMME_DATA.assignments.filter(a => a.type === 'linkedin' && a.status !== 'commented' && a.status !== 'submitted').forEach(a => {
+    allItems.push({ label: a.postTitle || a.name, sub: `💬 Comment required — ${a.author}`, tier: 'today', dot: '#93c5fd', countdown: 'Comment', url: a.linkedinUrl || a.prepUrl, _li: true });
+  });
+
+  // Academic assignments with dates
+  PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && a.dueDate && a.status !== 'submitted').forEach(a => {
+    const cd = getCountdown(a.dueDate);
+    const diff = new Date(a.dueDate) - nowDl;
+    const days = diff / 86400000;
+    let tier = days <= 1 ? 'today' : days <= 4 ? 'week' : days <= 10 ? 'next' : 'radar';
+    allItems.push({ label: a.name, sub: `Due ${formatDate(a.dueDate)} · ${formatTime(a.dueDate)}`, tier, dot: days <= 1 ? 'var(--red)' : days <= 4 ? 'var(--amber)' : days <= 10 ? '#fde68a' : 'var(--green)', countdown: cd.display, urgency: cd.urgency });
+  });
+
+  // Ongoing (no date) academic
+  PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && (!a.dueDate || a.dueDate === '') && a.status !== 'submitted').forEach(a => {
+    allItems.push({ label: a.name, sub: 'Ongoing — no deadline set', tier: 'ongoing', dot: 'var(--text-muted)', countdown: 'Current' });
+  });
+
+  // Sessions
+  PROGRAMME_DATA.sessions.forEach(s => {
+    const diff = new Date(s.datetime) - nowDl;
+    if (diff < 0) return;
+    const days = diff / 86400000;
+    let tier = days <= 1 ? 'today' : days <= 4 ? 'week' : days <= 10 ? 'next' : 'radar';
+    const cd = getCountdown(s.datetime);
+    allItems.push({ label: s.name, sub: `📅 ${formatDate(s.datetime)} · ${formatTime(s.datetime)}`, tier, dot: 'var(--gold)', countdown: cd.display, urgency: cd.urgency, _session: true });
+  });
+
+  if (allItems.length === 0) { dlEl.innerHTML = '<div style="font-size:12px;color:var(--text-muted);padding:12px 16px;">No upcoming items</div>'; return; }
+
+  const tiers = [
+    { id: 'today', emoji: '🔴', label: 'Today / Tomorrow', desc: 'Needs action now' },
+    { id: 'week',  emoji: '🟠', label: 'This Week',        desc: '2–4 days out' },
+    { id: 'next',  emoji: '🟡', label: 'Next Week',        desc: '5–10 days out' },
+    { id: 'radar', emoji: '🟢', label: 'On the Radar',     desc: '2–4 weeks' },
+    { id: 'ongoing', emoji: '⚪', label: 'Ongoing',        desc: 'No fixed deadline' }
+  ];
+
   const wrapper = document.createElement('div');
   wrapper.style.cssText = 'border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);overflow:hidden;margin-bottom:12px;';
-  let rowIndex = 0;
-  noDatesAssignments.forEach(item => {
-    const row = document.createElement('div');
-    row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-card);${rowIndex > 0 ? 'border-top:1px solid var(--border);' : ''}`;
-    row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--green);"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">Current — no deadline set</div></div></div><span class="countdown safe" style="font-size:13px;flex-shrink:0;margin-left:10px;">Current</span>`;
-    wrapper.appendChild(row);
-    rowIndex++;
+
+  tiers.forEach(tier => {
+    const items = allItems.filter(i => i.tier === tier.id);
+    if (items.length === 0) return;
+
+    // Tier header
+    const header = document.createElement('div');
+    header.style.cssText = 'display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--bg-elevated);border-top:1px solid var(--border);';
+    header.innerHTML = `<span style="font-size:12px;">${tier.emoji}</span><span style="font-size:11px;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.07em;">${tier.label}</span><span style="font-size:10px;color:var(--text-muted);margin-left:2px;">— ${tier.desc}</span>`;
+    wrapper.appendChild(header);
+
+    items.forEach(item => {
+      const row = document.createElement('div');
+      row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:var(--bg-card);border-top:1px solid var(--border);${item.url ? 'cursor:pointer;' : ''}`;
+      if (item.url) row.onclick = () => openUrl(item.url);
+      row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;">
+        <div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${item.dot};"></div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.label}</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${item.sub}</div>
+        </div>
+      </div>
+      <span class="countdown ${item.urgency || 'safe'}" style="font-size:12px;flex-shrink:0;margin-left:10px;">${item.countdown}</span>`;
+      wrapper.appendChild(row);
+    });
   });
-  items.forEach((item, i) => {
-    const dt = item.dueDate || item.datetime;
-    const cd = getCountdown(dt);
-    const row = document.createElement('div');
-    row.style.cssText = `display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-card);border-top:1px solid var(--border);`;
-    row.innerHTML = `<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;"><div style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:${item._isSession ? 'var(--gold)' : urgDotColor[cd.urgency]};"></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${formatDate(dt)} · ${formatTime(dt)}</div></div></div><span class="countdown ${cd.urgency}" style="font-size:13px;flex-shrink:0;margin-left:10px;">${cd.display}</span>`;
-    wrapper.appendChild(row);
-  });
+
   dlEl.appendChild(wrapper);
 }
 
@@ -2178,13 +2248,33 @@ function renderWork() {
 
   const el = document.getElementById('work-assignments');
   el.innerHTML = '';
-  const statusMap = { pending: 'badge-pending', 'in-progress': 'badge-progress', submitted: 'badge-done' };
-  const statusLabel = { pending: 'Pending', 'in-progress': 'In Progress', submitted: 'Submitted \u2713' };
+  const statusMap = { pending: 'badge-pending', 'in-progress': 'badge-progress', submitted: 'badge-done', commented: 'badge-done' };
+  const statusLabel = { pending: 'Pending', 'in-progress': 'In Progress', submitted: 'Submitted \u2713', commented: 'Commented \u2713' };
+
   PROGRAMME_DATA.assignments.forEach(a => {
     const hasDue = a.dueDate && a.dueDate !== '';
     const cd = hasDue ? getCountdown(a.dueDate) : { urgency: 'safe', display: 'Current' };
     const dueText = hasDue ? `Due ${formatDate(a.dueDate)} \u00b7 ${formatTime(a.dueDate)}` : 'Current \u2014 no deadline set';
-    el.innerHTML += `<div class="card"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;"><div style="flex:1;"><div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">${a.name}</div><div style="font-size:11px;color:var(--text-muted);">${dueText}</div></div>${hasDue ? `<span class="countdown ${cd.urgency}">${cd.display}</span>` : ''}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;"><span class="badge ${statusMap[a.status]}">${statusLabel[a.status]}</span><button class="btn btn-ghost btn-sm" onclick="openUrl('${a.prepUrl}')">Prep \u2192</button></div></div>`;
+    const isDone = a.status === 'submitted' || a.status === 'commented';
+
+    if (a.type === 'linkedin') {
+      el.innerHTML += `<div class="card" style="border-color:rgba(10,102,194,0.3);background:#f0f7ff;opacity:${isDone ? '0.6' : '1'};">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#0a66c2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span style="font-size:10px;font-weight:700;color:#0a66c2;text-transform:uppercase;letter-spacing:0.08em;">LinkedIn Engagement Required</span>
+        </div>
+        <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;">${a.name}</div>
+        <div style="font-size:12px;color:#0a66c2;font-weight:500;margin-bottom:6px;">\u201c${a.postTitle}\u201d \u2014 ${a.author}</div>
+        <div style="font-size:12px;color:var(--text-dim);line-height:1.5;margin-bottom:10px;">${a.notes}</div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="badge ${statusMap[a.status] || 'badge-pending'}">${statusLabel[a.status] || 'Pending'}</span>
+          <button class="btn btn-sm" style="background:#0a66c2;color:#fff;flex:1;" onclick="openUrl('${a.linkedinUrl || a.prepUrl}')">Open Post \u2192</button>
+          ${!isDone ? `<button class="btn btn-ghost btn-sm" onclick="markAssignmentDone('${a.id}','commented')">Mark Done</button>` : ''}
+        </div>
+      </div>`;
+    } else {
+      el.innerHTML += `<div class="card ${hasDue && cd.urgency === 'urgent' ? 'card-urgent' : hasDue && cd.urgency === 'warning' ? 'card-amber' : ''}"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;"><div style="flex:1;"><div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">${a.name}</div><div style="font-size:11px;color:var(--text-muted);">${dueText}</div></div>${hasDue ? `<span class="countdown ${cd.urgency}">${cd.display}</span>` : ''}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;"><span class="badge ${statusMap[a.status]}">${statusLabel[a.status]}</span><button class="btn btn-ghost btn-sm" onclick="openUrl('${a.prepUrl}')">Prep \u2192</button></div></div>`;
+    }
   });
 }
 
@@ -2788,6 +2878,10 @@ function clearQAHistory() {
 }
 
 function openUrl(url) { if (url && url !== '#') { try { window.open(url, '_blank'); } catch(e) { window.location.href = url; } } }
+function markAssignmentDone(id, status) {
+  const a = PROGRAMME_DATA.assignments.find(a => a.id === id);
+  if (a) { a.status = status; renderWork(); renderNorthStar(); showToast('Marked as ' + (status === 'commented' ? 'Commented \u2713' : 'Done \u2713')); }
+}
 function showToast(msg, duration) {
   const t = document.createElement('div');
   t.textContent = msg;
