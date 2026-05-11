@@ -138,6 +138,27 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-12": {
+        "step": "Teams & Tribes — NEO era orchestration",
+        "title": "Your network is your leverage",
+        "url": "https://medium.com/@talirezun",
+        "focus": "The NEO era rewards the most connected, coordinated, trust-driven team — not the smartest individual.",
+        "question": (
+            "We live in a networked, exponential, orchestrated world — "
+            "where value is no longer created by individuals working in isolation but by tribes that know how to combine their capabilities at speed. "
+            "The NEO era does not reward the smartest person in the room. It rewards the most connected, most coordinated, most trust-driven team. "
+            "Question: what is the one capability in your Vanguard tribe that — if deliberately activated this week — "
+            "would make your whole team stronger? Name it and name the person who holds it."
+        ),
+        "model_answer": (
+            "In an exponential world, your network is your leverage. Not your skills — your network. "
+            "The teams that compound fastest are not the ones with the best individuals. "
+            "They are the ones that figured out how to route the right problem to the right person at the right time. "
+            "That is orchestration. That is the NEO era in practice. "
+            "Every Vanguard tribe has an underused node — someone whose capability, network or perspective has not yet been deliberately activated. "
+            "Find yours. The tribes that win are the ones that stop working in parallel and start operating as a system."
+        ),
+    },
     "2026-05-10": {
         "step": "Teams & Tribes — NEO era orchestration",
         "title": "Your network is your leverage",
@@ -1297,8 +1318,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Microsoft Global AI Diffusion Report: global AI adoption hits 17.8% of working-age population in Q1 2026 — UAE leads at 70.1%, US sits 21st at 31.3%. The gap between leaders and laggards is widening fast.",
-    "source": "Microsoft",
+    "headline": "Intent-based chaos testing is designed for when AI behaves confidently — and wrongly",
+    "source": "VentureBeat AI",
 }
 
 JTBD_STATUS = (

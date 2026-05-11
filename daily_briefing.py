@@ -107,7 +107,7 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• Next Zoom session — Saturday 16 May (approximate)")
+    lines.append("• Next Zoom session — Saturday 16 May")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
@@ -186,8 +186,8 @@ def build_briefing():
         lines.append("")
         lines.append("This module is hands-on and practical. Not theory — the actual Claude Project, the actual code, the actual prompts and context files that made the app work. Come with questions. Come ready to build.")
         lines.append("")
-        lines.append("💬 <b>Dr. Tali is also waiting for your feedback on his latest article:</b>")
-        lines.append("<a href='https://medium.com/@talirezun/the-brain-is-ready-the-body-is-the-problem-f32f08e42b0d'>The Brain is Ready. The Body is the Problem.</a> — drop your thoughts in the comments on <a href='https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-aiagents-activity-7456956758431875073-rRpZ'>LinkedIn</a>.")
+        lines.append("📺 <b>Watch before Saturday:</b>")
+        lines.append("<a href='https://www.youtube.com/watch?v=Ft45pH3fYok'>→ How to Build Products People Can't Quit — Product Psychology Playbook</a>")
         lines.append("")
         lines.append("<a href='https://anthropic.skilljar.com/introduction-to-claude'>→ Free Claude training — Anthropic's official Introduction to Claude</a>")
         lines.append("")
@@ -195,13 +195,12 @@ def build_briefing():
         lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
         lines.append("")
 
-    # KAPUSTA
-    lines.append("🏛️ <b>VANGUARD LEADERSHIP &amp; NEO WORLD — Kapusta:</b>")
+    # KAPUSTA / BENEDETTO
+    lines.append("🏛️ <b>VANGUARD ROOTS — Who was Benedetto Cotrugli?</b>")
     lines.append("")
-    lines.append("<b>" + KAPUSTA_TODAY["title"] + "</b>")
-    lines.append(KAPUSTA_TODAY["description"])
+    lines.append("Considered one of the most important figures in the history of Dubrovnik, Benedetto Cotrugli was a 15th-century merchant, diplomat, and humanist — known as the author of one of the earliest publications on entrepreneurship and double-entry bookkeeping. His book, <i>The Art of Trade</i> (<i>Il libro del arte del mercatura</i>), is one of the most significant writings of all time on the philosophy and art of business.")
     lines.append("")
-    lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>→ Read on LinkedIn</a>")
+    lines.append("<a href='https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=qt1hfzDgJGatWWtZFvj6iA%3D%3D'>→ Read more on LinkedIn</a>")
     lines.append("")
 
     # AI NEWS
