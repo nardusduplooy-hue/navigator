@@ -785,6 +785,7 @@ textarea::placeholder { color: var(--text-muted); }
           <div class="zoom-meta-date" id="zoom-date-display">—</div>
           <div class="zoom-meta-time" id="zoom-time-display">—</div>
           <button class="btn" style="margin-top:12px;background:#ffffff;color:var(--accent);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;padding:10px 20px;border-radius:8px;" id="zoom-join-btn" onclick="joinZoom()">JOIN ZOOM</button>
+          <div id="zoom-meeting-meta" style="margin-top:8px;font-size:10px;color:rgba(255,255,255,0.6);line-height:1.6;text-align:left;"></div>
         </div>
       </div>
     </div>
@@ -1107,10 +1108,12 @@ const PROGRAMME_DATA = {
   sessions: [
     {
       id: "session-12",
-      name: "Vanguard Session 12 \u2014 Module 4: Context Engineering",
+      name: "Chasing Jarvis \u2014 Module 4: Context Engineering",
       datetime: "2026-05-16T17:00:00+02:00",
-      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/11/",
-      recordingUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/11/"
+      zoomUrl: "https://us02web.zoom.us/j/81526344141?pwd=Vanguard11",
+      recordingUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/11/",
+      zoomId: "815 2634 4141",
+      zoomPass: "Vanguard11"
     }
   ],
 
@@ -1120,8 +1123,8 @@ const PROGRAMME_DATA = {
   },
 
   kapustaReading: {
-    title: "Trust as a Virtue in the NEO Era",
-    subtitle: "Kapusta argues that trust in the NEO era is not a feeling \u2014 it is engineered. The Cotrugli Ledger: a decentralised governance and trust layer that AI needs right now. First in a series.",
+    title: "Vanguard Roots \u2014 Who was Benedetto Cotrugli?",
+    subtitle: "15th-century merchant, diplomat and humanist \u2014 author of one of the earliest publications on entrepreneurship and double-entry bookkeeping. His book, The Art of Trade (Il libro del arte del mercatura), is one of the most significant writings on the philosophy and art of business.",
     url: "https://www.linkedin.com/in/cotrugli/"
   },
 
@@ -1132,12 +1135,12 @@ const PROGRAMME_DATA = {
   ],
 
   neoWorldArticle: {
-    title: "Intent-based chaos testing is designed for when AI behaves confidently \u2014 and wrongly",
+    title: "Thinking Machines shows off preview of near-realtime AI voice and video conversation with new \u2018interaction models\u2019",
     source: "VentureBeat AI",
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Sunday, 10 May 2026",
+  briefingDate: "Tuesday, 12 May 2026",
 
   status: [
     "All JTBDs current",
@@ -1149,7 +1152,7 @@ const PROGRAMME_DATA = {
 
   modelAnswer: "In an exponential world, your network is your leverage. Not your skills \u2014 your network. The teams that compound fastest are not the ones with the best individuals. They are the ones that figured out how to route the right problem to the right person at the right time. That is orchestration. That is the NEO era in practice. Every Vanguard tribe has an underused node \u2014 someone whose capability, network or perspective has not yet been deliberately activated. Find yours. The tribes that win are the ones that stop working in parallel and start operating as a system.",
 
-  todaysFocus: "Stronger Together. Vanguard is a team sport \u2014 the cohort is forming active groups right now. Find your people, find your Chief, get to work. Module 4: Context Engineering arrives next Saturday. Dr. Tali\u2019s preview is already on LinkedIn \u2014 three slides from the actual module. Check it out.",
+  todaysFocus: "Context Engineering \u2014 this Saturday. We\u2019re walking through the actual Claude Project, the actual code, the actual prompts and context files that made the app work. Come with questions. Come ready to build.",
 
   aiPodcasts: [
     { title: "Chasing Jarvis: Step 1 — Context Engineering", date: "2026-03", url: "https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3" },
@@ -2060,6 +2063,22 @@ const PROGRAMME_DATA = {
       ],
       wikiLink: '',
       dateAdded: '2026-05-10'
+    },
+    {
+      id: 'kv052',
+      title: 'Benedetto Cotrugli \u2014 The Art of Trade',
+      domain: 'Business/Strategy',
+      source: 'Vanguard Roots \u2014 LinkedIn',
+      sourceUrl: 'https://www.linkedin.com/in/cotrugli/',
+      tags: ['cotruglian-ethics', 'history', 'entrepreneurship', 'double-entry', 'kapusta'],
+      keyPoints: [
+        'Benedetto Cotrugli (1416\u20131469): 15th-century merchant, diplomat and humanist from Ragusa (Dubrovnik) \u2014 one of the most important figures in the city\u2019s history',
+        'His book Il libro del arte del mercatura (The Art of Trade, 1458) is one of the earliest writings on entrepreneurship and the philosophy of business',
+        'Credited as one of the first to describe double-entry bookkeeping \u2014 the accounting system that underpins modern commerce',
+        'Cotrugli argued that virtue, reputation and ethical conduct are not moral constraints but structural requirements for long-term commercial success \u2014 55 years before Machiavelli'
+      ],
+      wikiLink: '',
+      dateAdded: '2026-05-12'
     }
   ]
 };
@@ -2284,6 +2303,8 @@ function renderSessions() {
   document.getElementById('zoom-session-name').textContent = s.name;
   document.getElementById('zoom-date-display').textContent = formatDate(s.datetime);
   document.getElementById('zoom-time-display').textContent = formatTime(s.datetime);
+  const metaEl = document.getElementById('zoom-meeting-meta');
+  if (metaEl && s.zoomId) metaEl.innerHTML = `Meeting ID: ${s.zoomId}${s.zoomPass ? ` &nbsp;·&nbsp; Passcode: ${s.zoomPass}` : ''}`;
   function updateZoomCountdown() {
     const cd = getCountdown(s.datetime);
     document.getElementById('zoom-countdown-sm').textContent = cd.display;
