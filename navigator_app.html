@@ -2162,8 +2162,8 @@ function renderNorthStar() {
     const cd = getCountdown(a.dueDate);
     const diff = new Date(a.dueDate) - nowDl;
     const days = diff / 86400000;
-    let tier = days <= 1 ? 'today' : days <= 4 ? 'week' : days <= 10 ? 'next' : 'radar';
-    allItems.push({ label: a.name, sub: `Due ${formatDate(a.dueDate)} · ${formatTime(a.dueDate)}`, tier, dot: days <= 1 ? 'var(--red)' : days <= 4 ? 'var(--amber)' : days <= 10 ? '#fde68a' : 'var(--green)', countdown: cd.display, urgency: cd.urgency });
+    let tier = days <= 1 ? 'today' : days <= 7 ? 'week' : days <= 14 ? 'next' : 'radar';
+    allItems.push({ label: a.name, sub: `Due ${formatDate(a.dueDate)} · ${formatTime(a.dueDate)}`, tier, dot: days <= 1 ? 'var(--red)' : days <= 7 ? 'var(--amber)' : days <= 14 ? '#fde68a' : 'var(--green)', countdown: cd.display, urgency: cd.urgency });
   });
 
   // Ongoing (no date) academic
@@ -2176,7 +2176,7 @@ function renderNorthStar() {
     const diff = new Date(s.datetime) - nowDl;
     if (diff < 0) return;
     const days = diff / 86400000;
-    let tier = days <= 1 ? 'today' : days <= 4 ? 'week' : days <= 10 ? 'next' : 'radar';
+    let tier = days <= 1 ? 'today' : days <= 7 ? 'week' : days <= 14 ? 'next' : 'radar';
     const cd = getCountdown(s.datetime);
     allItems.push({ label: s.name, sub: `📅 ${formatDate(s.datetime)} · ${formatTime(s.datetime)}`, tier, dot: 'var(--gold)', countdown: cd.display, urgency: cd.urgency, _session: true });
   });
@@ -2185,8 +2185,8 @@ function renderNorthStar() {
 
   const tiers = [
     { id: 'today', emoji: '🔴', label: 'Today / Tomorrow', desc: 'Needs action now' },
-    { id: 'week',  emoji: '🟠', label: 'This Week',        desc: '2–4 days out' },
-    { id: 'next',  emoji: '🟡', label: 'Next Week',        desc: '5–10 days out' },
+    { id: 'week',  emoji: '🟠', label: 'This Week',   desc: '2–7 days out' },
+    { id: 'next',  emoji: '🟡', label: 'Next Week',   desc: '8–14 days out' },
     { id: 'radar', emoji: '🟢', label: 'On the Radar',     desc: '2–4 weeks' },
     { id: 'ongoing', emoji: '⚪', label: 'Ongoing',        desc: 'No fixed deadline' }
   ];
