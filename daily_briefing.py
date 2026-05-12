@@ -92,9 +92,6 @@ def build_briefing():
     lines.append("🧭 <b>NAVIGATOR DAILY BRIEFING</b>")
     lines.append(today_label())
     lines.append("")
-    lines.append("🤝 <b>Stronger Together</b>")
-    lines.append("<i>Vanguard is a team sport. The cohort is forming active groups right now — find your people, find your Chief, and get to work. That is what this programme is built for.</i>")
-    lines.append("")
 
     # VANGUARD TEAMS
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
@@ -107,7 +104,11 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• Next Zoom session — Saturday 16 May")
+    lines.append("• <b>Chasing Jarvis — Context Engineering</b>")
+    lines.append("  We're walking through the actual Claude Project, the actual code, the actual prompts and context files that made the app work. Come with questions. Come ready to build.")
+    lines.append("• 🗓 Saturday 16 May — 17:00 Belgrade / Ljubljana time")
+    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/18/?wm=1&mi=81526344141'>→ Join Zoom Meeting</a>")
+    lines.append("  Meeting ID: 815 2634 4141 | Passcode: Vanguard11")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
     lines.append("")
 
@@ -171,23 +172,15 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("🎯 <b>MODULE 4 — CONTEXT ENGINEERING IS COMING</b>")
+        lines.append("🎯 <b>CONTEXT ENGINEERING — THIS SATURDAY</b>")
         lines.append("")
-        lines.append("Next Saturday we dive into Module 4 — Context Engineering.")
+        lines.append("This Saturday we dive into Module 4 — Context Engineering.")
         lines.append("")
         lines.append(
-            "Dr. Tali just posted a preview on LinkedIn with three slides straight from the module — "
-            "built around a real use case: The Curator, an open-source second brain app he has been developing. "
-            "The slides show exactly how context engineering works at every stage of building a real AI-powered product — "
-            "from the first idea all the way to video production."
+            "We're walking through the actual Claude Project, the actual code, "
+            "the actual prompts and context files that made the app work. "
+            "Come with questions. Come ready to build."
         )
-        lines.append("")
-        lines.append("<a href='https://www.linkedin.com/posts/talirezun_thecurator-thecurator-thecurator-ugcPost-7458163327240941568-_UwW'>→ Check it out before Saturday</a>")
-        lines.append("")
-        lines.append("This module is hands-on and practical. Not theory — the actual Claude Project, the actual code, the actual prompts and context files that made the app work. Come with questions. Come ready to build.")
-        lines.append("")
-        lines.append("📺 <b>Watch before Saturday:</b>")
-        lines.append("<a href='https://www.youtube.com/watch?v=Ft45pH3fYok'>→ How to Build Products People Can't Quit — Product Psychology Playbook</a>")
         lines.append("")
         lines.append("<a href='https://anthropic.skilljar.com/introduction-to-claude'>→ Free Claude training — Anthropic's official Introduction to Claude</a>")
         lines.append("")

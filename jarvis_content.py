@@ -138,6 +138,90 @@ TALI_STEPS = {
             "and systems can be designed, delegated, and iterated on."
         ),
     },
+    "2026-05-16": {
+        "step": "Context Engineering — Session day",
+        "title": "Today is the day",
+        "url": "https://cotrugli.online/groups/vanguard/zoom/meetings/18/?wm=1&mi=81526344141",
+        "focus": "Module 4 — Context Engineering goes live today.",
+        "question": (
+            "Today is the day. Module 4 — Context Engineering — goes live. "
+            "One question before you join: what is the one thing you most want to walk away knowing how to do after today's session? "
+            "Name it specifically. The more specific your intention, the more you will take from the session."
+        ),
+        "model_answer": (
+            "Learning compounds when you arrive with a specific question. "
+            "A vague intention — 'I want to learn about context engineering' — produces a vague outcome. "
+            "A specific intention — 'I want to know how to build a Claude Project that my whole team can use' — produces a specific outcome. "
+            "You have been preparing all week. Today is not about absorbing information. It is about activating it. "
+            "Name your one thing. Then go find the answer today."
+        ),
+    },
+    "2026-05-15": {
+        "step": "Context Engineering — Prompts, files and context windows",
+        "title": "What goes into your context window?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "The discipline of context engineering is the discipline of clarity.",
+        "question": (
+            "Tomorrow we go deep. One question to prepare you: "
+            "a context window is the total amount of information an AI can hold in its working memory at once. "
+            "Claude's is large — but it is not infinite. "
+            "If you were briefing a new team member on your Vanguard project, "
+            "what are the three most important things they would need to know to be immediately useful? "
+            "Those three things are your context. How would you write them?"
+        ),
+        "model_answer": (
+            "The discipline of context engineering is also the discipline of clarity. "
+            "When you are forced to decide what goes into a limited context window, you are forced to decide what actually matters. "
+            "Most teams have never done this exercise. They have a lot of information but no hierarchy. "
+            "Saturday's session will show you how to build that hierarchy deliberately — "
+            "using Claude Projects, structured prompts, and context files that make every interaction compounding rather than disposable. "
+            "Come with your three things. You will use them."
+        ),
+    },
+    "2026-05-14": {
+        "step": "Context Engineering — Claude Projects",
+        "title": "Building a Claude Project for your team",
+        "url": "https://medium.com/@talirezun",
+        "focus": "A Claude Project is a brief for your AI collaborator.",
+        "question": (
+            "Claude Projects allow you to give an AI a persistent context — "
+            "instructions, documents, tone, and purpose — that shapes every conversation within that project. "
+            "Dr. Tali built The Curator using exactly this approach. "
+            "Question: if you were to create a Claude Project for your Vanguard team right now, what would you put in it? "
+            "What instructions, documents, or context would make every AI interaction your team has smarter and more aligned?"
+        ),
+        "model_answer": (
+            "A Claude Project is essentially a brief for your AI collaborator. "
+            "The teams that get the most out of AI are not the ones that ask the best individual questions — "
+            "they are the ones that invest in building the right environment before the conversation starts. "
+            "Think about your team's goals, your product, your tone, your constraints. All of that can be context. "
+            "When you walk into Saturday's session, you will see exactly how Dr. Tali built this for The Curator — "
+            "and you will be able to apply the same thinking to your own project immediately."
+        ),
+    },
+    "2026-05-13": {
+        "step": "Context Engineering — What is it?",
+        "title": "What is Context Engineering?",
+        "url": "https://medium.com/@talirezun",
+        "focus": "Context is everything an AI can see when it responds.",
+        "question": (
+            "Context Engineering is the theme of this Saturday's session. "
+            "Before you arrive, think about this: every time you interact with an AI, "
+            "you are engineering a context — whether you know it or not. "
+            "The quality of what you get back is almost entirely determined by what you put in. "
+            "Think about the last time an AI gave you a disappointing output. "
+            "What was missing from the context you provided — and how would you change it?"
+        ),
+        "model_answer": (
+            "Context is everything an AI can see when it responds: "
+            "your instructions, your examples, your documents, your history. "
+            "Most people treat prompting as a question-and-answer game. "
+            "Context Engineering treats it as architecture. "
+            "You are designing an environment in which the AI operates. "
+            "The difference between a mediocre output and a remarkable one is almost never the model — it is the context. "
+            "Before Saturday, start paying attention to what you are putting in, not just what you are getting out."
+        ),
+    },
     "2026-05-12": {
         "step": "Teams & Tribes — NEO era orchestration",
         "title": "Your network is your leverage",
@@ -1318,7 +1402,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Intent-based chaos testing is designed for when AI behaves confidently — and wrongly",
+    "headline": "Thinking Machines shows off preview of near-realtime AI voice and video conversation with new 'interaction models'",
     "source": "VentureBeat AI",
 }
 
