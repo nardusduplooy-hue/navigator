@@ -1402,7 +1402,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Thinking Machines shows off preview of near-realtime AI voice and video conversation with new 'interaction models'",
+    "headline": "Protect your enterprise now from the Shai-Hulud worm and npm vulnerability in 6 actionable steps",
     "source": "VentureBeat AI",
 }
 

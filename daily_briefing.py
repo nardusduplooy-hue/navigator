@@ -105,7 +105,6 @@ def build_briefing():
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
     lines.append("• <b>Chasing Jarvis — Context Engineering</b>")
-    lines.append("  We're walking through the actual Claude Project, the actual code, the actual prompts and context files that made the app work. Come with questions. Come ready to build.")
     lines.append("• 🗓 Saturday 16 May — 17:00 Belgrade / Ljubljana time")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/18/?wm=1&mi=81526344141'>→ Join Zoom Meeting</a>")
     lines.append("  Meeting ID: 815 2634 4141 | Passcode: Vanguard11")
@@ -172,15 +171,26 @@ def build_briefing():
 
     else:
         # WEEKDAY BRIEFING
-        lines.append("🎯 <b>CONTEXT ENGINEERING — THIS SATURDAY</b>")
+        lines.append("🎯 <b>CHASING JARVIS — MODULE 4: CONTEXT ENGINEERING</b>")
         lines.append("")
-        lines.append("This Saturday we dive into Module 4 — Context Engineering.")
+        lines.append("🚀 <b>Message from Dr. Tali — read this before Saturday</b>")
         lines.append("")
-        lines.append(
-            "We're walking through the actual Claude Project, the actual code, "
-            "the actual prompts and context files that made the app work. "
-            "Come with questions. Come ready to build."
-        )
+        lines.append("We are back this Saturday to dive into Module 4: Context Engineering. Here is what you need to know:")
+        lines.append("")
+        lines.append("<b>🛠️ App Showcases — Module 3 Homework</b>")
+        lines.append("We have dedicated slots for 5 or 6 presentations. This is your time to show us the brains of what you have built.")
+        lines.append("• <b>The Focus:</b> Mechanics &amp; Functionalities. Skip the landing pages — show us the backend-to-frontend logic, the features, and the smart elements.")
+        lines.append("• <b>The Format:</b> 5 minutes each. No slides needed — just a live demo of the app in action.")
+        lines.append("• <b>Action:</b> If you want to present, have your environment ready to share this Saturday.")
+        lines.append("")
+        lines.append("<b>📚 Essential Pre-Reading</b>")
+        lines.append("• Complete all obligatory reading for Module 4 on COTRUGLI online.")
+        lines.append("• Critical insight: Read Dr. Tali's latest article — <i>The Brain Is Ready. The Body Is the Problem.</i> This is vital for understanding how to bridge your AI agents with the physical world.")
+        lines.append("")
+        lines.append("<a href='https://medium.com/@talirezun/the-brain-is-ready-the-body-is-the-problem-f32f08e42b0d'>→ Read on Medium</a>")
+        lines.append("<a href='https://open.substack.com/pub/talirezun/p/the-brain-is-ready-the-body-is-the?r=68m2cw&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'>→ Read on Substack</a>")
+        lines.append("")
+        lines.append("See you Saturday. Let's get to work. 🦾")
         lines.append("")
         lines.append("<a href='https://anthropic.skilljar.com/introduction-to-claude'>→ Free Claude training — Anthropic's official Introduction to Claude</a>")
         lines.append("")
