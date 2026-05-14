@@ -877,24 +877,31 @@ TALI_STEPS = {
     },
     "2026-05-15": {
         "step": "Context Engineering — Prompts, files and context windows",
-        "title": "What goes into your context window?",
-        "url": "https://medium.com/@talirezun",
-        "focus": "The discipline of context engineering is the discipline of clarity.",
+        "title": "The Brain Is Ready. The Body Is the Problem.",
+        "url": "https://medium.com/@talirezun/the-brain-is-ready-the-body-is-the-problem-f32f08e42b0d",
+        "focus": "The intelligence bottleneck is solved. The infrastructure bottleneck has just begun.",
         "question": (
-            "Tomorrow we go deep. One question to prepare you: "
-            "a context window is the total amount of information an AI can hold in its working memory at once. "
-            "Claude's is large — but it is not infinite. "
-            "If you were briefing a new team member on your Vanguard project, "
-            "what are the three most important things they would need to know to be immediately useful? "
-            "Those three things are your context. How would you write them?"
+            "Dr. Tali's latest article argues that the AI brain is no longer the constraint — "
+            "the body is. Models now have million-token context windows and near-frontier open-source alternatives. "
+            "The bottleneck has shifted to infrastructure: access to data, the ability to act across systems, "
+            "and the integrations that let an agent actually do something in the real world. "
+            "Question: think about your own Vanguard project or work context. "
+            "Where is your AI bottleneck right now — is it the model, or is it the body? "
+            "What data, system, or access would unlock the most value if your AI could reach it?"
         ),
         "model_answer": (
-            "The discipline of context engineering is also the discipline of clarity. "
-            "When you are forced to decide what goes into a limited context window, you are forced to decide what actually matters. "
-            "Most teams have never done this exercise. They have a lot of information but no hierarchy. "
-            "Saturday's session will show you how to build that hierarchy deliberately — "
-            "using Claude Projects, structured prompts, and context files that make every interaction compounding rather than disposable. "
-            "Come with your three things. You will use them."
+            "The shift Dr. Tali describes is fundamental — and most people have not caught up to it yet. "
+            "They are still asking which model is smarter when the real question is: "
+            "what can my agent actually see, reach, and act on? "
+            "For most Vanguard projects, the bottleneck is not the model. "
+            "It is the data sitting in locked silos — emails, documents, CRM records, internal systems — "
+            "that the AI cannot access because the integrations do not exist yet. "
+            "Your answer to this question is your next build priority. "
+            "If you can name the one data source or system that would make your AI dramatically more useful, "
+            "you have identified the infrastructure problem worth solving. "
+            "Saturday's session on Context Engineering is directly relevant: "
+            "context is not just what you type into a prompt — "
+            "it is everything you can route to your agent. The brain is ready. Build the body."
         ),
     },
     "2026-05-14": {
@@ -2121,7 +2128,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Protect your enterprise now from the Shai-Hulud worm and npm vulnerability in 6 actionable steps",
+    "headline": "AI IQ is here: a new site scores frontier AI models on the human IQ scale. The results are already dividing tech.",
     "source": "VentureBeat AI",
 }
 

@@ -109,14 +109,6 @@ def build_briefing():
     lines.append("• 🗓 Saturday 16 May — 17:00 Belgrade / Ljubljana time")
     lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/18/?wm=1&mi=81526344141'>→ Join Zoom Meeting</a>")
     lines.append("  Meeting ID: 815 2634 4141 | Passcode: Vanguard11")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/'>Zoom Recordings — all sessions</a>")
-    lines.append("")
-
-    # STATUS
-    lines.append("✅ <b>STATUS</b>")
-    lines.append("• All JTBDs current")
-    lines.append("• Awaiting Future of Work multiple choice exam results")
-    lines.append("• Future of Work Essay — Submitted, awaiting results and feedback")
     lines.append("")
 
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
@@ -189,7 +181,11 @@ def build_briefing():
         lines.append("• Critical insight: Read Dr. Tali's latest article — <i>The Brain Is Ready. The Body Is the Problem.</i> This is vital for understanding how to bridge your AI agents with the physical world.")
         lines.append("")
         lines.append("<a href='https://medium.com/@talirezun/the-brain-is-ready-the-body-is-the-problem-f32f08e42b0d'>→ Read on Medium</a>")
-        lines.append("<a href='https://open.substack.com/pub/talirezun/p/the-brain-is-ready-the-body-is-the?r=68m2cw&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true'>→ Read on Substack</a>")
+        lines.append("")
+        lines.append("🔖 Also worth your time before Saturday — Dr. Tali's new article:")
+        lines.append("<b>The Agent Memory Problem — And Why Your Second Brain Might Be the Answer</b>")
+        lines.append("Every major AI infrastructure company is racing to solve the same problem right now — not which model is smartest, but memory. AI agents forget. They rediscover things they already knew. They burn compute reconstructing context that should already be there. Dr. Tali walks you through why RAG breaks down for complex agentic tasks, the four memory shapes the industry is converging on, and why large context windows alone are not the answer. This is the infrastructure question that separates production AI systems from prototypes. Read it before Saturday.")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_thecurator-mycuratormcp-ugcPost-7460616278152708096-RYDB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Links in the comments of Dr. Tali's LinkedIn post</a>")
         lines.append("")
         lines.append("See you Saturday. Let's get to work. 🦾")
         lines.append("")
