@@ -3,6 +3,725 @@
 # Kapusta articles rotated manually by Nardus each day
 # AI news updated manually each day
 
+VANGUARD_SUMMARIES = {
+    "2026-05-14": {
+        "title": "You Are Losing — And You Don't Know It Yet",
+        "chapter": "Introduction",
+        "summary": (
+            "Kapusta opens with a provocation: you are losing. Not because you lack intelligence or work ethic — "
+            "but because you are playing by rules that no longer exist. The world has entered the NEO era: "
+            "Networked, Exponential, Orchestrated. The leadership frameworks you learned — in your MBA, "
+            "from mentors, from Harvard Business Review — are not just outdated. In NEO environments, they are actively destructive. "
+            "The comfortable lead time you thought you had? Gone. There are no second chances when the gap compounds too fast."
+        ),
+    },
+    "2026-05-15": {
+        "title": "What Vanguard Leadership Actually Is",
+        "chapter": "Introduction",
+        "summary": (
+            "Vanguard Leadership integrates four elements traditional frameworks ignore: Cotruglian Ethics (15th-century merchant philosophy), "
+            "Military Doctrine (OODA loops, mission command), AI Augmentation (technology as force multiplier, not replacement), "
+            "and Tribal Collaboration (coordination without hierarchy). "
+            "In military terms, the vanguard is first to engage uncertainty — not for glory, but to create conditions for the main force to succeed. "
+            "That is what Vanguard Leadership means in organisations."
+        ),
+    },
+    "2026-05-16": {
+        "title": "Machiavelli or Cotrugli — The Choice That Defines Everything",
+        "chapter": "Introduction",
+        "summary": (
+            "Everyone knows Machiavelli. Almost nobody knows Cotrugli. "
+            "Machiavelli wrote about political warfare — power through strategic ruthlessness, ends justify means. "
+            "Cotrugli wrote about commerce — prosperity through ethical excellence, reputation as ultimate asset. "
+            "Machiavelli became famous. Cotrugli became a footnote. Why? Because we are mesmerised by power, not building. "
+            "But business is Cotrugli's domain, not Machiavelli's. Choose building over extraction. Choose decades over quarters."
+        ),
+    },
+    "2026-05-17": {
+        "title": "Business as Craft — The Foundation Before the Tactics",
+        "chapter": "Chapter 1: The Art of Business",
+        "summary": (
+            "Before strategy, before frameworks, before tactics — Kapusta asks one question: what are you actually building with your life's work? "
+            "Most leaders answer with metrics: revenue, market share, shareholder value. These are outcomes. Not what you are building. "
+            "AI is equalising every technical competency. What remains are the patterns of behaviour that create trust, build reputation, "
+            "exercise judgment, and coordinate people around shared intent. When AI handles all the optimisation, craft becomes the only differentiator."
+        ),
+    },
+    "2026-05-18": {
+        "title": "The Shokunin Spirit — Obsessive Mastery as Leadership Philosophy",
+        "chapter": "Chapter 1: The Art of Business",
+        "summary": (
+            "The Japanese concept of Shokunin is not about doing your job well. It is about obsessive pursuit of mastery as a way of life. "
+            "The Shokunin does not separate identity from craft. The work is the person. "
+            "Applied to business: your organisation is your masterpiece. Every decision, every interaction, every system — "
+            "these are strokes of the brush. You do not optimise your masterpiece. You practice it. Refine it. Hold it to standards the market does not require."
+        ),
+    },
+    "2026-05-19": {
+        "title": "The Perfect Merchant — Cotrugli's Five Elements of Mastery",
+        "chapter": "Chapter 1: The Art of Business",
+        "summary": (
+            "Cotrugli was specific about what mastery requires. Five elements: "
+            "Literacy (communication as craft), Arithmetic (numbers as craft), Knowledge of Law (systems as craft), "
+            "Understanding of Markets (patterns as craft), and Ethical Framework (character as craft). "
+            "These integrate into the Perfect Merchant — not perfect as flawless, but perfect as integrated: philosophy and practice aligned. "
+            "In the NEO era, these five elements are more relevant, not less."
+        ),
+    },
+    "2026-05-20": {
+        "title": "What AI Cannot Do — The Human Domain of Fortitude",
+        "chapter": "Chapter 1: The Art of Business",
+        "summary": (
+            "AI can process faster, execute more consistently, optimise better, and scale without limit. "
+            "But it cannot judge what is worth optimising for. It cannot recognise beauty in solutions beyond metrics. "
+            "It cannot understand meaning beyond measurement. It cannot build trust through relationship. "
+            "It cannot develop mastery through deliberate practice. "
+            "These are not weaknesses to protect — they are capabilities to develop. Judgment, trust, mastery: this is the human domain."
+        ),
+    },
+    "2026-05-21": {
+        "title": "Wolves, Sheep and Sheepdogs — The Three Patterns",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Kapusta identifies three patterns that appear in every organisation, every cohort, every tribe. "
+            "Wolves extract. They take more than they contribute, optimise for personal gain, leave damage in their wake. "
+            "Sheep follow. They avoid risk, seek comfort, conform to whatever the dominant pattern around them demands. "
+            "Sheepdogs build. They protect, create conditions for others to succeed, hold standards no one else requires. "
+            "The question is not which one you want to be. The question is which one you are choosing, right now, today."
+        ),
+    },
+    "2026-05-22": {
+        "title": "Why Machiavelli Fails in the NEO Era",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Machiavellian strategy looks brilliant in Year 1. Aggressive moves. Rapid growth. Dramatic wins. "
+            "By Year 2, extraction creates visible costs. Turnover increases. Partnerships strain. Reputation damage begins. "
+            "By Year 3, collapse accelerates. Best people leaving. Partners exiting. No resilience when challenges hit. "
+            "In networked environments, information flows expose truth. The gap between appearance and reality gets exposed fast. "
+            "Wolves burn bright and collapse fast. Cotruglians compound slowly — then explode upward."
+        ),
+    },
+    "2026-05-23": {
+        "title": "Reputation as Compound Interest — The Meta-Asset",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "'A good name was a more valuable asset than a full treasury.' Cotrugli understood in 1458 what most leaders forget today: "
+            "reputation is not vanity. It is the meta-asset that makes all other assets possible. "
+            "It is trust accumulated over decades of consistent conduct. It is the compound interest of integrity. "
+            "In networked environments where information spreads instantly, reputational capital compounds faster than any other form of capital — "
+            "both positively and negatively."
+        ),
+    },
+    "2026-05-24": {
+        "title": "Virtue as Competitive Architecture — Not Moral Constraint",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Ethics and effectiveness are not separate. They are identical. "
+            "Honesty reduces transaction costs. Reliability enables predictable partnerships. "
+            "Diligence compounds learning. Prudence prevents catastrophic mistakes. "
+            "Your values are not constraints on strategy — they are your strategy. "
+            "They determine what you build and whether it lasts. "
+            "This is not idealism. This is structural advantage in environments where trust is the only sustainable competitive edge."
+        ),
+    },
+    "2026-05-25": {
+        "title": "The Perfect Merchant — Commerce as Humanity's Highest Pursuit",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "'The body and soul of the trader take part in his work to the same extent as an artist when creating his masterpiece.' "
+            "Cotrugli argued that commerce, practiced with virtue, is humanity's highest pursuit. "
+            "It creates prosperity. It connects cultures. It enables cooperation. It builds civilisation. "
+            "But most corrupt it through deception, extraction, short-term thinking, and selfishness. "
+            "The Cotruglian merchant chooses to be a steward of commerce — practicing it so well that it strengthens the institution for everyone who follows."
+        ),
+    },
+    "2026-05-26": {
+        "title": "The Cotruglian Social Contract — Stewardship Over Self-Interest",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "You are not just serving customers. You are not just maximising profit. "
+            "You are serving commerce — the entire institution of value exchange that enables human cooperation. "
+            "This means you maintain standards that preserve trust in commerce itself. "
+            "You don't deceive, because deception damages everyone's ability to trade. "
+            "You don't extract, because extraction makes everyone suspicious. "
+            "If everyone extracts, commerce collapses. If enough people build, commerce thrives. The Cotruglian merchant chooses to build."
+        ),
+    },
+    "2026-05-27": {
+        "title": "NEO Cotruglian Philosophy — The Operating System",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy",
+        "summary": (
+            "Vanguard Leadership synthesises two sources: NEO Era dynamics (Networked, Exponential, Orchestrated) "
+            "and the merchant philosophy of Benedetto Cotrugli from 1458. "
+            "Networks then were ships and trade routes. Networks now are digital and global. "
+            "But the mathematics of trust, reputation, and coordination remain the same — actually, they have intensified. "
+            "What took decades to build or destroy in Cotrugli's era now happens in months or weeks. "
+            "The operating system is the same. The speed has changed everything."
+        ),
+    },
+    "2026-05-28": {
+        "title": "The Five Axioms — The Decision Logic for NEO Environments",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy",
+        "summary": (
+            "Five axioms govern decision-making in networked, exponential, orchestrated environments. "
+            "Not abstract philosophy — concrete logic you can apply immediately. "
+            "Every strategic choice, every ethical dilemma, every resource allocation decision runs through this framework. "
+            "The axioms are not a checklist. They are an operating system. "
+            "Once internalised, they change how you see every decision — not by telling you what to choose, "
+            "but by changing what you notice and what you refuse."
+        ),
+    },
+    "2026-05-29": {
+        "title": "Understanding the NEO Battlefield",
+        "chapter": "Chapter 5: The NEO Era",
+        "summary": (
+            "NEO is not just 'change is faster.' It is a fundamental shift in how value is created, "
+            "how organisations coordinate, how advantages compound and collapse. "
+            "Networked: value flows through networks, not hierarchies. Your node in the network determines your access to opportunity. "
+            "Exponential: growth compounds at accelerating rates — both advantages and disadvantages. "
+            "Orchestrated: success requires coordinating capabilities you do not control, through trust, not authority."
+        ),
+    },
+    "2026-05-30": {
+        "title": "The Networked World — Value Through Connections, Not Control",
+        "chapter": "Chapter 5: The NEO Era",
+        "summary": (
+            "In industrial era organisations, value flowed through hierarchies. Information was controlled. Authority was centralised. "
+            "In the NEO era, value flows through networks. Information is distributed. Coordination happens at the edges. "
+            "Your position in the network — the trust you have built, the relationships you have developed, the reputation you carry — "
+            "determines your access to opportunity more than your title, your budget, or your formal authority. "
+            "Build the network. Build the trust. The hierarchy is irrelevant."
+        ),
+    },
+    "2026-05-31": {
+        "title": "Exponential Dynamics — Why Linear Thinking Is Now Dangerous",
+        "chapter": "Chapter 5: The NEO Era",
+        "summary": (
+            "Humans think linearly. We plan in straight lines: this year, next year, five years. "
+            "Exponential dynamics do not behave this way. They are slow, then sudden. Gradual, then overwhelming. "
+            "The danger is not that you miss the trend — it is that you see it and still underestimate it. "
+            "ChatGPT reached 100 million users in two months. Companies that took decades to build are disrupted by startups that did not exist last year. "
+            "In exponential environments, hesitation is not safety. It is acceleration toward irrelevance."
+        ),
+    },
+    "2026-06-01": {
+        "title": "Orchestration — Coordinating What You Do Not Control",
+        "chapter": "Chapter 5: The NEO Era",
+        "summary": (
+            "The most valuable capability in the NEO era is not ownership — it is orchestration. "
+            "Uber does not own cars. Airbnb does not own rooms. The most powerful organisations in the world "
+            "coordinate capabilities they do not control, through platforms, networks, and trust. "
+            "Orchestration requires trust at scale. You cannot orchestrate through fear — fear creates compliance, not coordination. "
+            "Compliance does not work when you do not control the participants. Only trust enables true orchestration."
+        ),
+    },
+    "2026-06-02": {
+        "title": "Business as Warfare — Military Doctrine for the NEO Era",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Kapusta applies military doctrine not metaphorically but literally — because warfare is the most demanding coordination problem humans face. "
+            "The principles transfer directly. OODA loops: Observe, Orient, Decide, Act — faster than your opponent. "
+            "Mission command: give clear intent, then empower execution at the edge. "
+            "Power to the edge: distribute decision-making to those closest to the information. "
+            "These are not military curiosities. They are the operating principles of every organisation that wins in fast-moving environments."
+        ),
+    },
+    "2026-06-03": {
+        "title": "OODA Loops — The Speed Advantage in Decision-Making",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "John Boyd's OODA loop — Observe, Orient, Decide, Act — is the most practical decision-making framework for the NEO era. "
+            "The goal is not to make perfect decisions. It is to cycle through decisions faster than your environment changes. "
+            "Most organisations get stuck in Orient: analysing, deliberating, seeking consensus, waiting for certainty. "
+            "Vanguard leaders compress the loop. They act with incomplete information, observe the result, and correct. "
+            "Speed of learning beats quality of initial decision every time in fast-moving environments."
+        ),
+    },
+    "2026-06-04": {
+        "title": "Mission Command — Intent Over Instructions",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Mission command is the doctrine that changed modern military leadership — and applies directly to NEO era organisations. "
+            "The principle: communicate intent clearly, then trust your people to execute without constant oversight. "
+            "Not 'do this, then this, then this.' But: 'this is what we are trying to achieve and why — now make it happen.' "
+            "Mission command requires trust built through consistent standards. "
+            "You cannot empower people you do not trust. You cannot trust people whose judgment you have never tested. "
+            "Build the trust first. The empowerment follows naturally."
+        ),
+    },
+    "2026-06-05": {
+        "title": "The NEO Leadership Challenge — Three Simultaneous Demands",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "NEO era leaders face three simultaneous demands that industrial era frameworks cannot handle together: "
+            "Speed (act before certainty), Scale (coordinate beyond direct control), and Standards (maintain ethics under pressure). "
+            "Industrial era frameworks trade one for another — speed for standards, scale for speed. "
+            "Vanguard Leadership is specifically designed to hold all three simultaneously. "
+            "Fear processing enables speed. AI augmentation enables scale. Cotruglian ethics maintain standards. "
+            "None of these works without the others."
+        ),
+    },
+    "2026-06-06": {
+        "title": "Fear as Data — The First Force",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Fear is information. Most leaders treat it as a problem to suppress or overcome. "
+            "Vanguard leaders treat it as data to process. "
+            "What is the fear telling you? What threat has it detected? What assumption is it protecting? "
+            "When you suppress fear, you lose the signal. When you are paralysed by fear, you lose the action. "
+            "Fear processing is the ability to feel the fear, extract the information, and act anyway. "
+            "This is not courage as the absence of fear. It is courage as the disciplined use of fear."
+        ),
+    },
+    "2026-06-07": {
+        "title": "Processing Fear Under Pressure — The Vanguard Discipline",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "The difference between leaders who make clear decisions under pressure and those who freeze is not the absence of fear — "
+            "it is the ability to process fear without being consumed by it. "
+            "Kapusta identifies three fear responses: freeze (paralysis), flight (avoidance), and fight (aggression). "
+            "None of these is Vanguard. The Vanguard response is: feel, process, act with intent. "
+            "This is a trainable skill. It develops through deliberate exposure to pressure, honest reflection on responses, "
+            "and consistent practice of decision-making when the stakes are real."
+        ),
+    },
+    "2026-06-08": {
+        "title": "AI as Force Multiplier — The Second Force",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "AI is not a replacement for human judgment. It is a force multiplier for it. "
+            "The distinction matters enormously. A replacement makes the human irrelevant. "
+            "A force multiplier makes the human more powerful — but only if the human brings judgment worth multiplying. "
+            "If you bring mediocre judgment to AI, AI gives you mediocre judgment at scale. "
+            "If you bring Cotruglian craft to AI, AI gives you Cotruglian craft at scale. "
+            "The quality of what AI multiplies depends entirely on the quality of what you bring to it."
+        ),
+    },
+    "2026-06-09": {
+        "title": "The Centaur Model — Human and AI as One System",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "The Centaur — half human, half horse — is Kapusta's model for the optimal human-AI relationship. "
+            "Not human directing AI from a distance. Not AI replacing human entirely. "
+            "But human and AI operating as a single integrated system, each contributing what the other cannot. "
+            "AI contributes: processing speed, consistency, pattern recognition, scale. "
+            "Human contributes: judgment, meaning, trust, ethical framework, the question of what is worth optimising for. "
+            "The Centaur is more powerful than either alone. The Vanguard leader builds this integration deliberately."
+        ),
+    },
+    "2026-06-10": {
+        "title": "Ethical AI Augmentation — Multiplying Without Losing Judgment",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "The danger of AI augmentation is not that it replaces you — it is that it amplifies your worst patterns as readily as your best. "
+            "An extractive leader with AI is more extractive at scale. "
+            "A trust-builder with AI builds trust at scale. "
+            "This is why Cotruglian ethics precede AI capability in the Vanguard framework. "
+            "You must know what you are, and what you stand for, before you multiply yourself. "
+            "Otherwise you are just scaling a problem."
+        ),
+    },
+    "2026-06-11": {
+        "title": "Tribe as Coordination — The Third Force",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "The tribe is not a metaphor. It is the fundamental unit of human coordination. "
+            "For 200,000 years, humans survived and thrived through tribal structures — not hierarchies, not markets, not algorithms. "
+            "Tribes. Small, high-trust groups with shared purpose, shared standards, and mutual accountability. "
+            "In the NEO era, the tribe is back — not as nostalgia, but as the most efficient coordination structure "
+            "for environments where trust matters more than authority and speed matters more than process."
+        ),
+    },
+    "2026-06-12": {
+        "title": "Building the Tribe — The Five Conditions",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Tribes do not form by accident. They are built through five conditions: "
+            "Shared purpose (why we exist), Shared standards (how we behave), Mutual accountability (we hold each other), "
+            "Psychological safety (we can be honest), and Reciprocal trust (I trust you because you have earned it). "
+            "Remove any one of these and the tribe degrades into a group. "
+            "Groups coordinate. Tribes compound. The difference between these two outcomes is larger than most leaders realise "
+            "— and it grows exponentially over time."
+        ),
+    },
+    "2026-06-13": {
+        "title": "Tribal Coordination Without Hierarchy",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "The most powerful tribes in the NEO era do not have rigid hierarchies — they have clear roles, shared intent, and distributed authority. "
+            "Coordination happens through trust, not control. Alignment happens through shared purpose, not directives. "
+            "This is mission command applied to civilian organisations. "
+            "The tribe knows what it is trying to achieve and why. Each member executes with judgment. "
+            "The leader's job is not to direct every action — it is to maintain the conditions that make self-coordination possible."
+        ),
+    },
+    "2026-06-14": {
+        "title": "The Compounding Tribe — How Trust Creates Exponential Returns",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Trust compounds. This is the central insight of tribal coordination in the NEO era. "
+            "Each interaction that builds trust makes the next interaction cheaper, faster, and more powerful. "
+            "Each betrayal creates friction that compounds in the other direction. "
+            "The tribe that has been building trust for two years can coordinate in minutes what a low-trust group takes weeks to negotiate. "
+            "This is not soft. This is structural competitive advantage. "
+            "The mathematics of compound trust are as real as the mathematics of compound interest."
+        ),
+    },
+    "2026-06-15": {
+        "title": "What You Now Possess — The Vanguard Assessment",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "At this point in the book, Kapusta pauses to take inventory. "
+            "You have the philosophical foundation: Cotruglian ethics, craft mindset, reputational capital as North Star. "
+            "You have battlefield awareness: NEO era dynamics, military doctrine, the three-year wolf collapse pattern. "
+            "You have the three forces: fear as data, AI as force multiplier, tribe as coordination. "
+            "The question is no longer whether you understand the framework. "
+            "The question is whether you are willing to commit to the transformation it requires."
+        ),
+    },
+    "2026-06-16": {
+        "title": "The Three Patterns — Wolf, Sheep, Sheepdog in Real Life",
+        "chapter": "Chapter 12: The Three Patterns",
+        "summary": (
+            "The wolf, sheep, and sheepdog are not archetypes — they are observable patterns in real organisations. "
+            "Wolves: high short-term output, extractive relationships, reputation decay over time. "
+            "Sheep: risk-avoidance, followership, unable to hold standards under pressure. "
+            "Sheepdogs: consistent standards, builder orientation, willing to absorb cost to protect what matters. "
+            "Most organisations have all three. The question is which pattern the culture rewards — "
+            "because whatever the culture rewards, it gets more of."
+        ),
+    },
+    "2026-06-17": {
+        "title": "Recognising Wolf Behaviour — Before It Destroys the Tribe",
+        "chapter": "Chapter 12: The Three Patterns",
+        "summary": (
+            "Wolf behaviour in organisations has a signature: it always looks like leadership until the cost appears. "
+            "Short-term wins. Impressive metrics. Charismatic delivery. "
+            "But behind the numbers: rising turnover, strained partnerships, erosion of psychological safety. "
+            "The people closest to the wolf know first. They always know. "
+            "The Vanguard leader's job is to recognise the pattern before the cost compounds — "
+            "and to have the courage to name it, address it, and protect the tribe."
+        ),
+    },
+    "2026-06-18": {
+        "title": "The Sheepdog's Burden — Leading When Nobody Asked You To",
+        "chapter": "Chapter 12: The Three Patterns",
+        "summary": (
+            "The sheepdog does not wait to be given authority before acting like a leader. "
+            "The sheepdog holds standards when it would be easier to let them slide. "
+            "Speaks truth when silence would be more comfortable. "
+            "Absorbs cost to protect what matters. "
+            "This is the burden Kapusta describes: not the burden of title or responsibility, "
+            "but the burden of seeing what needs to be done and doing it anyway — "
+            "especially when nobody gave you permission and everyone else is looking away."
+        ),
+    },
+    "2026-06-19": {
+        "title": "Long-Term Relationships as Strategic Infrastructure",
+        "chapter": "NEO Cotruglian Philosophy",
+        "summary": (
+            "In the NEO era, your longest relationships are your most valuable assets. "
+            "Not because of sentiment, but because of accumulated trust, shared context, and compounded reliability. "
+            "A ten-year relationship requires almost no transaction costs. "
+            "You know how each other thinks. You trust each other's word. You coordinate in minutes. "
+            "A new relationship requires months of friction before you can operate at the same level. "
+            "Protecting and deepening long-term relationships is not relationship management — it is strategic infrastructure."
+        ),
+    },
+    "2026-06-20": {
+        "title": "Ethics Under Pressure — When It Is Most Expensive and Most Important",
+        "chapter": "NEO Cotruglian Philosophy",
+        "summary": (
+            "Cotruglian ethics are easy to maintain when the cost is low. "
+            "They are tested when maintaining them is expensive — when telling the truth costs you a deal, "
+            "when keeping your standard means losing the race, when protecting your people means absorbing the hit yourself. "
+            "Kapusta is direct: the value of your ethics is determined entirely by how you behave when they are expensive. "
+            "Ethical standards that bend under pressure are not standards — they are preferences. "
+            "Vanguard Leadership requires the ones that do not bend."
+        ),
+    },
+    "2026-06-21": {
+        "title": "Stronger Together — The Mathematics of Tribal Advantage",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
+            "Individual capability compounds slowly. Tribal capability compounds exponentially. "
+            "The reason: in a tribe, every member's network, knowledge, and capability is accessible to every other member. "
+            "One person's breakthrough becomes the tribe's breakthrough. "
+            "One person's connection becomes the tribe's connection. "
+            "The compound effect of shared capability grows faster than any individual can grow alone. "
+            "This is the structural advantage Kapusta calls tribal coordination."
+        ),
+    },
+    "2026-06-22": {
+        "title": "The Tribe Versus the Team — A Critical Distinction",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "Teams are formed for tasks. Tribes are formed around identity. "
+            "Teams dissolve when the project ends. Tribes outlast any single objective. "
+            "Teams coordinate through process. Tribes coordinate through trust. "
+            "Teams are efficient. Tribes are resilient. "
+            "In stable environments, teams are sufficient. In volatile, exponential, orchestrated environments, "
+            "only tribes have the resilience to adapt faster than the environment changes. "
+            "The Vanguard cohort is not a team. It is a tribe in formation."
+        ),
+    },
+    "2026-06-23": {
+        "title": "Building Trust at Speed — The NEO Era Challenge",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "Traditional trust-building takes years of consistent interaction. "
+            "The NEO era demands trust at speed — building reliable relationships faster than the environment changes. "
+            "Kapusta identifies three accelerants: radical transparency (share your real thinking, not the polished version), "
+            "demonstrated vulnerability (show where you are uncertain), and consistent follow-through (do what you said, every time). "
+            "Trust built through these accelerants is not shallow — it is the fastest path to deep reliability. "
+            "The tribes that master this operate in a different speed class entirely."
+        ),
+    },
+    "2026-06-24": {
+        "title": "The Network Is the Asset — Relationship Capital in the NEO Era",
+        "chapter": "NEO Era Awareness",
+        "summary": (
+            "In the industrial era, capital was physical: factories, machinery, land. "
+            "In the knowledge era, capital became intellectual: patents, processes, talent. "
+            "In the NEO era, capital is relational: the network of trust you have built, "
+            "the reputation that precedes you, the relationships that open doors before you knock. "
+            "Relational capital cannot be bought. It cannot be copied. It cannot be acquired in a transaction. "
+            "It must be earned through consistent conduct over time. "
+            "This is Cotrugli's deepest insight — 567 years before the NEO era made it structurally dominant."
+        ),
+    },
+    "2026-06-25": {
+        "title": "Psychological Safety — The Prerequisite for Tribal Intelligence",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "A tribe without psychological safety is a group pretending to be a tribe. "
+            "Members of high-trust tribes can say: I do not know. I was wrong. I am struggling. I disagree. "
+            "In low-trust groups, these statements are career risks. In high-trust tribes, they are the mechanisms of collective intelligence. "
+            "The tribe that can hear its own truth is the tribe that can adapt. "
+            "The tribe that cannot hear difficult truth compounds its errors silently until they become crises. "
+            "Psychological safety is not comfort. It is the operational requirement for tribal intelligence."
+        ),
+    },
+    "2026-06-26": {
+        "title": "Decision-Making Under Uncertainty — The Vanguard Method",
+        "chapter": "NEO Leadership Challenge",
+        "summary": (
+            "Vanguard leaders do not wait for certainty before acting. They cannot — certainty never arrives in NEO environments. "
+            "The Vanguard method: act on the best available information, build in feedback mechanisms, correct fast. "
+            "This is not recklessness. This is disciplined aggression — speed with sustainability, "
+            "adaptability with clear intention, movement with purpose. "
+            "The cost of acting with imperfect information is occasionally being wrong. "
+            "The cost of waiting for certainty is always arriving too late. "
+            "Vanguard leaders accept the first cost to avoid the second."
+        ),
+    },
+    "2026-06-27": {
+        "title": "The Compounding Effect of Consistent Standards",
+        "chapter": "NEO Cotruglian Philosophy",
+        "summary": (
+            "Standards maintained consistently over time create compound advantage. "
+            "Each time you hold the standard when it is expensive, you increase your reputational capital. "
+            "Each time you let it slide for convenience, you degrade it. "
+            "The compound effect works in both directions — and it accelerates. "
+            "After ten years of consistent standards, you have access to opportunities unavailable to everyone who compromised. "
+            "After ten years of inconsistent standards, you have access only to relationships willing to accept inconsistency — "
+            "which is a different, and significantly smaller, universe."
+        ),
+    },
+    "2026-06-28": {
+        "title": "Thinking in Decades While Executing in Days",
+        "chapter": "Chapter 1: The Art of Business",
+        "summary": (
+            "This is the Cotruglian discipline that most leaders find hardest to maintain: "
+            "holding a decade-long orientation while executing with daily urgency. "
+            "Short-term pressure is always more vivid than long-term consequence. "
+            "The quarter is always more urgent than the decade. "
+            "Vanguard leaders develop the discipline to ask, before every significant decision: "
+            "what does this look like in ten years? Who will I have become through consistently making this kind of choice? "
+            "What will I have built — or destroyed — through the accumulation of these daily decisions?"
+        ),
+    },
+    "2026-06-29": {
+        "title": "The Art of Trade — What Cotrugli's 1458 Masterwork Teaches Today",
+        "chapter": "Vanguard Roots",
+        "summary": (
+            "Benedetto Cotrugli wrote The Art of Trade in 1458 in Dubrovnik — a merchant republic that survived for centuries "
+            "through the careful management of trust and reputation in a world of competing powers. "
+            "The book was not published for 115 years. When it was, it changed how European commerce understood itself. "
+            "His central argument: trade practiced with virtue and mastery is not a lesser pursuit than philosophy or art. "
+            "It is the highest expression of human cooperative capacity. "
+            "This is the foundation COTRUGLI Business School is named after — and the operating system Vanguard Leadership is built on."
+        ),
+    },
+    "2026-06-30": {
+        "title": "Dubrovnik — The City That Survived Through Trust",
+        "chapter": "Vanguard Roots",
+        "summary": (
+            "Dubrovnik, the Republic of Ragusa, was a small city-state surrounded by larger, more powerful empires. "
+            "It survived for centuries not through military might, but through diplomatic reputation and commercial integrity. "
+            "Ragusan merchants were trusted across the Mediterranean because they kept their word. "
+            "Their bills of exchange were honoured. Their contracts were enforced. Their reputation was their passport. "
+            "This is Cotrugli's context — and the proof of concept for everything he wrote. "
+            "A small actor in a world of giants, surviving and prospering through the compounding of trust."
+        ),
+    },
+    "2026-07-01": {
+        "title": "The NEO Era Arrival — You Are Already Inside It",
+        "chapter": "Chapter 5: The NEO Era",
+        "summary": (
+            "The NEO era is not coming. It arrived. "
+            "You are already inside an environment where: network position determines opportunity, "
+            "advantages compound exponentially, coordination happens through trust not control, "
+            "and AI equalises every technical competency you spent years building. "
+            "The leaders who are winning right now are not the ones who saw this coming — "
+            "they are the ones who stopped waiting for confirmation and started building for the environment that already exists. "
+            "The window for positioning is narrowing. The compounding has already started."
+        ),
+    },
+    "2026-07-02": {
+        "title": "The Leadership Legacy Question",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Kapusta ends the assessment chapter with the only question that ultimately matters: "
+            "what will outlive you? Not your titles. Not your revenue. Not your market share. "
+            "What systems did you build that kept working after you left? "
+            "What people did you develop who carry the standards you held? "
+            "What reputation did you build that opens doors for those who come after you? "
+            "Legacy is not what you achieve. Legacy is what you build that compounds after you stop building it."
+        ),
+    },
+    "2026-07-03": {
+        "title": "The Vanguard Leader's Daily Practice",
+        "chapter": "NEO Cotruglian Philosophy",
+        "summary": (
+            "Vanguard Leadership is not a theory to understand — it is a practice to develop. "
+            "Kapusta is specific: the framework only activates through daily discipline. "
+            "Three daily practices: one decision reviewed through the Cotruglian lens (what does this build?), "
+            "one relationship invested in (not transacted), one standard held when it would have been easier to release it. "
+            "These are not grand gestures. They are the compound interest of character — "
+            "invisible in any single day, decisive over any single year."
+        ),
+    },
+    "2026-07-04": {
+        "title": "When the Wolf Wins — Understanding Short-Term Success",
+        "chapter": "Chapter 12: The Three Patterns",
+        "summary": (
+            "Kapusta does not pretend the wolf always loses. In the short term, wolves often win spectacularly. "
+            "This is the most dangerous moment for tribes — when wolf behaviour is visibly rewarded. "
+            "The sheep see the wolf's success and wonder if they should adapt their approach. "
+            "The sheepdogs feel the pressure of appearing slow by comparison. "
+            "Understanding the three-year pattern is the antidote: "
+            "wolf success in Year 1 is real. Wolf collapse in Year 3 is structural. "
+            "The Vanguard leader holds the standard through the wolf's apparent triumph."
+        ),
+    },
+    "2026-07-05": {
+        "title": "Coordinating at Scale Without Losing Integrity",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "The hardest challenge in scaling a tribe is maintaining the standards that made it strong. "
+            "Small tribes are self-correcting — every member can see every other member's behaviour. "
+            "At scale, behaviour becomes invisible. Standards drift. Culture dilutes. "
+            "Kapusta's solution: codify the standards explicitly, model them visibly at every level, "
+            "and build systems that make non-compliance visible rather than easy. "
+            "Scale without integrity is just a bigger problem. "
+            "Scale with integrity is the compound advantage that cannot be replicated."
+        ),
+    },
+    "2026-07-06": {
+        "title": "The Reputational Ledger — What You Are Building Every Day",
+        "chapter": "NEO Cotruglian Philosophy",
+        "summary": (
+            "Every interaction adds to or subtracts from your reputational ledger. "
+            "The ledger is not kept by you — it is kept by everyone who has ever interacted with you. "
+            "It is updated in real time, distributed across your entire network, and consulted before every significant opportunity arrives. "
+            "Most people never see it directly. But they feel it constantly — in the doors that open, "
+            "the calls that are returned, the opportunities that arrive unrequested. "
+            "Cotrugli understood: the ledger is the business. Everything else is a consequence of what is in it."
+        ),
+    },
+    "2026-07-07": {
+        "title": "The Perfect Organisation — Cotruglian Architecture at Scale",
+        "chapter": "NEO Cotruglian Philosophy",
+        "summary": (
+            "What does a Cotruglian organisation look like at scale? "
+            "It has long average tenure — people stay because the environment compounds their development. "
+            "It has strong external reputation — partners seek it out before being approached. "
+            "It has psychological safety — people say what is true, not what is safe. "
+            "It has distributed decision-making — because trust is high enough to empower the edges. "
+            "It grows through referral and reputation more than through marketing and sales. "
+            "These are not aspirational qualities. They are the structural outputs of consistent Cotruglian practice over time."
+        ),
+    },
+    "2026-07-08": {
+        "title": "AI, AGI and the Leadership Responsibility",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Kapusta does not avoid the hardest AI question: what happens when AI becomes more capable than humans across all domains? "
+            "He argues that the race toward AGI is being run without the restraint mechanisms that govern nuclear weapons. "
+            "No treaties. No doctrine of restraint. No agreed safeguards. "
+            "This is not a reason for paralysis — it is the reason that ethical human judgment matters more now, not less. "
+            "In a world where AI can do almost anything, the question of what it should do becomes the only question that matters. "
+            "That question can only be answered by humans with Cotruglian character."
+        ),
+    },
+    "2026-07-09": {
+        "title": "The Tribe That Outlasts the Programme",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "The most valuable thing you build in an MBA programme is not knowledge — it is the tribe. "
+            "Knowledge has a half-life. Frameworks become outdated. Case studies age. "
+            "But the tribe you build during a programme — the people who saw you under pressure, "
+            "who built alongside you, who held you to standards — "
+            "this tribe compounds for decades. "
+            "Kapusta's evidence: COTRUGLI's 2,700 alumni network. The ones who are thriving most are the ones "
+            "who maintained and deepened their cohort relationships long after graduation."
+        ),
+    },
+    "2026-07-10": {
+        "title": "Stronger Together — The Strategic Choice, Not the Slogan",
+        "chapter": "Tribe as Coordination",
+        "summary": (
+            "Stronger together becomes a slogan when it is said but not practiced. "
+            "It becomes a strategy when the tribe makes specific, deliberate choices to combine capabilities, "
+            "share knowledge, open networks, and hold each other to standards. "
+            "The difference between a cohort that says 'stronger together' and one that lives it "
+            "is visible in ten years of compounding — in the opportunities that cross-referred, "
+            "the problems that were solved by one member for another, "
+            "the doors that opened because the reputation of one member reflected on all. "
+            "This is the choice before every Vanguard cohort. Make it deliberately."
+        ),
+    },
+    "2026-07-11": {
+        "title": "The Operating System of the NEO Leader — Final Integration",
+        "chapter": "Chapter 12: The Three Patterns",
+        "summary": (
+            "By the end of the book, Kapusta returns to where he started: the operating system. "
+            "The Vanguard leader's OS runs five processes simultaneously: "
+            "Craft (building with mastery and intention), Ethics (Cotruglian standards as competitive architecture), "
+            "Doctrine (military-grade decision speed and discipline), Augmentation (AI as force multiplier, not replacement), "
+            "and Tribe (coordination through trust at scale). "
+            "These are not sequential. They run in parallel, reinforcing each other. "
+            "Remove any one and the system degrades. Together, they create exponential advantage in the NEO era."
+        ),
+    },
+    "2026-07-12": {
+        "title": "What Will You Build? — The Question That Starts Everything",
+        "chapter": "Conclusion",
+        "summary": (
+            "Kapusta closes with the question he opened with: what are you actually building with your life's work? "
+            "After 500 pages of philosophy, doctrine, framework, and case study, the answer must be personal. "
+            "'I built COTRUGLI Business School. I named it after a forgotten philosopher. "
+            "I committed to building over extraction. I thought in decades while executing in days. "
+            "People thought I was crazy. The results compounded. What I built will outlive me.' "
+            "The framework is in these pages. The proof will come from what you build with it. "
+            "Stronger Together. Let's build."
+        ),
+    },
+}
+
+
 TALI_STEPS = {
     "2026-03-27": {
         "step": 1,

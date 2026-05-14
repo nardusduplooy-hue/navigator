@@ -12,6 +12,7 @@ from jarvis_content import (
     AI_NEWS_TODAY,
     JTBD_STATUS,
     MODULE3_ARTICLES,
+    VANGUARD_SUMMARIES,
 )
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -198,13 +199,23 @@ def build_briefing():
         lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
         lines.append("")
 
-    # KAPUSTA / BENEDETTO
-    lines.append("🏛️ <b>VANGUARD ROOTS — Who was Benedetto Cotrugli?</b>")
-    lines.append("")
-    lines.append("Considered one of the most important figures in the history of Dubrovnik, Benedetto Cotrugli was a 15th-century merchant, diplomat, and humanist — known as the author of one of the earliest publications on entrepreneurship and double-entry bookkeeping. His book, <i>The Art of Trade</i> (<i>Il libro del arte del mercatura</i>), is one of the most significant writings of all time on the philosophy and art of business.")
-    lines.append("")
-    lines.append("<a href='https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=qt1hfzDgJGatWWtZFvj6iA%3D%3D'>→ Read more on LinkedIn</a>")
-    lines.append("")
+    # VANGUARD LEADERSHIP — daily book summary
+    vanguard = VANGUARD_SUMMARIES.get(date_key)
+    if vanguard:
+        lines.append("🏛️ <b>VANGUARD LEADERSHIP — Dražen Kapusta</b>")
+        lines.append("")
+        lines.append("<b>" + vanguard["title"] + "</b>")
+        lines.append("<i>" + vanguard["chapter"] + "</i>")
+        lines.append("")
+        lines.append(vanguard["summary"])
+        lines.append("")
+    else:
+        lines.append("🏛️ <b>VANGUARD ROOTS — Who was Benedetto Cotrugli?</b>")
+        lines.append("")
+        lines.append("Considered one of the most important figures in the history of Dubrovnik, Benedetto Cotrugli was a 15th-century merchant, diplomat, and humanist — known as the author of one of the earliest publications on entrepreneurship and double-entry bookkeeping. His book, <i>The Art of Trade</i> (<i>Il libro del arte del mercatura</i>), is one of the most significant writings of all time on the philosophy and art of business.")
+        lines.append("")
+        lines.append("<a href='https://www.linkedin.com/pulse/benedetto-cotrugli-cotrugli-business-school-8pd7f/?trackingId=qt1hfzDgJGatWWtZFvj6iA%3D%3D'>→ Read more on LinkedIn</a>")
+        lines.append("")
 
     # AI NEWS
     news = fetch_ai_news()
