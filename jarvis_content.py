@@ -2128,7 +2128,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "AI IQ is here: a new site scores frontier AI models on the human IQ scale. The results are already dividing tech.",
+    "headline": "Developers can now debug and evaluate AI agents locally with Raindrop's open source tool Workshop",
     "source": "VentureBeat AI",
 }
 
