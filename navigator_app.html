@@ -2429,6 +2429,8 @@ function askKnowledge(el) {
   sendKvQA();
 }
 
+const CURATOR_PROXY_URL = 'https://managers-sum-silver-sixth.trycloudflare.com';
+
 async function sendKvQA() {
   const input = document.getElementById('kv-qa-input');
   const msg = input.value.trim();
@@ -2438,35 +2440,39 @@ async function sendKvQA() {
   input.value = '';
   const loader = document.createElement('div');
   loader.className = 'msg-nav';
-  loader.innerHTML = '<span class="spinner"></span> Thinking...';
+  loader.innerHTML = '<span class="spinner"></span> Searching Second Brain...';
   messages.appendChild(loader);
   messages.scrollTop = messages.scrollHeight;
+  try {
+    const proxyRes = await fetch(`${CURATOR_PROXY_URL}/ask`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: msg }),
+      signal: AbortSignal.timeout(15000)
+    });
+    if (proxyRes.ok) {
+      const proxyData = await proxyRes.json();
+      if (proxyData.answer) {
+        loader.className = 'msg-nav';
+        loader.innerHTML = proxyData.answer.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>') +
+          `<div style="font-size:10px;color:var(--text-muted);margin-top:6px;">\uD83E\uDDE0 From Curator Second Brain \u00B7 ${proxyData.sources || 0} wiki files</div>`;
+        messages.scrollTop = messages.scrollHeight;
+        return;
+      }
+    }
+  } catch(proxyErr) {
+    console.log('Curator proxy unreachable, falling back to KV:', proxyErr.message);
+  }
   const apiKey = storage.get('cn_api_key');
   if (!apiKey) {
     loader.style.color = 'var(--red)';
-    loader.textContent = 'Add your Anthropic API key in Settings first (tap the header).';
+    loader.textContent = 'Second Brain offline. Add your Anthropic API key in Settings to use the Knowledge Vault fallback.';
     return;
   }
-  // Build vault context from KNOWLEDGE_VAULT entries
   const vaultContext = (PROGRAMME_DATA.KNOWLEDGE_VAULT || []).map(e =>
     `**${e.title}** (${e.domain})\n${(e.keyPoints || []).join(' | ')}`
   ).join('\n\n');
-
-  const systemPrompt = `You are the Cotrugli Navigator Knowledge Assistant for ${PROGRAMME_DATA.student}, a student in the ${PROGRAMME_DATA.programme}.
-
-You have access to the student's Knowledge Vault — a curated library of programme concepts and frameworks. Answer questions clearly and concisely, grounded in the vault content and programme context.
-
-Key faculty:
-- Dr. Tali Režun (he/him): Context Engineering, Three-Phase Methodology, Non-Developer Playbook, The Curator, Second Brain, Chasing Jarvis course lead
-- Dražen Kapusta: NEO Era, NEO World, Centaur Doctrine, Wolf-Sheep-Sheepdog, Business as Craft, NCTE, Vanguard Leadership
-
-Current module: ${PROGRAMME_DATA.currentModule.name}
-
-Knowledge Vault:
-${vaultContext}
-
-Keep answers concise and practical. Connect concepts to the student's programme context where relevant.`;
-
+  const systemPrompt = `You are the Cotrugli Navigator Knowledge Assistant. Answer questions about the Vanguard MBA programme, frameworks, and faculty. Use the Knowledge Vault below as your primary source.\n\nKnowledge Vault:\n${vaultContext}`;
   try {
     const history = storage.getJSON('cn_kv_qa_history') || [];
     history.push({ role: 'user', content: msg });
@@ -2481,7 +2487,8 @@ Keep answers concise and practical. Connect concepts to the student's programme 
     history.push({ role: 'assistant', content: reply });
     storage.setJSON('cn_kv_qa_history', history.slice(-20));
     loader.className = 'msg-nav';
-    loader.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+    loader.innerHTML = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>') +
+      `<div style="font-size:10px;color:var(--text-muted);margin-top:6px;">\uD83D\uDCDA From Knowledge Vault (Curator offline)</div>`;
   } catch(err) {
     loader.className = 'msg-nav'; loader.style.color = 'var(--red)'; loader.textContent = 'Error: ' + err.message;
   }
