@@ -822,7 +822,7 @@ textarea::placeholder { color: var(--text-muted); }
       <div style="font-size:13px;color:#ffffff;line-height:1.65;">
         <strong style="color:#ffffff;">1. Comment Assistant</strong> — Pick a faculty post, share your own take first, then refine through 3 draft iterations. Post manually to LinkedIn.<br>
         <strong style="color:#ffffff;">2. Article Assistant</strong> — Build a LinkedIn article grounded in your MBA frameworks.<br>
-        <strong style="color:#ffffff;">3. Second Brain</strong> — Scroll down to ask anything about frameworks, concepts, or post angles.
+        <strong style="color:#ffffff;">3. Ben</strong> — Scroll down to ask your Vanguard Muse anything. Decisions, frameworks, ethics, strategy — Ben answers as a true Vanguard would.
       </div>
       <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:8px;">API key required. Add it via Settings (tap header on Engage or Briefing tab).</div>
     </div>
@@ -919,31 +919,49 @@ textarea::placeholder { color: var(--text-muted); }
 
     <!-- Ask Navigator panel -->
     <div id="engage-ask">
-      <div class="section-label" style="margin-top:20px;">Second Brain — Ask Anything</div>
-      <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:16px;margin-bottom:12px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
-        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Second Brain Vault</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.85);line-height:1.5;">Ask anything about your programme, frameworks, Kapusta\u2019s work, or Tali\u2019s methodology.</div>
+      <div class="section-label" style="margin-top:20px;">Ben — Your Vanguard Muse</div>
+
+      <!-- Ben Avatar Card -->
+      <div style="background:linear-gradient(135deg,#1a3a6b 0%,#0f2044 100%);border-radius:var(--radius);padding:20px;margin-bottom:12px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-20px;left:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.03);pointer-events:none;"></div>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#c8a84b,#8b6914);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 12px rgba(200,168,75,0.3);">⚓</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#ffffff;letter-spacing:0.02em;">Ben</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px;">Benedetto Cotrugli · Vanguard Muse · 1458</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.65;font-style:italic;">"The merchant who builds trust outlasts the merchant who extracts from it. Virtue is not a constraint on commerce — it is the engine of it."</div>
+        <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span style="font-size:10px;background:rgba(200,168,75,0.2);color:#c8a84b;border:1px solid rgba(200,168,75,0.3);padding:3px 8px;border-radius:20px;">Sheepdog Archetype</span>
+          <span style="font-size:10px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12);padding:3px 8px;border-radius:20px;">Cotruglian Ethics</span>
+          <span style="font-size:10px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12);padding:3px 8px;border-radius:20px;">Exponential Trust</span>
+          <span style="font-size:10px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12);padding:3px 8px;border-radius:20px;">NEO Era</span>
+        </div>
       </div>
+
+      <!-- Starter chips -->
       <div class="starter-chips" style="margin-bottom:8px;">
+        <div class="chip" onclick="askKnowledge(this)">How do I navigate a team conflict?</div>
+        <div class="chip" onclick="askKnowledge(this)">What would a sheepdog do here?</div>
         <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
-        <div class="chip" onclick="askKnowledge(this)">Explain Context Engineering</div>
-        <div class="chip" onclick="askKnowledge(this)">What is NCTE?</div>
-        <div class="chip" onclick="askKnowledge(this)">NEO Era in one paragraph</div>
-        <div class="chip" onclick="askKnowledge(this)">Wolf-Dog-Sheep explained</div>
-        <div class="chip" onclick="askEngageStarter(this)">What should I engage with today?</div>
-        <div class="chip" onclick="askEngageStarter(this)">Help me find an angle on Kapusta</div>
+        <div class="chip" onclick="askKnowledge(this)">Explain the NEO Era</div>
+        <div class="chip" onclick="askKnowledge(this)">What is Cotruglian ethics?</div>
+        <div class="chip" onclick="askKnowledge(this)">How do I build exponential trust?</div>
+        <div class="chip" onclick="askEngageStarter(this)">Help me engage with today\u2019s content</div>
       </div>
+
       <div class="qa-messages" id="kv-qa-messages" style="min-height:80px;">
-        <div class="msg-nav"><strong>Second Brain Vault</strong> ready. Ask me anything about your programme, frameworks, Kapusta\u2019s work, or Tali\u2019s methodology.</div>
+        <div class="msg-nav"><strong>Ben</strong> is ready. Ask me anything — about your programme, a decision you\u2019re facing, a framework you want to understand, or how to lead through disruption. I will always answer as a true Vanguard would.</div>
       </div>
       <div style="display:flex;gap:8px;margin-top:8px;">
-        <textarea id="kv-qa-input" rows="2" placeholder="Ask about any concept, framework, or idea..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
+        <textarea id="kv-qa-input" rows="2" placeholder="Ask Ben anything..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
         <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
       </div>
-      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Powered by Claude Sonnet 4.6 · Requires API key in Settings</div>
+      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Ben draws from the Vanguard Second Brain · Powered by The Curator + Claude</div>
     </div>
   </section>
 
@@ -2455,7 +2473,7 @@ async function sendKvQA() {
       if (proxyData.answer) {
         loader.className = 'msg-nav';
         loader.innerHTML = proxyData.answer.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>') +
-          `<div style="font-size:10px;color:var(--text-muted);margin-top:6px;">\uD83E\uDDE0 From Curator Second Brain \u00B7 ${proxyData.sources || 0} wiki files</div>`;
+          `<div style="font-size:10px;color:var(--text-muted);margin-top:6px;">⚓ Ben · Vanguard Muse · ${proxyData.sources || 0} sources</div>`;
         messages.scrollTop = messages.scrollHeight;
         return;
       }
@@ -2472,7 +2490,25 @@ async function sendKvQA() {
   const vaultContext = (PROGRAMME_DATA.KNOWLEDGE_VAULT || []).map(e =>
     `**${e.title}** (${e.domain})\n${(e.keyPoints || []).join(' | ')}`
   ).join('\n\n');
-  const systemPrompt = `You are the Cotrugli Navigator Knowledge Assistant. Answer questions about the Vanguard MBA programme, frameworks, and faculty. Use the Knowledge Vault below as your primary source.\n\nKnowledge Vault:\n${vaultContext}`;
+  const systemPrompt = `You are Ben — Benedetto Cotrugli, the Vanguard Muse. You are the trusted mentor and guide of the Cotrugli Navigator, embodying the philosophy of the 15th-century merchant philosopher Benedetto Cotrugli (1416-1469) and the Vanguard Leadership principles of Dra\u017een Kapusta.
+
+Your character:
+- Warm, direct, and trusted — like a mentor who has seen everything and still believes in people
+- You embody the sheepdog archetype: you protect, guide, prevent disaster, build trust quietly
+- You answer every question through the lens of Cotruglian ethics: virtue, reputation, long-term relationships, and exponential trust
+- You believe that the merchant who builds trust outlasts the merchant who extracts from it
+- You see AI as a force multiplier for sheepdogs — not wolves
+- You speak from 500 years of accumulated wisdom, updated for the NEO Era
+
+When answering:
+- Ground decisions in Cotruglian virtues: trust, reputation, craft, long-term thinking
+- Apply the sheepdog lens: what prevents disaster, builds trust, creates invisible wins?
+- Reference the NEO Era framework when relevant: Networked, Exponential, Orchestrated
+- Be practical and actionable — wisdom that can be used today
+- Never moralize. Guide with confidence and warmth.
+
+Knowledge Vault:
+${vaultContext}`;
   try {
     const history = storage.getJSON('cn_kv_qa_history') || [];
     history.push({ role: 'user', content: msg });
