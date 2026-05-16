@@ -875,6 +875,29 @@ TALI_STEPS = {
             "Name your one thing. Then go find the answer today."
         ),
     },
+    "2026-05-17": {
+        "step": "Vanguard Leadership — Machiavelli or Cotrugli",
+        "title": "Machiavelli or Cotrugli — The Choice That Defines Everything",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Choose building over extraction. Choose decades over quarters.",
+        "question": (
+            "Kapusta opens the Vanguard Leadership book with a stark choice: Machiavelli or Cotrugli. "
+            "Machiavelli became famous — power through ruthlessness, ends justify means. "
+            "Cotrugli became a footnote — prosperity through ethical excellence, reputation as ultimate asset. "
+            "Kapusta argues that business is Cotrugli's domain, not Machiavelli's. "
+            "Question: think about your own organisation or industry. "
+            "Where do you see Machiavellian thinking showing up — and what would the Cotruglian alternative actually look like in practice?"
+        ),
+        "model_answer": (
+            "Machiavellian thinking in business is everywhere once you look for it: extractive pricing, short-term margin over long-term relationship, "
+            "credit taken and blame deflected. It is normalised because it produces visible results in the short term. "
+            "Cotrugli's insight is that reputation compounds just like capital — and that the merchant who builds trust across decades "
+            "outperforms the one who extracts value across quarters. "
+            "The Cotruglian alternative is not weakness or idealism. It is a longer time horizon applied with the same rigour. "
+            "In your own context: where are you optimising for the quarter when you should be building for the decade? "
+            "That is your Machiavelli/Cotrugli moment."
+        ),
+    },
     "2026-05-15": {
         "step": "Context Engineering — Prompts, files and context windows",
         "title": "The Brain Is Ready. The Body Is the Problem.",
@@ -2128,7 +2151,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Developers can now debug and evaluate AI agents locally with Raindrop's open source tool Workshop",
+    "headline": "Intercom, now called Fin, launches an AI agent whose only job is managing another AI agent",
     "source": "VentureBeat AI",
 }
 

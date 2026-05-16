@@ -105,10 +105,8 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• <b>Chasing Jarvis — Context Engineering</b>")
-    lines.append("• 🗓 Saturday 16 May — 17:00 Belgrade / Ljubljana time")
-    lines.append("• <a href='https://cotrugli.online/groups/vanguard/zoom/meetings/18/?wm=1&mi=81526344141'>→ Join Zoom Meeting</a>")
-    lines.append("  Meeting ID: 815 2634 4141 | Passcode: Vanguard11")
+    lines.append("• <b>Chasing Jarvis Module 5 — Building an MVP: From Concept to Deployment</b>")
+    lines.append("• 🗓 Saturday 30 May (approximate)")
     lines.append("")
 
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
@@ -184,22 +182,41 @@ def build_briefing():
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
             lines.append("")
         else:
-            lines.append("🎯 <b>CHASING JARVIS — MODULE 4: CONTEXT ENGINEERING</b>")
+            lines.append("🎯 <b>CHASING JARVIS — MODULE 5: BUILDING AN MVP — FROM CONCEPT TO DEPLOYMENT</b>")
             lines.append("")
-            lines.append("🚀 <b>Message from Dr. Tali — read this before today's session</b>")
+            lines.append("Module 5 is the capstone. Everything you have learned converges into one tangible output: a functioning MVP you build, test, and deploy using AI tools and agents — guided by the context packages you built in Module 4.")
             lines.append("")
-            lines.append("We are back <b>today at 17:00 Belgrade / Ljubljana time</b> for Module 4: Context Engineering. Here is what you need to know:")
+            lines.append("Four tracks, one destination:")
+            lines.append("• <b>Claude</b> (claude.ai / Claude Code) — first")
+            lines.append("• <b>Augment Code</b> — second")
+            lines.append("• <b>Google AI Studio</b> — for beginners")
+            lines.append("• <b>Firebase Studio / Antigravity</b> — for advanced students")
             lines.append("")
-            lines.append("<b>🛠️ App Showcases — Module 3 Homework</b>")
-            lines.append("We have dedicated slots for 5 or 6 presentations. This is your time to show us the brains of what you have built.")
-            lines.append("• <b>The Focus:</b> Mechanics &amp; Functionalities. Skip the landing pages — show us the backend-to-frontend logic, the features, and the smart elements.")
-            lines.append("• <b>The Format:</b> 5 minutes each. No slides needed — just a live demo of the app in action.")
-            lines.append("• <b>Action:</b> If you want to present, have your environment ready to share today.")
+            lines.append("Regardless of track — you will understand the full technology stack, learn deployment fundamentals, and walk away with a functioning web application you can showcase, iterate on, or launch.")
             lines.append("")
-            lines.append("🎯 <b>Chasing Jarvis: Five Modules. One Mission. Build the Future.</b>")
-            lines.append("<a href='https://www.linkedin.com/posts/talirezun_chasingjarvis-chasingjarvis-aiagents-share-7460995022214270976-GoJa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJkcvoBxTW_IU_6a4K4AWRwEHahONmqfLg'>→ Links in the comments of Dr. Tali's LinkedIn post</a>")
+            lines.append("<b>📋 Course Assignments</b>")
+            lines.append("• Read the pre-reading defined in the module's pre-reading section")
+            lines.append("• Build a functional MVP using AI tools (Claude, Augment Code, Google AI Studio, Firebase Studio or Antigravity)")
+            lines.append("• Understand the core technology stack of modern web applications (frontend, backend, database)")
+            lines.append("• Deploy your application to a production hosting platform (if desired)")
+            lines.append("• Configure a custom domain and professional deployment (if desired)")
+            lines.append("• Test your MVP systematically for functionality, usability, and performance")
+            lines.append("• Iterate based on testing and feedback")
+            lines.append("• Present your MVP effectively to technical and non-technical audiences")
             lines.append("")
-            lines.append("See you later today. Let's get to work. 🦾")
+            lines.append("<b>📚 Required Reading</b>")
+            lines.append("<a href='https://medium.com/@talirezun/from-google-ai-studio-to-production-d928bb00edbd'>→ From Google AI Studio to Production — Dr. Tali Režun</a>")
+            lines.append("<i>Essential for understanding the AI Studio development path</i>")
+            lines.append("")
+            lines.append("<a href='https://medium.com/@talirezun/from-prototype-to-production-building-an-ai-widget-platform-in-30-days-23c603c91475'>→ From Prototype to Production: Building an AI Widget Platform in 30 Days — Dr. Tali Režun</a>")
+            lines.append("<i>Real-world case study of AI-assisted development</i>")
+            lines.append("")
+            lines.append("<b>🔗 Supplementary Resources</b>")
+            lines.append("<a href='https://firebase.google.com/docs/hosting'>→ Firebase Hosting Documentation</a>")
+            lines.append("<a href='https://www.digitalocean.com/community/tutorials'>→ Digital Ocean Tutorials</a>")
+            lines.append("<a href='https://firebase.google.com/docs/studio'>→ Firebase Studio</a>")
+            lines.append("")
+            lines.append("This is where Chasing Jarvis becomes real. 🦾")
             lines.append("")
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
@@ -234,7 +251,7 @@ def build_briefing():
     lines.append("")
 
     # KNOWLEDGE QUESTION
-    if tali:
+    if tali and date_key != "2026-05-17":
         lines.append("🧠 <b>Test your knowledge:</b>")
         lines.append(tali["question"])
         lines.append("")
@@ -249,7 +266,7 @@ def build_briefing():
 def build_model_answer():
     date_key = today_str()
     tali = TALI_STEPS.get(date_key)
-    if not tali:
+    if not tali or date_key == "2026-05-17":
         return None
     lines = []
     lines.append("🧠 <b>Model answer to this morning's question:</b>")
