@@ -1171,15 +1171,71 @@ const PROGRAMME_DATA = {
 
   todaysFocus: "Module 4: Context Engineering \u2014 this Saturday. App showcases are on \u2014 if you want to present your Module 3 build, have your environment ready. Essential pre-reading: complete all obligatory Module 4 reading on COTRUGLI online and read Dr. Tali\u2019s article The Brain Is Ready. The Body Is the Problem.",
 
-  aiPodcasts: [
-    { title: "Chasing Jarvis: Step 1 — Context Engineering", date: "2026-03", url: "https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3" },
-    { title: "Chasing Jarvis: Step 2 — The Real Build", date: "2026-03", url: "https://stream.redcircle.com/episodes/1df6e253-8deb-41aa-b200-958f8cfc1665/stream.mp3" },
-    { title: "Chasing Jarvis: Step 3 — Ditching RAG", date: "2026-03", url: "https://stream.redcircle.com/episodes/e9c4ebd5-0041-4650-b787-5012115aa447/stream.mp3" },
-    { title: "Chasing Jarvis: Step 4 — Orchestrating", date: "2026-04", url: "https://stream.redcircle.com/episodes/a6f8c93e-d649-4abf-99b4-36d80ef8d7aa/stream.mp3" },
-    { title: "Chasing Jarvis: Step 5 — Marketing Agents", date: "2026-04", url: "https://stream.redcircle.com/episodes/92bb360b-12fd-446e-9460-aad10a08d1c1/stream.mp3" },
-    { title: "Business Agility: Kanban", date: "2026-04", url: "https://stream.redcircle.com/episodes/1f01dc3c-14e2-49fd-a97e-ba49bbbe0c92/stream.mp3" },
-    { title: "Watch video: What is Flight Levels", date: "2026-04", url: "https://youtu.be/l73yAdQOU84" },
-    { title: "Watch video: Klaus Leopold: Flight Levels in Action", date: "2026-04", url: "https://youtu.be/6JtRPjTMEWQ" }
+  podcastGroups: [
+    {
+      id: 'pg-vanguard',
+      label: 'Vanguard Leadership \u0026 General',
+      icon: '\U0001F396',
+      episodes: [
+        { title: 'The Art of Vanguard Leadership', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/af3e31f4-19bf-43ed-93cd-4e747e17de74/stream.mp3' },
+        { title: 'An economy that does not need humans', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/3373610c-9a55-49fd-a37e-d11c057aba1b/stream.mp3' },
+        { title: 'Virtue is the new competitive edge', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/3c4b4667-f7e2-4b5d-84d0-50121ade6572/stream.mp3' },
+        { title: 'Calculate your AI agent replacement risk', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/ec4b85f5-7e86-45b5-a1e5-baf775163b74/stream.mp3' },
+        { title: 'Vanguard Intel System', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/5060d367-bf59-41dc-81d8-c9c0c2ab0cfc/stream.mp3' },
+        { title: 'The Fog of Federation', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/a4ec0d32-bd16-4f77-b5dc-b50646b03239/stream.mp3' },
+        { title: 'India Hormuz', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/9a98d489-57e3-4c1e-8f39-c92570d518b4/stream.mp3' }
+      ]
+    },
+    {
+      id: 'pg-warfare',
+      label: 'Business as Warfare',
+      icon: '\u2694\uFE0F',
+      episodes: [
+        { title: 'Integrating Dynamic Warfare Strategies in an AI driven world', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/8c923c22-6240-4bc9-a0b3-5c13cea944b3/stream.mp3' },
+        { title: 'Asymmetric Warfare \u2013 Not every war has to end', author: 'Zrinko Petener', url: 'https://stream.redcircle.com/episodes/2bf61cb1-c1e7-441b-a972-d87e79f4134e/stream.mp3' },
+        { title: 'Paypal Mafia', author: 'Independent Study', url: 'https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3' },
+        { title: 'Networks and Netwars', author: 'Arquilla \u0026 Ronfeldt', url: 'https://stream.redcircle.com/episodes/c2e8c019-1445-4fa8-9061-d936a527c67d/stream.mp3' },
+        { title: 'Center of Gravity for Joint Doctrine', author: 'Antulio J. Echevarria', url: 'https://stream.redcircle.com/episodes/d308978d-5e2e-4077-956c-cb601e6470f6/stream.mp3' }
+      ]
+    },
+    {
+      id: 'pg-jarvis',
+      label: 'Chasing Jarvis',
+      icon: '\U0001F916',
+      episodes: [
+        { title: '2nd Brain 1', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/99e024f7-d1d3-4aa5-b798-9258c6767867/stream.mp3' },
+        { title: '2nd Brain 2', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/aea0ecd0-5a7c-4a68-99ea-effaba8a83aa/stream.mp3' },
+        { title: '2nd Brain 3', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/df6f90e0-85dd-4834-a477-246750be4ad0/stream.mp3' },
+        { title: 'Obsidian', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/c3d41fc0-232c-45b1-9db3-009070792595/stream.mp3' },
+        { title: 'From Lab to Life \u2014 Step 1', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/7167d9ba-2319-4ad0-ba28-afc8c9098094/stream.mp3' },
+        { title: 'From Lab to Life \u2014 Step 2', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/1df6e253-8deb-41aa-b200-958f8cfc1665/stream.mp3' },
+        { title: 'From Lab to Life \u2014 Step 3', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/e9c4ebd5-0041-4650-b787-5012115aa447/stream.mp3' },
+        { title: 'From Lab to Life \u2014 Step 4', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/a6f8c93e-d649-4abf-99b4-36d80ef8d7aa/stream.mp3' },
+        { title: 'From Lab to Life \u2014 Step 5', author: 'Dr. Tali Re\u017eun', url: 'https://stream.redcircle.com/episodes/92bb360b-12fd-446e-9460-aad10a08d1c1/stream.mp3' },
+        { title: 'Understanding LLMs: AI-Generated Research Discussion', author: 'Dr. Tali Re\u017eun', url: 'https://redcircle.com/shows/from-lab-to-life/ep/8a6a7d09-b3fb-4513-88c6-b2784619a301' },
+        { title: 'From Prompts to Precision: AI-Generated Research Discussion', author: 'Dr. Tali Re\u017eun', url: 'https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/2f8a063f-121e-4c43-b268-a3c0e42c6701' },
+        { title: 'Are We Becoming Obsolete, or Finally Free', author: 'Dr. Tali Re\u017eun', url: 'https://redcircle.com/shows/ab71928c-8c79-46b9-a324-0d82a84b3254/ep/43352e95-8aec-4f0a-873d-3b6e5e928629' }
+      ]
+    },
+    {
+      id: 'pg-book',
+      label: 'Vanguard Leadership Book',
+      icon: '\U0001F4D6',
+      episodes: [
+        { title: 'Chapter 1: The Art of Business as Craft', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/b290c833-444e-4dd5-99f6-a8b8bd6c3bce/stream.mp3' },
+        { title: 'Chapter 2: Prince or Trader', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/b4ee9c1a-3ed9-4cdc-ab41-a987adcd1236/stream.mp3' },
+        { title: 'Chapter 3: The Perfect Merchant', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/dc0ecb71-2532-4d11-a3eb-518f9162555c/stream.mp3' }
+      ]
+    },
+    {
+      id: 'pg-student',
+      label: 'Student Concepts',
+      icon: '\U0001F393',
+      episodes: [
+        { title: 'CPN Mirrors', author: 'Nardus du Plooy', url: 'https://stream.redcircle.com/episodes/70427666-54c9-4272-933a-0e360bdbcd57/stream.mp3' },
+        { title: 'LoyaltyIQ', author: 'Jannes \u0026 Nardus du Plooy', url: 'https://stream.redcircle.com/episodes/0950f4f5-d24e-4b74-8fbb-9326eac282fc/stream.mp3' }
+      ]
+    }
   ],
 
   facultyPosts: {
@@ -2356,11 +2412,29 @@ function renderSessions() {
 
   const pl = document.getElementById('podcasts-list');
   pl.innerHTML = '';
-  PROGRAMME_DATA.aiPodcasts.forEach(p => {
-    const isAudio = p.url && p.url.endsWith('.mp3');
-    const isVideo = p.url && (p.url.includes('youtu.be') || p.url.includes('youtube.com'));
-    const icon = isVideo ? '▶️' : '🎙️';
-    pl.innerHTML += `<div class="card" style="margin-bottom:10px;${!isAudio ? 'cursor:pointer;' : ''}" ${!isAudio ? `onclick="openUrl('${p.url}')"` : ''}><div style="display:flex;align-items:center;gap:12px;margin-bottom:${isAudio ? '10px' : '0'};"><span style="font-size:18px;">${icon}</span><div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--text);">${p.title}</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.date}</div></div>${!isAudio ? '<span class="chevron">›</span>' : ''}</div>${isAudio ? `<audio controls style="width:100%;height:36px;border-radius:8px;accent-color:var(--accent);" src="${p.url}"></audio>` : ''}</div>`;
+  (PROGRAMME_DATA.podcastGroups || []).forEach(group => {
+    const isOpen = storage.get('pg_open_' + group.id) === '1';
+    const epCount = group.episodes.length;
+    const groupEl = document.createElement('div');
+    groupEl.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px;';
+    const episodesHtml = group.episodes.map(ep => {
+      const isAudio = ep.url && ep.url.includes('stream.redcircle.com') && ep.url.endsWith('.mp3');
+      if (isAudio) {
+        return '<div style="padding:12px 14px;border-top:0.5px solid var(--border);background:var(--bg-card);"><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;">' + ep.title + '</div><div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">' + ep.author + '</div><audio controls style="width:100%;height:34px;border-radius:6px;accent-color:var(--accent);" src="' + ep.url + '"></audio></div>';
+      } else {
+        return '<div style="padding:12px 14px;border-top:0.5px solid var(--border);background:var(--bg-card);display:flex;align-items:center;justify-content:space-between;cursor:pointer;" onclick="openUrl(\'' + ep.url.replace(/'/g, "\\'") + '\')">' +
+          '<div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);">' + ep.title + '</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + ep.author + '</div></div>' +
+          '<span style="color:var(--accent);font-size:12px;font-weight:600;flex-shrink:0;margin-left:10px;">Open →</span></div>';
+      }
+    }).join('');
+    groupEl.innerHTML =
+      '<div style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;background:var(--bg-elevated);cursor:pointer;user-select:none;" onclick="togglePodcastGroup(\'' + group.id + '\')">'+
+      '<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:18px;">' + group.icon + '</span>'+
+      '<div><div style="font-family:Syne,sans-serif;font-size:13px;font-weight:700;color:var(--text);">' + group.label + '</div>'+
+      '<div style="font-size:11px;color:var(--text-muted);margin-top:1px;">' + epCount + ' episode' + (epCount !== 1 ? 's' : '') + '</div></div></div>'+
+      '<span id="pg-chev-' + group.id + '" style="font-size:18px;color:var(--text-muted);transition:transform 0.25s;display:inline-block;' + (isOpen ? 'transform:rotate(90deg);' : '') + '">›</span></div>'+
+      '<div id="pg-body-' + group.id + '" style="max-height:' + (isOpen ? '3000px' : '0') + ';overflow:hidden;transition:max-height 0.35s ease;">' + episodesHtml + '</div>';
+    pl.appendChild(groupEl);
   });
 }
 
@@ -2368,6 +2442,14 @@ function filterSessions(period, btn) {
   document.getElementById('sessions-filter-tabs').querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderSessions();
+}
+function togglePodcastGroup(id) {
+  const body = document.getElementById('pg-body-' + id);
+  const chev = document.getElementById('pg-chev-' + id);
+  const isOpen = body.style.maxHeight !== '0px' && body.style.maxHeight !== '';
+  body.style.maxHeight = isOpen ? '0px' : '3000px';
+  chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+  storage.set('pg_open_' + id, isOpen ? '0' : '1');
 }
 function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) { window.location.href = s.zoomUrl; } }
 
