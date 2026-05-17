@@ -875,6 +875,26 @@ TALI_STEPS = {
             "Name your one thing. Then go find the answer today."
         ),
     },
+    "2026-05-18": {
+        "step": "Chasing Jarvis — Module 5: Building an MVP",
+        "title": "Module 5 — From Concept to Deployment",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "This is where Chasing Jarvis becomes real.",
+        "question": (
+            "Module 5 is the capstone — the moment Chasing Jarvis becomes real. "
+            "You are not building a prototype. You are building something you can showcase, iterate on, or launch. "
+            "Four tracks available: Claude, Augment Code, Google AI Studio, Firebase Studio. "
+            "Question: which track are you going with for your MVP, and what is the one specific thing your MVP will do? "
+            "Name the tool and name the function — one sentence each."
+        ),
+        "model_answer": (
+            "The teams that struggle in Module 5 are the ones that start with the tool. "
+            "The teams that succeed start with the function — what does this thing actually do for a real user — "
+            "and then pick the tool that gets them there fastest. "
+            "Claude and Augment Code are where most of you will move quickest because you have been building that context all week. "
+            "Pick your track. Define your one function. Start there. Everything else is iteration."
+        ),
+    },
     "2026-05-17": {
         "step": "Vanguard Leadership — Machiavelli or Cotrugli",
         "title": "Machiavelli or Cotrugli — The Choice That Defines Everything",
@@ -2151,7 +2171,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Intercom, now called Fin, launches an AI agent whose only job is managing another AI agent",
+    "headline": "The enterprise risk nobody is modeling: AI is replacing the very experts it needs to learn from",
     "source": "VentureBeat AI",
 }
 
