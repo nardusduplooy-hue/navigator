@@ -97,6 +97,7 @@ def build_briefing():
     # VANGUARD TEAMS
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
     lines.append("<i>No one wins this alone. The teams that break through are the ones that show up for each other. If you are still on the outside — get in. Message someone today.</i>")
+    lines.append("<b>IF YOU ARE NOT IN A TEAM YET — PUT UP YOUR HAND, REACH OUT TO A CHIEF AND GET INVOLVED.</b>")
     lines.append("")
 
     # DEADLINES

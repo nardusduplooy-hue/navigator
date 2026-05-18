@@ -875,6 +875,27 @@ TALI_STEPS = {
             "Name your one thing. Then go find the answer today."
         ),
     },
+    "2026-05-19": {
+        "step": "Vanguard Leadership — The Perfect Merchant",
+        "title": "The Perfect Merchant — Cotrugli's Five Elements of Mastery",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Philosophy and practice aligned. In the NEO era, these five elements are more relevant, not less.",
+        "question": (
+            "Cotrugli identified five elements of mastery for the Perfect Merchant: "
+            "Literacy (communication as craft), Arithmetic (numbers as craft), Knowledge of Law (systems as craft), "
+            "Understanding of Markets (patterns as craft), and Ethical Framework (character as craft). "
+            "Question: honestly assess yourself against these five. "
+            "Which one is your strongest? Which one is your biggest gap — and what would closing that gap unlock for you?"
+        ),
+        "model_answer": (
+            "Most leaders have one or two of Cotrugli's five as natural strengths and one or two as genuine blind spots. "
+            "The pattern that trips most modern leaders is the Ethical Framework — not because they are unethical, "
+            "but because they have never made it explicit. They operate on instinct rather than principle. "
+            "In the NEO era, where AI handles literacy and arithmetic at scale, "
+            "the elements that remain distinctly human are judgment, market pattern recognition, and character. "
+            "Your gap is your growth edge. Name it. Work it. That is the Cotruglian path."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2171,7 +2192,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "The enterprise risk nobody is modeling: AI is replacing the very experts it needs to learn from",
+    "headline": "Architectural patterns for graph-enhanced RAG: Moving beyond vector search in production",
     "source": "VentureBeat AI",
 }
 
