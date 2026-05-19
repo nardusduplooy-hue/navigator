@@ -763,6 +763,33 @@ textarea::placeholder { color: var(--text-muted); }
         </div>
       </div>
     </div>
+
+    <div id="reading-today-banner" style="display:none;background:var(--accent-light);border:1px solid var(--border-accent);border-radius:var(--radius-sm);padding:12px 14px;margin-top:22px;align-items:center;gap:10px;cursor:pointer;" onclick="scrollToSchedule()">
+      <span style="font-size:18px;">📚</span>
+      <div style="flex:1;">
+        <div style="font-size:13px;font-weight:600;color:var(--accent);" id="reading-today-title">Readings scheduled for today</div>
+        <div style="font-size:11px;color:var(--text-dim);margin-top:2px;" id="reading-today-sub"></div>
+      </div>
+      <span style="color:var(--accent);font-size:16px;">›</span>
+    </div>
+
+    <div class="section-label" style="margin-top:22px;">My Reading Schedule</div>
+    <div id="reading-schedule-list" style="margin-bottom:4px;"></div>
+
+    <div class="section-label">Course Readings</div>
+    <div id="course-readings-list"></div>
+
+    <div id="date-picker-modal" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(15,23,42,0.5);align-items:flex-end;">
+      <div style="width:100%;background:var(--bg-surface);border-radius:24px 24px 0 0;border-top:1px solid var(--border);padding:24px 20px 36px;animation:slideUp 0.28s ease;">
+        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;" id="date-picker-title">Schedule reading</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:18px;" id="date-picker-sub"></div>
+        <input type="date" id="date-picker-input" style="width:100%;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;padding:12px 14px;outline:none;margin-bottom:14px;">
+        <div style="display:flex;gap:10px;">
+          <button class="btn btn-ghost btn-full" onclick="closeDatePicker()">Cancel</button>
+          <button class="btn btn-primary btn-full" onclick="confirmSchedule()">Schedule</button>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- TAB 3: SESSIONS -->
@@ -2173,7 +2200,110 @@ const PROGRAMME_DATA = {
       wikiLink: '',
       dateAdded: '2026-05-14'
     }
+  ],
+  courseReadings: [
+    {
+      id: 'baw',
+      label: 'Business as Warfare',
+      icon: '\u2694\ufe0f',
+      modules: [
+        {
+          id: 'baw-m1',
+          label: 'Module 1 \u2014 The New Rules of Engagement',
+          required: [
+            { id: 'baw-m1-r1', title: 'Vanguard Leadership & Business as Warfare (ILJ)', author: 'Kapusta & Petener', url: 'https://internationalleadershipjournal.com/wp-content/uploads/2026/03/ILJ_Summer2025_Full_Issue.pdf' },
+            { id: 'baw-m1-r2', title: 'Asymmetric Warfare \u2014 Not every war has to end', author: 'Zrinko Petener', url: 'https://securityanddefence.pl/Asymmetric-Warfare-nNot-every-war-has-to-end-,105400,0,2.html' },
+            { id: 'baw-m1-r3', title: 'The PayPal Mafia: From Payment Disruptors to Capital & Politics', author: 'Capstone context', url: 'https://eu.36kr.com/en/p/3562208603978629' },
+            { id: 'baw-m1-r4', title: 'Networks and Netwars \u2014 Chapter One: The Advent of Netwar', author: 'Arquilla & Ronfeldt', url: 'https://www.rand.org/pubs/monograph_reports/MR1382.html' },
+            { id: 'baw-m1-r5', title: 'Center of Gravity Recommendations for Joint Doctrine', author: 'Echevarria II', url: 'https://ndupress.ndu.edu/portals/68/Documents/jfq/jfq-35.pdf' }
+          ],
+          supplemental: [
+            { id: 'baw-m1-s1', title: 'Hybrid Warfare: One Term, Many Meanings', author: 'Jocelyn Garcia', url: 'https://smallwarsjournal.com/2022/02/25/hybrid-warfare-one-term-many-meanings/' },
+            { id: 'baw-m1-s2', title: 'Composite Warfare', author: 'Jack McCain', url: 'https://realcleardefense.com/articles/2017/04/25/composite_warfare_111242.html' },
+            { id: 'baw-m1-s3', title: 'From Military Strategy to Business Strategy', author: 'Revista Strategii Manageriale', url: 'http://www.strategiimanageriale.ro/papers/160132.pdf' }
+          ]
+        },
+        {
+          id: 'baw-m2',
+          label: 'Module 2 \u2014 The Commander\u2019s Mindset',
+          required: [
+            { id: 'baw-m2-r1', title: '2016 Letter to Shareholders \u2014 The 70% Rule', author: 'Jeff Bezos', url: 'https://s2.q4cdn.com/299287126/files/doc_financials/annual/2016-Letter-to-Shareholders.pdf' },
+            { id: 'baw-m2-r2', title: 'Insights & Best Practices: Mission Command', author: 'Joint Chiefs of Staff', url: 'https://www.jcs.mil/Portals/36/Documents/Doctrine/fp/missioncommand_fp_2nd_ed.pdf' },
+            { id: 'baw-m2-r3', title: 'Psychology of Intelligence Analysis \u2014 Chapter 8: ACH', author: 'Richards J. Heuer Jr.', url: 'https://www.cia.gov/resources/csi/static/Pyschology-of-Intelligence-Analysis.pdf' },
+            { id: 'baw-m2-r4', title: 'Five-Phase Model of the Intelligence Cycle', author: 'Franti\u0161ek Bartes', url: 'https://pdfs.semanticscholar.org/2aa9/bf97c400d6f4358a564379287bbcd5bc48f4.pdf' },
+            { id: 'baw-m2-r5', title: 'NATO AJP-01 Allied Joint Doctrine \u2014 pp. 84\u201388 Mission Command', author: 'NATO', url: 'https://www.coemed.org/files/stanags/01_AJP/AJP-01_EDF_V1_E_(1)_2437.pdf' },
+            { id: 'baw-m2-r6', title: 'A Discourse on Winning and Losing \u2014 OODA Loop pp. 383\u2013385', author: 'John Boyd', url: 'https://media.defense.gov/2018/May/22/2001920668/-1/-1/0/B_0151_Boyd_Discourse_Winning_Losing.pdf' }
+          ],
+          supplemental: [
+            { id: 'baw-m2-s1', title: 'Closing the OODA Loop: Using Big Data to Improve Decision Making', author: 'SAS', url: 'https://www.sas.com/content/dam/SAS/documents/marketing-whitepapers-ebooks/sas-whitepapers/en/closing-ooda-loop-107222.pdf' },
+            { id: 'baw-m2-s2', title: 'The Basics of Competitive Intelligence', author: 'ExInfm', url: 'https://exinfm.com/training/pdfiles/intro_comp_intelligence.pdf' }
+          ]
+        },
+        {
+          id: 'baw-m3',
+          label: 'Module 3 \u2014 Information Dominance & the Intelligence Cycle',
+          required: [
+            { id: 'baw-m3-r1', title: 'Vanguard Intelligence Systems (VIS): AI-Augmented Framework', author: 'Stru\u010di\u0107 & Kapusta', url: 'https://internationalleadershipjournal.com/wp-content/uploads/2026/04/VIS_Framework_ILJ_Submission.pdf' },
+            { id: 'baw-m3-r2', title: 'The OSINT Tools and Resources Handbook', author: 'i-Intelligence GmbH', url: 'https://www.osinthandbook.com/' },
+            { id: 'baw-m3-r3', title: 'Bellingcat\u2019s Online Investigation Toolkit', author: 'Bellingcat', url: 'https://www.bellingcat.com/resources/2024/09/24/bellingcat-online-investigations-toolkit/' },
+            { id: 'baw-m3-r4', title: 'ATP 2-22.9: Open-Source Intelligence \u2014 Chapter 3', author: 'US Army', url: 'https://irp.fas.org/doddir/army/atp2-22-9.pdf' },
+            { id: 'baw-m3-r5', title: 'Investigating Companies: A DIY Guide', author: 'Corporate Watch', url: 'https://www.liverpool.ac.uk/media/livacuk/engage/docs/Investigating,Companies,A,DIY,Handbook,University,of,Liverpool,special,edition.pdf' },
+            { id: 'baw-m3-r6', title: 'Shaping Business Strategies Through Competitive Intelligence', author: 'WIPO', url: 'https://www.wipo.int/edocs/mdocs/sme/en/wipo_kipo_kwia_inv_sel_14/wipo_kipo_kwia_inv_sel_14_h_park.pdf' }
+          ],
+          supplemental: []
+        },
+        {
+          id: 'baw-m4',
+          label: 'Module 4 \u2014 AI as Force Multiplier & Structured Analysis',
+          required: [
+            { id: 'baw-m4-r1', title: 'Psychology of Intelligence Analysis \u2014 Review Chapter 8 (ACH)', author: 'Richards J. Heuer Jr.', url: 'https://www.cia.gov/resources/csi/static/Pyschology-of-Intelligence-Analysis.pdf' },
+            { id: 'baw-m4-r2', title: 'A Tradecraft Primer: Structured Analytic Techniques \u2014 pp. 13\u201316', author: 'US Government', url: 'https://www.cia.gov/static/955180a45afe3f5013772c313885f90a/Tradecraft-Primer-apr09.pdf' },
+            { id: 'baw-m4-r3', title: 'The Role of AI in Open Source Intelligence (OSINT)', author: 'ResearchGate', url: 'https://www.researchgate.net/publication/359281723_The_Role_of_Artificial_Intelligence_in_Open_Source_Intelligence_OSINT' },
+            { id: 'baw-m4-r4', title: 'Taranis AI: Open-Source Intelligence Platform', author: 'AIT Austrian Institute of Technology', url: 'https://github.com/taranis-ai/taranis-ai' }
+          ],
+          supplemental: []
+        },
+        {
+          id: 'baw-m5',
+          label: 'Module 5 \u2014 The Capstone Campaign',
+          required: [],
+          supplemental: []
+        }
+      ]
+    },
+    {
+      id: 'cj',
+      label: 'Chasing Jarvis',
+      icon: '\ud83e\udd16',
+      modules: [
+        {
+          id: 'cj-m5',
+          label: 'Module 5 \u2014 Building an MVP',
+          required: [
+            { id: 'cj-m5-r1', title: 'From Google AI Studio to Production', author: 'Dr. Tali Re\u017eun', url: 'https://medium.com/@talirezun' },
+            { id: 'cj-m5-r2', title: 'From Prototype to Production: Building an AI Widget Platform in 30 Days', author: 'Dr. Tali Re\u017eun', url: 'https://medium.com/@talirezun' }
+          ],
+          supplemental: []
+        }
+      ]
+    },
+    {
+      id: 'b2b',
+      label: 'AI in B2B Sales',
+      icon: '\ud83d\udcbc',
+      modules: [
+        {
+          id: 'b2b-m1',
+          label: 'Module 1 \u2014 The Thesis & Landscape',
+          required: [
+            { id: 'b2b-m1-r1', title: 'AI as Force Multiplier in B2B Sales \u2014 Module 1 pre-reading', author: 'Course faculty', url: 'https://cotrugli.online/courses/ai-sales/' }
+          ],
+          supplemental: []
+        }
+      ]
+    }
   ]
+
 };
 // ===== UPDATE EACH MODULE — END =====
 
@@ -3255,11 +3385,198 @@ function init() {
   renderKnowledge();
   renderTribe();
   initCourses();
+  renderCourseReadings();
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
   setInterval(() => { renderNorthStar(); renderWork(); }, 60000);
 }
 init();
+
+// ===== READING SCHEDULER =====
+
+let _pendingReadingId = null;
+let _pendingReadingTitle = null;
+let _pendingReadingCourse = null;
+
+function getSchedule() {
+  return storage.getJSON('reading_schedule') || {};
+}
+
+function saveSchedule(s) {
+  storage.setJSON('reading_schedule', s);
+}
+
+function todayISO() {
+  const d = new Date();
+  return d.toISOString().split('T')[0];
+}
+
+function formatScheduleDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
+}
+
+function openDatePicker(readingId, title, course) {
+  _pendingReadingId = readingId;
+  _pendingReadingTitle = title;
+  _pendingReadingCourse = course;
+  document.getElementById('date-picker-title').textContent = 'Schedule reading';
+  document.getElementById('date-picker-sub').textContent = title;
+  const existing = getSchedule()[readingId];
+  document.getElementById('date-picker-input').value = existing ? existing.date : todayISO();
+  const modal = document.getElementById('date-picker-modal');
+  modal.style.display = 'flex';
+}
+
+function closeDatePicker() {
+  document.getElementById('date-picker-modal').style.display = 'none';
+  _pendingReadingId = null;
+}
+
+function confirmSchedule() {
+  const date = document.getElementById('date-picker-input').value;
+  if (!date || !_pendingReadingId) return;
+  const s = getSchedule();
+  s[_pendingReadingId] = { date: date, title: _pendingReadingTitle, course: _pendingReadingCourse };
+  saveSchedule(s);
+  closeDatePicker();
+  renderCourseReadings();
+  showToast('\u2713 Scheduled for ' + formatScheduleDate(date));
+}
+
+function removeSchedule(readingId) {
+  const s = getSchedule();
+  delete s[readingId];
+  saveSchedule(s);
+  renderCourseReadings();
+  showToast('Removed from schedule');
+}
+
+function scrollToSchedule() {
+  document.getElementById('reading-schedule-list').scrollIntoView({ behavior: 'smooth' });
+}
+
+function toggleCourseReadingGroup(id) {
+  const body = document.getElementById('crg-body-' + id);
+  const chev = document.getElementById('crg-chev-' + id);
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  storage.set('crg_open_' + id, isOpen ? '0' : '1');
+}
+
+function toggleSupplemental(modId) {
+  const el = document.getElementById('supp-' + modId);
+  const lnk = document.getElementById('supp-lnk-' + modId);
+  if (!el) return;
+  const isOpen = el.style.display !== 'none';
+  el.style.display = isOpen ? 'none' : 'block';
+  lnk.textContent = isOpen ? ('+ ' + el.dataset.count + ' supplemental reading' + (el.dataset.count > 1 ? 's' : '')) : 'Hide supplemental';
+}
+
+function renderCourseReadings() {
+  const schedule = getSchedule();
+  const today = todayISO();
+
+  // Today banner
+  const todayItems = Object.values(schedule).filter(v => v.date === today);
+  const banner = document.getElementById('reading-today-banner');
+  if (todayItems.length > 0) {
+    banner.style.display = 'flex';
+    document.getElementById('reading-today-title').textContent = todayItems.length + ' reading' + (todayItems.length > 1 ? 's' : '') + ' scheduled for today';
+    document.getElementById('reading-today-sub').textContent = todayItems.map(v => v.title.substring(0, 40) + (v.title.length > 40 ? '\u2026' : '')).join(' \u00b7 ');
+  } else {
+    banner.style.display = 'none';
+  }
+
+  // Schedule list
+  const schedEl = document.getElementById('reading-schedule-list');
+  const scheduled = Object.entries(schedule).sort((a, b) => a[1].date.localeCompare(b[1].date));
+  if (scheduled.length === 0) {
+    schedEl.innerHTML = '<div style="font-size:13px;color:var(--text-muted);padding:10px 0 4px;">No readings scheduled yet. Use the Course Readings below to schedule.</div>';
+  } else {
+    let html = '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:4px;">';
+    scheduled.forEach(([rid, v]) => {
+      const isToday = v.date === today;
+      const parts = formatScheduleDate(v.date).split(' ');
+      const dayName = parts[0]; const dayNum = parts[1]; const mon = parts[2];
+      html += '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:0.5px solid var(--border);">';
+      html += '<div style="min-width:36px;text-align:center;background:' + (isToday ? 'var(--accent)' : 'var(--accent-light)') + ';border-radius:var(--radius-xs);padding:3px 6px;">';
+      html += '<div style="font-size:9px;font-weight:600;color:' + (isToday ? 'rgba(255,255,255,0.8)' : 'var(--accent)') + ';text-transform:uppercase;">' + dayName + '</div>';
+      html += '<div style="font-family:\'Syne\',sans-serif;font-size:14px;font-weight:700;color:' + (isToday ? '#ffffff' : 'var(--accent)') + ';line-height:1;">' + dayNum + '</div>';
+      html += '<div style="font-size:9px;color:' + (isToday ? 'rgba(255,255,255,0.7)' : 'var(--text-muted)') + ';">' + mon + '</div></div>';
+      html += '<div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:500;color:var(--text);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + v.title + '</div>';
+      html += '<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + v.course + '</div></div>';
+      html += '<button onclick="removeSchedule(\'' + rid + '\')" style="background:none;border:none;color:var(--text-muted);font-size:16px;cursor:pointer;padding:4px;flex-shrink:0;">\u00d7</button></div>';
+    });
+    html += '</div>';
+    schedEl.innerHTML = html;
+  }
+
+  // Course reading accordions
+  const crEl = document.getElementById('course-readings-list');
+  let html = '';
+  (PROGRAMME_DATA.courseReadings || []).forEach(course => {
+    const isOpen = storage.get('crg_open_' + course.id) === '1';
+    const totalRequired = course.modules.reduce((n, m) => n + m.required.length, 0);
+    const totalScheduled = course.modules.reduce((n, m) => n + m.required.filter(r => schedule[r.id]).length + m.supplemental.filter(r => schedule[r.id]).length, 0);
+    html += '<div style="border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:8px;">';
+    html += '<div onclick="toggleCourseReadingGroup(\'' + course.id + '\')" style="display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;background:var(--bg-card);">';
+    html += '<span style="font-size:18px;">' + course.icon + '</span>';
+    html += '<div style="flex:1;"><div style="font-family:\'Syne\',sans-serif;font-size:13px;font-weight:700;color:var(--text);">' + course.label + '</div>';
+    html += '<div style="font-size:11px;color:var(--text-muted);margin-top:1px;">' + totalRequired + ' required readings' + (totalScheduled > 0 ? ' \u00b7 ' + totalScheduled + ' scheduled' : '') + '</div></div>';
+    html += '<span id="crg-chev-' + course.id + '" style="font-size:18px;color:var(--text-muted);transition:transform 0.2s;transform:' + (isOpen ? 'rotate(180deg)' : 'rotate(0deg)') + ';">\u2304</span></div>';
+    html += '<div id="crg-body-' + course.id + '" style="display:' + (isOpen ? 'block' : 'none') + ';border-top:1px solid var(--border);">';
+
+    course.modules.forEach(mod => {
+      if (mod.required.length === 0 && mod.supplemental.length === 0) return;
+      html += '<div style="padding:8px 14px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;background:var(--bg-elevated);">' + mod.label + '</div>';
+
+      mod.required.forEach(r => {
+        const sched = schedule[r.id];
+        html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:0.5px solid var(--border);">';
+        html += '<div style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;"></div>';
+        html += '<div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:500;color:var(--text);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + r.title + '</div>';
+        html += '<div style="font-size:11px;color:var(--text-muted);margin-top:1px;">' + r.author + '</div></div>';
+        html += '<div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">';
+        if (sched) {
+          html += '<button onclick="openDatePicker(\'' + r.id + '\',\'' + r.title.replace(/'/g, '\u2019') + '\',\'' + course.label + ' \u00b7 ' + mod.label + '\')" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:1px solid rgba(34,197,94,0.3);background:var(--green-light);color:#15803d;cursor:pointer;white-space:nowrap;">\u2713 ' + formatScheduleDate(sched.date) + '</button>';
+        } else {
+          html += '<button onclick="openDatePicker(\'' + r.id + '\',\'' + r.title.replace(/'/g, '\u2019') + '\',\'' + course.label + ' \u00b7 ' + mod.label + '\')" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-card);color:var(--text);cursor:pointer;white-space:nowrap;">Schedule</button>';
+        }
+        html += '<a href="' + r.url + '" target="_blank" style="color:var(--text-muted);font-size:14px;text-decoration:none;padding:4px 2px;">\u2197</a>';
+        html += '</div></div>';
+      });
+
+      if (mod.supplemental.length > 0) {
+        html += '<div id="supp-' + mod.id + '" style="display:none;" data-count="' + mod.supplemental.length + '">';
+        mod.supplemental.forEach(r => {
+          const sched = schedule[r.id];
+          html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:0.5px solid var(--border);background:var(--bg-elevated);">';
+          html += '<div style="width:6px;height:6px;border-radius:50%;background:var(--text-muted);flex-shrink:0;"></div>';
+          html += '<div style="flex:1;min-width:0;"><div style="font-size:12px;color:var(--text-dim);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + r.title + '</div>';
+          html += '<div style="font-size:11px;color:var(--text-muted);margin-top:1px;">' + r.author + '</div></div>';
+          html += '<div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">';
+          if (sched) {
+            html += '<button onclick="openDatePicker(\'' + r.id + '\',\'' + r.title.replace(/'/g, '\u2019') + '\',\'' + course.label + '\')" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:1px solid rgba(34,197,94,0.3);background:var(--green-light);color:#15803d;cursor:pointer;white-space:nowrap;">\u2713 ' + formatScheduleDate(sched.date) + '</button>';
+          } else {
+            html += '<button onclick="openDatePicker(\'' + r.id + '\',\'' + r.title.replace(/'/g, '\u2019') + '\',\'' + course.label + '\')" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-card);color:var(--text);cursor:pointer;white-space:nowrap;">Schedule</button>';
+          }
+          html += '<a href="' + r.url + '" target="_blank" style="color:var(--text-muted);font-size:14px;text-decoration:none;padding:4px 2px;">\u2197</a>';
+          html += '</div></div>';
+        });
+        html += '</div>';
+        html += '<div style="padding:8px 14px;background:var(--bg-elevated);border-bottom:0.5px solid var(--border);"><span id="supp-lnk-' + mod.id + '" onclick="toggleSupplemental(\'' + mod.id + '\')" style="font-size:11px;color:var(--accent);font-weight:600;cursor:pointer;">+ ' + mod.supplemental.length + ' supplemental reading' + (mod.supplemental.length > 1 ? 's' : '') + '</span></div>';
+      }
+    });
+
+    html += '</div></div>';
+  });
+  crEl.innerHTML = html;
+}
+// ===== END READING SCHEDULER =====
 </script>
 </body>
 </html>
