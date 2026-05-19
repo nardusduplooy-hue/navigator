@@ -1093,7 +1093,7 @@ const PROGRAMME_DATA = {
       dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-      notes: "Build a functional MVP using AI tools (Claude, Augment Code, Google AI Studio, Firebase Studio or Antigravity). Deploy to production if desired."
+      notes: "Read the pre-reading defined in the module. Build a functional MVP using AI tools (Claude, Augment Code, Google AI Studio, Firebase Studio or Antigravity). Understand the core technology stack of modern web applications. Deploy to a production hosting platform if desired. Test systematically for functionality, usability, and performance. Iterate based on feedback. Present your MVP effectively to technical and non-technical audiences."
     },
     {
       id: "b2b-m1-01",
@@ -2163,6 +2163,41 @@ const PROGRAMME_DATA = {
   ],
   courseReadings: [
     {
+      id: 'cj',
+      label: 'Chasing Jarvis',
+      icon: '\ud83e\udd16',
+      modules: [
+        {
+          id: 'cj-m5',
+          label: 'Module 5 \u2014 Building an MVP',
+          required: [
+            { id: 'cj-m5-r1', title: 'From Google AI Studio to Production', author: 'Dr. Tali Re\u017eun', url: 'https://medium.com/@talirezun/from-google-ai-studio-to-production-d928bb00edbd' },
+            { id: 'cj-m5-r2', title: 'From Prototype to Production: Building an AI Widget Platform in 30 Days', author: 'Dr. Tali Re\u017eun', url: 'https://medium.com/@talirezun/from-prototype-to-production-building-an-ai-widget-platform-in-30-days-23c603c91475' }
+          ],
+          supplemental: [
+            { id: 'cj-m5-s1', title: 'Firebase Hosting Documentation', author: 'Firebase', url: 'https://firebase.google.com/docs/hosting' },
+            { id: 'cj-m5-s2', title: 'DigitalOcean Tutorials \u2014 Deployment', author: 'DigitalOcean', url: 'https://www.digitalocean.com/community/tutorials' },
+            { id: 'cj-m5-s3', title: 'Firebase Studio', author: 'Firebase', url: 'https://firebase.google.com/docs/studio' }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'b2b',
+      label: 'AI in B2B Sales',
+      icon: '\ud83d\udcbc',
+      modules: [
+        {
+          id: 'b2b-m1',
+          label: 'Module 1 \u2014 The Thesis & Landscape',
+          required: [
+            { id: 'b2b-m1-r1', title: 'AI as Force Multiplier in B2B Sales \u2014 Module 1 pre-reading', author: 'Course faculty', url: 'https://cotrugli.online/courses/ai-sales/' }
+          ],
+          supplemental: []
+        }
+      ]
+    },
+    {
       id: 'baw',
       label: 'Business as Warfare',
       icon: '\u2694\ufe0f',
@@ -2227,37 +2262,6 @@ const PROGRAMME_DATA = {
           id: 'baw-m5',
           label: 'Module 5 \u2014 The Capstone Campaign',
           required: [],
-          supplemental: []
-        }
-      ]
-    },
-    {
-      id: 'cj',
-      label: 'Chasing Jarvis',
-      icon: '\ud83e\udd16',
-      modules: [
-        {
-          id: 'cj-m5',
-          label: 'Module 5 \u2014 Building an MVP',
-          required: [
-            { id: 'cj-m5-r1', title: 'From Google AI Studio to Production', author: 'Dr. Tali Re\u017eun', url: 'https://medium.com/@talirezun' },
-            { id: 'cj-m5-r2', title: 'From Prototype to Production: Building an AI Widget Platform in 30 Days', author: 'Dr. Tali Re\u017eun', url: 'https://medium.com/@talirezun' }
-          ],
-          supplemental: []
-        }
-      ]
-    },
-    {
-      id: 'b2b',
-      label: 'AI in B2B Sales',
-      icon: '\ud83d\udcbc',
-      modules: [
-        {
-          id: 'b2b-m1',
-          label: 'Module 1 \u2014 The Thesis & Landscape',
-          required: [
-            { id: 'b2b-m1-r1', title: 'AI as Force Multiplier in B2B Sales \u2014 Module 1 pre-reading', author: 'Course faculty', url: 'https://cotrugli.online/courses/ai-sales/' }
-          ],
           supplemental: []
         }
       ]
