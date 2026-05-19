@@ -722,47 +722,7 @@ textarea::placeholder { color: var(--text-muted); }
     </div>
     <div class="section-label">Active Tasks</div>
     <div id="work-assignments"></div>
-    <div class="section-label">Tool of the Day</div>
-    <div class="card card-amber" id="work-tool-card" style="cursor:pointer;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="font-size:22px;">⚙️</span>
-        <div style="flex:1;">
-          <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#92400e;" id="work-tool-name">—</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Tap to access →</div>
-        </div>
-      </div>
-    </div>
-    <div class="section-label">Kapusta Reading</div>
-    <div class="card card-gold" id="work-kapusta-card" style="cursor:pointer;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="font-size:22px;">🏛️</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:600;color:#92400e;" id="work-kapusta-title">—</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">Dražen Kapusta · LinkedIn →</div>
-        </div>
-      </div>
-    </div>
-    <div class="section-label">AI News — NEO World</div>
-    <div class="card" id="work-neo-card" style="cursor:pointer;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="font-size:22px;">📰</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:600;color:var(--text);" id="work-neo-title">—</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:4px;" id="work-neo-meta">VentureBeat AI →</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="section-label">Future Lab Learning</div>
-    <div class="card" id="work-futurelab-card" style="cursor:pointer;border-color:rgba(127,119,221,0.3);background:#f5f4ff;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="font-size:22px;">🔬</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:600;color:#3C3489;" id="work-futurelab-title">—</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:4px;" id="work-futurelab-meta">Cotrugli Business School →</div>
-        </div>
-      </div>
-    </div>
 
     <div id="reading-today-banner" style="display:none;background:var(--accent-light);border:1px solid var(--border-accent);border-radius:var(--radius-sm);padding:12px 14px;margin-top:22px;align-items:center;gap:10px;cursor:pointer;" onclick="scrollToSchedule()">
       <span style="font-size:18px;">📚</span>
@@ -2472,21 +2432,6 @@ function renderWork() {
   document.getElementById('work-notes-link').onclick = () => openUrl(mod.notesUrl);
   const rlEl = document.getElementById('work-reading-link');
   if (rlEl) rlEl.onclick = () => openUrl(mod.readingListUrl);
-  document.getElementById('work-tool-name').textContent = PROGRAMME_DATA.toolOfDay.name;
-  document.getElementById('work-tool-card').onclick = () => openUrl(PROGRAMME_DATA.toolOfDay.url);
-  document.getElementById('work-kapusta-title').textContent = PROGRAMME_DATA.kapustaReading.title;
-  document.getElementById('work-kapusta-card').onclick = () => openUrl(PROGRAMME_DATA.kapustaReading.url);
-  document.getElementById('work-neo-title').textContent = PROGRAMME_DATA.neoWorldArticle.title;
-  document.getElementById('work-neo-meta').textContent = PROGRAMME_DATA.neoWorldArticle.source || 'World Financial Review →';
-  document.getElementById('work-neo-card').onclick = () => openUrl(PROGRAMME_DATA.neoWorldArticle.url);
-  const futureLab = Array.isArray(PROGRAMME_DATA.futureLab)
-    ? PROGRAMME_DATA.futureLab[Math.floor(Date.now() / 86400000) % PROGRAMME_DATA.futureLab.length]
-    : PROGRAMME_DATA.futureLab;
-  if (futureLab && document.getElementById('work-futurelab-card')) {
-    document.getElementById('work-futurelab-title').textContent = futureLab.title;
-    document.getElementById('work-futurelab-meta').textContent = futureLab.source + ' →';
-    document.getElementById('work-futurelab-card').onclick = () => openUrl(futureLab.url);
-  }
 
   const el = document.getElementById('work-assignments');
   el.innerHTML = '';
