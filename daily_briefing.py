@@ -96,7 +96,6 @@ def build_briefing():
 
     # VANGUARD TEAMS
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
-    lines.append("<i>No one wins this alone. The teams that break through are the ones that show up for each other. If you are still on the outside — get in. Message someone today.</i>")
     lines.append("<b>IF YOU ARE NOT IN A TEAM YET — PUT UP YOUR HAND, REACH OUT TO A CHIEF AND GET INVOLVED.</b>")
     lines.append("")
 
@@ -189,15 +188,10 @@ def build_briefing():
             lines.append("")
             lines.append("Regardless of track — you will understand the full technology stack, learn deployment fundamentals, and walk away with a functioning web application you can showcase, iterate on, or launch.")
             lines.append("")
-            lines.append("<b>📋 Course Assignments</b>")
-            lines.append("• Read the pre-reading defined in the module's pre-reading section")
-            lines.append("• Build a functional MVP using AI tools (Claude, Augment Code, Google AI Studio, Firebase Studio or Antigravity)")
-            lines.append("• Understand the core technology stack of modern web applications (frontend, backend, database)")
-            lines.append("• Deploy your application to a production hosting platform (if desired)")
-            lines.append("• Configure a custom domain and professional deployment (if desired)")
-            lines.append("• Test your MVP systematically for functionality, usability, and performance")
-            lines.append("• Iterate based on testing and feedback")
-            lines.append("• Present your MVP effectively to technical and non-technical audiences")
+            lines.append("📋 <b>STUDENT WORK: MVP DOCUMENTATION — BUILD YOUR CONTEXT PACKAGE</b>")
+            lines.append("")
+            lines.append("<b>Your Task:</b> Research your app idea → Validate market fit → Generate 4 Markdown docs → Feed to Coding Agent in Module 5")
+            lines.append("<b>Tool:</b> Claude Desktop + Sonnet 4.5 or GPT-5.2")
             lines.append("")
             lines.append("This is where Chasing Jarvis becomes real. 🦾")
             lines.append("")
@@ -214,6 +208,8 @@ def build_briefing():
         lines.append("<i>" + vanguard["chapter"] + "</i>")
         lines.append("")
         lines.append(vanguard["summary"])
+        lines.append("")
+        lines.append("<a href='https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE'>→ Read more on LinkedIn — Dražen Kapusta</a>")
         lines.append("")
     else:
         lines.append("🏛️ <b>VANGUARD ROOTS — Who was Benedetto Cotrugli?</b>")

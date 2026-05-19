@@ -896,6 +896,28 @@ TALI_STEPS = {
             "Your gap is your growth edge. Name it. Work it. That is the Cotruglian path."
         ),
     },
+    "2026-05-20": {
+        "step": "Vanguard Leadership — What AI Cannot Do",
+        "title": "What AI Cannot Do — The Human Domain of Fortitude",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Judgment, trust, mastery: this is the human domain.",
+        "question": (
+            "Kapusta is direct: AI can process faster, execute more consistently, optimise better, and scale without limit. "
+            "But it cannot judge what is worth optimising for. It cannot build trust through relationship. "
+            "It cannot develop mastery through deliberate practice. "
+            "Question: in your current role or your Vanguard project, where are you still doing work that AI could do — "
+            "and where are you not yet doing enough of the work that only you can do?"
+        ),
+        "model_answer": (
+            "The uncomfortable truth is that most professionals spend the majority of their time on work AI can do, "
+            "and a fraction of their time on work only they can do. "
+            "The shift Kapusta is pointing to is not about using AI more — it is about using yourself differently. "
+            "Delegate the optimisation. Own the judgment. "
+            "In your Vanguard project: the build is not your highest contribution. "
+            "The vision, the relationships, the decisions about what is worth building — that is where you are irreplaceable. "
+            "Start protecting that time."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2192,7 +2214,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Architectural patterns for graph-enhanced RAG: Moving beyond vector search in production",
+    "headline": "Context architecture is replacing RAG as agentic AI pushes enterprise retrieval to its limits",
     "source": "VentureBeat AI",
 }
 
