@@ -724,24 +724,65 @@ textarea::placeholder { color: var(--text-muted); }
     <div id="work-assignments"></div>
 
 
-    <div id="reading-today-banner" style="display:none;background:var(--accent-light);border:1px solid var(--border-accent);border-radius:var(--radius-sm);padding:12px 14px;margin-top:22px;align-items:center;gap:10px;cursor:pointer;" onclick="scrollToSchedule()">
-      <span style="font-size:18px;">📚</span>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:600;color:var(--accent);" id="reading-today-title">Readings scheduled for today</div>
-        <div style="font-size:11px;color:var(--text-dim);margin-top:2px;" id="reading-today-sub"></div>
+    <!-- SCHEDULE ACCORDION -->
+    <div style="border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:8px;">
+      <div onclick="toggleScheduleAccordion()" style="display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;background:var(--bg-card);border:1px solid var(--border);border-left:none;border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
+        <span style="font-size:18px;">📅</span>
+        <div style="flex:1;">
+          <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);">My Schedule</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:1px;" id="schedule-accordion-meta">Tap to open</div>
+        </div>
+        <span id="schedule-accordion-chev" style="font-size:18px;color:var(--accent);transition:transform 0.2s;">\u2304</span>
       </div>
-      <span style="color:var(--accent);font-size:16px;">›</span>
+      <div id="schedule-accordion-body" style="display:none;border:1px solid var(--border);border-top:none;border-left:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);background:var(--bg-surface);">
+        <!-- Calendar header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px 8px;">
+          <button onclick="calPrev()" style="background:none;border:none;color:var(--accent);font-size:20px;cursor:pointer;padding:2px 8px;">&#8249;</button>
+          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);" id="cal-month-label"></div>
+          <button onclick="calNext()" style="background:none;border:none;color:var(--accent);font-size:20px;cursor:pointer;padding:2px 8px;">&#8250;</button>
+        </div>
+        <!-- Day labels -->
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:0 10px 4px;">
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">S</div>
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">M</div>
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">T</div>
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">W</div>
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">T</div>
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">F</div>
+          <div style="text-align:center;font-size:10px;font-weight:600;color:var(--text-muted);padding:2px 0;">S</div>
+        </div>
+        <!-- Calendar grid -->
+        <div id="cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:0 10px 10px;"></div>
+        <!-- Add manual entry -->
+        <div style="border-top:1px solid var(--border);padding:10px 14px;">
+          <div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Add manual entry</div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <input type="date" id="manual-entry-date" style="flex:0 0 auto;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-family:'DM Sans',sans-serif;font-size:12px;padding:7px 10px;outline:none;">
+            <input type="text" id="manual-entry-text" placeholder="Note or task..." style="flex:1;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-family:'DM Sans',sans-serif;font-size:12px;padding:7px 10px;outline:none;">
+            <button onclick="addManualEntry()" style="flex:0 0 auto;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-xs);font-size:12px;font-weight:600;padding:7px 12px;cursor:pointer;">Add</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="section-label" style="margin-top:22px;">My Reading Schedule</div>
-    <div id="reading-schedule-list" style="margin-bottom:4px;"></div>
 
     <div class="section-label">Course Readings</div>
     <div id="course-readings-list"></div>
 
-    <div id="date-picker-modal" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(15,23,42,0.5);align-items:center;justify-content:center;">
-      <div id="date-picker-inner" style="width:100%;max-width:420px;background:var(--bg-surface);border-radius:20px;border:1px solid var(--border);padding:24px 20px 28px;animation:slideUp 0.25s ease;margin:0 16px;">
-        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;" id="date-picker-title">Schedule reading</div>
+    <!-- DAY DETAIL SLIDE-UP -->
+    <div id="day-detail-modal" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(15,23,42,0.5);align-items:flex-end;">
+      <div style="width:100%;background:var(--bg-surface);border-radius:24px 24px 0 0;border-top:1px solid var(--border);padding:20px 20px 36px;animation:slideUp 0.25s ease;max-height:70vh;overflow-y:auto;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+          <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);" id="day-detail-title"></div>
+          <button onclick="closeDayDetail()" style="background:none;border:none;color:var(--text-muted);font-size:22px;cursor:pointer;line-height:1;">&times;</button>
+        </div>
+        <div id="day-detail-list"></div>
+      </div>
+    </div>
+
+    <!-- SCHEDULE ITEM PICKER -->
+    <div id="date-picker-modal" style="display:none;position:fixed;inset:0;z-index:310;background:rgba(15,23,42,0.5);align-items:center;justify-content:center;">
+      <div style="width:100%;max-width:420px;background:var(--bg-surface);border-radius:20px;border:1px solid var(--border);padding:24px 20px 28px;animation:slideUp 0.25s ease;margin:0 16px;">
+        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;" id="date-picker-title">Schedule</div>
         <div style="font-size:12px;color:var(--text-muted);margin-bottom:18px;line-height:1.4;" id="date-picker-sub"></div>
         <input type="date" id="date-picker-input" style="width:100%;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-xs);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;padding:13px 14px;outline:none;margin-bottom:16px;">
         <div style="display:flex;gap:10px;">
@@ -2503,14 +2544,20 @@ function renderSessions() {
     const epCount = group.episodes.length;
     const groupEl = document.createElement('div');
     groupEl.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px;';
-    const episodesHtml = group.episodes.map(ep => {
+    const episodesHtml = group.episodes.map((ep, idx) => {
+      const epId = 'pod-' + group.id + '-' + idx;
       const isAudio = ep.url && ep.url.includes('stream.redcircle.com') && ep.url.endsWith('.mp3');
+      const schedLabel = 'Podcast: ' + group.label;
+      const safeTitle = ep.title.replace(/'/g, '\u2019');
+      const schedBtn = '<button onclick="openDatePicker(\'' + epId + '\',\'' + safeTitle + '\',\'' + schedLabel + '\')" style="font-size:10px;font-weight:500;padding:3px 8px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-elevated);color:var(--text-muted);cursor:pointer;white-space:nowrap;margin-top:6px;" id="sched-btn-' + epId + '">+ Schedule</button>';
       if (isAudio) {
-        return '<div style="padding:12px 14px;border-top:0.5px solid var(--border);background:var(--bg-card);"><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;">' + ep.title + '</div><div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">' + ep.author + '</div><audio controls style="width:100%;height:34px;border-radius:6px;accent-color:var(--accent);" src="' + ep.url + '"></audio></div>';
+        return '<div style="padding:12px 14px;border-top:0.5px solid var(--border);background:var(--bg-card);"><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;">' + ep.title + '</div><div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;">' + ep.author + '</div><audio controls style="width:100%;height:34px;border-radius:6px;accent-color:var(--accent);" src="' + ep.url + '"></audio>' + schedBtn + '</div>';
       } else {
-        return '<div style="padding:12px 14px;border-top:0.5px solid var(--border);background:var(--bg-card);display:flex;align-items:center;justify-content:space-between;cursor:pointer;" onclick="openUrl(\'' + ep.url.replace(/'/g, "\\'") + '\')">' +
+        return '<div style="padding:12px 14px;border-top:0.5px solid var(--border);background:var(--bg-card);">' +
+          '<div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;" onclick="openUrl(\'' + ep.url.replace(/'/g, "\\'") + '\')">' +
           '<div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;color:var(--text);">' + ep.title + '</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + ep.author + '</div></div>' +
-          '<span style="color:var(--accent);font-size:12px;font-weight:600;flex-shrink:0;margin-left:10px;">Open →</span></div>';
+          '<span style="color:var(--accent);font-size:12px;font-weight:600;flex-shrink:0;margin-left:10px;">Open \u2192</span></div>' +
+          schedBtn + '</div>';
       }
     }).join('');
     groupEl.innerHTML =
@@ -2541,6 +2588,11 @@ function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) { window.l
 
 let _dlOpen = false;
 let _coursesOpen = false;
+let _pendingReadingId = null;
+let _pendingReadingTitle = null;
+let _pendingReadingCourse = null;
+let _calYear = new Date().getFullYear();
+let _calMonth = new Date().getMonth();
 function toggleCourses() {
   _coursesOpen = !_coursesOpen;
   const el = document.getElementById('ns-courses');
@@ -2761,14 +2813,19 @@ function renderPostLists() {
     const faculty = PROGRAMME_DATA.facultyPosts[key];
     const el = document.getElementById('post-list-' + key);
     if (!el || !faculty) return;
-    el.innerHTML = faculty.posts.map((p, i) => `
-      <div class="post-item">
+    el.innerHTML = faculty.posts.map((p, i) => {
+      const postId = 'post-' + key + '-' + i;
+      const safeTitle = p.title.replace(/'/g, '\u2019');
+      const authorLabel = key === 'kapusta' ? 'Kapusta \u2014 LinkedIn' : 'Dr. Tali \u2014 LinkedIn';
+      return `<div class="post-item">
         <span class="post-item-title">${p.title}</span>
         <div class="post-item-actions">
           <button class="post-btn-open" onclick="openUrl('${p.url}')">Open</button>
           <button class="post-btn-select" onclick="selectPost('${p.title}', '${key}')">Use</button>
+          <button class="post-btn-open" onclick="openDatePicker('${postId}','${safeTitle}','${authorLabel}')" style="font-size:10px;padding:3px 7px;">+Cal</button>
         </div>
-      </div>`).join('');
+      </div>`;
+    }).join('');
   });
 }
 
@@ -3338,30 +3395,24 @@ function init() {
   renderTribe();
   initCourses();
   renderCourseReadings();
+  renderCalendar();
+  updateScheduleMeta();
+  if (storage.get('schedule_open') === '1') {
+    const body = document.getElementById('schedule-accordion-body');
+    const chev = document.getElementById('schedule-accordion-chev');
+    if (body) { body.style.display = 'block'; chev.style.transform = 'rotate(180deg)'; }
+  }
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
   setInterval(() => { renderNorthStar(); renderWork(); }, 60000);
 }
 init();
 
-// ===== READING SCHEDULER =====
+// ===== SCHEDULER =====
 
-let _pendingReadingId = null;
-let _pendingReadingTitle = null;
-let _pendingReadingCourse = null;
-
-function getSchedule() {
-  return storage.getJSON('reading_schedule') || {};
-}
-
-function saveSchedule(s) {
-  storage.setJSON('reading_schedule', s);
-}
-
-function todayISO() {
-  const d = new Date();
-  return d.toISOString().split('T')[0];
-}
+function getSchedule() { return storage.getJSON('reading_schedule') || {}; }
+function saveSchedule(s) { storage.setJSON('reading_schedule', s); }
+function todayISO() { return new Date().toISOString().split('T')[0]; }
 
 function formatScheduleDate(iso) {
   const d = new Date(iso + 'T00:00:00');
@@ -3370,16 +3421,127 @@ function formatScheduleDate(iso) {
   return days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
 }
 
+function toggleScheduleAccordion() {
+  const body = document.getElementById('schedule-accordion-body');
+  const chev = document.getElementById('schedule-accordion-chev');
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  storage.set('schedule_open', isOpen ? '0' : '1');
+  if (!isOpen) { renderCalendar(); updateScheduleMeta(); }
+}
+
+function updateScheduleMeta() {
+  const s = getSchedule();
+  const today = todayISO();
+  const todayCount = Object.values(s).filter(v => v.date === today).length;
+  const total = Object.keys(s).length;
+  const meta = document.getElementById('schedule-accordion-meta');
+  if (!meta) return;
+  if (todayCount > 0) meta.textContent = todayCount + ' item' + (todayCount > 1 ? 's' : '') + ' today \u00b7 ' + total + ' total';
+  else if (total > 0) meta.textContent = total + ' item' + (total > 1 ? 's' : '') + ' scheduled';
+  else meta.textContent = 'Nothing scheduled yet';
+}
+
+function calPrev() {
+  _calMonth--;
+  if (_calMonth < 0) { _calMonth = 11; _calYear--; }
+  renderCalendar();
+}
+function calNext() {
+  _calMonth++;
+  if (_calMonth > 11) { _calMonth = 0; _calYear++; }
+  renderCalendar();
+}
+
+function renderCalendar() {
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const label = document.getElementById('cal-month-label');
+  if (label) label.textContent = months[_calMonth] + ' ' + _calYear;
+  const grid = document.getElementById('cal-grid');
+  if (!grid) return;
+  const schedule = getSchedule();
+  const today = todayISO();
+  const firstDay = new Date(_calYear, _calMonth, 1).getDay();
+  const daysInMonth = new Date(_calYear, _calMonth + 1, 0).getDate();
+  let html = '';
+  for (let i = 0; i < firstDay; i++) {
+    html += '<div></div>';
+  }
+  for (let d = 1; d <= daysInMonth; d++) {
+    const iso = _calYear + '-' + String(_calMonth + 1).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+    const items = Object.entries(schedule).filter(([k,v]) => v.date === iso);
+    const isToday = iso === today;
+    const hasDot = items.length > 0;
+    html += '<div onclick="openDayDetail(\'' + iso + '\')" style="cursor:pointer;text-align:center;padding:5px 2px;border-radius:8px;position:relative;' +
+      (isToday ? 'background:var(--accent);' : 'background:transparent;') + '">';
+    html += '<div style="font-size:12px;font-weight:' + (isToday ? '700' : '400') + ';color:' + (isToday ? '#fff' : 'var(--text)') + ';">' + d + '</div>';
+    if (hasDot) {
+      html += '<div style="width:5px;height:5px;border-radius:50%;background:' + (isToday ? '#fff' : 'var(--accent)') + ';margin:2px auto 0;"></div>';
+    } else {
+      html += '<div style="width:5px;height:5px;margin:2px auto 0;"></div>';
+    }
+    html += '</div>';
+  }
+  grid.innerHTML = html;
+  updateScheduleMeta();
+  // Set manual entry date default
+  const dateInput = document.getElementById('manual-entry-date');
+  if (dateInput && !dateInput.value) dateInput.value = today;
+}
+
+function openDayDetail(iso) {
+  const schedule = getSchedule();
+  const items = Object.entries(schedule).filter(([k,v]) => v.date === iso);
+  const modal = document.getElementById('day-detail-modal');
+  const title = document.getElementById('day-detail-title');
+  const list = document.getElementById('day-detail-list');
+  const d = new Date(iso + 'T00:00:00');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  title.textContent = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+  if (items.length === 0) {
+    list.innerHTML = '<div style="font-size:13px;color:var(--text-muted);padding:8px 0 16px;">Nothing scheduled for this day.</div>';
+  } else {
+    list.innerHTML = items.map(([id, v]) => {
+      const isManual = id.startsWith('manual-');
+      return '<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:0.5px solid var(--border);">' +
+        '<span style="font-size:16px;flex-shrink:0;">' + (isManual ? '\u270f\ufe0f' : v.type === 'podcast' ? '\uD83C\uDFA7' : '\uD83D\uDCDA') + '</span>' +
+        '<div style="flex:1;min-width:0;">' +
+        '<div style="font-size:13px;font-weight:500;color:var(--text);line-height:1.3;">' + v.title + '</div>' +
+        '<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + v.course + '</div></div>' +
+        '<button onclick="removeSchedule(\'' + id + '\');closeDayDetail();openDayDetail(\'' + iso + '\');" style="background:none;border:none;color:var(--text-muted);font-size:18px;cursor:pointer;padding:2px 4px;flex-shrink:0;">\u00d7</button>' +
+        '</div>';
+    }).join('');
+  }
+  modal.style.display = 'flex';
+}
+
+function closeDayDetail() {
+  document.getElementById('day-detail-modal').style.display = 'none';
+}
+
+function addManualEntry() {
+  const date = document.getElementById('manual-entry-date').value;
+  const text = document.getElementById('manual-entry-text').value.trim();
+  if (!date || !text) { showToast('Add a date and a note'); return; }
+  const s = getSchedule();
+  const id = 'manual-' + Date.now();
+  s[id] = { date: date, title: text, course: 'Manual entry', type: 'manual' };
+  saveSchedule(s);
+  document.getElementById('manual-entry-text').value = '';
+  renderCalendar();
+  showToast('\u2713 Added to ' + formatScheduleDate(date));
+}
+
 function openDatePicker(readingId, title, course) {
   _pendingReadingId = readingId;
   _pendingReadingTitle = title;
   _pendingReadingCourse = course;
-  document.getElementById('date-picker-title').textContent = 'Schedule reading';
+  document.getElementById('date-picker-title').textContent = 'Schedule';
   document.getElementById('date-picker-sub').textContent = title;
   const existing = getSchedule()[readingId];
   document.getElementById('date-picker-input').value = existing ? existing.date : todayISO();
-  const modal = document.getElementById('date-picker-modal');
-  modal.style.display = 'flex';
+  document.getElementById('date-picker-modal').style.display = 'flex';
 }
 
 function closeDatePicker() {
@@ -3391,23 +3553,28 @@ function confirmSchedule() {
   const date = document.getElementById('date-picker-input').value;
   if (!date || !_pendingReadingId) return;
   const s = getSchedule();
-  s[_pendingReadingId] = { date: date, title: _pendingReadingTitle, course: _pendingReadingCourse };
+  const isPodcast = _pendingReadingId.startsWith('pod-');
+  const isPost = _pendingReadingId.startsWith('post-');
+  s[_pendingReadingId] = {
+    date: date,
+    title: _pendingReadingTitle,
+    course: _pendingReadingCourse,
+    type: isPodcast ? 'podcast' : isPost ? 'article' : 'reading'
+  };
   saveSchedule(s);
   closeDatePicker();
+  renderCalendar();
   renderCourseReadings();
   showToast('\u2713 Scheduled for ' + formatScheduleDate(date));
 }
 
-function removeSchedule(readingId) {
+function removeSchedule(id) {
   const s = getSchedule();
-  delete s[readingId];
+  delete s[id];
   saveSchedule(s);
+  renderCalendar();
   renderCourseReadings();
   showToast('Removed from schedule');
-}
-
-function scrollToSchedule() {
-  document.getElementById('reading-schedule-list').scrollIntoView({ behavior: 'smooth' });
 }
 
 function toggleCourseReadingGroup(id) {
@@ -3430,45 +3597,8 @@ function toggleSupplemental(modId) {
 
 function renderCourseReadings() {
   const schedule = getSchedule();
-  const today = todayISO();
-
-  // Today banner
-  const todayItems = Object.values(schedule).filter(v => v.date === today);
-  const banner = document.getElementById('reading-today-banner');
-  if (todayItems.length > 0) {
-    banner.style.display = 'flex';
-    document.getElementById('reading-today-title').textContent = todayItems.length + ' reading' + (todayItems.length > 1 ? 's' : '') + ' scheduled for today';
-    document.getElementById('reading-today-sub').textContent = todayItems.map(v => v.title.substring(0, 40) + (v.title.length > 40 ? '\u2026' : '')).join(' \u00b7 ');
-  } else {
-    banner.style.display = 'none';
-  }
-
-  // Schedule list
-  const schedEl = document.getElementById('reading-schedule-list');
-  const scheduled = Object.entries(schedule).sort((a, b) => a[1].date.localeCompare(b[1].date));
-  if (scheduled.length === 0) {
-    schedEl.innerHTML = '<div style="font-size:13px;color:var(--text-muted);padding:10px 0 4px;">No readings scheduled yet. Use the Course Readings below to schedule.</div>';
-  } else {
-    let html = '<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:4px;">';
-    scheduled.forEach(([rid, v]) => {
-      const isToday = v.date === today;
-      const parts = formatScheduleDate(v.date).split(' ');
-      const dayName = parts[0]; const dayNum = parts[1]; const mon = parts[2];
-      html += '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:0.5px solid var(--border);">';
-      html += '<div style="min-width:36px;text-align:center;background:' + (isToday ? 'var(--accent)' : 'var(--accent-light)') + ';border-radius:var(--radius-xs);padding:3px 6px;">';
-      html += '<div style="font-size:9px;font-weight:600;color:' + (isToday ? 'rgba(255,255,255,0.8)' : 'var(--accent)') + ';text-transform:uppercase;">' + dayName + '</div>';
-      html += '<div style="font-family:\'Syne\',sans-serif;font-size:14px;font-weight:700;color:' + (isToday ? '#ffffff' : 'var(--accent)') + ';line-height:1;">' + dayNum + '</div>';
-      html += '<div style="font-size:9px;color:' + (isToday ? 'rgba(255,255,255,0.7)' : 'var(--text-muted)') + ';">' + mon + '</div></div>';
-      html += '<div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:500;color:var(--text);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + v.title + '</div>';
-      html += '<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + v.course + '</div></div>';
-      html += '<button onclick="removeSchedule(\'' + rid + '\')" style="background:none;border:none;color:var(--text-muted);font-size:16px;cursor:pointer;padding:4px;flex-shrink:0;">\u00d7</button></div>';
-    });
-    html += '</div>';
-    schedEl.innerHTML = html;
-  }
-
-  // Course reading accordions
   const crEl = document.getElementById('course-readings-list');
+  if (!crEl) return;
   let html = '';
   (PROGRAMME_DATA.courseReadings || []).forEach(course => {
     const isOpen = storage.get('crg_open_' + course.id) === '1';
@@ -3481,11 +3611,9 @@ function renderCourseReadings() {
     html += '<div style="font-size:11px;color:var(--text-muted);margin-top:1px;">' + totalRequired + ' required readings' + (totalScheduled > 0 ? ' \u00b7 ' + totalScheduled + ' scheduled' : '') + '</div></div>';
     html += '<span id="crg-chev-' + course.id + '" style="font-size:18px;color:var(--text-muted);transition:transform 0.2s;transform:' + (isOpen ? 'rotate(180deg)' : 'rotate(0deg)') + ';">\u2304</span></div>';
     html += '<div id="crg-body-' + course.id + '" style="display:' + (isOpen ? 'block' : 'none') + ';border-top:1px solid var(--border);">';
-
     course.modules.forEach(mod => {
       if (mod.required.length === 0 && mod.supplemental.length === 0) return;
       html += '<div style="padding:8px 14px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;background:var(--bg-elevated);">' + mod.label + '</div>';
-
       mod.required.forEach(r => {
         const sched = schedule[r.id];
         html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:0.5px solid var(--border);">';
@@ -3501,7 +3629,6 @@ function renderCourseReadings() {
         html += '<a href="' + r.url + '" target="_blank" style="color:var(--text-muted);font-size:14px;text-decoration:none;padding:4px 2px;">\u2197</a>';
         html += '</div></div>';
       });
-
       if (mod.supplemental.length > 0) {
         html += '<div id="supp-' + mod.id + '" style="display:none;" data-count="' + mod.supplemental.length + '">';
         mod.supplemental.forEach(r => {
@@ -3523,12 +3650,11 @@ function renderCourseReadings() {
         html += '<div style="padding:8px 14px;background:var(--bg-elevated);border-bottom:0.5px solid var(--border);"><span id="supp-lnk-' + mod.id + '" onclick="toggleSupplemental(\'' + mod.id + '\')" style="font-size:11px;color:var(--accent);font-weight:600;cursor:pointer;">+ ' + mod.supplemental.length + ' supplemental reading' + (mod.supplemental.length > 1 ? 's' : '') + '</span></div>';
       }
     });
-
     html += '</div></div>';
   });
   crEl.innerHTML = html;
 }
-// ===== END READING SCHEDULER =====
+// ===== END SCHEDULER =====
 </script>
 </body>
 </html>
