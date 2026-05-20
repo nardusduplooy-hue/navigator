@@ -105,8 +105,7 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• <b>Chasing Jarvis Module 5 — Building an MVP: From Concept to Deployment</b>")
-    lines.append("• 🗓 Saturday 30 May (approximate)")
+    lines.append("• 🗓 Saturday 30 May")
     lines.append("")
 
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
@@ -186,14 +185,15 @@ def build_briefing():
             lines.append("")
             lines.append("Module 5 is the capstone. Everything you have learned converges into one tangible output: a functioning MVP you build, test, and deploy using AI tools and agents — guided by the context packages you built in Module 4.")
             lines.append("")
-            lines.append("Regardless of track — you will understand the full technology stack, learn deployment fundamentals, and walk away with a functioning web application you can showcase, iterate on, or launch.")
-            lines.append("")
             lines.append("📋 <b>STUDENT WORK: MVP DOCUMENTATION — BUILD YOUR CONTEXT PACKAGE</b>")
             lines.append("")
             lines.append("<b>Your Task:</b> Research your app idea → Validate market fit → Generate 4 Markdown docs → Feed to Coding Agent in Module 5")
             lines.append("<b>Tool:</b> Claude Desktop + Sonnet 4.5 or GPT-5.2")
             lines.append("")
             lines.append("This is where Chasing Jarvis becomes real. 🦾")
+            lines.append("")
+            lines.append("🔖 <b>The Shared Brain: When Second Brains Start Thinking Together</b>")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7462789843954143232/'>→ Read on LinkedIn — Dr. Tali Režun</a>")
             lines.append("")
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")

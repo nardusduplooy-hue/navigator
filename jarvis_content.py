@@ -918,6 +918,29 @@ TALI_STEPS = {
             "Start protecting that time."
         ),
     },
+    "2026-05-21": {
+        "step": "Vanguard Leadership — Wolves, Sheep and Sheepdogs",
+        "title": "Wolves, Sheep and Sheepdogs — The Three Patterns",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The question is not which one you want to be. The question is which one you are choosing, right now, today.",
+        "question": (
+            "Kapusta identifies three patterns in every organisation and every cohort: Wolves extract — they take more than they contribute. "
+            "Sheep follow — they avoid risk and conform to whatever the dominant pattern demands. "
+            "Sheepdogs build — they protect, create conditions for others to succeed, hold standards no one else requires. "
+            "Question: look at your Vanguard cohort honestly. "
+            "Where do you see each pattern showing up — and which pattern are you choosing right now?"
+        ),
+        "model_answer": (
+            "Most people identify as sheepdogs when asked. Far fewer actually behave like one. "
+            "The sheepdog pattern is not about being the loudest or the most visible — "
+            "it is about showing up consistently, holding the standard when no one is watching, "
+            "and creating conditions for others to succeed even when it costs you something. "
+            "In the Vanguard cohort, the sheepdogs are the ones who share what they build, "
+            "who pull others into the work, who give feedback that is honest rather than comfortable. "
+            "You already know which pattern you have been choosing. "
+            "The question is whether you are willing to choose differently today."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2214,7 +2237,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Context architecture is replacing RAG as agentic AI pushes enterprise retrieval to its limits",
+    "headline": "AWS nabs white hot gen AI media creation startup fal, becoming its preferred cloud provider",
     "source": "VentureBeat AI",
 }
 
