@@ -941,6 +941,30 @@ TALI_STEPS = {
             "The question is whether you are willing to choose differently today."
         ),
     },
+    "2026-05-22": {
+        "step": "Vanguard Leadership — Why Machiavelli Fails in the NEO Era",
+        "title": "Why Machiavelli Fails in the NEO Era",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Wolves burn bright and collapse fast. Cotruglians compound slowly — then explode upward.",
+        "question": (
+            "Kapusta maps the Machiavellian collapse curve: Year 1 looks brilliant — aggressive moves, rapid growth, dramatic wins. "
+            "Year 2, extraction creates visible costs — turnover increases, partnerships strain, reputation damage begins. "
+            "Year 3, collapse accelerates. "
+            "In networked environments, the gap between appearance and reality gets exposed fast. "
+            "Question: where in your industry or organisation have you seen this pattern play out — "
+            "and what did the Cotruglian alternative look like in contrast?"
+        ),
+        "model_answer": (
+            "The Machiavellian collapse is predictable precisely because it ignores compounding. "
+            "Every extraction depletes the trust reserve. Every shortcut erodes the reputation asset. "
+            "The tragedy is that it looks like winning for long enough that others copy it. "
+            "The Cotruglian alternative is not slower — it is differently structured. "
+            "It builds assets that appreciate: relationships, reputation, institutional knowledge, team loyalty. "
+            "In the NEO era, networked environments make the Machiavellian collapse faster and more visible than ever. "
+            "The people who will still be building in Year 10 are not the ones who won Year 1. "
+            "They are the ones who chose the compounding path from the start."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2237,7 +2261,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "AWS nabs white hot gen AI media creation startup fal, becoming its preferred cloud provider",
+    "headline": "Google's Managed Agents API promises one-call deployment at the cost of execution layer control",
     "source": "VentureBeat AI",
 }
 

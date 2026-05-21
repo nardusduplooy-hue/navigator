@@ -96,7 +96,7 @@ def build_briefing():
 
     # VANGUARD TEAMS
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
-    lines.append("<b>IF YOU ARE NOT IN A TEAM YET — PUT UP YOUR HAND, REACH OUT TO A CHIEF AND GET INVOLVED.</b>")
+    lines.append("The tribe that builds together compounds together — and in the NEO era, that is the only moat that matters.")
     lines.append("")
 
     # DEADLINES
@@ -193,7 +193,9 @@ def build_briefing():
             lines.append("This is where Chasing Jarvis becomes real. 🦾")
             lines.append("")
             lines.append("🔖 <b>The Shared Brain: When Second Brains Start Thinking Together</b>")
-            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7462789843954143232/'>→ Read on LinkedIn — Dr. Tali Režun</a>")
+            lines.append("<a href='https://medium.com/@talirezun/the-shared-brain-when-second-brains-start-thinking-together-0d2ad54413d9'>👉 Medium</a>")
+            lines.append("<a href='https://open.substack.com/pub/talirezun/p/the-shared-brain-when-second-brains?r=68m2cw&utm_campaign=post-expanded-share&utm_medium=web'>👉 Substack</a>")
+            lines.append("<a href='https://github.com/talirezun/the-curator/blob/main/research/articles/the-shared-brain-thinking-together.md'>👉 GitHub</a>")
             lines.append("")
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
