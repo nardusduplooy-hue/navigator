@@ -985,7 +985,7 @@ textarea::placeholder { color: var(--text-muted); }
       <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.06);pointer-events:none;"></div>
       <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Vanguard Chiefs Council</div>
       <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#ffffff;margin-bottom:4px;">The Tribe</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">10 chiefs. One cohort. The tribe wins together or not at all.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">12 chiefs. One cohort. The tribe wins together or not at all.</div>
     </div>
 
     <div class="pill-tabs" id="tribe-tabs">
@@ -3274,16 +3274,20 @@ function filterKnowledge() {
 
 const TRIBE_DATA = {
   teams: [
-    { id: 'chiron', name: 'Team 1', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
-    { id: 'team2', name: 'Team 2', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
-    { id: 'team3', name: 'Team 3', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
-    { id: 'team4', name: 'Team 4', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' },
-    { id: 'team5', name: 'Team 5', chief: '—', chiefRole: 'Vanguard Chief', members: [], status: 'forming', project: '—', flag: '' }
+    { chief: 'Ana',       members: ['Ahidjo Ashiraf Nfobah', 'Ana Blazevic', 'Augustine Mutua', 'Bojan Bartoni\u010dek', 'Goran Nikolic'] },
+    { chief: 'Alvin',     members: ['Alvin Kiiru', 'Augustine Mutua', 'David Wampamba', 'Godfrey Muhando', 'Justin Muhirwa', 'Millicent Oongo', 'Rohit Sahu', 'Emmanuel Chirwa', 'Olamide Grace'] },
+    { chief: 'Anena',     members: ['Diane Kayitesi', 'Drish Mali', 'Gift Chunda', 'Jemimah Gidimadjor', 'Jeovaire Umukundwa', 'Keng Hulera', 'Mark Magbo', 'S M Faidarul Alam', 'Sharon Anena'] },
+    { chief: 'Boniphace', members: ['Augustine Mutua', 'Boniphace Maruchu', 'Carlos Tiemeni', 'Chanelle Isimbi', 'Godfrey Muhando', 'Shaangwa Francis', 'William Ponela', 'Aneth Massawe'] },
+    { chief: 'Carlien',   members: ['Carlien Kruger', 'Chris Du-Toit', 'David Wampamba', 'Godfrey Muhando', 'Ingrid Blom', 'Johan Landman', 'Larry Willemse', 'Nardus Du Plooy', 'Oluwaseun Abraham Ogunmola', 'Raymond Nisingizwe', 'Sharon Anena', 'Siegfried Dorfling', 'William Ponela'] },
+    { chief: 'Duro',      members: ['Croxley Nkhoma', 'David Wampamba', 'Elizabeth Lionez Ainemukama', 'Elysee Icyoyavuze', 'Geetanjali Bisht', 'Jean Claude Kubwimana', 'Jules Cesar Engono', 'Kyomuhendo Milliam', 'Sarah Wahinya'] },
+    { chief: 'Jannes',    members: ['Jannes du Plooy', 'Nardus du Plooy'] },
+    { chief: 'Johan',     members: ['Ana Blazevic', 'Chanelle Isimbi', 'Chris Du-Toit', 'Chris Landman', 'Drish Mali', 'Ingrid Blom', 'Jaco Du-Toit', 'Johan Landman', 'Larry Willemse', 'Sena Lemma'] },
+    { chief: 'Kaouther',  members: ['Alice Uwase', 'Celine Uwase', 'Chris Landman', 'Justin Muhirwa', 'Kaouther Zaffouri', 'Kyomuhendo Milliam', 'Laissa Isimbi', 'Ny Tiavina-Fanasina', 'Priscile Samou Yombeun'] },
+    { chief: 'Nardus',    members: ['Jannes du Plooy', 'Matthys van Rooyen', 'Nardus Du Plooy', 'Steve Ntepp'] },
+    { chief: 'Matthys',   members: ['Chris Landman', 'Diane Tuyishime', 'Goran Nikolic', 'Johan Landman', 'Jules Cesar Engono', 'Kyomuhendo Milliam', 'Mark Magbo', 'Matthys van Rooyen', 'Sarah Wahinya', 'Siegfried Dorfling'] },
+    { chief: 'Narves',    members: ['Elizabeth Lionez Ainemukama', 'Geetanjali Bisht', 'Jacob Gakuru', 'Joy Ishimwe', 'Leoncie Niwekuri', 'Millicent Oongo', 'Narves Behlilovi\u0107', 'Rohit Sahu', 'Sarah Wahinya', 'Sne\u017eana Ili\u0107'] }
   ],
-  chiefs: [],
-  compact: 'The chiefs show up \u2014 together, visibly, and now. We align, we commit, and we make sure Cotrugli sees us leading. The tribe wins or we all lose.',
-  nextMeeting: '2026-05-16T17:00:00+02:00',
-  nextMeetingLabel: 'Chiefs + Vanguard Session 12'
+  compact: 'The chiefs show up \u2014 together, visibly, and now. We align, we commit, and we make sure Cotrugli sees us leading. The tribe wins or we all lose.'
 };
 
 function switchTribeView(view, btn) {
@@ -3304,67 +3308,48 @@ function renderTribe() {
 function renderTribeTeams() {
   const el = document.getElementById('tribe-teams-list');
   if (!el) return;
-
   const compactCard = `<div class="card card-gold" style="margin-bottom:12px;">
     <div style="font-size:10px;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">\ud83e\udd1d Chiefs\u2019 Compact</div>
     <div style="font-size:13px;color:#78350f;line-height:1.6;">${TRIBE_DATA.compact}</div>
   </div>`;
-
   const teamsHtml = TRIBE_DATA.teams.map(t => {
-    const isActive = t.status === 'active';
-    const memberCount = t.members.length;
-    return `<div class="card ${isActive ? 'card-accent' : ''}" style="margin-bottom:10px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:${isActive ? '10px' : '0'};">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <span style="font-size:20px;">${t.flag || '\ud83c\udfc6'}</span>
-          <div>
-            <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">${t.name}</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">Chief: ${t.chief}</div>
-          </div>
-        </div>
-        <span class="badge ${isActive ? 'badge-done' : 'badge-pending'}">${isActive ? 'Active' : 'Forming'}</span>
+    const isMe = t.chief === 'Nardus' || t.chief === 'Jannes';
+    const membersHtml = t.members.map(name => {
+      const highlight = name.toLowerCase().includes('nardus') || name.toLowerCase().includes('jannes') || name.toLowerCase().includes('matthys');
+      return `<span style="font-size:11px;background:${highlight ? 'var(--accent-light)' : 'var(--bg-elevated)'};color:${highlight ? 'var(--accent)' : 'var(--text-muted)'};border:1px solid ${highlight ? 'var(--border)' : '#e2e8f0'};padding:3px 10px;border-radius:20px;">${name}</span>`;
+    }).join('');
+    return `<div class="card${isMe ? ' card-accent' : ''}" style="margin-bottom:10px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">Team ${t.chief}</div>
+        <span style="font-size:11px;color:var(--text-dim);">${t.members.length} members</span>
       </div>
-      ${isActive ? `
-      <div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;">
-        <strong>Project:</strong> ${t.project}
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        ${t.members.map(m => `<span style="font-size:11px;background:var(--accent-light);color:var(--accent);border:1px solid var(--border-accent);padding:3px 10px;border-radius:20px;">${m}</span>`).join('')}
-      </div>` : ''}
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">${membersHtml}</div>
     </div>`;
   }).join('');
-
-  el.innerHTML = compactCard + teamsHtml + `<div class="card" style="text-align:center;padding:20px;border-style:dashed;">
-    <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Team data updates after the Chiefs\u2019 session on <strong>Saturday 16 May</strong>.<br>Chiefs \u2014 send your team details to Nardus on WhatsApp.</div>
-  </div>`;
+  el.innerHTML = compactCard + teamsHtml;
 }
 
 function renderTribeChiefs() {
   const el = document.getElementById('tribe-chiefs-list');
   if (!el) return;
-  el.innerHTML = TRIBE_DATA.chiefs.map(c => `
-    <div class="card" style="margin-bottom:10px;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <div style="width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">${c.flag || '\ud83d\udc64'}</div>
-        <div style="flex:1;">
-          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">${c.name}</div>
-          <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${c.team} \u00b7 ${c.country}</div>
-          <div style="font-size:11px;color:var(--accent);margin-top:2px;">${c.project}</div>
+  el.innerHTML = TRIBE_DATA.teams.map(t => {
+    const isMe = t.chief === 'Nardus';
+    return `<div class="card" style="margin-bottom:8px;${isMe ? 'border:2px solid var(--accent);' : ''}">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">${t.chief}${isMe ? ' \u2b50' : ''}</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${t.members.length} members</div>
         </div>
-        ${c.whatsapp ? `<button class="btn btn-primary btn-sm" onclick="openUrl('https://wa.me/${c.whatsapp}')">Message</button>` : ''}
       </div>
-    </div>`).join('') + `<div class="card" style="text-align:center;padding:20px;border-style:dashed;">
-    <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">All 10 chiefs will appear here after Saturday\u2019s session.<br>Chiefs \u2014 share your WhatsApp with Nardus to be listed.</div>
-  </div>`;
+    </div>`;
+  }).join('');
 }
 
 function renderTribePulse() {
-  const activeTeams = TRIBE_DATA.teams.filter(t => t.status === 'active').length;
-  const chiefCount = TRIBE_DATA.chiefs.length;
   const activeEl = document.getElementById('tribe-active-count');
   const chiefEl = document.getElementById('tribe-chief-count');
-  if (activeEl) activeEl.textContent = activeTeams;
-  if (chiefEl) chiefEl.textContent = chiefCount + ' / 10';
+  if (activeEl) activeEl.textContent = TRIBE_DATA.teams.length;
+  if (chiefEl) chiefEl.textContent = TRIBE_DATA.teams.length + ' / 12';
 }
 
 function init() {
