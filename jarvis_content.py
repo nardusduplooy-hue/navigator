@@ -965,6 +965,29 @@ TALI_STEPS = {
             "They are the ones who chose the compounding path from the start."
         ),
     },
+    "2026-05-23": {
+        "step": "Vanguard Leadership — Reputation as Compound Interest",
+        "title": "Reputation as Compound Interest — The Meta-Asset",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Reputation is not vanity. It is the meta-asset that makes all other assets possible.",
+        "question": (
+            "Cotrugli argued in 1458 that a good name was more valuable than a full treasury. "
+            "In networked environments where information spreads instantly, reputational capital compounds faster than any other form — both positively and negatively. "
+            "Question: think about your own reputational capital right now. "
+            "What are the two or three consistent behaviours that are actively building it — "
+            "and is there anything you are doing that is quietly eroding it?"
+        ),
+        "model_answer": (
+            "Most people have never done a deliberate audit of their reputational capital. "
+            "They know roughly how they are perceived but have never mapped the specific behaviours driving that perception. "
+            "The compounding insight is this: reputation is built in small, consistent moments — not grand gestures. "
+            "The colleague you responded to promptly. The commitment you kept when no one was watching. "
+            "The feedback you gave honestly when comfortable silence was available. "
+            "These are the deposits. The withdrawals are equally specific: the shortcut taken, the credit not given, the standard quietly lowered. "
+            "Your reputation is the sum of those micro-decisions over time. "
+            "Name your deposits. Name your withdrawals. Then choose accordingly."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2261,7 +2284,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google's Managed Agents API promises one-call deployment at the cost of execution layer control",
+    "headline": "Alibaba's proprietary Qwen3.7-Max can run for 35 hours autonomously and supports external harnesses like Anthropic's Claude Code",
     "source": "VentureBeat AI",
 }
 
