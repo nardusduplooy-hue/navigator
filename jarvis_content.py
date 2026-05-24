@@ -988,6 +988,30 @@ TALI_STEPS = {
             "Name your deposits. Name your withdrawals. Then choose accordingly."
         ),
     },
+    "2026-05-25": {
+        "step": "Vanguard Leadership — Virtue as Competitive Architecture",
+        "title": "Virtue as Competitive Architecture — Not Moral Constraint",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Your values are not constraints on strategy — they are your strategy.",
+        "question": (
+            "Kapusta reframes ethics entirely: honesty reduces transaction costs, reliability enables predictable partnerships, "
+            "diligence compounds learning, prudence prevents catastrophic mistakes. "
+            "Your values are not constraints on strategy — they are your strategy. "
+            "Question: pick one of the four — honesty, reliability, diligence, or prudence. "
+            "Where is it currently your strongest competitive advantage — "
+            "and where are you not yet deploying it deliberately enough?"
+        ),
+        "model_answer": (
+            "The reframe that changes everything is this: virtue is not about being good — it is about being effective over time. "
+            "Honesty eliminates the energy cost of maintaining false narratives. "
+            "Reliability means partners stop hedging against you, which unlocks faster, deeper collaboration. "
+            "Diligence means your learning compounds while others plateau. "
+            "Prudence means you are still in the game when the inevitable challenges hit. "
+            "The leaders who outperform over decades are not the most talented — "
+            "they are the ones whose values quietly removed friction from every interaction, every decision, every relationship. "
+            "Name the one you are deploying most deliberately. Then name the one you are leaving on the table."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
