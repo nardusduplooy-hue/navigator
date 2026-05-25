@@ -1012,6 +1012,30 @@ TALI_STEPS = {
             "Name the one you are deploying most deliberately. Then name the one you are leaving on the table."
         ),
     },
+    "2026-05-26": {
+        "step": "Vanguard Leadership — The Perfect Merchant",
+        "title": "The Perfect Merchant — Commerce as Humanity's Highest Pursuit",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Commerce, practiced with virtue, is humanity's highest pursuit.",
+        "question": (
+            "Cotrugli wrote: 'The body and soul of the trader take part in his work to the same extent as an artist when creating his masterpiece.' "
+            "He argued that commerce practiced with virtue is humanity's highest pursuit — "
+            "it creates prosperity, connects cultures, enables cooperation, builds civilisation. "
+            "But most corrupt it through deception, extraction, and short-term thinking. "
+            "Question: what would it look like for you to approach your Vanguard project — or your current role — "
+            "as a steward of commerce rather than just a participant in it? "
+            "What would you do differently?"
+        ),
+        "model_answer": (
+            "The stewardship frame changes the question from 'what can I extract?' to 'what can I strengthen?' "
+            "A participant asks: what is the minimum I need to do to get the outcome I want? "
+            "A steward asks: how do I practice this so well that it strengthens the institution for everyone who follows? "
+            "Applied to your Vanguard project: you are not just building an MVP. "
+            "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
+            "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
+            "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2308,7 +2332,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Alibaba's proprietary Qwen3.7-Max can run for 35 hours autonomously and supports external harnesses like Anthropic's Claude Code",
+    "headline": "AI agents are quietly generating chaos engineering failures enterprises don't track yet",
     "source": "VentureBeat AI",
 }
 
