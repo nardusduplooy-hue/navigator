@@ -1036,6 +1036,32 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-05-27": {
+        "step": "Vanguard Leadership — The Cotruglian Social Contract",
+        "title": "The Cotruglian Social Contract — Stewardship Over Self-Interest",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "If enough people build, commerce thrives. The Cotruglian merchant chooses to build.",
+        "question": (
+            "Cotrugli's argument is radical: you are not just serving customers or maximising profit — "
+            "you are serving commerce itself, the entire institution of value exchange that enables human cooperation. "
+            "You don't deceive, because deception damages everyone's ability to trade. "
+            "You don't extract, because extraction makes everyone suspicious. "
+            "If everyone extracts, commerce collapses. If enough people build, commerce thrives. "
+            "Question: where in your current work or Vanguard project are you serving the institution — "
+            "and where are you still defaulting to self-interest at the expense of the broader system?"
+        ),
+        "model_answer": (
+            "The Cotruglian Social Contract is not a constraint — it is a competitive advantage with a long time horizon. "
+            "When you maintain standards that preserve trust in commerce itself, "
+            "you become the person others want to build with, invest in, and refer. "
+            "The extractors win transactions. The stewards win markets. "
+            "In your Vanguard project: every interaction with a potential user, partner, or collaborator "
+            "is either a deposit into the trust system or a withdrawal from it. "
+            "The question is not whether you are participating in the social contract — you are. "
+            "The question is whether you are net positive or net negative. "
+            "Choose deliberately."
+        ),
+    },
     "2026-05-18": {
         "step": "Chasing Jarvis — Module 5: Building an MVP",
         "title": "Module 5 — From Concept to Deployment",
@@ -2332,7 +2358,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "AI agents are quietly generating chaos engineering failures enterprises don't track yet",
+    "headline": "Why prompt debt, retrieval debt, and evaluation debt are quietly reshaping enterprise AI risk",
     "source": "VentureBeat AI",
 }
 

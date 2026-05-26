@@ -96,7 +96,7 @@ def build_briefing():
 
     # VANGUARD TEAMS
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
-    lines.append("The tribe that builds together compounds together — and in the NEO era, that is the only moat that matters.")
+    lines.append("Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time.")
     lines.append("")
 
     # DEADLINES
