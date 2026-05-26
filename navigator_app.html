@@ -3352,6 +3352,16 @@ function renderTribePulse() {
   if (chiefEl) chiefEl.textContent = TRIBE_DATA.teams.length + ' / 12';
 }
 
+function showOnboarding() {
+  const el = document.getElementById('onboarding-overlay');
+  if (el) el.style.display = 'flex';
+}
+function dismissOnboarding() {
+  storage.set('cn_onboarded', '1');
+  const el = document.getElementById('onboarding-overlay');
+  if (el) { el.style.opacity = '0'; el.style.transition = 'opacity 0.2s ease'; setTimeout(() => { el.style.display = 'none'; }, 200); }
+}
+
 function init() {
   renderNorthStar();
   renderWork();
@@ -3372,6 +3382,7 @@ function init() {
   const lastTab = storage.get('cn_active_tab');
   if (lastTab) { const btn = document.querySelector(`[data-tab="${lastTab}"]`); if (btn) switchTab(lastTab, btn); }
   setInterval(() => { renderNorthStar(); renderWork(); }, 60000);
+  if (!storage.get('cn_onboarded')) { setTimeout(showOnboarding, 300); }
 }
 init();
 
@@ -3623,6 +3634,40 @@ function renderCourseReadings() {
 }
 // ===== END SCHEDULER =====
 </script>
+  <!-- ONBOARDING OVERLAY — shown once on first visit, never again -->
+  <div id="onboarding-overlay" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(15,23,42,0.92);align-items:center;justify-content:center;padding:24px;">
+    <div style="width:100%;max-width:380px;background:var(--bg-surface);border-radius:24px;padding:32px 28px 28px;text-align:center;animation:slideUp 0.3s ease;">
+      <div style="width:52px;height:52px;background:var(--accent);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:26px;">🧭</div>
+      <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text);margin-bottom:8px;">Cotrugli Navigator</div>
+      <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:24px;">Your Vanguard MBA companion</div>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;text-align:left;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:32px;height:32px;background:var(--accent-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;">📋</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;">Everything in one place</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:1.5;">Your module, assignments, sessions, readings, and daily briefing \u2014 all here.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:32px;height:32px;background:var(--accent-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;">🎙️</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;">Listen, schedule, engage</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:1.5;">Course podcasts inline. Schedule any reading to a date. Generate LinkedIn comments.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:32px;height:32px;background:var(--accent-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;">🤖</div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;">Ask Ben anything</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:1.5;">Your AI study companion knows your programme, your module, and your assignments.</div>
+          </div>
+        </div>
+      </div>
+      <button onclick="dismissOnboarding()" style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.02em;">Let\u2019s go →</button>
+      <div style="font-size:11px;color:var(--text-muted);margin-top:14px;">Built by Nardus du Plooy · Vanguard MBA 2025\u20132027</div>
+    </div>
+  </div>
+
   <!-- GLOBAL MODALS — outside all tab panels so they work from any tab -->
   <!-- DAY DETAIL SLIDE-UP -->
   <div id="day-detail-modal" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(15,23,42,0.5);align-items:flex-end;">
