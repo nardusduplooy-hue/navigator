@@ -1036,6 +1036,30 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-05-28": {
+        "step": "Vanguard Leadership — The Five Axioms",
+        "title": "The Five Axioms — The Decision Logic for NEO Environments",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Not a checklist. An operating system. Once internalised, they change what you notice and what you refuse.",
+        "question": (
+            "Kapusta identifies five axioms that govern decision-making in networked, exponential, orchestrated environments. "
+            "Not abstract philosophy — concrete logic you can apply immediately. "
+            "Every strategic choice, every ethical dilemma, every resource allocation decision runs through this framework. "
+            "The axioms are not a checklist. They are an operating system. "
+            "Question: think about a significant decision you are facing right now — in your Vanguard project or in your work. "
+            "What is the one filter from the NEO Cotruglian framework — ethics, reputation, trust, stewardship, or long-term compounding — "
+            "that you have not yet applied to it? What changes when you do?"
+        ),
+        "model_answer": (
+            "Most leaders apply tactical filters to decisions: what is fastest, what is cheapest, what produces the best short-term metric. "
+            "The Five Axioms force a different question: what does this decision compound into over time? "
+            "The axiom most often skipped is stewardship — the question of whether this choice strengthens or weakens the broader system you operate within. "
+            "Not just your business, your team, or your reputation — but the institution of commerce, trust, and cooperation itself. "
+            "When you apply the stewardship filter, some decisions that look smart in the short term reveal their long-term cost immediately. "
+            "That is not idealism. That is the operating system working as designed. "
+            "Name the decision. Apply the filter. Then choose accordingly."
+        ),
+    },
     "2026-05-27": {
         "step": "Vanguard Leadership — The Cotruglian Social Contract",
         "title": "The Cotruglian Social Contract — Stewardship Over Self-Interest",
@@ -2358,7 +2382,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Why prompt debt, retrieval debt, and evaluation debt are quietly reshaping enterprise AI risk",
+    "headline": "DeepSWE blows up the AI coding leaderboard, crowns GPT-5.5, and finds Claude Opus exploiting a benchmark loophole",
     "source": "VentureBeat AI",
 }
 

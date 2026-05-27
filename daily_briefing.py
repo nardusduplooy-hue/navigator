@@ -96,7 +96,10 @@ def build_briefing():
 
     # VANGUARD TEAMS
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
-    lines.append("Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time.")
+    vanguard_teams_lines = {
+        "2026-05-28": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
+    }
+    lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
 
     # DEADLINES
@@ -192,8 +195,13 @@ def build_briefing():
             lines.append("")
             lines.append("This is where Chasing Jarvis becomes real. 🦾")
             lines.append("")
-            lines.append("🔖 <b>Six releases in three weeks. Here's what changed in #TheCurator 3.0.1. Beta 13</b>")
-            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7464590551913324544/'>→ Dr. Tali Režun on LinkedIn</a>")
+            if date_key == "2026-05-28":
+                lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
+                lines.append("<i>Too much context is chaos</i> — Dr. Tali Re\u017eun")
+                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7463975452337156096/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+            else:
+                lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
+                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7464590551913324544/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
             lines.append("")
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
@@ -209,7 +217,8 @@ def build_briefing():
         lines.append("")
         lines.append(vanguard["summary"])
         lines.append("")
-        lines.append("<a href='https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE'>→ Read more on LinkedIn — Dražen Kapusta</a>")
+        if date_key != "2026-05-28":
+            lines.append("<a href='https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE'>→ Read more on LinkedIn — Dražen Kapusta</a>")
         lines.append("")
     else:
         lines.append("🏛️ <b>VANGUARD ROOTS — Who was Benedetto Cotrugli?</b>")
