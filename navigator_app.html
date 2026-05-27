@@ -1193,17 +1193,27 @@ const PROGRAMME_DATA = {
       id: 'pg-warfare',
       label: 'Business as Warfare',
       icon: '\u2694\uFE0F',
-      episodes: [
-        { title: 'Integrating Dynamic Warfare Strategies in an AI driven world', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/8c923c22-6240-4bc9-a0b3-5c13cea944b3/stream.mp3' },
-        { title: 'Asymmetric Warfare \u2013 Not every war has to end', author: 'Zrinko Petener', url: 'https://stream.redcircle.com/episodes/2bf61cb1-c1e7-441b-a972-d87e79f4134e/stream.mp3' },
-        { title: 'Paypal Mafia', author: 'Independent Study', url: 'https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3' },
-        { title: 'Networks and Netwars', author: 'Arquilla \u0026 Ronfeldt', url: 'https://stream.redcircle.com/episodes/c2e8c019-1445-4fa8-9061-d936a527c67d/stream.mp3' },
-        { title: 'Center of Gravity for Joint Doctrine', author: 'Antulio J. Echevarria', url: 'https://stream.redcircle.com/episodes/d308978d-5e2e-4077-956c-cb601e6470f6/stream.mp3' },
-        { title: 'Hybrid Warfare', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/50315810-b51e-4a95-9d39-b6d3db1071f9/stream.mp3' },
-        { title: 'Composite Warfare', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3' },
-        { title: 'Proceedings of NATO Multi-Domain Ops Conference', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/bad84a01-6aa8-4c41-975c-5aba6244d90a/stream.mp3' },
-        { title: 'The Future of Strategy', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/cda17201-d9e3-4716-84fa-3b892795f73c/stream.mp3' },
-        { title: 'From Military Strategy to Business Strategy', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/8e3c97ee-d99c-434c-b161-03fa14e19ef4/stream.mp3' }
+      modules: [
+        { label: 'Module 1', episodes: [
+          { title: 'Integrating Dynamic Warfare Strategies in an AI driven world', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/8c923c22-6240-4bc9-a0b3-5c13cea944b3/stream.mp3' },
+          { title: 'Asymmetric Warfare \u2013 Not every war has to end', author: 'Zrinko Petener', url: 'https://stream.redcircle.com/episodes/2bf61cb1-c1e7-441b-a972-d87e79f4134e/stream.mp3' },
+          { title: 'Paypal Mafia', author: 'Independent Study', url: 'https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3' },
+          { title: 'Networks and Netwars', author: 'Arquilla \u0026 Ronfeldt', url: 'https://stream.redcircle.com/episodes/c2e8c019-1445-4fa8-9061-d936a527c67d/stream.mp3' },
+          { title: 'Center of Gravity for Joint Doctrine', author: 'Antulio J. Echevarria', url: 'https://stream.redcircle.com/episodes/d308978d-5e2e-4077-956c-cb601e6470f6/stream.mp3' },
+          { title: 'Hybrid Warfare', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/50315810-b51e-4a95-9d39-b6d3db1071f9/stream.mp3' },
+          { title: 'Composite Warfare', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3' },
+          { title: 'Proceedings of NATO Multi-Domain Ops Conference', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/bad84a01-6aa8-4c41-975c-5aba6244d90a/stream.mp3' },
+          { title: 'The Future of Strategy', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/cda17201-d9e3-4716-84fa-3b892795f73c/stream.mp3' },
+          { title: 'From Military Strategy to Business Strategy', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/8e3c97ee-d99c-434c-b161-03fa14e19ef4/stream.mp3' }
+        ]},
+        { label: 'Module 2', episodes: [
+          { title: '2016 Letter to Shareholders', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp3' },
+          { title: 'Insights and Best Practices \u2014 Mission Command', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/e42bf7d6-fbd6-40e1-b294-0216f6b5f395/stream.mp3' },
+          { title: 'Psychology of Intelligent Analysis', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/632bc2ba-6b9f-411e-b438-7da81c4cf2a1/stream.mp3' }
+        ]},
+        { label: 'Module 3', episodes: [] },
+        { label: 'Module 4', episodes: [] },
+        { label: 'Module 5', episodes: [] }
       ]
     },
     {
@@ -2526,11 +2536,16 @@ function renderSessions() {
   pl.innerHTML = '';
   (PROGRAMME_DATA.podcastGroups || []).forEach(group => {
     const isOpen = storage.get('pg_open_' + group.id) === '1';
-    const epCount = group.episodes.length;
+    // Support both flat episodes and module-grouped episodes
+    const allEpisodes = group.modules
+      ? group.modules.flatMap(m => m.episodes)
+      : group.episodes;
+    const epCount = allEpisodes.length;
     const groupEl = document.createElement('div');
     groupEl.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px;';
-    const episodesHtml = group.episodes.map((ep, idx) => {
-      const epId = 'pod-' + group.id + '-' + idx;
+
+    function renderEpisode(ep, idx, globalIdx) {
+      const epId = 'pod-' + group.id + '-' + globalIdx;
       const isAudio = ep.url && ep.url.includes('stream.redcircle.com') && ep.url.endsWith('.mp3');
       const schedLabel = 'Podcast: ' + group.label;
       const safeTitle = ep.title.replace(/'/g, '\u2019');
@@ -2544,7 +2559,23 @@ function renderSessions() {
           '<span style="color:var(--accent);font-size:12px;font-weight:600;flex-shrink:0;margin-left:10px;">Open \u2192</span></div>' +
           schedBtn + '</div>';
       }
-    }).join('');
+    }
+
+    let episodesHtml = '';
+    if (group.modules) {
+      let globalIdx = 0;
+      group.modules.forEach(mod => {
+        if (mod.episodes.length === 0) {
+          episodesHtml += '<div style="padding:8px 14px;border-top:0.5px solid var(--border);background:#f8fafc;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);padding:4px 0 2px;">' + mod.label + '</div><div style="font-size:11px;color:var(--text-dim);padding:4px 0 6px;">Coming soon</div></div>';
+        } else {
+          episodesHtml += '<div style="padding:6px 14px 2px;border-top:0.5px solid var(--border);background:#f8fafc;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);padding:4px 0;">' + mod.label + ' \u00b7 ' + mod.episodes.length + ' episode' + (mod.episodes.length !== 1 ? 's' : '') + '</div></div>';
+          mod.episodes.forEach((ep, idx) => { episodesHtml += renderEpisode(ep, idx, globalIdx); globalIdx++; });
+        }
+      });
+    } else {
+      group.episodes.forEach((ep, idx) => { episodesHtml += renderEpisode(ep, idx, idx); });
+    }
+
     groupEl.innerHTML =
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px;background:var(--bg-elevated);cursor:pointer;user-select:none;" onclick="togglePodcastGroup(\'' + group.id + '\')">'+
       '<div style="display:flex;align-items:center;gap:10px;"><span style="font-size:18px;">' + group.icon + '</span>'+
