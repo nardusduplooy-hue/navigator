@@ -1209,11 +1209,26 @@ const PROGRAMME_DATA = {
         { label: 'Module 2', episodes: [
           { title: '2016 Letter to Shareholders', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp3' },
           { title: 'Insights and Best Practices \u2014 Mission Command', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/e42bf7d6-fbd6-40e1-b294-0216f6b5f395/stream.mp3' },
-          { title: 'Psychology of Intelligent Analysis', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/632bc2ba-6b9f-411e-b438-7da81c4cf2a1/stream.mp3' }
+          { title: 'Psychology of Intelligent Analysis', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/632bc2ba-6b9f-411e-b438-7da81c4cf2a1/stream.mp3' },
+          { title: 'Five-Phase Model of the Intelligence Cycle of Competitive Intelligence', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/1b6c68fe-223c-4aea-abb3-7847372770c1/stream.mp3' },
+          { title: 'NATO Standard AJP-01 Allied Joint Doctrine', author: 'NATO', url: 'https://stream.redcircle.com/episodes/97634004-9e19-4ca4-ab94-874e28298ebb/stream.mp3' }
         ]},
         { label: 'Module 3', episodes: [] },
         { label: 'Module 4', episodes: [] },
         { label: 'Module 5', episodes: [] }
+      ]
+    },
+    {
+      id: 'pg-b2b',
+      label: 'AI in B2B Sales',
+      icon: '\ud83d\udcbc',
+      modules: [
+        { label: 'Module 1 \u2014 The Thesis & Landscape', episodes: [
+          { title: 'AI as Force Multiplier in B2B Sales', author: 'AI in B2B Sales', url: 'https://stream.redcircle.com/episodes/5cbe03c7-4603-479e-bccd-81f231f95f89/stream.mp3' }
+        ]},
+        { label: 'Module 2', episodes: [] },
+        { label: 'Module 3', episodes: [] },
+        { label: 'Module 4', episodes: [] }
       ]
     },
     {
@@ -2536,7 +2551,6 @@ function renderSessions() {
   pl.innerHTML = '';
   (PROGRAMME_DATA.podcastGroups || []).forEach(group => {
     const isOpen = storage.get('pg_open_' + group.id) === '1';
-    // Support both flat episodes and module-grouped episodes
     const allEpisodes = group.modules
       ? group.modules.flatMap(m => m.episodes)
       : group.episodes;
@@ -2544,7 +2558,7 @@ function renderSessions() {
     const groupEl = document.createElement('div');
     groupEl.style.cssText = 'border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px;';
 
-    function renderEpisode(ep, idx, globalIdx) {
+    function renderEpisode(ep, globalIdx) {
       const epId = 'pod-' + group.id + '-' + globalIdx;
       const isAudio = ep.url && ep.url.includes('stream.redcircle.com') && ep.url.endsWith('.mp3');
       const schedLabel = 'Podcast: ' + group.label;
@@ -2561,19 +2575,25 @@ function renderSessions() {
       }
     }
 
-    let episodesHtml = '';
+    let innerHtml = '';
     if (group.modules) {
       let globalIdx = 0;
-      group.modules.forEach(mod => {
-        if (mod.episodes.length === 0) {
-          episodesHtml += '<div style="padding:8px 14px;border-top:0.5px solid var(--border);background:#f8fafc;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);padding:4px 0 2px;">' + mod.label + '</div><div style="font-size:11px;color:var(--text-dim);padding:4px 0 6px;">Coming soon</div></div>';
-        } else {
-          episodesHtml += '<div style="padding:6px 14px 2px;border-top:0.5px solid var(--border);background:#f8fafc;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);padding:4px 0;">' + mod.label + ' \u00b7 ' + mod.episodes.length + ' episode' + (mod.episodes.length !== 1 ? 's' : '') + '</div></div>';
-          mod.episodes.forEach((ep, idx) => { episodesHtml += renderEpisode(ep, idx, globalIdx); globalIdx++; });
-        }
+      group.modules.forEach((mod, mIdx) => {
+        const modId = group.id + '-m' + mIdx;
+        const epHtml = mod.episodes.length
+          ? mod.episodes.map(ep => { const h = renderEpisode(ep, globalIdx); globalIdx++; return h; }).join('')
+          : '<div style="padding:10px 14px;font-size:12px;color:var(--text-dim);border-top:0.5px solid var(--border);">Coming soon</div>';
+        const badge = mod.episodes.length ? ' \u00b7 ' + mod.episodes.length + ' ep' + (mod.episodes.length !== 1 ? 's' : '') : '';
+        innerHtml +=
+          '<div style="border-top:0.5px solid var(--border);">' +
+          '<div id="mod-hdr-' + modId + '" onclick="toggleModuleGroup(\'' + modId + '\')" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--bg-elevated);cursor:pointer;user-select:none;">' +
+          '<div style="font-size:12px;font-weight:700;font-family:Syne,sans-serif;color:var(--accent);">' + mod.label + '<span style="font-weight:400;color:var(--text-dim);">' + badge + '</span></div>' +
+          '<span id="mod-chev-' + modId + '" style="font-size:16px;color:var(--text-muted);transition:transform 0.25s;display:inline-block;">›</span></div>' +
+          '<div id="mod-body-' + modId + '" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">' + epHtml + '</div>' +
+          '</div>';
       });
     } else {
-      group.episodes.forEach((ep, idx) => { episodesHtml += renderEpisode(ep, idx, idx); });
+      group.episodes.forEach((ep, idx) => { innerHtml += renderEpisode(ep, idx); });
     }
 
     groupEl.innerHTML =
@@ -2582,7 +2602,7 @@ function renderSessions() {
       '<div><div style="font-family:Syne,sans-serif;font-size:13px;font-weight:700;color:var(--text);">' + group.label + '</div>'+
       '<div style="font-size:11px;color:var(--text-muted);margin-top:1px;">' + epCount + ' episode' + (epCount !== 1 ? 's' : '') + '</div></div></div>'+
       '<span id="pg-chev-' + group.id + '" style="font-size:18px;color:var(--text-muted);transition:transform 0.25s;display:inline-block;' + (isOpen ? 'transform:rotate(90deg);' : '') + '">›</span></div>'+
-      '<div id="pg-body-' + group.id + '" style="max-height:' + (isOpen ? '3000px' : '0') + ';overflow:hidden;transition:max-height 0.35s ease;">' + episodesHtml + '</div>';
+      '<div id="pg-body-' + group.id + '" style="max-height:' + (isOpen ? '3000px' : '0') + ';overflow:hidden;transition:max-height 0.35s ease;">' + innerHtml + '</div>';
     pl.appendChild(groupEl);
   });
 }
@@ -2599,6 +2619,13 @@ function togglePodcastGroup(id) {
   body.style.maxHeight = isOpen ? '0px' : '3000px';
   chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
   storage.set('pg_open_' + id, isOpen ? '0' : '1');
+}
+function toggleModuleGroup(modId) {
+  const body = document.getElementById('mod-body-' + modId);
+  const chev = document.getElementById('mod-chev-' + modId);
+  const isOpen = body.style.maxHeight !== '0px' && body.style.maxHeight !== '';
+  body.style.maxHeight = isOpen ? '0px' : '2000px';
+  chev.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
 }
 function joinZoom() { const s = getNextSession(); if (s && s.zoomUrl) { window.location.href = s.zoomUrl; } }
 
