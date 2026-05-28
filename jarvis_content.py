@@ -1036,6 +1036,31 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-05-29": {
+        "step": "Vanguard Leadership — Understanding the NEO Battlefield",
+        "title": "Understanding the NEO Battlefield",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The battlefield has changed. Most leaders are still fighting the last war — with last decade\u2019s tools and mental models.",
+        "question": (
+            "Kapusta describes the NEO Era as Networked, Exponential, and Orchestrated — three forces that have fundamentally changed the competitive environment. "
+            "The leaders who struggle are not the ones who lack talent or work ethic. "
+            "They are the ones still operating with a linear, hierarchical, control-based mental model in a world that no longer rewards it. "
+            "Question: in your current role or Vanguard project, where are you still applying a linear or hierarchical approach "
+            "to a problem that is actually networked, exponential, or requires orchestration? "
+            "What would change if you reframed it through the NEO lens?"
+        ),
+        "model_answer": (
+            "The NEO battlefield does not reward the smartest individual — it rewards the leader who builds the best network, "
+            "moves at exponential speed, and orchestrates resources they do not own or control. "
+            "Linear thinking says: I need more resources, more time, more people. "
+            "NEO thinking says: who already has what I need, and how do I create enough value that they want to coordinate with me? "
+            "The reframe is not just strategic — it is psychological. "
+            "It requires letting go of the need to control and accepting that in a networked environment, "
+            "influence through trust and value creation outperforms authority every time. "
+            "Identify one decision you have been treating as a resource problem. "
+            "Reframe it as a coordination problem. The answer often changes completely."
+        ),
+    },
     "2026-05-28": {
         "step": "Vanguard Leadership — The Five Axioms",
         "title": "The Five Axioms — The Decision Logic for NEO Environments",
@@ -2382,7 +2407,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "DeepSWE blows up the AI coding leaderboard, crowns GPT-5.5, and finds Claude Opus exploiting a benchmark loophole",
+    "headline": "MiniMax teases upcoming M3 model with new sparse attention mechanism and 15.6X long-context response speed boost",
     "source": "VentureBeat AI",
 }
 

@@ -98,6 +98,7 @@ def build_briefing():
     lines.append("🏆 <b>VANGUARD TEAMS</b>")
     vanguard_teams_lines = {
         "2026-05-28": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
+        "2026-05-29": "You don\u2019t rise to the level of the opportunity. You fall to the level of your preparation. The tribe that prepares together performs together.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -183,7 +184,7 @@ def build_briefing():
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
             lines.append("")
-        else:
+        elif date_key == "2026-05-28":
             lines.append("🎯 <b>CHASING JARVIS — MODULE 5: BUILDING AN MVP — FROM CONCEPT TO DEPLOYMENT</b>")
             lines.append("")
             lines.append("Module 5 is the capstone. Everything you have learned converges into one tangible output: a functioning MVP you build, test, and deploy using AI tools and agents — guided by the context packages you built in Module 4.")
@@ -195,16 +196,28 @@ def build_briefing():
             lines.append("")
             lines.append("This is where Chasing Jarvis becomes real. 🦾")
             lines.append("")
-            if date_key == "2026-05-28":
-                lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
-                lines.append("<i>Too much context is chaos</i> — Dr. Tali Re\u017eun")
-                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7463975452337156096/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
-            else:
-                lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
-                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7464590551913324544/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+            lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
+            lines.append("<i>Too much context is chaos</i> — Dr. Tali Re\u017eun")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7463975452337156096/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
             lines.append("")
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
+            lines.append("")
+        else:
+            lines.append("📊 <b>AI IN B2B SALES</b>")
+            lines.append("<i>Delivered by Saša Pavlaković</i>")
+            lines.append("")
+            lines.append("We are pleased to announce the start of a new module in your Vanguard MBA programme: <b>AI in B2B Sales</b>. This course is about turning AI into your unfair advantage in B2B sales. You\u2019ll get hands-on with tools like HubSpot, Apollo, and ChatGPT to level up your prospecting, prep like a pro for meetings, and walk into negotiations with sharper insights.")
+            lines.append("")
+            lines.append("By the end, you\u2019ll have a clear 90-day game plan to implement AI in a real business context. If you want to stay ahead of the curve — and not get replaced by it — this is where it starts.")
+            lines.append("")
+            lines.append("<b>📅 Next Session: Saturday 30 May — 17:00 CET</b>")
+            lines.append("<b>Topic:</b> VANGUARD — AI in B2B Sales")
+            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/19/?wm=1&amp;mi=86987581433'>→ Join Zoom Meeting</a>")
+            lines.append("<b>Meeting ID:</b> 869 8758 1433 | <b>Passcode:</b> AI_Sales")
+            lines.append("")
+            lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
+            lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
             lines.append("")
 
     # VANGUARD LEADERSHIP — daily book summary
