@@ -1036,6 +1036,32 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-05-30": {
+        "step": "Vanguard Leadership — The Networked World",
+        "title": "The Networked World — Value Through Connections, Not Control",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Your position in the network determines your access to opportunity more than your title, budget, or formal authority.",
+        "question": (
+            "Kapusta argues that in the NEO era, value flows through networks — not hierarchies. "
+            "The leader who hoards information and centralises control is not powerful — they are a bottleneck. "
+            "The leader who builds trust, shares generously, and creates nodes of connection compounds their influence exponentially. "
+            "Question: map your current network honestly. "
+            "Where are you operating as a node — connecting others, sharing value, building trust? "
+            "And where are you operating as a gatekeeper — controlling access, withholding information, centralising decisions? "
+            "What is one relationship you could invest in this week that would strengthen your network position?"
+        ),
+        "model_answer": (
+            "Network position is built through consistent, generous, trust-based behaviour over time — not through titles or budgets. "
+            "The leaders who thrive in the NEO era are the ones others want to bring into their network: "
+            "they share insights freely, make connections without expecting immediate return, and show up reliably. "
+            "Gatekeeping feels like power but it is actually fragility — "
+            "the moment the hierarchy shifts, the gatekeeper loses everything. "
+            "The node loses nothing, because their value is in the relationships themselves, not the position. "
+            "One investment this week: reach out to someone in your extended network with something genuinely useful — "
+            "an article, an introduction, a piece of feedback. No ask attached. "
+            "That is how network capital compounds."
+        ),
+    },
     "2026-05-29": {
         "step": "Vanguard Leadership — Understanding the NEO Battlefield",
         "title": "Understanding the NEO Battlefield",
@@ -2395,9 +2421,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/trust-virtue-neo-era-drazen-kapusta-orhge/",
-    "title": "Trust as a Virtue in the NEO Era",
-    "description": "Kapusta argues that trust will be one of the most important virtues in the NEO era — not blind trust, not trust as a feeling, but engineered trust. A protocol. He and his team at COlab have spent years developing this: the Cotrugli Ledger. Not just a decentralised accounting and governance system — but the minimal trust layer that AI needs right now. This is the first post in a series. Read it, and watch for what follows.",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D",
+    "title": "NEO Cotruglian Philosophy — The Leadership Operating System",
+    "description": "Kapusta lays out the full NEO Cotruglian Philosophy — the operating system that underpins Vanguard Leadership. Not a set of values to display on a wall. A decision logic for navigating networked, exponential, orchestrated environments. Five axioms. One coherent framework. Read it before Saturday\u2019s session.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -2407,7 +2433,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "MiniMax teases upcoming M3 model with new sparse attention mechanism and 15.6X long-context response speed boost",
+    "headline": "Researchers automated LLM reasoning strategy design and cut token usage by 69.5%",
     "source": "VentureBeat AI",
 }
 

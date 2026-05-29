@@ -99,6 +99,7 @@ def build_briefing():
     vanguard_teams_lines = {
         "2026-05-28": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
         "2026-05-29": "You don\u2019t rise to the level of the opportunity. You fall to the level of your preparation. The tribe that prepares together performs together.",
+        "2026-05-30": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -219,6 +220,20 @@ def build_briefing():
             lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
             lines.append("")
+            if date_key == "2026-05-30":
+                lines.append("🛠 <b>Before Saturday\u2019s session — create accounts and log in:</b>")
+                lines.append("• <a href='https://www.hubspot.com/products/crm'>HubSpot Free CRM</a> — basic CRM and deals")
+                lines.append("• <a href='https://app.apollo.io/#/sign-up'>Apollo.io Free</a> — B2B contact database and prospecting")
+                lines.append("• <a href='https://otter.ai'>Otter.ai Free</a> — meeting transcription")
+                lines.append("• <a href='https://claude.ai'>Claude</a> or <a href='https://chat.openai.com'>ChatGPT</a> — general-purpose LLM assistant")
+                lines.append("")
+                lines.append("🔖 <b>Dr. Tali Re\u017eun — How I AI</b>")
+                lines.append("<a href='https://www.linkedin.com/posts/talirezun_thecurator-share-7462461745572429824-B1ok/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+                lines.append("")
+            else:
+                lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
+                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7464590551913324544/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+                lines.append("")
 
     # VANGUARD LEADERSHIP — daily book summary
     vanguard = VANGUARD_SUMMARIES.get(date_key)
@@ -230,8 +245,11 @@ def build_briefing():
         lines.append("")
         lines.append(vanguard["summary"])
         lines.append("")
-        if date_key != "2026-05-28":
-            lines.append("<a href='https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE'>→ Read more on LinkedIn — Dražen Kapusta</a>")
+        if date_key not in ("2026-05-28",):
+            if date_key >= "2026-05-30":
+                lines.append("<a href='https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
+            else:
+                lines.append("<a href='https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
         lines.append("")
     else:
         lines.append("🏛️ <b>VANGUARD ROOTS — Who was Benedetto Cotrugli?</b>")
