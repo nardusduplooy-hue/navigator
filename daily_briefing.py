@@ -100,6 +100,7 @@ def build_briefing():
         "2026-05-28": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
         "2026-05-29": "You don\u2019t rise to the level of the opportunity. You fall to the level of your preparation. The tribe that prepares together performs together.",
         "2026-05-30": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
+        "2026-05-31": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -110,7 +111,10 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    lines.append("• 🗓 Saturday 30 May")
+    if date_key >= "2026-05-31":
+        lines.append("• 🗓 Saturday 13 June @ 17:00 Belgrade/Bratislava/Ljubljana — AI in B2B Sales Module 2")
+    else:
+        lines.append("• 🗓 Saturday 30 May")
     lines.append("")
 
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
@@ -208,31 +212,40 @@ def build_briefing():
             lines.append("📊 <b>AI IN B2B SALES</b>")
             lines.append("<i>Delivered by Saša Pavlaković</i>")
             lines.append("")
-            lines.append("We are pleased to announce the start of a new module in your Vanguard MBA programme: <b>AI in B2B Sales</b>. This course is about turning AI into your unfair advantage in B2B sales. You\u2019ll get hands-on with tools like HubSpot, Apollo, and ChatGPT to level up your prospecting, prep like a pro for meetings, and walk into negotiations with sharper insights.")
-            lines.append("")
-            lines.append("By the end, you\u2019ll have a clear 90-day game plan to implement AI in a real business context. If you want to stay ahead of the curve — and not get replaced by it — this is where it starts.")
-            lines.append("")
-            lines.append("<b>📅 Next Session: Saturday 30 May — 17:00 CET</b>")
-            lines.append("<b>Topic:</b> VANGUARD — AI in B2B Sales")
-            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/19/?wm=1&amp;mi=86987581433'>→ Join Zoom Meeting</a>")
-            lines.append("<b>Meeting ID:</b> 869 8758 1433 | <b>Passcode:</b> AI_Sales")
-            lines.append("")
-            lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
-            lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
-            lines.append("")
-            if date_key == "2026-05-30":
-                lines.append("🛠 <b>Before Saturday\u2019s session — create accounts and log in:</b>")
-                lines.append("• <a href='https://www.hubspot.com/products/crm'>HubSpot Free CRM</a> — basic CRM and deals")
-                lines.append("• <a href='https://app.apollo.io/#/sign-up'>Apollo.io Free</a> — B2B contact database and prospecting")
-                lines.append("• <a href='https://otter.ai'>Otter.ai Free</a> — meeting transcription")
-                lines.append("• <a href='https://claude.ai'>Claude</a> or <a href='https://chat.openai.com'>ChatGPT</a> — general-purpose LLM assistant")
+            if date_key >= "2026-05-31":
+                lines.append("📋 <b>ASSIGNMENT — Due before Module 2 (Saturday 13 June)</b>")
+                lines.append("<b>Map. Submit. Bring it back.</b>")
                 lines.append("")
-                lines.append("🔖 <b>Dr. Tali Re\u017eun — How I AI</b>")
-                lines.append("<a href='https://www.linkedin.com/posts/talirezun_thecurator-share-7462461745572429824-B1ok/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+                lines.append("Deliverable: 1\u20132 page write-up OR 3\u20135 slides")
+                lines.append("• The product you chose and why")
+                lines.append("• The funnel you mapped (drawing or table is fine)")
+                lines.append("• 3\u20135 specific friction points")
+                lines.append("• For each: one sentence on the AI lever you\u2019d test")
+                lines.append("Format: PDF or Google Slides link | Think clearly, not lengthily")
+                lines.append("📧 Submit to: <a href='mailto:sasa.pavlakovic@cotrugli.eu'>sasa.pavlakovic@cotrugli.eu</a>")
+                lines.append("")
+                lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
+                lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
+                lines.append("<a href='https://stream.redcircle.com/episodes/5cbe03c7-4603-479e-bccd-81f231f95f89/stream.mp3'>→ Module 1 Podcast</a>")
+                lines.append("")
+                lines.append("🛠 <b>Tools — set up if you haven\u2019t yet:</b>")
+                lines.append("• <a href='https://www.hubspot.com/products/crm'>HubSpot Free CRM</a>")
+                lines.append("• <a href='https://app.apollo.io/#/sign-up'>Apollo.io Free</a>")
+                lines.append("• <a href='https://otter.ai'>Otter.ai Free</a>")
+                lines.append("• <a href='https://claude.ai'>Claude</a> or <a href='https://chat.openai.com'>ChatGPT</a>")
                 lines.append("")
             else:
-                lines.append("🔖 <b>Six releases in three weeks. Here\u2019s what changed in #TheCurator 3.0.1. Beta 13</b>")
-                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7464590551913324544/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+                lines.append("We are pleased to announce the start of a new module in your Vanguard MBA programme: <b>AI in B2B Sales</b>. This course is about turning AI into your unfair advantage in B2B sales. You\u2019ll get hands-on with tools like HubSpot, Apollo, and ChatGPT to level up your prospecting, prep like a pro for meetings, and walk into negotiations with sharper insights.")
+                lines.append("")
+                lines.append("By the end, you\u2019ll have a clear 90-day game plan to implement AI in a real business context. If you want to stay ahead of the curve — and not get replaced by it — this is where it starts.")
+                lines.append("")
+                lines.append("<b>📅 Next Session: Saturday 30 May — 17:00 CET</b>")
+                lines.append("<b>Topic:</b> VANGUARD — AI in B2B Sales")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/19/?wm=1&amp;mi=86987581433'>→ Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 869 8758 1433 | <b>Passcode:</b> AI_Sales")
+                lines.append("")
+                lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
+                lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
                 lines.append("")
 
     # VANGUARD LEADERSHIP — daily book summary

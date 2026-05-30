@@ -1036,6 +1036,30 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-05-31": {
+        "step": "Vanguard Leadership — Exponential Dynamics",
+        "title": "Exponential Dynamics — Why Linear Thinking Is Now Dangerous",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Linear thinkers see the world as it was. Exponential thinkers see the world as it is becoming. The gap between those two views is where advantage is built — or lost.",
+        "question": (
+            "Kapusta\u2019s core argument this week: linear thinking is not just suboptimal in a NEO environment — it is dangerous. "
+            "Linear thinkers extrapolate from the past and plan for a world that no longer exists. "
+            "Exponential thinkers look for compounding forces, network effects, and second-order consequences. "
+            "Question: identify one area in your business, career, or Vanguard project where you have been thinking linearly. "
+            "What would the exponential version of that same opportunity look like? "
+            "What compounding force — technology, network, reputation, trust — could you activate that you are currently ignoring?"
+        ),
+        "model_answer": (
+            "Linear thinking says: if I work twice as hard, I get twice the result. "
+            "Exponential thinking says: if I build the right system, the results compound without me working twice as hard. "
+            "The shift is not about working harder — it is about identifying leverage. "
+            "In a NEO environment, leverage comes from three sources: networks (who else benefits when you succeed), "
+            "technology (what can be automated or amplified by AI), and reputation (what opportunities come to you because of who you are known to be). "
+            "The leaders who win the next decade are not the ones who grind harder. "
+            "They are the ones who find the compounding force, activate it early, and then let time do the work. "
+            "Name your leverage point. Build toward it deliberately."
+        ),
+    },
     "2026-05-30": {
         "step": "Vanguard Leadership — The Networked World",
         "title": "The Networked World — Value Through Connections, Not Control",
@@ -2433,7 +2457,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Researchers automated LLM reasoning strategy design and cut token usage by 69.5%",
+    "headline": "The AI agent bottleneck isn\u2019t model performance — it\u2019s permissions",
     "source": "VentureBeat AI",
 }
 
