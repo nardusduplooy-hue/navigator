@@ -3676,7 +3676,7 @@ function renderCourseReadings() {
         } else {
           html += '<button onclick="openDatePicker(\'' + r.id + '\',\'' + r.title.replace(/'/g, '\u2019') + '\',\'' + course.label + ' \u00b7 ' + mod.label + '\')" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-card);color:var(--text);cursor:pointer;white-space:nowrap;">Schedule</button>';
         }
-        html += '<a href="' + r.url + '" target="_blank" style="color:var(--text-muted);font-size:14px;text-decoration:none;padding:4px 2px;">\u2197</a>';
+        html += '<a href="' + r.url + '" target="_blank" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-card);color:var(--accent);cursor:pointer;white-space:nowrap;text-decoration:none;">Open \u2192</a>';
         html += '</div></div>';
       });
       if (mod.supplemental.length > 0) {
@@ -3693,7 +3693,7 @@ function renderCourseReadings() {
           } else {
             html += '<button onclick="openDatePicker(\'' + r.id + '\',\'' + r.title.replace(/'/g, '\u2019') + '\',\'' + course.label + '\')" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-card);color:var(--text);cursor:pointer;white-space:nowrap;">Schedule</button>';
           }
-          html += '<a href="' + r.url + '" target="_blank" style="color:var(--text-muted);font-size:14px;text-decoration:none;padding:4px 2px;">\u2197</a>';
+          html += '<a href="' + r.url + '" target="_blank" style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:var(--radius-xs);border:0.5px solid var(--border);background:var(--bg-card);color:var(--accent);cursor:pointer;white-space:nowrap;text-decoration:none;">Open \u2192</a>';
           html += '</div></div>';
         });
         html += '</div>';
