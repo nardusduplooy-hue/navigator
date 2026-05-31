@@ -1036,6 +1036,32 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-01": {
+        "step": "Vanguard Leadership — Orchestration",
+        "title": "Orchestration — Coordinating What You Do Not Control",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The NEO leader does not need to own resources to leverage them. They need to create enough value that others choose to coordinate.",
+        "question": (
+            "Kapusta\u2019s argument: in the NEO era, the most powerful leaders are not those with the most resources — "
+            "they are those who coordinate the most resources they do not own. "
+            "Orchestration is the skill of creating alignment across people, organisations, and systems that have no obligation to follow you. "
+            "Question: think about a goal you are currently trying to achieve through direct control or ownership. "
+            "What would it look like if you approached it as an orchestration problem instead? "
+            "Who are the players that already have what you need, and what value could you offer them to bring them into alignment with your goal?"
+        ),
+        "model_answer": (
+            "Orchestration starts with a simple shift: stop asking \u2018what do I need to acquire?\u2019 and start asking \u2018who already has this, and why would they share it?\u2019 "
+            "The answer is almost always: because you offer them something they value more than what they give up. "
+            "In practice, orchestration requires three things: "
+            "a clear and compelling goal that others can see themselves in, "
+            "the trust and reputation that makes people want to coordinate with you, "
+            "and the discipline to let others lead their part without micromanaging the output. "
+            "The hardest part is the last one. "
+            "Control is comfortable. Orchestration requires tolerating ambiguity in exchange for scale. "
+            "Identify one goal this week where you can replace ownership with coordination. "
+            "Make the ask. See what comes back."
+        ),
+    },
     "2026-05-31": {
         "step": "Vanguard Leadership — Exponential Dynamics",
         "title": "Exponential Dynamics — Why Linear Thinking Is Now Dangerous",
@@ -2457,7 +2483,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "The AI agent bottleneck isn\u2019t model performance — it\u2019s permissions",
+    "headline": "Mistral AI launches Vibe, expands into industrial AI and announces data centre push to challenge OpenAI",
     "source": "VentureBeat AI",
 }
 

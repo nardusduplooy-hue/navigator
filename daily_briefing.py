@@ -101,6 +101,7 @@ def build_briefing():
         "2026-05-29": "You don\u2019t rise to the level of the opportunity. You fall to the level of your preparation. The tribe that prepares together performs together.",
         "2026-05-30": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
         "2026-05-31": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
+        "2026-06-01": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
