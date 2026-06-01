@@ -102,6 +102,7 @@ def build_briefing():
         "2026-05-30": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
         "2026-05-31": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
         "2026-06-01": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
+        "2026-06-02": "The cohort is not a classroom. It is a coordination network. Every connection you build here is a node in the system you will lead for decades.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -213,7 +214,7 @@ def build_briefing():
             lines.append("📊 <b>AI IN B2B SALES</b>")
             lines.append("<i>Delivered by Saša Pavlaković</i>")
             lines.append("")
-            if date_key >= "2026-05-31":
+            if date_key >= "2026-06-02":
                 lines.append("📋 <b>ASSIGNMENT — Due before Module 2 (Saturday 13 June)</b>")
                 lines.append("<b>Map. Submit. Bring it back.</b>")
                 lines.append("")
@@ -248,6 +249,15 @@ def build_briefing():
                 lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
                 lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
                 lines.append("")
+
+    # CHASING JARVIS — Dr. Tali block (from 2 June onwards)
+    if date_key >= "2026-06-02":
+        lines.append("🎯 <b>CHASING JARVIS</b>")
+        lines.append("<i>Dr. Tali Re\u017eun</i>")
+        lines.append("")
+        lines.append("\u201cThe machine is ready. The question is \u2014 are you?\u201d")
+        lines.append("<a href='https://www.linkedin.com/posts/talirezun_chasingjarvis-chasingjarvis-aiagents-share-7467106207451897856-xPDj/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+        lines.append("")
 
     # VANGUARD LEADERSHIP — daily book summary
     vanguard = VANGUARD_SUMMARIES.get(date_key)

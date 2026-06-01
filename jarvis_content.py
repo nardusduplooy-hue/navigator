@@ -1036,6 +1036,34 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-02": {
+        "step": "Vanguard Leadership — Business as Warfare",
+        "title": "Business as Warfare — Military Doctrine for the NEO Era",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Warfare is the most demanding coordination problem humans have ever faced. The principles transfer directly to business in NEO environments.",
+        "question": (
+            "Kapusta applies military doctrine not metaphorically but literally. "
+            "OODA loops — Observe, Orient, Decide, Act — faster than your opponent. "
+            "Mission command — give clear intent, then empower execution at the edge. "
+            "Power to the edge — distribute decision-making to those closest to the information. "
+            "Question: in your current organisation or Vanguard project, where is decision-making centralised "
+            "when it should be distributed? "
+            "Who on your team or in your network is closest to the information but not empowered to act on it? "
+            "What would change if you applied mission command — gave them clear intent and got out of the way?"
+        ),
+        "model_answer": (
+            "The failure mode in most organisations is not a lack of talent at the edge — it is a lack of trust at the centre. "
+            "Leaders centralise decisions because they do not trust others to execute their intent. "
+            "But in fast-moving environments, centralised decisions arrive too late. "
+            "Mission command solves this by separating intent from execution: "
+            "the leader owns the what and the why; the team owns the how. "
+            "This only works when intent is communicated with absolute clarity — "
+            "vague intent produces vague execution, regardless of how much autonomy you grant. "
+            "The discipline is in the briefing, not the doing. "
+            "Define your intent precisely. Communicate it completely. "
+            "Then trust the edge to execute. That is how fast organisations win."
+        ),
+    },
     "2026-06-01": {
         "step": "Vanguard Leadership — Orchestration",
         "title": "Orchestration — Coordinating What You Do Not Control",
@@ -2483,7 +2511,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Mistral AI launches Vibe, expands into industrial AI and announces data centre push to challenge OpenAI",
+    "headline": "Claude Mythos exposed a hard truth: Your enterprise patching process is way too slow",
     "source": "VentureBeat AI",
 }
 
