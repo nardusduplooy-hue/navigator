@@ -1036,6 +1036,32 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-03": {
+        "step": "Vanguard Leadership — OODA Loops",
+        "title": "OODA Loops — The Speed Advantage in Decision-Making",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The goal is not to make perfect decisions. It is to cycle through decisions faster than your environment changes.",
+        "question": (
+            "Boyd\u2019s OODA loop \u2014 Observe, Orient, Decide, Act \u2014 is not about speed for its own sake. "
+            "It is about learning faster than your environment changes. "
+            "Most organisations stall in Orient: analysing, deliberating, waiting for certainty that never comes. "
+            "Question: think of a decision you or your team has been sitting on. "
+            "What would it look like to act with 70% of the information, observe the result, and correct fast \u2014 "
+            "rather than wait for the full picture? "
+            "What is the cost of the delay versus the cost of an imperfect first move?"
+        ),
+        "model_answer": (
+            "The OODA loop does not reward recklessness \u2014 it rewards tempo. "
+            "The advantage goes to the leader who can compress the loop: act, learn, adjust, faster than the environment shifts. "
+            "Most leaders stall in Orient because they conflate caution with competence. "
+            "But in fast-moving environments, a good decision made now beats a perfect decision made too late. "
+            "The discipline is this: define the minimum information you need to act responsibly \u2014 not comfortably. "
+            "Act at that threshold. Observe the result with honesty. "
+            "Correct without ego. "
+            "The leaders who win in the NEO era are not the ones who are always right \u2014 "
+            "they are the ones who are wrong faster, learn sooner, and move again before the competition has finished deliberating."
+        ),
+    },
     "2026-06-02": {
         "step": "Vanguard Leadership — Business as Warfare",
         "title": "Business as Warfare — Military Doctrine for the NEO Era",
@@ -2511,7 +2537,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Mythos exposed a hard truth: Your enterprise patching process is way too slow",
+    "headline": "MiniMax-M3 debuts, eclipsing GPT-5.5 and Gemini 3.1 Pro on key benchmark performance for just 5-10% of the cost",
     "source": "VentureBeat AI",
 }
 

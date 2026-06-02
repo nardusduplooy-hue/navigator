@@ -103,6 +103,7 @@ def build_briefing():
         "2026-05-31": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
         "2026-06-01": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
         "2026-06-02": "The cohort is not a classroom. It is a coordination network. Every connection you build here is a node in the system you will lead for decades.",
+        "2026-06-03": "Exponential returns don\u2019t come from lone stars \u2014 they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -215,26 +216,11 @@ def build_briefing():
             lines.append("<i>Delivered by Saša Pavlaković</i>")
             lines.append("")
             if date_key >= "2026-06-02":
-                lines.append("📋 <b>ASSIGNMENT — Due before Module 2 (Saturday 13 June)</b>")
-                lines.append("<b>Map. Submit. Bring it back.</b>")
+                lines.append("\U0001f4cb <b>ASSIGNMENT \u2014 Due before Module 2 (Saturday 13 June)</b>")
+                lines.append("<b>Map. Submit. Bring it back.</b> Choose your product, map your B2B funnel, identify 3–5 friction points, and propose one AI lever per point. Deliverable: 1–2 page write-up or 3–5 slides (PDF or Google Slides). Think clearly, not lengthily. 📧 <a href='mailto:sasa.pavlakovic@cotrugli.eu'>sasa.pavlakovic@cotrugli.eu</a>")
                 lines.append("")
-                lines.append("Deliverable: 1\u20132 page write-up OR 3\u20135 slides")
-                lines.append("• The product you chose and why")
-                lines.append("• The funnel you mapped (drawing or table is fine)")
-                lines.append("• 3\u20135 specific friction points")
-                lines.append("• For each: one sentence on the AI lever you\u2019d test")
-                lines.append("Format: PDF or Google Slides link | Think clearly, not lengthily")
-                lines.append("📧 Submit to: <a href='mailto:sasa.pavlakovic@cotrugli.eu'>sasa.pavlakovic@cotrugli.eu</a>")
-                lines.append("")
-                lines.append("<b>📊 Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</b>")
-                lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 PDF</a>")
-                lines.append("<a href='https://stream.redcircle.com/episodes/5cbe03c7-4603-479e-bccd-81f231f95f89/stream.mp3'>→ Module 1 Podcast</a>")
-                lines.append("")
-                lines.append("🛠 <b>Tools — set up if you haven\u2019t yet:</b>")
-                lines.append("• <a href='https://www.hubspot.com/products/crm'>HubSpot Free CRM</a>")
-                lines.append("• <a href='https://app.apollo.io/#/sign-up'>Apollo.io Free</a>")
-                lines.append("• <a href='https://otter.ai'>Otter.ai Free</a>")
-                lines.append("• <a href='https://claude.ai'>Claude</a> or <a href='https://chat.openai.com'>ChatGPT</a>")
+                lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>\u2192 Module 1 PDF</a> | <a href='https://stream.redcircle.com/episodes/5cbe03c7-4603-479e-bccd-81f231f95f89/stream.mp3'>\u2192 Module 1 Podcast</a>")
+                lines.append("\U0001f6e0 HubSpot \u00b7 Apollo.io \u00b7 Otter.ai \u00b7 Claude / ChatGPT")
                 lines.append("")
             else:
                 lines.append("We are pleased to announce the start of a new module in your Vanguard MBA programme: <b>AI in B2B Sales</b>. This course is about turning AI into your unfair advantage in B2B sales. You\u2019ll get hands-on with tools like HubSpot, Apollo, and ChatGPT to level up your prospecting, prep like a pro for meetings, and walk into negotiations with sharper insights.")
@@ -252,11 +238,34 @@ def build_briefing():
 
     # CHASING JARVIS — Dr. Tali block (from 2 June onwards)
     if date_key >= "2026-06-02":
+        chasing_jarvis_entries = {
+            "2026-06-02": {
+                "quote": "\u201cThe machine is ready. The question is \u2014 are you?\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_chasingjarvis-chasingjarvis-aiagents-share-7467106207451897856-xPDj/",
+            },
+            "2026-06-03": {
+                "quote": "\u201c95% of enterprise AI pilots produce no measurable business impact.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467487084430299137/",
+            },
+        }
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-03"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
-        lines.append("\u201cThe machine is ready. The question is \u2014 are you?\u201d")
-        lines.append("<a href='https://www.linkedin.com/posts/talirezun_chasingjarvis-chasingjarvis-aiagents-share-7467106207451897856-xPDj/'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+        lines.append(cj["quote"])
+        lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+        lines.append("")
+
+    # SALES MANAGEMENT WEEKEND MARATHON — from 3 June onwards
+    if date_key >= "2026-06-03":
+        lines.append("📅 <b>NEXT WEEKEND MARATHON — Sales Management</b>")
+        lines.append("<i>Prof. Primo\u017e Hvala</i>")
+        lines.append("")
+        lines.append("Three days. Deep dive into sales strategy, key account management, sales force leadership, and AI in sales. Success in sales depends more on managing your sales force than knowing all the tricks — and in the NEO era, AI is changing every layer of it.")
+        lines.append("")
+        lines.append("\u2022 \U0001f5d3 Friday 19 June @ 09:00 CET — through Sunday 21 June")
+        lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/20/?wm=1&amp;mi=89427239190'>→ Join Zoom Meeting</a>")
+        lines.append("<b>Meeting ID:</b> 894 2723 9190 | <b>Passcode:</b> saleslive")
         lines.append("")
 
     # VANGUARD LEADERSHIP — daily book summary
