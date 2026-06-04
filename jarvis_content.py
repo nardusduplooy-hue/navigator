@@ -1036,6 +1036,162 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-09": {
+        "step": "Vanguard Leadership — The Centaur Model",
+        "title": "The Centaur Model — Human and AI as One System",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Not human directing AI from a distance. Not AI replacing human. Human and AI operating as a single integrated system, each contributing what the other cannot.",
+        "question": (
+            "Kapusta’s Centaur model: the optimal human-AI relationship is not delegation or replacement — it is integration. "
+            "AI contributes speed, consistency, pattern recognition, and scale. "
+            "Human contributes judgment, meaning, trust, ethical framework, and the question of what is worth optimising for. "
+            "Question: in your current work or Vanguard project, where are you using AI as a tool at arm’s length "
+            "rather than as an integrated system? "
+            "What would it look like to build the Centaur — to design your workflow so that human and AI each do what the other cannot?"
+        ),
+        "model_answer": (
+            "The Centaur is not built by adding AI to an existing workflow. It is built by redesigning the workflow around the combined system. "
+            "Start by mapping your current process: which steps require human judgment, relationships, or ethical calls? "
+            "Which steps require processing speed, consistency, or pattern recognition at scale? "
+            "The human owns the first category. AI owns the second. "
+            "The integration point — where human judgment shapes what AI does, and AI output informs human judgment — is where the Centaur lives. "
+            "Most people use AI reactively: they have a task, they ask the AI. "
+            "Centaur thinking is proactive: design the system so that AI is continuously augmenting your judgment, not just answering one-off questions. "
+            "That is the difference between a tool and a force multiplier."
+        ),
+    },
+    "2026-06-08": {
+        "step": "Vanguard Leadership — AI as Force Multiplier",
+        "title": "AI as Force Multiplier — The Second Force",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "AI is not a replacement for human judgment. It is a force multiplier for it. The quality of what AI multiplies depends entirely on the quality of what you bring to it.",
+        "question": (
+            "Kapusta’s argument: if you bring mediocre judgment to AI, AI gives you mediocre judgment at scale. "
+            "If you bring Cotruglian craft to AI, AI gives you Cotruglian craft at scale. "
+            "AI does not improve your thinking — it amplifies it. "
+            "Question: in your current role or Vanguard project, what is the quality of judgment you are bringing to AI? "
+            "Are you using it to think harder, or to think less? "
+            "And what would it look like to deliberately raise the quality of what you bring — "
+            "so that the force multiplier has something worth multiplying?"
+        ),
+        "model_answer": (
+            "The force multiplier insight reframes the AI question entirely. "
+            "Most people ask: what can AI do for me? "
+            "The Vanguard question is: what quality of input am I giving AI to work with? "
+            "The discipline is not in the prompt — it is in the thinking before the prompt. "
+            "Before you engage AI on any problem, invest time in clarifying your own judgment: "
+            "what do you actually believe, what are you uncertain about, what constraints are non-negotiable? "
+            "Bring that clarity to AI and the output is dramatically better. "
+            "Bring vague, unconsidered inputs and AI returns vague, unconsidered outputs at speed. "
+            "The Cotruglian standard applies here: craft first, tools second. "
+            "AI is the most powerful business tool ever built — but it amplifies the operator, not the tool itself."
+        ),
+    },
+    "2026-06-07": {
+        "step": "Vanguard Leadership — Processing Fear Under Pressure",
+        "title": "Processing Fear Under Pressure — The Vanguard Discipline",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The Vanguard response to pressure is not freeze, flight, or fight. It is: feel, process, act with intent. This is a trainable skill.",
+        "question": (
+            "Kapusta identifies three common fear responses: freeze (paralysis), flight (avoidance), and fight (aggression). "
+            "None of these is the Vanguard response. "
+            "The Vanguard discipline is: feel the pressure, process what it is telling you, then act with intent. "
+            "Question: think of a recent moment when you were under real pressure — a deadline, a difficult conversation, an uncertain decision. "
+            "Which response did you default to: freeze, flight, or fight? "
+            "What would the Vanguard response have looked like in that moment?"
+        ),
+        "model_answer": (
+            "Recognising your default fear response is the first step to changing it. "
+            "Most people discover they have a dominant pattern — they tend to freeze, avoid, or push through aggressively. "
+            "The Vanguard discipline starts with that recognition, then introduces a pause: before responding, ask what the pressure is actually telling you. "
+            "Is it a genuine threat that requires action? An assumption being challenged? A standards conflict? "
+            "Once you extract the signal, you can act on it with intent rather than react from instinct. "
+            "This is trainable — not by avoiding pressure, but by seeking it in controlled doses: "
+            "difficult conversations, stretch assignments, public commitments. "
+            "Each one is a rep. The leaders who perform under pressure are not the ones who feel less fear. "
+            "They are the ones who have practised processing it."
+        ),
+    },
+    "2026-06-06": {
+        "step": "Vanguard Leadership — Fear as Data",
+        "title": "Fear as Data — The First Force",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Fear is information. When you suppress it, you lose the signal. When you are paralysed by it, you lose the action. Fear processing is the disciplined use of fear.",
+        "question": (
+            "Kapusta’s reframe: fear is not a problem to suppress or a weakness to overcome. It is data to process. "
+            "What is the fear telling you? What threat has it detected? What assumption is it protecting? "
+            "Question: think of something in your current work or Vanguard project that you have been avoiding or delaying. "
+            "If you sit with the discomfort honestly — what is the fear underneath it actually telling you? "
+            "Is it a real signal worth acting on, or a false alarm worth overriding?"
+        ),
+        "model_answer": (
+            "The discipline of treating fear as data starts with a simple but uncomfortable practice: "
+            "when you notice avoidance or hesitation, stop and ask ‘what specifically am I afraid of here?’ "
+            "Most people cannot answer this precisely because they have been trained to suppress the question rather than engage it. "
+            "Once you name the fear precisely — ‘I am afraid this will fail and I will look incompetent’, "
+            "‘I am afraid the conversation will damage the relationship’ — you can evaluate it rationally. "
+            "Is this a real risk that requires preparation? Or a threat perception that dissolves under scrutiny? "
+            "Suppression gives you neither the signal nor the action. "
+            "Processing gives you both: the intelligence the fear contains, and the freedom to act anyway."
+        ),
+    },
+    "2026-06-05": {
+        "step": "Vanguard Leadership — The NEO Leadership Challenge",
+        "title": "The NEO Leadership Challenge — Three Simultaneous Demands",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Speed, Scale, and Standards — industrial era frameworks trade one for another. Vanguard Leadership holds all three simultaneously.",
+        "question": (
+            "Kapusta’s argument: the NEO era demands three things simultaneously that industrial era frameworks cannot hold together: "
+            "Speed (act before certainty), Scale (coordinate beyond direct control), and Standards (maintain ethics under pressure). "
+            "Most frameworks sacrifice one to achieve the others — move fast and break things sacrifices Standards, "
+            "slow and deliberate sacrifices Speed. "
+            "Question: in your current role or Vanguard project, which of the three are you most naturally trading away? "
+            "Where are you slow when you should be fast, small when you should be scaled, or cutting corners when you should be holding standards? "
+            "What would it look like to hold all three at once?"
+        ),
+        "model_answer": (
+            "Holding Speed, Scale, and Standards simultaneously is not a balancing act — it is a systems design problem. "
+            "The reason industrial era frameworks trade one for another is that they rely on centralised control, "
+            "which is slow by design. "
+            "Vanguard Leadership solves this differently: "
+            "fear processing enables speed by removing paralysis, "
+            "AI augmentation enables scale by extending your reach beyond direct oversight, "
+            "and Cotruglian ethics maintain standards by making the right behaviour instinctive rather than deliberated. "
+            "The practical question is: which of your current processes requires you to choose between these three? "
+            "That is where the redesign starts. "
+            "Not by trying harder within the existing framework — but by replacing the framework."
+        ),
+    },
+    "2026-06-04": {
+        "step": "Vanguard Leadership — Mission Command",
+        "title": "Mission Command — Intent Over Instructions",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Communicate intent clearly, then trust your people to execute. You cannot empower people you do not trust. Build the trust first.",
+        "question": (
+            "Mission command separates intent from execution: the leader owns the what and the why; the team owns the how. "
+            "This only works when intent is communicated with absolute clarity — "
+            "vague intent produces vague execution, regardless of how much autonomy you grant. "
+            "Question: think about the last time you delegated something that didn’t go the way you expected. "
+            "Was the failure in the execution — or in the clarity of your intent? "
+            "What would mission command briefing have looked like: "
+            "what is the goal, why does it matter, what are the non-negotiable constraints, "
+            "and what does success look like?"
+        ),
+        "model_answer": (
+            "Most delegation failures are intent failures, not execution failures. "
+            "The leader assumes the team understands the goal as clearly as they do. "
+            "They almost never do. "
+            "Mission command discipline requires investing time upfront in the briefing: "
+            "state the goal precisely, explain the why behind it, define the boundaries that cannot be crossed, "
+            "and describe what success looks like in concrete terms. "
+            "Then — and only then — step back and let the team execute. "
+            "The hardest part is resisting the urge to prescribe the how. "
+            "When you prescribe the how, you remove the team’s ownership, their creativity, and their accountability. "
+            "Intent is the lever. "
+            "Pull it clearly, and the team will surprise you. "
+            "Leave it vague, and no amount of oversight will fix what the briefing broke."
+        ),
+    },
     "2026-06-03": {
         "step": "Vanguard Leadership — OODA Loops",
         "title": "OODA Loops — The Speed Advantage in Decision-Making",
@@ -2525,9 +2681,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D",
-    "title": "NEO Cotruglian Philosophy — The Leadership Operating System",
-    "description": "Kapusta lays out the full NEO Cotruglian Philosophy — the operating system that underpins Vanguard Leadership. Not a set of values to display on a wall. A decision logic for navigating networked, exponential, orchestrated environments. Five axioms. One coherent framework. Read it before Saturday\u2019s session.",
+    "url": "https://www.linkedin.com/pulse/sheep-who-wanted-dreams-back-drazen-kapusta-bpd9f/",
+    "title": "The Sheep Who Wanted Their Dreams Back",
+    "description": "Kapusta asks a sharp question: are you leading, or are you waiting to be led? The sheep who wanted their dreams back is the leader who outsourced their vision, their standards, and their courage — and then wondered why nothing changed. In the NEO era, the ones who move first do not wait for permission. Read it.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -2537,7 +2693,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "MiniMax-M3 debuts, eclipsing GPT-5.5 and Gemini 3.1 Pro on key benchmark performance for just 5-10% of the cost",
+    "headline": "Alibaba’s Qwen3.7-Plus supports text, video and imagery inputs at low cost of $0.4/$1.6 per 1M token — but it’s proprietary",
     "source": "VentureBeat AI",
 }
 
