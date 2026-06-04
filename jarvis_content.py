@@ -2681,7 +2681,7 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/sheep-who-wanted-dreams-back-drazen-kapusta-bpd9f/",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467883914800484353/",
     "title": "The Sheep Who Wanted Their Dreams Back",
     "description": "Kapusta asks a sharp question: are you leading, or are you waiting to be led? The sheep who wanted their dreams back is the leader who outsourced their vision, their standards, and their courage — and then wondered why nothing changed. In the NEO era, the ones who move first do not wait for permission. Read it.",
 }
@@ -2693,7 +2693,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Alibaba’s Qwen3.7-Plus supports text, video and imagery inputs at low cost of $0.4/$1.6 per 1M token — but it’s proprietary",
+    "headline": "Google’s new open source Gemma 4 12B analyzes audio, video — and runs entirely locally on a typical 16GB enterprise laptop",
     "source": "VentureBeat AI",
 }
 
