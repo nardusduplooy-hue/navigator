@@ -2693,7 +2693,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google’s new open source Gemma 4 12B analyzes audio, video — and runs entirely locally on a typical 16GB enterprise laptop",
+    "headline": "Anthropic says 80% of its new production code is now authored by Claude — how your enterprise can keep up",
     "source": "VentureBeat AI",
 }
 
