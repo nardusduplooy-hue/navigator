@@ -2693,7 +2693,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic says 80% of its new production code is now authored by Claude — how your enterprise can keep up",
+    "headline": "Microsoft AI chief says company was ‘set free’ from OpenAI to pursue superintelligence",
     "source": "VentureBeat AI",
 }
 
