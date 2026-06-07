@@ -108,6 +108,7 @@ def build_briefing():
         "2026-06-05": "A tribe without standards is just a group. Hold the standard — even when no one is watching. Especially when no one is watching.",
         "2026-06-06": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
         "2026-06-07": "You don’t rise to the level of the opportunity. You fall to the level of your preparation. The tribe that prepares together performs together.",
+        "2026-06-08": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -267,8 +268,12 @@ def build_briefing():
                 "quote": "\u201cContext is the Code: The Complete Three-Phase Process for Building with AI Agents.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7468977290987823104/",
             },
+            "2026-06-08": {
+                "quote": "\u201cContext is the Code: The Complete Three-Phase Process for Building with AI Agents.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7468977290987823104/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-07"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-08"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")

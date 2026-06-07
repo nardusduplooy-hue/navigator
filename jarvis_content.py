@@ -2693,7 +2693,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Microsoft AI chief says company was ‘set free’ from OpenAI to pursue superintelligence",
+    "headline": "When Claude changed, everything changed: Managing AI blast radius in production",
     "source": "VentureBeat AI",
 }
 
