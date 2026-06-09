@@ -1036,6 +1036,34 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-10": {
+        "step": "Vanguard Leadership — Ethical AI Augmentation",
+        "title": "Ethical AI Augmentation — Multiplying Without Losing Judgment",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "AI amplifies your worst patterns as readily as your best. An extractive leader with AI is more extractive at scale. A trust-builder with AI builds trust at scale.",
+        "question": (
+            "Kapusta’s warning: AI augmentation is not neutral. "
+            "It amplifies whatever you bring to it — your strengths and your blind spots equally. "
+            "An extractive leader with AI becomes more extractive at scale. "
+            "A Cotruglian leader with AI builds trust, craft, and virtue at scale. "
+            "Question: if AI were to amplify your current leadership patterns — your habits, your defaults, your blind spots — "
+            "what would it amplify that you would be proud of? "
+            "And what would it amplify that you would not? "
+            "What does that tell you about the work you need to do before you scale yourself?"
+        ),
+        "model_answer": (
+            "This is the question most AI frameworks avoid because it is uncomfortable. "
+            "Most organisations ask ‘how do we implement AI?’ before they ask ‘who are we, and what will we become at scale?’ "
+            "Cotruglian ethics precede AI capability in the Vanguard framework for exactly this reason. "
+            "Before you multiply yourself, you must know what you are multiplying. "
+            "The discipline is not in the AI deployment — it is in the self-examination that precedes it. "
+            "Where are you transactional when you should be relational? "
+            "Where do you cut corners under pressure? "
+            "Where does your judgment fail when you are tired, rushed, or threatened? "
+            "Those are the patterns AI will amplify. "
+            "Fix them first. Then scale."
+        ),
+    },
     "2026-06-09": {
         "step": "Vanguard Leadership — The Centaur Model",
         "title": "The Centaur Model — Human and AI as One System",
@@ -2693,7 +2721,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "When Claude changed, everything changed: Managing AI blast radius in production",
+    "headline": "Researchers trained an open source AI search agent, Harness-1, that outperforms GPT-5.4 on recalling relevant information",
     "source": "VentureBeat AI",
 }
 

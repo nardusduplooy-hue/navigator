@@ -110,6 +110,7 @@ def build_briefing():
         "2026-06-07": "You don’t rise to the level of the opportunity. You fall to the level of your preparation. The tribe that prepares together performs together.",
         "2026-06-08": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
         "2026-06-09": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
+        "2026-06-10": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -277,8 +278,12 @@ def build_briefing():
                 "quote": "\u201cKnowledge compounds. Just like experience.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7469636710654431233/",
             },
+            "2026-06-10": {
+                "quote": "\u201cTwo years of building with AI coding agents.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470009990666248193/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-09"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-10"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
