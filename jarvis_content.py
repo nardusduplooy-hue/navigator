@@ -1036,6 +1036,35 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-11": {
+        "step": "Vanguard Leadership — Tribe as Coordination",
+        "title": "Tribe as Coordination — The Third Force",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The tribe is not a metaphor. It is the fundamental unit of human coordination. In the NEO era, the tribe is back — not as nostalgia, but as the most efficient coordination structure where trust matters more than authority.",
+        "question": (
+            "Kapusta’s argument: for 200,000 years, humans survived through tribal structures — "
+            "small, high-trust groups with shared purpose, shared standards, and mutual accountability. "
+            "In the NEO era, this is not nostalgia — it is the most efficient coordination structure available "
+            "in environments where trust matters more than authority and speed matters more than process. "
+            "Question: look at your current Vanguard cohort as a tribe. "
+            "Where does it function like a high-trust coordination network? "
+            "Where does it still function like a classroom or a bureaucracy? "
+            "What would it take to close that gap?"
+        ),
+        "model_answer": (
+            "The distinction between a tribe and a group is trust and mutual accountability. "
+            "A classroom delivers content to individuals. A tribe coordinates action between members. "
+            "The Vanguard cohort becomes a tribe when members stop consuming and start contributing — "
+            "when they hold each other to standards, share resources without keeping score, "
+            "and act on each other’s behalf without being asked. "
+            "The practical test: when one member is struggling, do others notice and move? "
+            "When one member has a relevant connection or insight, do they share it proactively? "
+            "That is the tribal coordination signal. "
+            "If it isn’t happening yet, it starts with one person deciding to go first — "
+            "to contribute without waiting for reciprocity. "
+            "That decision, repeated across enough members, is how a cohort becomes a tribe."
+        ),
+    },
     "2026-06-10": {
         "step": "Vanguard Leadership — Ethical AI Augmentation",
         "title": "Ethical AI Augmentation — Multiplying Without Losing Judgment",
@@ -2709,7 +2738,7 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467883914800484353/",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
     "title": "The Sheep Who Wanted Their Dreams Back",
     "description": "Kapusta asks a sharp question: are you leading, or are you waiting to be led? The sheep who wanted their dreams back is the leader who outsourced their vision, their standards, and their courage — and then wondered why nothing changed. In the NEO era, the ones who move first do not wait for permission. Read it.",
 }

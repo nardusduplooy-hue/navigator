@@ -111,6 +111,7 @@ def build_briefing():
         "2026-06-08": "In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds — because it does.",
         "2026-06-09": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
         "2026-06-10": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
+        "2026-06-11": "The cohort is not a classroom. It is a coordination network. Every connection you build here is a node in the system you will lead for decades.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -121,7 +122,10 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    if date_key >= "2026-05-31":
+    if date_key >= "2026-06-11":
+        lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Saturday 13 June @ 17:00 CET")
+        lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/24/?wm=1&amp;mi=84732424623'>\u2192 Join Zoom Meeting</a> | <b>ID:</b> 847 3242 4623 | <b>Passcode:</b> AI_Sales_2")
+    elif date_key >= "2026-05-31":
         lines.append("• 🗓 Saturday 13 June @ 17:00 Belgrade/Bratislava/Ljubljana — AI in B2B Sales Module 2")
     else:
         lines.append("• 🗓 Saturday 30 May")
@@ -222,7 +226,14 @@ def build_briefing():
             lines.append("📊 <b>AI IN B2B SALES</b>")
             lines.append("<i>Delivered by Saša Pavlaković</i>")
             lines.append("")
-            if date_key >= "2026-06-02":
+            if date_key >= "2026-06-11":
+                lines.append("\U0001f4ca <b>MODULE 2 \u2014 Individual Augmentation: Your Personal AI Sales Stack</b>")
+                lines.append("<i>Saša Pavlaković</i>")
+                lines.append("")
+                lines.append("In our next live session, we\u2019ll build your personal AI sales stack from the ground up \u2014 prospecting with Apollo, meeting prep with Otter, CRM workflows in HubSpot, and strategic thinking with Claude/ChatGPT. Come ready to work \u2014 you\u2019ll leave with a fully designed personal AI workflow.")
+                lines.append("")
+                lines.append("")
+            elif date_key >= "2026-06-02":
                 lines.append("\U0001f4cb <b>ASSIGNMENT \u2014 Due before Module 2 (Saturday 13 June)</b>")
                 lines.append("<b>Map. Submit. Bring it back.</b> Choose your product, map your B2B funnel, identify 3–5 friction points, and propose one AI lever per point. Deliverable: 1–2 page write-up or 3–5 slides (PDF or Google Slides). Think clearly, not lengthily. 📧 <a href='mailto:sasa.pavlakovic@cotrugli.eu'>sasa.pavlakovic@cotrugli.eu</a>")
                 lines.append("")
@@ -282,8 +293,12 @@ def build_briefing():
                 "quote": "\u201cTwo years of building with AI coding agents.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470009990666248193/",
             },
+            "2026-06-11": {
+                "quote": "\u201cOnce upon a time, there was a model that existed only in whispers.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-claudefable5-share-7470394320831832064-YYiE/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-10"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-11"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
