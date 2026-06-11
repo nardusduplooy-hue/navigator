@@ -1036,6 +1036,32 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-12": {
+        "step": "Vanguard Leadership — Building the Tribe",
+        "title": "Building the Tribe — The Five Conditions",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Tribes do not form by accident. They are built through five conditions. Remove any one and the tribe degrades into a group. Groups coordinate. Tribes compound.",
+        "question": (
+            "Kapusta identifies five conditions that separate a tribe from a group: "
+            "Shared purpose, Shared standards, Mutual accountability, Psychological safety, and Reciprocal trust. "
+            "Remove any one and the tribe degrades into a group. "
+            "Question: look at your Vanguard cohort or your current work team against these five conditions. "
+            "Which one is weakest right now? "
+            "What is the specific behaviour or absence of behaviour that is eroding it? "
+            "And what is one concrete action you could take this week to strengthen it?"
+        ),
+        "model_answer": (
+            "Most teams fail on psychological safety and reciprocal trust — not because people are malicious, "
+            "but because the conditions for both are rarely designed deliberately. "
+            "Psychological safety is not about being nice. It is about making it safe to be honest — "
+            "to say ‘I don’t know’, ‘I was wrong’, ‘I disagree’ without social cost. "
+            "Reciprocal trust is not assumed — it is earned through consistent behaviour over time. "
+            "The practical action: find the condition that is weakest in your tribe, "
+            "name it explicitly in a conversation with the group, and propose one specific change in behaviour. "
+            "Naming the gap is the first act of tribal leadership. "
+            "Most groups never name it — and so it never closes."
+        ),
+    },
     "2026-06-11": {
         "step": "Vanguard Leadership — Tribe as Coordination",
         "title": "Tribe as Coordination — The Third Force",
@@ -2750,7 +2776,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Researchers trained an open source AI search agent, Harness-1, that outperforms GPT-5.4 on recalling relevant information",
+    "headline": "Surprise upset: GPT-5.5 beats Claude Fable 5 on brutal new Agents’ Last Exam benchmark",
     "source": "VentureBeat AI",
 }
 

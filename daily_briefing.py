@@ -112,6 +112,7 @@ def build_briefing():
         "2026-06-09": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
         "2026-06-10": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
         "2026-06-11": "The cohort is not a classroom. It is a coordination network. Every connection you build here is a node in the system you will lead for decades.",
+        "2026-06-12": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -297,8 +298,12 @@ def build_briefing():
                 "quote": "\u201cOnce upon a time, there was a model that existed only in whispers.\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_fromlabtolife-ai-claudefable5-share-7470394320831832064-YYiE/",
             },
+            "2026-06-12": {
+                "quote": "\u201cI asked a Fable to audit my second brain.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470727011125133314/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-11"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-12"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
