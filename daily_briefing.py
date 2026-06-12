@@ -113,6 +113,7 @@ def build_briefing():
         "2026-06-10": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
         "2026-06-11": "The cohort is not a classroom. It is a coordination network. Every connection you build here is a node in the system you will lead for decades.",
         "2026-06-12": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
+        "2026-06-13": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -123,7 +124,9 @@ def build_briefing():
 
     # NEXT ZOOM
     lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    if date_key >= "2026-06-11":
+    if date_key >= "2026-06-13":
+        lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Today 13 June @ 17:00 CET")
+    elif date_key >= "2026-06-11":
         lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Saturday 13 June @ 17:00 CET")
         lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/24/?wm=1&amp;mi=84732424623'>\u2192 Join Zoom Meeting</a> | <b>ID:</b> 847 3242 4623 | <b>Passcode:</b> AI_Sales_2")
     elif date_key >= "2026-05-31":
@@ -302,8 +305,12 @@ def build_briefing():
                 "quote": "\u201cI asked a Fable to audit my second brain.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470727011125133314/",
             },
+            "2026-06-13": {
+                "quote": "\u201cI asked a Fable to audit my second brain.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470727011125133314/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-12"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-13"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")

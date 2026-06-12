@@ -1036,6 +1036,34 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-13": {
+        "step": "Vanguard Leadership — Tribal Coordination Without Hierarchy",
+        "title": "Tribal Coordination Without Hierarchy",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The most powerful tribes do not have rigid hierarchies — they have clear roles, shared intent, and distributed authority. Coordination happens through trust, not control.",
+        "question": (
+            "Kapusta’s argument: the NEO era tribe coordinates without hierarchy — "
+            "through shared purpose, clear roles, and distributed authority. "
+            "The leader’s job is not to direct every action. "
+            "It is to maintain the conditions that make self-coordination possible. "
+            "Question: in your current team or Vanguard cohort, where is coordination breaking down "
+            "because it depends too heavily on one person directing or approving? "
+            "What would it take to distribute that authority — "
+            "and what conditions (trust, clarity of intent, shared standards) would need to be in place first?"
+        ),
+        "model_answer": (
+            "Hierarchy is a coordination mechanism — not the only one, and often not the best one. "
+            "It works when the person at the top has better information than everyone else. "
+            "In fast-moving, complex environments, they rarely do. "
+            "Tribal coordination works differently: the leader invests heavily upfront in shared purpose and clear intent, "
+            "then steps back and lets the tribe execute. "
+            "The failure mode is leaders who distribute authority without first investing in shared purpose — "
+            "the result is chaos, not coordination. "
+            "The sequence matters: purpose first, standards second, trust third, authority fourth. "
+            "Get the sequence right and the tribe can coordinate faster than any hierarchy. "
+            "Get it wrong and you just have a group with unclear reporting lines."
+        ),
+    },
     "2026-06-12": {
         "step": "Vanguard Leadership — Building the Tribe",
         "title": "Building the Tribe — The Five Conditions",
@@ -2776,7 +2804,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Surprise upset: GPT-5.5 beats Claude Fable 5 on brutal new Agents’ Last Exam benchmark",
+    "headline": "Microsoft’s open-source SkillOpt automatically upgrades AI agent skills without touching model weights",
     "source": "VentureBeat AI",
 }
 
