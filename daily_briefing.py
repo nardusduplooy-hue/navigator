@@ -28,10 +28,10 @@ with open("subscribers.json") as f:
 CAT = timezone(timedelta(hours=2))
 
 def today_str():
-    return datetime.now(CAT).strftime("%Y-%m-%d")
+    return "2026-06-14"  # DATE OVERRIDE — restore before commit
 
 def today_label():
-    return datetime.now(CAT).strftime("%A, %-d %B %Y")
+    return "Sunday, 14 June 2026"  # DATE OVERRIDE — restore before commit
 
 def wait_for_network(max_attempts=10, delay=15):
     """Wait until the Telegram API is reachable — handles Mac waking before network is ready."""
@@ -114,6 +114,7 @@ def build_briefing():
         "2026-06-11": "The cohort is not a classroom. It is a coordination network. Every connection you build here is a node in the system you will lead for decades.",
         "2026-06-12": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
         "2026-06-13": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
+        "2026-06-14": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -122,18 +123,30 @@ def build_briefing():
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
 
-    # NEXT ZOOM
-    lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-    if date_key >= "2026-06-13":
-        lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Today 13 June @ 17:00 CET")
-    elif date_key >= "2026-06-11":
-        lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Saturday 13 June @ 17:00 CET")
-        lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/24/?wm=1&amp;mi=84732424623'>\u2192 Join Zoom Meeting</a> | <b>ID:</b> 847 3242 4623 | <b>Passcode:</b> AI_Sales_2")
-    elif date_key >= "2026-05-31":
-        lines.append("• 🗓 Saturday 13 June @ 17:00 Belgrade/Bratislava/Ljubljana — AI in B2B Sales Module 2")
+    # NEXT ZOOM / UPCOMING SESSION
+    if date_key >= "2026-06-14":
+        lines.append("📅 <b>NEXT WEEKEND MARATHON — Sales Management</b>")
+        lines.append("<i>Prof. Primož Hvala</i>")
+        lines.append("")
+        lines.append("Three days. Deep dive into sales strategy, key account management, sales force leadership, and AI in sales. Success in sales depends more on managing your sales force than knowing all the tricks — and in the NEO era, AI is changing every layer of it.")
+        lines.append("")
+        lines.append("\u2022 \U0001f5d3 Friday 19 June @ 09:00 CET — through Sunday 21 June")
+        lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/20/?wm=1&amp;mi=89427239190'>\u2192 Join Zoom Meeting</a>")
+        lines.append("<b>Meeting ID:</b> 894 2723 9190 | <b>Passcode:</b> saleslive")
+        lines.append("")
     else:
-        lines.append("• 🗓 Saturday 30 May")
-    lines.append("")
+        lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+        if date_key >= "2026-06-13":
+            lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Today 13 June @ 17:00 CET")
+            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/24/?wm=1&amp;mi=84732424623'>\u2192 Join Zoom Meeting</a> | <b>ID:</b> 847 3242 4623 | <b>Passcode:</b> AI_Sales_2")
+        elif date_key >= "2026-06-11":
+            lines.append("• 🗓 <b>AI in B2B Sales — Module 2</b> | Saturday 13 June @ 17:00 CET")
+            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/24/?wm=1&amp;mi=84732424623'>\u2192 Join Zoom Meeting</a> | <b>ID:</b> 847 3242 4623 | <b>Passcode:</b> AI_Sales_2")
+        elif date_key >= "2026-05-31":
+            lines.append("• 🗓 Saturday 13 June @ 17:00 Belgrade/Bratislava/Ljubljana — AI in B2B Sales Module 2")
+        else:
+            lines.append("• 🗓 Saturday 30 May")
+        lines.append("")
 
     # CHASING JARVIS — Module 3 (weekday) or full recap (weekend)
     if date_key in ("2026-04-11", "2026-04-12"):
@@ -226,11 +239,13 @@ def build_briefing():
             lines.append("<b>📊 AI IN B2B SALES</b>")
             lines.append("<a href='https://cotrugli.online/wp-content/uploads/2026/04/Module1_AI_Force_Multiplier.pdf'>→ Module 1 — The Thesis &amp; Landscape: AI as Force Multiplier in B2B Sales</a>")
             lines.append("")
-        else:
+        elif date_key < "2026-06-14":
             lines.append("📊 <b>AI IN B2B SALES</b>")
             lines.append("<i>Delivered by Saša Pavlaković</i>")
             lines.append("")
-            if date_key >= "2026-06-11":
+            if date_key >= "2026-06-14":
+                pass  # Module 2 complete
+            elif date_key >= "2026-06-11":
                 lines.append("\U0001f4ca <b>MODULE 2 \u2014 Individual Augmentation: Your Personal AI Sales Stack</b>")
                 lines.append("<i>Saša Pavlaković</i>")
                 lines.append("")
@@ -309,8 +324,12 @@ def build_briefing():
                 "quote": "\u201cI asked a Fable to audit my second brain.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470727011125133314/",
             },
+            "2026-06-14": {
+                "quote": "\u201cThe US government just pulled Fable 5 and Mythos 5 from every non-American workflow. Overnight. Without warning.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_the-us-government-just-pulled-fable-5-and-share-7471438584655441920--AWk/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-13"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-14"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -318,8 +337,10 @@ def build_briefing():
         lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
         lines.append("")
 
-    # SALES MANAGEMENT WEEKEND MARATHON — from 3 June onwards
-    if date_key >= "2026-06-03":
+    # SALES MANAGEMENT WEEKEND MARATHON — shown in zoom slot from 14 June onwards
+    if date_key >= "2026-06-14":
+        pass  # Already shown in zoom slot above
+    elif date_key >= "2026-06-03":
         lines.append("📅 <b>NEXT WEEKEND MARATHON — Sales Management</b>")
         lines.append("<i>Prof. Primo\u017e Hvala</i>")
         lines.append("")

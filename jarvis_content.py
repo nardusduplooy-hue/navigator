@@ -1036,6 +1036,36 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-14": {
+        "step": "Vanguard Leadership — The Compounding Tribe",
+        "title": "The Compounding Tribe — How Trust Creates Exponential Returns",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Trust compounds. Each interaction that builds trust makes the next cheaper, faster, and more powerful. This is not soft. This is structural competitive advantage.",
+        "question": (
+            "Kapusta’s insight: trust is not a soft value — it is a structural competitive advantage that compounds over time. "
+            "The tribe that has been building trust for two years can coordinate in minutes "
+            "what a low-trust group takes weeks to negotiate. "
+            "Question: think about the highest-trust relationship you have in your professional network — "
+            "where coordination is fast, friction is low, and you can move without extensive explanation. "
+            "What built that trust? What specific behaviours, over what period of time, created it? "
+            "And where in your current Vanguard work are you underinvesting in trust-building "
+            "that will cost you coordination speed later?"
+        ),
+        "model_answer": (
+            "Trust is built in small moments, not grand gestures. "
+            "The behaviours that compound into high-trust relationships are: "
+            "doing what you say you will do, consistently and without being chased; "
+            "being honest about what you don’t know rather than performing confidence; "
+            "showing up for others when it is inconvenient; "
+            "and holding standards even when no one is watching. "
+            "None of these are dramatic. All of them compound. "
+            "The practical implication for the Vanguard cohort: "
+            "every commitment you make and keep is a trust deposit. "
+            "Every commitment you make and don’t keep is a withdrawal with interest. "
+            "The cohort that compounds trust over the next two years will coordinate with a speed and efficiency "
+            "that low-trust groups cannot replicate — regardless of how smart the individuals are."
+        ),
+    },
     "2026-06-13": {
         "step": "Vanguard Leadership — Tribal Coordination Without Hierarchy",
         "title": "Tribal Coordination Without Hierarchy",
@@ -2804,7 +2834,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Microsoft’s open-source SkillOpt automatically upgrades AI agent skills without touching model weights",
+    "headline": "Kimi K2.7-Code cuts thinking tokens 30% — but practitioners say the benchmarks don’t check out",
     "source": "VentureBeat AI",
 }
 
