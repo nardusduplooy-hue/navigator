@@ -28,10 +28,10 @@ with open("subscribers.json") as f:
 CAT = timezone(timedelta(hours=2))
 
 def today_str():
-    return "2026-06-14"  # DATE OVERRIDE — restore before commit
+    return datetime.now(CAT).strftime("%Y-%m-%d")
 
 def today_label():
-    return "Sunday, 14 June 2026"  # DATE OVERRIDE — restore before commit
+    return datetime.now(CAT).strftime("%A, %-d %B %Y")
 
 def wait_for_network(max_attempts=10, delay=15):
     """Wait until the Telegram API is reachable — handles Mac waking before network is ready."""
