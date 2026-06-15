@@ -28,10 +28,10 @@ with open("subscribers.json") as f:
 CAT = timezone(timedelta(hours=2))
 
 def today_str():
-    return datetime.now(CAT).strftime("%Y-%m-%d")
+    return "2026-06-16"  # DATE OVERRIDE — restore before commit
 
 def today_label():
-    return datetime.now(CAT).strftime("%A, %-d %B %Y")
+    return "Tuesday, 16 June 2026"  # DATE OVERRIDE — restore before commit
 
 def wait_for_network(max_attempts=10, delay=15):
     """Wait until the Telegram API is reachable — handles Mac waking before network is ready."""
@@ -115,6 +115,8 @@ def build_briefing():
         "2026-06-12": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
         "2026-06-13": "The tribes that endure are not built on enthusiasm — they are built on reliability. Show up. Every time. That is the whole strategy.",
         "2026-06-14": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
+        "2026-06-15": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
+        "2026-06-16": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -328,13 +330,36 @@ def build_briefing():
                 "quote": "\u201cThe US government just pulled Fable 5 and Mythos 5 from every non-American workflow. Overnight. Without warning.\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_the-us-government-just-pulled-fable-5-and-share-7471438584655441920--AWk/",
             },
+            "2026-06-15": {
+                "quote": "\u201cTwo years of building with AI coding agents.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470009990666248193/",
+            },
+            "2026-06-16": {
+                "quote": "\u201cOrganisation of Tomorrow (\u00d8\u00d8T).\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472198719535415296/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-14"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-16"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
         lines.append(cj["quote"])
         lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+        lines.append("")
+
+    # MODULE 2 ASSIGNMENT — from 15 June onwards
+    if date_key >= "2026-06-15":
+        lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
+        lines.append("<i>Saša Pavlaković</i>")
+        lines.append("")
+        lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
+        lines.append("")
+        lines.append("\u2022 Include the exact prompts you used")
+        lines.append("\u2022 Show the real output (anonymised if needed)")
+        lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
+        lines.append("")
+        lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
+        lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
         lines.append("")
 
     # SALES MANAGEMENT WEEKEND MARATHON — shown in zoom slot from 14 June onwards

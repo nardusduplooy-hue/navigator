@@ -1036,6 +1036,66 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-16": {
+        "step": "Vanguard Leadership — The Three Patterns",
+        "title": "The Three Patterns — Wolf, Sheep, Sheepdog in Real Life",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Wolves extract. Sheep follow. Sheepdogs protect and build. These are not metaphors — they are observable patterns in real organisations. Which pattern are you running?",
+        "question": (
+            "Kapusta identifies three observable patterns in real organisations: "
+            "Wolves — high short-term output, extractive relationships, reputation decay over time. "
+            "Sheep — risk-avoidance, followership, unable to hold standards under pressure. "
+            "Sheepdogs — protective, standard-holding, long-term builders who make others safer and stronger. "
+            "Question: looking honestly at your current behaviour in the Vanguard cohort or your workplace — "
+            "which pattern are you running most often? "
+            "And more importantly: in the moments when the standard is under pressure and it would be easy to let it slide — "
+            "which pattern shows up?"
+        ),
+        "model_answer": (
+            "Most people identify as sheepdogs when the question is abstract. "
+            "The honest answer only comes when you look at specific moments under pressure. "
+            "Wolf behaviour is easy to spot in others and easy to rationalise in yourself: "
+            "‘I was just being efficient’, ‘I needed to move fast’, ‘the relationship will recover’. "
+            "Sheep behaviour is harder to own: it shows up as silence when a standard is being violated, "
+            "as agreement with the room rather than honest disagreement, "
+            "as letting someone else hold the line so you don’t have to. "
+            "Sheepdog behaviour is identifiable by one simple test: "
+            "did you make the people around you safer, stronger, or more capable by being there? "
+            "Not occasionally. Not when it was convenient. Consistently. "
+            "That is the pattern Kapusta is asking you to build — and the Vanguard cohort is the training ground."
+        ),
+    },
+    "2026-06-15": {
+        "step": "Vanguard Leadership — The Vanguard Assessment",
+        "title": "What You Now Possess — The Vanguard Assessment",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Kapusta pauses to take inventory. You have the philosophy, the battlefield awareness, and the three forces. The question is no longer whether you understand the framework. It is whether you are living it.",
+        "question": (
+            "Kapusta pauses mid-book to take inventory: "
+            "you have the philosophical foundation (Cotruglian ethics, craft mindset, reputational capital), "
+            "the battlefield awareness (NEO dynamics, military doctrine, the three-year wolf collapse pattern), "
+            "and the three forces (fear as data, AI as force multiplier, tribe as coordination). "
+            "The question is no longer whether you understand the framework. It is whether you are living it. "
+            "Question: of the three forces — fear processing, AI augmentation, tribal coordination — "
+            "which one are you most genuinely applying in your current work or Vanguard project? "
+            "Which one are you still treating as an interesting idea rather than a daily practice? "
+            "And what is the one concrete change that would shift it from concept to behaviour?"
+        ),
+        "model_answer": (
+            "The gap between understanding a framework and living it is always a behavioural gap, not a knowledge gap. "
+            "Most leaders can articulate all three forces clearly. "
+            "Far fewer have built them into their daily operating rhythm. "
+            "The test is simple: can you point to a specific decision you made this week "
+            "where you processed fear rather than suppressing it? "
+            "A specific task where AI augmented your judgment rather than replacing your thinking? "
+            "A specific moment where you acted for the tribe without keeping score? "
+            "If yes to all three — you are living the framework. "
+            "If not — the gap is not a knowledge problem. "
+            "It is a habit problem. "
+            "Pick the weakest force. Design one daily practice around it. Run it for two weeks. "
+            "That is the Vanguard assessment in action."
+        ),
+    },
     "2026-06-14": {
         "step": "Vanguard Leadership — The Compounding Tribe",
         "title": "The Compounding Tribe — How Trust Creates Exponential Returns",
@@ -2822,7 +2882,7 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
+    "url": "https://www.linkedin.com/posts/cotrugli_faster-neo-anthropic-ugcPost-7472223795882307584-Y2tj/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
     "title": "The Sheep Who Wanted Their Dreams Back",
     "description": "Kapusta asks a sharp question: are you leading, or are you waiting to be led? The sheep who wanted their dreams back is the leader who outsourced their vision, their standards, and their courage — and then wondered why nothing changed. In the NEO era, the ones who move first do not wait for permission. Read it.",
 }
@@ -2834,7 +2894,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Kimi K2.7-Code cuts thinking tokens 30% — but practitioners say the benchmarks don’t check out",
+    "headline": "Anthropic blocks all public access to Claude Fable 5, Mythos 5 following US government order — what enterprises should do",
     "source": "VentureBeat AI",
 }
 
