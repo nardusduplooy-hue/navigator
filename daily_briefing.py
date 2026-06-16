@@ -117,6 +117,7 @@ def build_briefing():
         "2026-06-14": "Every great tribe has a moment where the work gets hard and the easy thing is to slow down. The vanguard does not slow down. It locks in.",
         "2026-06-15": "The vanguard standard is not set in the big moments. It is set in the small ones — the ones no one is watching. Hold it anyway.",
         "2026-06-16": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
+        "2026-06-17": "The vanguard does not wait for permission to lead. It moves first, creates clarity for others, and pulls the group forward.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -338,8 +339,12 @@ def build_briefing():
                 "quote": "\u201cOrganisation of Tomorrow (\u00d8\u00d8T).\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472198719535415296/",
             },
+            "2026-06-17": {
+                "quote": "\u201cI spent 18 months building something I had no name for.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_i-spent-18-months-building-something-i-had-share-7472570244776157185-Hd-z/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-16"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-17"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")

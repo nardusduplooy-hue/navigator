@@ -1036,6 +1036,35 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-17": {
+        "step": "Vanguard Leadership — Recognising Wolf Behaviour",
+        "title": "Recognising Wolf Behaviour — Before It Destroys the Tribe",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Wolf behaviour always looks like leadership until the cost appears. The Vanguard leader's job is to recognise the pattern before it compounds — and have the courage to name it.",
+        "question": (
+            "Kapusta describes wolf behaviour as having a consistent signature: "
+            "short-term wins, impressive metrics, charismatic delivery — "
+            "but behind the numbers, rising turnover, strained partnerships, and erosion of psychological safety. "
+            "The people closest to the wolf always know first. "
+            "Question: have you ever watched wolf behaviour operate in a team or organisation — "
+            "and said nothing? "
+            "What made it hard to name? And what would a sheepdog have done differently in that moment?"
+        ),
+        "model_answer": (
+            "Silence in the face of wolf behaviour is not neutrality — it is complicity. "
+            "The reason most people stay silent is not cowardice; it is calculation. "
+            "The wolf is usually producing results. Naming the pattern feels risky when the numbers look good. "
+            "But Kapusta's point is precisely that the cost is deferred, not avoided. "
+            "By the time the numbers turn, the damage to the team is already done. "
+            "A sheepdog reads the leading indicators — not the lagging ones. "
+            "Turnover in the people the wolf works with most closely. "
+            "Relationships that quietly stop functioning. "
+            "The absence of honest disagreement in meetings. "
+            "Naming it requires two things: clarity about what you are seeing, "
+            "and enough standing in the tribe to be heard. "
+            "Both are built before the moment of crisis — not in it."
+        ),
+    },
     "2026-06-16": {
         "step": "Vanguard Leadership — The Three Patterns",
         "title": "The Three Patterns — Wolf, Sheep, Sheepdog in Real Life",
@@ -2882,9 +2911,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_faster-neo-anthropic-ugcPost-7472223795882307584-Y2tj/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
-    "title": "The Sheep Who Wanted Their Dreams Back",
-    "description": "Kapusta asks a sharp question: are you leading, or are you waiting to be led? The sheep who wanted their dreams back is the leader who outsourced their vision, their standards, and their courage — and then wondered why nothing changed. In the NEO era, the ones who move first do not wait for permission. Read it.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472223892380561408/",
+    "title": "The Three Patterns — Wolf, Sheep, Sheepdog in Real Life",
+    "description": "Kapusta maps three observable patterns in real organisations: wolves extract short-term output and decay in reputation over time; sheep avoid risk and follow the room; sheepdogs hold the standard, protect what matters, and build for the long term. The question is not which one you admire. It is which one your culture rewards — because that is what it gets more of.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
