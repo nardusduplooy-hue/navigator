@@ -1036,6 +1036,31 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-18": {
+        "step": "Chasing Jarvis — The Hard Limit on Agentic Stacks",
+        "title": "The Hard Limit Was Never the Model",
+        "url": "https://www.linkedin.com/posts/talirezun_the-hard-limit-on-my-production-agentic-stack-share-7472948269506252800-uSKc/",
+        "focus": "When your agentic stack hits a ceiling, where do you look first? Most people look at the model. Dr. Tali Režun argues the constraint is almost never there.",
+        "question": (
+            "Dr. Tali Režun states that the hard limit on his production agentic stack was never the model intelligence. "
+            "Question: in any system you have built or operated — whether an AI workflow, a sales process, or a team — "
+            "where did you assume the constraint was, and where did you eventually find it? "
+            "What does this tell you about how leaders should diagnose bottlenecks in complex systems?"
+        ),
+        "model_answer": (
+            "The instinct to blame the most visible component is almost always wrong. "
+            "In agentic AI systems, the model gets blamed because it is the most legible part — "
+            "it speaks, it responds, it produces output. "
+            "But the real constraints are usually invisible: "
+            "poor context design, ambiguous instructions, weak memory architecture, "
+            "or handoff failures between agents that no single component owns. "
+            "The same pattern appears in sales teams: the rep gets blamed for low conversion "
+            "when the constraint is actually the lead quality, the ICP definition, or the handoff from marketing. "
+            "The Vanguard lesson here is diagnostic discipline — "
+            "map the full system before you assign the bottleneck, "
+            "and be especially suspicious of the explanation that requires the least structural change."
+        ),
+    },
     "2026-06-17": {
         "step": "Vanguard Leadership — Recognising Wolf Behaviour",
         "title": "Recognising Wolf Behaviour — Before It Destroys the Tribe",
@@ -2911,9 +2936,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472223892380561408/",
-    "title": "The Three Patterns — Wolf, Sheep, Sheepdog in Real Life",
-    "description": "Kapusta maps three observable patterns in real organisations: wolves extract short-term output and decay in reputation over time; sheep avoid risk and follow the room; sheepdogs hold the standard, protect what matters, and build for the long term. The question is not which one you admire. It is which one your culture rewards — because that is what it gets more of.",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
+    "title": "The Sheepdog’s Burden — Leading When Nobody Asked You To",
+    "description": "The sheepdog does not wait for a title before acting like a leader. Kapusta describes the burden not as one of authority, but of seeing what needs to be done and doing it anyway — especially when nobody gave you permission and everyone else is looking away. In the NEO era, this is the pattern that builds tribes worth belonging to.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -2923,7 +2948,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic blocks all public access to Claude Fable 5, Mythos 5 following US government order — what enterprises should do",
+    "headline": "Claude just got a major upgrade — Anthropic's new model sets a new bar for reasoning and real-world task completion",
     "source": "VentureBeat AI",
 }
 
