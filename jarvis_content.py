@@ -1036,6 +1036,34 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-19": {
+        "step": "Vanguard Leadership — Long-Term Relationships as Strategic Infrastructure",
+        "title": "Your Longest Relationships Are Your Most Valuable Assets",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "In the NEO era, trust accumulated over years is a competitive moat. Kapusta argues that protecting long-term relationships is not soft — it is strategic infrastructure.",
+        "question": (
+            "Kapusta argues that a ten-year relationship requires almost no transaction costs — "
+            "you know how each other thinks, you trust each other's word, you coordinate in minutes. "
+            "A new relationship requires months of friction before you can operate at the same level. "
+            "Question: think of your most valuable long-term relationship in a professional context. "
+            "What specific behaviours built that level of trust over time? "
+            "And honestly — are you actively investing in it right now, or are you drawing on it without depositing?"
+        ),
+        "model_answer": (
+            "Most people can name their most important long-term professional relationship immediately. "
+            "Fewer can describe what they have done for it in the last 30 days. "
+            "Kapusta's point is that these relationships are strategic assets — "
+            "which means they require active management, not just passive maintenance. "
+            "The behaviours that build them are not dramatic: "
+            "consistent follow-through, honest feedback even when it is uncomfortable, "
+            "showing up when there is no immediate benefit to you, "
+            "and remembering what matters to the other person between transactions. "
+            "In sales specifically, long-term client relationships are the difference between "
+            "a book of business that compounds and one that churns. "
+            "The question is not whether you value them — everyone does in theory. "
+            "The question is whether your calendar reflects that value."
+        ),
+    },
     "2026-06-18": {
         "step": "Chasing Jarvis — The Hard Limit on Agentic Stacks",
         "title": "The Hard Limit Was Never the Model",
@@ -2948,7 +2976,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude just got a major upgrade — Anthropic's new model sets a new bar for reasoning and real-world task completion",
+    "headline": "AWS enters the context layer race with a graph that learns from agents, not manual curation",
     "source": "VentureBeat AI",
 }
 

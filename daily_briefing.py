@@ -119,6 +119,7 @@ def build_briefing():
         "2026-06-16": "Exponential returns don’t come from lone stars — they come from tribes that build together, trust each other, and refuse to stop. Your team is your compounding force.",
         "2026-06-17": "The vanguard does not wait for permission to lead. It moves first, creates clarity for others, and pulls the group forward.",
         "2026-06-18": "Tribes don’t wait to be built. They are chosen — one decision, one contribution, one standard held at a time.",
+        "2026-06-19": "Not in a team yet? Put up your hand — reach out to a Chief and get involved.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -129,7 +130,9 @@ def build_briefing():
 
     # NEXT ZOOM / UPCOMING SESSION
     if date_key >= "2026-06-14":
-        if date_key >= "2026-06-18":
+        if date_key == "2026-06-19":
+            lines.append("📅 <b>THIS WEEKEND MARATHON STARTING TODAY — Sales Management</b>")
+        elif date_key >= "2026-06-18":
             lines.append("📅 <b>THIS WEEKEND MARATHON — Sales Management</b>")
         else:
             lines.append("📅 <b>NEXT WEEKEND MARATHON — Sales Management</b>")
@@ -358,8 +361,12 @@ def build_briefing():
                 "quote": "\u201cThe hard limit on my production agentic stack was never the model intelligence.\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_the-hard-limit-on-my-production-agentic-stack-share-7472948269506252800-uSKc/",
             },
+            "2026-06-19": {
+                "quote": "\u201cCan AI finally democratise the law?\u201d",
+                "url": "https://talirezun.substack.com/p/law-code-can-ai-finally-democratise",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-18"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-19"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
