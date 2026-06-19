@@ -120,6 +120,7 @@ def build_briefing():
         "2026-06-17": "The vanguard does not wait for permission to lead. It moves first, creates clarity for others, and pulls the group forward.",
         "2026-06-18": "Tribes don’t wait to be built. They are chosen — one decision, one contribution, one standard held at a time.",
         "2026-06-19": "Not in a team yet? Put up your hand — reach out to a Chief and get involved.",
+        "2026-06-20": "The standard you hold on Day 2 — when the energy dips and the novelty is gone — is the one that actually defines your tribe.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -132,6 +133,10 @@ def build_briefing():
     if date_key >= "2026-06-14":
         if date_key == "2026-06-19":
             lines.append("📅 <b>THIS WEEKEND MARATHON STARTING TODAY — Sales Management</b>")
+        elif date_key == "2026-06-20":
+            lines.append("📅 <b>THIS WEEKEND MARATHON — DAY 2 — Sales Management</b>")
+        elif date_key == "2026-06-21":
+            lines.append("📅 <b>THIS WEEKEND MARATHON — FINAL DAY — Sales Management</b>")
         elif date_key >= "2026-06-18":
             lines.append("📅 <b>THIS WEEKEND MARATHON — Sales Management</b>")
         else:
@@ -365,8 +370,12 @@ def build_briefing():
                 "quote": "\u201cCan AI finally democratise the law?\u201d",
                 "url": "https://talirezun.substack.com/p/law-code-can-ai-finally-democratise",
             },
+            "2026-06-20": {
+                "quote": "\u201cThe best coding model in the world lasted three days.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473417268882780164/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-19"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-20"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -418,8 +427,10 @@ def build_briefing():
             "2026-06-16": {"quote": "“Organisation of Tomorrow (ØØT).”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7472198719535415296/"},
             "2026-06-17": {"quote": "“I spent 18 months building something I had no name for.”", "url": "https://www.linkedin.com/posts/talirezun_i-spent-18-months-building-something-i-had-share-7472570244776157185-Hd-z/"},
             "2026-06-18": {"quote": "“The hard limit on my production agentic stack was never the model intelligence.”", "url": "https://www.linkedin.com/posts/talirezun_the-hard-limit-on-my-production-agentic-stack-share-7472948269506252800-uSKc/"},
+            "2026-06-19": {"quote": "“Can AI finally democratise the law?”", "url": "https://talirezun.substack.com/p/law-code-can-ai-finally-democratise"},
+            "2026-06-20": {"quote": "“The best coding model in the world lasted three days.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473417268882780164/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-18"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-20"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

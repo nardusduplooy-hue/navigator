@@ -1036,6 +1036,32 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-20": {
+        "step": "Vanguard Leadership — Ethics Under Pressure",
+        "title": "Ethics Under Pressure — When It Is Most Expensive and Most Important",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Cotruglian ethics are easy when the cost is low. They are tested when maintaining them is expensive — when the truth costs you a deal, when your standard means losing the race.",
+        "question": (
+            "Kapusta is direct: the value of your ethics is determined entirely by how you behave when they are expensive. "
+            "Ethical standards that bend under pressure are not standards — they are preferences. "
+            "Question: recall a specific moment when holding your ethical standard cost you something real — "
+            "a deal, a relationship, a promotion, or comfort in the room. "
+            "What did you do? And looking back — do you think the standard held, bent, or broke? "
+            "What does that tell you about where your actual line is?"
+        ),
+        "model_answer": (
+            "Most people have a story they tell about their ethics — and a quieter story they don't tell. "
+            "The first story is usually true. The second is where the real data is. "
+            "Kapusta's framing is deliberately uncomfortable: "
+            "he is not asking whether you have values, he is asking what those values cost you. "
+            "A standard that has never been tested under real pressure is an untested hypothesis. "
+            "The Vanguard leader does not wait for a crisis to discover where their line is — "
+            "they identify it in advance, make it explicit to themselves and their team, "
+            "and build the habits that make holding it automatic rather than heroic. "
+            "Ethics that require extraordinary willpower to maintain will eventually fail. "
+            "Ethics built into your systems and defaults are the ones that survive."
+        ),
+    },
     "2026-06-19": {
         "step": "Vanguard Leadership — Long-Term Relationships as Strategic Infrastructure",
         "title": "Your Longest Relationships Are Your Most Valuable Assets",
@@ -2976,7 +3002,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "AWS enters the context layer race with a graph that learns from agents, not manual curation",
+    "headline": "Anthropic's Claude Code Artifacts update brings live, shared dashboards and interactive workspaces to enterprises",
     "source": "VentureBeat AI",
 }
 
