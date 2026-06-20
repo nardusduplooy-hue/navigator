@@ -121,6 +121,7 @@ def build_briefing():
         "2026-06-18": "Tribes don’t wait to be built. They are chosen — one decision, one contribution, one standard held at a time.",
         "2026-06-19": "Not in a team yet? Put up your hand — reach out to a Chief and get involved.",
         "2026-06-20": "The standard you hold on Day 2 — when the energy dips and the novelty is gone — is the one that actually defines your tribe.",
+        "2026-06-21": "Finish what you started. The final day is not a formality — it is where commitment becomes identity.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -374,8 +375,12 @@ def build_briefing():
                 "quote": "\u201cThe best coding model in the world lasted three days.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473417268882780164/",
             },
+            "2026-06-21": {
+                "quote": "\u201cI stopped trying to keep up with support emails. I built an agent to do it for me.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473784782359990272/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-20"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-21"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -429,8 +434,9 @@ def build_briefing():
             "2026-06-18": {"quote": "“The hard limit on my production agentic stack was never the model intelligence.”", "url": "https://www.linkedin.com/posts/talirezun_the-hard-limit-on-my-production-agentic-stack-share-7472948269506252800-uSKc/"},
             "2026-06-19": {"quote": "“Can AI finally democratise the law?”", "url": "https://talirezun.substack.com/p/law-code-can-ai-finally-democratise"},
             "2026-06-20": {"quote": "“The best coding model in the world lasted three days.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473417268882780164/"},
+            "2026-06-21": {"quote": "“I stopped trying to keep up with support emails. I built an agent to do it for me.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473784782359990272/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-20"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-21"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

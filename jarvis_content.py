@@ -1036,6 +1036,33 @@ TALI_STEPS = {
             "That is the Cotruglian frame. Build accordingly."
         ),
     },
+    "2026-06-21": {
+        "step": "Vanguard Leadership — Stronger Together: The Mathematics of Tribal Advantage",
+        "title": "Individual vs Tribal Compounding — The Maths That Changes Everything",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Individual capability compounds slowly. Tribal capability compounds exponentially. This is not a motivational claim — it is a structural one. One person's breakthrough becomes the tribe's breakthrough.",
+        "question": (
+            "Kapusta describes tribal coordination as a structural advantage, not a cultural one: "
+            "when one member of a tribe makes a breakthrough, has a key insight, or opens a door, "
+            "every other member of the tribe gains access to that advantage immediately. "
+            "No individual can replicate this compounding alone. "
+            "Question: looking at your Vanguard cohort right now — "
+            "is it functioning as a tribe or as a group of individuals who happen to be in the same programme? "
+            "What is one specific thing you could do this week to shift it toward genuine tribal coordination?"
+        ),
+        "model_answer": (
+            "The honest answer for most cohorts is: somewhere in between, and closer to the group end than people like to admit. "
+            "The markers of genuine tribal coordination are specific: "
+            "members proactively share opportunities, not just respond when asked. "
+            "Members give honest feedback, not just encouragement. "
+            "Members invest in each other's success as if it were their own — because in a networked environment, it actually is. "
+            "The shift from group to tribe does not happen automatically with time. "
+            "It requires deliberate acts of contribution: sharing a contact, flagging a relevant piece of work, "
+            "giving a direct and honest critique when someone needs it. "
+            "One concrete action this week: find one thing a cohort member is working on "
+            "and contribute something genuinely useful to it — without being asked."
+        ),
+    },
     "2026-06-20": {
         "step": "Vanguard Leadership — Ethics Under Pressure",
         "title": "Ethics Under Pressure — When It Is Most Expensive and Most Important",
@@ -3002,7 +3029,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's Claude Code Artifacts update brings live, shared dashboards and interactive workspaces to enterprises",
+    "headline": "Anthropic releases Claude for Education — purpose-built AI for universities and students worldwide",
     "source": "VentureBeat AI",
 }
 
