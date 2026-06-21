@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "Stronger Together — The Mathematics of Tribal Advantage",
+        "title": "The Tribe Versus the Team — A Critical Distinction",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,32 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-22": {
+        "step": "Vanguard Leadership — The Tribe Versus the Team",
+        "title": "Teams Are Efficient. Tribes Are Resilient.",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Teams are formed for tasks and dissolve when the project ends. Tribes are formed around identity and outlast any single objective. In volatile environments, only tribes have the resilience to adapt faster than the environment changes.",
+        "question": (
+            "Kapusta draws a sharp distinction: teams coordinate through process, tribes coordinate through trust. "
+            "Teams are sufficient in stable environments. "
+            "In volatile, exponential, orchestrated environments, only tribes have the resilience to adapt faster than the environment changes. "
+            "Question: think about the most effective group you have ever worked in. "
+            "Was it functioning as a team or a tribe? "
+            "What was the specific difference you felt — and what made trust the coordination mechanism rather than process?"
+        ),
+        "model_answer": (
+            "The difference between a team and a tribe is most obvious under pressure. "
+            "Teams slow down when the process breaks — they escalate, wait for clarity, look for the rulebook. "
+            "Tribes accelerate when the process breaks — members already know what matters, "
+            "what each other will do, and what the standard is. "
+            "Trust as a coordination mechanism means you do not need to communicate everything explicitly. "
+            "You can move fast because you have already built shared context, shared values, and shared history. "
+            "In the Vanguard cohort, the question is whether three days of marathon sessions "
+            "built any of that shared context — or whether it remained a group of individuals "
+            "sitting in the same Zoom room. "
+            "The honest answer reveals where the tribe-building work still needs to happen."
         ),
     },
     "2026-06-21": {
@@ -3029,7 +3055,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic releases Claude for Education — purpose-built AI for universities and students worldwide",
+    "headline": "Anthropic launches Claude Corps — $150M fellowship placing 1,000 early-career AI workers inside nonprofits across the US",
     "source": "VentureBeat AI",
 }
 
