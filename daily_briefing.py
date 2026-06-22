@@ -70,7 +70,8 @@ def send_message(chat_id, text):
 
 
 def fetch_ai_news():
-    EXCLUDE_KEYWORDS = ["langflow", "langchain", "langgraph", "attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware"]
+    REQUIRE_KEYWORDS = ["anthropic", "claude"]
+    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak"]
     try:
         url = 'https://feeds.feedburner.com/venturebeat/SZYF'
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -80,9 +81,12 @@ def fetch_ai_news():
         for item in items:
             title = item.find('title').text or ""
             link = item.find('link').text or ""
-            if not any(kw in title.lower() for kw in EXCLUDE_KEYWORDS):
+            title_lower = title.lower()
+            has_required = any(kw in title_lower for kw in REQUIRE_KEYWORDS)
+            has_excluded = any(kw in title_lower for kw in EXCLUDE_KEYWORDS)
+            if has_required and not has_excluded:
                 return {"headline": title, "url": link, "source": "VentureBeat AI"}
-        # All items filtered — use fallback
+        # No matching item — use fallback
         return {"headline": AI_NEWS_TODAY["headline"], "url": "", "source": AI_NEWS_TODAY["source"]}
     except Exception:
         return {"headline": AI_NEWS_TODAY["headline"], "url": "", "source": AI_NEWS_TODAY["source"]}
@@ -128,6 +132,7 @@ def build_briefing():
         "2026-06-20": "The standard you hold on Day 2 — when the energy dips and the novelty is gone — is the one that actually defines your tribe.",
         "2026-06-21": "Finish what you started. The final day is not a formality — it is where commitment becomes identity.",
         "2026-06-22": "The cohort that debriefs together after a hard session learns faster than the one that simply moves on. What did you take from the marathon?",
+        "2026-06-23": "Trust is not declared. It is demonstrated — one delivered promise at a time. What will you deliver today?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -395,8 +400,12 @@ def build_briefing():
                 "quote": "\u201cThe team is not the bottleneck. The trust is.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474142368551976960/",
             },
+            "2026-06-23": {
+                "quote": "\u201cEveryone is talking about loop engineering. Most of them are describing something that already existed.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-22"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-23"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -412,9 +421,6 @@ def build_briefing():
             lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
         lines.append("<i>Saša Pavlaković</i>")
         lines.append("")
-        if date_key >= "2026-06-18":
-            lines.append("\U0001f4fa <b>RECORDING OF SESSION 2 NOW AVAILABLE</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
-            lines.append("")
         lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
         lines.append("")
         lines.append("\u2022 Include the exact prompts you used")
@@ -452,8 +458,9 @@ def build_briefing():
             "2026-06-20": {"quote": "“The best coding model in the world lasted three days.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473417268882780164/"},
             "2026-06-21": {"quote": "“I stopped trying to keep up with support emails. I built an agent to do it for me.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473784782359990272/"},
             "2026-06-22": {"quote": "“The team is not the bottleneck. The trust is.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474142368551976960/"},
+            "2026-06-23": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-22"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-23"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

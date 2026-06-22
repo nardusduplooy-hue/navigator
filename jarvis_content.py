@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "The Tribe Versus the Team — A Critical Distinction",
+        "title": "Building Trust at Speed — The NEO Era Challenge",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,34 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-23": {
+        "step": "Vanguard Leadership — Building Trust at Speed",
+        "title": "Three Accelerants: Transparency, Vulnerability, Follow-Through",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Traditional trust-building takes years. The NEO era demands trust at speed. Kapusta identifies three accelerants that compress the timeline without cutting corners.",
+        "question": (
+            "Kapusta identifies three accelerants for building trust faster than the environment changes: "
+            "radical transparency — share your real thinking, not the polished version; "
+            "demonstrated vulnerability — show where you are genuinely uncertain; "
+            "and consistent follow-through — do what you said, every time. "
+            "Question: which of these three is hardest for you personally — and why? "
+            "And in the Vanguard cohort specifically, which accelerant is most absent right now?"
+        ),
+        "model_answer": (
+            "Most high-performers struggle most with demonstrated vulnerability — "
+            "not because they lack self-awareness, but because the environments that rewarded them "
+            "punished uncertainty. Showing where you don't know something felt like a liability. "
+            "In the NEO era, this is exactly backwards: "
+            "the leader who shares genuine uncertainty invites collaboration; "
+            "the one who projects false confidence invites compliance. "
+            "Consistent follow-through is the easiest to understand and the hardest to sustain — "
+            "it requires no talent, only discipline, and it compounds faster than any other trust signal. "
+            "One missed commitment undoes several kept ones. "
+            "In the Vanguard cohort, the accelerant most commonly absent is radical transparency: "
+            "members share polished thinking in sessions and keep the real questions private. "
+            "The tribe that learns to share the unpolished version learns faster."
         ),
     },
     "2026-06-22": {
@@ -3055,7 +3083,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launches Claude Corps — $150M fellowship placing 1,000 early-career AI workers inside nonprofits across the US",
+    "headline": "Claude Design hits one million users in its first week — Anthropic's AI-native design tool is reshaping how teams build products",
     "source": "VentureBeat AI",
 }
 
