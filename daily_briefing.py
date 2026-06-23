@@ -148,6 +148,8 @@ def build_briefing():
         lines.append("<i>Dr. Zrinko Petener</i>")
         lines.append("")
         lines.append("\u2022 \U0001f5d3 Saturday 27 June @ 17:00 CET")
+        lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
+        lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
         lines.append("")
     elif date_key >= "2026-06-14":
         if date_key == "2026-06-19":
@@ -173,6 +175,8 @@ def build_briefing():
             lines.append("<i>Dr. Zrinko Petener</i>")
             lines.append("")
             lines.append("• 🗓 Saturday 27 June @ 17:00 CET")
+            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
+            lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
             lines.append("")
     else:
         lines.append("📅 <b>NEXT ZOOM SESSION</b>")
