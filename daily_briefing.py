@@ -133,6 +133,7 @@ def build_briefing():
         "2026-06-21": "Finish what you started. The final day is not a formality — it is where commitment becomes identity.",
         "2026-06-22": "The cohort that debriefs together after a hard session learns faster than the one that simply moves on. What did you take from the marathon?",
         "2026-06-23": "Trust is not declared. It is demonstrated — one delivered promise at a time. What will you deliver today?",
+        "2026-06-24": "Your network is not a list of contacts. It is the accumulated record of every promise kept, every standard held, every person you showed up for.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -404,8 +405,12 @@ def build_briefing():
                 "quote": "\u201cEveryone is talking about loop engineering. Most of them are describing something that already existed.\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/",
             },
+            "2026-06-24": {
+                "quote": "\u201cEveryone is talking about loop engineering. Most of them are describing something that already existed.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-23"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-24"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -459,8 +464,9 @@ def build_briefing():
             "2026-06-21": {"quote": "“I stopped trying to keep up with support emails. I built an agent to do it for me.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7473784782359990272/"},
             "2026-06-22": {"quote": "“The team is not the bottleneck. The trust is.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474142368551976960/"},
             "2026-06-23": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
+            "2026-06-24": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-23"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-24"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

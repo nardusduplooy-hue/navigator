@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "Building Trust at Speed — The NEO Era Challenge",
+        "title": "The Network Is the Asset — Relationship Capital in the NEO Era",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,34 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-24": {
+        "step": "Vanguard Leadership — The Network Is the Asset",
+        "title": "Relational Capital — The Asset That Cannot Be Copied",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "In the NEO era, capital is relational: the network of trust you have built, the reputation that precedes you, the relationships that open doors before you knock. This cannot be bought, copied, or acquired in a transaction.",
+        "question": (
+            "Kapusta argues that relational capital is the structurally dominant form of capital in the NEO era — "
+            "and that it is earned through consistent conduct over time, not through transactions. "
+            "Question: think of the most valuable professional relationship in your network right now. "
+            "How was that relational capital actually built — what specific conduct created it? "
+            "And if you had to quantify what that relationship has been worth to you in real terms "
+            "(opportunities, introductions, information, support), "
+            "does your investment in maintaining it match that value?"
+        ),
+        "model_answer": (
+            "The most valuable professional relationships are almost never the result of deliberate networking. "
+            "They are the result of showing up consistently, delivering on commitments, "
+            "and being genuinely useful to the other person without keeping score. "
+            "The paradox Kapusta is pointing at: relational capital is built through behaviour "
+            "that looks nothing like capital accumulation — it looks like generosity, reliability, and care. "
+            "The NEO era insight is that this is not soft. "
+            "It is the highest-returning asset class available to a leader. "
+            "In practical terms: if you cannot name three specific things you have done "
+            "for your most valuable professional contact in the last 90 days, "
+            "you are drawing on capital you are not replenishing. "
+            "That is a structural risk — not a relationship problem."
         ),
     },
     "2026-06-23": {
