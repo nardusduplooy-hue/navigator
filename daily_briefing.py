@@ -134,6 +134,7 @@ def build_briefing():
         "2026-06-22": "The cohort that debriefs together after a hard session learns faster than the one that simply moves on. What did you take from the marathon?",
         "2026-06-23": "Trust is not declared. It is demonstrated — one delivered promise at a time. What will you deliver today?",
         "2026-06-24": "Your network is not a list of contacts. It is the accumulated record of every promise kept, every standard held, every person you showed up for.",
+        "2026-06-25": "Psychological safety is not about being comfortable. It is about being able to say: I do not know. I was wrong. I disagree. Without it, the tribe cannot hear its own truth.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -147,7 +148,7 @@ def build_briefing():
         lines.append("📅 <b>BUSINESS AS WARFARE — Zoom Session</b>")
         lines.append("<i>Dr. Zrinko Petener</i>")
         lines.append("")
-        lines.append("\u2022 \U0001f5d3 Friday 26 June @ 17:00 CET")
+        lines.append("\u2022 \U0001f5d3 Saturday 27 June @ 17:00 CET")
         lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
         lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
         lines.append("")
@@ -174,7 +175,7 @@ def build_briefing():
             lines.append("📅 <b>BUSINESS AS WARFARE — Zoom Session</b>")
             lines.append("<i>Dr. Zrinko Petener</i>")
             lines.append("")
-            lines.append("• 🗓 Friday 26 June @ 17:00 CET")
+            lines.append("• 🗓 Saturday 27 June @ 17:00 CET")
             lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
             lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
             lines.append("")
@@ -413,8 +414,12 @@ def build_briefing():
                 "quote": "\u201cEveryone is talking about loop engineering. Most of them are describing something that already existed.\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/",
             },
+            "2026-06-25": {
+                "quote": "\u201cThe models are not the moat. The workflows are not the moat. The people who know how to use them are.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_the-models-are-not-the-moat-share-7475520183344066560-Pq8r/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-24"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-25"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -469,8 +474,9 @@ def build_briefing():
             "2026-06-22": {"quote": "“The team is not the bottleneck. The trust is.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474142368551976960/"},
             "2026-06-23": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
             "2026-06-24": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
+            "2026-06-25": {"quote": "“The models are not the moat. The workflows are not the moat. The people who know how to use them are.”", "url": "https://www.linkedin.com/posts/talirezun_the-models-are-not-the-moat-share-7475520183344066560-Pq8r/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-24"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-25"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

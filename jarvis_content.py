@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "The Network Is the Asset — Relationship Capital in the NEO Era",
+        "title": "Psychological Safety — The Prerequisite for Tribal Intelligence",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,33 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-25": {
+        "step": "Vanguard Leadership — Psychological Safety",
+        "title": "Psychological Safety — The Prerequisite for Tribal Intelligence",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "A tribe without psychological safety is a group pretending to be a tribe. The ability to say 'I do not know', 'I was wrong', 'I disagree' without career risk is not a cultural nicety — it is the operational requirement for collective intelligence.",
+        "question": (
+            "Kapusta is direct: psychological safety is not comfort — it is the operational requirement for tribal intelligence. "
+            "In low-trust groups, saying 'I do not know' or 'I disagree' is a career risk. "
+            "In high-trust tribes, these statements are the mechanisms of collective intelligence. "
+            "Question: in your current work environment — your team, your organisation, or the Vanguard cohort — "
+            "how safe does it actually feel to say 'I was wrong' or 'I disagree with this direction'? "
+            "What is one specific moment in the last month where you held back something true "
+            "because the environment did not feel safe enough to say it?"
+        ),
+        "model_answer": (
+            "Most people will rate their environment as moderately safe — and then, when pushed for a specific example, "
+            "recall a moment where they stayed quiet. The gap between the rating and the example is the real data. "
+            "Psychological safety is not about whether the leader says 'speak up' — "
+            "it is about what happens the last time someone did. "
+            "If a team member raised a concern and was dismissed, ignored, or subtly penalised, "
+            "everyone in the room updated their model of what is safe to say. "
+            "This is how tribes lose their intelligence silently: "
+            "not through dramatic suppression, but through dozens of small moments "
+            "where the truth was not worth the cost. "
+            "The Vanguard leader's job is to make the last person who spoke up visibly better off for having done so."
         ),
     },
     "2026-06-24": {
