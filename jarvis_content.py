@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "Psychological Safety — The Prerequisite for Tribal Intelligence",
+        "title": "Decision-Making Under Uncertainty — The Vanguard Method",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,34 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-26": {
+        "step": "Vanguard Leadership — Decision-Making Under Uncertainty",
+        "title": "The Vanguard Method: Act, Feedback, Correct Fast",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Vanguard leaders do not wait for certainty before acting — certainty never arrives in NEO environments. The cost of acting with imperfect information is occasionally being wrong. The cost of waiting for certainty is always arriving too late.",
+        "question": (
+            "Kapusta's framing is sharp: in NEO environments, the choice is not between acting with certainty "
+            "and acting with uncertainty. The choice is between acting with imperfect information now "
+            "or arriving with perfect information too late. "
+            "Question: think of a decision you are currently delaying because you do not have enough information. "
+            "What would you need to know to act? "
+            "And honestly — is that information actually obtainable before the window closes, "
+            "or are you using the information gap as cover for a different kind of hesitation?"
+        ),
+        "model_answer": (
+            "Most delayed decisions are not actually information problems — they are commitment problems. "
+            "The missing information is real but not decisive: "
+            "a decision-maker with the full picture would still face uncertainty. "
+            "Kapusta's Vanguard method is not about lowering standards — "
+            "it is about recognising that feedback mechanisms replace upfront certainty. "
+            "Act on the best available information. "
+            "Build in explicit checkpoints to assess whether the direction is still correct. "
+            "Correct fast when the feedback says to. "
+            "This is not recklessness — it is disciplined aggression. "
+            "The Vanguard leader who waits for certainty is not being careful. "
+            "They are borrowing time from the future at a very high interest rate."
         ),
     },
     "2026-06-25": {
@@ -3126,7 +3154,7 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
+    "url": "https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP/",
     "title": "The Sheepdog’s Burden — Leading When Nobody Asked You To",
     "description": "The sheepdog does not wait for a title before acting like a leader. Kapusta describes the burden not as one of authority, but of seeing what needs to be done and doing it anyway — especially when nobody gave you permission and everyone else is looking away. In the NEO era, this is the pattern that builds tribes worth belonging to.",
 }

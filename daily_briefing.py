@@ -135,6 +135,7 @@ def build_briefing():
         "2026-06-23": "Trust is not declared. It is demonstrated — one delivered promise at a time. What will you deliver today?",
         "2026-06-24": "Your network is not a list of contacts. It is the accumulated record of every promise kept, every standard held, every person you showed up for.",
         "2026-06-25": "Psychological safety is not about being comfortable. It is about being able to say: I do not know. I was wrong. I disagree. Without it, the tribe cannot hear its own truth.",
+        "2026-06-26": "The Vanguard leader does not wait for certainty. They act on the best available information, build in feedback, and correct fast. Speed with sustainability. Movement with purpose.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -418,8 +419,12 @@ def build_briefing():
                 "quote": "\u201cThe models are not the moat. The workflows are not the moat. The people who know how to use them are.\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_the-models-are-not-the-moat-share-7475520183344066560-Pq8r/",
             },
+            "2026-06-26": {
+                "quote": "\u201cThe bottleneck is no longer code. It is context and vision.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_i-almost-didnt-post-this-a-github-graph-share-7475844659043430403-Awgg/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-25"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-26"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -435,14 +440,15 @@ def build_briefing():
             lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
         lines.append("<i>Saša Pavlaković</i>")
         lines.append("")
-        lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
-        lines.append("")
-        lines.append("\u2022 Include the exact prompts you used")
-        lines.append("\u2022 Show the real output (anonymised if needed)")
-        lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
-        lines.append("")
-        lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
-        lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
+        if date_key < "2026-06-26":
+            lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
+            lines.append("")
+            lines.append("\u2022 Include the exact prompts you used")
+            lines.append("\u2022 Show the real output (anonymised if needed)")
+            lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
+            lines.append("")
+            lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
+            lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
         lines.append("")
 
     # SALES MANAGEMENT WEEKEND MARATHON — shown in zoom slot from 14 June onwards
@@ -475,8 +481,9 @@ def build_briefing():
             "2026-06-23": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
             "2026-06-24": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/posts/talirezun_everyone-is-talking-about-loop-engineering-share-7474794617436098560-druA/"},
             "2026-06-25": {"quote": "“The models are not the moat. The workflows are not the moat. The people who know how to use them are.”", "url": "https://www.linkedin.com/posts/talirezun_the-models-are-not-the-moat-share-7475520183344066560-Pq8r/"},
+            "2026-06-26": {"quote": "“The bottleneck is no longer code. It is context and vision.”", "url": "https://www.linkedin.com/posts/talirezun_i-almost-didnt-post-this-a-github-graph-share-7475844659043430403-Awgg/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-25"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-26"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")
