@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "Decision-Making Under Uncertainty — The Vanguard Method",
+        "title": "The Compounding Effect of Consistent Standards",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,35 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-27": {
+        "step": "Vanguard Leadership — The Compounding Effect of Consistent Standards",
+        "title": "Standards Held Are Investments. Standards Dropped Are Withdrawals.",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "The compound effect of consistent standards works in both directions — and it accelerates. After ten years of consistent standards, you have access to opportunities unavailable to everyone who compromised.",
+        "question": (
+            "Kapusta makes the compounding argument explicit: "
+            "every time you hold the standard when it is expensive, you increase your reputational capital. "
+            "Every time you let it slide for convenience, you degrade it. "
+            "The compound effect works in both directions — and it accelerates. "
+            "Question: looking honestly at the last 90 days — "
+            "have you been making deposits or withdrawals on your standard? "
+            "Name one specific moment where you held it when it was expensive. "
+            "And one moment where you let it slide. "
+            "What is the current direction of the compound?"
+        ),
+        "model_answer": (
+            "The honest answer to this question is almost always more nuanced than people expect. "
+            "Most leaders can name a moment of holding the standard under pressure — "
+            "and most can name a moment of sliding that they rationalised at the time. "
+            "Kapusta's compounding insight makes the rationalisation harder to sustain: "
+            "the slide is never just one moment. "
+            "It is a data point in a trend. "
+            "And the trend, not the moment, is what determines the compound outcome. "
+            "The practical question is not whether you are perfect — nobody is. "
+            "It is whether the direction of the trend is toward higher standards or toward accommodation. "
+            "The Vanguard leader checks the trend, not just the last data point."
         ),
     },
     "2026-06-26": {
@@ -3154,7 +3183,7 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP/",
+    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
     "title": "The Sheepdog’s Burden — Leading When Nobody Asked You To",
     "description": "The sheepdog does not wait for a title before acting like a leader. Kapusta describes the burden not as one of authority, but of seeing what needs to be done and doing it anyway — especially when nobody gave you permission and everyone else is looking away. In the NEO era, this is the pattern that builds tribes worth belonging to.",
 }
