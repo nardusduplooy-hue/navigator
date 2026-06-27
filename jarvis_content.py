@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "The Compounding Effect of Consistent Standards",
+        "title": "Thinking in Decades While Executing in Days",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,35 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-28": {
+        "step": "Vanguard Leadership — Thinking in Decades While Executing in Days",
+        "title": "The Cotruglian Discipline: Long View, Daily Urgency",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Short-term pressure is always more vivid than long-term consequence. The Vanguard leader holds a decade-long orientation while executing with daily urgency — asking before every significant decision: what does this look like in ten years?",
+        "question": (
+            "Kapusta identifies this as the discipline most leaders find hardest to maintain: "
+            "holding a decade-long orientation while executing with daily urgency. "
+            "Short-term pressure is always more vivid than long-term consequence. "
+            "The quarter is always more urgent than the decade. "
+            "Question: think of the most significant decision you made in the last month. "
+            "When you made it, what was your primary time horizon — days, quarters, or years? "
+            "And if you had asked 'what does this look like in ten years?' before deciding — "
+            "would you have made the same choice?"
+        ),
+        "model_answer": (
+            "Most decisions are made on a one-to-twelve month horizon, "
+            "even when their consequences compound over decades. "
+            "The Cotruglian discipline is not about ignoring short-term urgency — "
+            "it is about adding the ten-year question as a filter, not a replacement. "
+            "The leader who asks 'what does this look like in ten years?' before a significant decision "
+            "is not being impractical — they are being precise. "
+            "Many decisions that look urgent in the quarter look obviously wrong in the decade. "
+            "Many decisions that look minor in the quarter look foundational in the decade. "
+            "The accumulation of daily decisions is what builds — or destroys — "
+            "the leader you become over time. "
+            "Cotrugli understood this in 1458. It remains the hardest discipline to maintain."
         ),
     },
     "2026-06-27": {

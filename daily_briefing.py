@@ -145,6 +145,7 @@ def build_briefing():
         "2026-06-25": "Psychological safety is not about being comfortable. It is about being able to say: I do not know. I was wrong. I disagree. Without it, the tribe cannot hear its own truth.",
         "2026-06-26": "The Vanguard leader does not wait for certainty. They act on the best available information, build in feedback, and correct fast. Speed with sustainability. Movement with purpose.",
         "2026-06-27": "Standards compound. Every time you hold the standard when it is expensive, you invest in your future. Every time you let it slide for convenience, you degrade it. The direction matters more than any single moment.",
+        "2026-06-28": "The quarter is always more urgent than the decade. The Vanguard leader's discipline is to ask, before every significant decision: what does this look like in ten years?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -155,19 +156,24 @@ def build_briefing():
 
     # NEXT ZOOM / UPCOMING SESSION
     if date_key >= "2026-06-22":
-        if date_key == "2026-06-27":
-            lines.append("📅 <b>BUSINESS AS WARFARE — Zoom Session TODAY</b>")
+        if date_key <= "2026-06-27":
+            if date_key == "2026-06-27":
+                lines.append("📅 <b>BUSINESS AS WARFARE — Zoom Session TODAY</b>")
+            else:
+                lines.append("📅 <b>BUSINESS AS WARFARE — Zoom Session</b>")
+            lines.append("<i>Dr. Zrinko Petener</i>")
+            lines.append("")
+            if date_key == "2026-06-27":
+                lines.append("\u2022 \U0001f5d3 Today 27 June @ 17:00 CET")
+            else:
+                lines.append("\u2022 \U0001f5d3 Saturday 27 June @ 17:00 CET")
+            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
+            lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
+            lines.append("")
         else:
-            lines.append("📅 <b>BUSINESS AS WARFARE — Zoom Session</b>")
-        lines.append("<i>Dr. Zrinko Petener</i>")
-        lines.append("")
-        if date_key == "2026-06-27":
-            lines.append("\u2022 \U0001f5d3 Today 27 June @ 17:00 CET")
-        else:
-            lines.append("\u2022 \U0001f5d3 Saturday 27 June @ 17:00 CET")
-        lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
-        lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
-        lines.append("")
+            lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+            lines.append("\u2022 \U0001f5d3 Saturday 11 July 2026")
+            lines.append("")
     elif date_key >= "2026-06-14":
         if date_key == "2026-06-19":
             lines.append("📅 <b>THIS WEEKEND MARATHON STARTING TODAY — Sales Management</b>")
@@ -442,8 +448,12 @@ def build_briefing():
                 "quote": "\u201cIf AI writes most of the code, who is left?\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/",
             },
+            "2026-06-28": {
+                "quote": "\u201cIf AI writes most of the code, who is left?\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-27"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-28"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -460,6 +470,15 @@ def build_briefing():
         lines.append("<i>Saša Pavlaković</i>")
         if date_key >= "2026-06-27":
             lines.append("\U0001f4fa <b>RECORDING OF SESSION 2</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
+            lines.append("")
+        if date_key >= "2026-06-28":
+            lines.append("\U0001f4dd <b>SALES MANAGEMENT — EXAMINATION DEADLINE</b>")
+            lines.append("<i>Prof. Prim\u017e Hvala</i>")
+            lines.append("")
+            lines.append("Upload your final exam at the <a href='https://cotrugli.online/'>Alumni Portal</a> by <b>Sunday 12 July 2026, midnight</b>.")
+            lines.append("\u2022 Put your name at the beginning of the exam")
+            lines.append("\u2022 Sales Management materials available at Alumni Portal")
+            lines.append("\u2022 Please complete the <b>module evaluation</b> at Alumni Portal")
             lines.append("")
         lines.append("")
         if date_key < "2026-06-26":
@@ -505,8 +524,9 @@ def build_briefing():
             "2026-06-25": {"quote": "“The models are not the moat. The workflows are not the moat. The people who know how to use them are.”", "url": "https://www.linkedin.com/posts/talirezun_the-models-are-not-the-moat-share-7475520183344066560-Pq8r/"},
             "2026-06-26": {"quote": "“The bottleneck is no longer code. It is context and vision.”", "url": "https://www.linkedin.com/posts/talirezun_i-almost-didnt-post-this-a-github-graph-share-7475844659043430403-Awgg/"},
             "2026-06-27": {"quote": "“If AI writes most of the code, who is left?”", "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/"},
+            "2026-06-28": {"quote": "“If AI writes most of the code, who is left?”", "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-27"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-28"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")
