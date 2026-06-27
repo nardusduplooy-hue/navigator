@@ -27,10 +27,18 @@ with open("subscribers.json") as f:
 
 CAT = timezone(timedelta(hours=2))
 
+# Date override — set by --date argument to preview a specific day
+_DATE_OVERRIDE = None
+
 def today_str():
+    if _DATE_OVERRIDE:
+        return _DATE_OVERRIDE
     return datetime.now(CAT).strftime("%Y-%m-%d")
 
 def today_label():
+    if _DATE_OVERRIDE:
+        d = datetime.strptime(_DATE_OVERRIDE, "%Y-%m-%d")
+        return d.strftime("%A, %-d %B %Y")
     return datetime.now(CAT).strftime("%A, %-d %B %Y")
 
 def wait_for_network(max_attempts=10, delay=15):
@@ -648,6 +656,14 @@ def send_channel():
 
 
 if __name__ == "__main__":
+    # --date YYYY-MM-DD overrides today's date for previewing future briefings
+    if "--date" in sys.argv:
+        idx = sys.argv.index("--date")
+        if idx + 1 < len(sys.argv):
+            import daily_briefing as _self
+            _self._DATE_OVERRIDE = sys.argv[idx + 1]
+            _DATE_OVERRIDE = sys.argv[idx + 1]
+
     if "--test-send" in sys.argv:
         send_test()
     elif "--test" in sys.argv:
