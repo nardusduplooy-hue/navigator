@@ -1,5 +1,5 @@
 # Cotrugli Navigator — UI/UX Document
-**Version:** 1.0 | **Date:** March 2026 | **Author:** Nardus Du Plooy
+**Version:** 2.0 | **Updated:** June 2026 | **Author:** Nardus Du Plooy
 **Classification:** CONFIDENTIAL
 
 ## 1. Design Philosophy
@@ -12,25 +12,33 @@
 
 ## 2. Current Interfaces
 
-### 2.1 Telegram Daily Briefing
-Primary interface. Delivered at 05:30 CAT. Structured sections with emoji anchors for rapid scanning.
+### 2.1 Telegram Daily Briefing — PRIMARY INTERFACE
+Delivered at 06:00 SAST daily. Sent simultaneously to individual subscribers (DM) and the COTRUGLI Navigator Telegram channel topic.
 
-**Briefing structure:**
+**Briefing structure (as of June 2026):**
 - Header: Date and briefing title
-- 🔴 DEADLINES: Active deadlines with countdown timers
-- 📅 NEXT ZOOM SESSION: Upcoming session and recordings link
-- ✅ STATUS: JTBD and submission status
-- 🎯 CHASING JARVIS FOCUS: Module readings
-- 🔜 MODULE PREVIEW: Upcoming module preparation
-- 📝 ASSIGNMENT: Today's assignment with preparation links
-- 🔧 TOOL: Tool of the day with access link
-- 📚 SUPPLEMENTARY: Additional resource
-- 🏛️ KAPUSTA READING: Leadership article
-- 📰 NEO WORLD: Featured article
-- 🧠 KNOWLEDGE QUESTION: AI-generated daily test question
-- *(30 min later)* 🧠 MODEL ANSWER
+- 🏆 VANGUARD TEAMS: Daily motivational message (rotates daily)
+- 🔴 DEADLINES: Active deadlines with context
+- 📅 NEXT ZOOM SESSION: Upcoming session with link, Meeting ID, Passcode
+- Module content block (current active module — rotates as programme progresses)
+- 🎯 CHASING JARVIS: Dr. Tali Režun daily LinkedIn post with quote
+- 📋 ASSIGNMENT: Current module assignment reminder
+- 🏛️ VANGUARD LEADERSHIP: Dražen Kapusta book summary (daily chapter)
+- 🌐 AI NEWS: Live VentureBeat feed (Anthropic/Claude filtered)
+- 🧠 KNOWLEDGE QUESTION: Daily test question
+- 📲 /addme prompt for new subscribers
+- ⚡ Navigator out.
 
-### 2.2 North Star Web Dashboard
+Model answer sent as a second message immediately after.
+
+**Format notes:**
+- HTML parse mode (Telegram)
+- Clickable links using `<a href>` tags
+- Bold headers using `<b>` tags
+- Web page preview disabled to keep messages compact
+- Long briefings split on `⚡⚡SPLIT⚡⚡` marker and sent as multiple messages
+
+### 2.2 North Star Web Dashboard — LOCAL
 Local web dashboard at localhost:5000. Dark tactical command center. Auto-refreshes every 5 minutes.
 
 **Components:**
@@ -43,28 +51,30 @@ Local web dashboard at localhost:5000. Dark tactical command center. Auto-refres
 
 ### 2.3 Bot Command Interface
 
-| Command | Response |
-|---|---|
-| /start | Welcome message |
-| /addme | Subscribe to daily briefings |
-| /removeme | Unsubscribe |
-| /status | Check subscription status |
-| /subscribers | Admin only: list all subscribers |
+| Command | Response | Access |
+|---|---|---|
+| /start | Welcome message | All users |
+| /addme | Subscribe to daily briefings | All users |
+| /removeme | Unsubscribe | Subscribers |
+| /status | Check subscription status | All users |
+| /subscribers | List all subscribers | Admin only (Nardus) |
+
+New subscriber triggers a DM notification to Nardus with name, username, chat ID, and total subscriber count.
 
 ## 3. Planned Interfaces
 
-### 3.1 Public Web Interface (Phase 3)
+### 3.1 Public Web Interface (Phase 2–3)
 - Login page (COTRUGLI credentials or Google Auth)
 - Personal North Star dashboard
 - Daily briefing archive (searchable)
 - Q&A interface powered by Claude/Gemini
-- Progress tracking: module completion, JTBD status
+- Progress tracking: module completion, assignment status
 - Settings: notification preferences, timezone, briefing time
 
 ### 3.2 Mobile App (Phase 4)
 - Push notifications for deadline alerts (48hr and 24hr warnings)
 - Offline access to briefing archive
-- Quick JTBD status update
+- Quick status update
 - One-tap Zoom join from next session card
 
 ## 4. User Journeys
@@ -72,15 +82,15 @@ Local web dashboard at localhost:5000. Dark tactical command center. Auto-refres
 ### New Student Onboarding
 1. Find @CotNavigatorBot on Telegram
 2. Send /start — receive welcome message
-3. Send /addme — subscribed
-4. Next morning at 05:30 — first briefing arrives
-5. At 06:00 — model answer arrives
+3. Send /addme — subscribed, Nardus notified
+4. Next morning at 06:00 SAST — first briefing arrives
+5. Model answer arrives immediately after
 
 ### Daily Student Interaction
-1. 05:30 — Briefing arrives
-2. Scan: deadlines, zoom, today's focus
-3. Read knowledge question over breakfast
-4. 06:00 — Model answer arrives, check understanding
+1. 06:00 SAST — briefing arrives in DM and Navigator channel
+2. Scan: deadlines, zoom, today's module focus
+3. Read knowledge question
+4. Model answer arrives — check understanding
 5. During day — access dashboard for calendar view
 
 ## 5. Design Specifications
