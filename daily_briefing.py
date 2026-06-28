@@ -146,6 +146,7 @@ def build_briefing():
         "2026-06-26": "The Vanguard leader does not wait for certainty. They act on the best available information, build in feedback, and correct fast. Speed with sustainability. Movement with purpose.",
         "2026-06-27": "Standards compound. Every time you hold the standard when it is expensive, you invest in your future. Every time you let it slide for convenience, you degrade it. The direction matters more than any single moment.",
         "2026-06-28": "The quarter is always more urgent than the decade. The Vanguard leader's discipline is to ask, before every significant decision: what does this look like in ten years?",
+        "2026-06-29": "Benedetto Cotrugli wrote the founding text of modern commerce in 1458. It was not published for 115 years. Some things are built for the long run — yours is one of them.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
     lines.append("")
@@ -174,6 +175,12 @@ def build_briefing():
             lines.append("📅 <b>NEXT ZOOM SESSION</b>")
             lines.append("\u2022 \U0001f5d3 Saturday 11 July 2026")
             lines.append("")
+            if date_key >= "2026-06-29":
+                lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE — MODULE 1</b>")
+                lines.append("Listen to the PayPal Mafia podcast while it's fresh:")
+                lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 Listen here</a>")
+                lines.append("Also available under the Sessions tab on the <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Cotrugli Navigator app</a>.")
+                lines.append("")
     elif date_key >= "2026-06-14":
         if date_key == "2026-06-19":
             lines.append("📅 <b>THIS WEEKEND MARATHON STARTING TODAY — Sales Management</b>")
@@ -452,8 +459,12 @@ def build_briefing():
                 "quote": "\u201cIf AI writes most of the code, who is left?\u201d",
                 "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/",
             },
+            "2026-06-29": {
+                "quote": "\u201cEveryone is talking about loop engineering. Most of them are describing something that already existed.\u201d",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474794620502323200/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-28"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-29"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -525,8 +536,9 @@ def build_briefing():
             "2026-06-26": {"quote": "“The bottleneck is no longer code. It is context and vision.”", "url": "https://www.linkedin.com/posts/talirezun_i-almost-didnt-post-this-a-github-graph-share-7475844659043430403-Awgg/"},
             "2026-06-27": {"quote": "“If AI writes most of the code, who is left?”", "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/"},
             "2026-06-28": {"quote": "“If AI writes most of the code, who is left?”", "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/"},
+            "2026-06-29": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474794620502323200/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-28"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-29"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

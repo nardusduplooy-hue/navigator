@@ -441,7 +441,7 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-06-21": {
-        "title": "Thinking in Decades While Executing in Days",
+        "title": "The Art of Trade — What Cotrugli's 1458 Masterwork Teaches Today",
         "chapter": "Tribe as Coordination",
         "summary": (
             "Stronger together is not a slogan. It is a mathematical reality in networked environments. "
@@ -1034,6 +1034,34 @@ TALI_STEPS = {
             "You are demonstrating what AI-augmented entrepreneurship looks like at its best — "
             "for your cohort, for COTRUGLI, for the next generation of students who will study what you built. "
             "That is the Cotruglian frame. Build accordingly."
+        ),
+    },
+    "2026-06-29": {
+        "step": "Vanguard Leadership — The Art of Trade",
+        "title": "Cotrugli's 1458 Masterwork — Built for Centuries",
+        "url": "https://cotrugli.online/groups/vanguard/",
+        "focus": "Benedetto Cotrugli wrote The Art of Trade in 1458 in Dubrovnik — a city that survived for centuries through the careful management of trust and reputation. His central argument: trade practiced with virtue is the highest expression of human cooperative capacity.",
+        "question": (
+            "Cotrugli's central argument was radical for 1458: "
+            "that commerce practiced with virtue and mastery is not a lesser pursuit — "
+            "it is the highest expression of human cooperative capacity. "
+            "His book was written in 1458 but not published for 115 years. "
+            "Question: think about your own professional practice. "
+            "Are you building something designed to last — or optimised for the next cycle? "
+            "And what would change about how you work today "
+            "if you genuinely believed your reputation would still be read 115 years from now?"
+        ),
+        "model_answer": (
+            "The 115-year gap between writing and publication is not a footnote — it is the point. "
+            "Cotrugli wrote for truth, not for audience. "
+            "He built for the long run before anyone had confirmed the long run would come. "
+            "Most professional behaviour today is optimised for the next performance review, "
+            "the next deal, the next quarter. "
+            "The Cotruglian challenge is to identify one thing in your practice "
+            "that you are building for decades rather than cycles — "
+            "and to treat that thing with the care it deserves. "
+            "The Vanguard MBA is built on this operating system. "
+            "The question is whether you are using it, or just studying it."
         ),
     },
     "2026-06-28": {
@@ -3224,7 +3252,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Design hits one million users in its first week — Anthropic's AI-native design tool is reshaping how teams build products",
+    "headline": "Claude Code turned every engineer into three. Now companies need more product thinkers than coders",
     "source": "VentureBeat AI",
 }
 
