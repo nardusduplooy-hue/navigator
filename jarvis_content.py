@@ -1286,6 +1286,35 @@ TALI_STEPS = {
             "and contribute something genuinely useful to it — without being asked."
         ),
     },
+    "2026-06-30": {
+        "step": "Chasing Jarvis — The Bottleneck Was Never the Code",
+        "title": "The Full Map — Why the Technical Barrier Is Psychological",
+        "url": "https://open.substack.com/pub/talirezun/p/chasing-jarvis-the-bottleneck-was",
+        "focus": (
+            "Dr. Tali Režun has written the complete Chasing Jarvis curriculum as a single article — "
+            "the Centaur model, all five modules in order, the exact tools used at each stage. "
+            "Context engineering is no longer parked in Module 4: it starts in Module 1 and deepens throughout. "
+            "Read it as the map of what the course is actually building toward."
+        ),
+        "question": (
+            "Dr. Tali's central claim is that the bottleneck in AI adoption is almost never technical — it is psychological. "
+            "Most people are one context package away from shipping something real. "
+            "Question: where in your own work have you stalled at the edge of the technical barrier — "
+            "and looking back, was the barrier actually technical, or was it uncertainty about where to start? "
+            "What would a well-structured context package for your next project actually contain?"
+        ),
+        "model_answer": (
+            "The psychological framing matters because it changes the intervention. "
+            "If the barrier is technical, you need training. If it is psychological, you need a starting point. "
+            "Tali's answer is the context package: a structured brief that tells an AI agent exactly what you are building, "
+            "what exists, what you need, and what the constraints are. "
+            "Most people who feel blocked by AI capability are not blocked by the model — "
+            "they are blocked by the absence of a clear brief. "
+            "The Vanguard application: before your next AI-assisted work task, spend fifteen minutes writing the brief "
+            "before you open the tool. Describe the goal, the context, the constraints, and the output format. "
+            "The clarity that exercise produces is usually sufficient to unblock the work entirely."
+        ),
+    },
     "2026-06-20": {
         "step": "Vanguard Leadership — Ethics Under Pressure",
         "title": "Ethics Under Pressure — When It Is Most Expensive and Most Important",
@@ -3252,7 +3281,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Code turned every engineer into three. Now companies need more product thinkers than coders",
+    "headline": "Anthropic's Claude now writes its own context packages — and ships working prototypes in a single session",
     "source": "VentureBeat AI",
 }
 

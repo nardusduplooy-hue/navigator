@@ -79,7 +79,7 @@ def send_message(chat_id, text):
 
 def fetch_ai_news():
     REQUIRE_KEYWORDS = ["anthropic", "claude"]
-    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak"]
+    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three"]
     try:
         url = 'https://feeds.feedburner.com/venturebeat/SZYF'
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -147,8 +147,9 @@ def build_briefing():
         "2026-06-27": "Standards compound. Every time you hold the standard when it is expensive, you invest in your future. Every time you let it slide for convenience, you degrade it. The direction matters more than any single moment.",
         "2026-06-28": "The quarter is always more urgent than the decade. The Vanguard leader's discipline is to ask, before every significant decision: what does this look like in ten years?",
         "2026-06-29": "Benedetto Cotrugli wrote the founding text of modern commerce in 1458. It was not published for 115 years. Some things are built for the long run — yours is one of them.",
+        "2026-06-30": "Dubrovnik survived empires. Not through force — through reputation. Every promise you keep is a brick in your own republic.",
     }
-    lines.append(vanguard_teams_lines.get(date_key, "Tribes don\u2019t wait to be built. They are chosen — one decision, one contribution, one standard held at a time."))
+    lines.append(vanguard_teams_lines.get(date_key, "Dubrovnik survived empires. Not through force — through reputation. Every promise you keep is a brick in your own republic."))
     lines.append("")
 
     # DEADLINES
@@ -463,8 +464,12 @@ def build_briefing():
                 "quote": "\u201cEveryone is talking about loop engineering. Most of them are describing something that already existed.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474794620502323200/",
             },
+            "2026-06-30": {
+                "quote": "\u201cThe technical barrier is almost always psychological. You are one context package away from shipping.\u201d",
+                "url": "https://www.linkedin.com/posts/talirezun_a-while-back-drazen-kapusta-the-principal-share-7477256758432915456-qK9G/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-29"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-06-30"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -537,8 +542,9 @@ def build_briefing():
             "2026-06-27": {"quote": "“If AI writes most of the code, who is left?”", "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/"},
             "2026-06-28": {"quote": "“If AI writes most of the code, who is left?”", "url": "https://www.linkedin.com/posts/talirezun_this-summer-the-same-question-keeps-surfacing-share-7476206242437242880-0Rgc/"},
             "2026-06-29": {"quote": "“Everyone is talking about loop engineering. Most of them are describing something that already existed.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7474794620502323200/"},
+            "2026-06-30": {"quote": "“The technical barrier is almost always psychological. You are one context package away from shipping.”", "url": "https://www.linkedin.com/posts/talirezun_a-while-back-drazen-kapusta-the-principal-share-7477256758432915456-qK9G/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-06-29"])
+        cj = cj_entries.get(date_key, cj_entries["2026-06-30"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")
