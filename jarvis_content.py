@@ -1315,6 +1315,37 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-01": {
+        "step": "Chasing Jarvis — Blueprint of a Frontier Coding Agent",
+        "title": "Three Levels of Engineering — Prompt, Context, Harness",
+        "url": "https://medium.com/@talirezun/blueprint-of-a-frontier-coding-agent-1059730d802a",
+        "focus": (
+            "Dr. Tali Režun maps the full architecture beneath every modern coding agent: "
+            "Prompt Engineering at the core, Context Engineering in the middle ring, "
+            "Harness Engineering as the outer ring that holds everything together — "
+            "tool orchestration, state persistence, error recovery, verification loops, and lifecycle management. "
+            "Each level contains the one inside it. You cannot understand the harness without understanding all three."
+        ),
+        "question": (
+            "Tali distinguishes three nested levels: Prompt Engineering (what you say), "
+            "Context Engineering (what the model sees and when), and Harness Engineering "
+            "(everything that holds the build together — tools, state, recovery, verification). "
+            "Question: think about the last time an AI-assisted task of yours broke down. "
+            "Which of the three levels actually failed — was it the prompt, the context, or the harness around it? "
+            "Most people misdiagnose a harness failure as a prompt failure. What would you check first next time?"
+        ),
+        "model_answer": (
+            "Most failures people blame on \"the AI not understanding\" are actually harness failures — "
+            "the model lost state between steps, nothing verified its output, or there was no recovery "
+            "path when something went wrong. Tali's research point on context rot reinforces this: even with "
+            "huge context windows, performance degrades as utilisation climbs past roughly eighty percent, "
+            "particularly for content buried in the middle of a long context. "
+            "The Vanguard application: before rewriting your prompt for the third time, ask whether the actual "
+            "gap is structural — is there a verification loop, a way to recover from a wrong turn, a way to "
+            "persist what was already decided? Most non-developers stop at prompt engineering because it is "
+            "the only layer they can see. The harness is invisible until it breaks."
+        ),
+    },
     "2026-06-20": {
         "step": "Vanguard Leadership — Ethics Under Pressure",
         "title": "Ethics Under Pressure — When It Is Most Expensive and Most Important",
@@ -3281,8 +3312,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's Claude now writes its own context packages — and ships working prototypes in a single session",
-    "source": "VentureBeat AI",
+    "headline": "California makes Claude the first AI tool available to every state agency and local government, at half price",
+    "source": "PYMNTS",
 }
 
 JTBD_STATUS = (
