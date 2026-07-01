@@ -1315,6 +1315,35 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-02": {
+        "step": "Chasing Jarvis — The Infrastructure Layer",
+        "title": "Two Announcements 24 Hours Apart — What Anthropic Just Signalled",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
+        "focus": (
+            "Anthropic launched Sonnet 5 on 30 June and restored Fable 5 globally on 1 July — two moves in 24 hours. "
+            "Sonnet 5 brings near-Opus performance at a fraction of the cost ($2/$10 per million tokens introductory). "
+            "Fable 5 returns after an 18-day government-ordered pause over a jailbreak vulnerability. "
+            "Tali's read: the model race is no longer primarily about capability. "
+            "It is about who controls the infrastructure, the pricing, and the regulatory relationships beneath it."
+        ),
+        "question": (
+            "Anthropic launched Sonnet 5 and restored Fable 5 within 24 hours of each other. "
+            "Sonnet 5 is priced at roughly 60% less than Opus 4.8 at standard rates, with near-Opus performance. "
+            "Question: in your own work or organisation, how does a shift like this — Opus-level capability "
+            "suddenly available at Sonnet-level cost — change what you can now build or automate that you "
+            "previously could not justify? Where is the cost barrier currently stopping you, and does it stop today?"
+        ),
+        "model_answer": (
+            "The practical implication of Sonnet 5 is that the cost-performance threshold for production agentic workflows "
+            "has dropped significantly. Tasks that previously required either human time or Opus-level spend "
+            "— multi-step research, document synthesis, automated CRM updates, complex outreach sequencing — "
+            "can now be run at scale for a fraction of the previous cost. "
+            "The Vanguard application: list three tasks in your current work that you have been doing manually "
+            "because automating them felt expensive or uncertain. With Sonnet 5 pricing, revisit that list. "
+            "The infrastructure layer has shifted. The question is not whether the tools exist — it is whether "
+            "you are moving fast enough to take the position before others do."
+        ),
+    },
     "2026-07-01": {
         "step": "Chasing Jarvis — Blueprint of a Frontier Coding Agent",
         "title": "Three Levels of Engineering — Prompt, Context, Harness",
@@ -3312,8 +3341,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "California makes Claude the first AI tool available to every state agency and local government, at half price",
-    "source": "PYMNTS",
+    "headline": "Anthropic launches Sonnet 5 at Opus-level performance for a fraction of the cost — and restores Fable 5 globally after the US lifts export controls",
+    "source": "VentureBeat AI",
 }
 
 JTBD_STATUS = (
