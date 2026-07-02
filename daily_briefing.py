@@ -104,6 +104,12 @@ def build_briefing():
     tool = TOOL_SPOTLIGHT.get(date_key)
     tali = TALI_STEPS.get(date_key)
 
+    # Always-available CJ lookup for Running Courses block (from 3 July)
+    cj_lookup = {
+        "2026-07-03": {"quote": "\u201cData without context is noise. Context without data is intuition. The Vanguard leader needs both \u2014 and the analytics layer is where they meet.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
+        "2026-07-04": {"quote": "\u201cData without context is noise. Context without data is intuition. The Vanguard leader needs both \u2014 and the analytics layer is where they meet.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
+    }
+
     lines = []
 
     # HEADER
@@ -150,8 +156,9 @@ def build_briefing():
         "2026-06-30": "Dubrovnik survived empires. Not through force — through reputation. Every promise you keep is a brick in your own republic.",
         "2026-07-01": "A republic of one is not a republic. Find the people who will hold the standard with you, and the standard becomes unbreakable.",
         "2026-07-02": "Every cohort has people doing the work quietly. Find them. Name what they are building. That is how a tribe becomes visible to itself.",
+        "2026-07-03": "The cohort that ships something together remembers it longer than the cohort that only studied together. Find a reason to build.",
     }
-    lines.append(vanguard_teams_lines.get(date_key, "Every cohort has people doing the work quietly. Find them. Name what they are building. That is how a tribe becomes visible to itself."))
+    lines.append(vanguard_teams_lines.get(date_key, "The cohort that ships something together remembers it longer than the cohort that only studied together. Find a reason to build."))
     lines.append("")
 
     # DEADLINES
@@ -178,7 +185,13 @@ def build_briefing():
             lines.append("📅 <b>NEXT ZOOM SESSION</b>")
             lines.append("\u2022 \U0001f5d3 Saturday 11 July 2026")
             lines.append("")
-            if date_key >= "2026-06-29":
+            if date_key >= "2026-07-03":
+                lines.append("\U0001f4da <b>RUNNING COURSES</b>")
+                lines.append("")
+                lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
+                lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
+                lines.append("")
+            elif date_key >= "2026-06-29":
                 lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE — MODULE 1</b>")
                 lines.append("Listen to the PayPal Mafia podcast while it's fresh:")
                 lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 Listen here</a>")
@@ -478,8 +491,12 @@ def build_briefing():
                 "quote": "\u201cAnthropic sent two announcements 24 hours apart. The model race is no longer about capability \u2014 it is about who controls the infrastructure beneath it.\u201d",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
             },
+            "2026-07-03": {
+                "quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-02"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-03"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -489,7 +506,26 @@ def build_briefing():
 
     # MODULE 2 ASSIGNMENT — from 15 June onwards
     if date_key >= "2026-06-15":
-        if date_key >= "2026-06-18":
+        if date_key >= "2026-07-03":
+            lines.append("\U0001f4cb <b>AI in B2B Sales — Module 2</b>")
+            lines.append("<i>Saša Pavlaković</i>")
+            lines.append("\U0001f4fa <b>Recording:</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
+            lines.append("")
+            lines.append("\U0001f4ca <b>Analytics</b>")
+            lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>→ Start here</a>")
+            lines.append("")
+            lines.append("\U0001f4dd <b>Sales Management — Exam deadline Sunday 12 July, midnight</b>")
+            lines.append("<i>Prof. Primž Hvala</i>")
+            lines.append("Upload at <a href='https://cotrugli.online/'>Alumni Portal</a> — name at top of document.")
+            lines.append("")
+            # Chasing Jarvis inside Running Courses from 3 July
+            cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
+            lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
+            lines.append("")
+            lines.append(cj_rc["quote"])
+            lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
+            lines.append("")
+        elif date_key >= "2026-06-18":
             lines.append("\U0001f4cb <b>AI in B2B Sales: MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
         else:
             lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
@@ -534,7 +570,8 @@ def build_briefing():
         lines.append("")
 
     # CHASING JARVIS — new position from 18 June (just before Vanguard Leadership)
-    if date_key >= "2026-06-18":
+    # From 3 July it appears inside RUNNING COURSES block above
+    if date_key >= "2026-06-18" and date_key < "2026-07-03":
         cj_entries = {
             "2026-06-02": {"quote": "“The machine is ready. The question is — are you?”", "url": "https://www.linkedin.com/posts/talirezun_chasingjarvis-chasingjarvis-aiagents-share-7467106207451897856-xPDj/"},
             "2026-06-03": {"quote": "“95% of enterprise AI pilots produce no measurable business impact.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7467487084430299137/"},
@@ -556,8 +593,9 @@ def build_briefing():
             "2026-06-30": {"quote": "“The technical barrier is almost always psychological. You are one context package away from shipping.”", "url": "https://www.linkedin.com/posts/talirezun_a-while-back-drazen-kapusta-the-principal-share-7477256758432915456-qK9G/"},
             "2026-07-01": {"quote": "“Three levels of engineering: Prompt at the core, Context in the middle ring, Harness as the outer ring. Understanding the harness means understanding all three.”", "url": "https://medium.com/@talirezun/blueprint-of-a-frontier-coding-agent-1059730d802a"},
             "2026-07-02": {"quote": "“Anthropic sent two announcements 24 hours apart. The model race is no longer about capability — it is about who controls the infrastructure beneath it.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
+            "2026-07-03": {"quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-07-02"])
+        cj = cj_entries.get(date_key, cj_entries["2026-07-03"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

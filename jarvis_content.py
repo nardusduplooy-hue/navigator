@@ -1315,6 +1315,36 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-03": {
+        "step": "Chasing Jarvis — The Analytics Layer",
+        "title": "Data Without Context Is Noise — Why Analytics Is the Missing Middle",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
+        "focus": (
+            "The Analytics module opens with a foundational claim: most professionals have more data than they can use "
+            "and less context than they need. The result is decisions made on intuition dressed up as analysis. "
+            "The Vanguard application of analytics is not dashboards — it is the discipline of asking what the data "
+            "actually says before deciding what you want it to say."
+        ),
+        "question": (
+            "The analytics module introduces a distinction that most professionals skip: "
+            "the difference between data that confirms a decision already made "
+            "and data that genuinely changes the decision. "
+            "Question: think of the last significant decision you made at work. "
+            "Did you use data to inform it, or to justify it? "
+            "What would have needed to be true in the data for you to have decided differently — "
+            "and did you actually look for that?"
+        ),
+        "model_answer": (
+            "Confirmation bias in data use is not a character flaw — it is a structural problem. "
+            "When data is gathered after a decision is already forming, it is almost always used to confirm rather than test. "
+            "The discipline the analytics module is building is pre-commitment: "
+            "before gathering data, define what result would change your decision. "
+            "If no possible result would change it, you do not need analysis — you have already decided. "
+            "The Vanguard application: on your next significant work decision, write down in one sentence "
+            "what the data would need to show for you to go the other way. "
+            "That sentence is your analytical hypothesis. Everything after it is either evidence or noise."
+        ),
+    },
     "2026-07-02": {
         "step": "Chasing Jarvis — The Infrastructure Layer",
         "title": "Two Announcements 24 Hours Apart — What Anthropic Just Signalled",
@@ -3329,9 +3359,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/",
-    "title": "The Sheepdog’s Burden — Leading When Nobody Asked You To",
-    "description": "The sheepdog does not wait for a title before acting like a leader. Kapusta describes the burden not as one of authority, but of seeing what needs to be done and doing it anyway — especially when nobody gave you permission and everyone else is looking away. In the NEO era, this is the pattern that builds tribes worth belonging to.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477288417685458944/",
+    "title": "The Leadership Legacy Question",
+    "description": "Kapusta closes the assessment chapter with the only question that ultimately matters: what will outlive you? Not titles, not revenue — what systems did you build that kept working after you left? Legacy is not what you achieve. It is what compounds after you stop building it.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -3341,7 +3371,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launches Sonnet 5 at Opus-level performance for a fraction of the cost — and restores Fable 5 globally after the US lifts export controls",
+    "headline": "Anthropic is bringing back Claude Fable 5 globally after US lifts export control order — where can enterprises access it?",
     "source": "VentureBeat AI",
 }
 
