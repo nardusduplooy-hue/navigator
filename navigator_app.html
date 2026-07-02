@@ -993,7 +993,7 @@ textarea::placeholder { color: var(--text-muted); }
       <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.06);pointer-events:none;"></div>
       <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Vanguard Chiefs Council</div>
       <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#ffffff;margin-bottom:4px;">The Tribe</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">12 chiefs. One cohort. The tribe wins together or not at all.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5;">13 chiefs. One cohort. The tribe wins together or not at all.</div>
     </div>
 
     <div class="pill-tabs" id="tribe-tabs">
@@ -1128,7 +1128,7 @@ const PROGRAMME_DATA = {
       dueDate: "2026-07-12T23:59:00+02:00",
       status: "in-progress",
       prepUrl: "https://alumni.cotrugli.eu",
-      notes: "Upload your final exam at the Alumni Portal by Sunday 12 July 2026, midnight. Put your name at the beginning of the exam. Sales Management materials available at Alumni Portal. Complete the module evaluation at Alumni Portal."
+      notes: "Upload your final exam at the Alumni Portal by Sunday 12 July 2026, midnight. Put your name at the beginning of the exam. Complete the module evaluation at Alumni Portal."
     },
     {
       id: "b2b-m2-workflow",
@@ -1216,7 +1216,7 @@ const PROGRAMME_DATA = {
 
   modelAnswer: "Most decisions are made on a one-to-twelve month horizon, even when their consequences compound over decades. The Cotruglian discipline is not about ignoring short-term urgency \u2014 it is about adding the ten-year question as a filter, not a replacement. The leader who asks \u2018what does this look like in ten years?\u2019 before a significant decision is not being impractical \u2014 they are being precise. Many decisions that look urgent in the quarter look obviously wrong in the decade. Many decisions that look minor in the quarter look foundational in the decade. The accumulation of daily decisions is what builds \u2014 or destroys \u2014 the leader you become over time. Cotrugli understood this in 1458. It remains the hardest discipline to maintain.",
 
-  todaysFocus: "Business as Warfare kicks off TODAY \u2014 Module 1: The New Rules of Engagement. Session: 17:00\u201320:00 CET, Dr. Zrinko Petener. Complete the pre-readings before joining \u2014 foundational warfare concepts and the target network that will be analysed throughout the course. Zoom ID: 892 8112 3748 | Passcode: BUSasWAR. AI in B2B Sales M2 assignment also active \u2014 submit to sasa.pavlakovic@cotrugli.eu.",
+  todaysFocus: "AI in B2B Sales \u2014 Module 2 assignment active. Recording of Session 2 is now available \u2014 watch it before you submit. Document one AI sales workflow you actually tested: prospecting via Apollo, LLM-augmented outreach, Otter post-meeting flow, or MEDDICC pipeline audit. Submit to sasa.pavlakovic@cotrugli.eu. Sales Management final exam due midnight 12 July \u2014 upload at Alumni Portal.",
 
   podcastGroups: [
     {
@@ -3407,7 +3407,8 @@ const TRIBE_DATA = {
     { chief: 'Kaouther',  members: ['Alice Uwase', 'Celine Uwase', 'Chris Landman', 'Justin Muhirwa', 'Kaouther Zaffouri', 'Kyomuhendo Milliam', 'Laissa Isimbi', 'Ny Tiavina-Fanasina', 'Priscile Samou Yombeun'] },
     { chief: 'Nardus',    members: ['Jannes du Plooy', 'Matthys van Rooyen', 'Nardus Du Plooy', 'Steve Ntepp', 'Ahmed Salem', 'Heritier Bareke', 'Charles Mutinda'] },
     { chief: 'Matthys',   members: ['Chris Landman', 'Diane Tuyishime', 'Goran Nikolic', 'Johan Landman', 'Jules Cesar Engono', 'Kyomuhendo Milliam', 'Mark Magbo', 'Matthys van Rooyen', 'Sarah Wahinya', 'Siegfried Dorfling'] },
-    { chief: 'Narves',    members: ['Elizabeth Lionez Ainemukama', 'Geetanjali Bisht', 'Jacob Gakuru', 'Joy Ishimwe', 'Leoncie Niwekuri', 'Millicent Oongo', 'Narves Behlilovi\u0107', 'Rohit Sahu', 'Sarah Wahinya', 'Sne\u017eana Ili\u0107'] }
+    { chief: 'Narves',    members: ['Elizabeth Lionez Ainemukama', 'Geetanjali Bisht', 'Jacob Gakuru', 'Joy Ishimwe', 'Leoncie Niwekuri', 'Millicent Oongo', 'Narves Behlilovi\u0107', 'Rohit Sahu', 'Sarah Wahinya', 'Sne\u017eana Ili\u0107'] },
+    { chief: 'Chris',     members: ['Chris Landman'] }
   ],
   compact: 'In a NEO world, your tribe is your network and your network is your moat. Invest in it like it compounds \u2014 because it does.'
 };
@@ -3471,7 +3472,7 @@ function renderTribePulse() {
   const activeEl = document.getElementById('tribe-active-count');
   const chiefEl = document.getElementById('tribe-chief-count');
   if (activeEl) activeEl.textContent = TRIBE_DATA.teams.length;
-  if (chiefEl) chiefEl.textContent = TRIBE_DATA.teams.length + ' / 12';
+  if (chiefEl) chiefEl.textContent = TRIBE_DATA.teams.length + ' / 13';
 }
 
 function showOnboarding() {
