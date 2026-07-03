@@ -107,7 +107,7 @@ def build_briefing():
     # Always-available CJ lookup for Running Courses block (from 3 July)
     cj_lookup = {
         "2026-07-03": {"quote": "\u201cData without context is noise. Context without data is intuition. The Vanguard leader needs both \u2014 and the analytics layer is where they meet.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
-        "2026-07-04": {"quote": "\u201cData without context is noise. Context without data is intuition. The Vanguard leader needs both \u2014 and the analytics layer is where they meet.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
+        "2026-07-04": {"quote": "\u201cTwo announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed \u2014 it is whether your workflow moved with it.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
     }
 
     lines = []
@@ -157,8 +157,9 @@ def build_briefing():
         "2026-07-01": "A republic of one is not a republic. Find the people who will hold the standard with you, and the standard becomes unbreakable.",
         "2026-07-02": "Every cohort has people doing the work quietly. Find them. Name what they are building. That is how a tribe becomes visible to itself.",
         "2026-07-03": "The cohort that ships something together remembers it longer than the cohort that only studied together. Find a reason to build.",
+        "2026-07-04": "The wolf's Year 1 is always impressive. Hold the standard anyway. The three-year pattern does not lie.",
     }
-    lines.append(vanguard_teams_lines.get(date_key, "The cohort that ships something together remembers it longer than the cohort that only studied together. Find a reason to build."))
+    lines.append(vanguard_teams_lines.get(date_key, "The wolf's Year 1 is always impressive. Hold the standard anyway. The three-year pattern does not lie."))
     lines.append("")
 
     # DEADLINES
@@ -495,8 +496,12 @@ def build_briefing():
                 "quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
             },
+            "2026-07-04": {
+                "quote": "“Two announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed — it is whether your workflow moved with it.”",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-03"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-04"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -594,8 +599,9 @@ def build_briefing():
             "2026-07-01": {"quote": "“Three levels of engineering: Prompt at the core, Context in the middle ring, Harness as the outer ring. Understanding the harness means understanding all three.”", "url": "https://medium.com/@talirezun/blueprint-of-a-frontier-coding-agent-1059730d802a"},
             "2026-07-02": {"quote": "“Anthropic sent two announcements 24 hours apart. The model race is no longer about capability — it is about who controls the infrastructure beneath it.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
             "2026-07-03": {"quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
+            "2026-07-04": {"quote": "“Two announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed — it is whether your workflow moved with it.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-07-03"])
+        cj = cj_entries.get(date_key, cj_entries["2026-07-04"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")

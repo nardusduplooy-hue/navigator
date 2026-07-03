@@ -1315,6 +1315,33 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-04": {
+        "step": "Chasing Jarvis — Platform Velocity",
+        "title": "Two Announcements, 24 Hours Apart — Is Your Workflow Keeping Up?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/",
+        "focus": (
+            "Anthropic released Sonnet 5 and restored Fable 5 globally within 24 hours. "
+            "Tali's read: the speed of platform change is now faster than most organisations' adoption cycles. "
+            "The question is no longer whether better tools exist — it is whether your workflow has moved since "
+            "the last major release. For most professionals, the honest answer is no."
+        ),
+        "question": (
+            "Anthropic made two significant moves in 24 hours this week. "
+            "Most professionals noticed the announcements but changed nothing about how they work. "
+            "Question: when did you last audit your AI workflow — not read about AI, but actually review "
+            "which tools you use, at which step, and whether a better option now exists? "
+            "If you have not done this in the last 30 days, what specifically is stopping you?"
+        ),
+        "model_answer": (
+            "The adoption gap — between what is available and what professionals actually use — "
+            "is now measured in weeks, not years. Most people are running workflows built on tools "
+            "from six months ago while better options sit unused. "
+            "The Vanguard application: schedule a 20-minute workflow audit once a month. "
+            "Pick your three most time-consuming recurring tasks. For each one, ask: "
+            "is there a model, tool, or integration available today that would do this faster or better? "
+            "The answer will almost always be yes. The discipline is making the time to find out."
+        ),
+    },
     "2026-07-03": {
         "step": "Chasing Jarvis — The Analytics Layer",
         "title": "Data Without Context Is Noise — Why Analytics Is the Missing Middle",
@@ -3371,7 +3398,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic is bringing back Claude Fable 5 globally after US lifts export control order — where can enterprises access it?",
+    "headline": "Enterprises lost Claude Fable 5 for a few weeks. New data shows two-thirds had already built their hedge",
     "source": "VentureBeat AI",
 }
 
