@@ -614,6 +614,10 @@ textarea::placeholder { color: var(--text-muted); }
           <span class="course-check" id="chk-c13">✓</span>
           <span class="course-name">VANGUARD MBA Sales Management</span>
         </div>
+        <div class="course-row" onclick="toggleCourse('c13')">
+          <span class="course-check" id="chk-c13">✓</span>
+          <span class="course-name">VANGUARD MBA Sales Management</span>
+        </div>
 
         <div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;border-top:1px solid var(--border);margin-top:4px;">In Progress</div>
         <div class="course-row" onclick="toggleCourse('c6')">
@@ -627,6 +631,10 @@ textarea::placeholder { color: var(--text-muted); }
         <div class="course-row" onclick="toggleCourse('c14')">
           <span class="course-check in-progress" id="chk-c14">◑</span>
           <span class="course-name">VANGUARD MBA Business as Warfare</span>
+        </div>
+        <div class="course-row" onclick="toggleCourse('c15')">
+          <span class="course-check in-progress" id="chk-c15">◑</span>
+          <span class="course-name">Analytics</span>
         </div>
 
         <div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;border-top:1px solid var(--border);margin-top:4px;">Upcoming</div>
@@ -653,10 +661,6 @@ textarea::placeholder { color: var(--text-muted); }
         <div class="course-row" onclick="toggleCourse('c14')">
           <span class="course-check locked" id="chk-c14">🔒</span>
           <span class="course-name">AI-Embedded Innovation Boot Camp</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c15')">
-          <span class="course-check locked" id="chk-c15">🔒</span>
-          <span class="course-name">Analytics</span>
         </div>
         <div class="course-row" onclick="toggleCourse('c16')">
           <span class="course-check locked" id="chk-c16">🔒</span>
@@ -1186,8 +1190,8 @@ const PROGRAMME_DATA = {
   },
 
   kapustaReading: {
-    title: "Thinking in Decades While Executing in Days",
-    subtitle: "Chapter 1: The Art of Business. This is the Cotruglian discipline that most leaders find hardest to maintain: holding a decade-long orientation while executing with daily urgency. Short-term pressure is always more vivid than long-term consequence. The quarter is always more urgent than the decade. Vanguard leaders develop the discipline to ask, before every significant decision: what does this look like in ten years? Who will I have become through consistently making this kind of choice? What will I have built \u2014 or destroyed \u2014 through the accumulation of these daily decisions?",
+    title: "The Vanguard Leader\u2019s Daily Practice",
+    subtitle: "NEO Cotruglian Philosophy. Vanguard Leadership is not a theory to understand \u2014 it is a practice to develop. Three daily practices: one decision reviewed through the Cotruglian lens (what does this build?), one relationship invested in (not transacted), one standard held when it would have been easier to release it. These are not grand gestures. They are the compound interest of character \u2014 invisible in any single day, decisive over any single year.",
     url: "https://www.linkedin.com/in/cotrugli/"
   },
 
@@ -1198,12 +1202,12 @@ const PROGRAMME_DATA = {
   ],
 
   neoWorldArticle: {
-    title: "Claude Code turned every engineer into three. Now companies need more product thinkers",
+    title: "Enterprises lost Claude Fable 5 for a few weeks. New data shows two-thirds had already built their hedge",
     source: "VentureBeat AI",
     url: "https://venturebeat.com"
   },
 
-  briefingDate: "Sunday, 28 June 2026",
+  briefingDate: "Friday, 3 July 2026",
 
   status: [
     "All JTBDs current",
@@ -1212,11 +1216,11 @@ const PROGRAMME_DATA = {
     "Module 4: Context Engineering \u2014 Completed"
   ],
 
-  knowledgeQuestion: "Kapusta identifies this as the discipline most leaders find hardest to maintain: holding a decade-long orientation while executing with daily urgency. Short-term pressure is always more vivid than long-term consequence. The quarter is always more urgent than the decade. Think of the most significant decision you made in the last month. When you made it, what was your primary time horizon \u2014 days, quarters, or years? And if you had asked \u2018what does this look like in ten years?\u2019 before deciding \u2014 would you have made the same choice?",
+  knowledgeQuestion: "The analytics module introduces a distinction that most professionals skip: the difference between data that confirms a decision already made and data that genuinely changes the decision. Think of the last significant decision you made at work. Did you use data to inform it, or to justify it? What would have needed to be true in the data for you to have decided differently \u2014 and did you actually look for that?",
 
-  modelAnswer: "Most decisions are made on a one-to-twelve month horizon, even when their consequences compound over decades. The Cotruglian discipline is not about ignoring short-term urgency \u2014 it is about adding the ten-year question as a filter, not a replacement. The leader who asks \u2018what does this look like in ten years?\u2019 before a significant decision is not being impractical \u2014 they are being precise. Many decisions that look urgent in the quarter look obviously wrong in the decade. Many decisions that look minor in the quarter look foundational in the decade. The accumulation of daily decisions is what builds \u2014 or destroys \u2014 the leader you become over time. Cotrugli understood this in 1458. It remains the hardest discipline to maintain.",
+  modelAnswer: "Confirmation bias in data use is not a character flaw \u2014 it is a structural problem. When data is gathered after a decision is already forming, it is almost always used to confirm rather than test. The discipline the analytics module is building is pre-commitment: before gathering data, define what result would change your decision. If no possible result would change it, you do not need analysis \u2014 you have already decided. The Vanguard application: on your next significant work decision, write down in one sentence what the data would need to show for you to go the other way. That sentence is your analytical hypothesis. Everything after it is either evidence or noise.",
 
-  todaysFocus: "AI in B2B Sales \u2014 Module 2 assignment active. Recording of Session 2 is now available \u2014 watch it before you submit. Document one AI sales workflow you actually tested: prospecting via Apollo, LLM-augmented outreach, Otter post-meeting flow, or MEDDICC pipeline audit. Submit to sasa.pavlakovic@cotrugli.eu. Sales Management final exam due midnight 12 July \u2014 upload at Alumni Portal.",
+  todaysFocus: "Analytics course is now open. AI in B2B Sales M2 assignment active \u2014 recording available, submit to sasa.pavlakovic@cotrugli.eu. Sales Management final exam due midnight Sunday 12 July \u2014 upload at Alumni Portal with your name at top. Business as Warfare Module 1 underway. Next session: Saturday 11 July.",
 
   podcastGroups: [
     {
@@ -1420,7 +1424,8 @@ const PROGRAMME_DATA = {
         { title: "Module 4 Context Engineering \u2014 Preview (three slides from the actual module)", url: "https://www.linkedin.com/in/talirezun/" },
         { title: "The Shared Brain: When Second Brains Start Thinking Together", url: "https://medium.com/@talirezun/the-shared-brain-when-second-brains-start-thinking-together-0d2ad54413d9" },
         { title: "The Agent Memory Problem \u2014 And Why Your Second Brain Might Be the Answer", url: "https://medium.com/@talirezun/the-agent-memory-problem-and-why-your-second-brain-might-be-the-answer-57c385c9f79d" },
-        { title: "Blueprint of a Frontier Coding Agent \u2014 Inside the machinery that powers modern AI development", url: "https://substack.com/@talirezun" }
+        { title: "Blueprint of a Frontier Coding Agent \u2014 Inside the machinery that powers modern AI development", url: "https://substack.com/@talirezun" },
+        { title: "Data without context is noise \u2014 The Analytics Layer (latest)", url: "https://www.linkedin.com/in/talirezun/" }
       ]
     }
   },
