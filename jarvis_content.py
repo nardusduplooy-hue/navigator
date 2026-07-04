@@ -1315,6 +1315,37 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-05": {
+        "step": "Chasing Jarvis — The Adoption Gap",
+        "title": "Two Small Updates That Most People Walked Past",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478691596318916608/",
+        "focus": (
+            "Tali's observation this week: Anthropic made two platform-level changes and most professionals "
+            "noticed the announcement, bookmarked it, and changed nothing. "
+            "The adoption gap is not about awareness — it is about the friction between knowing and doing. "
+            "The Chasing Jarvis framework is specifically designed to close that gap: "
+            "not by overwhelming you with tools, but by giving you a repeatable system for integrating "
+            "one new capability at a time, properly, before adding the next."
+        ),
+        "question": (
+            "Tali describes the adoption gap as the space between knowing a tool exists and actually using it "
+            "in your work. Most professionals live in that gap — aware of what is available, "
+            "not yet using it. "
+            "Question: pick one AI tool or capability you have read about in the last month "
+            "but not yet used in your actual work. What specifically is stopping you — "
+            "is it time, uncertainty about where to start, concern about quality, or something else? "
+            "And what would it take to close that gap this week?"
+        ),
+        "model_answer": (
+            "The adoption gap has three common causes: no clear starting point, "
+            "no low-stakes environment to test, and no time protected for experimentation. "
+            "The Chasing Jarvis answer to all three: start with one task you already do, "
+            "not a new one. Take something from your actual work this week — a document, "
+            "an email, a summary, a data lookup — and do it once with an AI tool "
+            "instead of your normal method. You do not need to commit to changing everything. "
+            "You need one completed repetition. That is what closes the gap."
+        ),
+    },
     "2026-07-04": {
         "step": "Chasing Jarvis — Platform Velocity",
         "title": "Two Announcements, 24 Hours Apart — Is Your Workflow Keeping Up?",
@@ -3398,7 +3429,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Enterprises lost Claude Fable 5 for a few weeks. New data shows two-thirds had already built their hedge",
+    "headline": "South Africa's draft national AI policy withdrawn — what it means for businesses and practitioners on the ground",
     "source": "VentureBeat AI",
 }
 
