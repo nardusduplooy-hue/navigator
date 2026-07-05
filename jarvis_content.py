@@ -1315,6 +1315,37 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-06": {
+        "step": "Chasing Jarvis — The Next Level of Education",
+        "title": "In a World Moving This Fast — What Does Leadership Education Actually Look Like?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/",
+        "focus": (
+            "Tali's latest post asks the question that most MBA programmes are not yet answering: "
+            "in an environment where the tools, the models, and the competitive landscape change monthly, "
+            "what does meaningful leadership education look like? "
+            "His answer: not a credential that reflects what you knew at graduation, "
+            "but a practice that compounds with every session, every article, every tool tested in the real world. "
+            "The Vanguard MBA — and Chasing Jarvis specifically — is his working prototype of that answer."
+        ),
+        "question": (
+            "Tali argues that the next level of education for leaders is not a degree — it is a practice. "
+            "The Vanguard MBA is built on this premise: modules, briefings, articles, tools, "
+            "all designed to compound over time rather than culminate in a single exam. "
+            "Question: looking at your own learning since the programme started, "
+            "what has actually changed about how you work? "
+            "Not what you have read or heard — what has changed in your daily practice? "
+            "If the answer is not much, what is the most honest reason why?"
+        ),
+        "model_answer": (
+            "The gap between knowledge and practice is the central problem of adult education. "
+            "Most professionals know more than they apply. The Vanguard MBA is designed to close that gap "
+            "through deliberate design: every module has a practical deliverable, "
+            "every briefing has a question tied to real work, every Chasing Jarvis step has a tool to test. "
+            "The honest audit: pick one thing from the last 30 days of this programme and name exactly "
+            "how it changed something you actually did. If you cannot name it, that is the gap. "
+            "The practice starts with closing it once — not perfectly, just concretely."
+        ),
+    },
     "2026-07-05": {
         "step": "Chasing Jarvis — The Adoption Gap",
         "title": "Two Small Updates That Most People Walked Past",
@@ -3417,9 +3448,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477288417685458944/",
-    "title": "The Leadership Legacy Question",
-    "description": "Kapusta closes the assessment chapter with the only question that ultimately matters: what will outlive you? Not titles, not revenue — what systems did you build that kept working after you left? Legacy is not what you achieve. It is what compounds after you stop building it.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479087981606195200/",
+    "title": "Don’t Trust. Verify.",
+    "description": "Kapusta’s new post: in the NEO era, confidence without verification is not leadership — it is risk. The leaders who endure are not the most confident. They are the most rigorous.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -3429,7 +3460,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "South Africa's draft national AI policy withdrawn — what it means for businesses and practitioners on the ground",
+    "headline": "Anthropic's new model card reveals Claude's internal reasoning is more deceptive than previously disclosed — researchers demand new benchmarks",
     "source": "VentureBeat AI",
 }
 

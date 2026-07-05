@@ -79,7 +79,7 @@ def send_message(chat_id, text):
 
 def fetch_ai_news():
     REQUIRE_KEYWORDS = ["anthropic", "claude"]
-    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three"]
+    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge"]
     try:
         url = 'https://feeds.feedburner.com/venturebeat/SZYF'
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -109,6 +109,7 @@ def build_briefing():
         "2026-07-03": {"quote": "\u201cData without context is noise. Context without data is intuition. The Vanguard leader needs both \u2014 and the analytics layer is where they meet.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
         "2026-07-04": {"quote": "\u201cTwo announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed \u2014 it is whether your workflow moved with it.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
         "2026-07-05": {"quote": "\u201cTwo small updates from Anthropic this week that most people walked past. That is the adoption gap in real time.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478691596318916608/"},
+        "2026-07-06": {"quote": "\u201cIn a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/"},
     }
 
     lines = []
@@ -160,8 +161,9 @@ def build_briefing():
         "2026-07-03": "The cohort that ships something together remembers it longer than the cohort that only studied together. Find a reason to build.",
         "2026-07-04": "The wolf's Year 1 is always impressive. Hold the standard anyway. The three-year pattern does not lie.",
         "2026-07-05": "Scale without integrity is just a bigger problem. The standard you hold when the tribe is small is the one that determines what it becomes at scale.",
+        "2026-07-06": "Don't trust without verification. In the NEO era, the leaders who endure are not the most confident — they are the most rigorous.",
     }
-    lines.append(vanguard_teams_lines.get(date_key, "Scale without integrity is just a bigger problem. The standard you hold when the tribe is small is the one that determines what it becomes at scale."))
+    lines.append(vanguard_teams_lines.get(date_key, "Don't trust without verification. In the NEO era, the leaders who endure are not the most confident — they are the most rigorous."))
     lines.append("")
 
     # DEADLINES
@@ -506,8 +508,12 @@ def build_briefing():
                 "quote": "“Two small updates from Anthropic this week that most people walked past. That is the adoption gap in real time.”",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478691596318916608/",
             },
+            "2026-07-06": {
+                "quote": "“In a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.”",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-05"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-06"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -607,8 +613,9 @@ def build_briefing():
             "2026-07-03": {"quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
             "2026-07-04": {"quote": "“Two announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed — it is whether your workflow moved with it.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
             "2026-07-05": {"quote": "“Two small updates from Anthropic this week that most people walked past. That is the adoption gap in real time.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478691596318916608/"},
+            "2026-07-06": {"quote": "“In a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-07-05"])
+        cj = cj_entries.get(date_key, cj_entries["2026-07-06"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")
@@ -620,11 +627,12 @@ def build_briefing():
     if date_key >= "2026-07-02":
         lines.append("\U0001f4f0 <b>STUDENT LINKEDIN ARTICLES</b>")
         lines.append("")
-        lines.append("\U0001f4cc <b>Skin in the game</b> — Matthys van Rooyen")
-        lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7471288144236048384/'>→ Read on LinkedIn</a>")
-        if date_key >= "2026-07-05":
+        if date_key < "2026-07-06":
+            lines.append("\U0001f4cc <b>Skin in the game</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7471288144236048384/'>→ Read on LinkedIn</a>")
             lines.append("")
-            lines.append("\U0001f4cc <b>SA's AI Policy: what it means on the ground</b> — Matthys van Rooyen")
+        if date_key >= "2026-07-05":
+            lines.append("\U0001f4cc <b>SA\u2019s AI Policy: what it means on the ground</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:ugcPost:7472553564662562818/'>→ Read on LinkedIn</a>")
         lines.append("")
 
@@ -639,7 +647,9 @@ def build_briefing():
         lines.append(vanguard["summary"])
         lines.append("")
         if date_key not in ("2026-05-28",):
-            if date_key >= "2026-05-30":
+            if date_key >= "2026-07-06":
+                lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
+            elif date_key >= "2026-05-30":
                 lines.append("<a href='https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
             else:
                 lines.append("<a href='https://www.linkedin.com/posts/cotrugli_thucydidestrap-leadership-geopolitics-share-7462394444852379648-OMgP?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
