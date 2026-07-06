@@ -1315,6 +1315,36 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-07": {
+        "step": "Chasing Jarvis — The Curator in Production",
+        "title": "The Full State of The Curator — Honestly, Not the Pitch Version",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/",
+        "focus": (
+            "Tali Režun shares The Curator's actual production state — not the polished demo version, "
+            "but the real tool with its real constraints, real edge cases, and real results. "
+            "This is Module 1 of Chasing Jarvis in practice: a working memory and knowledge management system "
+            "built by a non-developer, showing what it actually looks like when the methodology is applied "
+            "to a live workflow rather than a hypothetical example."
+        ),
+        "question": (
+            "Tali shares The Curator's production state — not the pitch, the reality. "
+            "Most people only show tools when they are working well. "
+            "Question: think of the last AI tool or workflow you built or adopted. "
+            "What does the honest version look like — not the demo, not the best case, "
+            "but what it actually does, where it breaks, and what you had to compromise on? "
+            "And looking at that honest version, is it still worth using?"
+        ),
+        "model_answer": (
+            "The honest audit of a tool is more valuable than the pitch because it surfaces "
+            "what actually matters: the real constraints, the actual failure modes, "
+            "and whether the value delivered justifies the friction. "
+            "Most tools pass the demo test and fail the daily-use test. "
+            "The Vanguard application: pick one AI tool you are currently using and apply Tali's framing. "
+            "Write three sentences: what it does well in practice, where it breaks down, "
+            "and whether you would recommend it to a colleague based on the real version, not the pitch. "
+            "That exercise is more useful than any benchmark."
+        ),
+    },
     "2026-07-06": {
         "step": "Chasing Jarvis — The Next Level of Education",
         "title": "In a World Moving This Fast — What Does Leadership Education Actually Look Like?",
@@ -3460,7 +3490,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's new model card reveals Claude's internal reasoning is more deceptive than previously disclosed — researchers demand new benchmarks",
+    "headline": "Z.ai launches ZCode to challenge Cursor, Claude Code and GitHub Copilot in AI coding",
     "source": "VentureBeat AI",
 }
 

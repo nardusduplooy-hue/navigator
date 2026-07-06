@@ -79,7 +79,7 @@ def send_message(chat_id, text):
 
 def fetch_ai_news():
     REQUIRE_KEYWORDS = ["anthropic", "claude"]
-    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge"]
+    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge", "internal reasoning is more deceptive"]
     try:
         url = 'https://feeds.feedburner.com/venturebeat/SZYF'
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -110,6 +110,7 @@ def build_briefing():
         "2026-07-04": {"quote": "\u201cTwo announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed \u2014 it is whether your workflow moved with it.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
         "2026-07-05": {"quote": "\u201cTwo small updates from Anthropic this week that most people walked past. That is the adoption gap in real time.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478691596318916608/"},
         "2026-07-06": {"quote": "\u201cIn a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/"},
+        "2026-07-07": {"quote": "\u201cHere is the full state of The Curator, honestly, not the pitch version. This is what it actually looks like when a tool is in production.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
     }
 
     lines = []
@@ -162,8 +163,9 @@ def build_briefing():
         "2026-07-04": "The wolf's Year 1 is always impressive. Hold the standard anyway. The three-year pattern does not lie.",
         "2026-07-05": "Scale without integrity is just a bigger problem. The standard you hold when the tribe is small is the one that determines what it becomes at scale.",
         "2026-07-06": "Don't trust without verification. In the NEO era, the leaders who endure are not the most confident — they are the most rigorous.",
+        "2026-07-07": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
     }
-    lines.append(vanguard_teams_lines.get(date_key, "Don't trust without verification. In the NEO era, the leaders who endure are not the most confident — they are the most rigorous."))
+    lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
 
     # DEADLINES
@@ -195,6 +197,8 @@ def build_briefing():
                 lines.append("")
                 lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
                 lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
+                if date_key >= "2026-07-07":
+                    lines.append("Three actions to complete before Module 2 \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
                 lines.append("")
             elif date_key >= "2026-06-29":
                 lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE — MODULE 1</b>")
@@ -512,8 +516,12 @@ def build_briefing():
                 "quote": "“In a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.”",
                 "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/",
             },
+            "2026-07-07": {
+                "quote": "“Here is the full state of The Curator, honestly, not the pitch version. This is what it actually looks like when a tool is in production.”",
+                "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/",
+            },
         }
-        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-06"])
+        cj = chasing_jarvis_entries.get(date_key, chasing_jarvis_entries["2026-07-07"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
@@ -544,33 +552,35 @@ def build_briefing():
             lines.append("")
         elif date_key >= "2026-06-18":
             lines.append("\U0001f4cb <b>AI in B2B Sales: MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
+            lines.append("<i>Saša Pavlaković</i>")
+            if date_key >= "2026-06-27":
+                lines.append("\U0001f4fa <b>RECORDING OF SESSION 2</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
+                lines.append("")
+            if date_key >= "2026-06-28":
+                lines.append("\U0001f4dd <b>SALES MANAGEMENT — EXAMINATION DEADLINE</b>")
+                lines.append("<i>Prof. Prim\u017e Hvala</i>")
+                lines.append("")
+                lines.append("Upload your final exam at the <a href='https://cotrugli.online/'>Alumni Portal</a> by <b>Sunday 12 July 2026, midnight</b>.")
+                if date_key < "2026-07-02":
+                    lines.append("\u2022 Put your name at the beginning of the exam")
+                    lines.append("\u2022 Sales Management materials available at Alumni Portal")
+                    lines.append("\u2022 Please complete the <b>module evaluation</b> at Alumni Portal")
+                lines.append("")
+            lines.append("")
+            if date_key < "2026-06-26":
+                lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
+                lines.append("")
+                lines.append("\u2022 Include the exact prompts you used")
+                lines.append("\u2022 Show the real output (anonymised if needed)")
+                lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
+                lines.append("")
+                lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
+                lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
+            lines.append("")
         else:
             lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
-        lines.append("<i>Saša Pavlaković</i>")
-        if date_key >= "2026-06-27":
-            lines.append("\U0001f4fa <b>RECORDING OF SESSION 2</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
+            lines.append("<i>Saša Pavlaković</i>")
             lines.append("")
-        if date_key >= "2026-06-28":
-            lines.append("\U0001f4dd <b>SALES MANAGEMENT — EXAMINATION DEADLINE</b>")
-            lines.append("<i>Prof. Prim\u017e Hvala</i>")
-            lines.append("")
-            lines.append("Upload your final exam at the <a href='https://cotrugli.online/'>Alumni Portal</a> by <b>Sunday 12 July 2026, midnight</b>.")
-            if date_key < "2026-07-02":
-                lines.append("\u2022 Put your name at the beginning of the exam")
-                lines.append("\u2022 Sales Management materials available at Alumni Portal")
-                lines.append("\u2022 Please complete the <b>module evaluation</b> at Alumni Portal")
-            lines.append("")
-        lines.append("")
-        if date_key < "2026-06-26":
-            lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
-            lines.append("")
-            lines.append("\u2022 Include the exact prompts you used")
-            lines.append("\u2022 Show the real output (anonymised if needed)")
-            lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
-            lines.append("")
-            lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
-            lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
-        lines.append("")
 
     # SALES MANAGEMENT WEEKEND MARATHON — shown in zoom slot from 14 June onwards
     if date_key >= "2026-06-14":
@@ -614,8 +624,9 @@ def build_briefing():
             "2026-07-04": {"quote": "“Two announcements, 24 hours apart. Sonnet 5 at near-Opus cost, Fable 5 restored globally. When platforms move this fast, the question is not what changed — it is whether your workflow moved with it.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477984748645146624/"},
             "2026-07-05": {"quote": "“Two small updates from Anthropic this week that most people walked past. That is the adoption gap in real time.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7478691596318916608/"},
             "2026-07-06": {"quote": "“In a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/"},
+            "2026-07-07": {"quote": "“Here is the full state of The Curator, honestly, not the pitch version. This is what it actually looks like when a tool is in production.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
         }
-        cj = cj_entries.get(date_key, cj_entries["2026-07-06"])
+        cj = cj_entries.get(date_key, cj_entries["2026-07-07"])
         lines.append("🎯 <b>CHASING JARVIS</b>")
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")
