@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20260706-0800">
+<meta name="app-version" content="20260706-1600">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -716,26 +716,25 @@ textarea::placeholder { color: var(--text-muted); }
 
   <!-- TAB 2: WORK -->
   <section id="tab-work" class="tab-panel">
-    <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:14px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;"></div>
-      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Your Work — Current Course</div>
-      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#ffffff;margin-bottom:4px;" id="work-module-name">—</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-bottom:16px;" id="work-module-meta">—</div>
-      <div style="display:flex;flex-direction:column;gap:2px;">
-        <div id="work-notes-link" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:rgba(255,255,255,0.12);border-radius:8px;cursor:pointer;">
-          <span style="font-size:13px;color:#ffffff;font-weight:500;">📝 Module Notes</span>
-          <span style="color:rgba(255,255,255,0.6);font-size:16px;">›</span>
-        </div>
-        <div id="work-reading-link" onclick="openUrl(PROGRAMME_DATA.currentModule.readingListUrl)" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:rgba(255,255,255,0.12);border-radius:8px;cursor:pointer;margin-top:4px;">
-          <span style="font-size:13px;color:#ffffff;font-weight:500;">📚 Personal AI Stack</span>
-          <span style="color:rgba(255,255,255,0.6);font-size:16px;">›</span>
-        </div>
-        <div id="work-prereadings-link" onclick="openUrl(PROGRAMME_DATA.currentModule.preReadingsUrl)" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:rgba(255,255,255,0.12);border-radius:8px;cursor:pointer;margin-top:4px;">
-          <span style="font-size:13px;color:#ffffff;font-weight:500;">📖 Module Pre-Readings</span>
-          <span style="color:rgba(255,255,255,0.6);font-size:16px;">›</span>
-        </div>
+
+    <!-- SPRINT HERO -->
+    <div style="background:linear-gradient(135deg,#1a2e4a 0%,#1e3a8a 100%);border-radius:var(--radius);padding:18px;margin-bottom:10px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;">Your Work</div>
+        <div id="work-sprint-badge" style="font-size:10px;font-weight:700;color:#c8a84b;background:rgba(200,168,75,0.15);padding:2px 8px;border-radius:20px;letter-spacing:0.05em;"></div>
       </div>
+      <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#ffffff;margin-bottom:2px;" id="work-sprint-label">Sprint 1</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;" id="work-sprint-dates"></div>
+
+      <!-- 3 tracks -->
+      <div style="display:flex;flex-direction:column;gap:6px;" id="work-sprint-tracks"></div>
     </div>
+
+    <!-- ACTIVE COURSES -->
+    <div style="font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;padding:0 2px;">Active Courses</div>
+    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:14px;" id="work-active-courses"></div>
+
     <div class="section-label">Active Tasks</div>
     <div id="work-assignments"></div>
 
@@ -1041,7 +1040,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260706-0800</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260706-1600</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1102,6 +1101,26 @@ const PROGRAMME_DATA = {
   programme: "COTRUGLI Vanguard MBA 2025-2027",
   team: "Team Chiron",
   role: "Vanguard Chief",
+
+  activeSprint: {
+    number: 1,
+    label: "Sprint 1",
+    dates: "28 Jun \u2013 11 Jul 2026",
+    start: "2026-06-28",
+    end: "2026-07-11",
+    tracks: [
+      { id: "mvp", label: "MVP Development", icon: "\uD83D\uDE80", course: "Chasing Jarvis", url: "https://cotrugli.online/courses/chasing-jarvis/" },
+      { id: "sales", label: "Sales", icon: "\uD83C\uDFAF", course: "AI in B2B Sales", url: "https://cotrugli.online/courses/ai-sales/" },
+      { id: "marketing", label: "Marketing", icon: "\uD83D\uDCE3", course: "Entrepreneurship", url: "https://cotrugli.online/" }
+    ]
+  },
+
+  activeCourses: [
+    { id: "cj", name: "Chasing Jarvis", module: "Module 5 \u2014 Build your MVP", icon: "\uD83C\uDFAF", url: "https://cotrugli.online/courses/chasing-jarvis/" },
+    { id: "b2b", name: "AI in B2B Sales", module: "Module 2 \u2014 AI as Force Multiplier", icon: "\uD83D\uDCCA", url: "https://cotrugli.online/courses/ai-sales/" },
+    { id: "baw", name: "Business as Warfare", module: "Module 1 \u2014 New Rules of Engagement", icon: "\u2694\uFE0F", url: "https://cotrugli.online/courses/business-as-warfare/" },
+    { id: "analytics", name: "Analytics", module: "Module 1", icon: "\uD83D\uDCC8", url: "https://cotrugli.online/courses/analytics/" }
+  ],
 
   currentModule: {
     name: "Chasing Jarvis \u2014 Module 5",
@@ -2470,8 +2489,8 @@ function renderNorthStar() {
 
   document.getElementById('ns-date-label').textContent = cat.getDate() + ' ' + months[cat.getMonth()].toUpperCase() + ' ' + cat.getFullYear();
   document.getElementById('ns-day-label').textContent = days[cat.getDay()];
-  document.getElementById('stat-sprint').textContent = PROGRAMME_DATA.currentModule.sprint.replace('Sprint ','');
-  document.getElementById('stat-module').textContent = PROGRAMME_DATA.currentModule.name.split('—')[0].trim().substring(0,4).toUpperCase();
+  document.getElementById('stat-sprint').textContent = PROGRAMME_DATA.activeSprint.number;
+  document.getElementById('stat-module').textContent = PROGRAMME_DATA.currentModule.name.split('\u2014')[0].trim().substring(0,4).toUpperCase();
 
   const priEl = document.getElementById('ns-priorities');
   priEl.innerHTML = '';
@@ -2574,16 +2593,51 @@ function renderNorthStar() {
 }
 
 function renderWork() {
-  const mod = PROGRAMME_DATA.currentModule;
-  document.getElementById('work-module-name').textContent = mod.name;
-  document.getElementById('work-module-meta').textContent = mod.subtitle ? mod.subtitle : `Session ${mod.week} · ${mod.sprint}`;
-  document.getElementById('work-notes-link').onclick = () => openUrl(mod.notesUrl);
-  const rlEl = document.getElementById('work-reading-link');
-  if (rlEl) rlEl.onclick = () => openUrl(mod.readingListUrl);
+  // ── Sprint hero ──────────────────────────────────────────
+  const sp = PROGRAMME_DATA.activeSprint;
+  const sprintEl = document.getElementById('work-sprint-label');
+  const datesEl  = document.getElementById('work-sprint-dates');
+  const badgeEl  = document.getElementById('work-sprint-badge');
+  const tracksEl = document.getElementById('work-sprint-tracks');
 
+  if (sprintEl) sprintEl.textContent = sp.label;
+  if (datesEl)  datesEl.textContent  = sp.dates;
+
+  // Days remaining in sprint
+  const sprintEnd = new Date(sp.end + 'T23:59:00');
+  const daysLeft  = Math.max(0, Math.ceil((sprintEnd - new Date()) / 86400000));
+  if (badgeEl) badgeEl.textContent = daysLeft > 0 ? daysLeft + 'd left' : 'Sprint complete';
+
+  if (tracksEl) {
+    tracksEl.innerHTML = sp.tracks.map(t => `
+      <div onclick="openUrl('${t.url}')" style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:rgba(255,255,255,0.09);border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.08);">
+        <span style="font-size:16px;">${t.icon}</span>
+        <div style="flex:1;">
+          <div style="font-size:12px;font-weight:700;color:#ffffff;">${t.label}</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;">${t.course}</div>
+        </div>
+        <span style="font-size:14px;color:rgba(255,255,255,0.4);">›</span>
+      </div>`).join('');
+  }
+
+  // ── Active courses ───────────────────────────────────────
+  const coursesEl = document.getElementById('work-active-courses');
+  if (coursesEl) {
+    coursesEl.innerHTML = (PROGRAMME_DATA.activeCourses || []).map(c => `
+      <div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;cursor:pointer;">
+        <span style="font-size:16px;">${c.icon}</span>
+        <div style="flex:1;">
+          <div style="font-size:12px;font-weight:700;color:var(--text);">${c.name}</div>
+          <div style="font-size:10px;color:var(--text-muted);margin-top:1px;">${c.module}</div>
+        </div>
+        <span style="font-size:14px;color:var(--text-muted);">›</span>
+      </div>`).join('');
+  }
+
+  // ── Assignments ──────────────────────────────────────────
   const el = document.getElementById('work-assignments');
   el.innerHTML = '';
-  const statusMap = { pending: 'badge-pending', 'in-progress': 'badge-progress', submitted: 'badge-done', commented: 'badge-done' };
+  const statusMap   = { pending: 'badge-pending', 'in-progress': 'badge-progress', submitted: 'badge-done', commented: 'badge-done' };
   const statusLabel = { pending: 'Pending', 'in-progress': 'In Progress', submitted: 'Submitted \u2713', commented: 'Commented \u2713' };
 
   PROGRAMME_DATA.assignments.forEach(a => {
