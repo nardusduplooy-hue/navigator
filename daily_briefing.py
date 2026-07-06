@@ -172,6 +172,16 @@ def build_briefing():
     lines.append("🔴 <b>DEADLINES</b>")
     lines.append("")
 
+    # BAW MODULE 2 PRE-DEPLOYMENT TASKS — 7 to 9 July
+    if "2026-07-07" <= date_key <= "2026-07-09":
+        if date_key == "2026-07-09":
+            lines.append("⚠️ <b>BAW MODULE 2 PRE-DEPLOYMENT TASKS — DUE TODAY 16:00 CET</b>")
+        else:
+            lines.append("📋 <b>BAW Module 2 Pre-Deployment Tasks</b> — Due Thursday 9 July, 16:00 CET")
+        lines.append("Complete: PayPal Mafia baseline report, SEC EDGAR, Google Patents, and Alerts tasks.")
+        lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-1-business-as-warfare/'>→ Submit via Cotrugli course portal</a>")
+        lines.append("")
+
     # NEXT ZOOM / UPCOMING SESSION
     if date_key >= "2026-06-22":
         if date_key <= "2026-06-27":
