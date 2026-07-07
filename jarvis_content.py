@@ -1315,6 +1315,32 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-08": {
+        "step": "Chasing Jarvis — The Curator, Three Months In",
+        "title": "Stable Since April — What Longevity Actually Proves",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/",
+        "focus": (
+            "Today's Chasing Jarvis line is an unglamorous fact: The Curator has been stable since April. "
+            "No rebuild, no relaunch — just quiet, working infrastructure. Most AI tools that get demoed "
+            "never make it to month three, let alone month three without a teardown. Stability, not the "
+            "launch, is the real proof point — and it is the one that never makes it into a pitch deck."
+        ),
+        "question": (
+            "Today's Chasing Jarvis quote is a single, unglamorous fact: The Curator has been stable since "
+            "April — no rebuild, no relaunch, just quiet, working infrastructure. Question: think about the "
+            "tools or workflows you have adopted this year. Which ones are still standing, unchanged, three "
+            "months later — and which quietly died after the initial excitement? What does that difference "
+            "actually tell you?"
+        ),
+        "model_answer": (
+            "Stability is a harder test than a demo, because a demo only has to work once, under conditions you "
+            "control. A tool that survives three months of real use has already absorbed the edge cases, the bad "
+            "days, and the moments you almost gave up on it — and kept earning its place anyway. "
+            "The Vanguard application: audit your own stack. For each AI tool or workflow you have adopted since "
+            "Module 1, ask one question — would I notice if it broke today? If the honest answer is no, it was "
+            "never actually load-bearing. Keep the ones that are."
+        ),
+    },
     "2026-07-07": {
         "step": "Chasing Jarvis — The Curator in Production",
         "title": "The Full State of The Curator — Honestly, Not the Pitch Version",
@@ -3490,7 +3516,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Z.ai launches ZCode to challenge Cursor, Claude Code and GitHub Copilot in AI coding",
+    "headline": "Anthropic's new \u201cJ-lens\u201d reveals a silent workspace inside Claude that mirrors a leading theory of consciousness",
     "source": "VentureBeat AI",
 }
 
