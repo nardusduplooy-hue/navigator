@@ -1315,6 +1315,32 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-09": {
+        "step": "Chasing Jarvis — The Fight for Intelligence",
+        "title": "Why Staying Intelligent Is a Fight, Not a Feature",
+        "url": "https://medium.com/@talirezun/the-fight-for-intelligence-6cd1f0925afc",
+        "focus": (
+            "Today's Chasing Jarvis piece from Dr. Tali Režun is on Medium rather than LinkedIn this time, "
+            "titled 'The Fight for Intelligence.' The title itself is the prompt: intelligence, whether in a "
+            "person, a team, or a piece of software, is not a trophy you win once. It has to be actively "
+            "defended, every day, against the quiet pull of coasting on what you already know."
+        ),
+        "question": (
+            "Today's Chasing Jarvis piece from Dr. Tali Režun is titled 'The Fight for Intelligence' (on "
+            "Medium this time, not LinkedIn). Before you click through: is intelligence — for a person, a "
+            "team, or a piece of software — something you build once and keep, or something you have to "
+            "actively defend against decay every day? Where this week have you had to actually fight to stay "
+            "sharp, rather than coast on what you already knew?"
+        ),
+        "model_answer": (
+            "The honest answer is usually the second one. Capability doesn't hold its value by default — a "
+            "skill you stop practicing, a system you stop maintaining, or a standard you stop enforcing all "
+            "quietly decay whether or not anyone notices. The Vanguard application: everything you've built "
+            "since Module 1 is only worth what you keep defending. Read Dr. Režun's full piece before "
+            "Saturday's War Room with Dražen Kapusta and Dr. Tali Režun — it's exactly the kind of session "
+            "where coasting becomes visible fast."
+        ),
+    },
     "2026-07-08": {
         "step": "Chasing Jarvis — The Curator, Three Months In",
         "title": "Stable Since April — What Longevity Actually Proves",
@@ -3516,7 +3542,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's new \u201cJ-lens\u201d reveals a silent workspace inside Claude that mirrors a leading theory of consciousness",
+    "headline": "Anthropic brings Claude Cowork to mobile and web as usage data shows most users aren\u2019t coding",
     "source": "VentureBeat AI",
 }
 

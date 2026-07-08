@@ -112,6 +112,7 @@ def build_briefing():
         "2026-07-06": {"quote": "\u201cIn a world moving this fast, what does the next level of education for leaders actually look like? Not a degree. A practice.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477256761729552384/"},
         "2026-07-07": {"quote": "\u201cHere is the full state of The Curator, honestly, not the pitch version. This is what it actually looks like when a tool is in production.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
         "2026-07-08": {"quote": "\u201cSecond Brain has been stable since April.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
+        "2026-07-09": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://medium.com/@talirezun/the-fight-for-intelligence-6cd1f0925afc", "source": "Medium"},
     }
 
     lines = []
@@ -166,6 +167,7 @@ def build_briefing():
         "2026-07-06": "Don't trust without verification. In the NEO era, the leaders who endure are not the most confident — they are the most rigorous.",
         "2026-07-07": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
         "2026-07-08": "The entries you make on the quiet, unremarkable days are the ones that decide what the ledger says when someone finally reads it.",
+        "2026-07-09": "The tribe that stops fighting to stay sharp is not resting — it is losing ground it will have to fight twice as hard to get back.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -202,6 +204,7 @@ def build_briefing():
             lines.append("")
         else:
             lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+            lines.append("<i>War Room with Dražen Kapusta &amp; Dr. Tali Režun</i>")
             lines.append("\u2022 \U0001f5d3 Saturday 11 July 2026")
             lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
             lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR2")
@@ -562,7 +565,8 @@ def build_briefing():
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
             lines.append(cj_rc["quote"])
-            lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
+            cj_source = cj_rc.get("source", "LinkedIn")
+            lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on " + cj_source + "</a>")
             lines.append("")
         elif date_key >= "2026-06-18":
             lines.append("\U0001f4cb <b>AI in B2B Sales: MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
@@ -656,9 +660,14 @@ def build_briefing():
             lines.append("\U0001f4cc <b>Skin in the game</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7471288144236048384/'>→ Read on LinkedIn</a>")
             lines.append("")
-        if date_key >= "2026-07-05":
+        if "2026-07-05" <= date_key < "2026-07-09":
             lines.append("\U0001f4cc <b>SA\u2019s AI Policy: what it means on the ground</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:ugcPost:7472553564662562818/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key >= "2026-07-09":
+            lines.append("\U0001f4cc <b>The Wolf that guards the sheep</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7480168741188747265/'>→ Read on LinkedIn</a>")
+            lines.append("")
         lines.append("")
 
     # VANGUARD LEADERSHIP — daily book summary
