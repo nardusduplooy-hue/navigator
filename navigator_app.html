@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20260708-1530">
+<meta name="app-version" content="20260708-1545">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -1047,7 +1047,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260708-1530</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260708-1545</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -2519,16 +2519,20 @@ function renderNorthStar() {
   priEl.innerHTML = '';
   const urgencyColor = { urgent: '#fca5a5', warning: '#fcd34d', safe: '#86efac', past: 'rgba(255,255,255,0.3)', current: '#86efac' };
 
-  PROGRAMME_DATA.assignments.slice(0,2).forEach(a => {
-    if (a.type === 'linkedin') {
-      const isDone = a.status === 'commented' || a.status === 'submitted';
-      priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${isDone ? 'rgba(255,255,255,0.3)' : '#93c5fd'};"></div><span class="priority-name">💬 ${a.postTitle || a.name}</span><span class="priority-countdown ${isDone ? 'past' : 'safe'}">${isDone ? 'Done' : 'Comment'}</span></div>`;
-    } else if (!a.dueDate) {
-      priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#86efac;"></div><span class="priority-name">${a.name}</span><span class="priority-countdown safe">Current</span></div>`;
-    } else {
-      const cd = getCountdown(a.dueDate);
-      priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${urgencyColor[cd.urgency]};"></div><span class="priority-name">${a.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
-    }
+  // Only show assignments with actual due dates (skip "Current" no-deadline items)
+  const deadlineAssignments = PROGRAMME_DATA.assignments.filter(a =>
+    a.type !== 'linkedin' && a.dueDate && a.dueDate !== '' && a.status !== 'submitted'
+  ).slice(0, 2);
+
+  deadlineAssignments.forEach(a => {
+    const cd = getCountdown(a.dueDate);
+    priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${urgencyColor[cd.urgency]};"></div><span class="priority-name">${a.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
+  });
+
+  // LinkedIn items
+  PROGRAMME_DATA.assignments.filter(a => a.type === 'linkedin' && a.status !== 'commented' && a.status !== 'submitted').slice(0,1).forEach(a => {
+    const isDone = a.status === 'commented' || a.status === 'submitted';
+    priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${isDone ? 'rgba(255,255,255,0.3)' : '#93c5fd'};"></div><span class="priority-name">💬 ${a.postTitle || a.name}</span><span class="priority-countdown ${isDone ? 'past' : 'safe'}">${isDone ? 'Done' : 'Comment'}</span></div>`;
   });
   if (PROGRAMME_DATA.sessions.length > 0) {
     const s = getNextSession();
