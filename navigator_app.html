@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20260706-1800">
+<meta name="app-version" content="20260708-1530">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -566,10 +566,14 @@ textarea::placeholder { color: var(--text-muted); }
       <div class="focus-programme">Vanguard MBA 2025–2027</div>
       <div class="focus-label">Today's Priorities</div>
       <div id="ns-priorities"></div>
+      <div style="margin-top:12px;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
+        <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;">Active Courses</div>
+        <div style="display:flex;flex-direction:column;gap:4px;" id="ns-active-courses"></div>
+      </div>
     </div>
     <div class="stats-bar">
       <div class="stat-chip"><div class="stat-val" id="stat-sprint">—</div><div class="stat-lbl">Sprint</div></div>
-      <div class="stat-chip"><div class="stat-val" id="stat-module">—</div><div class="stat-lbl">Module</div></div>
+      <div class="stat-chip" style="flex:2;"><div class="stat-val" style="font-size:10px;letter-spacing:0.03em;">Build · Ship · Sell</div><div class="stat-lbl">Active Tracks</div></div>
       <div class="stat-chip"><div class="stat-val" id="stat-jtbd">All ✓</div><div class="stat-lbl">JTBD</div></div>
     </div>
     <div id="deadlines-accordion-header" onclick="toggleDeadlines()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:0;cursor:pointer;user-select:none;">
@@ -1043,7 +1047,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260706-1800</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260708-1530</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -2493,7 +2497,23 @@ function renderNorthStar() {
   document.getElementById('ns-date-label').textContent = cat.getDate() + ' ' + months[cat.getMonth()].toUpperCase() + ' ' + cat.getFullYear();
   document.getElementById('ns-day-label').textContent = days[cat.getDay()];
   document.getElementById('stat-sprint').textContent = PROGRAMME_DATA.activeSprint.number;
-  document.getElementById('stat-module').textContent = PROGRAMME_DATA.currentModule.name.split('\u2014')[0].trim().substring(0,4).toUpperCase();
+
+  // Populate active courses in hero
+  const nsCoursesEl = document.getElementById('ns-active-courses');
+  if (nsCoursesEl) {
+    nsCoursesEl.innerHTML = (PROGRAMME_DATA.activeCourses || []).map(c =>
+      `<div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:rgba(255,255,255,0.09);border-radius:6px;cursor:pointer;">
+        <div style="display:flex;align-items:center;gap:7px;">
+          <span style="font-size:13px;">${c.icon}</span>
+          <div>
+            <div style="font-size:11px;font-weight:700;color:#ffffff;">${c.name}</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.45);">${c.module}</div>
+          </div>
+        </div>
+        <span style="font-size:12px;color:rgba(255,255,255,0.4);">›</span>
+      </div>`
+    ).join('');
+  }
 
   const priEl = document.getElementById('ns-priorities');
   priEl.innerHTML = '';
