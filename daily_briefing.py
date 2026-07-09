@@ -113,6 +113,7 @@ def build_briefing():
         "2026-07-07": {"quote": "\u201cHere is the full state of The Curator, honestly, not the pitch version. This is what it actually looks like when a tool is in production.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
         "2026-07-08": {"quote": "\u201cSecond Brain has been stable since April.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
         "2026-07-09": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://medium.com/@talirezun/the-fight-for-intelligence-6cd1f0925afc", "source": "Medium"},
+        "2026-07-10": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
     }
 
     lines = []
@@ -168,16 +169,16 @@ def build_briefing():
         "2026-07-07": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
         "2026-07-08": "The entries you make on the quiet, unremarkable days are the ones that decide what the ledger says when someone finally reads it.",
         "2026-07-09": "The tribe that stops fighting to stay sharp is not resting — it is losing ground it will have to fight twice as hard to get back.",
+        "2026-07-10": "Trust is not the reward for winning the fight for intelligence. It is the only thing that lets the tribe keep fighting it together.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
 
     # DEADLINES
-    lines.append("🔴 <b>DEADLINES</b>")
-    lines.append("")
-
     # BAW MODULE 2 PRE-DEPLOYMENT TASKS — 7 to 9 July
     if "2026-07-07" <= date_key <= "2026-07-09":
+        lines.append("🔴 <b>DEADLINES</b>")
+        lines.append("")
         if date_key == "2026-07-09":
             lines.append("⚠️ <b>BAW MODULE 2 PRE-DEPLOYMENT TASKS — DUE TODAY 16:00 CET</b>")
         else:

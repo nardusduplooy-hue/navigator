@@ -1315,6 +1315,34 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-10": {
+        "step": "Chasing Jarvis — The Fight for Intelligence, Round Two",
+        "title": "The Fight Is Also Happening at the Industry Level",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/",
+        "focus": (
+            "Dr. Tali Režun's 'The Fight for Intelligence' crossed over from Medium to LinkedIn today, and "
+            "today's AI News is an almost too-perfect illustration of the same idea at industry scale: "
+            "Grok 4.5 launching at half the price of Anthropic and OpenAI's models is not a capability story, "
+            "it is a fight-to-stay-relevant story. The labs with the deepest pockets are still fighting daily "
+            "to hold ground. Nobody, at any scale, gets to coast."
+        ),
+        "question": (
+            "Dr. Tali Režun's 'The Fight for Intelligence' has now crossed over from Medium to LinkedIn — and "
+            "today's AI News is an almost too-perfect illustration of the same idea, one level up: Grok 4.5 "
+            "just launched at half the price of Anthropic and OpenAI's models, forcing both to respond. If "
+            "frontier AI labs with the deepest pockets in the world still have to fight daily to hold their "
+            "position, what does that tell you about anyone, at any level, who thinks their current edge is "
+            "safe to coast on?"
+        ),
+        "model_answer": (
+            "It tells you the fight never actually ends — it just changes shape. Anthropic and OpenAI didn't "
+            "get to stop competing the day they became category leaders; a cheaper, faster challenger simply "
+            "forces the next round. The Vanguard application: whatever edge you're building this cohort — a "
+            "skill, a client relationship, a tool workflow — assume someone cheaper or faster is already "
+            "building the same thing. Trust, consistency, and reputation are what let a tribe keep fighting "
+            "that fight together instead of every member fighting it alone."
+        ),
+    },
     "2026-07-09": {
         "step": "Chasing Jarvis — The Fight for Intelligence",
         "title": "Why Staying Intelligent Is a Fight, Not a Feature",
@@ -3542,7 +3570,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic brings Claude Cowork to mobile and web as usage data shows most users aren\u2019t coding",
+    "headline": "SpaceX\u2019s Grok 4.5 launches at half the price of rivals \u2014 here\u2019s why that could rattle Anthropic and OpenAI",
     "source": "VentureBeat AI",
 }
 
