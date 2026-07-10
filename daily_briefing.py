@@ -79,7 +79,7 @@ def send_message(chat_id, text):
 
 def fetch_ai_news():
     REQUIRE_KEYWORDS = ["anthropic", "claude"]
-    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge", "internal reasoning is more deceptive"]
+    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge", "internal reasoning is more deceptive", "grok"]
     try:
         url = 'https://feeds.feedburner.com/venturebeat/SZYF'
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -114,6 +114,7 @@ def build_briefing():
         "2026-07-08": {"quote": "\u201cSecond Brain has been stable since April.\u201d", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479782406443655169/"},
         "2026-07-09": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://medium.com/@talirezun/the-fight-for-intelligence-6cd1f0925afc", "source": "Medium"},
         "2026-07-10": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
+        "2026-07-11": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
     }
 
     lines = []
@@ -170,6 +171,7 @@ def build_briefing():
         "2026-07-08": "The entries you make on the quiet, unremarkable days are the ones that decide what the ledger says when someone finally reads it.",
         "2026-07-09": "The tribe that stops fighting to stay sharp is not resting — it is losing ground it will have to fight twice as hard to get back.",
         "2026-07-10": "Trust is not the reward for winning the fight for intelligence. It is the only thing that lets the tribe keep fighting it together.",
+        "2026-07-11": "The tribe that shows up in the room together is stronger than the tribe that only shows up in the group chat.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -204,12 +206,20 @@ def build_briefing():
             lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
             lines.append("")
         else:
-            lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-            lines.append("<i>War Room with Dražen Kapusta &amp; Dr. Tali Režun</i>")
-            lines.append("\u2022 \U0001f5d3 Saturday 11 July 2026")
-            lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
-            lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR2")
-            lines.append("")
+            if date_key == "2026-07-11":
+                lines.append("📅 <b>NEXT ZOOM SESSION — TODAY</b>")
+                lines.append("<i>Chasing Jarvis 5 — War Room with Dražen Kapusta &amp; Dr. Tali Režun</i>")
+                lines.append("\u2022 \U0001f5d3 Today, Saturday 11 July 2026 @ 17:00 CET")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/26/?wm=1&mi=83238383656'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 832 3838 3656 | <b>Passcode:</b> JARVIS5")
+                lines.append("")
+            else:
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>War Room with Dražen Kapusta &amp; Dr. Tali Režun</i>")
+                lines.append("\u2022 \U0001f5d3 Saturday 11 July 2026")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/25/?wm=1&mi=89281123748'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR2")
+                lines.append("")
             if date_key >= "2026-07-03":
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")

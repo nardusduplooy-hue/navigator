@@ -719,6 +719,426 @@ VANGUARD_SUMMARIES = {
             "Stronger Together. Let's build."
         ),
     },
+    "2026-07-13": {
+        "title": "Are You Running a Business, or Practicing a Craft?",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Business isn't a science of optimization — it's a craft, like sculpture or music, demanding mastery, discipline, and standards nobody's forcing you to keep. The Japanese concept of Shokunin describes someone who dedicates their life to a craft, refining it endlessly even after decades of expertise. When AI takes over optimization and operational excellence, what separates the great from the mediocre is craft consciousness. Worth sitting with today: are you running a business, or practicing a craft?"
+        ),
+    },
+    "2026-07-14": {
+        "title": "Machiavelli or Cotrugli — Which Operating System Runs Your Decisions?",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "In 1513, Machiavelli wrote The Prince — a manual for acquiring power through fear and ruthlessness. Fifty-five years earlier, a merchant named Cotrugli had already written the opposite playbook: build trust, protect reputation, think long-term. Modern business culture absorbed far more Machiavelli than most leaders realize, dressed in language like \"disruption\" and \"strategic flexibility.\" The question: which operating system is actually running your decisions?"
+        ),
+    },
+    "2026-07-15": {
+        "title": "The Perfect Merchant — Forging Meaning Through Craft, Not Introspection",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Cotrugli believed your essence isn't discovered through introspection — it's forged through the daily practice of your craft, done with integrity. Three principles define his \"Perfect Merchant\": craft defines who you become, reputation is your true north star, and virtue is not a constraint on strategy — it is your strategy. Not \"what's my purpose,\" but \"what am I reliably building, day after day?\""
+        ),
+    },
+    "2026-07-16": {
+        "title": "Five Axioms — The Operating System Beneath the Philosophy",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Underneath the philosophy of craft and reputation sits something closer to an operating system: five axioms that determine success for any intelligence — human, organizational, or artificial — in networked, exponential environments. Essence is forged through repeated action, reputation compounds exponentially, virtue is competitive architecture, long-term thinking dominates, and positive-sum coordination beats zero-sum competition. These aren't values statements — they're structural realities the environment enforces."
+        ),
+    },
+    "2026-07-17": {
+        "title": "The NEO Era Battlefield — Networked, Exponential, Orchestrated",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "NEO stands for Networked, Exponential, Orchestrated — three forces reshaping business faster than most leaders have updated their mental models. Networks expose deception instantly and compound trust exponentially. Growth accelerates rather than accumulates, breaking every linear five-year plan. Coordination increasingly happens without hierarchy — through orchestration, not control. Most leaders are still navigating this terrain with an Industrial Era map."
+        ),
+    },
+    "2026-07-18": {
+        "title": "Business as Warfare — Why Mission Command Beats the Detailed Plan",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Military doctrine evolved through three eras — mass and firepower, information dominance, and network-centric coordination — because centralized control stopped working on modern battlefields. Business is facing the same forcing function. The OODA loop (observe, orient, decide, act) rewards whoever completes the cycle faster, not whoever has more resources. \"Mission command\" — clear intent, distributed execution — increasingly beats detailed top-down plans."
+        ),
+    },
+    "2026-07-19": {
+        "title": "The NEO Leadership Challenge — When Old Models Turn Dangerous",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "The leadership model most executives learned — strategic planning, hierarchical control, consensus-building, risk avoidance — didn't just become outdated, it became actively counterproductive. Kodak had a strategic plan. BlackBerry built consensus. Nokia managed risk carefully. All three collapsed because their operating model assumed a stable, slow-moving world that no longer exists."
+        ),
+    },
+    "2026-07-20": {
+        "title": "Fear as Data — Processing the Signal Instead of Freezing or Panicking",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Under pressure, most leaders either freeze or panic — both are the same failure, pointed in different directions. Vanguard leaders process fear differently: as data, not as an override. Three traditions converge on this — Daoist equilibrium, Chinese strategic preparation, and Navy SEAL stress inoculation. Fear tells you something matters and something threatens it. That's useful. Panic is not."
+        ),
+    },
+    "2026-07-21": {
+        "title": "AI as Force Multiplier — It Amplifies Whatever Pattern You Already Run",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "AI doesn't create your patterns — it amplifies them, whatever you're already doing, faster and at greater scale. Feed it an extractive, short-term pattern and you get faster collapse. Feed it a pattern built on trust and long-term thinking and you get compounding advantage. Before deploying AI anywhere, ask: if this gets amplified 10x, is it still who I want to be?"
+        ),
+    },
+    "2026-07-22": {
+        "title": "Tribe as Coordination — Why Tribes Get Stronger as They Scale",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Teams cap out around 15 people. Hierarchies get slower the bigger they grow. But tribes — networks coordinated through shared understanding and distributed trust rather than command — get more capable as they scale, not less. This is why open-source communities and startup ecosystems routinely outperform traditionally managed organizations. The trust architecture that makes this possible builds in layers, and it can't be rushed."
+        ),
+    },
+    "2026-07-23": {
+        "title": "What You Now Possess — Agreeing With an Idea Isn't Running It",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "There's a difference between agreeing with an idea and actually running it. Most leaders read a framework, nod along, and quietly revert to old habits within weeks. The honest question isn't \"do these principles make sense\" — almost everyone says yes. It's: over the last 90 days, would an outside observer scoring your actual decisions conclude you're running this operating system, or just admiring it from a distance?"
+        ),
+    },
+    "2026-07-24": {
+        "title": "The Three Patterns — Wolf, Sheepdog, Sheep Are Running Simultaneously",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Every organization has three patterns running simultaneously — not three types of people, three patterns of behavior. Wolves optimize for visible wins today that become hidden costs tomorrow. Sheepdogs optimize for system health, producing invisible wins — the disaster that never happened. Sheep aren't a problem to fix, they need direction, safety, and rhythm to contribute at their best. The question is which pattern your reward system reinforces."
+        ),
+    },
+    "2026-07-25": {
+        "title": "The Sheepdog Manifesto — A Blueprint for Any Intelligence, Human or AI",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "This isn't really a business philosophy anymore — it's a proposal for how any intelligence, human, organizational, or artificial, should operate in a networked world. The same principles that make a merchant trustworthy in 1458 are structurally what would make an AI system safe to build a future around: reputation over extraction, long-term thinking over short-term optimization, coordination over domination."
+        ),
+    },
+    "2026-07-26": {
+        "title": "What Standard Do You Hold When Nobody's Watching?",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Ask yourself honestly: what standards do you maintain when nobody's watching? Shokunin philosophy holds that real standards are revealed in unglamorous, invisible moments — the imperfect grain of rice nobody would notice, the hidden joint no customer will ever see. If your standards only appear when someone's grading you, you don't have standards. You have performance."
+        ),
+    },
+    "2026-07-27": {
+        "title": "You'd Never Call Yourself Machiavellian — But What Do Your Last Ten Decisions Say?",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Most leaders would never call themselves Machiavellian. Yet ask: have you broken a promise this year because \"circumstances changed\"? Praised \"strategic flexibility\" when it meant walking back a commitment? That's the philosophy running quietly under different vocabulary. The uncomfortable diagnostic isn't what you believe — it's what your last ten hard decisions actually reveal."
+        ),
+    },
+    "2026-07-28": {
+        "title": "“A Profitable Business” Is the Wrong Answer to “What Are You Building?”",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "If your answer to \"what are you building\" is \"a profitable business\" or \"market leadership,\" you're answering the wrong question. Those are outcomes, not craft. Cotrugli's Perfect Merchant framework forces a harder question: what is the actual work you're mastering, and would you still be proud of the way you built it in twenty years?"
+        ),
+    },
+    "2026-07-29": {
+        "title": "The Five Axioms Don't Run Part-Time",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "The five axioms aren't values you adopt when convenient — they're structural realities the environment enforces whether you believe in them or not. There's no \"mostly long-term thinking, short-term when it matters.\" That's just wolf logic with a trust vocabulary attached — and networks detect the mismatch quickly."
+        ),
+    },
+    "2026-07-30": {
+        "title": "Name Three Things Growing Exponentially in Your Industry Right Now",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "Most executives can name their five-year plan. Few can name three things in their industry currently growing exponentially rather than linearly. That gap is the actual risk. Exponential change looks like linear change for the first two years — exactly why leaders get blindsided by the \"sudden\" disruption that was actually visible the whole time."
+        ),
+    },
+    "2026-07-31": {
+        "title": "How Fast Is Your OODA Loop, Actually?",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "How fast is your OODA loop — actually? Most leaders answer defensively: \"we move quickly when it matters.\" But if a significant decision in your organization takes weeks to travel from observation to action, you're fighting network-centric competitors with an Industrial Era decision cycle, in an exponential-tempo war."
+        ),
+    },
+    "2026-08-01": {
+        "title": "When Did You Last Actually Change Your Mind?",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "Ask honestly: when did you last completely change your mind about something important, based on new evidence, in the last six months? If you can't remember a specific instance, that's not stability — it's cognitive rigidity, and in an environment changing exponentially, rigidity isn't a personality quirk. It's a liability with a timeline."
+        ),
+    },
+    "2026-08-02": {
+        "title": "Suppressing Fear and Processing Fear Look Identical From the Outside",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Most leaders think they're calm under pressure because they don't visibly panic. But suppressed fear and processed fear look identical from the outside and behave completely differently on the inside. Suppression amplifies fear later, usually at the worst moment. The real diagnostic: can you name the last fear you actually named out loud, rather than just powered through?"
+        ),
+    },
+    "2026-08-03": {
+        "title": "Before You Deploy AI Again — Would You Be Proud of It Amplified 10x?",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Before your next AI deployment, ask the uncomfortable question: if this pattern got amplified 10x, would you still be proud of it in five years? Most organizations skip this test entirely and discover the answer only after the amplified version has already damaged something that took years to build."
+        ),
+    },
+    "2026-08-04": {
+        "title": "How Many People Can Decide Without Your Approval? That's Your Real Ceiling",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Count honestly: how many people in your organization can make a significant decision without needing your approval? Not \"how many report to you.\" How many you'd genuinely trust to decide well, aligned with your intent, without checking first. Most leaders are shocked by how low that number is — and it's the real ceiling on how much you can coordinate."
+        ),
+    },
+    "2026-08-05": {
+        "title": "Would an Honest Observer Agree You're Running the Philosophy You Claim?",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Would an honest outside observer, looking only at your last 90 days of decisions, conclude you're running the operating system you'd claim in an interview? Most leaders assume yes and have never actually checked. The gap between claimed philosophy and demonstrated pattern is now visible to your entire network, whether you audit it yourself or not."
+        ),
+    },
+    "2026-08-06": {
+        "title": "Audit Your Last Ten Promotions — Wolf Pattern or Sheepdog Pattern?",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Look at your last ten promotions or bonuses. For each one, ask honestly: did this reward a wolf pattern or a sheepdog pattern? Not what you intended to reward. What the decision actually signaled to everyone watching. Most leaders discover uncomfortable things once they run this audit for real."
+        ),
+    },
+    "2026-08-07": {
+        "title": "If These Principles Would Make AI Safe, Why Aren't More Systems Built on Them?",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "If the same principles that build trust between merchants would also be the principles that make AI safe, why do so few AI systems get designed around them explicitly? The uncomfortable answer: most AI development still optimizes for narrow, short-term objectives — the exact pattern that collapses trust fastest in any networked system, human or artificial."
+        ),
+    },
+    "2026-08-08": {
+        "title": "700 Years, Same Tool, Still Innovating — What Takamura's Knife Makers Know",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "The Takamura knife makers of Echizen, Japan have been forging blades for over 700 years — and they're still refining the steel composition. The temple carpenters who maintain Japan's ancient wooden structures build joints meant to last a thousand years, knowing they'll never see the finished result. Neither treats mastery as a destination. Both understand that standards maintained for centuries, not quarters, are what \"building something real\" actually looks like."
+        ),
+    },
+    "2026-08-09": {
+        "title": "One Book Born From Desperation, One From Patience — Guess Which One Still Works",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Machiavelli wrote The Prince in 1513 while in political exile, tortured and stripped of position — a job application to the family that had just crushed him, demonstrating he understood power well enough to be useful. Cotrugli wrote The Art of Trade in 1458, unprompted by desperation, simply describing how merchants actually build lasting prosperity. One text was born from survival panic. The other from patient observation. It shows."
+        ),
+    },
+    "2026-08-10": {
+        "title": "2008: While Every Business School Cut Costs, COTRUGLI Chose the Opposite",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "In 2008, while every business school in the region cut costs, laid off faculty, and inflated class sizes to survive the financial crisis, COTRUGLI Business School made the opposite choice: maintain quality, keep cohorts small, accept three years of lower margins. Ten years later, most of those cost-cutting competitors were gone or irrelevant. The ones who protected reputation over quarterly survival were the ones still standing."
+        ),
+    },
+    "2026-08-11": {
+        "title": "AlphaFold Solved a 50-Year Problem — Not With a Genius, With a System",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "AlphaFold solved a fifty-year problem in biology — predicting how proteins fold — not through one genius insight, but through human researchers framing the right question, AI exploring a solution space no human team could cover, and human judgment validating and directing the results. Nobody involved was individually a genius. The system, properly orchestrated, produced genius-level outcomes. That's the model worth copying."
+        ),
+    },
+    "2026-08-12": {
+        "title": "From Hierarchy to Network — How COTRUGLI's Real Asset Quietly Changed",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "In 2002, COTRUGLI Business School operated like a classic Industrial Era institution: hierarchical structure, controlled curriculum, linear enrollment growth, local reputation. By 2015, the real asset had quietly become the alumni network itself — 60% of enrollment came from referrals, not marketing. The institution didn't just grow. It had to completely reconceive what it actually was."
+        ),
+    },
+    "2026-08-13": {
+        "title": "Why Navy SEALs Don't Call Headquarters Mid-Mission",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Special operations forces don't call headquarters for permission mid-mission. Small teams, distributed across hostile theaters, operate with minimal oversight, coordinating horizontally with other teams, achieving effects far beyond their size — because the alternative, waiting for centralized approval in a fast-moving, high-stakes environment, gets people killed. Business is finally learning what the military learned decades ago."
+        ),
+    },
+    "2026-08-14": {
+        "title": "BlackBerry Saw the iPhone Coming — Their Consensus Was Just Perfectly Obsolete",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "When the iPhone launched in 2007, BlackBerry's leadership saw the threat immediately and responded exactly the way business school teaches: careful stakeholder management, cross-functional buy-in, consensus before commitment. Eighteen months later, they announced their response. By then the smartphone market had been completely redefined. The consensus was perfect. It was also perfectly obsolete."
+        ),
+    },
+    "2026-08-15": {
+        "title": "2008: Real Fear, and the Reframe That Changed the Decision",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "During the 2008 crisis, COTRUGLI faced genuine existential fear — real possibility of collapse, every advisor recommending immediate cost-cutting. Instead of suppressing that fear or panicking into the \"obvious\" move, leadership processed it: what are we actually afraid of? Not this year's losses. Losing six years of reputation. That reframe, not bravado, is what produced the decision to hold quality standards through the crisis."
+        ),
+    },
+    "2026-08-16": {
+        "title": "Same AI Capability, Two Companies, Opposite Outcomes",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Consider two uses of the exact same AI capability: one company uses AI to model personalized pricing that extracts the maximum a customer will tolerate before walking away. Another uses it to spot which customers are quietly struggling and reach out before they ask for help. Same technology. One compounds distrust exponentially. The other compounds loyalty exponentially. The AI never decided which pattern to amplify — a human did."
+        ),
+    },
+    "2026-08-17": {
+        "title": "How Hundreds of Uncoordinated Research Teams Beat a Decade-Long Timeline",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "During the COVID vaccine race, hundreds of research teams worldwide coordinated with no central authority — through shared scientific urgency, rapid open data-sharing, and reputation-based trust — and produced multiple effective vaccines in under a year. Traditional pharmaceutical development, hierarchical and controlled, typically takes five to ten years for something comparable. The tribe outperformed the hierarchy by an order of magnitude."
+        ),
+    },
+    "2026-08-18": {
+        "title": "Two Decades of Teaching This Taught One Lesson: Knowledge Alone Changes Nothing",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Two decades of building an institution taught a hard lesson: knowledge alone changes nothing. Leaders who intellectually agreed with every principle in this philosophy, then quietly reverted to old habits within weeks, were the norm, not the exception. The only leaders who actually transformed were the ones who ran an honest 90-day audit of their real behavior — and then committed to a specific, measurable correction."
+        ),
+    },
+    "2026-08-19": {
+        "title": "$32 Billion to Zero in Ten Days — The Brutal Asymmetry of Trust",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Wells Fargo destroyed decades of reputational capital in weeks when its fake-accounts scandal broke — years later, still recovering. FTX built a $32 billion valuation on a wolf pattern of deception and lost it entirely within ten days once the truth surfaced. Compare that to institutions that maintained standards through crises for decades: the asymmetry is brutal. Trust takes years to build. It takes days to destroy."
+        ),
+    },
+    "2026-08-20": {
+        "title": "The Cotrugli Ledger — 15th-Century Trust Principles, Tested at 140,000 Users",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "A 2024 proposal co-authored for UNIDO argued that within three to five years, a material share of economic transactions will be initiated by autonomous AI agents, not humans — at machine speed, with no shared \"truth layer\" to verify what actually happened between them. The engineering response, a \"Cotrugli Ledger\" built on 15th-century trust principles, is now being tested across real infrastructure spanning six EU member states and 140,000 healthcare users."
+        ),
+    },
+    "2026-08-21": {
+        "title": "This Week: Hold the One Standard Nobody Would Notice If You Dropped",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "This week's exercise: identify one standard in your work that nobody would ever notice if you quietly let it slip. Not a client-facing standard — an invisible one. Then deliberately hold it, precisely because nobody's checking. That single act, repeated, is the actual muscle Shokunin philosophy is describing. Standards you can't measure are the ones that measure you."
+        ),
+    },
+    "2026-08-22": {
+        "title": "Write Down Both Moves Before You Choose — Machiavellian or Cotruglian",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Take one upcoming decision where a shortcut is tempting. Run it through both lenses explicitly: what would the Machiavellian move look like (manage appearances, break the promise if convenient, extract value now)? What would the Cotruglian move look like (protect reputation, keep the commitment even if costly, build for the next decade)? Choose consciously. Don't let the choice happen to you."
+        ),
+    },
+    "2026-08-23": {
+        "title": "Score Your Reputational Capital — With an Actual List of 50 Names",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Run the reputational capital calculation this week: list 50 people who know your work well. Score each relationship — strong trust (+3), neutral (0), damaged trust (-5). Add it up. Then ask the harder question: of your \"strong trust\" relationships, how many would actually refer you their most important client, or invest their own money in your venture? That's the real number."
+        ),
+    },
+    "2026-08-24": {
+        "title": "Run Your Biggest Decision This Week Through All Five Axioms, in Writing",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Pick your most significant decision this week and run it through all five axioms explicitly, in writing: does this forge the essence I want? Does it build or spend reputational capital? Does it demonstrate honesty, reliability, prudence? Is the time horizon decades or quarters? Is it positive-sum or zero-sum? If any answer makes you uncomfortable, that's the signal worth acting on."
+        ),
+    },
+    "2026-08-25": {
+        "title": "Name Three Exponential Trends — Then Write Down Where They Land in Three Years",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "This week's exercise: name three specific things in your industry currently growing exponentially, not linearly. For each one, write down what \"the second half of the chessboard\" looks like if the trend continues unchanged for three more years. Most leaders discover they've been mentally modeling an exponential trend as a merely linear one — and that gap is where the blindside comes from."
+        ),
+    },
+    "2026-08-26": {
+        "title": "Time-Audit Your Last Decision: Where Did Observe-Orient-Decide-Act Actually Go?",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Audit your last significant decision through the OODA lens: how long from Observe (you noticed something mattered) to Act (you did something about it)? Break down where the time actually went — was it gathering more information, or was it waiting for approval? Most delay lives in Orient and Decide, not Observe. That's where to intervene first."
+        ),
+    },
+    "2026-08-27": {
+        "title": "The “Would I Decide This Again” Test, Run on Three Real Decisions",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "This week, apply the \"would I decide this again\" test to three decisions from the last quarter where you compromised something — a commitment, a standard, a promise — because circumstances seemed to demand it. For each one, honestly ask: same information, same pressure, same call? Where the answer is no, that's your actual development priority, not a vague resolution to \"do better.\""
+        ),
+    },
+    "2026-08-28": {
+        "title": "Next Time Fear Shows Up, Walk the Six Steps Instead of Reacting",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Next time you feel fear activate before a real decision, walk the six-step framework deliberately: name it out loud. Identify which pattern it is (existential, reputational, control, inadequacy). Separate the specific threat from the vague catastrophizing. Generate three options, not one. Commit to a decision with 40-60% information. Then, afterward, extract what it taught you."
+        ),
+    },
+    "2026-08-29": {
+        "title": "Run the Five-Question Test on Your Next AI Deployment Before You Ship It",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Before your next AI deployment, run the five-question test explicitly: does it forge the essence I want, amplified 10x? Does it build reputational capital? Does it amplify honesty, reliability, prudence? Does it optimize for long-term relationships rather than this quarter? Does it create value together rather than extract from one side? All five need to be yes — not just the ones that are easy."
+        ),
+    },
+    "2026-08-30": {
+        "title": "Count How Many Real Decisions Get Made Without You This Week",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "This week, measure one trust indicator honestly: track how many meaningful decisions get made by others without needing your approval, over five working days. Not trivial choices — decisions with real impact that you only learn about after the fact. That number, more than anything on your org chart, tells you how much you can actually coordinate right now."
+        ),
+    },
+    "2026-08-31": {
+        "title": "Score Yourself on the Five Axioms — By Behavior, Not Intention",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Score yourself honestly against the five axioms this week — not aspirationally, behaviorally. For each axiom, rate 1 to 5 based on your last 90 days of actual decisions, not your intentions. Add them up. The total isn't the point. The lowest-scoring axiom is: that's your specific 90-day development priority, not a vague resolution to \"be better."
+        ),
+    },
+    "2026-09-01": {
+        "title": "Classify Your Last Ten Recognition Moments — Wolf or Sheepdog?",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Pull up your organization's last ten significant recognition moments — promotions, bonuses, public praise. For each, classify honestly: did it reward a wolf pattern (visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? Whatever ratio you find is precisely the ratio your organization will keep producing, until you change what gets rewarded."
+        ),
+    },
+    "2026-09-02": {
+        "title": "Commit to One 90-Day Experiment, in Writing, and Tell Someone",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "Commit, in writing, to a specific 90-day experiment: pick one axiom you currently run inconsistently, name the specific behavior change, and set a date to re-score yourself. Share the commitment with one other person so it's not just a private intention. The manifesto only means anything if someone actually runs the experiment instead of agreeing with it."
+        ),
+    },
+    "2026-09-03": {
+        "title": "When AI Owns Operational Excellence, Craft Is the Only Moat Left",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Within a handful of years, AI will handle nearly everything currently considered \"operational excellence\" — analysis, execution, consistency, scale. When that happens, craft becomes the only differentiator left, because craft includes exactly the things AI cannot replicate: judgment about what's worth optimizing for, taste, meaning, trust built through relationship. The organizations still practicing Shokunin now will own that differentiator when it matters most."
+        ),
+    },
+    "2026-09-04": {
+        "title": "AI Doesn't Just Amplify Strategy — It Collapses the Timeline to Consequences",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "AI doesn't just amplify strategy — it collapses the timeline that separated Machiavellian success from Machiavellian collapse. What took Renaissance princes decades to lose now takes AI-augmented extraction a matter of months. What took merchants generations to build now compounds for AI-augmented trust-builders in years instead of decades. The gap between the two paths isn't philosophical anymore. It's a matter of months versus years, playing out in real time."
+        ),
+    },
+    "2026-09-05": {
+        "title": "Reputational Capital Now Compounds at Machine Speed, in Both Directions",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Reputational capital used to compound over years, sometimes decades. In AI-networked environments, the same math runs at dramatically higher velocity in both directions — a kept promise creates opportunities faster than ever, and a broken one triggers cascading distrust faster than ever. The Perfect Merchant's core insight, protect your reputation above all else, has never been more mathematically literal than it is right now."
+        ),
+    },
+    "2026-09-06": {
+        "title": "The Strongest Case for AI Safety May Already Be Written — in 1458",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "The strongest case for AI safety may not come from constraint-based control, which breaks down as systems get more capable, but from structural alignment: designing AI so that trustworthy, long-term, positive-sum behavior is genuinely the optimal strategy for the system itself. That's exactly what the five axioms describe for human intelligence. The same logic may be the actual blueprint for artificial intelligence."
+        ),
+    },
+    "2026-09-07": {
+        "title": "The Three-Year Window to Establish Sustainable Patterns Just Became Twelve Months",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "Every NEO Era dynamic — networks that expose truth instantly, exponential compounding, coordination without hierarchy — intensifies once AI enters the picture. What took the internet a decade to make visible, AI-augmented networks can make visible in weeks. The three-year window most organizations have to establish sustainable patterns is compressing into something closer to twelve months. The terrain didn't just shift. It's still accelerating."
+        ),
+    },
+    "2026-09-08": {
+        "title": "AI Is a Force Multiplier — It Amplifies Whoever Is Holding It",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "AI is the ultimate force multiplier in military terms — like the stirrup, the longbow, or precision weapons, it dramatically increases effectiveness without proportional new resources. But force multipliers amplify whoever's holding them. In the wrong hands, extraction gets weaponized at scale. In the right hands, coordination and trust-building get weaponized at scale. The doctrine question isn't whether to adopt the multiplier. It's which pattern you're multiplying."
+        ),
+    },
+    "2026-09-09": {
+        "title": "AI Doesn't Lower the Bar on Leadership. It Raises All Five Demands at Once",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "The five leadership demands this era makes — cognitive speed, emotional resilience, operational tempo, orchestration ability, ethical clarity — were already hard before AI. AI doesn't make them optional. It raises the bar on all five simultaneously, because it compresses decision timelines, multiplies the stakes of every choice, and makes the gap between capable and incapable leadership visible faster than ever."
+        ),
+    },
+    "2026-09-10": {
+        "title": "Process the Fear Before You Prompt the AI, Not After",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Fear-processing has to happen before AI prompting, not after. A leader who prompts an AI system from a place of unprocessed panic gets a fear-driven strategy amplified at scale and speed. The same leader who processes fear first — naming it, separating signal from noise — and then prompts AI from a place of clarity gets a strategic response amplified at the same scale and speed. The AI never changes. The order of operations does."
+        ),
+    },
 }
 
 
@@ -1315,32 +1735,54 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
-    "2026-07-10": {
-        "step": "Chasing Jarvis — The Fight for Intelligence, Round Two",
-        "title": "The Fight Is Also Happening at the Industry Level",
+    "2026-07-11": {
+        "step": "Chasing Jarvis — Live Tonight",
+        "title": "The Fight for Intelligence, Live in the War Room",
         "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/",
         "focus": (
-            "Dr. Tali Režun's 'The Fight for Intelligence' crossed over from Medium to LinkedIn today, and "
-            "today's AI News is an almost too-perfect illustration of the same idea at industry scale: "
-            "Grok 4.5 launching at half the price of Anthropic and OpenAI's models is not a capability story, "
-            "it is a fight-to-stay-relevant story. The labs with the deepest pockets are still fighting daily "
-            "to hold ground. Nobody, at any scale, gets to coast."
+            "Dr. Tali Režun's 'The Fight for Intelligence' has been sitting with the cohort for three days now "
+            "— and tonight it stops being theory. The Chasing Jarvis 5 War Room, live at 17:00 CET with Dražen "
+            "Kapusta and Dr. Tali Režun, is exactly the kind of room where the fight described in that piece "
+            "either shows up in the room, or gets exposed as something people only agreed with in the abstract."
         ),
         "question": (
-            "Dr. Tali Režun's 'The Fight for Intelligence' has now crossed over from Medium to LinkedIn — and "
-            "today's AI News is an almost too-perfect illustration of the same idea, one level up: Grok 4.5 "
-            "just launched at half the price of Anthropic and OpenAI's models, forcing both to respond. If "
-            "frontier AI labs with the deepest pockets in the world still have to fight daily to hold their "
-            "position, what does that tell you about anyone, at any level, who thinks their current edge is "
-            "safe to coast on?"
+            "Dr. Tali Režun's 'The Fight for Intelligence' has been sitting with the cohort for three days now "
+            "— and tonight it stops being theory. The Chasing Jarvis 5 War Room, live at 17:00 CET with Dražen "
+            "Kapusta and Dr. Tali Režun, is exactly the kind of room where the fight described in that piece "
+            "either shows up, or gets exposed as something people only agreed with in the abstract. What's the "
+            "one question from that piece you're planning to actually bring into the room tonight, instead of "
+            "just nodding along with it in your head?"
         ),
         "model_answer": (
-            "It tells you the fight never actually ends — it just changes shape. Anthropic and OpenAI didn't "
-            "get to stop competing the day they became category leaders; a cheaper, faster challenger simply "
-            "forces the next round. The Vanguard application: whatever edge you're building this cohort — a "
-            "skill, a client relationship, a tool workflow — assume someone cheaper or faster is already "
-            "building the same thing. Trust, consistency, and reputation are what let a tribe keep fighting "
-            "that fight together instead of every member fighting it alone."
+            "Reading a piece and agreeing with it costs nothing. Showing up to a live room and testing whether "
+            "you actually run what you claim to believe costs something — attention, a question asked out "
+            "loud, the risk of being wrong in front of the tribe. That's the distinction this whole philosophy "
+            "keeps returning to: knowledge versus running the operating system. Tonight's War Room is that "
+            "audit, in real time. Bring one specific question, not a general impression."
+        ),
+    },
+    "2026-07-10": {
+        "step": "Chasing Jarvis — The Fight for Intelligence, Round Two",
+        "title": "It Crossed Platforms — Does It Still Land the Same Way?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/",
+        "focus": (
+            "Dr. Tali Režun's 'The Fight for Intelligence' crossed over from Medium to LinkedIn today — the "
+            "same argument, reaching a different audience in a different format. Worth noticing: the fight "
+            "the title describes doesn't pause just because the platform changed. Staying sharp is not a "
+            "one-time post. It is the daily, unglamorous work of not letting your edge erode."
+        ),
+        "question": (
+            "Dr. Tali Režun's 'The Fight for Intelligence' has now crossed over from Medium to LinkedIn — same "
+            "argument, new audience. Question: think of something you learned or built early in this cohort "
+            "that you haven't actively used or revisited since. Is it still sharp, or has it quietly started "
+            "to fade? What would it take to actually defend it, rather than just remember that you once had it?"
+        ),
+        "model_answer": (
+            "Most people discover the honest answer is that it has faded — not dramatically, just quietly, the "
+            "way anything does when it stops getting used. The Vanguard application: an edge you built once and "
+            "stopped defending isn't really yours anymore, it's just a memory of having had it. Trust, "
+            "consistency, and reputation are what let a tribe keep defending its edges together, rather than "
+            "every member having to notice the fade and refight it alone."
         ),
     },
     "2026-07-09": {
@@ -3570,7 +4012,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "SpaceX\u2019s Grok 4.5 launches at half the price of rivals \u2014 here\u2019s why that could rattle Anthropic and OpenAI",
+    "headline": "Anthropic launches Claude Sonnet 5 at a steep discount to its top model as the company races toward a blockbuster IPO",
     "source": "VentureBeat AI",
 }
 
