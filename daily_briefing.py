@@ -115,6 +115,7 @@ def build_briefing():
         "2026-07-09": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://medium.com/@talirezun/the-fight-for-intelligence-6cd1f0925afc", "source": "Medium"},
         "2026-07-10": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
         "2026-07-11": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
+        "2026-07-12": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
     }
 
     lines = []
@@ -172,6 +173,7 @@ def build_briefing():
         "2026-07-09": "The tribe that stops fighting to stay sharp is not resting — it is losing ground it will have to fight twice as hard to get back.",
         "2026-07-10": "Trust is not the reward for winning the fight for intelligence. It is the only thing that lets the tribe keep fighting it together.",
         "2026-07-11": "The tribe that shows up in the room together is stronger than the tribe that only shows up in the group chat.",
+        "2026-07-12": "The room empties, the group chat goes quiet, and what's left is whether you actually changed anything. That's the only scoreboard that counts.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -206,7 +208,11 @@ def build_briefing():
             lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
             lines.append("")
         else:
-            if date_key == "2026-07-11":
+            if date_key >= "2026-07-12":
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>To be confirmed — watch this space</i>")
+                lines.append("")
+            elif date_key == "2026-07-11":
                 lines.append("📅 <b>NEXT ZOOM SESSION — TODAY</b>")
                 lines.append("<i>Chasing Jarvis 5 — War Room with Dražen Kapusta &amp; Dr. Tali Režun</i>")
                 lines.append("\u2022 \U0001f5d3 Today, Saturday 11 July 2026 @ 17:00 CET")
@@ -567,7 +573,10 @@ def build_briefing():
             lines.append("\U0001f4ca <b>Analytics</b>")
             lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>→ Start here</a>")
             lines.append("")
-            lines.append("\U0001f4dd <b>Sales Management — Exam deadline Sunday 12 July, midnight</b>")
+            if date_key == "2026-07-12":
+                lines.append("\u26a0\ufe0f <b>Sales Management — EXAM DUE TODAY, MIDNIGHT</b>")
+            else:
+                lines.append("\U0001f4dd <b>Sales Management — Exam deadline Sunday 12 July, midnight</b>")
             lines.append("<i>Prof. Primž Hvala</i>")
             lines.append("Upload at <a href='https://cotrugli.online/'>Alumni Portal</a> — name at top of document.")
             lines.append("")

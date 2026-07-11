@@ -1735,6 +1735,30 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-12": {
+        "step": "Chasing Jarvis — The Morning After",
+        "title": "The Room Is Over. What Did You Actually Bring?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/",
+        "focus": (
+            "Last night's Chasing Jarvis 5 War Room is over. The room has emptied and the group chat has gone "
+            "quiet. Today, with the Sales Management exam due at midnight, is exactly the kind of ordinary day "
+            "where 'The Fight for Intelligence' gets tested for real — not in a live session with the tribe "
+            "watching, but alone, with a deadline."
+        ),
+        "question": (
+            "Last night's Chasing Jarvis 5 War Room is over. The room has emptied and the group chat has gone "
+            "quiet. Did you actually bring the specific question you committed to into the room — or did you "
+            "end up nodding along after all? And separately: are you finishing today's Sales Management exam "
+            "because it's due, or because you actually decided to stop deferring?"
+        ),
+        "model_answer": (
+            "Most people bring a general impression into a room and walk out with the same general impression, "
+            "reinforced. The people who actually get something out of it walk in with one specific, "
+            "uncomfortable question and force the room to answer it. If you did that last night, today is "
+            "where you find out whether the answer changes what you do next. If you didn't, tonight's exam "
+            "deadline is a second, quieter chance to close the gap between agreeing with an idea and running it."
+        ),
+    },
     "2026-07-11": {
         "step": "Chasing Jarvis — Live Tonight",
         "title": "The Fight for Intelligence, Live in the War Room",
@@ -4000,9 +4024,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7479087981606195200/",
-    "title": "Don’t Trust. Verify.",
-    "description": "Kapusta’s new post: in the NEO era, confidence without verification is not leadership — it is risk. The leaders who endure are not the most confident. They are the most rigorous.",
+    "url": "https://www.linkedin.com/posts/cotrugli_cognitivesuperiority-top1-cdayz-share-7481638138855985152-JOnw/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
+    "title": "Cognitive Superiority",
+    "description": "Kapusta's new post, tagged #CognitiveSuperiority #Top1 #CDayZ \u2014 title/description inferred from the post's URL slug only; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4012,7 +4036,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launches Claude Sonnet 5 at a steep discount to its top model as the company races toward a blockbuster IPO",
+    "headline": "Anthropic is bringing back Claude Fable 5 globally after US lifts export control order \u2014 where can enterprises access it?",
     "source": "VentureBeat AI",
 }
 
