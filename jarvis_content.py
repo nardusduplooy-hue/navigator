@@ -1735,6 +1735,32 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-13": {
+        "step": "Chasing Jarvis — Who Is Left?",
+        "title": "If AI Writes the Code, What's Actually Yours?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7476206245402689536/",
+        "focus": (
+            "Dr. Tali Režun's new post asks the question directly: if AI writes most of the code, who is "
+            "left? Today's AI News answers it with a number — Anthropic says 80% of its own new production "
+            "code is now authored by Claude. Today also opens a fresh pass on Chapter 1: Business as Craft, "
+            "the shokunin who holds a standard nobody is enforcing. The two ideas collide on purpose."
+        ),
+        "question": (
+            "Dr. Tali Režun's new post asks it directly: if AI writes most of the code, who is left? Today's "
+            "AI News answers with a number — Anthropic says 80% of its own new production code is now "
+            "authored by Claude. If the typing gets done for you, what's the remaining slice that still needs "
+            "a human holding the standard — and are you actually doing that part, or just supervising and "
+            "hoping it holds up?"
+        ),
+        "model_answer": (
+            "The craft was never really 'typing it out' — it was knowing what to build, why it mattered, and "
+            "whether the result actually holds up under pressure. The shokunin was never about doing every "
+            "stroke by hand; it was about not letting a single stroke pass that failed the standard, however "
+            "it got made. The Vanguard application: if a tool now does the typing, your job is to be the "
+            "person nobody else was watching who caught the flaw the tool didn't. That's not a smaller job. "
+            "It's the only part of the job that was ever actually yours."
+        ),
+    },
     "2026-07-12": {
         "step": "Chasing Jarvis — The Morning After",
         "title": "The Room Is Over. What Did You Actually Bring?",
@@ -4036,7 +4062,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic is bringing back Claude Fable 5 globally after US lifts export control order \u2014 where can enterprises access it?",
+    "headline": "Anthropic says 80% of its new production code is now authored by Claude \u2014 how your enterprise can keep up",
     "source": "VentureBeat AI",
 }
 

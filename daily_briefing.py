@@ -116,6 +116,7 @@ def build_briefing():
         "2026-07-10": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
         "2026-07-11": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
         "2026-07-12": {"quote": "\U0001f4c4 <b>The Fight for Intelligence</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7480874290544807936/"},
+        "2026-07-13": {"quote": "\U0001f4c4 <b>If AI writes most of the code, who is left?</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7476206245402689536/"},
     }
 
     lines = []
@@ -174,6 +175,7 @@ def build_briefing():
         "2026-07-10": "Trust is not the reward for winning the fight for intelligence. It is the only thing that lets the tribe keep fighting it together.",
         "2026-07-11": "The tribe that shows up in the room together is stronger than the tribe that only shows up in the group chat.",
         "2026-07-12": "The room empties, the group chat goes quiet, and what's left is whether you actually changed anything. That's the only scoreboard that counts.",
+        "2026-07-13": "A tribe that talks about craft is a book club. A tribe that ships something every sprint is a guild.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -210,7 +212,7 @@ def build_briefing():
         else:
             if date_key >= "2026-07-12":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-                lines.append("<i>To be confirmed — watch this space</i>")
+                lines.append("<i>Sessions resume after the summer break — watch this space</i>")
                 lines.append("")
             elif date_key == "2026-07-11":
                 lines.append("📅 <b>NEXT ZOOM SESSION — TODAY</b>")
@@ -573,13 +575,14 @@ def build_briefing():
             lines.append("\U0001f4ca <b>Analytics</b>")
             lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>→ Start here</a>")
             lines.append("")
-            if date_key == "2026-07-12":
-                lines.append("\u26a0\ufe0f <b>Sales Management — EXAM DUE TODAY, MIDNIGHT</b>")
-            else:
-                lines.append("\U0001f4dd <b>Sales Management — Exam deadline Sunday 12 July, midnight</b>")
-            lines.append("<i>Prof. Primž Hvala</i>")
-            lines.append("Upload at <a href='https://cotrugli.online/'>Alumni Portal</a> — name at top of document.")
-            lines.append("")
+            if date_key <= "2026-07-12":
+                if date_key == "2026-07-12":
+                    lines.append("\u26a0\ufe0f <b>Sales Management — EXAM DUE TODAY, MIDNIGHT</b>")
+                else:
+                    lines.append("\U0001f4dd <b>Sales Management — Exam deadline Sunday 12 July, midnight</b>")
+                lines.append("<i>Prof. Primž Hvala</i>")
+                lines.append("Upload at <a href='https://cotrugli.online/'>Alumni Portal</a> — name at top of document.")
+                lines.append("")
             # Chasing Jarvis inside Running Courses from 3 July
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
@@ -588,6 +591,18 @@ def build_briefing():
             cj_source = cj_rc.get("source", "LinkedIn")
             lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on " + cj_source + "</a>")
             lines.append("")
+            # VANGUARD SPRINT PROGRAMME — from 8 July onwards
+            if date_key >= "2026-07-08":
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 2 in progress</i>\n\n"
+                    "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
+                    "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
+                    "product, for a real market, with real deliverables. More modules will integrate as the "
+                    "programme progresses.\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
         elif date_key >= "2026-06-18":
             lines.append("\U0001f4cb <b>AI in B2B Sales: MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
             lines.append("<i>Saša Pavlaković</i>")
@@ -687,6 +702,10 @@ def build_briefing():
         if date_key >= "2026-07-09":
             lines.append("\U0001f4cc <b>The Wolf that guards the sheep</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7480168741188747265/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key >= "2026-07-13":
+            lines.append("\U0001f4cc <b>Raising the Floor: The Role of the Junior Developer in the AI Era</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7475080819590557698/'>→ Read on LinkedIn</a>")
             lines.append("")
         lines.append("")
 
