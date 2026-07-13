@@ -1735,6 +1735,30 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-14": {
+        "step": "Chasing Jarvis — Six Months Later",
+        "title": "Naming What You Shipped, Out Loud",
+        "url": "https://www.linkedin.com/posts/talirezun_six-months-ago-i-shipped-lumina-ai-widget-share-7482319264839028738-3K-n/",
+        "focus": (
+            "Dr. Tali Režun's new post opens with a specific, dated claim: 'Six months ago, I shipped Lumina "
+            "AI Widget.' Not 'I've been working on AI stuff' — a named thing, a date, a public record. That's "
+            "exactly what the Sprint Programme is asking of every tribe right now: not 'we've been building,' "
+            "but what, specifically, did you ship."
+        ),
+        "question": (
+            "Dr. Tali Režun's new post opens with a specific, dated claim: 'Six months ago, I shipped Lumina "
+            "AI Widget.' Not 'I've been working on AI stuff' — a named thing, a date, a public record. If "
+            "someone asked you that same question about your own tribe's Sprint 2 work today, what would you "
+            "actually say — and could you say it that specifically?"
+        ),
+        "model_answer": (
+            "The gap between 'we've been building something' and 'we shipped Lumina AI Widget on this date' "
+            "is the entire gap between activity and accountability. Vague progress never gets audited, because "
+            "there's nothing specific to check. A named thing, dated, in public, can be judged, compared, and "
+            "improved. The Vanguard application: this week, put a name and a date on whatever your tribe "
+            "actually shipped. If you can't, that's the answer to the question."
+        ),
+    },
     "2026-07-13": {
         "step": "Chasing Jarvis — Who Is Left?",
         "title": "If AI Writes the Code, What's Actually Yours?",
@@ -4062,7 +4086,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic says 80% of its new production code is now authored by Claude \u2014 how your enterprise can keep up",
+    "headline": "Claude\u2019s next enterprise battle is not models: it\u2019s the agent control plane",
     "source": "VentureBeat AI",
 }
 
