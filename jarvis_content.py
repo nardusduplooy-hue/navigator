@@ -734,10 +734,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-07-15": {
-        "title": "The Perfect Merchant — Forging Meaning Through Craft, Not Introspection",
+        "title": "The Perfect Merchant — Forging Meaning Through Craft",
         "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
         "summary": (
-            "Cotrugli believed your essence isn't discovered through introspection — it's forged through the daily practice of your craft, done with integrity. Three principles define his \"Perfect Merchant\": craft defines who you become, reputation is your true north star, and virtue is not a constraint on strategy — it is your strategy. Not \"what's my purpose,\" but \"what am I reliably building, day after day?\""
+            "Cotrugli believed your essence is forged through the daily practice of your craft, done with integrity. Three principles define his \"Perfect Merchant\": craft defines who you become, reputation is your true north star, and virtue is not a constraint on strategy — it is your strategy. Not \"what's my purpose,\" but \"what am I reliably building, day after day?\""
         ),
     },
     "2026-07-16": {
@@ -1733,6 +1733,30 @@ TALI_STEPS = {
             "The Vanguard application: before your next AI-assisted work task, spend fifteen minutes writing the brief "
             "before you open the tool. Describe the goal, the context, the constraints, and the output format. "
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
+        ),
+    },
+    "2026-07-15": {
+        "step": "Chasing Jarvis — Hype vs. Reality",
+        "title": "Most AI Content This Summer Skips the Hard Part",
+        "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/",
+        "focus": (
+            "Dr. Tali Režun's new post takes a critical look at most AI agent content published this summer. "
+            "Today's AI News backs up the concern with a number: 69% of enterprises share credentials across "
+            "their AI agents, meaning adoption has outrun the security discipline behind it."
+        ),
+        "question": (
+            "Dr. Tali Režun's new post takes a critical look at most AI agent content published this summer. "
+            "Today's AI News backs it up with a number: 69% of enterprises share credentials across their AI "
+            "agents, meaning adoption has outrun the security discipline behind it. Where in your own tribe's "
+            "AI use this sprint have you moved fast on the exciting part and skipped the unglamorous part — "
+            "access control, review, verification?"
+        ),
+        "model_answer": (
+            "The pattern repeats across every AI adoption wave: the exciting slice — the demo, the launch, the "
+            "headline — gets most of the attention, and the unglamorous slice — guardrails, access review, "
+            "audit trail — gets skipped until something breaks. The Vanguard application: for whatever your "
+            "tribe shipped this sprint, name the boring control you haven't built yet, and put a date on when "
+            "you will."
         ),
     },
     "2026-07-14": {
@@ -4086,7 +4110,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude\u2019s next enterprise battle is not models: it\u2019s the agent control plane",
+    "headline": "Shared API keys expose AI agents at 69% of enterprises, new VentureBeat research finds",
     "source": "VentureBeat AI",
 }
 
