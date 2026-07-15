@@ -119,6 +119,7 @@ def build_briefing():
         "2026-07-13": {"quote": "\U0001f4c4 <b>If AI writes most of the code, who is left?</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7476206245402689536/"},
         "2026-07-14": {"quote": "\U0001f4c4 <b>Six months ago, I shipped Lumina AI Widget</b>", "url": "https://www.linkedin.com/posts/talirezun_six-months-ago-i-shipped-lumina-ai-widget-share-7482319264839028738-3K-n/"},
         "2026-07-15": {"quote": "\U0001f4c4 <b>Most AI content this summer</b>", "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/"},
+        "2026-07-16": {"quote": "\U0001f4c4 <b>Most AI content this summer</b>", "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/"},
     }
 
     lines = []
@@ -180,6 +181,7 @@ def build_briefing():
         "2026-07-13": "A tribe that talks about craft is a book club. A tribe that ships something every sprint is a guild.",
         "2026-07-14": "Talking about shipping is free. Naming the thing you shipped, in public, with your name on it, is not.",
         "2026-07-15": "A named ship date invites scrutiny. A vague update invites nothing, which is exactly why most tribes prefer it.",
+        "2026-07-16": "Scrutiny is not punishment. It's the only thing that tells you whether the thing you shipped actually works.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")

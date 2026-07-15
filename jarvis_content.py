@@ -1735,6 +1735,32 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-16": {
+        "step": "Five Axioms in the Wild",
+        "title": "An Axiom You Can't See Running Isn't Running",
+        "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/",
+        "focus": (
+            "Today's Chapter 4 lists five axioms, and today's AI News is a small real-world test of one of "
+            "them: Anthropic didn't just ship a flashy Claude Design feature, it shipped a fix for the exact "
+            "friction — a token-burning problem — that was quietly making the tool unusable for the people "
+            "paying for it. That's axiom one in practice: essence forged through repeated action, not a "
+            "values statement."
+        ),
+        "question": (
+            "Today's Chapter 4 lists five axioms, and today's AI News is a small real-world test of one of "
+            "them: Anthropic didn't just ship a flashy Claude Design feature, it shipped a fix for the exact "
+            "friction that was quietly making the tool unusable. Pick one of the five axioms. Where in your "
+            "own tribe's Sprint 2 work is it actually running, in something you can point to — and where is "
+            "it just something you'd say if asked?"
+        ),
+        "model_answer": (
+            "The axioms aren't hard to agree with — that's exactly why agreement is worthless as a test. The "
+            "real test is whether you can point to a specific action, this week, that only makes sense if the "
+            "axiom is actually running. If you can't point to one, the axiom is decorative, not structural. "
+            "The Vanguard application: pick the axiom you're weakest on and name one visible action, this "
+            "week, that only makes sense because of it."
+        ),
+    },
     "2026-07-15": {
         "step": "Chasing Jarvis — Hype vs. Reality",
         "title": "Most AI Content This Summer Skips the Hard Part",
@@ -4110,7 +4136,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Shared API keys expose AI agents at 69% of enterprises, new VentureBeat research finds",
+    "headline": "Anthropic ships major Claude Design overhaul with design system imports, code round-trips, and a fix for its token-burning problem",
     "source": "VentureBeat AI",
 }
 
