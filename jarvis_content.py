@@ -1735,6 +1735,32 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-17": {
+        "step": "NEO Era in the Wild",
+        "title": "Orchestration Is Becoming the Business, Not the Model",
+        "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/",
+        "focus": (
+            "Today's Chapter 5 names orchestration as one of three forces reshaping business — coordination "
+            "happening without hierarchy. Today's AI News is a live example one level up: Anthropic and "
+            "Blackstone are betting the next trillion-dollar AI business isn't a better model, it's who "
+            "orchestrates the model into a company's actual workflows."
+        ),
+        "question": (
+            "Today's Chapter 5 names orchestration as one of three forces reshaping business. Today's AI News "
+            "is a live example one level up: Anthropic and Blackstone are betting the next trillion-dollar AI "
+            "business isn't a better model, it's who orchestrates the model into a company's actual "
+            "workflows. Where in your own tribe's Sprint 2 work is the real bottleneck the tool itself, and "
+            "where is it actually the orchestration around the tool — who decides what to build, who checks "
+            "the output, who owns the handoff?"
+        ),
+        "model_answer": (
+            "Most teams over-invest in the tool and under-invest in the orchestration around it, then wonder "
+            "why adoption stalls. A better model doesn't fix a broken handoff between the person who prompts "
+            "it and the person who has to trust the output. The Vanguard application: for whatever your tribe "
+            "shipped this sprint, name who orchestrated it — who decided what to build, who reviewed it, who "
+            "owns it now — not just who ran the tool."
+        ),
+    },
     "2026-07-16": {
         "step": "Five Axioms in the Wild",
         "title": "An Axiom You Can't See Running Isn't Running",
@@ -4136,8 +4162,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic ships major Claude Design overhaul with design system imports, code round-trips, and a fix for its token-burning problem",
-    "source": "VentureBeat AI",
+    "headline": "Anthropic and Blackstone bet the next trillion-dollar AI business is implementation, not just models",
+    "source": "TechCrunch",
 }
 
 JTBD_STATUS = (
