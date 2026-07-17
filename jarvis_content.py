@@ -1735,6 +1735,32 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-18": {
+        "step": "Mission Command in the Wild",
+        "title": "Give the Tool to Whoever Is Closest to the Problem",
+        "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/",
+        "focus": (
+            "Today's Chapter 6 argues mission command — clear intent, distributed execution — beats detailed "
+            "top-down plans, because whoever completes the OODA loop faster wins. Today's AI News is a "
+            "real-world version of that same bet: Anthropic didn't build a top-down curriculum-writing tool, "
+            "it gave teachers themselves the tools and let each one execute for their own classroom."
+        ),
+        "question": (
+            "Today's Chapter 6 argues mission command — clear intent, distributed execution — beats detailed "
+            "top-down plans. Today's AI News is a real-world version of the same bet: Anthropic gave teachers "
+            "themselves the tools rather than building a centralized curriculum system, and let each one "
+            "execute for their own classroom. Where in your own tribe's Sprint 2 work are you still "
+            "centralizing a decision that the person closest to the problem could make faster, if you "
+            "actually trusted them with the tool?"
+        ),
+        "model_answer": (
+            "Centralized control feels safer because it looks orderly, but it's slower by construction — "
+            "every decision has to travel up and back down before it turns into action. Mission command "
+            "trades some of that visible order for speed, and speed compounds. The Vanguard application: find "
+            "one decision in your Sprint 2 work that still routes through you, and hand it to whoever is "
+            "actually closest to the problem, with clear intent instead of a detailed instruction."
+        ),
+    },
     "2026-07-17": {
         "step": "NEO Era in the Wild",
         "title": "Orchestration Is Becoming the Business, Not the Model",
@@ -4150,9 +4176,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_cognitivesuperiority-top1-cdayz-share-7481638138855985152-JOnw/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
-    "title": "Cognitive Superiority",
-    "description": "Kapusta's new post, tagged #CognitiveSuperiority #Top1 #CDayZ \u2014 title/description inferred from the post's URL slug only; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7483556760402825216/",
+    "title": "Business as Warfare",
+    "description": "Kapusta's new post, tied to today's Chapter 6 (Business as Warfare) \u2014 title inferred from the chapter theme only; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4162,8 +4188,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic and Blackstone bet the next trillion-dollar AI business is implementation, not just models",
-    "source": "TechCrunch",
+    "headline": "Anthropic launches free Claude for Teachers, giving K-12 educators a year of premium access",
+    "source": "The Hill",
 }
 
 JTBD_STATUS = (
