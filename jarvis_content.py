@@ -1735,6 +1735,30 @@ TALI_STEPS = {
             "The clarity that exercise produces is usually sufficient to unblock the work entirely."
         ),
     },
+    "2026-07-19": {
+        "step": "Deadline Day",
+        "title": "Two Deadlines, One Forcing Function",
+        "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/",
+        "focus": (
+            "Two unrelated deadlines land on the same day today: your BAW Module 1 actions are due by 7pm CET, "
+            "and Anthropic's Claude Fable 5 free access window closes tonight too. Neither deadline cares "
+            "whether you had a detailed plan for using the time well — they only care what actually got done "
+            "before the clock ran out."
+        ),
+        "question": (
+            "Two unrelated deadlines land on the same day today: your BAW Module 1 actions are due by 7pm CET, "
+            "and Anthropic's Claude Fable 5 free access window closes tonight too. Neither deadline cares "
+            "whether you had a detailed plan for using the time well — they only care what actually got done "
+            "before the clock ran out. What's the one thing on your list today that you've been treating as "
+            "'still have time for' that actually doesn't, anymore?"
+        ),
+        "model_answer": (
+            "Deadlines are the cheapest form of mission command available — they don't tell you how to spend "
+            "the day, they just fix the point where the account gets settled. The Vanguard application: stop "
+            "auditing whether your plan was good enough and start auditing whether the specific thing is "
+            "actually done, before tonight, regardless of how the rest of the day went."
+        ),
+    },
     "2026-07-18": {
         "step": "Mission Command in the Wild",
         "title": "Give the Tool to Whoever Is Closest to the Problem",
@@ -4176,9 +4200,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7483556760402825216/",
-    "title": "Business as Warfare",
-    "description": "Kapusta's new post, tied to today's Chapter 6 (Business as Warfare) \u2014 title inferred from the chapter theme only; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/posts/cotrugli_cotrugli-mikegeorge-leadership-share-7484142374944854016-MyKD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms",
+    "title": "Leadership",
+    "description": "Kapusta's new post, tagged #Cotrugli #MikeGeorge #Leadership \u2014 title inferred from the URL slug only; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4188,8 +4212,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launches free Claude for Teachers, giving K-12 educators a year of premium access",
-    "source": "The Hill",
+    "headline": "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time",
+    "source": "Bleeping Computer",
 }
 
 JTBD_STATUS = (

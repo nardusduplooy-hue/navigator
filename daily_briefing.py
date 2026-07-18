@@ -122,6 +122,7 @@ def build_briefing():
         "2026-07-16": {"quote": "\U0001f4c4 <b>Most AI content this summer</b>", "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/"},
         "2026-07-17": {"quote": "\U0001f4c4 <b>Most AI content this summer</b>", "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/"},
         "2026-07-18": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
+        "2026-07-19": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
     }
 
     lines = []
@@ -186,6 +187,7 @@ def build_briefing():
         "2026-07-16": "Scrutiny is not punishment. It's the only thing that tells you whether the thing you shipped actually works.",
         "2026-07-17": "Networks don't forgive quietly. They expose the gap between what you said you shipped and what you actually shipped, instantly, to everyone.",
         "2026-07-18": "A detailed plan handed down from the top is slower than clear intent, trusted to the tribe closest to the problem.",
+        "2026-07-19": "The deadline doesn't care whether your plan was detailed. It only cares whether the three actions actually happened by 7pm.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -243,7 +245,9 @@ def build_briefing():
                 lines.append("")
                 lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
                 lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
-                if date_key >= "2026-07-07":
+                if date_key == "2026-07-19":
+                    lines.append("\u26a0\ufe0f <b>Three actions DUE TODAY, 7pm CET</b> \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
+                elif date_key >= "2026-07-07":
                     lines.append("Three actions to complete by 7pm CET 19 July \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
                 lines.append("")
             elif date_key >= "2026-06-29":
