@@ -1759,6 +1759,41 @@ TALI_STEPS = {
             "actually done, before tonight, regardless of how the rest of the day went."
         ),
     },
+    "2026-07-27": {
+        "step": "Prince or Trader — What Your Decisions Actually Say",
+        "title": "The Effort Dial Is a Leadership Test Too",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486679456036691968/",
+        "focus": (
+            "Chapter 2 argues you'd never call yourself Machiavellian — but your last ten hard decisions, not "
+            "your stated values, reveal whether you're actually running Prince (short-term, expedient) or Trader "
+            "(long-term, reputation-first) logic. Today's AI News is a live Trader-move example: Anthropic just "
+            "opened up to $50,000 in Claude credits for rare disease research — a bet that won't show returns for "
+            "years, in a market that rewards this quarter's headline model. And today's Chasing Jarvis post, on "
+            "the new Claude Opus 5, highlights its literal 'effort dial' — letting users deliberately trade cost "
+            "for capability, task by task, instead of defaulting to one setting."
+        ),
+        "question": (
+            "Chapter 2 argues you'd never call yourself Machiavellian — but your last ten hard decisions, not "
+            "your stated values, reveal whether you're actually running Prince (short-term, expedient) or Trader "
+            "(long-term, reputation-first) logic. Today's AI News is a live Trader-move example: Anthropic just "
+            "opened up to $50,000 in Claude credits for rare disease research — a bet that won't show returns for "
+            "years, in a market that rewards this quarter's headline model. Today's Chasing Jarvis post, on the "
+            "new Claude Opus 5, highlights its literal 'effort dial' — letting users deliberately trade cost for "
+            "capability, task by task, instead of defaulting to one setting. Question: where in your own "
+            "leadership this month did you quietly default to the cheap, expedient setting when the moment "
+            "actually called for the expensive, considered one?"
+        ),
+        "model_answer": (
+            "The effort dial is a useful metaphor because it makes visible what Chapter 2 argues is usually "
+            "invisible: every decision is already running at some setting, you just don't normally notice which "
+            "one. The Prince pattern defaults to 'cheap' under pressure — the quick reassurance instead of the "
+            "hard conversation, the deferred fix instead of the real one — and calls it pragmatism. The Trader "
+            "pattern deliberately dials up effort on the decisions that compound: the ones still on the record in "
+            "ten years, the bet that doesn't pay off this quarter. The Vanguard application: audit one decision "
+            "this week where you defaulted to the cheap setting, and ask honestly whether the moment actually "
+            "deserved the expensive one."
+        ),
+    },
     "2026-07-18": {
         "step": "Mission Command in the Wild",
         "title": "Give the Tool to Whoever Is Closest to the Problem",
@@ -4200,9 +4235,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_cotrugli-mikegeorge-leadership-share-7484142374944854016-MyKD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms",
-    "title": "Leadership",
-    "description": "Kapusta's new post, tagged #Cotrugli #MikeGeorge #Leadership \u2014 title inferred from the URL slug only; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484518496438034433/",
+    "title": "Welcome to AI Arena",
+    "description": "Kapusta's new post \u2014 title given directly by Nardus (\"Welcome to AI Arena\"), tied to today's Chapter 2 (Prince or Trader).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4212,8 +4247,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Fable 5 stays free for paid users until July 19 as Anthropic buys more time",
-    "source": "Bleeping Computer",
+    "headline": "Anthropic opens applications for AI for Science grants, offering up to $50,000 in Claude credits for rare disease research",
+    "source": "Anthropic",
 }
 
 JTBD_STATUS = (

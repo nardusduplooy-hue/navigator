@@ -123,6 +123,7 @@ def build_briefing():
         "2026-07-17": {"quote": "\U0001f4c4 <b>Most AI content this summer</b>", "url": "https://www.linkedin.com/posts/talirezun_most-ai-agent-content-this-summer-is-either-share-7482741209698930688-X_F9/"},
         "2026-07-18": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
         "2026-07-19": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
+        "2026-07-27": {"quote": "\U0001f4c4 <b>On Anthropic Claude Opus 5</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486679456036691968/"},
     }
 
     lines = []
@@ -188,6 +189,7 @@ def build_briefing():
         "2026-07-17": "Networks don't forgive quietly. They expose the gap between what you said you shipped and what you actually shipped, instantly, to everyone.",
         "2026-07-18": "A detailed plan handed down from the top is slower than clear intent, trusted to the tribe closest to the problem.",
         "2026-07-19": "The deadline doesn't care whether your plan was detailed. It only cares whether the three actions actually happened by 7pm.",
+        "2026-07-27": "Nobody decides to become the leader who breaks promises. It happens one ‘circumstances changed’ at a time. Your tribe isn’t judging your stated values — it’s keeping score on your last ten calls.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -247,7 +249,7 @@ def build_briefing():
                 lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
                 if date_key == "2026-07-19":
                     lines.append("\u26a0\ufe0f <b>Three actions DUE TODAY, 7pm CET</b> \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
-                elif date_key >= "2026-07-07":
+                elif "2026-07-07" <= date_key <= "2026-07-19":
                     lines.append("Three actions to complete by 7pm CET 19 July \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
                 lines.append("")
             elif date_key >= "2026-06-29":
@@ -609,7 +611,7 @@ def build_briefing():
             if date_key >= "2026-07-08":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
                 lines.append(
-                    "<blockquote><i>All Chiefs · All Tribes · Sprint 2 in progress</i>\n\n"
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 3 in progress</i>\n\n"
                     "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
                     "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
                     "product, for a real market, with real deliverables. More modules will integrate as the "
@@ -721,9 +723,13 @@ def build_briefing():
             lines.append("\U0001f4cc <b>Raising the Floor: The Role of the Junior Developer in the AI Era</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7475080819590557698/'>→ Read on LinkedIn</a>")
             lines.append("")
-        if date_key >= "2026-07-15":
+        if "2026-07-15" <= date_key < "2026-07-27":
             lines.append("\U0001f4cc <b>Building Your Company's AI Policy</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7482705537579581440/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key >= "2026-07-27":
+            lines.append("\U0001f4cc <b>Building an AI Ready Workforce</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7485242267893522433/'>→ Read on LinkedIn</a>")
             lines.append("")
         lines.append("")
 
