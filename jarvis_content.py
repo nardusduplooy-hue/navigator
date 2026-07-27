@@ -1759,6 +1759,38 @@ TALI_STEPS = {
             "actually done, before tonight, regardless of how the rest of the day went."
         ),
     },
+    "2026-07-28": {
+        "step": "The Perfect Merchant — Craft Versus Outcome",
+        "title": "The Boring Part Is the Actual Work",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487412592785719297/",
+        "focus": (
+            "Chapter 3 argues that 'a profitable business' or 'market leadership' are outcomes, not craft — the "
+            "real question is what work you're actually mastering. Today's AI News is a case in point: Anthropic's "
+            "Claude voice mode upgrade isn't a headline-grabbing outcome announcement, it's unglamorous craft work "
+            "— model routing, connected actions across Gmail, Calendar and Slack, permission handling — the kind "
+            "of detail that never makes a press release headline but is the actual work. Today's Chasing Jarvis "
+            "post is framed the same way: useful grounding for anyone 'not deep in AI policy debates,' not a "
+            "hype piece."
+        ),
+        "question": (
+            "Chapter 3 argues that 'a profitable business' or 'market leadership' are outcomes, not craft — the "
+            "real question is what work you're actually mastering. Today's AI News is a case in point: Anthropic's "
+            "Claude voice mode upgrade isn't a headline-grabbing outcome announcement, it's unglamorous craft work "
+            "— model routing, connected actions across Gmail, Calendar and Slack, permission handling — the kind "
+            "of detail that never makes a press release headline but is the actual work. Question: what's one "
+            "part of your own work that would sound boring if you described it honestly, but is actually the "
+            "craft that makes the outcome possible?"
+        ),
+        "model_answer": (
+            "The outcomes — profit, market leadership, a shipped feature — are visible and easy to talk about. "
+            "The craft behind them almost never is: the unglamorous debugging, the third rewrite of the same "
+            "paragraph, the permission-handling edge case nobody will ever see. Chapter 3's twenty-year test is "
+            "useful because it filters for craft: you can still be proud of craft in twenty years, you're rarely "
+            "still proud of a metric. The Vanguard application: name the unglamorous part of your current work "
+            "— the part that would sound boring in a status update — and ask if you're actually doing it well, "
+            "or skipping it because outcomes are what get noticed."
+        ),
+    },
     "2026-07-27": {
         "step": "Prince or Trader — What Your Decisions Actually Say",
         "title": "The Effort Dial Is a Leadership Test Too",
@@ -4235,9 +4267,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484518496438034433/",
-    "title": "Welcome to AI Arena",
-    "description": "Kapusta's new post \u2014 title given directly by Nardus (\"Welcome to AI Arena\"), tied to today's Chapter 2 (Prince or Trader).",
+    "url": "https://www.linkedin.com/posts/cotrugli_cotrugli-aiagents-leadership-share-7487437277116432404--EYS/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
+    "title": "Cotrugli AI Agents Leadership",
+    "description": "Kapusta's new post \u2014 title given directly by Nardus (\"Cotrugli AI Agents Leadership\"), tied to today's Chapter 3 (The Perfect Merchant for the NEO Era).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4247,8 +4279,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic opens applications for AI for Science grants, offering up to $50,000 in Claude credits for rare disease research",
-    "source": "Anthropic",
+    "headline": "Anthropic upgrades Claude voice mode to run Opus and Sonnet, adding connected actions across Gmail, Calendar, and Slack",
+    "source": "MLQ News",
 }
 
 JTBD_STATUS = (

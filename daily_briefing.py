@@ -124,6 +124,7 @@ def build_briefing():
         "2026-07-18": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
         "2026-07-19": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
         "2026-07-27": {"quote": "\U0001f4c4 <b>On Anthropic Claude Opus 5</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486679456036691968/"},
+        "2026-07-28": {"quote": "“Worth understanding this week if you're not deep in AI policy debates.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487412592785719297/"},
     }
 
     lines = []
@@ -190,6 +191,7 @@ def build_briefing():
         "2026-07-18": "A detailed plan handed down from the top is slower than clear intent, trusted to the tribe closest to the problem.",
         "2026-07-19": "The deadline doesn't care whether your plan was detailed. It only cares whether the three actions actually happened by 7pm.",
         "2026-07-27": "Nobody decides to become the leader who breaks promises. It happens one ‘circumstances changed’ at a time. Your tribe isn’t judging your stated values — it’s keeping score on your last ten calls.",
+        "2026-07-28": "Nobody claps for the unglamorous rep. The tribe that wins isn’t the one with the best pitch — it’s the one that actually did the boring part well enough that the pitch turned out to be true.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
