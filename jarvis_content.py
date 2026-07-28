@@ -1759,6 +1759,35 @@ TALI_STEPS = {
             "actually done, before tonight, regardless of how the rest of the day went."
         ),
     },
+    "2026-07-29": {
+        "step": "The Five Axioms — Structural Reality, Not Belief",
+        "title": "The Network Grades the Gap, Not the Intention",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485992606456430593/",
+        "focus": (
+            "Chapter 4 argues the five axioms aren't optional based on belief — the environment enforces them "
+            "regardless, and networks quickly detect the gap between stated values and actual behavior. Today's "
+            "AI News does the same thing structurally: the new Economic Index connector lets anyone query what "
+            "people actually do with Claude, not what they say they do. Today's Chasing Jarvis post is framed the "
+            "same way too — 'a different kind of project than your usual to-do list.'"
+        ),
+        "question": (
+            "Chapter 4 argues the five axioms aren't optional based on belief — the environment enforces them "
+            "regardless, and networks quickly detect the gap between stated values and actual behavior. Today's "
+            "AI News does the same thing structurally: the new Economic Index connector lets anyone query what "
+            "people actually do with Claude, not what they say they do. Question: if someone could query your "
+            "actual last month of decisions the way the Index queries AI usage data, which of your stated values "
+            "would the data confirm — and which would it quietly contradict?"
+        ),
+        "model_answer": (
+            "The uncomfortable part of Chapter 4 isn't the axioms themselves — most leaders would nod along to "
+            "all five. It's the claim that belief doesn't matter, only enforcement does: the environment surfaces "
+            "the gap between what you say and what you do whether you're paying attention or not. The Economic "
+            "Index is a small proof of concept for that idea applied to a whole economy — real usage data over "
+            "self-reported intent. The Vanguard application: pick one value you'd claim under questioning, and "
+            "check it against your actual calendar or your last ten decisions instead of your intentions. The "
+            "gap, if there is one, is the actual work."
+        ),
+    },
     "2026-07-28": {
         "step": "The Perfect Merchant — Craft Versus Outcome",
         "title": "The Boring Part Is the Actual Work",
@@ -4267,9 +4296,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_cotrugli-aiagents-leadership-share-7487437277116432404--EYS/?utm_source=share&utm_medium=member_android&rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
-    "title": "Cotrugli AI Agents Leadership",
-    "description": "Kapusta's new post \u2014 title given directly by Nardus (\"Cotrugli AI Agents Leadership\"), tied to today's Chapter 3 (The Perfect Merchant for the NEO Era).",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484142375968256000/",
+    "title": "The Five Axioms",
+    "description": "Kapusta's new post, tied to today's Chapter 4 (NEO Cotruglian Philosophy \u2014 5 Axioms) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4279,8 +4308,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic upgrades Claude voice mode to run Opus and Sonnet, adding connected actions across Gmail, Calendar, and Slack",
-    "source": "MLQ News",
+    "headline": "Anthropic launches an Economic Index connector, letting anyone ask Claude which occupations and tasks are actually using AI",
+    "source": "Anthropic",
 }
 
 JTBD_STATUS = (

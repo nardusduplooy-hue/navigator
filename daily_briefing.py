@@ -125,6 +125,7 @@ def build_briefing():
         "2026-07-19": {"quote": "\U0001f4c4 <b>Friday Coffee — From Lab to Life</b>", "url": "https://www.linkedin.com/posts/talirezun_friday-coffee-and-three-things-from-this-share-7483782455741698048-R3BV/"},
         "2026-07-27": {"quote": "\U0001f4c4 <b>On Anthropic Claude Opus 5</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486679456036691968/"},
         "2026-07-28": {"quote": "“Worth understanding this week if you're not deep in AI policy debates.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487412592785719297/"},
+        "2026-07-29": {"quote": "“A different kind of project than your usual to-do list.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485992606456430593/"},
     }
 
     lines = []
@@ -192,6 +193,7 @@ def build_briefing():
         "2026-07-19": "The deadline doesn't care whether your plan was detailed. It only cares whether the three actions actually happened by 7pm.",
         "2026-07-27": "Nobody decides to become the leader who breaks promises. It happens one ‘circumstances changed’ at a time. Your tribe isn’t judging your stated values — it’s keeping score on your last ten calls.",
         "2026-07-28": "Nobody claps for the unglamorous rep. The tribe that wins isn’t the one with the best pitch — it’s the one that actually did the boring part well enough that the pitch turned out to be true.",
+        "2026-07-29": "You don’t get to believe your way out of a structural reality. The network doesn’t grade your intentions — it grades the gap between what you said and what you actually did.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -590,9 +592,13 @@ def build_briefing():
             lines.append("<i>Saša Pavlaković</i>")
             lines.append("\U0001f4fa <b>Recording:</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
             lines.append("")
-            lines.append("\U0001f4ca <b>Analytics</b>")
+            lines.append("\U0001f4ca <b>Analytics</b> — own tempo")
             lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>→ Start here</a>")
             lines.append("")
+            if date_key >= "2026-07-29":
+                lines.append("\U0001f9d8 <b>Self Awareness &amp; Personal Enlightenment</b> — own tempo")
+                lines.append("<a href='https://cotrugli.online/courses/selfawareness-personalenlightenment/'>→ Start here</a>")
+                lines.append("")
             if date_key <= "2026-07-12":
                 if date_key == "2026-07-12":
                     lines.append("\u26a0\ufe0f <b>Sales Management — EXAM DUE TODAY, MIDNIGHT</b>")
