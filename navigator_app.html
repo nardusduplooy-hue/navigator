@@ -3554,33 +3554,33 @@ function renderTribeTeams() {
 
   const people = ['Ahmed Salem','Heritier Bareke','Charles Mutinda','Jannes du Plooy','Matthys van Rooyen','Steve Ntepp'];
 
-  let claimBoardHtml = `<div style="margin-top:12px;border-top:1px solid rgba(255,255,255,0.15);padding-top:10px;">
-    <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.sprint-chevron').style.transform=this.nextElementSibling.style.display==='block'?'rotate(90deg)':'rotate(0deg)'" style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:4px 0;">
+  let claimBoardHtml = `<div style="margin-top:12px;border-top:1px solid var(--border);padding-top:10px;">
+    <div onclick="var b=document.getElementById('sprint-claim-body');var c=this.querySelector('.sprint-chevron');b.style.display=b.style.display==='none'?'block':'none';c.style.transform=b.style.display==='block'?'rotate(90deg)':'rotate(0deg)'" style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:4px 0;">
       <div>
-        <div style="font-size:11px;font-weight:700;color:#c8a84b;text-transform:uppercase;letter-spacing:0.08em;">Sprint 3 Claim Board</div>
-        <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;">26 Jul \u2013 8 Aug \u00b7 Tap to assign tasks</div>
+        <div style="font-size:11px;font-weight:700;color:#1a2e4a;text-transform:uppercase;letter-spacing:0.08em;">Sprint 3 Claim Board</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:1px;">26 Jul \u2013 8 Aug \u00b7 Tap to assign tasks</div>
       </div>
-      <span class="sprint-chevron" style="font-size:14px;color:rgba(255,255,255,0.4);transition:transform 0.2s;">›</span>
+      <span class="sprint-chevron" style="font-size:16px;color:#c8a84b;transition:transform 0.2s;">›</span>
     </div>
     <div style="display:none;" id="sprint-claim-body">`;
 
   sprintSections.forEach((sec, si) => {
     claimBoardHtml += `<div style="margin-top:10px;">
-      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">${sec.name}</div>`;
+      <div style="font-size:10px;font-weight:700;color:#1a2e4a;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;padding:4px 0;border-bottom:1px solid var(--border);">${sec.name}</div>`;
     sec.items.forEach((item, ii) => {
       const key = `s${si}i${ii}`;
-      claimBoardHtml += `<div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:10px 12px;margin-bottom:6px;">
+      claimBoardHtml += `<div style="background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:6px;">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;">
-          <div style="font-size:12px;font-weight:700;color:#ffffff;flex:1;">${item.t}</div>
-          <select id="claim-${key}" onchange="saveClaim('${key}',this.value)" style="font-size:11px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#ffffff;padding:3px 6px;min-width:110px;">
+          <div style="font-size:12px;font-weight:700;color:var(--text);flex:1;">${item.t}</div>
+          <select id="claim-${key}" onchange="saveClaim('${key}',this.value)" style="font-size:11px;border-radius:6px;border:1px solid var(--border);background:var(--bg-card);color:var(--text);padding:3px 6px;min-width:110px;">
             <option value="">Unclaimed</option>
             ${people.map(p=>`<option value="${p}">${p.split(' ')[0]}</option>`).join('')}
           </select>
         </div>
-        <div onclick="var b=this.nextElementSibling;b.style.display=b.style.display==='none'?'block':'none'" style="font-size:10px;color:rgba(200,168,75,0.8);cursor:pointer;">▸ What to do</div>
-        <div style="display:none;font-size:11px;color:rgba(255,255,255,0.6);line-height:1.6;margin-top:4px;padding-top:4px;border-top:1px solid rgba(255,255,255,0.1);">
-          <b style="color:rgba(255,255,255,0.8);">Do:</b> ${item.d}<br>
-          <b style="color:rgba(255,255,255,0.8);">Send back:</b> ${item.s}
+        <div onclick="var b=this.nextElementSibling;b.style.display=b.style.display==='none'?'block':'none'" style="font-size:11px;color:#2e6da4;cursor:pointer;font-weight:600;">▸ What to do</div>
+        <div style="display:none;font-size:11px;color:var(--text-muted);line-height:1.6;margin-top:6px;padding-top:6px;border-top:1px solid var(--border);">
+          <span style="color:var(--text);font-weight:600;">Do:</span> ${item.d}<br>
+          <span style="color:var(--text);font-weight:600;">Send back:</span> ${item.s}
         </div>
       </div>`;
     });
