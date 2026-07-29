@@ -3521,21 +3521,108 @@ function renderTribeTeams() {
     <div style="font-size:10px;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">\ud83e\udd1d Chiefs\u2019 Compact</div>
     <div style="font-size:13px;color:#78350f;line-height:1.6;">${TRIBE_DATA.compact}</div>
   </div>`;
+
+  // Sprint 3 Claim Board data
+  const sprintSections = [
+    { name: '\ud83c\udf1f North Star / Work', items: [
+      { t: 'Spot-check North Star tab', d: 'Open app, check date, Planning Horizon, Course Status. Sales Management should show Complete.', s: 'Screenshot of anything wrong.' },
+      { t: 'Spot-check Work tab', d: 'Check sprint hero reads Sprint 3, dates 26 Jul\u20138 Aug, days-left counter correct.', s: 'Screenshot + note.' }
+    ]},
+    { name: '\ud83d\udcfa Sessions', items: [
+      { t: 'Chase next Zoom details', d: 'Check Telegram + Alumni Portal for next session. If nothing, message programme office.', s: 'Date, time (CAT), Zoom ID, passcode.' },
+      { t: 'Source missing podcasts', d: 'Ask Kapusta for BAW M5, ask Sa\u0161a for B2B M3/M4. Check Alumni Portal.', s: 'Links + exact titles.' }
+    ]},
+    { name: '\ud83d\udcac Engage / Briefing', items: [
+      { t: "Find Tali\u2019s article URL", d: "Search Dr. Tali Re\u017eun\u2019s LinkedIn for \u2018Data without context is noise\u2019 post.", s: 'Exact URL to replace placeholder.' },
+      { t: "Get Matthys\u2019s article URLs", d: "Get live LinkedIn URLs for \u2018SA AI Policy\u2019 and \u2018Skin in the game\u2019 directly from Matthys.", s: '2 URLs + 1-line description each.' },
+      { t: 'Suggest Knowledge Vault entries', d: 'Test Ben with questions. Find 3 gaps in course concepts or programme logistics.', s: '3 Q&A pairs with source.' }
+    ]},
+    { name: '\ud83d\ude80 MVP Development', items: [
+      { t: 'Tribe tab Pulse view spec', d: 'Sketch what cohort Pulse should show \u2014 sprint completion, active teams, shout-outs.', s: 'Written spec or wireframe.' },
+      { t: 'Sprint status view design', d: '13 chiefs \xd7 3 tracks with status colours. How chiefs input it.', s: 'Mockup or layout spec.' },
+      { t: 'Engagement analytics plan', d: 'List events worth tracking: app opens, tab clicks, briefing opens, podcast plays, Ben questions.', s: 'Event list + one lightweight capture method.' }
+    ]},
+    { name: '\ud83c\udfaf Sales', items: [
+      { t: 'Consolidate prospect pipeline', d: "Pull everyone\u2019s 5-prospect lists from Sprint 2 into one shared sheet.", s: 'One pipeline: prospect, segment, why, channel, owner, status.' },
+      { t: 'Send first real outreach', d: 'Pick one prospect, send something \u2014 LinkedIn message, cold email, or warm intro.', s: 'What you sent, to whom, any response.' }
+    ]},
+    { name: '\ud83d\udce3 Marketing', items: [
+      { t: 'Publish first content piece', d: 'Take Sprint 2 draft and actually publish it live.', s: 'Published link + engagement after 24h.' },
+      { t: 'Set up LinkedIn tracking', d: 'Simple way to confirm daily like-and-share is happening across the team.', s: 'Lightweight tracking method.' }
+    ]}
+  ];
+
+  const people = ['Ahmed Salem','Heritier Bareke','Charles Mutinda','Jannes du Plooy','Matthys van Rooyen','Steve Ntepp'];
+
+  let claimBoardHtml = `<div style="margin-top:12px;border-top:1px solid rgba(255,255,255,0.15);padding-top:10px;">
+    <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.sprint-chevron').style.transform=this.nextElementSibling.style.display==='block'?'rotate(90deg)':'rotate(0deg)'" style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:4px 0;">
+      <div>
+        <div style="font-size:11px;font-weight:700;color:#c8a84b;text-transform:uppercase;letter-spacing:0.08em;">Sprint 3 Claim Board</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;">26 Jul \u2013 8 Aug \u00b7 Tap to assign tasks</div>
+      </div>
+      <span class="sprint-chevron" style="font-size:14px;color:rgba(255,255,255,0.4);transition:transform 0.2s;">›</span>
+    </div>
+    <div style="display:none;" id="sprint-claim-body">`;
+
+  sprintSections.forEach((sec, si) => {
+    claimBoardHtml += `<div style="margin-top:10px;">
+      <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">${sec.name}</div>`;
+    sec.items.forEach((item, ii) => {
+      const key = `s${si}i${ii}`;
+      claimBoardHtml += `<div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:10px 12px;margin-bottom:6px;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;">
+          <div style="font-size:12px;font-weight:700;color:#ffffff;flex:1;">${item.t}</div>
+          <select id="claim-${key}" onchange="saveClaim('${key}',this.value)" style="font-size:11px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#ffffff;padding:3px 6px;min-width:110px;">
+            <option value="">Unclaimed</option>
+            ${people.map(p=>`<option value="${p}">${p.split(' ')[0]}</option>`).join('')}
+          </select>
+        </div>
+        <div onclick="var b=this.nextElementSibling;b.style.display=b.style.display==='none'?'block':'none'" style="font-size:10px;color:rgba(200,168,75,0.8);cursor:pointer;">▸ What to do</div>
+        <div style="display:none;font-size:11px;color:rgba(255,255,255,0.6);line-height:1.6;margin-top:4px;padding-top:4px;border-top:1px solid rgba(255,255,255,0.1);">
+          <b style="color:rgba(255,255,255,0.8);">Do:</b> ${item.d}<br>
+          <b style="color:rgba(255,255,255,0.8);">Send back:</b> ${item.s}
+        </div>
+      </div>`;
+    });
+    claimBoardHtml += `</div>`;
+  });
+
+  claimBoardHtml += `</div></div>`;
+
   const teamsHtml = TRIBE_DATA.teams.map(t => {
     const isMe = t.chief === 'Nardus' || t.chief === 'Jannes';
     const membersHtml = t.members.map(name => {
       const highlight = name.toLowerCase().includes('nardus') || name.toLowerCase().includes('jannes') || name.toLowerCase().includes('matthys');
       return `<span style="font-size:11px;background:${highlight ? 'var(--accent-light)' : 'var(--bg-elevated)'};color:${highlight ? 'var(--accent)' : 'var(--text-muted)'};border:1px solid ${highlight ? 'var(--border)' : '#e2e8f0'};padding:3px 10px;border-radius:20px;">${name}</span>`;
     }).join('');
+    const sprintBoard = t.chief === 'Nardus' ? claimBoardHtml : '';
     return `<div class="card${isMe ? ' card-accent' : ''}" style="margin-bottom:10px;">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
         <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);">Team ${t.chief}</div>
         <span style="font-size:11px;color:var(--text-dim);">${t.members.length} members</span>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;">${membersHtml}</div>
+      ${sprintBoard}
     </div>`;
   }).join('');
   el.innerHTML = compactCard + teamsHtml;
+
+  // Restore saved claims
+  try {
+    const saved = JSON.parse(localStorage.getItem('chironSprint3Claims') || '{}');
+    Object.keys(saved).forEach(k => {
+      const el = document.getElementById('claim-'+k);
+      if (el) el.value = saved[k];
+    });
+  } catch(e) {}
+}
+
+function saveClaim(key, value) {
+  try {
+    const saved = JSON.parse(localStorage.getItem('chironSprint3Claims') || '{}');
+    saved[key] = value;
+    localStorage.setItem('chironSprint3Claims', JSON.stringify(saved));
+  } catch(e) {}
 }
 
 function renderTribeChiefs() {
