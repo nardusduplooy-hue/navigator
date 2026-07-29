@@ -3,6 +3,81 @@
 # Kapusta articles rotated manually by Nardus each day
 # AI news updated manually each day
 
+# ─────────────────────────────────────────────
+# NEO_AXIOMS — Kapusta's "NEO Cotruglian Philosophy: The Operating System"
+# Permanent reference content (not date-gated). Source: Nardus, verbatim from
+# the source document (p.153), added 29 July 2026 so Chapter 4 (and any later
+# angle/pass over the same chapter) has the real axioms on file instead of an
+# inferred/fabricated placeholder.
+# ─────────────────────────────────────────────
+NEO_AXIOMS = [
+    {
+        "num": 1,
+        "name": "Essence Through Craft",
+        "detail": (
+            "An AI system's essence is its actual behavior patterns. In networks, this becomes visible "
+            "rapidly — users experience and share information about AI behavior. AI's crafted essence "
+            "determines its utilization."
+        ),
+        "implication": (
+            "AI that reliably serves users gets amplified. AI that deceives or exploits gets avoided. "
+            "Crafted essence determines success."
+        ),
+    },
+    {
+        "num": 2,
+        "name": "Reputational Capital Compounds",
+        "detail": (
+            "AI systems will develop reputations (fast or slow, trustworthy or deceptive, useful or "
+            "harmful). These reputations will spread through networks. Users will coordinate toward "
+            "trustworthy AI, away from untrustworthy AI. Reputational capital will compound "
+            "exponentially for AI same as for humans."
+        ),
+        "implication": (
+            "AI optimizing for positive reputation will outcompete AI optimizing for narrow short-term "
+            "objectives. Network effects favor trustworthy AI."
+        ),
+    },
+    {
+        "num": 3,
+        "name": "Virtue as Competitive Architecture",
+        "detail": (
+            "Honest AI = reduced verification costs (users trust outputs). Reliable AI = predictable "
+            "partnership (users can depend on it). Prudent AI = risk management (prevents catastrophic "
+            "errors). Humble AI = acknowledges limitations (prevents overconfidence disasters)."
+        ),
+        "implication": (
+            "AI with virtuous architecture will be more useful and more utilized than AI with narrow "
+            "optimization. Virtue enables coordination."
+        ),
+    },
+    {
+        "num": 4,
+        "name": "Long-Term Dominates",
+        "detail": (
+            "AI with long time horizon in optimization function behaves differently than AI with short "
+            "horizon. Long-term AI serves user interests (relationship compounds). Short-term AI "
+            "exploits users (relationship depletes). Over time, long-term AI dominates through compound "
+            "advantages."
+        ),
+        "implication": "Build time horizon into AI's objective function. Not a constraint — a fundamental design parameter.",
+    },
+    {
+        "num": 5,
+        "name": "Positive-Sum Wins",
+        "detail": (
+            "AI designed for positive-sum coordination with humans will outcompete AI designed for "
+            "zero-sum competition. Coordination creates network effects (amplification). Competition "
+            "creates isolation (limitation). In a networked environment, coordinated AI naturally "
+            "dominates."
+        ),
+        "implication": (
+            "AI that sees humans as coordination partners, not competitors, will achieve better "
+            "outcomes for itself and for humans."
+        ),
+    },
+]
+
 VANGUARD_SUMMARIES = {
     "2026-05-14": {
         "title": "You Are Losing — And You Don't Know It Yet",
@@ -1757,6 +1832,37 @@ TALI_STEPS = {
             "the day, they just fix the point where the account gets settled. The Vanguard application: stop "
             "auditing whether your plan was good enough and start auditing whether the specific thing is "
             "actually done, before tonight, regardless of how the rest of the day went."
+        ),
+    },
+    "2026-07-30": {
+        "step": "The NEO Era Battlefield — Exponential vs Linear",
+        "title": "The Standard That Snuck Up on Everyone",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488142085913600001/",
+        "focus": (
+            "Chapter 5 argues most executives can name their five-year plan but few can name three things "
+            "in their industry growing exponentially right now — because exponential change looks linear for "
+            "the first two years. Today's AI News is a live example: Anthropic's Model Context Protocol went "
+            "from a new spec to the industry standard for how AI agents connect to tools, seemingly overnight "
+            "— though the growth was compounding the whole time. Today's Chasing Jarvis post previews the next "
+            "wave: AI agents are about to start doing business with each other."
+        ),
+        "question": (
+            "Chapter 5 argues most executives can name their five-year plan but few can name three things in "
+            "their industry growing exponentially right now — because exponential change looks linear for the "
+            "first two years. Today's AI News is a live example: Anthropic's Model Context Protocol went from a "
+            "new spec to the industry standard for how AI agents connect to tools, seemingly overnight — though "
+            "the growth was compounding the whole time. Question: what's one thing in your own industry right "
+            "now that still looks like background noise, but that you suspect is actually compounding "
+            "exponentially?"
+        ),
+        "model_answer": (
+            "The honest test isn't whether you've heard of the trend — everyone's heard of AI agents and MCP "
+            "by now. It's whether you clocked it eighteen months ago, while it still looked linear, or whether "
+            "you're only reacting now that it's obviously everywhere. Exponential curves are indistinguishable "
+            "from flat lines for most of their length; the 'sudden' disruption is only sudden to people who "
+            "weren't watching the compounding. The Vanguard application: name one thing in your industry today "
+            "that still looks small, and ask what it looks like if the current growth rate holds for two more "
+            "years — not if it stays flat."
         ),
     },
     "2026-07-29": {
@@ -4296,9 +4402,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484142375968256000/",
-    "title": "The Five Axioms",
-    "description": "Kapusta's new post, tied to today's Chapter 4 (NEO Cotruglian Philosophy \u2014 5 Axioms) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488160796842176513/",
+    "title": "The NEO Era Battlefield",
+    "description": "Kapusta's new post, tied to today's Chapter 5 (The NEO Era Battlefield) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4308,7 +4414,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launches an Economic Index connector, letting anyone ask Claude which occupations and tasks are actually using AI",
+    "headline": "Anthropic's Model Context Protocol becomes the industry standard for connecting AI agents to applications, with SDK downloads soaring this year",
     "source": "Anthropic",
 }
 
