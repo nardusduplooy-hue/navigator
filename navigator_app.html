@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20260728-0800">
+<meta name="app-version" content="20260729-0800">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -662,6 +662,10 @@ textarea::placeholder { color: var(--text-muted); }
           <span class="course-check in-progress" id="chk-c15">◑</span>
           <span class="course-name">Analytics</span>
         </div>
+        <div class="course-row" onclick="toggleCourse('c20')">
+          <span class="course-check in-progress" id="chk-c20">◑</span>
+          <span class="course-name">Self Awareness &amp; Personal Enlightenment</span>
+        </div>
         <div class="course-row" onclick="toggleCourse('c16')">
           <span class="course-check locked" id="chk-c16">🔒</span>
           <span class="course-name">Business Battle Ground Boot Camp</span>
@@ -1046,7 +1050,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260728-0800</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260729-0800</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1125,7 +1129,8 @@ const PROGRAMME_DATA = {
     { id: "cj", name: "Chasing Jarvis", module: "Module 5 \u2014 Build your MVP", icon: "\uD83C\uDFAF", url: "https://cotrugli.online/courses/chasing-jarvis/" },
     { id: "b2b", name: "AI in B2B Sales", module: "Module 2 \u2014 AI as Force Multiplier", icon: "\uD83D\uDCCA", url: "https://cotrugli.online/courses/ai-sales/" },
     { id: "baw", name: "Business as Warfare", module: "Module 1 \u2014 New Rules of Engagement", icon: "\u2694\uFE0F", url: "https://cotrugli.online/courses/business-as-warfare/" },
-    { id: "analytics", name: "Analytics", module: "Module 1", icon: "\uD83D\uDCC8", url: "https://cotrugli.online/courses/analytics/" }
+    { id: "analytics", name: "Analytics", module: "Module 1 \u2014 Own tempo", icon: "\uD83D\uDCC8", url: "https://cotrugli.online/courses/analytics/" },
+    { id: "selfaware", name: "Self Awareness \u0026 Personal Enlightenment", module: "Own tempo", icon: "\uD83E\uDDD8", url: "https://cotrugli.online/courses/self-awareness/" }
   ],
 
   currentModule: {
@@ -1154,6 +1159,15 @@ const PROGRAMME_DATA = {
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/chasing-jarvis/",
       notes: "Read the pre-reading defined in the module. Build a functional MVP using AI tools (Claude, Augment Code, Google AI Studio, Firebase Studio or Antigravity). Understand the core technology stack of modern web applications. Deploy to a production hosting platform if desired. Test systematically for functionality, usability, and performance. Iterate based on feedback. Present your MVP effectively to technical and non-technical audiences."
+    },
+    {
+      id: "self-aware-m1",
+      type: "academic",
+      name: "Self Awareness \u0026 Personal Enlightenment",
+      dueDate: "",
+      status: "in-progress",
+      prepUrl: "https://cotrugli.online/courses/self-awareness/",
+      notes: "Own tempo course. Start when ready at Alumni Portal."
     },
     {
       id: "analytics-m1",
@@ -1238,8 +1252,8 @@ const PROGRAMME_DATA = {
   },
 
   kapustaReading: {
-    title: "\"A Profitable Business\" Is the Wrong Answer to \"What Are You Building?\"",
-    subtitle: "Chapter 3: The Perfect Merchant for the NEO Era. If your answer to 'what are you building' is 'a profitable business' or 'market leadership', you're answering the wrong question. Those are outcomes, not craft. Cotrugli's Perfect Merchant framework forces a harder question: what is the actual work you're mastering, and would you still be proud of the way you built it in twenty years?",
+    title: "The Five Axioms Don\u2019t Run Part-Time",
+    subtitle: "Chapter 4: NEO Cotruglian Philosophy (5 Axioms). The five axioms aren\u2019t values you adopt when convenient \u2014 they\u2019re structural realities the environment enforces whether you believe in them or not. There\u2019s no \u2018mostly long-term thinking, short-term when it matters.\u2019 That\u2019s just wolf logic with a trust vocabulary attached \u2014 and networks detect the mismatch quickly.",
     url: "https://www.linkedin.com/in/cotrugli/"
   },
 
@@ -1250,12 +1264,12 @@ const PROGRAMME_DATA = {
   ],
 
   neoWorldArticle: {
-    title: "Anthropic launches Claude Opus 5, a cheaper AI model for coding, agents and enterprise workflows",
-    source: "VentureBeat AI",
-    url: "https://venturebeat.com"
+    title: "Anthropic launches an Economic Index connector, letting anyone ask Claude which occupations and tasks are actually using AI",
+    source: "Anthropic",
+    url: "https://www.anthropic.com"
   },
 
-  briefingDate: "Tuesday, 28 July 2026",
+  briefingDate: "Wednesday, 29 July 2026",
 
   status: [
     "All JTBDs current",
@@ -1264,11 +1278,11 @@ const PROGRAMME_DATA = {
     "Module 4: Context Engineering \u2014 Completed"
   ],
 
-  knowledgeQuestion: "Chapter 3 argues that 'a profitable business' or 'market leadership' are outcomes, not craft \u2014 the real question is what work you're actually mastering. What's one part of your own work that would sound boring if you described it honestly, but is actually the craft that makes the outcome possible?",
+  knowledgeQuestion: "Chapter 4 argues the five axioms aren\u2019t optional based on belief \u2014 the environment enforces them regardless, and networks quickly detect the gap between stated values and actual behaviour. The new Anthropic Economic Index lets anyone query what people actually do with Claude, not what they say they do. If someone could query your actual last month of decisions the way the Index queries AI usage data, which of your stated values would the data confirm \u2014 and which would it quietly contradict?",
 
-  modelAnswer: "The outcomes \u2014 profit, market leadership, a shipped feature \u2014 are visible and easy to talk about. The craft behind them almost never is: the unglamorous debugging, the third rewrite of the same paragraph, the permission-handling edge case nobody will ever see. Chapter 3's twenty-year test is useful because it filters for craft: you can still be proud of craft in twenty years, you're rarely still proud of a metric. The Vanguard application: name the unglamorous part of your current work \u2014 the part that would sound boring in a status update \u2014 and ask if you're actually doing it well, or skipping it because outcomes are what get noticed.",
+  modelAnswer: "The gap between stated values and actual behaviour is the central diagnostic the five axioms are designed to expose. Most professionals can articulate long-term thinking, positive-sum behaviour, and trust-based relationships. Far fewer actually make decisions that way when short-term pressure is real. The axioms don\u2019t care about your stated values \u2014 the environment just responds to the pattern of your decisions over time. The Anthropic Economic Index is a useful mirror: it shows what AI is actually being used for, not what people say they use it for. The same logic applies to your own behaviour. The network you\u2019re in is already running that query on you. The question is whether you\u2019re running it on yourself.",
 
-  todaysFocus: "Sprint 3 is live. Vanguard Sprint Programme running across CJ, B2B Sales and Entrepreneurship simultaneously. Every two weeks, your tribe advances your Chief's MVP \u2014 building a real product, for a real market, with real deliverables. This week: what did your tribe ship? Courses active: BAW Module 1, AI in B2B Sales Module 2 (recording available), Analytics (start at Alumni Portal), Chasing Jarvis Module 5. Next session: after summer break \u2014 watch Telegram.",
+  todaysFocus: "Sprint 3 active. Running courses: BAW Module 1, AI in B2B Sales Module 2, Analytics (own tempo), Self Awareness \u0026 Personal Enlightenment (own tempo), Chasing Jarvis Module 5. This week: what did your tribe ship? Sessions resume after summer break \u2014 watch Telegram.",
 
   podcastGroups: [
     {
