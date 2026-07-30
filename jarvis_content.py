@@ -1834,6 +1834,35 @@ TALI_STEPS = {
             "actually done, before tonight, regardless of how the rest of the day went."
         ),
     },
+    "2026-07-31": {
+        "step": "Business as Warfare — How Fast Is Your OODA Loop, Actually?",
+        "title": "Speed Without Capability Is Just Recklessness",
+        "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms",
+        "focus": (
+            "Chapter 6 asks how fast your OODA loop actually is — not how fast you claim it is. Today's AI News "
+            "is an interesting counterpoint: Cognizant just committed to training over 30,000 engineers on "
+            "Claude, a deliberately slow, multi-year capability build. That's not a contradiction of the "
+            "fast-OODA-loop principle — it's the infrastructure that makes a fast loop possible later, versus "
+            "speed that's just recklessness without the underlying capability."
+        ),
+        "question": (
+            "Chapter 6 asks how fast your OODA loop actually is — not how fast you claim it is. Today's AI News "
+            "is an interesting counterpoint: Cognizant just committed to training over 30,000 engineers on "
+            "Claude, a deliberately slow, multi-year capability build. That's not a contradiction of the "
+            "fast-OODA-loop principle — it's the infrastructure that makes a fast loop possible later, versus "
+            "speed that's just recklessness without the underlying capability. Question: where in your own "
+            "organization are you optimizing for a fast decision cycle without first building the capability "
+            "that would make the decision any good?"
+        ),
+        "model_answer": (
+            "Speed and capability aren't the same axis, and conflating them is how organizations end up moving "
+            "fast in the wrong direction. Cognizant's multi-year training commitment looks slow next to the "
+            "up-to-the-minute pace Chapter 6 demands, but it's actually the same logic applied at a different "
+            "timescale: build the capability deliberately, so that when speed matters, you have something real "
+            "to be fast with. The Vanguard application: before asking 'how do we decide faster,' ask 'do we "
+            "actually have the capability to make this decision well at any speed' — fix that gap first."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4414,7 +4443,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's Model Context Protocol becomes the industry standard for connecting AI agents to applications, with SDK downloads soaring this year",
+    "headline": "Cognizant expands its partnership with Anthropic, training over 30,000 engineers to embed Claude across enterprise platforms",
     "source": "Anthropic",
 }
 

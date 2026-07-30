@@ -127,6 +127,7 @@ def build_briefing():
         "2026-07-28": {"quote": "“Worth understanding this week if you're not deep in AI policy debates.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487412592785719297/"},
         "2026-07-29": {"quote": "“A different kind of project than your usual to-do list.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485992606456430593/"},
         "2026-07-30": {"quote": "“AI agents are about to start doing business with each other.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488142085913600001/"},
+        "2026-07-31": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
     }
 
     lines = []
@@ -196,6 +197,7 @@ def build_briefing():
         "2026-07-28": "Nobody claps for the unglamorous rep. The tribe that wins isn’t the one with the best pitch — it’s the one that actually did the boring part well enough that the pitch turned out to be true.",
         "2026-07-29": "You don’t get to believe your way out of a structural reality. The network doesn’t grade your intentions — it grades the gap between what you said and what you actually did.",
         "2026-07-30": "Exponential change looks exactly like nothing happening — right up until it's everything happening. What's your tribe writing off as background noise that's actually the loudest signal in the room?",
+        "2026-07-31": "Speed without capability isn't fast — it's just reckless in a hurry. Before you ask how quickly your tribe can decide, ask whether the decision would actually be any good.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
