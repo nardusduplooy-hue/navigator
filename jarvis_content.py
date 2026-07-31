@@ -1863,6 +1863,36 @@ TALI_STEPS = {
             "actually have the capability to make this decision well at any speed' — fix that gap first."
         ),
     },
+    "2026-08-01": {
+        "step": "The NEO Leadership Challenge — When Did You Last Actually Change Your Mind?",
+        "title": "Cognitive Rigidity Has A Timeline",
+        "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms",
+        "focus": (
+            "Chapter 7 asks when you last completely changed your mind about something important — not "
+            "adjusted at the margins, actually reversed a position, based on new evidence. Today's AI News "
+            "is a live example at institutional scale: Claude for Government just moved from beta to available "
+            "access, without agencies needing a separate cloud-provider relationship — a sector that spent "
+            "years insisting AI couldn't touch government workflows, updating that position in public. That's "
+            "the same mechanism Chapter 7 describes, just at organizational scale instead of individual: "
+            "evidence accumulated until the old position became more expensive to hold than to abandon."
+        ),
+        "question": (
+            "Anthropic's Claude for Government beta represents an entire sector publicly reversing a long-held "
+            "position on AI adoption. Chapter 7 argues that if you can't name a specific instance of changing "
+            "your mind on something important in the last six months, that's not stability — it's cognitive "
+            "rigidity with a timeline. What's one belief about your own business or leadership that you're "
+            "holding onto more because you've always held it than because the evidence still supports it?"
+        ),
+        "model_answer": (
+            "The honest test isn't whether you can defend the belief — you can defend almost anything with "
+            "enough motivated reasoning. The test is whether you can name the evidence that would change your "
+            "mind, and whether that evidence has already shown up without you acting on it. Government's shift "
+            "on AI adoption didn't happen because the technology suddenly got good enough — it happened because "
+            "the cost of holding the old position finally exceeded the cost of publicly abandoning it. Most "
+            "leaders wait for that crossover point instead of running the audit themselves: name the belief, "
+            "name the evidence that would overturn it, then check honestly whether that evidence already exists."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4443,7 +4473,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Cognizant expands its partnership with Anthropic, training over 30,000 engineers to embed Claude across enterprise platforms",
+    "headline": "Claude for Government moves to beta — agencies get access without needing a separate cloud-provider relationship",
     "source": "Anthropic",
 }
 

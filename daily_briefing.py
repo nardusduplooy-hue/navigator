@@ -128,6 +128,7 @@ def build_briefing():
         "2026-07-29": {"quote": "“A different kind of project than your usual to-do list.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485992606456430593/"},
         "2026-07-30": {"quote": "“AI agents are about to start doing business with each other.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488142085913600001/"},
         "2026-07-31": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
+        "2026-08-01": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
     }
 
     lines = []
@@ -198,6 +199,7 @@ def build_briefing():
         "2026-07-29": "You don’t get to believe your way out of a structural reality. The network doesn’t grade your intentions — it grades the gap between what you said and what you actually did.",
         "2026-07-30": "Exponential change looks exactly like nothing happening — right up until it's everything happening. What's your tribe writing off as background noise that's actually the loudest signal in the room?",
         "2026-07-31": "Speed without capability isn't fast — it's just reckless in a hurry. Before you ask how quickly your tribe can decide, ask whether the decision would actually be any good.",
+        "2026-08-01": "Stability isn't the same as being right forever — it's often just rigidity that hasn't been tested yet. Before you praise your tribe for staying the course, ask when it last actually changed course.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -717,7 +719,7 @@ def build_briefing():
 
     # STUDENT LINKEDIN ARTICLES — from 2 July
     if date_key >= "2026-07-02":
-        lines.append("\U0001f4f0 <b>STUDENT LINKEDIN ARTICLES</b>")
+        lines.append("\U0001f4f0 <b>STUDENT LINKEDIN POSTS</b>")
         lines.append("")
         if date_key < "2026-07-06":
             lines.append("\U0001f4cc <b>Skin in the game</b> — Matthys van Rooyen")
@@ -739,9 +741,16 @@ def build_briefing():
             lines.append("\U0001f4cc <b>Building Your Company's AI Policy</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7482705537579581440/'>→ Read on LinkedIn</a>")
             lines.append("")
-        if date_key >= "2026-07-27":
+        if "2026-07-27" <= date_key < "2026-08-01":
             lines.append("\U0001f4cc <b>Building an AI Ready Workforce</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7485242267893522433/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key >= "2026-08-01":
+            lines.append("\U0001f4cc <b>Chasing Jarvis</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7482030758577229824/'>→ Read on LinkedIn</a>")
+            lines.append("")
+            lines.append("\U0001f4cc <b>Business Coaching</b> — Anena Sharon")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7488503680867000321/'>→ Read on LinkedIn</a>")
             lines.append("")
         lines.append("")
 
