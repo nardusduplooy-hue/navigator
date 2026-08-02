@@ -1893,6 +1893,38 @@ TALI_STEPS = {
             "name the evidence that would overturn it, then check honestly whether that evidence already exists."
         ),
     },
+    "2026-08-03": {
+        "step": "AI as Force Multiplier — Before You Deploy AI Again, Would You Be Proud Of It Amplified 10x?",
+        "title": "Force Multipliers Don't Ask Permission To Amplify The Bad Parts Too",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/",
+        "focus": (
+            "Chapter 9 argues that before you scale any AI-assisted process, you need to ask whether you'd "
+            "still be proud of it amplified 10x — because a force multiplier doesn't discriminate between "
+            "the parts of your process worth scaling and the shortcuts baked into it. Today's AI News is a "
+            "concrete example of taking that test seriously before shipping: Claude Sonnet 5 approaches "
+            "Opus-tier performance on agentic benchmarks while showing a lower rate of undesirable behaviors "
+            "than its predecessor — capability and safety scaled together, deliberately, rather than capability "
+            "racing ahead of it. Today's Chasing Jarvis post asks a related question about knowing which stage "
+            "of a process you're actually standing in before you push further."
+        ),
+        "question": (
+            "Claude Sonnet 5 improved on agentic capability while also reducing its rate of undesirable "
+            "behaviors — Anthropic tested for both before scaling, rather than treating safety as something "
+            "to fix after the fact. Chapter 9 asks the same discipline of your own AI deployments: before you "
+            "scale one, would you still be proud of it amplified 10x, five years from now? Name one AI-assisted "
+            "process in your business you'd want to slow down and audit before scaling further, rather than "
+            "just scaling it because you can."
+        ),
+        "model_answer": (
+            "The instinct is to scale whatever's already working, because momentum feels like validation. But "
+            "a process that's fine at current volume can fail badly at 10x — not because the AI breaks, but "
+            "because it faithfully amplifies whatever shortcuts, blind spots, or unexamined judgment calls were "
+            "already baked into it. Sonnet 5's safety improvement didn't happen by accident at scale — Anthropic "
+            "tested for it deliberately before shipping. The Vanguard version of that discipline: before scaling "
+            "any AI-assisted process, ask what it would look like at 10x, not what it looks like now — and fix "
+            "what you find uncomfortable before you have ten times the surface area to fix it on."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4461,9 +4493,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488160796842176513/",
-    "title": "The NEO Era Battlefield",
-    "description": "Kapusta's new post, tied to today's Chapter 5 (The NEO Era Battlefield) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489291192812126208/",
+    "title": "Before You Deploy AI Again",
+    "description": "Kapusta's new post, tied to today's Chapter 9 (AI as Force Multiplier) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4473,7 +4505,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude for Government moves to beta — agencies get access without needing a separate cloud-provider relationship",
+    "headline": "Claude Sonnet 5 now approaches Opus-tier performance on agentic benchmarks while showing a lower rate of undesirable behaviors than its predecessor",
     "source": "Anthropic",
 }
 

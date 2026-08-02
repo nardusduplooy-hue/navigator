@@ -129,6 +129,7 @@ def build_briefing():
         "2026-07-30": {"quote": "“AI agents are about to start doing business with each other.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488142085913600001/"},
         "2026-07-31": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-01": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
+        "2026-08-03": {"quote": "“The real question: Which square you're actually standing in, and whether you're building toward the next one?”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
     }
 
     lines = []
@@ -200,6 +201,7 @@ def build_briefing():
         "2026-07-30": "Exponential change looks exactly like nothing happening — right up until it's everything happening. What's your tribe writing off as background noise that's actually the loudest signal in the room?",
         "2026-07-31": "Speed without capability isn't fast — it's just reckless in a hurry. Before you ask how quickly your tribe can decide, ask whether the decision would actually be any good.",
         "2026-08-01": "Stability isn't the same as being right forever — it's often just rigidity that hasn't been tested yet. Before you praise your tribe for staying the course, ask when it last actually changed course.",
+        "2026-08-03": "Before you scale a habit across your whole tribe, ask if you'd still be proud of it at ten times the size. Amplification doesn't discriminate between your best moves and your worst ones.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -745,12 +747,19 @@ def build_briefing():
             lines.append("\U0001f4cc <b>Building an AI Ready Workforce</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7485242267893522433/'>→ Read on LinkedIn</a>")
             lines.append("")
-        if date_key >= "2026-08-01":
+        if "2026-08-01" <= date_key < "2026-08-03":
             lines.append("\U0001f4cc <b>Chasing Jarvis</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7482030758577229824/'>→ Read on LinkedIn</a>")
             lines.append("")
             lines.append("\U0001f4cc <b>Business Coaching</b> — Anena Sharon")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7488503680867000321/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key >= "2026-08-03":
+            lines.append("\U0001f4cc <b>Chasing Jarvis</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/pulse/wolf-guards-sheep-matthys-van-rooyen-s1mcf/'>→ Read on LinkedIn</a>")
+            lines.append("")
+            lines.append("\U0001f4cc <b>Business Coaching</b> — Anena Sharon")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7489591041701044224/'>→ Read on LinkedIn</a>")
             lines.append("")
         lines.append("")
 
@@ -796,9 +805,10 @@ def build_briefing():
         lines.append(tali["question"])
         lines.append("")
 
-    # ADDME
-    lines.append("📲 Vanguard — want this briefing every morning at 08:00 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
-    lines.append("")
+    # ADDME — removed from 3 August onward, per Nardus's instruction
+    if date_key < "2026-08-03":
+        lines.append("📲 Vanguard — want this briefing every morning at 08:00 CAT? Message /addme to @CotNavigatorBot on Telegram and you're in.")
+        lines.append("")
     lines.append("⚡ Navigator out.")
 
     return "\n".join(lines)
