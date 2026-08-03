@@ -130,6 +130,7 @@ def build_briefing():
         "2026-07-31": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-01": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-03": {"quote": "“The real question: Which square you're actually standing in, and whether you're building toward the next one?”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
+        "2026-08-04": {"quote": "“I've been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.”", "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
     }
 
     lines = []
@@ -202,6 +203,7 @@ def build_briefing():
         "2026-07-31": "Speed without capability isn't fast — it's just reckless in a hurry. Before you ask how quickly your tribe can decide, ask whether the decision would actually be any good.",
         "2026-08-01": "Stability isn't the same as being right forever — it's often just rigidity that hasn't been tested yet. Before you praise your tribe for staying the course, ask when it last actually changed course.",
         "2026-08-03": "Before you scale a habit across your whole tribe, ask if you'd still be proud of it at ten times the size. Amplification doesn't discriminate between your best moves and your worst ones.",
+        "2026-08-04": "Headcount is not the same as capacity. Count how many people in your tribe you'd actually trust to decide without checking with you first — that number, not the roster, is your real ceiling.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -259,6 +261,10 @@ def build_briefing():
                 lines.append("")
                 lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
                 lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
+                if date_key >= "2026-08-04":
+                    lines.append("")
+                    lines.append("\U0001f4e1 <b>BAW Capstone — Daily Intelligence Sweep</b>")
+                    lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 — track what supports them, what weakens them, and watch the picture shift in real time.")
                 if date_key == "2026-07-19":
                     lines.append("\u26a0\ufe0f <b>Three actions DUE TODAY, 7pm CET</b> \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
                 elif "2026-07-07" <= date_key <= "2026-07-19":
@@ -619,6 +625,11 @@ def build_briefing():
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
+            if date_key >= "2026-08-04":
+                lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
+                lines.append("Deadline: 1 September 2026. Build a real, working agent — opencode (free) or Claude Desktop + Cowork (Pro/Team). Create your project folder, drop in AGENTS.md, run the Setup Prompt, define your 30-day project via the Canvases, and connect at least 2 MCP servers. By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.")
+                lines.append("<a href='https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md'>→ Full guide</a>")
+                lines.append("")
             lines.append(cj_rc["quote"])
             cj_source = cj_rc.get("source", "LinkedIn")
             lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on " + cj_source + "</a>")
@@ -754,12 +765,16 @@ def build_briefing():
             lines.append("\U0001f4cc <b>Business Coaching</b> — Anena Sharon")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7488503680867000321/'>→ Read on LinkedIn</a>")
             lines.append("")
-        if date_key >= "2026-08-03":
+        if "2026-08-03" <= date_key < "2026-08-04":
             lines.append("\U0001f4cc <b>Chasing Jarvis</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/pulse/wolf-guards-sheep-matthys-van-rooyen-s1mcf/'>→ Read on LinkedIn</a>")
             lines.append("")
             lines.append("\U0001f4cc <b>Business Coaching</b> — Anena Sharon")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7489591041701044224/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key >= "2026-08-04":
+            lines.append("\U0001f4cc <b>Chasing Jarvis</b> — Matthys van Rooyen")
+            lines.append("<a href='https://www.linkedin.com/pulse/wolf-guards-sheep-matthys-van-rooyen-s1mcf/'>→ Read on LinkedIn</a>")
             lines.append("")
         lines.append("")
 

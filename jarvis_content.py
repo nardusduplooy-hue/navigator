@@ -1925,6 +1925,38 @@ TALI_STEPS = {
             "what you find uncomfortable before you have ten times the surface area to fix it on."
         ),
     },
+    "2026-08-04": {
+        "step": "Tribe as Coordination — How Many People Can Decide Without Your Approval?",
+        "title": "Your Org Chart Lies About Your Real Ceiling",
+        "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms",
+        "focus": (
+            "Chapter 10 asks how many people in your organization can make a significant decision without "
+            "needing your approval — not how many report to you, but how many you'd genuinely trust to decide "
+            "well, aligned with your intent. Today's AI News shows the same structure playing out inside the "
+            "machines themselves: Claude Code sub-agents can now spawn their own sub-agents, delegating pieces "
+            "of work recursively so only the final summary surfaces back to the user — coordination scaling by "
+            "trusting the layer below to decide without checking in on every step. Today's Chasing Jarvis post "
+            "makes a related point about pace: Dr. Tali's been saying for about a year that open-weight models "
+            "would eventually close the gap on the frontier labs — capability distributing outward the same way "
+            "decision-rights need to, if you want to scale past what you can personally approve."
+        ),
+        "question": (
+            "Claude Code's sub-agents can now spawn their own sub-agents, delegating work recursively without "
+            "every step routing back through a lead agent for approval. Chapter 10 argues your organization's "
+            "real ceiling isn't headcount — it's how many people you'd trust to decide well without checking "
+            "with you first. Name one decision that still routes through you by habit rather than necessity — "
+            "what would it take to actually trust someone else with it?"
+        ),
+        "model_answer": (
+            "Most leaders can name the decision immediately — the honest part is admitting it routes through "
+            "them out of habit, not necessity. The recursive sub-agent pattern works because each layer only "
+            "needs to trust the layer directly below it to handle its own scope, not the whole chain — the lead "
+            "agent doesn't approve every sub-sub-agent's output, it trusts the structure. The Vanguard version: "
+            "you don't need to personally vet every decision if you've properly delegated the judgment, not just "
+            "the task. Pick the decision you named, hand over the judgment along with the task, and see if the "
+            "ceiling actually moves."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4505,7 +4537,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Sonnet 5 now approaches Opus-tier performance on agentic benchmarks while showing a lower rate of undesirable behaviors than its predecessor",
+    "headline": "Claude Code sub-agents can now spawn their own sub-agents — recursive delegation where a lead agent hands off work and only the final summary surfaces back up",
     "source": "Anthropic",
 }
 
