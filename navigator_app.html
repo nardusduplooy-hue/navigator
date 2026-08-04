@@ -1219,9 +1219,27 @@ const PROGRAMME_DATA = {
     url: "https://studio.firebase.google.com"
   },
 
+  teamsQuote: "Headcount is not the same as capacity. Count how many people in your tribe you\u2019d actually trust to decide without checking with you first \u2014 that number, not the roster, is your real ceiling.",
+
+  chasingJarvisQuote: {
+    quote: "\u201cI\u2019ve been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.\u201d",
+    author: "Dr. Tali Re\u017eun",
+    url: "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"
+  },
+
+  dailyTask: {
+    course: "Business as Warfare \u2014 Module 1",
+    title: "BAW Capstone \u2014 Daily Intelligence Sweep",
+    body: "Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time."
+  },
+
+  studentPosts: [
+    { name: "Matthys van Rooyen", context: "Chasing Jarvis", url: "https://www.linkedin.com/pulse/wolf-guards-sheep-matthys-van-rooyen-s1mcf/" }
+  ],
+
   kapustaReading: {
-    title: "Before You Deploy AI Again \u2014 Would You Be Proud of It Amplified 10x?",
-    subtitle: "Chapter 9: AI as Force Multiplier. Before your next AI deployment, ask the uncomfortable question: if this pattern got amplified 10x, would you still be proud of it in five years? Most organizations skip this test entirely and discover the answer only after the amplified version has already damaged something that took years to build.",
+    title: "How Many People Can Decide Without Your Approval? That\u2019s Your Real Ceiling",
+    subtitle: "Chapter 10: Tribe as Coordination. Count honestly: how many people in your organization can make a significant decision without needing your approval? Not \u201chow many report to you.\u201d How many you\u2019d genuinely trust to decide well, aligned with your intent, without checking first. Most leaders are shocked by how low that number is \u2014 and it\u2019s the real ceiling on how much you can coordinate.",
     url: "https://www.linkedin.com/in/cotrugli/"
   },
 
@@ -1232,12 +1250,12 @@ const PROGRAMME_DATA = {
   ],
 
   neoWorldArticle: {
-    title: "Claude Sonnet 5 now approaches Opus-tier performance on agentic benchmarks while showing a lower rate of undesirable behaviors than its predecessor",
+    title: "Claude Code sub-agents can now spawn their own sub-agents \u2014 recursive delegation where a lead agent hands off work and only the final summary surfaces back up",
     source: "Anthropic",
     url: "https://www.anthropic.com"
   },
 
-  briefingDate: "Monday, 3 August 2026",
+  briefingDate: "Tuesday, 4 August 2026",
 
   status: [
     "All JTBDs current",
@@ -1246,9 +1264,9 @@ const PROGRAMME_DATA = {
     "Module 4: Context Engineering \u2014 Completed"
   ],
 
-  knowledgeQuestion: "Claude Sonnet 5 improved on agentic capability while also reducing its rate of undesirable behaviors \u2014 Anthropic tested for both before scaling, rather than treating safety as something to fix after the fact. Chapter 9 asks the same discipline of your own AI deployments: before you scale one, would you still be proud of it amplified 10x, five years from now? Name one AI-assisted process in your business you\u2019d want to slow down and audit before scaling further, rather than just scaling it because you can.",
+  knowledgeQuestion: "Claude Code\u2019s sub-agents can now spawn their own sub-agents, delegating work recursively without every step routing back through a lead agent for approval. Chapter 10 argues your organization\u2019s real ceiling isn\u2019t headcount \u2014 it\u2019s how many people you\u2019d trust to decide well without checking with you first. Name one decision that still routes through you by habit rather than necessity \u2014 what would it take to actually trust someone else with it?",
 
-  modelAnswer: "The instinct is to scale whatever\u2019s already working, because momentum feels like validation. But a process that\u2019s fine at current volume can fail badly at 10x \u2014 not because the AI breaks, but because it faithfully amplifies whatever shortcuts, blind spots, or unexamined judgment calls were already baked into it. Sonnet 5\u2019s safety improvement didn\u2019t happen by accident at scale \u2014 Anthropic tested for it deliberately before shipping. The Vanguard version of that discipline: before scaling any AI-assisted process, ask what it would look like at 10x, not what it looks like now \u2014 and fix what you find uncomfortable before you have ten times the surface area to fix it on.",
+  modelAnswer: "Most leaders can name the decision immediately \u2014 the honest part is admitting it routes through them out of habit, not necessity. The recursive sub-agent pattern works because each layer only needs to trust the layer directly below it to handle its own scope, not the whole chain \u2014 the lead agent doesn\u2019t approve every sub-sub-agent\u2019s output, it trusts the structure. The Vanguard version: you don\u2019t need to personally vet every decision if you\u2019ve properly delegated the judgment, not just the task. Pick the decision you named, hand over the judgment along with the task, and see if the ceiling actually moves.",
 
   todaysFocus: "Sprint 3 active. Running courses: BAW Module 1, AI in B2B Sales Module 2, Analytics (own tempo), Self Awareness \u0026 Personal Enlightenment (own tempo), Chasing Jarvis Module 5. This week: what did your tribe ship? Sessions resume after summer break \u2014 watch Telegram.",
 
@@ -3258,6 +3276,8 @@ function renderBriefing() {
   const a = d.assignments[0];
   const rows = [];
 
+  if (d.teamsQuote) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🏆</span><div class="briefing-content"><div class="briefing-title">Vanguard Teams</div>${d.teamsQuote}</div></div>`);
+
   const pendingAssignments = d.assignments.filter(a => a.status !== 'submitted');
   if (pendingAssignments.length) {
     rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔴</span><div class="briefing-content"><div class="briefing-title">Deadlines</div>${
@@ -3287,6 +3307,12 @@ function renderBriefing() {
     focusHtml += `</div></div>`;
     rows.push(focusHtml);
   }
+
+  if (d.chasingJarvisQuote) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🎯</span><div class="briefing-content"><div class="briefing-title">Chasing Jarvis — ${d.chasingJarvisQuote.author}</div>${d.chasingJarvisQuote.quote}<div style="margin-top:4px;"><a href="${d.chasingJarvisQuote.url}" style="color:var(--accent);">→ Read on LinkedIn</a></div></div></div>`);
+
+  if (d.dailyTask) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📡</span><div class="briefing-content"><div class="briefing-title">${d.dailyTask.title}</div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px;">${d.dailyTask.course}</div>${d.dailyTask.body}</div></div>`);
+
+  if (d.studentPosts && d.studentPosts.length) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📰</span><div class="briefing-content"><div class="briefing-title">Student LinkedIn Posts</div>${d.studentPosts.map(p => `<a href="${p.url}" style="color:var(--accent);">${p.context ? p.context + ' — ' : ''}${p.name}</a>`).join('<br>')}</div></div>`);
 
   rows.push(`<div class="briefing-row"><span class="briefing-emoji">🗺️</span><div class="briefing-content"><div class="briefing-title">Navigable Path</div>Turning complexity into a navigable path — <a href="${d.toolOfDay.url}" style="color:var(--accent);">${d.toolOfDay.name}</a> — create an account and explore</div></div>`);
 
