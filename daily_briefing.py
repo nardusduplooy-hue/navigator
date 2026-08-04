@@ -131,6 +131,7 @@ def build_briefing():
         "2026-08-01": {"quote": "“Block, Jack Dorsey's company, released something called Buzz last week.”", "url": "https://www.linkedin.com/posts/talirezun_block-jack-dorseys-company-released-something-share-7488500566990528512-bOMs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-03": {"quote": "“The real question: Which square you're actually standing in, and whether you're building toward the next one?”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-04": {"quote": "“I've been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.”", "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
+        "2026-08-05": {"quote": "“I've been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.”", "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
     }
 
     lines = []
@@ -204,6 +205,7 @@ def build_briefing():
         "2026-08-01": "Stability isn't the same as being right forever — it's often just rigidity that hasn't been tested yet. Before you praise your tribe for staying the course, ask when it last actually changed course.",
         "2026-08-03": "Before you scale a habit across your whole tribe, ask if you'd still be proud of it at ten times the size. Amplification doesn't discriminate between your best moves and your worst ones.",
         "2026-08-04": "Headcount is not the same as capacity. Count how many people in your tribe you'd actually trust to decide without checking with you first — that number, not the roster, is your real ceiling.",
+        "2026-08-05": "Your tribe doesn't grade you on the philosophy you state in the induction deck. They grade you on the pattern of your last ninety days — and they've already run the audit, whether you have or not.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
@@ -789,7 +791,9 @@ def build_briefing():
         lines.append(vanguard["summary"])
         lines.append("")
         if date_key not in ("2026-05-28",):
-            if date_key >= "2026-07-06":
+            if date_key == "2026-08-05":
+                lines.append("<a href='https://stream.redcircle.com/episodes/93987263-20df-456e-80b9-afed8f1e7c68/stream.mp3'>→ Vanguard Leadership intro Podcast — Dra\u017een Kapusta</a>")
+            elif date_key >= "2026-07-06":
                 lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
             elif date_key >= "2026-05-30":
                 lines.append("<a href='https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")

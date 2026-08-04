@@ -1957,6 +1957,37 @@ TALI_STEPS = {
             "ceiling actually moves."
         ),
     },
+    "2026-08-05": {
+        "step": "What You Now Possess — Would an Honest Observer Agree You're Running the Philosophy You Claim?",
+        "title": "Your Network Already Ran The Audit You Haven't",
+        "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms",
+        "focus": (
+            "Chapter 11 asks whether an honest outside observer, looking only at your last 90 days of decisions, "
+            "would conclude you're running the operating system you'd claim in an interview — most leaders "
+            "assume yes and have never actually checked. Today's AI News is Anthropic doing exactly that kind "
+            "of check on itself: Claude for Open Source backs up its stated commitment to the open developer "
+            "ecosystem with six months of free Claude Max access for maintainers, rather than just saying the "
+            "words. Today's Chasing Jarvis post makes a related point about capability closing gaps quietly, "
+            "over time, whether or not anyone's watching — the same logic Chapter 11 applies to character."
+        ),
+        "question": (
+            "Anthropic didn't just claim to support the open-source ecosystem — it backed that claim with six "
+            "months of free Claude Max access for maintainers, a concrete pattern matching the stated "
+            "philosophy. Chapter 11 asks the same of you: if an honest observer looked only at your last 90 "
+            "days of decisions, would they conclude you're running the philosophy you'd claim in an interview? "
+            "Name one place where your stated values and your actual pattern would disagree if someone actually "
+            "checked."
+        ),
+        "model_answer": (
+            "The honest answer usually surfaces fast, because most people already know where the gap is — they "
+            "just haven't said it out loud. The test isn't whether you can articulate your values well; it's "
+            "whether a stranger auditing your calendar, your last ten decisions, and your last ten promotions "
+            "would land on the same conclusion you would. Anthropic's open-source program is convincing "
+            "precisely because it's expensive and specific, not because it's well-worded. The Vanguard version: "
+            "pick the value you'd state first in an interview, then find the decision from the last 90 days "
+            "that would make an honest observer doubt it — that's where the actual work is."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4537,7 +4568,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Code sub-agents can now spawn their own sub-agents — recursive delegation where a lead agent hands off work and only the final summary surfaces back up",
+    "headline": "Anthropic launched Claude for Open Source — six months of free Claude Max access for open-source maintainers, backing its stated support for the open developer ecosystem with real credits",
     "source": "Anthropic",
 }
 
