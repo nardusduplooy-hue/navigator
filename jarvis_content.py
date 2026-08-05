@@ -1988,6 +1988,38 @@ TALI_STEPS = {
             "that would make an honest observer doubt it — that's where the actual work is."
         ),
     },
+    "2026-08-06": {
+        "step": "The Three Patterns — Audit Your Last Ten Promotions: Wolf Pattern or Sheepdog Pattern?",
+        "title": "What Got Rewarded Is What Actually Got Signaled",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/",
+        "focus": (
+            "Chapter 12 asks you to look at your last ten promotions or bonuses and ask honestly, for each one, "
+            "whether it rewarded a wolf pattern or a sheepdog pattern — not what you intended to reward, but "
+            "what the decision actually signaled to everyone watching. Today's AI News is the same test applied "
+            "at the top of an organization: Anthropic naming Mariano-Florentino Cuéllar as Chief Global Affairs "
+            "Officer signals what kind of judgment the company wants shaping its next chapter, whether or not "
+            "that was the stated intent behind the hire. Today's Chasing Jarvis post revisits the LuminaAI "
+            "widget Dr. Tali shipped months ago — a reminder that what you actually ship, not what you announce, "
+            "is the pattern people remember."
+        ),
+        "question": (
+            "Anthropic just named Mariano-Florentino Cuéllar as its Chief Global Affairs Officer — a hiring "
+            "decision that signals what kind of judgment the company wants shaping its next chapter, whether or "
+            "not that was the stated intent. Chapter 12 asks you to run the same audit on your last ten "
+            "promotions or bonuses: not what you intended to reward, but what the decision actually signaled to "
+            "everyone watching. Name one promotion or bonus decision in your organization that, looked at "
+            "honestly, rewarded a wolf pattern instead of the sheepdog pattern you'd claim to value."
+        ),
+        "model_answer": (
+            "Most leaders can name it the moment they're honest about the criteria that actually drove the "
+            "decision — was it protecting the team and the standard, or was it the person who made the numbers "
+            "work regardless of how? The uncomfortable part isn't spotting the gap, it's admitting the decision "
+            "already sent a signal to everyone else on the team about what actually gets rewarded here, no "
+            "matter what the values deck says. Anthropic's hiring decisions signal what the company is "
+            "optimizing for the same way your promotion decisions do — the question isn't whether people are "
+            "watching, it's what they've already concluded from what they've seen so far."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4556,9 +4588,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489291192812126208/",
-    "title": "Before You Deploy AI Again",
-    "description": "Kapusta's new post, tied to today's Chapter 9 (AI as Force Multiplier) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488160796842176513/",
+    "title": "Audit Your Last Ten Promotions",
+    "description": "Kapusta's post, tied to today's Chapter 12 (The Three Patterns: Wolf/Sheepdog/Sheep) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4568,7 +4600,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launched Claude for Open Source — six months of free Claude Max access for open-source maintainers, backing its stated support for the open developer ecosystem with real credits",
+    "headline": "Anthropic named Mariano-Florentino Cuéllar as Chief Global Affairs Officer — a hiring decision that signals what kind of judgment the company wants shaping its next chapter",
     "source": "Anthropic",
 }
 
