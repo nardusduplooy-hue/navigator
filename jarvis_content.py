@@ -2020,6 +2020,39 @@ TALI_STEPS = {
             "watching, it's what they've already concluded from what they've seen so far."
         ),
     },
+    "2026-08-07": {
+        "step": "The Sheepdog Manifesto — If These Principles Would Make AI Safe, Why Aren't More Systems Built on Them?",
+        "title": "Safety Isn't Bolted On — It's Designed In, Or It's Not There",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/",
+        "focus": (
+            "Chapter 13 asks why so few AI systems get designed explicitly around the same principles that "
+            "build trust between merchants — the uncomfortable answer being that most development still "
+            "optimizes for narrow, short-term objectives, the exact pattern that collapses trust fastest in any "
+            "networked system. Today's AI News is a real example of the alternative: Anthropic proposed an "
+            "industry-wide framework for scoring jailbreak severity together with Amazon, Microsoft, and "
+            "Google — treating safety as shared, explicit infrastructure the whole industry runs on, rather "
+            "than something each company improvises alone after an incident. Today's Chasing Jarvis post "
+            "revisits the LuminaAI widget — a reminder that what actually got built and shipped is the real "
+            "signal, same logic as this chapter."
+        ),
+        "question": (
+            "Anthropic just proposed an industry-wide framework for scoring jailbreak severity together with "
+            "Amazon, Microsoft, and Google — treating AI safety as an explicit, shared principle built into how "
+            "the industry operates, rather than something each company improvises alone after an incident. "
+            "Chapter 13 asks the same of your organization: which of your stated trust principles are actually "
+            "designed into your systems and incentives, and which ones only show up in the values deck? Name "
+            "one principle you claim to run on that isn't actually built into how a decision gets made."
+        ),
+        "model_answer": (
+            "The gap usually isn't hypocrisy — it's that principles cost something to design in up front, and "
+            "narrow short-term optimization is always cheaper in the moment. The industry-wide jailbreak "
+            "severity framework works because Anthropic and its competitors agreed the shared standard was "
+            "worth more than each company's individual shortcut. The Vanguard test: pick a principle you'd "
+            "claim without hesitation, then check whether it's actually built into a process — an approval "
+            "step, an incentive, a default — or whether it only survives as long as nothing's forcing a "
+            "tradeoff against it."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4600,7 +4633,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic named Mariano-Florentino Cuéllar as Chief Global Affairs Officer — a hiring decision that signals what kind of judgment the company wants shaping its next chapter",
+    "headline": "Anthropic proposed an industry-wide framework for scoring jailbreak severity together with Amazon, Microsoft, and Google — treating AI safety as shared, explicit infrastructure rather than something each company improvises alone",
     "source": "Anthropic",
 }
 

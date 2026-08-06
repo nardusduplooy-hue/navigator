@@ -133,6 +133,7 @@ def build_briefing():
         "2026-08-04": {"quote": "“I've been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.”", "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-05": {"quote": "“I've been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.”", "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-06": {"quote": "\U0001f4c4 <b>LuminaAI widget</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/"},
+        "2026-08-07": {"quote": "\U0001f4c4 <b>LuminaAI widget</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/"},
     }
 
     lines = []
@@ -208,6 +209,7 @@ def build_briefing():
         "2026-08-04": "Headcount is not the same as capacity. Count how many people in your tribe you'd actually trust to decide without checking with you first — that number, not the roster, is your real ceiling.",
         "2026-08-05": "Your tribe doesn't grade you on the philosophy you state in the induction deck. They grade you on the pattern of your last ninety days — and they've already run the audit, whether you have or not.",
         "2026-08-06": "The promotion you're proudest of and the promotion that actually got rewarded fastest aren't always the same event. Run the audit on your own tribe before someone else runs it on you.",
+        "2026-08-07": "A tribe that only optimizes for this quarter's numbers is running exactly the pattern that collapses trust fastest. The principles that build trust don't change when it's inconvenient — that's what makes them principles instead of preferences.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     lines.append("")
