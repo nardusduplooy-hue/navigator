@@ -2053,6 +2053,40 @@ TALI_STEPS = {
             "tradeoff against it."
         ),
     },
+    "2026-08-10": {
+        "step": "The Perfect Merchant for the NEO Era — 2008: While Every Business School Cut Costs, COTRUGLI Chose the Opposite",
+        "title": "Ten Years Later, The Cost-Cutters Were Gone",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/",
+        "focus": (
+            "Chapter 3 tells the story of COTRUGLI's 2008 choice: while every business school in the region cut "
+            "costs, laid off faculty, and inflated class sizes to survive the financial crisis, COTRUGLI kept "
+            "cohorts small and quality high, accepting three years of lower margins. Ten years later, most of "
+            "the cost-cutting competitors were gone or irrelevant. Today's AI News is the same bet at a "
+            "different scale: Anthropic has committed tens of billions of dollars to a multi-year "
+            "infrastructure build-out — data centers that won't even come online until 2027, a long-horizon "
+            "commitment that only pays off if the company is still making decisions on that horizon years from "
+            "now. Today's Chasing Jarvis post on Lumina agents Gen 2 is the same pattern at builder scale: "
+            "what gets shipped and iterated on beats what gets announced once."
+        ),
+        "question": (
+            "Anthropic has committed tens of billions of dollars to a multi-year AI infrastructure build-out — "
+            "data centers that won't even come online until 2027, a bet that only pays off if the company is "
+            "still making long-horizon decisions years from now. Chapter 3 tells the same story about COTRUGLI's "
+            "2008 choice: three years of lower margins to protect quality, while competitors who cut costs to "
+            "survive the crisis were mostly gone within a decade. What's one decision in your organization right "
+            "now that would look obviously right in ten years but costs you something uncomfortable this quarter?"
+        ),
+        "model_answer": (
+            "The honest test isn't whether you can name the long-term-correct choice — most leaders can, in the "
+            "abstract. It's whether you're actually willing to eat the near-term cost for it when the board, the "
+            "quarter, or the anxious voice in your own head is asking why margins dipped. COTRUGLI's bet only "
+            "looks obvious in hindsight; in 2008 it looked like slow institutional suicide while competitors who "
+            "cut costs looked like they were surviving. Anthropic's infrastructure bet works the same way — it's "
+            "a multi-year commitment that will look either brilliant or reckless depending on execution nobody "
+            "can fully verify yet. The Vanguard test isn't picking the right long-term bet — it's whether you "
+            "can hold it through the quarters where it looks wrong."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4621,9 +4655,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7488160796842176513/",
-    "title": "Audit Your Last Ten Promotions",
-    "description": "Kapusta's post, tied to today's Chapter 12 (The Three Patterns: Wolf/Sheepdog/Sheep) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487437279838404608/",
+    "title": "2008: While Every Business School Cut Costs",
+    "description": "Kapusta's post, tied to today's Chapter 3 (The Perfect Merchant for the NEO Era) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4633,7 +4667,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic proposed an industry-wide framework for scoring jailbreak severity together with Amazon, Microsoft, and Google — treating AI safety as shared, explicit infrastructure rather than something each company improvises alone",
+    "headline": "Anthropic committed tens of billions of dollars to a multi-year U.S. AI infrastructure build-out — data centers that won't come online until 2027, a long-horizon bet most companies wouldn't make for short-term margin",
     "source": "Anthropic",
 }
 

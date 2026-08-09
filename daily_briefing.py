@@ -30,6 +30,14 @@ CAT = timezone(timedelta(hours=2))
 # Date override — set by --date argument to preview a specific day
 _DATE_OVERRIDE = None
 
+# Weekday-only policy — briefings only send Mon-Fri by default from 10 Aug 2026 onward.
+# Set via --force-weekend to send on a Saturday/Sunday when Nardus explicitly wants to.
+_FORCE_WEEKEND_SEND = False
+
+def _is_weekend():
+    d = datetime.strptime(today_str(), "%Y-%m-%d")
+    return d.weekday() >= 5  # 5=Saturday, 6=Sunday
+
 def today_str():
     if _DATE_OVERRIDE:
         return _DATE_OVERRIDE
@@ -134,6 +142,7 @@ def build_briefing():
         "2026-08-05": {"quote": "“I've been saying for about a year now that open-weight models would eventually close the gap on the frontier labs.”", "url": "https://www.linkedin.com/posts/talirezun_ive-been-saying-for-about-a-year-now-that-share-7489945700009496577-dS9M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFwiSdIBbNNtQbBbHQy0J-c2pvnDOYpQGms"},
         "2026-08-06": {"quote": "\U0001f4c4 <b>LuminaAI widget</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/"},
         "2026-08-07": {"quote": "\U0001f4c4 <b>LuminaAI widget</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/"},
+        "2026-08-10": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
     }
 
     lines = []
@@ -210,8 +219,11 @@ def build_briefing():
         "2026-08-05": "Your tribe doesn't grade you on the philosophy you state in the induction deck. They grade you on the pattern of your last ninety days — and they've already run the audit, whether you have or not.",
         "2026-08-06": "The promotion you're proudest of and the promotion that actually got rewarded fastest aren't always the same event. Run the audit on your own tribe before someone else runs it on you.",
         "2026-08-07": "A tribe that only optimizes for this quarter's numbers is running exactly the pattern that collapses trust fastest. The principles that build trust don't change when it's inconvenient — that's what makes them principles instead of preferences.",
+        "2026-08-10": "In 2008 COTRUGLI chose three years of lower margins over cutting quality — and ten years later, that was the whole difference. What's your tribe protecting this quarter that costs you the next ten years?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
+    if date_key == "2026-08-10":
+        lines.append("A word from Benedetto Cotrugli — <a href='https://www.youtube.com/watch?v=wftgTgjWKGQ'>watch here</a>.")
     lines.append("")
 
     # DEADLINES
@@ -862,6 +874,9 @@ def send_test():
         print("Answer sent: OK" if r else "Answer sent: FAILED")
 
 def send_briefing():
+    if _is_weekend() and not _FORCE_WEEKEND_SEND:
+        print(f"Skipping send — {today_label()} is a weekend and the weekday-only policy is active. Use --force-weekend to override.")
+        return
     if not wait_for_network():
         return
     full = build_briefing()
@@ -938,6 +953,11 @@ if __name__ == "__main__":
             import daily_briefing as _self
             _self._DATE_OVERRIDE = sys.argv[idx + 1]
             _DATE_OVERRIDE = sys.argv[idx + 1]
+
+    if "--force-weekend" in sys.argv:
+        import daily_briefing as _self
+        _self._FORCE_WEEKEND_SEND = True
+        _FORCE_WEEKEND_SEND = True
 
     if "--test-send" in sys.argv:
         send_test()
