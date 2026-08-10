@@ -143,6 +143,7 @@ def build_briefing():
         "2026-08-06": {"quote": "\U0001f4c4 <b>LuminaAI widget</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/"},
         "2026-08-07": {"quote": "\U0001f4c4 <b>LuminaAI widget</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490658806486642688/"},
         "2026-08-10": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
+        "2026-08-11": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
     }
 
     lines = []
@@ -220,6 +221,7 @@ def build_briefing():
         "2026-08-06": "The promotion you're proudest of and the promotion that actually got rewarded fastest aren't always the same event. Run the audit on your own tribe before someone else runs it on you.",
         "2026-08-07": "A tribe that only optimizes for this quarter's numbers is running exactly the pattern that collapses trust fastest. The principles that build trust don't change when it's inconvenient — that's what makes them principles instead of preferences.",
         "2026-08-10": "In 2008 COTRUGLI chose three years of lower margins over cutting quality — and ten years later, that was the whole difference. What's your tribe protecting this quarter that costs you the next ten years?",
+        "2026-08-11": "No one on your tribe needs to be the smartest person in the room. The system that frames the right question, explores broadly, and checks its own work will beat one genius working alone, every time.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

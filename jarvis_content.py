@@ -2087,6 +2087,40 @@ TALI_STEPS = {
             "can hold it through the quarters where it looks wrong."
         ),
     },
+    "2026-08-11": {
+        "step": "NEO Cotruglian Philosophy — AlphaFold Solved a 50-Year Problem, Not With a Genius, With a System",
+        "title": "The System Was The Genius, Not Any One Person In It",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/",
+        "focus": (
+            "Chapter 4 tells the story of AlphaFold solving a fifty-year protein-folding problem not through "
+            "individual genius but through a properly orchestrated system — human researchers framing the "
+            "right question, AI exploring a solution space no human team could cover, and human judgment "
+            "validating and directing the results. Today's AI News is the same structure at work today: "
+            "Claude Science's coordinating agent delegates research work while a separate reviewer agent "
+            "checks every citation, number, and figure, rather than one super-agent doing everything. Today's "
+            "Chasing Jarvis post on Lumina agents Gen 2 continues the same builder-scale pattern: what gets "
+            "shipped and checked beats what one person claims to know."
+        ),
+        "question": (
+            "Anthropic launched Claude Science, a multi-agent research workbench where a coordinating agent "
+            "delegates work and a separate reviewer agent checks every citation, number, and figure — the same "
+            "framing-exploration-validation loop that let AlphaFold solve a fifty-year protein-folding problem "
+            "without any single genius insight. Chapter 4 argues the same structure applies to your own tribe: "
+            "the system that frames the right question, explores broadly, and validates its own work will "
+            "outperform any one brilliant individual working alone. Where in your organization are you still "
+            "betting on a single expert instead of building the system around them?"
+        ),
+        "model_answer": (
+            "The uncomfortable admission most leaders avoid: relying on your best person isn't a strength, "
+            "it's a single point of failure dressed up as a strategy. AlphaFold didn't work because DeepMind "
+            "hired the one person who understood protein folding — it worked because the system separated "
+            "framing the question, exploring the solution space, and validating the answer into distinct roles "
+            "that checked each other. Claude Science does the same thing explicitly: a coordinator and a "
+            "reviewer, not one super-agent doing everything. The Vanguard test: name the process in your "
+            "organization that currently depends on one expert's judgment with no structural check on it, then "
+            "build the second role that makes the system, not the person, the source of reliability."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4667,7 +4701,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic committed tens of billions of dollars to a multi-year U.S. AI infrastructure build-out — data centers that won't come online until 2027, a long-horizon bet most companies wouldn't make for short-term margin",
+    "headline": "Anthropic launched Claude Science — a multi-agent research workbench where a coordinating agent delegates work and a separate reviewer agent checks every citation, number, and figure, mirroring the same framing-exploration-validation loop that produced AlphaFold",
     "source": "Anthropic",
 }
 
