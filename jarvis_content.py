@@ -2121,6 +2121,38 @@ TALI_STEPS = {
             "build the second role that makes the system, not the person, the source of reliability."
         ),
     },
+    "2026-08-12": {
+        "step": "The NEO Era Battlefield — From Hierarchy to Network",
+        "title": "Your Org Chart Stopped Being The Asset Years Ago",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/",
+        "focus": (
+            "Chapter 5 tells the story of COTRUGLI itself: in 2002 it ran like a classic Industrial Era "
+            "institution — hierarchy, a controlled curriculum, linear enrollment. By 2015 the real asset had "
+            "quietly become the alumni network, with 60% of new enrollment arriving through referral rather "
+            "than marketing. The institution didn't grow along its old structure — it had to recognize what "
+            "it had actually become. Today's AI News tracks the same pattern one layer down: Anthropic's "
+            "latest Claude Code release adds workspace trust prompts and spend-limit controls, governance "
+            "built for a world where the real infrastructure is no longer one model but a network of agents "
+            "acting on your behalf. Today's Chasing Jarvis post on Lumina agents Gen 2 continues the same "
+            "thread — the value sits in the connected system, not any single component."
+        ),
+        "question": (
+            "COTRUGLI's real asset in 2015 wasn't its curriculum or its org chart — it was the alumni network "
+            "quietly driving 60% of new enrollment through referral. Chapter 5 argues most leaders keep "
+            "managing the structure they built instead of the network their organization has actually become. "
+            "What is the real asset in your organization right now — and is it the thing on your org chart, "
+            "or the network your org chart doesn't capture at all?"
+        ),
+        "model_answer": (
+            "The uncomfortable test: if you drew your org chart today, would it even contain the thing "
+            "actually creating your value? COTRUGLI didn't decide to become network-driven — it looked at "
+            "where enrollment was actually coming from and found the network had already taken over while "
+            "the org chart stayed the same. Most organizations skip that audit and keep investing in the "
+            "structure they can see instead of the network that's already doing the work. The Vanguard move: "
+            "name the relationship, referral pattern, or informal network in your business that's quietly "
+            "outperforming your formal structure, then start resourcing it like the asset it already is."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4701,7 +4733,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launched Claude Science — a multi-agent research workbench where a coordinating agent delegates work and a separate reviewer agent checks every citation, number, and figure, mirroring the same framing-exploration-validation loop that produced AlphaFold",
+    "headline": "Anthropic ships Claude Code 2.1.225, adding gateway spend-limit controls, workspace trust prompts, and Remote Control improvements",
     "source": "Anthropic",
 }
 
