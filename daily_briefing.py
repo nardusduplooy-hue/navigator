@@ -145,6 +145,7 @@ def build_briefing():
         "2026-08-10": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
         "2026-08-11": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
         "2026-08-12": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
+        "2026-08-13": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
     }
 
     lines = []
@@ -224,6 +225,7 @@ def build_briefing():
         "2026-08-10": "In 2008 COTRUGLI chose three years of lower margins over cutting quality — and ten years later, that was the whole difference. What's your tribe protecting this quarter that costs you the next ten years?",
         "2026-08-11": "No one on your tribe needs to be the smartest person in the room. The system that frames the right question, explores broadly, and checks its own work will beat one genius working alone, every time.",
         "2026-08-12": "In 2002 COTRUGLI ran on hierarchy and a fixed curriculum. By 2015, the real asset had become the alumni network — 60% of new enrollment came from referrals, not marketing. What is your tribe still treating as the org chart, when it's actually already the network?",
+        "2026-08-13": "Special operations teams don't call headquarters mid-mission — they're trusted to act, and trained to be worth that trust. Does your tribe wait for your sign-off on things they're already equipped to decide?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

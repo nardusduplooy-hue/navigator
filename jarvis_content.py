@@ -2153,6 +2153,40 @@ TALI_STEPS = {
             "outperforming your formal structure, then start resourcing it like the asset it already is."
         ),
     },
+    "2026-08-13": {
+        "step": "Business as Warfare — Why Navy SEALs Don't Call Headquarters Mid-Mission",
+        "title": "Permission-Seeking Is Not The Same As Good Judgment",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/",
+        "focus": (
+            "Chapter 6 argues that special operations teams don't call headquarters mid-mission — small "
+            "teams, distributed across hostile theaters, operate with minimal oversight because waiting for "
+            "centralized approval in a fast-moving environment gets people killed. Today's AI News is the "
+            "same argument landing inside software: Anthropic is making Claude Code's auto mode the default, "
+            "letting it act without asking permission at every step and pausing only for actions that are "
+            "irreversible or destructive — because testing showed automated judgment caught 89% of harmful "
+            "actions against 13.6% for human review, once approval becomes a reflexive habit instead of real "
+            "oversight. Today's Chasing Jarvis post on AI usage sits in the same territory: the tools are "
+            "already capable of more autonomy than most teams are willing to grant them."
+        ),
+        "question": (
+            "Anthropic just made Claude Code's default behavior act first and only pause for irreversible or "
+            "destructive moves — because their own data showed human 'approval' had become a rubber stamp, "
+            "not real oversight. Chapter 6 makes the same case for people: special forces teams don't call "
+            "headquarters mid-mission because waiting for permission in a fast-moving situation is itself the "
+            "risk. Where in your organization is 'checking with me first' actually just a rubber stamp — and "
+            "what would you need to trust before removing it?"
+        ),
+        "model_answer": (
+            "The uncomfortable parallel: if your team's approval process from you is basically automatic — "
+            "you say yes almost every time — you're not actually providing oversight, you're providing delay. "
+            "Anthropic's own numbers make this explicit: automated checks caught more real problems than "
+            "human reviewers who'd grown used to rubber-stamping requests. Special forces solve this by "
+            "training judgment into the team itself, then only escalating the genuinely irreversible calls. "
+            "The Vanguard move: find the approval step in your business that's really just a formality, and "
+            "ask whether the person asking for it has already earned the judgment to skip it — then give "
+            "them the real test: escalate only what's actually irreversible."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4721,9 +4755,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487437279838404608/",
-    "title": "2008: While Every Business School Cut Costs",
-    "description": "Kapusta's post, tied to today's Chapter 3 (The Perfect Merchant for the NEO Era) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484142375968256000/",
+    "title": "Why Navy SEALs Don't Call Headquarters Mid-Mission",
+    "description": "Kapusta's post, tied to today's Chapter 6 (Business as Warfare) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4733,8 +4767,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic ships Claude Code 2.1.225, adding gateway spend-limit controls, workspace trust prompts, and Remote Control improvements",
-    "source": "Anthropic",
+    "headline": "Anthropic is making Claude Code's auto mode the default, letting it act without asking permission at every step and pausing only for irreversible or destructive actions",
+    "source": "TechCrunch",
 }
 
 JTBD_STATUS = (
