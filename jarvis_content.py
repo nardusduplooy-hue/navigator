@@ -2187,6 +2187,43 @@ TALI_STEPS = {
             "them the real test: escalate only what's actually irreversible."
         ),
     },
+    "2026-08-14": {
+        "step": "The NEO Leadership Challenge — BlackBerry Saw the iPhone Coming, Their Consensus Was Just Perfectly Obsolete",
+        "title": "Seeing The Threat Clearly Isn't The Same As Acting On It",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/",
+        "focus": (
+            "Chapter 7 tells the story of BlackBerry: when the iPhone launched in 2007, their leadership saw "
+            "the threat immediately and responded exactly the way business school teaches — careful "
+            "stakeholder management, cross-functional buy-in, consensus before commitment. Eighteen months "
+            "later they announced their response; the smartphone market had already been completely "
+            "redefined. The consensus was perfect. It was also perfectly obsolete. Today's AI News shows a "
+            "smaller version of the same instinct: Anthropic added invisible watermarks to Claude's output to "
+            "meet EU transparency rules, and some users are upset not because the tool changed, but because "
+            "it will now visibly confirm how they're actually using it — the same impulse to delay an "
+            "uncomfortable acknowledgment rather than act on what's already true. Today's Chasing Jarvis post "
+            "on AI usage sits in exactly this gap between what people are already doing and what they're "
+            "willing to admit to."
+        ),
+        "question": (
+            "BlackBerry's leadership saw the iPhone threat immediately in 2007 — and spent eighteen months "
+            "building careful cross-functional consensus before responding, by which point the market had "
+            "already moved on. Some Claude users are now upset that new watermarks will reveal how they're "
+            "actually using the tool at work or school — not because the tool changed, but because visibility "
+            "forces an acknowledgment they'd rather delay. Where in your organization are you already "
+            "building the 'careful consensus' response to something you can already see clearly — and what is "
+            "that carefulness actually buying you except time to avoid deciding?"
+        ),
+        "model_answer": (
+            "The uncomfortable pattern in both stories: BlackBerry's board didn't lack information, and the "
+            "Claude users upset about watermarks don't lack awareness of what they're doing — in both cases, "
+            "the process being defended as 'responsible' is really just a way to delay a decision or an "
+            "admission that's already obvious. Chapter 7's real test isn't whether you can build consensus — "
+            "it's whether you can tell the difference between genuine diligence and diligence used as a "
+            "stalling tactic. The Vanguard move: name one decision in your organization currently 'in "
+            "consultation' that everyone privately already knows the answer to, and ask what the remaining "
+            "discussion is actually protecting."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4767,7 +4804,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic is making Claude Code's auto mode the default, letting it act without asking permission at every step and pausing only for irreversible or destructive actions",
+    "headline": "Anthropic adds invisible watermarks to Claude's text output to comply with EU AI Act transparency rules — and some users are upset it will reveal how they're actually using it",
     "source": "TechCrunch",
 }
 
