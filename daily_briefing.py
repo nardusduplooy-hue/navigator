@@ -147,6 +147,7 @@ def build_briefing():
         "2026-08-12": {"quote": "\U0001f4c4 <b>Lumina agents Gen 2</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7491401688495484929/"},
         "2026-08-13": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-14": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
+        "2026-08-17": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
     }
 
     lines = []
@@ -228,6 +229,7 @@ def build_briefing():
         "2026-08-12": "In 2002 COTRUGLI ran on hierarchy and a fixed curriculum. By 2015, the real asset had become the alumni network — 60% of new enrollment came from referrals, not marketing. What is your tribe still treating as the org chart, when it's actually already the network?",
         "2026-08-13": "Special operations teams don't call headquarters mid-mission — they're trusted to act, and trained to be worth that trust. Does your tribe wait for your sign-off on things they're already equipped to decide?",
         "2026-08-14": "BlackBerry's leadership saw the iPhone coming and still took eighteen months to respond — because they built the careful consensus business school teaches. Is your tribe protecting a decision with process, or protecting itself from making one?",
+        "2026-08-17": "Hundreds of uncoordinated COVID vaccine teams beat a decade-long timeline through shared urgency and open trust — no central authority required. Does your tribe have that same shared context, or just the same shared goal?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -660,11 +662,22 @@ def build_briefing():
             cj_source = cj_rc.get("source", "LinkedIn")
             lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on " + cj_source + "</a>")
             lines.append("")
-            # VANGUARD SPRINT PROGRAMME — from 8 July onwards
-            if date_key >= "2026-07-08":
+            # VANGUARD SPRINT PROGRAMME — Sprint 3 from 8 July, Sprint 4 from 17 Aug onwards
+            if "2026-07-08" <= date_key < "2026-08-17":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
                 lines.append(
                     "<blockquote><i>All Chiefs · All Tribes · Sprint 3 in progress</i>\n\n"
+                    "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
+                    "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
+                    "product, for a real market, with real deliverables. More modules will integrate as the "
+                    "programme progresses.\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-08-17":
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 4 in progress</i>\n\n"
                     "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
                     "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
                     "product, for a real market, with real deliverables. More modules will integrate as the "
