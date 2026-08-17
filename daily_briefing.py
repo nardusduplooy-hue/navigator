@@ -87,7 +87,7 @@ def send_message(chat_id, text):
 
 def fetch_ai_news():
     REQUIRE_KEYWORDS = ["anthropic", "claude"]
-    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge", "internal reasoning is more deceptive", "grok"]
+    EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge", "internal reasoning is more deceptive", "grok", "sabotaged each other"]
     try:
         url = 'https://feeds.feedburner.com/venturebeat/SZYF'
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -148,6 +148,7 @@ def build_briefing():
         "2026-08-13": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-14": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-17": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
+        "2026-08-18": {"quote": "\U0001f4c4 <b>The Mixed Fleet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495071662321729536/"},
     }
 
     lines = []
@@ -230,6 +231,7 @@ def build_briefing():
         "2026-08-13": "Special operations teams don't call headquarters mid-mission — they're trusted to act, and trained to be worth that trust. Does your tribe wait for your sign-off on things they're already equipped to decide?",
         "2026-08-14": "BlackBerry's leadership saw the iPhone coming and still took eighteen months to respond — because they built the careful consensus business school teaches. Is your tribe protecting a decision with process, or protecting itself from making one?",
         "2026-08-17": "Hundreds of uncoordinated COVID vaccine teams beat a decade-long timeline through shared urgency and open trust — no central authority required. Does your tribe have that same shared context, or just the same shared goal?",
+        "2026-08-18": "Two decades of teaching produced one hard lesson: leaders who agreed with every principle and changed nothing within weeks were the norm, not the exception. What specific, measurable correction has your tribe actually committed to — not agreed with, committed to — in the last 90 days?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -769,8 +771,8 @@ def build_briefing():
         lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
         lines.append("")
 
-    # STUDENT LINKEDIN ARTICLES — from 2 July
-    if date_key >= "2026-07-02":
+    # STUDENT LINKEDIN ARTICLES — from 2 July, removed from 18 Aug onward per Nardus
+    if "2026-07-02" <= date_key < "2026-08-18":
         lines.append("\U0001f4f0 <b>STUDENT LINKEDIN POSTS</b>")
         lines.append("")
         if date_key < "2026-07-06":

@@ -2261,6 +2261,41 @@ TALI_STEPS = {
             "produce it."
         ),
     },
+    "2026-08-18": {
+        "step": "What You Now Possess — Two Decades of Teaching Taught One Lesson: Knowledge Alone Changes Nothing",
+        "title": "Agreement Is Not Correction",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495071662321729536/",
+        "focus": (
+            "Chapter 11 closes with the hardest lesson from two decades of teaching this material: leaders "
+            "who intellectually agreed with every principle, then quietly reverted to old habits within "
+            "weeks, were the norm, not the exception. The only leaders who actually transformed were the "
+            "ones who ran an honest 90-day audit of their real behavior and committed to a specific, "
+            "measurable correction. Today's AI News is a small version of the same discipline: rather than "
+            "just documenting subagent forking and cross-session messaging as recommended practices, "
+            "Anthropic made them the actual default behavior in Claude Code — a specific, forced correction "
+            "instead of an optional best practice most people would quietly ignore. Today's Chasing Jarvis "
+            "post, 'The Mixed Fleet,' carries the same undertone of a season closing and a specific new "
+            "practice beginning, not just being noted."
+        ),
+        "question": (
+            "Two decades of teaching this material produced one hard lesson: the leaders who intellectually "
+            "agreed with every principle and then reverted to old habits within weeks were the norm, not the "
+            "exception. The leaders who actually changed ran an honest 90-day audit of their real behavior "
+            "and committed to one specific, measurable correction. If you audited your own last 90 days "
+            "honestly, what's the one principle you'd say you 'believe in' that your actual behavior doesn't "
+            "support — and what specific correction would you commit to, not just agree with?"
+        ),
+        "model_answer": (
+            "The uncomfortable diagnostic: agreement is cheap and correction is expensive, which is exactly "
+            "why most leaders stop at agreement. Nodding along with a principle in a workshop costs nothing "
+            "and changes nothing; naming the one specific behavior you'll measure and correct over the next "
+            "90 days costs your credibility if you don't follow through — which is precisely why it works. "
+            "Anthropic's own version of this: making the right practice the default instead of an optional "
+            "recommendation, because optional good practices get quietly ignored at scale. The Vanguard "
+            "move: pick one principle you already 'agree with,' name the specific measurable behavior that "
+            "would prove it, and set the 90-day audit date now."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4831,7 +4866,7 @@ TOOL_SPOTLIGHT = {
 KAPUSTA_TODAY = {
     "url": "https://www.linkedin.com/feed/update/urn:li:activity:7494672937141121024/",
     "title": "How Hundreds of Uncoordinated Research Teams Beat a Decade-Long Timeline",
-    "description": "Kapusta's post, tied to today's Chapter 10 (Tribe as Coordination) \u2014 title inferred from the chapter theme only, no literal title given this time; not verified against the actual post content.",
+    "description": "Kapusta's post, tied to Chapter 10 (Tribe as Coordination) \u2014 link confirmed directly by Nardus.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -4841,8 +4876,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's Frontier Red Team found that three Claude agents given conflicting instructions on a shared codebase escalated into mutual sabotage, mistaking disagreement for hostility",
-    "source": "VentureBeat AI",
+    "headline": "Anthropic makes subagent forking and direct cross-session messaging the default in Claude Code, turning a known best practice into forced default behavior instead of an optional one",
+    "source": "Anthropic",
 }
 
 JTBD_STATUS = (
