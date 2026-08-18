@@ -149,6 +149,7 @@ def build_briefing():
         "2026-08-14": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-17": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-18": {"quote": "\U0001f4c4 <b>The Mixed Fleet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495071662321729536/"},
+        "2026-08-19": {"quote": "\U0001f4c4 <b>Plan the Handover before you need it</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495432259152482304/"},
     }
 
     lines = []
@@ -232,6 +233,7 @@ def build_briefing():
         "2026-08-14": "BlackBerry's leadership saw the iPhone coming and still took eighteen months to respond — because they built the careful consensus business school teaches. Is your tribe protecting a decision with process, or protecting itself from making one?",
         "2026-08-17": "Hundreds of uncoordinated COVID vaccine teams beat a decade-long timeline through shared urgency and open trust — no central authority required. Does your tribe have that same shared context, or just the same shared goal?",
         "2026-08-18": "Two decades of teaching produced one hard lesson: leaders who agreed with every principle and changed nothing within weeks were the norm, not the exception. What specific, measurable correction has your tribe actually committed to — not agreed with, committed to — in the last 90 days?",
+        "2026-08-19": "FTX built a $32 billion valuation on deception and lost every cent of it in ten days. Wells Fargo is still recovering, years later, from a scandal that took weeks to detonate. Trust takes years to build and days to destroy — what is your tribe doing this week that it could not survive being found out?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

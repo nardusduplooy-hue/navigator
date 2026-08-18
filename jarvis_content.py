@@ -2296,6 +2296,40 @@ TALI_STEPS = {
             "would prove it, and set the 90-day audit date now."
         ),
     },
+    "2026-08-19": {
+        "step": "The Three Patterns (Wolf/Sheepdog/Sheep) — $32 Billion to Zero in Ten Days",
+        "title": "Ten Days Is All It Takes",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495432259152482304/",
+        "focus": (
+            "Chapter 12 draws the sharpest line yet between the three patterns: Wells Fargo and FTX both "
+            "wore the sheepdog's language while running the wolf's playbook, and both discovered that trust "
+            "built over years can be erased in days once the truth surfaces. Today's AI News is a quieter "
+            "version of the same test: Anthropic replaced Claude Code's honor-system permission prompts with "
+            "an automated classifier, and in testing across 1,053 paid users that classifier caught 89% of "
+            "dangerous commands versus just 13.6% for manual review — proof that a system you can audit "
+            "beats a system you're asked to trust. Today's Chasing Jarvis post, 'Plan the Handover before "
+            "you need it,' asks the same question of your own agent build: have you actually planned for the "
+            "moment your system needs to hand off cleanly, or are you just hoping it goes well?"
+        ),
+        "question": (
+            "Wells Fargo and FTX both wore the language of the sheepdog while running the wolf's playbook — "
+            "and both learned that trust built over years can be erased in days once the truth surfaces. "
+            "Where in your own tribe's current work is the gap between the trust you're claiming and the "
+            "trust your actual behavior would survive being audited against?"
+        ),
+        "model_answer": (
+            "The diagnostic Chapter 12 offers is brutally simple: wolves and sheepdogs often use identical "
+            "language, so the only way to tell them apart is to look at what happens the day trust is "
+            "tested, not the day it's declared. Wells Fargo's fake accounts and FTX's balance sheet were "
+            "both invisible right up until they weren't, and once visible, years of accumulated goodwill "
+            "compressed into weeks or days of loss. Anthropic's own answer to this problem, with Claude "
+            "Code's auto mode, wasn't to ask people to trust the system more — it was to build a classifier "
+            "that could be independently tested and that outperformed manual review on every measure "
+            "checked. That is the Vanguard move: don't just declare which pattern you are, build the "
+            "evidence trail that would prove it under audit, before you need it — which is exactly what "
+            "today's Chasing Jarvis post is arguing for your own agent handovers."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4876,7 +4910,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic makes subagent forking and direct cross-session messaging the default in Claude Code, turning a known best practice into forced default behavior instead of an optional one",
+    "headline": "Claude Code's auto mode became the default permission model for Pro, Max and Team plans on 14 August — in testing across 1,053 paid users, its classifier caught 89% of dangerous commands versus just 13.6% for manual review",
     "source": "Anthropic",
 }
 
