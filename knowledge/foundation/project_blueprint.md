@@ -71,8 +71,8 @@ Cotrugli Navigator is an AI orchestration agent that consolidates all Vanguard M
 | Sprint 2 | North Star Web Dashboard | ✅ LIVE (local) |
 | Sprint 3 | Portal Scraper | ✅ BUILT — disabled pending approval |
 | Sprint 3.5 | Cron automation + Channel delivery | ✅ LIVE |
-| Sprint 4 | Content management — spreadsheet to code pipeline | 🔄 IN PROGRESS |
-| Sprint 5 | Foundation doc update + Claude Code workflow | 🔄 IN PROGRESS |
+| Sprint 4 | Content management — spreadsheet to code pipeline | 🔄 IN PROGRESS — Navigator Agent (Cowork) now applies daily spreadsheet updates to `navigator_app.html` directly; 4 new content fields (teamsQuote, chasingJarvisQuote, dailyTask, studentPosts) added 4 Aug 2026 |
+| Sprint 5 | Foundation doc update + Claude Code workflow | ✅ Foundation docs updated 18 Aug 2026 to reflect navigator_app.html architecture, the 6 Aug incident, and current sprint status — ongoing maintenance now part of the Navigator Agent's mandate |
 | Sprint 6 | CPN Foundation (Character formation layer) | 📋 PLANNED |
 | Sprint 7 | Public Web Interface | 📋 PLANNED |
 | Sprint 8 | Mobile App | 🔮 FUTURE |
