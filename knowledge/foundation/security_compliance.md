@@ -87,3 +87,15 @@ An `.env.save` editor backup file was accidentally committed to GitHub, exposing
 |---|---|---|---|
 | March 2026 | API key exposed in .env.save commit | Anthropic API key compromised | Key revoked, regenerated. .env.save added to .gitignore |
 | March 2026 | Telegram ToS violation — personal account scraping via Telethon | Account suspended, bot offline ~2 days | Architecture redesigned to Bot API only. New bot @CotNavigatorBot created. Personal credentials permanently removed. |
+| 6 Aug 2026 | Direct edit to `navigator_app.html` made from a stale local copy (by Nardus, not an agent) | Accidentally reverted ~2 days of automation work (4 new PROGRAMME_DATA fields, updated Briefing content) back to 29 July state; app appeared stale until 18 Aug | Content rebuilt and re-pushed (commit 0c43ffa). New rule adopted: always `git pull origin main` immediately before hand-editing `navigator_app.html` directly — or let the Navigator Agent make the edit instead, since it always pulls first. |
+
+
+## 8. Lesson Learned — Direct Hand-Edits (August 2026)
+Two Claude sessions and one human (Nardus, via direct GitHub edits) all touch
+this repo. The 6 Aug 2026 incident (see §7) happened because a hand-edit was
+made from a local copy that hadn't been pulled since before the automation
+work landed, silently reverting it. Rule going forward: anyone editing
+`navigator_app.html` by hand — human or agent — pulls `main` immediately
+before editing, every time, no exceptions. The Navigator Agent already does
+this as standard procedure; this section documents it as a repo-wide rule,
+not just an agent habit.

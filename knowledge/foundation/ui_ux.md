@@ -108,3 +108,34 @@ New subscriber triggers a DM notification to Nardus with name, username, chat ID
 - Dashboard headings: Orbitron (Google Font) — tactical, technical
 - Dashboard body: Space Grotesk — modern, readable
 - Telegram messages: System default — clean, fast-loading
+
+
+## 6. navigator_app.html — Six-Tab Web Interface (added 18 Aug 2026)
+
+A second live interface, distinct from the Telegram briefing and the local
+North Star dashboard above: `navigator_app.html`, hosted via GitHub Pages at
+nardusduplooy-hue.github.io/navigator/navigator_app.html. This is the
+interface students actually browse day to day. Six tabs, all driven by one
+`PROGRAMME_DATA` object:
+
+1. **North Star** — orientation view: current sprint, active courses,
+   headline status. Changes rarely — only on real structural change (e.g.
+   the Sprint 3 → 4 transition, 17 Aug 2026).
+2. **Work** — active courses, assignments, deadlines. Updates only when a
+   course/assignment status genuinely changes.
+3. **Sessions** — Zoom session details (link, ID, passcode, dates). Updates
+   only when a real new session is scheduled.
+4. **Briefing** — the daily 06:00 Telegram briefing, mirrored here. This is
+   the one tab that changes every single day: Vanguard Teams quote, Chasing
+   Jarvis quote, daily task, Kapusta reading, AI news, knowledge question and
+   model answer, student LinkedIn posts.
+5. **Engage** — Nardus's own LinkedIn drafting tool (comment/article/metrics
+   helper). Holds its own local state, not driven by the briefing.
+6. **Tribe** — team/chiefs roster and a weekly tribe question. Updates on a
+   weekly cadence at most, only when the roster or question actually changes.
+
+**Update cadence, at a glance:** Briefing = daily, North Star/Work/Sessions =
+event-driven (only when something real changes), Engage = not briefing-
+driven, Tribe = weekly at most. This replaces an earlier assumption that all
+six tabs should change daily — in practice, most days only the Briefing tab
+has anything new to say, and that's correct behaviour, not a missed update.

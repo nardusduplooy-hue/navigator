@@ -126,3 +126,42 @@ All code is environment-agnostic Python. GitHub is source of truth. Estimated mi
 
 ### Why scheduler.py Is No Longer Used
 macOS cron replaced scheduler.py. Cron is more reliable on Mac (survives crashes, doesn't need a Python process running 24/7), and allows precise control over each command in the sequence.
+
+## 11. Web App Layer — navigator_app.html (added 18 Aug 2026)
+
+`navigator_app.html` is a separate, single-file web app — the mobile/desktop
+interface students actually read, distinct from the Telegram delivery
+described above. It is hosted via GitHub Pages directly from this repo
+(`nardusduplooy-hue/navigator`, main branch) — no server, no build step.
+Pushing to `main` redeploys it automatically.
+
+### 11.1 Structure
+The entire app is one JS object, `PROGRAMME_DATA`, embedded in a `<script>`
+block bounded by `// ===== UPDATE EACH MODULE — START/END =====` markers.
+There is no external database or API — updating the app means editing this
+object, committing, and pushing. Six tabs, each a `<section id="tab-...">`
+switched by `switchTab()`:
+
+| Tab | Section id | Updates |
+|---|---|---|
+| North Star | tab-northstar | Rarely — only on real structural change |
+| Work | tab-work | Rarely — course/assignment status changes |
+| Sessions | tab-sessions | Rarely — new Zoom session scheduled |
+| Briefing | tab-briefing | **Daily** — driven by the 06:00 Telegram briefing |
+| Engage | tab-engage | Not briefing-driven — local LinkedIn drafting tool |
+| Tribe | tab-tribe | Weekly at most — team roster, tribe question |
+
+Full field-by-field mapping (spreadsheet row → `PROGRAMME_DATA` field) is
+maintained in `projects/navigator-update-procedure.md` in the agent's own
+project folder, not in this repo.
+
+### 11.2 Ownership split (since 4 Aug 2026)
+This repo is shared by two independent Claude sessions:
+- **Nardus's Navigator Agent** (Cowork) — owns `navigator_app.html` only.
+- **The daily briefing / LinkedIn post session** — owns `daily_briefing.py`,
+  `jarvis_content.py`, `scheduler.py`, `bot_listener.py`,
+  `channel_listener.py`, and the rest of the backend, end to end.
+
+Neither session edits the other's files. Both `git pull origin main` before
+editing anything, to avoid the class of incident described in
+`security_compliance.md` §7 (6 Aug 2026 entry).
