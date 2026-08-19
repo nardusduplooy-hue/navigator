@@ -2330,6 +2330,41 @@ TALI_STEPS = {
             "today's Chasing Jarvis post is arguing for your own agent handovers."
         ),
     },
+    "2026-08-20": {
+        "step": "The Sheepdog Manifesto — The Cotrugli Ledger Tested at 140,000 Users",
+        "title": "Build the Ledger Before the Agents Arrive",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495766057513680898/",
+        "focus": (
+            "Chapter 13 turns Chapter 12's warning into a blueprint: if a material share of tomorrow's "
+            "economic transactions will be agent-to-agent, at machine speed, with no shared truth layer, "
+            "then the sheepdog's job is to build that layer now, not after the first scandal. The proposal "
+            "already runs on real infrastructure — six EU member states, 140,000 healthcare users — proving "
+            "15th-century ledger principles still verify trust faster than any promise can. Today's AI News "
+            "is the market running its own version of that audit: as Anthropic's revenue run-rate clears $65 "
+            "billion and it lines up a $2 trillion IPO ahead of OpenAI, investors are about to price a level "
+            "of trust that has never been tested at this scale before. Today's Chasing Jarvis post, 'Lumina "
+            "Generation 2 is alive,' is Dr. Tali's own small proof that shipping something real beats "
+            "promising it."
+        ),
+        "question": (
+            "Chapter 13 argues the fix for agent-to-agent trust has to be built before the agents arrive, "
+            "not after the first failure — and the Cotrugli Ledger proposal is already running across six EU "
+            "countries and 140,000 real users to prove it. What is the one 'truth layer' your own tribe's "
+            "work is currently missing — the audit trail you'd wish you had built if an outside party asked "
+            "to verify your last 90 days today?"
+        ),
+        "model_answer": (
+            "The uncomfortable parallel Chapter 13 draws: institutions currently ask people to simply trust "
+            "that a transaction happened correctly, exactly the same ask that failed at Wells Fargo and FTX "
+            "in Chapter 12 — except now at machine speed, with no human in the loop to even notice the gap. "
+            "The Cotrugli Ledger's answer is not a policy, it is verifiable infrastructure, already tested on "
+            "140,000 real users precisely so nobody has to just take its word for it. Anthropic is about to "
+            "face its own version of this test in public markets, where a $2 trillion valuation will be "
+            "underwritten by the same audited trust the chapter is arguing for. The Vanguard move: don't wait "
+            "to be asked to prove your last 90 days — build the ledger now, the way Dr. Tali just shipped "
+            "Lumina Generation 2 instead of just talking about shipping it."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4910,8 +4945,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Code's auto mode became the default permission model for Pro, Max and Team plans on 14 August — in testing across 1,053 paid users, its classifier caught 89% of dangerous commands versus just 13.6% for manual review",
-    "source": "Anthropic",
+    "headline": "Anthropic's annualized revenue run-rate surpassed $65 billion in July, with investors projecting $100-120 billion by year-end as it targets a $2 trillion IPO valuation — expected as soon as this fall, ahead of OpenAI",
+    "source": "Bloomberg",
 }
 
 JTBD_STATUS = (

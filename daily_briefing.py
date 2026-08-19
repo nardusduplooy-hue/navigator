@@ -150,6 +150,7 @@ def build_briefing():
         "2026-08-17": {"quote": "\U0001f4c4 <b>AI Usage</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489571870879555584/"},
         "2026-08-18": {"quote": "\U0001f4c4 <b>The Mixed Fleet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495071662321729536/"},
         "2026-08-19": {"quote": "\U0001f4c4 <b>Plan the Handover before you need it</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495432259152482304/"},
+        "2026-08-20": {"quote": "\U0001f4c4 <b>Lumina Generation 2 is alive</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495766057513680898/"},
     }
 
     lines = []
@@ -234,6 +235,7 @@ def build_briefing():
         "2026-08-17": "Hundreds of uncoordinated COVID vaccine teams beat a decade-long timeline through shared urgency and open trust — no central authority required. Does your tribe have that same shared context, or just the same shared goal?",
         "2026-08-18": "Two decades of teaching produced one hard lesson: leaders who agreed with every principle and changed nothing within weeks were the norm, not the exception. What specific, measurable correction has your tribe actually committed to — not agreed with, committed to — in the last 90 days?",
         "2026-08-19": "FTX built a $32 billion valuation on deception and lost every cent of it in ten days. Wells Fargo is still recovering, years later, from a scandal that took weeks to detonate. Trust takes years to build and days to destroy — what is your tribe doing this week that it could not survive being found out?",
+        "2026-08-20": "By 2029, a material share of economic transactions won't be initiated by humans at all — agent to agent, at machine speed, with no shared truth layer to verify what actually happened. The fix being tested right now spans six EU countries and 140,000 real users, built on 15th-century trust principles. Is your tribe building its audit trail before it's needed, or scrambling for one after?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -293,6 +295,11 @@ def build_briefing():
                 lines.append("")
                 lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
                 lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
+                if date_key >= "2026-08-20":
+                    lines.append("<a href='https://stream.redcircle.com/episodes/c2e8c019-1445-4fa8-9061-d936a527c67d/stream.mp3'>\u2192 Networks and Netwars podcast</a>")
+                    lines.append("<a href='https://stream.redcircle.com/episodes/d308978d-5e2e-4077-956c-cb601e6470f6/stream.mp3'>\u2192 Center of Gravity for Joint Doctrine podcast</a>")
+                    lines.append("<a href='https://stream.redcircle.com/episodes/50315810-b51e-4a95-9d39-b6d3db1071f9/stream.mp3'>\u2192 Hybrid Warfare podcast</a>")
+                    lines.append("<a href='https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3'>\u2192 Composite Warfare podcast</a>")
                 if date_key >= "2026-08-04":
                     lines.append("")
                     lines.append("\U0001f4e1 <b>BAW Capstone — Daily Intelligence Sweep</b>")
