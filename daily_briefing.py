@@ -151,6 +151,7 @@ def build_briefing():
         "2026-08-18": {"quote": "\U0001f4c4 <b>The Mixed Fleet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495071662321729536/"},
         "2026-08-19": {"quote": "\U0001f4c4 <b>Plan the Handover before you need it</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495432259152482304/"},
         "2026-08-20": {"quote": "\U0001f4c4 <b>Lumina Generation 2 is alive</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495766057513680898/"},
+        "2026-08-21": {"quote": "\U0001f4c4 <b>Context is King</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/"},
     }
 
     lines = []
@@ -236,6 +237,7 @@ def build_briefing():
         "2026-08-18": "Two decades of teaching produced one hard lesson: leaders who agreed with every principle and changed nothing within weeks were the norm, not the exception. What specific, measurable correction has your tribe actually committed to — not agreed with, committed to — in the last 90 days?",
         "2026-08-19": "FTX built a $32 billion valuation on deception and lost every cent of it in ten days. Wells Fargo is still recovering, years later, from a scandal that took weeks to detonate. Trust takes years to build and days to destroy — what is your tribe doing this week that it could not survive being found out?",
         "2026-08-20": "By 2029, a material share of economic transactions won't be initiated by humans at all — agent to agent, at machine speed, with no shared truth layer to verify what actually happened. The fix being tested right now spans six EU countries and 140,000 real users, built on 15th-century trust principles. Is your tribe building its audit trail before it's needed, or scrambling for one after?",
+        "2026-08-21": "Nobody would notice if you quietly let one invisible standard slip this week — no client would see it, no report would catch it. Shokunin philosophy says hold it anyway, precisely because nobody's checking. What's the one standard in your tribe's work that only exists because you decided it does?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

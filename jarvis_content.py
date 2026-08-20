@@ -2365,6 +2365,38 @@ TALI_STEPS = {
             "Lumina Generation 2 instead of just talking about shipping it."
         ),
     },
+    "2026-08-21": {
+        "step": "Business as Craft & Shokunin — Hold the One Standard Nobody Would Notice",
+        "title": "The Standard Nobody's Checking",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/",
+        "focus": (
+            "This week's Chapter 1 exercise is disarmingly simple: name one standard in your work that "
+            "nobody would ever notice if you quietly dropped it, then hold it anyway, precisely because "
+            "nobody's checking — that is the actual muscle Shokunin philosophy is describing. Today's AI "
+            "News runs the same discipline through a market lens: TrueFoundry's open source TrueForge harness "
+            "claims 30-75% cheaper task completion than Claude Managed Agents, a reminder that unglamorous "
+            "efficiency work nobody applauds is exactly where real margin gets built. Today's Chasing Jarvis "
+            "post, 'Context is King,' makes the same case for your own agent build — the invisible discipline "
+            "of good context, not the visible demo, is what actually determines whether it works."
+        ),
+        "question": (
+            "This week's exercise asks you to name one standard in your work that nobody would ever notice "
+            "if you quietly let it slip — not a client-facing one, an invisible one — and then hold it "
+            "anyway, precisely because nobody's checking. What is that one standard for you, and what would "
+            "it cost you personally, not professionally, to keep holding it this week?"
+        ),
+        "model_answer": (
+            "The diagnostic embedded in Shokunin philosophy is that visible standards are enforced by other "
+            "people watching, which means they were never really yours — they were compliance. An invisible "
+            "standard, the one nobody would catch you dropping, is the only kind that reveals what you "
+            "actually believe about your own work. TrueForge's cost claim against Claude Managed Agents is a "
+            "small version of the same test: cheaper task completion is only a real advantage if the quality "
+            "holds when nobody's benchmarking it side by side. Dr. Tali's 'Context is King' post makes the "
+            "same point about agent context — the discipline that's easiest to skip is usually the one doing "
+            "the most invisible work. The Vanguard move this week: pick the one standard you'd be most "
+            "tempted to let slip, and hold it anyway, on purpose."
+        ),
+    },
     "2026-07-30": {
         "step": "The NEO Era Battlefield — Exponential vs Linear",
         "title": "The Standard That Snuck Up on Everyone",
@@ -4945,8 +4977,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's annualized revenue run-rate surpassed $65 billion in July, with investors projecting $100-120 billion by year-end as it targets a $2 trillion IPO valuation — expected as soon as this fall, ahead of OpenAI",
-    "source": "Bloomberg",
+    "headline": "TrueFoundry's open source AI agent harness TrueForge boasts 30%-75% cheaper task completion than Claude Managed Agents",
+    "source": "VentureBeat AI",
 }
 
 JTBD_STATUS = (
