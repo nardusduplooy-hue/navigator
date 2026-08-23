@@ -1089,10 +1089,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-08-24": {
-        "title": "Run Your Biggest Decision This Week Through All Five Axioms, in Writing",
-        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "title": "Score Your Reputational Capital — With an Actual List of 50 Names",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
         "summary": (
-            "Pick your most significant decision this week and run it through all five axioms explicitly, in writing: does this forge the essence I want? Does it build or spend reputational capital? Does it demonstrate honesty, reliability, prudence? Is the time horizon decades or quarters? Is it positive-sum or zero-sum? If any answer makes you uncomfortable, that's the signal worth acting on."
+            "Run the reputational capital calculation this week: list 50 people who know your work well. Score each relationship — strong trust (+3), neutral (0), damaged trust (-5). Add it up. Then ask the harder question: of your \"strong trust\" relationships, how many would actually refer you their most important client, or invest their own money in your venture? That's the real number."
         ),
     },
     "2026-08-25": {
@@ -2395,6 +2395,41 @@ TALI_STEPS = {
             "same point about agent context — the discipline that's easiest to skip is usually the one doing "
             "the most invisible work. The Vanguard move this week: pick the one standard you'd be most "
             "tempted to let slip, and hold it anyway, on purpose."
+        ),
+    },
+    "2026-08-24": {
+        "step": "The Perfect Merchant for the NEO Era — Score Your Reputational Capital",
+        "title": "The Number That Actually Counts",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/",
+        "focus": (
+            "This week's Chapter 3 exercise asks for a real list, not a feeling: 50 names, each scored "
+            "strong trust (+3), neutral (0), or damaged trust (-5), followed by the harder question — of "
+            "the 'strong trust' names, how many would actually refer their most important client or invest "
+            "their own money in your venture? That smaller number is the real one. Today's AI News is the "
+            "same discipline at company scale: rather than just claiming its models are trustworthy for "
+            "cyber defense, Anthropic backed the claim with a $35 million Defender Advantage Fund and wider "
+            "access to Claude Mythos 5's actual results — capital and evidence, not just reassurance. Today's "
+            "Chasing Jarvis post, 'Context is King,' carries forward: the discipline nobody sees is usually "
+            "the one that decides whether the thing actually works."
+        ),
+        "question": (
+            "Chapter 3 asks you to list 50 people who know your work well, score each relationship — strong "
+            "trust (+3), neutral (0), damaged trust (-5) — and then ask the harder question: of your "
+            "'strong trust' names, how many would actually refer you their most important client, or invest "
+            "their own money in your venture? Run that number now. What does it tell you that your gut "
+            "estimate didn't?"
+        ),
+        "model_answer": (
+            "The uncomfortable gap Chapter 3 is designed to expose is between how many people you'd casually "
+            "call 'strong trust' and how many would actually put their own money or their most important "
+            "client on the line for you — the second number is almost always smaller, and it's the only one "
+            "that counts. Anthropic's own $35 million Defender Advantage Fund makes the same distinction at "
+            "scale: goodwill toward open-source security isn't enough on its own, so the company backed it "
+            "with capital that can be verified and audited, exactly the kind of 'put your money where your "
+            "reputation is' move Chapter 3 is asking you to make personally. The Vanguard move: don't just "
+            "list the 50 names — call the three people you scored highest and ask them directly whether "
+            "they'd actually make that referral or that investment. Their answer, not your assumption, is "
+            "your real reputational capital."
         ),
     },
     "2026-07-30": {
@@ -4977,8 +5012,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "TrueFoundry's open source AI agent harness TrueForge boasts 30%-75% cheaper task completion than Claude Managed Agents",
-    "source": "VentureBeat AI",
+    "headline": "Anthropic made Claude Mythos 5 available in Claude Security and to partners' cyber defense tools on 21 August, alongside a $35 million Defender Advantage Fund to help secure open-source software",
+    "source": "Anthropic",
 }
 
 JTBD_STATUS = (
