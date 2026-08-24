@@ -153,6 +153,7 @@ def build_briefing():
         "2026-08-20": {"quote": "\U0001f4c4 <b>Lumina Generation 2 is alive</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7495766057513680898/"},
         "2026-08-21": {"quote": "\U0001f4c4 <b>Context is King</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/"},
         "2026-08-24": {"quote": "\U0001f4c4 <b>Context is King</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/"},
+        "2026-08-25": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
     }
 
     lines = []
@@ -240,6 +241,7 @@ def build_briefing():
         "2026-08-20": "By 2029, a material share of economic transactions won't be initiated by humans at all — agent to agent, at machine speed, with no shared truth layer to verify what actually happened. The fix being tested right now spans six EU countries and 140,000 real users, built on 15th-century trust principles. Is your tribe building its audit trail before it's needed, or scrambling for one after?",
         "2026-08-21": "Nobody would notice if you quietly let one invisible standard slip this week — no client would see it, no report would catch it. Shokunin philosophy says hold it anyway, precisely because nobody's checking. What's the one standard in your tribe's work that only exists because you decided it does?",
         "2026-08-24": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
+        "2026-08-25": "This week, take your single biggest pending decision and run it through all five axioms in writing — essence, reputational capital, honesty/reliability/prudence, decades vs quarters, positive-sum vs zero-sum. If any answer makes you flinch, that's the one to act on. What decision is your tribe currently avoiding writing down?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

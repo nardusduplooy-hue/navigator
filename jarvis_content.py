@@ -1096,10 +1096,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-08-25": {
-        "title": "Name Three Exponential Trends — Then Write Down Where They Land in Three Years",
-        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "title": "Run Your Biggest Decision This Week Through All Five Axioms, in Writing",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
         "summary": (
-            "This week's exercise: name three specific things in your industry currently growing exponentially, not linearly. For each one, write down what \"the second half of the chessboard\" looks like if the trend continues unchanged for three more years. Most leaders discover they've been mentally modeling an exponential trend as a merely linear one — and that gap is where the blindside comes from."
+            "Pick your most significant decision this week and run it through all five axioms explicitly, in writing: does this forge the essence I want? Does it build or spend reputational capital? Does it demonstrate honesty, reliability, prudence? Is the time horizon decades or quarters? Is it positive-sum or zero-sum? If any answer makes you uncomfortable, that's the signal worth acting on."
         ),
     },
     "2026-08-26": {
@@ -2430,6 +2430,38 @@ TALI_STEPS = {
             "list the 50 names — call the three people you scored highest and ask them directly whether "
             "they'd actually make that referral or that investment. Their answer, not your assumption, is "
             "your real reputational capital."
+        ),
+    },
+    "2026-08-25": {
+        "step": "NEO Cotruglian Philosophy (5 Axioms) — Run Your Biggest Decision Through All Five",
+        "title": "Write It Down, All Five",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/",
+        "focus": (
+            "Chapter 4's exercise refuses to let a decision stay comfortable and vague: pick the biggest "
+            "one on your plate this week and run it through all five axioms explicitly, in writing — "
+            "essence, reputational capital, honesty/reliability/prudence, time horizon, positive-sum or "
+            "zero-sum. Today's AI News is the same discipline applied to a tool: Claude Code's new '/design' "
+            "preview doesn't just generate a UI, it makes you choose, in writing, which draft you actually "
+            "want implemented — the choosing is the point, not just having options. Today's Chasing Jarvis "
+            "post, 'Field Notes is live,' is Dr. Tali doing exactly what this chapter asks: writing the "
+            "decision down in public instead of leaving it as an intention."
+        ),
+        "question": (
+            "Chapter 4 asks you to pick your single most significant decision this week and run it through "
+            "all five axioms explicitly, in writing: does it forge the essence you want? Build or spend "
+            "reputational capital? Demonstrate honesty, reliability, prudence? Play out over decades or "
+            "quarters? Create value together or extract from one side? Do it now — which axiom gave you the "
+            "most uncomfortable answer, and why?"
+        ),
+        "model_answer": (
+            "The exercise is designed so that vague good intentions can't survive contact with five specific "
+            "written questions — a decision that 'feels right' often reveals under the five axioms that it "
+            "spends reputational capital for a short-term win, or optimizes for this quarter instead of the "
+            "next decade. Claude Code's new '/design' preview enforces the same discipline mechanically: it "
+            "won't let you keep every draft, it makes you write down which one you're committing to build. "
+            "Dr. Tali's 'Field Notes is live' post is the same principle in public — a decision recorded, not "
+            "just held as an intention. The Vanguard move: don't just run the five axioms in your head, "
+            "write down the answers where you can be held to them."
         ),
     },
     "2026-07-30": {
@@ -5000,9 +5032,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7494672937141121024/",
-    "title": "How Hundreds of Uncoordinated Research Teams Beat a Decade-Long Timeline",
-    "description": "Kapusta's post, tied to Chapter 10 (Tribe as Coordination) \u2014 link confirmed directly by Nardus.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496654047446347776/",
+    "title": "New Module at Cotrugli Business School",
+    "description": "Kapusta's post announcing a new module at Cotrugli Business School \u2014 link confirmed directly by Nardus.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -5012,7 +5044,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic made Claude Mythos 5 available in Claude Security and to partners' cyber defense tools on 21 August, alongside a $35 million Defender Advantage Fund to help secure open-source software",
+    "headline": "Claude Code shipped a research preview of '/design' this past week, bringing Claude Design's artboard workflow into the CLI and Desktop — Claude drafts editable UI artboards and implements the one you pick",
     "source": "Anthropic",
 }
 
