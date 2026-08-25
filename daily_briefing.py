@@ -154,6 +154,7 @@ def build_briefing():
         "2026-08-21": {"quote": "\U0001f4c4 <b>Context is King</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/"},
         "2026-08-24": {"quote": "\U0001f4c4 <b>Context is King</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/"},
         "2026-08-25": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
+        "2026-08-26": {"quote": "\U0001f4c4 <b>Months of Building The Curator in the Open</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498015327465754624/"},
     }
 
     lines = []
@@ -242,6 +243,7 @@ def build_briefing():
         "2026-08-21": "Nobody would notice if you quietly let one invisible standard slip this week — no client would see it, no report would catch it. Shokunin philosophy says hold it anyway, precisely because nobody's checking. What's the one standard in your tribe's work that only exists because you decided it does?",
         "2026-08-24": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
         "2026-08-25": "This week, take your single biggest pending decision and run it through all five axioms in writing — essence, reputational capital, honesty/reliability/prudence, decades vs quarters, positive-sum vs zero-sum. If any answer makes you flinch, that's the one to act on. What decision is your tribe currently avoiding writing down?",
+        "2026-08-26": "Exponential change doesn't announce itself — it just compounds quietly until the linear forecast is wrong by an order of magnitude. Name the one trend in your tribe's world you're still tracking on a straight line. What does it actually look like three years from now if the curve holds?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -679,6 +681,12 @@ def build_briefing():
             cj_source = cj_rc.get("source", "LinkedIn")
             lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on " + cj_source + "</a>")
             lines.append("")
+            # EXTRA CJ POST — 26 Aug: Nardus flagged this as an additional post on top of
+            # the one already in the 25 Aug briefing (Field Notes is live), not a replacement
+            if date_key == "2026-08-26":
+                lines.append("\U0001f4c4 <b>Field Notes is live.</b>")
+                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/'>→ Dr. Tali Režun on LinkedIn</a>")
+                lines.append("")
             # VANGUARD SPRINT PROGRAMME — Sprint 3 from 8 July, Sprint 4 from 17 Aug onwards
             if "2026-07-08" <= date_key < "2026-08-17":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
@@ -786,8 +794,9 @@ def build_briefing():
         lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
         lines.append("")
 
-    # STUDENT LINKEDIN ARTICLES — from 2 July, removed from 18 Aug onward per Nardus
-    if "2026-07-02" <= date_key < "2026-08-18":
+    # STUDENT LINKEDIN ARTICLES — from 2 July, removed from 18 Aug onward per Nardus;
+    # one-off re-activation for 26 Aug per Nardus's explicit new post for that day
+    if ("2026-07-02" <= date_key < "2026-08-18") or date_key == "2026-08-26":
         lines.append("\U0001f4f0 <b>STUDENT LINKEDIN POSTS</b>")
         lines.append("")
         if date_key < "2026-07-06":
@@ -828,9 +837,13 @@ def build_briefing():
             lines.append("\U0001f4cc <b>Business Coaching</b> — Anena Sharon")
             lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7489591041701044224/'>→ Read on LinkedIn</a>")
             lines.append("")
-        if date_key >= "2026-08-04":
+        if date_key >= "2026-08-04" and date_key < "2026-08-18":
             lines.append("\U0001f4cc <b>Chasing Jarvis</b> — Matthys van Rooyen")
             lines.append("<a href='https://www.linkedin.com/pulse/wolf-guards-sheep-matthys-van-rooyen-s1mcf/'>→ Read on LinkedIn</a>")
+            lines.append("")
+        if date_key == "2026-08-26":
+            lines.append("\U0001f4cc <b>Growth breaks whatever wasn't real</b> — Anena Sharon")
+            lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7498010848435785728/'>→ Read on LinkedIn</a>")
             lines.append("")
         lines.append("")
 

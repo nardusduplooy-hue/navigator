@@ -1103,10 +1103,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-08-26": {
-        "title": "Time-Audit Your Last Decision: Where Did Observe-Orient-Decide-Act Actually Go?",
-        "chapter": "Chapter 6: Business as Warfare",
+        "title": "Name Three Exponential Trends — Then Write Down Where They Land in Three Years",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
         "summary": (
-            "Audit your last significant decision through the OODA lens: how long from Observe (you noticed something mattered) to Act (you did something about it)? Break down where the time actually went — was it gathering more information, or was it waiting for approval? Most delay lives in Orient and Decide, not Observe. That's where to intervene first."
+            "Building on the earlier exercise, don't stop at naming three things growing exponentially in your industry — write down, specifically, where each one lands three years from now if the current curve holds. Most leaders can describe the trend. Almost none have written down the specific, falsifiable consequence three years out — which is exactly why the disruption still feels sudden when it arrives on schedule."
         ),
     },
     "2026-08-27": {
@@ -2462,6 +2462,39 @@ TALI_STEPS = {
             "Dr. Tali's 'Field Notes is live' post is the same principle in public — a decision recorded, not "
             "just held as an intention. The Vanguard move: don't just run the five axioms in your head, "
             "write down the answers where you can be held to them."
+        ),
+    },
+    "2026-08-26": {
+        "step": "The NEO Era Battlefield — Name the Trend, Then Name the Year",
+        "title": "Three Years Out, Not Just Three Trends",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498015327465754624/",
+        "focus": (
+            "Chapter 5 pushes last month's exercise one step further: naming three things growing "
+            "exponentially in your industry is only half the discipline — the harder half is writing down "
+            "specifically where each one lands three years from now if the current curve holds, so the "
+            "prediction can actually be checked later instead of quietly forgotten. Today's AI News is a "
+            "live example of that same curve: Anthropic's Claude Tag update now lets its Slack agent read "
+            "the full conversation and jump in unprompted, a small jump from 'assistant you summon' to "
+            "'agent that decides when to act' that looked linear right up until it wasn't. Today's Chasing "
+            "Jarvis post, 'Months of Building The Curator in the Open,' is Dr. Tali's own exponential curve "
+            "made visible — months of unglamorous, compounding work nobody saw until it was undeniable."
+        ),
+        "question": (
+            "Chapter 5 asks you to name three things growing exponentially in your industry right now — but "
+            "don't stop there. For each one, write down specifically where it lands three years from now if "
+            "the current curve holds. Which of the three, written out like that, worries you the most?"
+        ),
+        "model_answer": (
+            "The trap Chapter 5 is naming is that exponential change looks like linear change for the first "
+            "two years, so a trend that's actually compounding gets mentally filed as 'slow and manageable' "
+            "right up until it isn't — the fix is forcing a specific, falsifiable three-year number onto the "
+            "page instead of a vague sense that 'this is growing.' Claude Tag's shift from a tool you summon "
+            "to an agent that reads the room and jumps in unprompted is exactly that kind of quiet compounding "
+            "— each update looks incremental until the category itself has changed. Dr. Tali's 'Months of "
+            "Building The Curator in the Open' post is the other side of the same curve: unglamorous, "
+            "compounding effort that only becomes visible as a result once enough months stack up. The "
+            "Vanguard move: pick your most uncomfortable three-year number and start building toward it now, "
+            "while it still looks optional."
         ),
     },
     "2026-07-30": {
@@ -5044,8 +5077,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Claude Code shipped a research preview of '/design' this past week, bringing Claude Design's artboard workflow into the CLI and Desktop — Claude drafts editable UI artboards and implements the one you pick",
-    "source": "Anthropic",
+    "headline": "Anthropic's new Claude Tag update lets its Slack agent read the full conversation — and jump in unprompted",
+    "source": "VentureBeat AI",
 }
 
 JTBD_STATUS = (
