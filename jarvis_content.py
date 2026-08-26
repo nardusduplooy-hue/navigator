@@ -1110,10 +1110,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-08-27": {
-        "title": "The “Would I Decide This Again” Test, Run on Three Real Decisions",
-        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "title": "Time-Audit Your Last Decision: Where Did Observe-Orient-Decide-Act Actually Go?",
+        "chapter": "Chapter 6: Business as Warfare",
         "summary": (
-            "This week, apply the \"would I decide this again\" test to three decisions from the last quarter where you compromised something — a commitment, a standard, a promise — because circumstances seemed to demand it. For each one, honestly ask: same information, same pressure, same call? Where the answer is no, that's your actual development priority, not a vague resolution to \"do better.\""
+            "Audit your last significant decision through the OODA lens: how long from Observe (you noticed something mattered) to Act (you did something about it)? Break down where the time actually went — was it gathering more information, or was it waiting for approval? Most delay lives in Orient and Decide, not Observe. That's where to intervene first."
         ),
     },
     "2026-08-28": {
@@ -2495,6 +2495,38 @@ TALI_STEPS = {
             "compounding effort that only becomes visible as a result once enough months stack up. The "
             "Vanguard move: pick your most uncomfortable three-year number and start building toward it now, "
             "while it still looks optional."
+        ),
+    },
+    "2026-08-27": {
+        "step": "Business as Warfare — Time-Audit Your Own OODA Loop",
+        "title": "Where the Clock Actually Ran",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/",
+        "focus": (
+            "Chapter 6 turns the OODA loop into an audit tool: pick your last significant decision and clock "
+            "exactly how long it took from Observe (you noticed something mattered) to Act (you actually did "
+            "something) — then break down where the time really went. Today's AI News shows the same "
+            "discipline moving from personal habit to industry standard: Google Cloud's new agent security "
+            "guidance calls for platform-level governance, task-level provenance, and human-in-the-loop "
+            "checks precisely so every autonomous action can be audited after the fact, not just trusted on "
+            "faith. Today's Chasing Jarvis post, 'Talk to Lumina about Lumina,' is Dr. Tali's own version of "
+            "that transparency — letting the product explain its own decisions directly, in the open."
+        ),
+        "question": (
+            "Chapter 6 asks you to time-audit your last significant decision through the OODA lens — how "
+            "long from Observe to Act, and where did the delay actually live? Run the audit now. Was the "
+            "bottleneck gathering more information, or was it waiting for someone else's approval?"
+        ),
+        "model_answer": (
+            "The diagnostic Chapter 6 is running is that most leaders assume their decisions are slow because "
+            "they're still gathering information, when the audit usually finds the real delay sitting in "
+            "Orient and Decide — turning information into a judgment, then working up the nerve to commit to "
+            "it. Google Cloud's new agent security guidance is built on exactly that assumption at machine "
+            "scale: without task-level provenance and human-in-the-loop checkpoints, nobody can actually tell "
+            "where an autonomous decision's clock ran, only that it eventually acted. Dr. Tali's 'Talk to "
+            "Lumina about Lumina' post applies the same principle to a product — let the thing explain its "
+            "own reasoning instead of asking people to just trust the output. The Vanguard move: don't "
+            "estimate where your last decision's time went — audit it, stage by stage, and find the one "
+            "stage you can compress this week."
         ),
     },
     "2026-07-30": {
@@ -5065,9 +5097,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496654047446347776/",
-    "title": "New Module at Cotrugli Business School",
-    "description": "Kapusta's post announcing a new module at Cotrugli Business School \u2014 link confirmed directly by Nardus.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497870713085751296/",
+    "title": "Dra\u017een Kapusta \u2014 latest LinkedIn post",
+    "description": "New URL given directly by Nardus for 27 Aug; post content not independently verifiable (LinkedIn access restricted), but only the URL is rendered in the briefing/caption so this does not affect reader-facing text.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -5077,8 +5109,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic's new Claude Tag update lets its Slack agent read the full conversation — and jump in unprompted",
-    "source": "VentureBeat AI",
+    "headline": "Google Cloud published new agent security guidance, calling for platform-level governance, task-level provenance, and human-in-the-loop checks to scale autonomous workflows safely",
+    "source": "Google Cloud",
 }
 
 JTBD_STATUS = (

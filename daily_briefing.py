@@ -155,6 +155,7 @@ def build_briefing():
         "2026-08-24": {"quote": "\U0001f4c4 <b>Context is King</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7496135285534138369/"},
         "2026-08-25": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
         "2026-08-26": {"quote": "\U0001f4c4 <b>Months of Building The Curator in the Open</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498015327465754624/"},
+        "2026-08-27": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
     }
 
     lines = []
@@ -244,6 +245,7 @@ def build_briefing():
         "2026-08-24": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
         "2026-08-25": "This week, take your single biggest pending decision and run it through all five axioms in writing — essence, reputational capital, honesty/reliability/prudence, decades vs quarters, positive-sum vs zero-sum. If any answer makes you flinch, that's the one to act on. What decision is your tribe currently avoiding writing down?",
         "2026-08-26": "Exponential change doesn't announce itself — it just compounds quietly until the linear forecast is wrong by an order of magnitude. Name the one trend in your tribe's world you're still tracking on a straight line. What does it actually look like three years from now if the curve holds?",
+        "2026-08-27": "Every decision has an Observe-to-Act clock running whether you track it or not. Time-audit your last real call this week — how much of the delay was actually gathering information, and how much was just waiting for someone's approval? That gap is where you get faster.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -681,9 +683,10 @@ def build_briefing():
             cj_source = cj_rc.get("source", "LinkedIn")
             lines.append("<a href='" + cj_rc["url"] + "'>→ Dr. Tali Režun on " + cj_source + "</a>")
             lines.append("")
-            # EXTRA CJ POST — 26 Aug: Nardus flagged this as an additional post on top of
-            # the one already in the 25 Aug briefing (Field Notes is live), not a replacement
-            if date_key == "2026-08-26":
+            # EXTRA CJ POST — Nardus flagged this as an additional post that should keep
+            # appearing on top of that day's primary CJ post, not replace it. First added
+            # for 26 Aug, extended to 27 Aug on his explicit "keep it as well" instruction.
+            if date_key in ("2026-08-26", "2026-08-27"):
                 lines.append("\U0001f4c4 <b>Field Notes is live.</b>")
                 lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/'>→ Dr. Tali Režun on LinkedIn</a>")
                 lines.append("")
