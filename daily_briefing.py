@@ -10,6 +10,7 @@ from jarvis_content import (
     TOOL_SPOTLIGHT,
     KAPUSTA_TODAY,
     AI_NEWS_TODAY,
+    AI_NEWS_OVERRIDE,
     JTBD_STATUS,
     MODULE3_ARTICLES,
     VANGUARD_SUMMARIES,
@@ -86,6 +87,10 @@ def send_message(chat_id, text):
 
 
 def fetch_ai_news():
+    date_key = today_str()
+    if date_key in AI_NEWS_OVERRIDE:
+        override = AI_NEWS_OVERRIDE[date_key]
+        return {"headline": override["headline"], "url": override.get("url", ""), "source": override["source"]}
     REQUIRE_KEYWORDS = ["anthropic", "claude"]
     EXCLUDE_KEYWORDS = ["attack", "vulnerability", "exploit", "breach", "hack", "malware", "ransomware", "jailbreak", "turned every engineer into three", "two-thirds had already built their hedge", "internal reasoning is more deceptive", "grok", "sabotaged each other"]
     try:
@@ -156,6 +161,7 @@ def build_briefing():
         "2026-08-25": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
         "2026-08-26": {"quote": "\U0001f4c4 <b>Months of Building The Curator in the Open</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498015327465754624/"},
         "2026-08-27": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
+        "2026-08-28": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
     }
 
     lines = []
@@ -246,6 +252,7 @@ def build_briefing():
         "2026-08-25": "This week, take your single biggest pending decision and run it through all five axioms in writing — essence, reputational capital, honesty/reliability/prudence, decades vs quarters, positive-sum vs zero-sum. If any answer makes you flinch, that's the one to act on. What decision is your tribe currently avoiding writing down?",
         "2026-08-26": "Exponential change doesn't announce itself — it just compounds quietly until the linear forecast is wrong by an order of magnitude. Name the one trend in your tribe's world you're still tracking on a straight line. What does it actually look like three years from now if the curve holds?",
         "2026-08-27": "Every decision has an Observe-to-Act clock running whether you track it or not. Time-audit your last real call this week — how much of the delay was actually gathering information, and how much was just waiting for someone's approval? That gap is where you get faster.",
+        "2026-08-28": "Pick three decisions from this quarter where you compromised something — a promise, a standard — because circumstances seemed to demand it. For each, ask plainly: same information, same pressure, same call? Where the answer is no, that's not a stumble to explain away. What's the one decision your tribe would make differently if it had to answer that question in public?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -686,7 +693,7 @@ def build_briefing():
             # EXTRA CJ POST — Nardus flagged this as an additional post that should keep
             # appearing on top of that day's primary CJ post, not replace it. First added
             # for 26 Aug, extended to 27 Aug on his explicit "keep it as well" instruction.
-            if date_key in ("2026-08-26", "2026-08-27"):
+            if date_key in ("2026-08-26", "2026-08-27", "2026-08-28"):
                 lines.append("\U0001f4c4 <b>Field Notes is live.</b>")
                 lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/'>→ Dr. Tali Režun on LinkedIn</a>")
                 lines.append("")

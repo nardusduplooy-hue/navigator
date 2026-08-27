@@ -1117,10 +1117,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-08-28": {
-        "title": "Next Time Fear Shows Up, Walk the Six Steps Instead of Reacting",
-        "chapter": "Chapter 8: Fear as Data",
+        "title": "The “Would I Decide This Again” Test, Run on Three Real Decisions",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
         "summary": (
-            "Next time you feel fear activate before a real decision, walk the six-step framework deliberately: name it out loud. Identify which pattern it is (existential, reputational, control, inadequacy). Separate the specific threat from the vague catastrophizing. Generate three options, not one. Commit to a decision with 40-60% information. Then, afterward, extract what it taught you."
+            "This week, apply the \"would I decide this again\" test to three decisions from the last quarter where you compromised something — a commitment, a standard, a promise — because circumstances seemed to demand it. For each one, honestly ask: same information, same pressure, same call? Where the answer is no, that's your actual development priority, not a vague resolution to \"do better.\""
         ),
     },
     "2026-08-29": {
@@ -2527,6 +2527,39 @@ TALI_STEPS = {
             "own reasoning instead of asking people to just trust the output. The Vanguard move: don't "
             "estimate where your last decision's time went — audit it, stage by stage, and find the one "
             "stage you can compress this week."
+        ),
+    },
+    "2026-08-28": {
+        "step": "The NEO Leadership Challenge — The Would-I-Decide-This-Again Test",
+        "title": "Three Decisions, Run Again",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/",
+        "focus": (
+            "Chapter 7 turns self-audit into a specific test: pick three decisions from this quarter where "
+            "you compromised something — a promise, a standard — because circumstances seemed to demand it, "
+            "then ask plainly whether you'd make the same call again with the same information and the same "
+            "pressure. Today's AI News is the same test applied to enterprise identity: Okta's new Agent SSO "
+            "replaces hardcoded credentials with short-lived tokens because the old decision — 'trust the "
+            "agent with a permanent key' — wouldn't survive being asked again now that agents act at scale. "
+            "Today's Chasing Jarvis post, 'Talk to Lumina about Lumina,' keeps running as Dr. Tali's own "
+            "version of a decision she'd clearly make again: let the product answer for itself."
+        ),
+        "question": (
+            "Chapter 7 asks you to pick three decisions from this quarter where you compromised something — "
+            "a promise, a standard — because circumstances seemed to demand it, then run the test: same "
+            "information, same pressure, would you decide it again? Which of the three fails the test, and "
+            "what does that tell you about the pressure that produced it?"
+        ),
+        "model_answer": (
+            "The test in Chapter 7 is deliberately narrow — not 'was it defensible at the time' but 'would "
+            "you choose it again knowing only what you knew then' — because most compromises survive the "
+            "first question and fail the second. Okta's new Agent SSO is the same logic at infrastructure "
+            "scale: hardcoded credentials made sense when only humans logged in occasionally, and the moment "
+            "agents started logging in constantly, the industry chose to replace that decision with "
+            "short-lived tokens rather than defend it out of habit. Dr. Tali's 'Talk to Lumina about Lumina' "
+            "post, still running days later, is the opposite case — a decision that keeps passing the test, "
+            "which is exactly why it's still visible. The Vanguard move: run the test on your three "
+            "decisions honestly, and treat the one that fails as your actual priority, not a footnote to "
+            "explain away."
         ),
     },
     "2026-07-30": {
@@ -5109,8 +5142,21 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google Cloud published new agent security guidance, calling for platform-level governance, task-level provenance, and human-in-the-loop checks to scale autonomous workflows safely",
-    "source": "Google Cloud",
+    "headline": "Okta rolls out Agent SSO so AI agents can log in like employees — with short-lived tokens instead of hardcoded credentials",
+    "source": "Okta",
+}
+
+# AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
+# fetch in daily_briefing.py's fetch_ai_news(). Added 28 Aug 2026 after the live
+# feed kept returning the same Anthropic/Claude-matching story two days running,
+# silently overriding hand-picked AI_NEWS_TODAY content. Use this whenever a
+# specific date's story must not be swapped out by the live fetch.
+AI_NEWS_OVERRIDE = {
+    "2026-08-28": {
+        "headline": "Okta rolls out Agent SSO so AI agents can log in like employees — with short-lived tokens instead of hardcoded credentials",
+        "source": "Okta",
+        "url": "https://www.okta.com/newsroom/press-releases/okta-brings-first-class-identity-to-ai-agents-with-agent-sso/",
+    },
 }
 
 JTBD_STATUS = (
