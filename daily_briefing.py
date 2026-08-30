@@ -162,6 +162,7 @@ def build_briefing():
         "2026-08-26": {"quote": "\U0001f4c4 <b>Months of Building The Curator in the Open</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498015327465754624/"},
         "2026-08-27": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
         "2026-08-28": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
+        "2026-08-31": {"quote": "\U0001f4c4 <b>Using AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499035108419469312/"},
     }
 
     lines = []
@@ -253,6 +254,7 @@ def build_briefing():
         "2026-08-26": "Exponential change doesn't announce itself — it just compounds quietly until the linear forecast is wrong by an order of magnitude. Name the one trend in your tribe's world you're still tracking on a straight line. What does it actually look like three years from now if the curve holds?",
         "2026-08-27": "Every decision has an Observe-to-Act clock running whether you track it or not. Time-audit your last real call this week — how much of the delay was actually gathering information, and how much was just waiting for someone's approval? That gap is where you get faster.",
         "2026-08-28": "Pick three decisions from this quarter where you compromised something — a promise, a standard — because circumstances seemed to demand it. For each, ask plainly: same information, same pressure, same call? Where the answer is no, that's not a stumble to explain away. What's the one decision your tribe would make differently if it had to answer that question in public?",
+        "2026-08-31": "Next time fear shows up before a real decision, don't let it stay vague — name it out loud, and name which pattern it actually is: existential, reputational, control, or inadequacy. What's the one fear your tribe is currently treating as settled fact instead of naming as data to work with?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -692,12 +694,21 @@ def build_briefing():
             lines.append("")
             # EXTRA CJ POST — Nardus flagged this as an additional post that should keep
             # appearing on top of that day's primary CJ post, not replace it. First added
-            # for 26 Aug, extended to 27 Aug on his explicit "keep it as well" instruction.
-            if date_key in ("2026-08-26", "2026-08-27", "2026-08-28"):
-                lines.append("\U0001f4c4 <b>Field Notes is live.</b>")
-                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/'>→ Dr. Tali Režun on LinkedIn</a>")
+            # for 26 Aug (Field Notes is live, carried through 27-28 Aug unchanged), now a
+            # per-date dict so each day's second post can be swapped independently — Nardus
+            # gave a fresh topic + URL for 31 Aug ("Time Magazine - AI").
+            extra_cj_entries = {
+                "2026-08-26": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
+                "2026-08-27": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
+                "2026-08-28": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
+                "2026-08-31": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
+            }
+            if date_key in extra_cj_entries:
+                extra_cj = extra_cj_entries[date_key]
+                lines.append(extra_cj["quote"])
+                lines.append("<a href='" + extra_cj["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
                 lines.append("")
-            # VANGUARD SPRINT PROGRAMME — Sprint 3 from 8 July, Sprint 4 from 17 Aug onwards
+            # VANGUARD SPRINT PROGRAMME — Sprint 3 from 8 July, Sprint 4 from 17 Aug, Sprint 5 from 31 Aug onwards
             if "2026-07-08" <= date_key < "2026-08-17":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
                 lines.append(
@@ -709,10 +720,21 @@ def build_briefing():
                     "<i>This week: what did your tribe ship?</i></blockquote>"
                 )
                 lines.append("")
-            elif date_key >= "2026-08-17":
+            elif "2026-08-17" <= date_key < "2026-08-31":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
                 lines.append(
                     "<blockquote><i>All Chiefs · All Tribes · Sprint 4 in progress</i>\n\n"
+                    "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
+                    "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
+                    "product, for a real market, with real deliverables. More modules will integrate as the "
+                    "programme progresses.\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-08-31":
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 5 in progress</i>\n\n"
                     "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
                     "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
                     "product, for a real market, with real deliverables. More modules will integrate as the "

@@ -1138,10 +1138,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-08-31": {
-        "title": "Score Yourself on the Five Axioms — By Behavior, Not Intention",
-        "chapter": "Chapter 11: What You Now Possess",
+        "title": "Next Time Fear Shows Up, Walk the Six Steps Instead of Reacting",
+        "chapter": "Chapter 8: Fear as Data",
         "summary": (
-            "Score yourself honestly against the five axioms this week — not aspirationally, behaviorally. For each axiom, rate 1 to 5 based on your last 90 days of actual decisions, not your intentions. Add them up. The total isn't the point. The lowest-scoring axiom is: that's your specific 90-day development priority, not a vague resolution to \"be better."
+            "Next time you feel fear activate before a real decision, walk the six-step framework deliberately: name it out loud. Identify which pattern it is (existential, reputational, control, inadequacy). Separate the specific threat from the vague catastrophizing. Generate three options, not one. Commit to a decision with 40-60% information. Then, afterward, extract what it taught you."
         ),
     },
     "2026-09-01": {
@@ -2527,6 +2527,39 @@ TALI_STEPS = {
             "own reasoning instead of asking people to just trust the output. The Vanguard move: don't "
             "estimate where your last decision's time went — audit it, stage by stage, and find the one "
             "stage you can compress this week."
+        ),
+    },
+    "2026-08-31": {
+        "step": "Fear as Data — Walk the Six Steps Instead of Reacting",
+        "title": "Turn the Fear Into a Number",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499035108419469312/",
+        "focus": (
+            "Chapter 8 gives fear a six-step protocol instead of just reacting to it: name it out loud, "
+            "identify which pattern it is (existential, reputational, control, inadequacy), separate the "
+            "specific threat from the vague catastrophizing, generate three options instead of one, commit "
+            "with 40-60% information, then extract the lesson afterward. Today's AI News runs the same "
+            "protocol on physical risk: Anthropic's new Model Hardware Standard lets Claude operate robots "
+            "and lab equipment directly, but instead of leaving 'AI controlling machinery' as a vague fear, "
+            "it converts it into specific, testable limits — restricted speed, restricted angles, a research "
+            "preview before wider deployment. Today's Chasing Jarvis posts, 'Using AI' and 'Time Magazine - "
+            "AI,' are both about putting a number on what was previously just a feeling about AI's reach."
+        ),
+        "question": (
+            "Chapter 8 asks you to walk the six-step fear framework the next time it activates before a real "
+            "decision: name it, identify the pattern, separate the specific threat from the catastrophizing, "
+            "generate three options, commit with 40-60% information, then extract the lesson. Pick a fear "
+            "you're currently sitting with and walk it through all six steps now — which step do you usually "
+            "skip?"
+        ),
+        "model_answer": (
+            "Most people stop at step one — naming the fear — and mistake that for having handled it, when "
+            "the real work is steps two through four: which specific pattern this is, what the actual threat "
+            "is versus the story you're telling yourself, and forcing three options instead of the one your "
+            "fear already picked for you. Anthropic's Model Hardware Standard runs exactly that discipline at "
+            "industrial scale — instead of leaving 'AI controlling physical machinery' as a vague fear, it "
+            "converts it into specific, testable limits: restricted speed, restricted angles, a research "
+            "preview before broad deployment. The Vanguard move: whichever step you normally skip, that's "
+            "the one costing you the clearest option you already have."
         ),
     },
     "2026-08-28": {
@@ -5130,9 +5163,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497870713085751296/",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499017304366764032/",
     "title": "Dra\u017een Kapusta \u2014 latest LinkedIn post",
-    "description": "New URL given directly by Nardus for 27 Aug; post content not independently verifiable (LinkedIn access restricted), but only the URL is rendered in the briefing/caption so this does not affect reader-facing text.",
+    "description": "New URL given directly by Nardus for 31 Aug; post content not independently verifiable (LinkedIn access restricted), but only the URL is rendered in the briefing/caption so this does not affect reader-facing text.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -5142,8 +5175,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Okta rolls out Agent SSO so AI agents can log in like employees — with short-lived tokens instead of hardcoded credentials",
-    "source": "Okta",
+    "headline": "Anthropic introduced a new Model Hardware Standard letting Claude directly operate robots and scientific lab equipment — with built-in safety limits like restricted speed and angles",
+    "source": "Anthropic",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5156,6 +5189,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Okta rolls out Agent SSO so AI agents can log in like employees — with short-lived tokens instead of hardcoded credentials",
         "source": "Okta",
         "url": "https://www.okta.com/newsroom/press-releases/okta-brings-first-class-identity-to-ai-agents-with-agent-sso/",
+    },
+    "2026-08-31": {
+        "headline": "Anthropic introduced a new Model Hardware Standard letting Claude directly operate robots and scientific lab equipment — with built-in safety limits like restricted speed and angles",
+        "source": "Anthropic",
+        "url": "https://www.thestar.com.my/tech/tech-news/2026/08/28/anthropic-tests-new-way-for-claude-to-work-with-robots-and-scientific-lab-tools",
     },
 }
 
