@@ -1145,10 +1145,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-09-01": {
-        "title": "Classify Your Last Ten Recognition Moments — Wolf or Sheepdog?",
-        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "title": "Run the Five-Question Test on Your Next AI Deployment Before You Ship It",
+        "chapter": "Chapter 9: AI as Force Multiplier",
         "summary": (
-            "Pull up your organization's last ten significant recognition moments — promotions, bonuses, public praise. For each, classify honestly: did it reward a wolf pattern (visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? Whatever ratio you find is precisely the ratio your organization will keep producing, until you change what gets rewarded."
+            "Before your next AI deployment, run the five-question test explicitly: does it forge the essence I want, amplified 10x? Does it build reputational capital? Does it amplify honesty, reliability, prudence? Does it optimize for long-term relationships rather than this quarter? Does it create value together rather than extract from one side? All five need to be yes — not just the ones that are easy."
         ),
     },
     "2026-09-02": {
@@ -2560,6 +2560,38 @@ TALI_STEPS = {
             "converts it into specific, testable limits: restricted speed, restricted angles, a research "
             "preview before broad deployment. The Vanguard move: whichever step you normally skip, that's "
             "the one costing you the clearest option you already have."
+        ),
+    },
+    "2026-09-01": {
+        "step": "AI as Force Multiplier — Run the Five-Question Test Before You Ship",
+        "title": "Five Questions, Amplified",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/",
+        "focus": (
+            "Chapter 9 makes force multiplication conditional: before your next AI deployment, run the "
+            "five-question test explicitly — essence amplified, reputational capital built not spent, "
+            "honesty/reliability/prudence amplified, long-term over this-quarter, positive-sum over "
+            "extraction. All five need to be yes. Today's AI News is that same test passed at research "
+            "scale: Anthropic's automated 'alignment researcher' AIs don't just do the work faster, they "
+            "post-train other AI systems to be more reliable — genuine force multiplication, not just "
+            "speed. Today's Chasing Jarvis post, 'The Handoff writes itself,' is Dr. Tali's own version: "
+            "AI amplifying a human handoff instead of replacing the judgment behind it."
+        ),
+        "question": (
+            "Chapter 9 asks you to run the five-question test on your next AI deployment before you ship "
+            "it: does it forge the essence you want, amplified? Build reputational capital? Amplify honesty, "
+            "reliability, prudence? Optimize for the long term? Create value together? Run it now — which "
+            "question is the one you're tempted to skip?"
+        ),
+        "model_answer": (
+            "The test in Chapter 9 is designed to catch the deployment that looks like a force multiplier "
+            "but is actually just speed — faster extraction, faster short-term wins, faster erosion of "
+            "trust — because 'amplified' only counts as progress when what's being amplified was worth "
+            "having in the first place. Anthropic's automated alignment researchers pass the harder version "
+            "of that test: they don't just produce answers faster, they make other AI systems more reliable, "
+            "which is amplification of something worth amplifying. Dr. Tali's 'The Handoff writes itself' "
+            "post is the same principle at human scale — AI amplifying the judgment in a handoff, not "
+            "replacing it. The Vanguard move: run all five questions before you ship, and treat 'the ones "
+            "that are easy' as the least informative answers you'll get."
         ),
     },
     "2026-08-28": {
@@ -5163,9 +5195,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499017304366764032/",
-    "title": "Dra\u017een Kapusta \u2014 latest LinkedIn post",
-    "description": "New URL given directly by Nardus for 31 Aug; post content not independently verifiable (LinkedIn access restricted), but only the URL is rendered in the briefing/caption so this does not affect reader-facing text.",
+    "url": "https://www.linkedin.com/pulse/ai-agents-built-tribe-drazen-kapusta-ifhce/",
+    "title": "The AI Agents Built a Tribe",
+    "description": "Topic and URL given directly by Nardus for 1 Sept.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -5175,7 +5207,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic introduced a new Model Hardware Standard letting Claude directly operate robots and scientific lab equipment — with built-in safety limits like restricted speed and angles",
+    "headline": "Anthropic published research showing automated 'alignment researcher' AIs can autonomously post-train other AI systems to reliably mitigate alignment failures — outperforming some human-proposed fixes",
     "source": "Anthropic",
 }
 
@@ -5194,6 +5226,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic introduced a new Model Hardware Standard letting Claude directly operate robots and scientific lab equipment — with built-in safety limits like restricted speed and angles",
         "source": "Anthropic",
         "url": "https://www.thestar.com.my/tech/tech-news/2026/08/28/anthropic-tests-new-way-for-claude-to-work-with-robots-and-scientific-lab-tools",
+    },
+    "2026-09-01": {
+        "headline": "Anthropic published research showing automated 'alignment researcher' AIs can autonomously post-train other AI systems to reliably mitigate alignment failures — outperforming some human-proposed fixes",
+        "source": "Anthropic",
+        "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
     },
 }
 

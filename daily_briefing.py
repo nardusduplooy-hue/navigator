@@ -163,6 +163,7 @@ def build_briefing():
         "2026-08-27": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
         "2026-08-28": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
         "2026-08-31": {"quote": "\U0001f4c4 <b>Using AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499035108419469312/"},
+        "2026-09-01": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/"},
     }
 
     lines = []
@@ -255,6 +256,7 @@ def build_briefing():
         "2026-08-27": "Every decision has an Observe-to-Act clock running whether you track it or not. Time-audit your last real call this week — how much of the delay was actually gathering information, and how much was just waiting for someone's approval? That gap is where you get faster.",
         "2026-08-28": "Pick three decisions from this quarter where you compromised something — a promise, a standard — because circumstances seemed to demand it. For each, ask plainly: same information, same pressure, same call? Where the answer is no, that's not a stumble to explain away. What's the one decision your tribe would make differently if it had to answer that question in public?",
         "2026-08-31": "Next time fear shows up before a real decision, don't let it stay vague — name it out loud, and name which pattern it actually is: existential, reputational, control, or inadequacy. What's the one fear your tribe is currently treating as settled fact instead of naming as data to work with?",
+        "2026-09-01": "Before your tribe ships its next AI deployment, run the five-question test out loud: does it forge the essence you want, amplified? Does it build reputational capital or quietly spend it? Does it optimize for the next decade or just this quarter? All five need to be yes — which one is your tribe currently skipping because it's the hard one?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -683,7 +685,19 @@ def build_briefing():
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
-            if date_key >= "2026-08-04":
+            if date_key == "2026-09-01":
+                # Deadline day itself — Nardus asked for the deadline in bold and the whole
+                # block in a red shade. Telegram HTML has no color/background support (only
+                # b/i/u/s/a/code/pre/blockquote), so the closest real equivalent is: bold
+                # deadline text, a 🔴 marker, and a blockquote to set the block visually apart.
+                lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
+                lines.append(
+                    "<blockquote>\U0001f534 <b>Deadline: 1 September 2026 — TODAY</b>\n"
+                    "Build a real, working agent — opencode (free) or Claude Desktop + Cowork (Pro/Team). Create your project folder, drop in AGENTS.md, run the Setup Prompt, define your 30-day project via the Canvases, and connect at least 2 MCP servers. By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.</blockquote>"
+                )
+                lines.append("<a href='https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md'>→ Full guide</a>")
+                lines.append("")
+            elif date_key >= "2026-08-04":
                 lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
                 lines.append("Deadline: 1 September 2026. Build a real, working agent — opencode (free) or Claude Desktop + Cowork (Pro/Team). Create your project folder, drop in AGENTS.md, run the Setup Prompt, define your 30-day project via the Canvases, and connect at least 2 MCP servers. By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.")
                 lines.append("<a href='https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md'>→ Full guide</a>")
@@ -702,6 +716,7 @@ def build_briefing():
                 "2026-08-27": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
                 "2026-08-28": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
                 "2026-08-31": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
+                "2026-09-01": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
