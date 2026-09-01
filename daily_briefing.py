@@ -164,6 +164,7 @@ def build_briefing():
         "2026-08-28": {"quote": "\U0001f4c4 <b>Talk to Lumina about Lumina (luminawidget.xyz)</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498266409521713152/"},
         "2026-08-31": {"quote": "\U0001f4c4 <b>Using AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499035108419469312/"},
         "2026-09-01": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/"},
+        "2026-09-02": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/"},
     }
 
     lines = []
@@ -257,6 +258,7 @@ def build_briefing():
         "2026-08-28": "Pick three decisions from this quarter where you compromised something — a promise, a standard — because circumstances seemed to demand it. For each, ask plainly: same information, same pressure, same call? Where the answer is no, that's not a stumble to explain away. What's the one decision your tribe would make differently if it had to answer that question in public?",
         "2026-08-31": "Next time fear shows up before a real decision, don't let it stay vague — name it out loud, and name which pattern it actually is: existential, reputational, control, or inadequacy. What's the one fear your tribe is currently treating as settled fact instead of naming as data to work with?",
         "2026-09-01": "Before your tribe ships its next AI deployment, run the five-question test out loud: does it forge the essence you want, amplified? Does it build reputational capital or quietly spend it? Does it optimize for the next decade or just this quarter? All five need to be yes — which one is your tribe currently skipping because it's the hard one?",
+        "2026-09-02": "Pull up your tribe's last ten recognition moments — promotions, praise, the shoutouts in the group chat. For each one, classify it honestly: did it reward a wolf pattern (visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? Whatever ratio you find is exactly the ratio you'll keep producing until you change what gets rewarded.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -293,7 +295,25 @@ def build_briefing():
             lines.append("<b>Meeting ID:</b> 892 8112 3748 | <b>Passcode:</b> BUSasWAR")
             lines.append("")
         else:
-            if date_key >= "2026-07-12":
+            if "2026-09-02" <= date_key <= "2026-09-04":
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>Intro to New Series of Lectures</i>")
+                lines.append("Cotrugli is inviting you to a fresh new series of lectures designed to bring new perspectives, practical insights, and meaningful discussions.")
+                lines.append("\u2022 \U0001f5d3 Saturday 5 September 2026 @ 17:00 CET")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/27/?wm=1&mi=88467586296'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 884 6758 6296 | <b>Passcode:</b> VAN2SEM")
+                lines.append("We look forward to learning, exploring, and building on these ideas together.")
+                lines.append("")
+            elif date_key == "2026-09-05":
+                lines.append("📅 <b>NEXT ZOOM SESSION — TODAY</b>")
+                lines.append("<i>Intro to New Series of Lectures</i>")
+                lines.append("Cotrugli is inviting you to a fresh new series of lectures designed to bring new perspectives, practical insights, and meaningful discussions.")
+                lines.append("\u2022 \U0001f5d3 Today, Saturday 5 September 2026 @ 17:00 CET")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/27/?wm=1&mi=88467586296'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 884 6758 6296 | <b>Passcode:</b> VAN2SEM")
+                lines.append("We look forward to learning, exploring, and building on these ideas together.")
+                lines.append("")
+            elif date_key >= "2026-07-12":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
                 lines.append("<i>Sessions resume after the summer break — watch this space</i>")
                 lines.append("")
@@ -315,12 +335,14 @@ def build_briefing():
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")
                 lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
-                lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
-                if date_key >= "2026-08-20":
-                    lines.append("<a href='https://stream.redcircle.com/episodes/c2e8c019-1445-4fa8-9061-d936a527c67d/stream.mp3'>\u2192 Networks and Netwars podcast</a>")
-                    lines.append("<a href='https://stream.redcircle.com/episodes/d308978d-5e2e-4077-956c-cb601e6470f6/stream.mp3'>\u2192 Center of Gravity for Joint Doctrine podcast</a>")
-                    lines.append("<a href='https://stream.redcircle.com/episodes/50315810-b51e-4a95-9d39-b6d3db1071f9/stream.mp3'>\u2192 Hybrid Warfare podcast</a>")
-                    lines.append("<a href='https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3'>\u2192 Composite Warfare podcast</a>")
+                # Podcast links removed 2 Sep onward per Nardus's explicit "remove" flags
+                if date_key < "2026-09-02":
+                    lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
+                    if date_key >= "2026-08-20":
+                        lines.append("<a href='https://stream.redcircle.com/episodes/c2e8c019-1445-4fa8-9061-d936a527c67d/stream.mp3'>\u2192 Networks and Netwars podcast</a>")
+                        lines.append("<a href='https://stream.redcircle.com/episodes/d308978d-5e2e-4077-956c-cb601e6470f6/stream.mp3'>\u2192 Center of Gravity for Joint Doctrine podcast</a>")
+                        lines.append("<a href='https://stream.redcircle.com/episodes/50315810-b51e-4a95-9d39-b6d3db1071f9/stream.mp3'>\u2192 Hybrid Warfare podcast</a>")
+                        lines.append("<a href='https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3'>\u2192 Composite Warfare podcast</a>")
                 if date_key >= "2026-08-04":
                     lines.append("")
                     lines.append("\U0001f4e1 <b>BAW Capstone — Daily Intelligence Sweep</b>")
@@ -685,7 +707,18 @@ def build_briefing():
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
-            if date_key == "2026-09-01":
+            if date_key == "2026-09-02":
+                # 2 Sep: deadline was yesterday — Nardus gave new "catch up" copy, keeping
+                # the same bold/blockquote/🔴 treatment (still no real color support in
+                # Telegram HTML) and the shortened body text he gave.
+                lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
+                lines.append(
+                    "<blockquote>\U0001f534 <b>Deadline: 1 September 2026 - if you missed it - catch up!!</b>\n"
+                    "Build a real, working agent — By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.</blockquote>"
+                )
+                lines.append("<a href='https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md'>→ Full guide</a>")
+                lines.append("")
+            elif date_key == "2026-09-01":
                 # Deadline day itself — Nardus asked for the deadline in bold and the whole
                 # block in a red shade. Telegram HTML has no color/background support (only
                 # b/i/u/s/a/code/pre/blockquote), so the closest real equivalent is: bold
@@ -717,6 +750,7 @@ def build_briefing():
                 "2026-08-28": {"quote": "\U0001f4c4 <b>Field Notes is live.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497552360966213632/"},
                 "2026-08-31": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
                 "2026-09-01": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
+                "2026-09-02": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
@@ -908,6 +942,8 @@ def build_briefing():
             if date_key == "2026-08-05":
                 lines.append("<a href='https://stream.redcircle.com/episodes/93987263-20df-456e-80b9-afed8f1e7c68/stream.mp3'>→ Vanguard Leadership intro Podcast — Dra\u017een Kapusta</a>")
             elif date_key >= "2026-07-06":
+                if KAPUSTA_TODAY.get("title"):
+                    lines.append("\U0001f4c4 <b>" + KAPUSTA_TODAY["title"] + "</b>")
                 lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
             elif date_key >= "2026-05-30":
                 lines.append("<a href='https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")

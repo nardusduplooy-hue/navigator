@@ -1152,10 +1152,10 @@ VANGUARD_SUMMARIES = {
         ),
     },
     "2026-09-02": {
-        "title": "Commit to One 90-Day Experiment, in Writing, and Tell Someone",
-        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "title": "Classify Your Last Ten Recognition Moments — Wolf or Sheepdog?",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
         "summary": (
-            "Commit, in writing, to a specific 90-day experiment: pick one axiom you currently run inconsistently, name the specific behavior change, and set a date to re-score yourself. Share the commitment with one other person so it's not just a private intention. The manifesto only means anything if someone actually runs the experiment instead of agreeing with it."
+            "Pull up your organization's last ten significant recognition moments — promotions, bonuses, public praise. For each, classify honestly: did it reward a wolf pattern (visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? Whatever ratio you find is precisely the ratio your organization will keep producing, until you change what gets rewarded."
         ),
     },
     "2026-09-03": {
@@ -2592,6 +2592,41 @@ TALI_STEPS = {
             "post is the same principle at human scale — AI amplifying the judgment in a handoff, not "
             "replacing it. The Vanguard move: run all five questions before you ship, and treat 'the ones "
             "that are easy' as the least informative answers you'll get."
+        ),
+    },
+    "2026-09-02": {
+        "step": "The Three Patterns — Classify Your Last Ten Recognition Moments",
+        "title": "Wolf or Sheepdog, By the Numbers",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/",
+        "focus": (
+            "Chapter 12 asks for a real audit, not a feeling: pull up your organization's last ten "
+            "significant recognition moments and classify each one honestly — did it reward a wolf pattern "
+            "(visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? "
+            "Whatever ratio you find is exactly the ratio you'll keep producing until you change what gets "
+            "rewarded. Today's AI News is a live example of the wolf pattern's pull: Runway's Solaris "
+            "generates a fully working, interactive app as live video with no code — an unmistakably "
+            "visible, demo-able capability, precisely the kind that gets applauded whether or not it's the "
+            "most valuable thing being built. Today's Chasing Jarvis posts, 'The Handoff writes itself' and "
+            "'Lumina Agents,' are both the quieter sheepdog pattern — infrastructure work that only shows "
+            "up as a result, not a demo."
+        ),
+        "question": (
+            "Chapter 12 asks you to pull up your organization's last ten significant recognition moments — "
+            "promotions, bonuses, public praise — and classify each one honestly: wolf pattern (visible, "
+            "personal, short-term) or sheepdog pattern (invisible, systemic, long-term)? Run the count now — "
+            "what ratio did you find, and does it match what you'd want your tribe to believe gets rewarded?"
+        ),
+        "model_answer": (
+            "The uncomfortable finding Chapter 12 is built to surface is that most organizations reward the "
+            "wolf pattern by default, simply because visible, personal, short-term wins are easier to "
+            "notice and easier to praise in the moment — the sheepdog pattern has to be looked for on "
+            "purpose. Runway's Solaris is a good stand-in for the wolf pattern's appeal: a live, no-code "
+            "interactive app is immediately impressive in a way that months of invisible infrastructure "
+            "work never is, even when the infrastructure is what actually holds up. Dr. Tali's 'The Handoff "
+            "writes itself' and 'Lumina Agents' posts are the sheepdog case — the value shows up later, as "
+            "a result, not as a demo. The Vanguard move: run the count on your last ten recognition moments, "
+            "and if the ratio skews wolf, change what you praise out loud next time, not just what you "
+            "privately value."
         ),
     },
     "2026-08-28": {
@@ -5197,7 +5232,7 @@ TOOL_SPOTLIGHT = {
 KAPUSTA_TODAY = {
     "url": "https://www.linkedin.com/pulse/ai-agents-built-tribe-drazen-kapusta-ifhce/",
     "title": "The AI Agents Built a Tribe",
-    "description": "Topic and URL given directly by Nardus for 1 Sept.",
+    "description": "Topic and URL given directly by Nardus for 1 Sept; carried forward unchanged for 2 Sept (no new post given). Headline now displayed as visible text in the briefing per Nardus's 2 Sept feedback.",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -5207,8 +5242,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic published research showing automated 'alignment researcher' AIs can autonomously post-train other AI systems to reliably mitigate alignment failures — outperforming some human-proposed fixes",
-    "source": "Anthropic",
+    "headline": "Runway unveiled Solaris, a real-time interactive interface model that generates functioning apps as live video, frame by frame, with no code required",
+    "source": "Runway",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5231,6 +5266,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic published research showing automated 'alignment researcher' AIs can autonomously post-train other AI systems to reliably mitigate alignment failures — outperforming some human-proposed fixes",
         "source": "Anthropic",
         "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+    },
+    "2026-09-02": {
+        "headline": "Runway unveiled Solaris, a real-time interactive interface model that generates functioning apps as live video, frame by frame, with no code required",
+        "source": "Runway",
+        "url": "https://runway.com/news/research/introducing-solaris",
     },
 }
 
