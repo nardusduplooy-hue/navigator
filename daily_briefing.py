@@ -165,6 +165,7 @@ def build_briefing():
         "2026-08-31": {"quote": "\U0001f4c4 <b>Using AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499035108419469312/"},
         "2026-09-01": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/"},
         "2026-09-02": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/"},
+        "2026-09-03": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
     }
 
     lines = []
@@ -259,6 +260,7 @@ def build_briefing():
         "2026-08-31": "Next time fear shows up before a real decision, don't let it stay vague — name it out loud, and name which pattern it actually is: existential, reputational, control, or inadequacy. What's the one fear your tribe is currently treating as settled fact instead of naming as data to work with?",
         "2026-09-01": "Before your tribe ships its next AI deployment, run the five-question test out loud: does it forge the essence you want, amplified? Does it build reputational capital or quietly spend it? Does it optimize for the next decade or just this quarter? All five need to be yes — which one is your tribe currently skipping because it's the hard one?",
         "2026-09-02": "Pull up your tribe's last ten recognition moments — promotions, praise, the shoutouts in the group chat. For each one, classify it honestly: did it reward a wolf pattern (visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? Whatever ratio you find is exactly the ratio you'll keep producing until you change what gets rewarded.",
+        "2026-09-03": "Within a few years, AI will handle almost everything your tribe currently calls 'operational excellence' — the analysis, the execution, the consistent scale. When it does, craft is the only thing left to differentiate you: judgment about what's worth doing, taste, the trust built through actual relationship. What's the one craft skill your tribe is currently letting atrophy because AI makes the operational version so easy?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -751,6 +753,7 @@ def build_briefing():
                 "2026-08-31": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
                 "2026-09-01": {"quote": "\U0001f4c4 <b>Time Magazine - AI</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7499134296994013184/"},
                 "2026-09-02": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
+                "2026-09-03": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]

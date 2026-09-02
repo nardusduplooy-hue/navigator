@@ -2629,6 +2629,44 @@ TALI_STEPS = {
             "privately value."
         ),
     },
+    "2026-09-03": {
+        "step": "Business as Craft & Shokunin — When AI Owns Operational Excellence",
+        "title": "Craft Is the Moat",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/",
+        "focus": (
+            "Chapter 1 makes the argument concrete: within a handful of years AI will own nearly "
+            "everything currently counted as 'operational excellence' \u2014 analysis, execution, "
+            "consistency, scale \u2014 and craft becomes the only differentiator left, because craft is "
+            "judgment about what's worth optimizing for, taste, meaning, trust built through "
+            "relationship. Today's AI News is the argument arriving on schedule: Anthropic's Claude "
+            "Fable 5.1 and Claude Mythos 5.1 are, by Anthropic's own description, the most advanced "
+            "models yet for coding and knowledge work \u2014 including breakthrough protein-design "
+            "capability \u2014 at roughly 25% lower cost. That's operational excellence compounding "
+            "fast. Today's Chasing Jarvis posts carry the other half: 'The Handoff writes itself' "
+            "(knowledge accumulates, state supersedes) and 'Lumina Agents' are both about what still "
+            "has to be a human call even once the handoff is automated."
+        ),
+        "question": (
+            "Chapter 1 argues that once AI owns 'operational excellence,' craft \u2014 judgment, taste, "
+            "trust built through relationship \u2014 becomes the only real differentiator. Name the one "
+            "craft skill in your own work that AI genuinely cannot replicate. Are you actually "
+            "practicing it deliberately, or just assuming it's there?"
+        ),
+        "model_answer": (
+            "The uncomfortable part of Chapter 1's argument is that most people can name their craft "
+            "skill in the abstract \u2014 'judgment,' 'relationships' \u2014 but couldn't point to the "
+            "last time they deliberately practiced it, the way a Shokunin craftsman drills a single cut "
+            "for decades. Claude Fable 5.1 and Claude Mythos 5.1 make the operational-excellence side of "
+            "the argument literal: Anthropic's own most advanced coding and knowledge-work models, now "
+            "doing breakthrough scientific work at a quarter less cost \u2014 exactly the kind of "
+            "consistent, scalable execution the chapter says won't differentiate anyone much longer. "
+            "Dr. Tali's 'The Handoff writes itself' and 'Lumina Agents' posts sit on the other side of "
+            "that line: what has to remain a deliberate human judgment even after the handoff itself is "
+            "automated. The Vanguard move: pick the one craft skill you're currently assuming rather "
+            "than practicing, and treat it like Takamura's knife \u2014 worth 700 years of attention, "
+            "not a line in a values deck."
+        ),
+    },
     "2026-08-28": {
         "step": "The NEO Leadership Challenge — The Would-I-Decide-This-Again Test",
         "title": "Three Decisions, Run Again",
@@ -5242,8 +5280,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Runway unveiled Solaris, a real-time interactive interface model that generates functioning apps as live video, frame by frame, with no code required",
-    "source": "Runway",
+    "headline": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 \u2014 its most advanced models yet for coding and knowledge work, with breakthrough protein-design capability and roughly 25% lower cost on typical workloads",
+    "source": "Anthropic",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5271,6 +5309,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Runway unveiled Solaris, a real-time interactive interface model that generates functioning apps as live video, frame by frame, with no code required",
         "source": "Runway",
         "url": "https://runway.com/news/research/introducing-solaris",
+    },
+    "2026-09-03": {
+        "headline": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 \u2014 its most advanced models yet for coding and knowledge work, with breakthrough protein-design capability and roughly 25% lower cost on typical workloads",
+        "source": "Anthropic",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
     },
 }
 
