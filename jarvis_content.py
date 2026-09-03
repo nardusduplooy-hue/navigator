@@ -2667,6 +2667,39 @@ TALI_STEPS = {
             "not a line in a values deck."
         ),
     },
+    "2026-09-04": {
+        "step": "Prince or Trader — AI Collapses the Timeline to Consequences",
+        "title": "Machine-Speed Consequences",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/",
+        "focus": (
+            "Chapter 2 argues AI doesn't just amplify the Machiavellian-versus-Cotruglian choice, it "
+            "collapses the time between making it and living with it: what once took Renaissance princes "
+            "decades to lose, AI-augmented extraction now loses in months; what once took merchants "
+            "generations to build, AI-augmented trust-builders now compound in years. Today's AI News is "
+            "that collapse becoming infrastructure: GLEIF's proposed verifiable LEI model would let an AI "
+            "agent's identity, authority, and operating limits be checked computationally in real time \u2014 "
+            "accountability running on evidence instead of slow-built trust. Today's Chasing Jarvis posts, "
+            "'The Handoff writes itself' and 'Lumina Agents,' are the trader's version of the same shift: "
+            "state and knowledge that persist and compound, not just impress once."
+        ),
+        "question": (
+            "Chapter 2 argues AI collapses the timeline between a strategic choice and its consequences \u2014 "
+            "extraction fails faster, trust-building compounds faster. Which path is your tribe actually "
+            "running right now, at the speed AI now moves it? What would you see happen first if you're "
+            "wrong?"
+        ),
+        "model_answer": (
+            "The uncomfortable test in Chapter 2 isn't which philosophy you'd claim in a values workshop \u2014 "
+            "it's which one your actions would prove if AI accelerated the feedback loop today. GLEIF's "
+            "verifiable LEI proposal is the extraction side's nightmare and the trader's side's dream in one "
+            "mechanism: once an AI agent's identity, authority and limits can be checked computationally "
+            "instead of taken on faith, the gap between claiming trustworthiness and actually being "
+            "verifiable collapses to real time. Dr. Tali's 'The Handoff writes itself' and 'Lumina Agents' "
+            "posts are the same principle at builder scale \u2014 state and knowledge that compound because "
+            "they were built to last, not just to demo well once. The Vanguard move: run the audit GLEIF is "
+            "describing on your own tribe now, before a counterparty \u2014 human or AI \u2014 runs it for you."
+        ),
+    },
     "2026-08-28": {
         "step": "The NEO Leadership Challenge — The Would-I-Decide-This-Again Test",
         "title": "Three Decisions, Run Again",
@@ -5280,8 +5313,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 \u2014 its most advanced models yet for coding and knowledge work, with breakthrough protein-design capability and roughly 25% lower cost on typical workloads",
-    "source": "Anthropic",
+    "headline": "GLEIF proposed a verifiable LEI model letting an AI agent's identity, authority and operating limits be checked computationally in real time \u2014 accountability that runs on evidence instead of trust",
+    "source": "GLEIF",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5314,6 +5347,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 \u2014 its most advanced models yet for coding and knowledge work, with breakthrough protein-design capability and roughly 25% lower cost on typical workloads",
         "source": "Anthropic",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    },
+    "2026-09-04": {
+        "headline": "GLEIF proposed a verifiable LEI model letting an AI agent's identity, authority and operating limits be checked computationally in real time \u2014 accountability that runs on evidence instead of trust",
+        "source": "GLEIF",
+        "url": "https://www.biometricupdate.com/202609/verifiable-lei-model-answers-who-sent-an-ai-agent-what-it-can-do-and-for-how-long",
     },
 }
 
