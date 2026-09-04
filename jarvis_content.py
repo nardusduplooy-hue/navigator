@@ -2700,6 +2700,42 @@ TALI_STEPS = {
             "describing on your own tribe now, before a counterparty \u2014 human or AI \u2014 runs it for you."
         ),
     },
+    "2026-09-05": {
+        "step": "The Perfect Merchant \u2014 Reputational Capital at Machine Speed",
+        "title": "Trust, Verified",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/",
+        "focus": (
+            "Chapter 3 argues reputational capital now compounds \u2014 or collapses \u2014 at machine speed in "
+            "both directions: a kept promise opens doors faster than ever, a broken one triggers cascading "
+            "distrust just as fast. Today's AI News makes that literal at the infrastructure level: Anthropic's "
+            "Enterprise Frontier Safeguards let enterprises keep Claude activity data in their own cloud, under "
+            "their own keys, while automated systems still detect misuse and route flags straight back to the "
+            "customer \u2014 trust rebuilt as verifiable custody instead of a vendor's word. Today's Chasing "
+            "Jarvis posts, 'The Handoff writes itself' and 'The Curator,' are the same shift at builder scale: "
+            "state and knowledge that persist because they're structurally verifiable, not just personally "
+            "vouched for."
+        ),
+        "question": (
+            "Chapter 3 argues reputational capital now compounds \u2014 or collapses \u2014 at machine speed in "
+            "both directions. Anthropic's new Enterprise Frontier Safeguards make that literal at the "
+            "infrastructure level: trust that used to rest on a vendor's word now rests on verifiable custody \u2014 "
+            "your own keys, your own logs, your own audit trail. Where is your tribe still asking people to "
+            "trust your word alone, when you could hand them the equivalent of your own keys and logs instead?"
+        ),
+        "model_answer": (
+            "The uncomfortable arithmetic in Chapter 3 is that reputation was always collateral \u2014 Cotrugli "
+            "just wrote down what everyone already sensed, that a good name outlasts a full treasury. What's "
+            "changed is the interest rate. EFS is the trust half of that equation rebuilt as architecture: "
+            "instead of asking a hundred-plus enterprises, including the CISOs of Goldman Sachs, Morgan "
+            "Stanley, Citi, and Wells Fargo, to simply believe Anthropic's data-handling promises, it hands "
+            "them the keys, the storage, and the audit log directly. Dr. Tali's 'The Handoff writes itself' "
+            "and 'The Curator' posts are the same shift at builder scale \u2014 state and knowledge that "
+            "persist because they're structurally verifiable, not just personally vouched for. The Vanguard "
+            "move: find the place in your own tribe's operation where you're still asking for trust you could "
+            "instead be proving."
+        ),
+    },
+
     "2026-08-28": {
         "step": "The NEO Leadership Challenge — The Would-I-Decide-This-Again Test",
         "title": "Three Decisions, Run Again",
@@ -5313,8 +5349,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "GLEIF proposed a verifiable LEI model letting an AI agent's identity, authority and operating limits be checked computationally in real time \u2014 accountability that runs on evidence instead of trust",
-    "source": "GLEIF",
+    "headline": "Anthropic launched Enterprise Frontier Safeguards, letting enterprises keep Claude activity data in their own cloud under their own encryption keys while automated systems still detect misuse and route flags straight to the customer \u2014 trust verified through custody, not a vendor's word",
+    "source": "Anthropic",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5352,6 +5388,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "GLEIF proposed a verifiable LEI model letting an AI agent's identity, authority and operating limits be checked computationally in real time \u2014 accountability that runs on evidence instead of trust",
         "source": "GLEIF",
         "url": "https://www.biometricupdate.com/202609/verifiable-lei-model-answers-who-sent-an-ai-agent-what-it-can-do-and-for-how-long",
+    },
+    "2026-09-05": {
+        "headline": "Anthropic launched Enterprise Frontier Safeguards, letting enterprises keep Claude activity data in their own cloud under their own encryption keys while automated systems still detect misuse and route flags straight to the customer \u2014 trust verified through custody, not a vendor's word",
+        "source": "Anthropic",
+        "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
     },
 }
 

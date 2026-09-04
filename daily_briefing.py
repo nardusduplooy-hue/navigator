@@ -167,6 +167,7 @@ def build_briefing():
         "2026-09-02": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500103774598848512/"},
         "2026-09-03": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
         "2026-09-04": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
+"2026-09-05": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
     }
 
     lines = []
@@ -263,6 +264,7 @@ def build_briefing():
         "2026-09-02": "Pull up your tribe's last ten recognition moments — promotions, praise, the shoutouts in the group chat. For each one, classify it honestly: did it reward a wolf pattern (visible, personal, short-term) or a sheepdog pattern (invisible, systemic, long-term)? Whatever ratio you find is exactly the ratio you'll keep producing until you change what gets rewarded.",
         "2026-09-03": "Within a few years, AI will handle almost everything your tribe currently calls 'operational excellence' — the analysis, the execution, the consistent scale. When it does, craft is the only thing left to differentiate you: judgment about what's worth doing, taste, the trust built through actual relationship. What's the one craft skill your tribe is currently letting atrophy because AI makes the operational version so easy?",
         "2026-09-04": "AI doesn't just amplify strategy — it collapses the timeline between the move and its consequences. What took Renaissance princes decades to lose now takes AI-augmented extraction months; what took merchants generations to build now compounds for AI-augmented trust-builders in years, not decades. Which path is your tribe actually running at machine speed right now — the one that compounds, or the one that collapses?",
+        "2026-09-05": "Reputational capital used to compound over years — now it compounds or collapses in the time it takes a post to spread. A kept promise opens doors faster than ever; a broken one triggers cascading distrust just as fast. What's the one commitment your tribe is currently treating as low-stakes that AI-speed visibility has quietly turned into a reputation bet?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -309,13 +311,15 @@ def build_briefing():
                 lines.append("We look forward to learning, exploring, and building on these ideas together.")
                 lines.append("")
             elif date_key == "2026-09-05":
-                lines.append("📅 <b>NEXT ZOOM SESSION — TODAY</b>")
-                lines.append("<i>Intro to New Series of Lectures</i>")
-                lines.append("Cotrugli is inviting you to a fresh new series of lectures designed to bring new perspectives, practical insights, and meaningful discussions.")
-                lines.append("\u2022 \U0001f5d3 Today, Saturday 5 September 2026 @ 17:00 CET")
-                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/27/?wm=1&mi=88467586296'>\u2192 Join Zoom Meeting</a>")
-                lines.append("<b>Meeting ID:</b> 884 6758 6296 | <b>Passcode:</b> VAN2SEM")
-                lines.append("We look forward to learning, exploring, and building on these ideas together.")
+                lines.append(
+                    "<blockquote>📅 <b>NEXT ZOOM SESSION — TODAY</b>\n"
+                    "<i>Intro to New Series of Lectures</i>\n"
+                    "Cotrugli is inviting you to a fresh new series of lectures designed to bring new perspectives, practical insights, and meaningful discussions.\n"
+                    "\u2022 \U0001f5d3 Today, Saturday 5 September 2026 @ 17:00 CET\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/27/?wm=1&mi=88467586296'>\u2192 Join Zoom Meeting</a>\n"
+                    "<b>Meeting ID:</b> 884 6758 6296 | <b>Passcode:</b> VAN2SEM\n"
+                    "We look forward to learning, exploring, and building on these ideas together.</blockquote>"
+                )
                 lines.append("")
             elif date_key >= "2026-07-12":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
@@ -711,9 +715,12 @@ def build_briefing():
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
-            if date_key == "2026-09-02":
-                # 2 Sep: deadline was yesterday — Nardus gave new "catch up" copy, keeping
-                # the same bold/blockquote/🔴 treatment (still no real color support in
+            if date_key >= "2026-09-02":
+                # From 2 Sep onward: deadline has passed — Nardus gave "catch up" copy,
+                # extended (5 Sep) to cover every date after the deadline rather than
+                # falling back to the stale "Deadline: 1 September 2026" unstyled text
+                # below, which no longer makes sense once the date has passed. Keeps the
+                # same bold/blockquote/🔴 treatment (still no real color support in
                 # Telegram HTML) and the shortened body text he gave.
                 lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
                 lines.append(
@@ -757,6 +764,7 @@ def build_briefing():
                 "2026-09-02": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
                 "2026-09-03": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
                 "2026-09-04": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
+"2026-09-05": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501571013474922496/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
