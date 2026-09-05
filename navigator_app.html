@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20260729-0800">
+<meta name="app-version" content="20260905-1500">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -574,9 +574,9 @@ textarea::placeholder { color: var(--text-muted); }
     <div class="stats-bar">
       <div class="stat-chip"><div class="stat-val" id="stat-sprint">—</div><div class="stat-lbl">Sprint</div></div>
       <div class="stat-chip" style="flex:2;"><div class="stat-val" style="font-size:10px;letter-spacing:0.03em;">Build · Ship · Sell</div><div class="stat-lbl">Active Tracks</div></div>
-      <div class="stat-chip"><div class="stat-val" id="stat-jtbd">All ✓</div><div class="stat-lbl">JTBD</div></div>
+      <div class="stat-chip" onclick="explainJTBD()"><div class="stat-val" id="stat-jtbd">All ✓</div><div class="stat-lbl">JTBD</div></div>
     </div>
-    <div id="deadlines-accordion-header" onclick="toggleDeadlines()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:0;cursor:pointer;user-select:none;">
+    <div id="deadlines-accordion-header" onclick="toggleDeadlines()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-top:14px;margin-bottom:0;cursor:pointer;user-select:none;">
       <div style="display:flex;align-items:center;gap:8px;">
         <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Planning Horizon</span>
         <span style="font-size:10px;color:rgba(255,255,255,0.65);font-weight:400;text-transform:none;letter-spacing:0;">— all tasks &amp; sessions</span>
@@ -587,7 +587,10 @@ textarea::placeholder { color: var(--text-muted); }
 
     <!-- COURSE STATUS ACCORDION -->
     <div id="courses-accordion-header" onclick="toggleCourses()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-top:8px;margin-bottom:0;cursor:pointer;user-select:none;">
-      <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Course Status</span>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Course Status</span>
+        <span style="font-size:10px;color:rgba(255,255,255,0.65);font-weight:400;text-transform:none;letter-spacing:0;">— updated manually each sprint</span>
+      </div>
       <span id="courses-chevron" style="font-size:18px;color:#ffffff;transition:transform 0.25s;display:inline-block;">›</span>
     </div>
     <div id="ns-courses" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
@@ -1054,7 +1057,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260729-0800</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20260905-1500</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1118,7 +1121,7 @@ const PROGRAMME_DATA = {
 
   activeSprint: {
     number: 4,
-    label: "Sprint 4",
+    label: "Sprint #4",
     dates: "17 Aug \u2013 30 Aug 2026",
     start: "2026-08-17",
     end: "2026-08-30",
@@ -1204,13 +1207,13 @@ const PROGRAMME_DATA = {
 
   sessions: [
     {
-      id: "session-18",
-      name: "Vanguard \u2014 Sessions resume after summer break",
-      datetime: "2026-08-15T17:00:00+02:00",
-      zoomUrl: "",
+      id: "session-19",
+      name: "Vanguard \u2014 Intro to New Series of Lectures",
+      datetime: "2026-09-05T17:00:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/27/?wm=1&mi=88467586296",
       recordingUrl: "",
-      zoomId: "",
-      zoomPass: ""
+      zoomId: "884 6758 6296",
+      zoomPass: "VAN2SEM"
     }
   ],
 
@@ -2688,6 +2691,20 @@ function renderSessions() {
   document.getElementById('zoom-time-display').textContent = formatTime(s.datetime);
   const metaEl = document.getElementById('zoom-meeting-meta');
   if (metaEl && s.zoomId) metaEl.innerHTML = `Meeting ID: ${s.zoomId}${s.zoomPass ? ` &nbsp;·&nbsp; Passcode: ${s.zoomPass}` : ''}`;
+  const joinBtn = document.getElementById('zoom-join-btn');
+  if (joinBtn) {
+    if (s.zoomUrl) {
+      joinBtn.disabled = false;
+      joinBtn.style.opacity = '1';
+      joinBtn.style.cursor = 'pointer';
+      joinBtn.textContent = 'JOIN ZOOM';
+    } else {
+      joinBtn.disabled = true;
+      joinBtn.style.opacity = '0.45';
+      joinBtn.style.cursor = 'default';
+      joinBtn.textContent = 'ZOOM LINK PENDING';
+    }
+  }
   function updateZoomCountdown() {
     const cd = getCountdown(s.datetime);
     document.getElementById('zoom-countdown-sm').textContent = cd.display;
@@ -2701,7 +2718,11 @@ function renderSessions() {
   const sl = document.getElementById('sessions-list');
   sl.innerHTML = '';
   PROGRAMME_DATA.sessions.forEach(sess => {
-    sl.innerHTML += `<div class="link-row" onclick="openUrl('${sess.zoomUrl}')"><div><div class="link-row-label">${sess.name}</div><div class="link-row-meta">${formatDate(sess.datetime)} · ${formatTime(sess.datetime)}</div></div><span class="chevron">›</span></div>`;
+    if (sess.zoomUrl) {
+      sl.innerHTML += `<div class="link-row" onclick="openUrl('${sess.zoomUrl}')"><div><div class="link-row-label">${sess.name}</div><div class="link-row-meta">${formatDate(sess.datetime)} · ${formatTime(sess.datetime)}</div></div><span class="chevron">›</span></div>`;
+    } else {
+      sl.innerHTML += `<div class="link-row" style="cursor:default;"><div><div class="link-row-label">${sess.name}</div><div class="link-row-meta">${formatDate(sess.datetime)} · ${formatTime(sess.datetime)}</div></div><span style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;">Pending</span></div>`;
+    }
   });
 
   const pl = document.getElementById('podcasts-list');
@@ -3395,6 +3416,14 @@ function markAssignmentDone(id, status) {
   const a = PROGRAMME_DATA.assignments.find(a => a.id === id);
   if (a) { a.status = status; renderWork(); renderNorthStar(); showToast('Marked as ' + (status === 'commented' ? 'Commented \u2713' : 'Done \u2713')); }
 }
+function explainJTBD() {
+  const t = document.createElement('div');
+  t.innerHTML = '<strong style="color:#c8a84b;">JTBD — Jobs To Be Done</strong><br>People "hire" a course, task or tool to make progress on something in their life. "All ✓" means every JTBD tied to your active courses is currently on track — nothing overdue or stalled.';
+  Object.assign(t.style, { position:'fixed', bottom:'calc(80px + var(--safe-bottom))', left:'50%', transform:'translateX(-50%)', background:'var(--text)', color:'#ffffff', borderRadius:'14px', padding:'14px 18px', fontSize:'12px', lineHeight:'1.6', fontFamily:"'DM Sans',sans-serif", zIndex:'300', whiteSpace:'normal', animation:'fadeUp 0.25s ease', boxShadow:'0 4px 16px rgba(0,0,0,0.15)', maxWidth:'85vw', width:'280px' });
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 5000);
+}
+
 function showToast(msg, duration) {
   const t = document.createElement('div');
   t.textContent = msg;
