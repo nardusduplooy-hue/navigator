@@ -168,6 +168,7 @@ def build_briefing():
         "2026-09-03": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
         "2026-09-04": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
 "2026-09-05": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
+"2026-09-07": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/"},
     }
 
     lines = []
@@ -265,6 +266,7 @@ def build_briefing():
         "2026-09-03": "Within a few years, AI will handle almost everything your tribe currently calls 'operational excellence' — the analysis, the execution, the consistent scale. When it does, craft is the only thing left to differentiate you: judgment about what's worth doing, taste, the trust built through actual relationship. What's the one craft skill your tribe is currently letting atrophy because AI makes the operational version so easy?",
         "2026-09-04": "AI doesn't just amplify strategy — it collapses the timeline between the move and its consequences. What took Renaissance princes decades to lose now takes AI-augmented extraction months; what took merchants generations to build now compounds for AI-augmented trust-builders in years, not decades. Which path is your tribe actually running at machine speed right now — the one that compounds, or the one that collapses?",
         "2026-09-05": "Reputational capital used to compound over years — now it compounds or collapses in the time it takes a post to spread. A kept promise opens doors faster than ever; a broken one triggers cascading distrust just as fast. What's the one commitment your tribe is currently treating as low-stakes that AI-speed visibility has quietly turned into a reputation bet?",
+        "2026-09-07": "The three-year runway to build sustainable patterns just became twelve months — and regulators noticed just as fast as your competitors did. What's the one gap in your tribe's operation that used to feel like a someday problem, but the pace of the last two months just turned into a right-now problem?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

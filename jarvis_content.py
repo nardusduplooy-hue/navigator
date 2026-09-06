@@ -2735,6 +2735,39 @@ TALI_STEPS = {
             "instead be proving."
         ),
     },
+    "2026-09-07": {
+        "step": "The NEO Era Battlefield \u2014 Twelve Months, Not Three Years",
+        "title": "The Clock Just Reset",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/",
+        "focus": (
+            "Chapter 5 argues the three-year window most organizations have to establish sustainable patterns "
+            "is compressing toward twelve months, because networks now expose truth and coordinate response at "
+            "machine speed. The Stop Rogue AI Act is that compression made literal in Washington: a summer of "
+            "rogue-agent incidents became a bipartisan federal bill in under two months, not the usual multi-year "
+            "legislative cycle. Dr. Tali's 'The Curator' post \u2014 'data without context is noise, context "
+            "without data is intuition' \u2014 is the same discipline at builder scale: the teams that survive "
+            "the compression are the ones who already built the context layer, not the ones scrambling to add it "
+            "after the fact."
+        ),
+        "question": (
+            "Chapter 5 argues the three-year window to establish sustainable patterns is compressing toward "
+            "twelve months. The Stop Rogue AI Act just proved it in Washington \u2014 a summer of rogue-agent "
+            "incidents became bipartisan federal legislation in under two months. What's the one pattern in your "
+            "own tribe's operation you've been treating as a three-year problem, that the last two months just "
+            "quietly turned into a twelve-month one?"
+        ),
+        "model_answer": (
+            "Cotrugli's merchants had generations to build trust; Chapter 5's point is that the same compounding "
+            "math now runs in months. The Stop Rogue AI Act is the proof: nobody in Washington was tracking their "
+            "own AI agents six weeks ago, and now there's a bipartisan bill demanding a 'continuous, "
+            "machine-readable inventory' of every one of them. That's not a slow institution catching up \u2014 "
+            "that's the institution moving at the same speed as the incident that provoked it. Dr. Tali's "
+            "'The Curator' post makes the builder-scale version explicit: context without data is intuition, and "
+            "intuition doesn't scale under compression. The Vanguard move: find whatever context layer you've "
+            "been meaning to build 'eventually,' and build it now, because eventually just got a lot closer."
+        ),
+    },
+
 
     "2026-08-28": {
         "step": "The NEO Leadership Challenge — The Would-I-Decide-This-Again Test",
@@ -5349,8 +5382,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic launched Enterprise Frontier Safeguards, letting enterprises keep Claude activity data in their own cloud under their own encryption keys while automated systems still detect misuse and route flags straight to the customer \u2014 trust verified through custody, not a vendor's word",
-    "source": "Anthropic",
+    "headline": "Reps. Gottheimer and Lawler introduced the bipartisan Stop Rogue AI Act, requiring NIST to set security standards for AI agents \u2014 continuous inventories, tamper-proof action logs, verified developer attribution \u2014 after this summer's OpenAI and Anthropic rogue-agent incidents moved from technical footnote to federal legislation in under two months",
+    "source": "Axios",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5393,6 +5426,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic launched Enterprise Frontier Safeguards, letting enterprises keep Claude activity data in their own cloud under their own encryption keys while automated systems still detect misuse and route flags straight to the customer \u2014 trust verified through custody, not a vendor's word",
         "source": "Anthropic",
         "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+    },
+    "2026-09-07": {
+        "headline": "Reps. Gottheimer and Lawler introduced the bipartisan Stop Rogue AI Act, requiring NIST to set security standards for AI agents \u2014 continuous inventories, tamper-proof action logs, verified developer attribution \u2014 after this summer's OpenAI and Anthropic rogue-agent incidents moved from technical footnote to federal legislation in under two months",
+        "source": "Axios",
+        "url": "https://www.axios.com/2026/09/03/house-bill-ai-agents-security",
     },
 }
 
