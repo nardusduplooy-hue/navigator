@@ -2767,6 +2767,40 @@ TALI_STEPS = {
             "been meaning to build 'eventually,' and build it now, because eventually just got a lot closer."
         ),
     },
+    "2026-09-08": {
+        "step": "Business as Warfare \u2014 Whoever's Holding the Multiplier",
+        "title": "Gate the Multiplier",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/",
+        "focus": (
+            "Chapter 6 argues AI is a force multiplier that amplifies whoever's holding it \u2014 the doctrine "
+            "question isn't whether to adopt it, it's which pattern you're multiplying. OpenAI just made that "
+            "literal: GPT-6 Astra became capable enough to autonomously find and exploit unknown vulnerabilities, "
+            "so instead of trusting good intentions, OpenAI gated the capability itself behind a vetted-access "
+            "program called Daybreak. Dr. Tali's 'The Curator' post \u2014 data without context is noise, context "
+            "without data is intuition \u2014 is the same instinct at builder scale: an ungated capability without "
+            "judgment behind it is exactly the kind of noise waiting to become a weapon."
+        ),
+        "question": (
+            "Chapter 6 argues AI is a force multiplier that amplifies whoever's holding it \u2014 the doctrine "
+            "question isn't whether to adopt it, it's which pattern you're multiplying. OpenAI just made that "
+            "literal: GPT-6 Astra became capable enough to autonomously find and exploit unknown vulnerabilities, "
+            "so they gated the capability itself behind a vetted-access program rather than trusting good "
+            "intentions. What's the one capability in your own tribe's operation that's now powerful enough that "
+            "you should be gating access to it, rather than just trusting people to use it well?"
+        ),
+        "model_answer": (
+            "Cotrugli's merchants worked with tools that amplified effort at roughly the same rate for everyone; "
+            "Chapter 6's point is that AI breaks that symmetry \u2014 the multiplier now scales faster than the "
+            "judgment guiding it. GPT-6 Astra is the clearest evidence yet: a model capable enough to "
+            "autonomously discover and weaponize zero-days, released not with a warning label but with an actual "
+            "access gate, because OpenAI decided the multiplier itself needed a lock, not just a disclaimer. "
+            "Dr. Tali's 'The Curator' post is the same instinct at builder scale \u2014 data without context is "
+            "noise, and an ungated capability without judgment behind it is exactly that kind of noise waiting to "
+            "become a weapon. The Vanguard move: find the one lever in your own operation that's gotten quietly "
+            "more powerful this year, and decide now who gets to pull it, before circumstances decide for you."
+        ),
+    },
+
 
 
     "2026-08-28": {
@@ -5382,8 +5416,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Reps. Gottheimer and Lawler introduced the bipartisan Stop Rogue AI Act, requiring NIST to set security standards for AI agents \u2014 continuous inventories, tamper-proof action logs, verified developer attribution \u2014 after this summer's OpenAI and Anthropic rogue-agent incidents moved from technical footnote to federal legislation in under two months",
-    "source": "Axios",
+    "headline": "OpenAI's GPT-6 Astra became the first model to cross the 'Critical' cybersecurity threshold under the company's own Preparedness Framework \u2014 able to autonomously find and exploit previously unknown vulnerabilities in hardened systems \u2014 so OpenAI gated its full offensive capability behind a vetted-access program called Daybreak, refusing those tasks for everyone else",
+    "source": "OpenAI",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5431,6 +5465,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Reps. Gottheimer and Lawler introduced the bipartisan Stop Rogue AI Act, requiring NIST to set security standards for AI agents \u2014 continuous inventories, tamper-proof action logs, verified developer attribution \u2014 after this summer's OpenAI and Anthropic rogue-agent incidents moved from technical footnote to federal legislation in under two months",
         "source": "Axios",
         "url": "https://www.axios.com/2026/09/03/house-bill-ai-agents-security",
+    },
+    "2026-09-08": {
+        "headline": "OpenAI's GPT-6 Astra became the first model to cross the 'Critical' cybersecurity threshold under the company's own Preparedness Framework \u2014 able to autonomously find and exploit previously unknown vulnerabilities in hardened systems \u2014 so OpenAI gated its full offensive capability behind a vetted-access program called Daybreak, refusing those tasks for everyone else",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
     },
 }
 
