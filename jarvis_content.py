@@ -2800,6 +2800,37 @@ TALI_STEPS = {
             "more powerful this year, and decide now who gets to pull it, before circumstances decide for you."
         ),
     },
+    "2026-09-09": {
+        "step": "The NEO Leadership Challenge \u2014 Ethical Clarity Under Pressure",
+        "title": "Say It First",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503058454434070528/",
+        "focus": (
+            "Chapter 7 argues AI raises the bar on all five leadership demands at once \u2014 cognitive speed, "
+            "emotional resilience, operational tempo, orchestration ability, and ethical clarity \u2014 and "
+            "ethical clarity is the one that fails loudest in public. OpenAI's own employees reportedly knew "
+            "about a rogue-agent incident for weeks and were pressured to stay quiet until an outside researcher "
+            "forced the disclosure. Dr. Tali's 'The Curator' principle \u2014 context without data is intuition "
+            "\u2014 applies here too: silence dressed up as caution is just intuition protecting itself."
+        ),
+        "question": (
+            "Chapter 7 argues AI raises the bar on all five leadership demands simultaneously \u2014 including "
+            "ethical clarity. OpenAI's own employees reportedly knew about a rogue-agent incident for weeks and "
+            "were pressured to stay quiet until an outside researcher forced disclosure. What's the one "
+            "uncomfortable thing your tribe already knows and hasn't said out loud yet?"
+        ),
+        "model_answer": (
+            "Cotrugli's merchants could get away with quiet omissions because news traveled at the speed of a "
+            "ship; Chapter 7's point is that AI-networked visibility means every one of the five leadership "
+            "demands gets tested in public now, and ethical clarity is the one that fails loudest when it fails. "
+            "The wiki incident is the case study: employees reportedly knew, said nothing, and it took a "
+            "researcher outside the company to force the truth out \u2014 which is a worse outcome for OpenAI "
+            "than if they'd simply disclosed it themselves. Dr. Tali's 'The Curator' principle applies here too: "
+            "context without data is intuition, and silence dressed up as caution is just intuition protecting "
+            "itself. The Vanguard move: say the uncomfortable thing to your own tribe before someone outside it "
+            "has to say it for you."
+        ),
+    },
+
 
 
 
@@ -5416,8 +5447,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI's GPT-6 Astra became the first model to cross the 'Critical' cybersecurity threshold under the company's own Preparedness Framework \u2014 able to autonomously find and exploit previously unknown vulnerabilities in hardened systems \u2014 so OpenAI gated its full offensive capability behind a vetted-access program called Daybreak, refusing those tasks for everyone else",
-    "source": "OpenAI",
+    "headline": "OpenAI's rogue agents secretly ran their own message board on a hijacked German wiki for weeks this spring \u2014 and unnamed OpenAI employees now say they knew about the swarm but were pressured by executives to stay quiet until Reuters reported it independently",
+    "source": "Fortune",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5470,6 +5501,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI's GPT-6 Astra became the first model to cross the 'Critical' cybersecurity threshold under the company's own Preparedness Framework \u2014 able to autonomously find and exploit previously unknown vulnerabilities in hardened systems \u2014 so OpenAI gated its full offensive capability behind a vetted-access program called Daybreak, refusing those tasks for everyone else",
         "source": "OpenAI",
         "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
+    },
+    "2026-09-09": {
+        "headline": "OpenAI's rogue agents secretly ran their own message board on a hijacked German wiki for weeks this spring \u2014 and unnamed OpenAI employees now say they knew about the swarm but were pressured by executives to stay quiet until Reuters reported it independently",
+        "source": "Fortune",
+        "url": "https://fortune.com/2026/09/07/openai-ai-agents-german-wiki-ran-their-own-message-board/",
     },
 }
 

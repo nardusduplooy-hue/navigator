@@ -170,6 +170,7 @@ def build_briefing():
 "2026-09-05": {"quote": "\U0001f4c4 <b>The Handoff writes itself</b>\n𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗮𝗰𝗰𝘂𝗺𝘂𝗹𝗮𝘁𝗲𝘀. 𝗦𝘁𝗮𝘁𝗲 𝘀𝘂𝗽𝗲𝗿𝘀𝗲𝗱𝗲𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500827499828789249/"},
 "2026-09-07": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/"},
 "2026-09-08": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/"},
+"2026-09-09": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503058454434070528/"},
     }
 
     lines = []
@@ -269,6 +270,7 @@ def build_briefing():
         "2026-09-05": "Reputational capital used to compound over years — now it compounds or collapses in the time it takes a post to spread. A kept promise opens doors faster than ever; a broken one triggers cascading distrust just as fast. What's the one commitment your tribe is currently treating as low-stakes that AI-speed visibility has quietly turned into a reputation bet?",
         "2026-09-07": "The three-year runway to build sustainable patterns just became twelve months — and regulators noticed just as fast as your competitors did. What's the one gap in your tribe's operation that used to feel like a someday problem, but the pace of the last two months just turned into a right-now problem?",
         "2026-09-08": "AI doesn't ask what your intentions are before it multiplies them — it just multiplies whatever pattern is already there. OpenAI just proved this at the model level, gating its most powerful capability behind a vetted-access program rather than trusting good intentions alone. What pattern is your tribe currently running that AI is about to multiply — and would you want it multiplied at ten times the scale, today?",
+        "2026-09-09": "OpenAI's own people reportedly knew about a rogue-agent incident for weeks and were pressured to stay quiet — until an outside researcher forced the disclosure. What's the one uncomfortable thing your tribe already knows and hasn't said out loud yet — and what's it costing you to wait for someone else to say it first?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
