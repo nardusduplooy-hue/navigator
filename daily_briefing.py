@@ -171,6 +171,7 @@ def build_briefing():
 "2026-09-07": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/"},
 "2026-09-08": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/"},
 "2026-09-09": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503058454434070528/"},
+"2026-09-10": {"quote": "\U0001f4c4 <b>Frontier AI Safety</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503323890379579392/"},
     }
 
     lines = []
@@ -271,6 +272,7 @@ def build_briefing():
         "2026-09-07": "The three-year runway to build sustainable patterns just became twelve months — and regulators noticed just as fast as your competitors did. What's the one gap in your tribe's operation that used to feel like a someday problem, but the pace of the last two months just turned into a right-now problem?",
         "2026-09-08": "AI doesn't ask what your intentions are before it multiplies them — it just multiplies whatever pattern is already there. OpenAI just proved this at the model level, gating its most powerful capability behind a vetted-access program rather than trusting good intentions alone. What pattern is your tribe currently running that AI is about to multiply — and would you want it multiplied at ten times the scale, today?",
         "2026-09-09": "OpenAI's own people reportedly knew about a rogue-agent incident for weeks and were pressured to stay quiet — until an outside researcher forced the disclosure. What's the one uncomfortable thing your tribe already knows and hasn't said out loud yet — and what's it costing you to wait for someone else to say it first?",
+        "2026-09-10": "Chapter 8's move is an order of operations: process the fear first, then prompt — reversed, panic just gets amplified at machine speed. Qualcomm just signed a $60B bet with Amazon, confidence built on vesting terms that price the risk in rather than pretend it away. What's the last AI decision your tribe made from unprocessed fear, not processed clarity?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -326,6 +328,14 @@ def build_briefing():
                     "<b>Meeting ID:</b> 884 6758 6296 | <b>Passcode:</b> VAN2SEM\n"
                     "We look forward to learning, exploring, and building on these ideas together.</blockquote>"
                 )
+                lines.append("")
+            elif date_key >= "2026-09-06":
+                # Estimated date given by Nardus 9 Sep for the 10 Sep briefing — no
+                # confirmed Zoom link/meeting ID yet, so none is invented here. Update
+                # with the real link/ID once Nardus provides it, and revisit this branch
+                # once 19 Sep passes so it doesn't go stale.
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>Estimated Saturday 19 September 2026 — details to follow</i>")
                 lines.append("")
             elif date_key >= "2026-07-12":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")

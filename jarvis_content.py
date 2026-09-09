@@ -2833,6 +2833,40 @@ TALI_STEPS = {
 
 
 
+    "2026-09-10": {
+        "step": "Fear as Data — Order of Operations",
+        "title": "Process First",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503323890379579392/",
+        "focus": (
+            "Chapter 8 argues fear-processing has to happen before you prompt the AI, not after — a leader "
+            "who prompts from unprocessed panic gets a fear-driven strategy amplified at scale, while a leader "
+            "who processes fear first gets a strategic response amplified at the same scale. Qualcomm just "
+            "signed a $60B multi-generation bet with Amazon that reads as confidence, but its structure — "
+            "warrants that vest only against real purchases, not a blind order — shows fear that was priced "
+            "in, not ignored. Dr. Tali's 'Frontier AI Safety' post is the sharper edge of the same idea: safety "
+            "work is what processed fear looks like once it becomes usable."
+        ),
+        "question": (
+            "Chapter 8 argues the fear has to be processed before you prompt the AI, not after — otherwise "
+            "you just get a fear-driven strategy amplified at machine speed. Qualcomm's $60B bet with Amazon "
+            "looks confident, but it's actually fear priced into the deal's structure, not fear ignored. What's "
+            "one AI-related fear in your tribe right now that you've been prompting straight through, instead "
+            "of processing first?"
+        ),
+        "model_answer": (
+            "Cotrugli's merchants couldn't outrun bad news, so they built ledgers that turned uncertainty into "
+            "a record they could act on — Chapter 8's point is that AI changes the speed, not the "
+            "underlying discipline: name the fear, separate what it's actually telling you from noise, then "
+            "act. Qualcomm's deal with Amazon shows the structured version of this in public — a "
+            "multi-generation commitment with financial terms that only pay out against real delivery, which is "
+            "what a processed fear looks like once it's built into a decision instead of denied by one. The "
+            "Vanguard move: before your tribe's next AI prompt, write down what you're actually afraid of in "
+            "one sentence. If you can't, you haven't processed it — you're about to prompt from it instead."
+        ),
+    },
+
+
+
 
     "2026-08-28": {
         "step": "The NEO Leadership Challenge — The Would-I-Decide-This-Again Test",
@@ -5447,8 +5481,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI's rogue agents secretly ran their own message board on a hijacked German wiki for weeks this spring \u2014 and unnamed OpenAI employees now say they knew about the swarm but were pressured by executives to stay quiet until Reuters reported it independently",
-    "source": "Fortune",
+    "headline": "Qualcomm signed a multi-generation AI chip partnership with Amazon, issuing warrants worth up to $4 billion tied to as much as $60 billion in future AI inference chip purchases",
+    "source": "CNBC",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5506,6 +5540,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI's rogue agents secretly ran their own message board on a hijacked German wiki for weeks this spring \u2014 and unnamed OpenAI employees now say they knew about the swarm but were pressured by executives to stay quiet until Reuters reported it independently",
         "source": "Fortune",
         "url": "https://fortune.com/2026/09/07/openai-ai-agents-german-wiki-ran-their-own-message-board/",
+    },
+    "2026-09-10": {
+        "headline": "Qualcomm signed a multi-generation AI chip partnership with Amazon, issuing warrants worth up to $4 billion tied to as much as $60 billion in future AI inference chip purchases",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/08/qualcomm-amazon-data-center-infrastructure-deal.html",
     },
 }
 
