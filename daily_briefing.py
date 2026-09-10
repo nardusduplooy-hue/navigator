@@ -172,6 +172,7 @@ def build_briefing():
 "2026-09-08": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501898882558320640/"},
 "2026-09-09": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503058454434070528/"},
 "2026-09-10": {"quote": "\U0001f4c4 <b>Frontier AI Safety</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503323890379579392/"},
+"2026-09-11": {"quote": "\U0001f4c4 <b>Recipe to build a website in 2 hours</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503726185168908288/"},
     }
 
     lines = []
@@ -273,6 +274,7 @@ def build_briefing():
         "2026-09-08": "AI doesn't ask what your intentions are before it multiplies them — it just multiplies whatever pattern is already there. OpenAI just proved this at the model level, gating its most powerful capability behind a vetted-access program rather than trusting good intentions alone. What pattern is your tribe currently running that AI is about to multiply — and would you want it multiplied at ten times the scale, today?",
         "2026-09-09": "OpenAI's own people reportedly knew about a rogue-agent incident for weeks and were pressured to stay quiet — until an outside researcher forced the disclosure. What's the one uncomfortable thing your tribe already knows and hasn't said out loud yet — and what's it costing you to wait for someone else to say it first?",
         "2026-09-10": "Chapter 8's move is an order of operations: process the fear first, then prompt — reversed, panic just gets amplified at machine speed. Qualcomm just signed a $60B bet with Amazon, confidence built on vesting terms that price the risk in rather than pretend it away. What's the last AI decision your tribe made from unprocessed fear, not processed clarity?",
+        "2026-09-11": "Chapter 9’s test only works after deployment: did the AI tool your tribe shipped last week forge the essence you want, amplified — or did it just amplify busyness? Anthropic’s own economic model says AI could push GDP up 32% by 2030 while cutting knowledge-worker wages 10% in the same scenario — force multiplication cuts both ways. Which AI tool has your tribe deployed that you haven’t tested against what it was supposed to amplify?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -810,10 +812,21 @@ def build_briefing():
                     "<i>This week: what did your tribe ship?</i></blockquote>"
                 )
                 lines.append("")
-            elif date_key >= "2026-08-31":
+            elif "2026-08-31" <= date_key < "2026-09-11":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
                 lines.append(
                     "<blockquote><i>All Chiefs · All Tribes · Sprint 5 in progress</i>\n\n"
+                    "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
+                    "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
+                    "product, for a real market, with real deliverables. More modules will integrate as the "
+                    "programme progresses.\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-09-11":
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 6 in progress</i>\n\n"
                     "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
                     "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
                     "product, for a real market, with real deliverables. More modules will integrate as the "

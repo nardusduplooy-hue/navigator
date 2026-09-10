@@ -1214,6 +1214,662 @@ VANGUARD_SUMMARIES = {
             "Fear-processing has to happen before AI prompting, not after. A leader who prompts an AI system from a place of unprocessed panic gets a fear-driven strategy amplified at scale and speed. The same leader who processes fear first — naming it, separating signal from noise — and then prompts AI from a place of clarity gets a strategic response amplified at the same scale and speed. The AI never changes. The order of operations does."
         ),
     },
+
+    "2026-09-11": {
+        "title": "Run the Five-Question Test on the AI Tool You Deployed Last Week",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Pick the most recent AI tool or workflow your team actually shipped and run it through the "
+            "five-question test after the fact, not before: did it forge the essence you want, amplified? "
+            "Build reputational capital or quietly spend it? Amplify honesty, reliability, prudence? "
+            "Optimize for the long term? Create value together? A test run only after deployment tells you "
+            "something a pre-launch checklist never will — whether the answers you'd have given in the "
+            "proposal meeting were actually true."
+        ),
+    },
+    "2026-09-12": {
+        "title": "Score Your Tribe on the Five Conditions — Honestly, Not Aspirationally",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "The five conditions that make a tribe actually coordinate — shared purpose, mutual visibility, "
+            "low-friction trust, distributed authority, and a common language for risk — are easy to claim "
+            "and hard to score honestly. Go through each one this week and rate your own tribe, not the "
+            "tribe you're building toward. Wherever the score is lowest is where coordination will break "
+            "first under real pressure, not where it looks weakest on a slide."
+        ),
+    },
+    "2026-09-13": {
+        "title": "The Vanguard Assessment: Are You Running the Philosophy, or Just Agreeing With It?",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "There's a wide and comfortable gap between agreeing with a principle in a workshop and running "
+            "it under real pressure three weeks later — and most leaders never actually check which side of "
+            "that gap they're standing on. Pick one principle from this programme you'd confidently claim to "
+            "hold, and find the last real decision where it cost you something to keep it. If you can't find "
+            "one, you agree with it. You don't yet run it."
+        ),
+    },
+    "2026-09-14": {
+        "title": "The Sheep Pattern: Going Along Without Agreeing, Named Honestly",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "The sheep pattern is the quietest of the three because it looks like cooperation — going along "
+            "with a decision you privately doubt, because objecting costs more than compliance does in the "
+            "moment. Name one recent decision in your tribe where you, personally, played the sheep. The "
+            "wolf and the sheepdog patterns get all the attention in this chapter, but the sheep pattern is "
+            "usually the one that's actually running the room."
+        ),
+    },
+    "2026-09-15": {
+        "title": "Write the 90-Day Experiment, Right Now, and Name Who You'll Tell",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "The manifesto in this chapter only means something the moment it stops being a private "
+            "intention and becomes a specific, dated commitment someone else knows about. Pick one axiom "
+            "you run inconsistently, name the exact behavior you'll change, set a date ninety days out to "
+            "re-score yourself, and tell one other person today — not eventually. An unwitnessed commitment "
+            "is just a preference with better branding."
+        ),
+    },
+    "2026-09-16": {
+        "title": "The Shokunin Discipline: Treat Your Ten-Thousandth Rep Like Your First",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Shokunin mastery isn't built on novelty — it's built on doing the same disciplined thing "
+            "thousands of times with undiminished attention, which is precisely the opposite of how most "
+            "operators treat routine work once it stops being new. Name the task in your role that's become "
+            "purely mechanical, and do it once this week as if it still mattered. The craft isn't in the "
+            "hard problems; it's in refusing to let the easy ones go slack."
+        ),
+    },
+    "2026-09-17": {
+        "title": "Audit Your Last Ten Hard Calls — Which Philosophy Actually Ran Them?",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "It's easy to claim the trader's philosophy in a values statement and run the prince's playbook "
+            "under real pressure, because the prince's moves are usually faster and look more decisive in "
+            "the moment. Go through your last ten genuinely hard calls and classify each one honestly: "
+            "extraction or trust-building, short-term optics or long-term ledger. The ratio you find, not "
+            "the philosophy you'd state, is the one your tribe is actually learning from you."
+        ),
+    },
+    "2026-09-18": {
+        "title": "Service or Extraction: Run the Test on Your Next Client Interaction",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "The perfect merchant treats commerce as service to a real need, not as an opportunity to "
+            "extract the maximum the market will bear — and the difference is invisible in the pitch but "
+            "obvious in the outcome a year later. Before your next significant client interaction, decide "
+            "in advance which version you're running, then check your own behavior against that decision "
+            "afterward. Most people discover the gap only when someone else points it out first."
+        ),
+    },
+    "2026-09-19": {
+        "title": "Run a Live Decision Through All Five Axioms, in Writing, Today",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Take the single decision currently sitting on your desk and run it through all five axioms "
+            "explicitly, in writing, before you make the call: essence, reputational capital, "
+            "honesty/reliability/prudence, decades vs quarters, positive-sum vs zero-sum. Writing it down "
+            "changes the exercise — a mental pass lets you round the uncomfortable answers up, but a "
+            "written one doesn't let you forget what you actually concluded."
+        ),
+    },
+    "2026-09-20": {
+        "title": "Networked: Map Who Your Value Actually Flows Through",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "In a networked battlefield, value rarely flows in a straight line from you to the market — it "
+            "moves through a web of relationships, referrals, and reputations you don't fully control. Draw "
+            "the actual map of who your value flows through before it reaches a customer, not the "
+            "org-chart version. The nodes you can't see on that map are the ones most likely to surprise you."
+        ),
+    },
+    "2026-09-21": {
+        "title": "OODA Loop Audit on This Week's Biggest Call",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Take your most significant decision this week and time-audit it through "
+            "Observe-Orient-Decide-Act: how long from noticing something mattered to actually doing "
+            "something about it? Most delay hides in Orient and Decide, not in Observe or Act — meaning the "
+            "bottleneck usually isn't information, it's the internal debate about what the information "
+            "means. That's the stage worth shortening first."
+        ),
+    },
+    "2026-09-22": {
+        "title": "The Three Simultaneous Demands: Which One Are You Neglecting?",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "This chapter's leadership challenge asks you to hold speed, integrity, and adaptability all at "
+            "once — and most leaders are actually decent at two of the three and quietly weak on the one "
+            "that's hardest for their personal style. Name the demand you're currently neglecting, "
+            "specifically, not in the abstract. The honest answer is usually the one you'd be slightly "
+            "embarrassed to say out loud in a leadership review."
+        ),
+    },
+    "2026-09-23": {
+        "title": "The Six Steps, Applied to a Fear You're Avoiding Right Now",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Pick the fear you're currently least willing to look at directly, and walk all six steps "
+            "deliberately: name it out loud, specifically. Identify which pattern it is. Separate the real "
+            "threat from the catastrophizing. Generate three options, not the one your fear already picked. "
+            "Commit at 40-60% information. Afterward, extract what it taught you. Most people stop at step "
+            "one and call that having handled it."
+        ),
+    },
+    "2026-09-24": {
+        "title": "What Does Your AI Use Amplify About You That You Wouldn't Want Amplified?",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Force multiplication doesn't discriminate between your best instincts and your worst ones — it "
+            "just makes whatever pattern you already have run faster and louder. Before your next "
+            "deployment, ask the uncomfortable version of the question: not what could this tool achieve, "
+            "but what habit, shortcut, or blind spot of mine does this scale up alongside the good work? The "
+            "tools that quietly amplify impatience or corner-cutting look identical, in a demo, to the ones "
+            "amplifying judgment."
+        ),
+    },
+    "2026-09-25": {
+        "title": "Coordination Without Hierarchy: Name One Real Example, or Its Absence",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "The tribe model claims coordination doesn't require a chain of command — but that claim is "
+            "only as good as your last real example of it working. This week, find one instance where two "
+            "people in your tribe made a joined-up decision without either of them checking with you first, "
+            "and study what made it possible. If you can't find one, that absence is more informative than "
+            "any framework about how coordinated you actually are."
+        ),
+    },
+    "2026-09-26": {
+        "title": "What Would You Tell Your Successor That You Haven't Written Down?",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Every leader carries a private list of things they know that never made it into a handbook — "
+            "judgment calls, exceptions, the real reason a rule exists. Write down one of those things this "
+            "week as if you were handing over tomorrow, not someday. The exercise isn't really about "
+            "succession; it's a fast way to discover which parts of what you know are actually yours, "
+            "versus inherited language you've never tested."
+        ),
+    },
+    "2026-09-27": {
+        "title": "The Wolf You're Quietly Rewarding Without Noticing",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Wolf behavior rarely announces itself as such — it shows up as the confident call, the fast "
+            "close, the visible win that gets applauded before anyone checks what it cost elsewhere. Think "
+            "of the last person you praised publicly and ask, honestly, whether the win was wolf-shaped: "
+            "personal, short-term, visible. Rewarding it once is a mistake. Rewarding the pattern is a "
+            "culture."
+        ),
+    },
+    "2026-09-28": {
+        "title": "The Manifesto Only Counts If Someone Runs It — Who's Watching You Run Yours?",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "Agreeing with a manifesto costs nothing; running it costs something specific, on a specific "
+            "day, when the easier option was right there. If you made a 90-day commitment from an earlier "
+            "cycle of this programme, this is the week to check: did you actually run the experiment, or "
+            "did the commitment quietly become background noise? Someone should be able to tell you the "
+            "answer without asking you first."
+        ),
+    },
+    "2026-09-29": {
+        "title": "The Invisible Standard: What Are You Holding That Nobody's Checking?",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Craft reveals itself precisely in the standards nobody would notice if you let slip — the "
+            "client wouldn't see it, the report wouldn't catch it, and the deadline would still be met "
+            "either way. Name one such standard in your own work right now, and ask honestly whether you're "
+            "still holding it or have quietly let it become optional. AI can replicate the visible standard. "
+            "It can't replicate the discipline of holding the invisible one."
+        ),
+    },
+    "2026-09-30": {
+        "title": "The Trade-Off This Week Between Looking Good and Being Right",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Machiavellian and Cotruglian paths rarely diverge dramatically — they diverge in small weekly "
+            "trade-offs between the choice that looks good immediately and the one that's actually right "
+            "for the relationship over years. Name one decision on your desk right now where those two "
+            "things point in different directions, and notice which one you're currently leaning toward. "
+            "The direction you lean before deciding is the more honest signal."
+        ),
+    },
+    "2026-10-01": {
+        "title": "Score Yourself on the Five Elements of Mastery, Without Grading on a Curve",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Cotrugli's five elements of the perfect merchant weren't written as inspiration — they were "
+            "written as a working checklist for something you either practice or don't. Score yourself "
+            "honestly against each element this week, resisting the urge to round up on the ones you'd like "
+            "to be true. The elements you score lowest are the ones actually shaping how your tribe "
+            "experiences your leadership, whatever the average looks like."
+        ),
+    },
+    "2026-10-02": {
+        "title": "Which Axiom Does Your Tribe Skip Most Often, and Why?",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Five axioms sound like a balanced system, but in practice most tribes lean hard on two or "
+            "three and quietly skip the rest because they're harder to apply under pressure. Watch your "
+            "tribe's decisions this week and notice which axiom never seems to come up in the conversation. "
+            "The axiom that's missing from the discussion is usually the one costing you the most, "
+            "precisely because nobody's checking it."
+        ),
+    },
+    "2026-10-03": {
+        "title": "Exponential: Name the Trend You're Still Tracking Linearly",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "Exponential change looks like nothing happening for a long stretch, then suddenly like "
+            "everything happening at once — which means the leaders caught off guard were usually tracking "
+            "the right trend, just on the wrong curve. Name one thing in your industry you're currently "
+            "forecasting as a straight line. If the curve is actually exponential, your current plan is "
+            "already behind schedule, even though nothing looks urgent yet."
+        ),
+    },
+    "2026-10-04": {
+        "title": "Mission Command: Where Are You Still Micromanaging Instead of Trusting Intent?",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Mission command works by giving people your intent and trusting them to execute against it "
+            "without checking every step — which only works if you've actually communicated the intent "
+            "clearly enough to be trusted. Name one process you're still directing in detail rather than "
+            "delegating on intent, and ask honestly whether that's because the intent was unclear, or "
+            "because you don't yet trust the person executing it."
+        ),
+    },
+    "2026-10-05": {
+        "title": "When Did You Last Actually Change Your Mind on Something That Mattered?",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "Not update a minor opinion — genuinely reverse a real decision because new information or a "
+            "good argument changed your view, at some actual cost to your credibility in the moment. If the "
+            "honest answer is further back than you're comfortable with, that's not a character flaw, it's "
+            "a signal that your current environment isn't giving you enough real pushback to test your "
+            "convictions against."
+        ),
+    },
+    "2026-10-06": {
+        "title": "Suppressing vs Processing: Which One Did You Actually Do Last Time?",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Suppressing fear and processing it look nearly identical from the outside — both can produce a "
+            "calm exterior and a decision that gets made on schedule — but only one of them actually "
+            "extracts the information the fear was carrying. Think back to the last time you felt real fear "
+            "before a decision, and ask honestly which of the two you did. The tell is usually whether you "
+            "can name, specifically, what you learned."
+        ),
+    },
+    "2026-10-07": {
+        "title": "The Centaur Test: Where Are You the Bottleneck, and Where Are You the Multiplier?",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "The centaur model works only when human and AI are doing what each is actually good at — "
+            "which means somewhere in your workflow, you are either the bottleneck slowing a capable system "
+            "down, or the multiplier making a capable system trustworthy. Audit one real workflow this week "
+            "and name which role you're playing at each step. If you can't tell the difference, that's the "
+            "first problem to fix, not the tool."
+        ),
+    },
+    "2026-10-08": {
+        "title": "The Thing Nobody Said Out Loud in Your Last Meeting",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Psychological safety isn't measured by whether people are polite in meetings — it's measured "
+            "by whether the thing everyone was actually thinking got said before the decision was made, not "
+            "after it went wrong. Think back to your last significant meeting and name, specifically, what "
+            "didn't get said. If you can identify it now, someone in the room could have said it then — the "
+            "question is what made that costlier than staying quiet."
+        ),
+    },
+    "2026-10-09": {
+        "title": "The Leadership Legacy Question, With a Number Attached",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "'What will you build' is a good question and an easy one to answer vaguely. Make it harder: "
+            "name one specific, measurable thing that will be true in your organization a year from now "
+            "only because of a decision you made this month. If you can't name it, the vague answer was "
+            "doing the work the specific one should have been doing — sounding like legacy while committing "
+            "to nothing."
+        ),
+    },
+    "2026-10-10": {
+        "title": "The Sheepdog's Burden, This Week's Example",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Leading when nobody asked you to is uncomfortable precisely because it's optional right up "
+            "until it isn't — the sheepdog steps in before the crisis makes the intervention obvious, which "
+            "means it can look like overreach instead of leadership. Name one moment this week you saw a "
+            "problem forming and stayed quiet because it wasn't technically your job. That's the "
+            "sheepdog's burden, declined."
+        ),
+    },
+    "2026-10-11": {
+        "title": "What Principle Would You Want Followed Even by a System Smarter Than You?",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "The Sheepdog Manifesto was written as a blueprint for any intelligence, human or artificial — "
+            "which makes it a useful test in reverse: name one principle you hold that you'd still want "
+            "followed by something more capable than yourself, not because it's enforceable but because "
+            "it's actually right. If you can't name one you're confident about, that's worth more scrutiny "
+            "than the principles you can rattle off easily."
+        ),
+    },
+    "2026-10-12": {
+        "title": "Craft Compounds; Wins Don't — Which Are You Actually Building?",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "A one-off win looks identical to a craft-building rep in the moment they both happen, and the "
+            "difference only becomes visible years later, when one has compounded into mastery and the "
+            "other has simply been forgotten. Look at your work from this month and ask which parts were "
+            "building something durable versus which were just producing a result. The organizations still "
+            "practicing craft will own it precisely because they didn't optimize purely for this quarter's "
+            "wins."
+        ),
+    },
+    "2026-10-13": {
+        "title": "Who Gets Blamed vs Who Gets Credit — A Tell for Which System You're Running",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Watch how blame and credit actually flow through your organization this week, not how your "
+            "policy says they should flow. If credit concentrates upward and blame flows downward, you're "
+            "running an extraction system regardless of what the mission statement says. The trader's "
+            "philosophy shows up in the boring mechanics of attribution, not in the inspiring language of "
+            "the all-hands."
+        ),
+    },
+    "2026-10-14": {
+        "title": "What Are You Protecting for Someone Who Isn't in the Room?",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Stewardship means holding a standard on behalf of someone who can't currently enforce it "
+            "themselves — a future client, a future hire, a version of the business that doesn't exist yet. "
+            "Name one decision you're facing where the person most affected has no vote in the room. The "
+            "perfect merchant's real test is whether that absence changes your decision at all."
+        ),
+    },
+    "2026-10-15": {
+        "title": "The Axiom Test on a Decision You Already Regret",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Take a decision from the last few months that you already suspect was wrong, and run it "
+            "retroactively through all five axioms. Usually one axiom was violated clearly and the others "
+            "were used, after the fact, to justify it anyway. Naming which axiom actually got skipped — not "
+            "which one you'd cite in a retrospective — is the useful diagnostic here."
+        ),
+    },
+    "2026-10-16": {
+        "title": "Orchestration: What Do You Coordinate Without Controlling?",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "Orchestration is the NEO-era skill of producing a coherent outcome across people, partners, "
+            "and systems you don't directly command — which is a different discipline than management, and "
+            "most leaders were never actually trained in it. Name one outcome you're currently responsible "
+            "for that depends on parties you have no formal authority over. Your comfort with that "
+            "dependency is a real measure of whether you're orchestrating or just hoping."
+        ),
+    },
+    "2026-10-17": {
+        "title": "Speed vs Certainty: The Real Trade-Off in Your Last Decision",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Every fast decision trades some certainty for speed, and every certain decision trades some "
+            "speed for confidence — the skill isn't avoiding the trade-off, it's knowing which side of it a "
+            "given decision actually needs. Look at your last significant call and ask whether you "
+            "optimized for the right side of that trade-off, or just defaulted to your usual preference "
+            "regardless of the stakes involved."
+        ),
+    },
+    "2026-10-18": {
+        "title": "The Decision You'd Make Differently With the Same Information",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "Pick a real decision from the last quarter and ask the sharper version of the retrospective "
+            "question: not what would you do differently with better information, but what would you do "
+            "differently with the exact same information you actually had. If the honest answer is nothing, "
+            "you made the right call even if it went wrong. If it isn't nothing, that's the one worth "
+            "sitting with."
+        ),
+    },
+    "2026-10-19": {
+        "title": "The Fear Your Tribe Won't Name Out Loud",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Every tribe is quietly circling at least one fear that nobody's willing to name in a meeting — "
+            "a risk, a client, a number — because naming it feels like inviting the consequence. Notice "
+            "what that unnamed fear is in your own tribe right now. The chapter's argument is that fear "
+            "processed as data becomes useful information; fear left unnamed just becomes an atmosphere "
+            "everyone's operating inside without acknowledging."
+        ),
+    },
+    "2026-10-20": {
+        "title": "Speed Without Judgment: Name the Thing AI Made Faster That Shouldn't Have Been",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Not every process deserves to be faster — some decisions are slow because slowness is doing "
+            "real work: cooling tempers, surfacing objections, letting judgment catch up to impulse. Look "
+            "at what AI has sped up in your operation over the last quarter and ask, honestly, whether the "
+            "speed served the decision or just served the appearance of momentum. The force multiplier "
+            "doesn't know the difference. You have to."
+        ),
+    },
+    "2026-10-21": {
+        "title": "Trust at Speed: How Fast Can Your Tribe Actually Move Together?",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "The NEO era doesn't reward tribes that eventually get aligned — it rewards tribes that can "
+            "move together fast, because the network exposes the gap between claimed alignment and actual "
+            "alignment instantly. Time how long it took your tribe to converge on its last non-trivial "
+            "decision, from first disagreement to committed action. That number, not your stated values, "
+            "is your real coordination speed."
+        ),
+    },
+    "2026-10-22": {
+        "title": "What You Now Possess That You Didn't Three Months Ago",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Possession, in this programme's sense, isn't a credential or a framework you can recite — it's "
+            "a capability you've actually exercised under pressure and would trust again. Name one thing "
+            "you can now do, notice, or decide that you genuinely could not three months ago. If nothing "
+            "comes to mind quickly, that's worth sitting with longer than a fast, comfortable answer would "
+            "be."
+        ),
+    },
+    "2026-10-23": {
+        "title": "Which Pattern Does Your Onboarding Process Actually Reward?",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Culture gets set faster in the first ninety days than in any all-hands speech, because new "
+            "hires learn what actually gets rewarded by watching, not by being told. Look at what your "
+            "onboarding process implicitly celebrates — speed, visibility, deference — and ask which of the "
+            "three patterns it's quietly training people into. The manifesto you state and the pattern you "
+            "onboard for are not always the same document."
+        ),
+    },
+    "2026-10-24": {
+        "title": "The Blueprint Test: Would This Hold for an AI as Well as a Human?",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "A genuine principle should survive being applied by an agent with none of your instincts, "
+            "incentives, or fatigue — if it only works because a tired, self-interested human happens to "
+            "apply it charitably, it isn't a principle, it's a habit you got away with. Take one rule you "
+            "enforce in your tribe and imagine an AI agent enforcing it literally, at scale, with no "
+            "exceptions. Does it still hold, or does it break?"
+        ),
+    },
+    "2026-10-25": {
+        "title": "The Apprenticeship Mindset You Abandoned the Day You Got Good Enough",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Most people practice deliberately right up until they become competent, then switch to "
+            "autopilot for the rest of their career — which means the skill stops improving exactly when it "
+            "stops being urgent. Pick one competency you stopped actively developing once you got 'good "
+            "enough' at it, and treat it like an apprentice would this week: slow down, notice the details "
+            "you've been skipping. Competence is where craft goes to stall."
+        ),
+    },
+    "2026-10-26": {
+        "title": "The Trust You'd Need to Rebuild if Your Shortcut Were Ever Found Out",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "Every shortcut that trades trust for speed feels reversible right up until someone actually "
+            "discovers it, at which point the cost is rarely proportional to how small the shortcut seemed "
+            "at the time. Name one shortcut you're currently taking and estimate, honestly, how much trust "
+            "you'd need to rebuild if it surfaced publicly next week. If the number is large, you already "
+            "know which philosophy you're actually running."
+        ),
+    },
+    "2026-10-27": {
+        "title": "This Week's Entries in Your Reputational Ledger",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Reputational capital compounds the same way any other capital does — quietly, through small "
+            "deposits and withdrawals nobody's tracking in real time until the balance suddenly matters. "
+            "List the actual entries from this week: which interactions were deposits, which were "
+            "withdrawals, and which you're not sure about yet. The uncertainty itself is worth noting; it "
+            "usually means you already suspect the answer."
+        ),
+    },
+    "2026-10-28": {
+        "title": "Teaching the Five Axioms to Someone New — Where Do They Push Back?",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Explain the five axioms to someone newer to your tribe this week, in your own words, and pay "
+            "close attention to where they push back or ask a genuinely hard question. Their resistance "
+            "usually lands exactly where the axiom is hardest to actually apply, not where it's hardest to "
+            "understand. That friction point is more useful than any polished explanation you could give."
+        ),
+    },
+    "2026-10-29": {
+        "title": "The Battlefield Map Exercise: Where Are You Actually Positioned Right Now?",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "Take fifteen minutes to sketch where your business actually sits on the networked, "
+            "exponential, orchestrated battlefield — not where the strategy deck says you're headed. Most "
+            "leaders can describe the destination fluently and struggle to name their current coordinates. "
+            "The gap between the two is usually where the real risk is hiding, not in the destination "
+            "itself."
+        ),
+    },
+    "2026-10-30": {
+        "title": "The Chain of Command That Slows You Down That Nobody Questions",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Every organization has at least one approval step that exists because it once mattered and now "
+            "just adds latency nobody's willing to challenge, because removing it looks like a risk even "
+            "though keeping it is a cost every single day. Name that step in your own operation. If you "
+            "can't name one immediately, that's worth investigating harder, not treating as good news."
+        ),
+    },
+    "2026-10-31": {
+        "title": "Holding Two Contradictory Truths at Once — A Real Example This Week",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "NEO-era leadership regularly requires holding two things that feel contradictory — moving fast "
+            "and being careful, trusting your tribe and verifying outcomes — without collapsing into either "
+            "extreme for comfort. Name one place this week where you're holding a genuine contradiction "
+            "like that, rather than quietly resolving it by favoring the easier side."
+        ),
+    },
+    "2026-11-01": {
+        "title": "Fear as Information About What You Actually Value",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "The specific shape of a fear — what exactly you're afraid of losing — is usually a more honest "
+            "map of what you actually value than any values statement you'd write on purpose. Take a fear "
+            "you're currently carrying and ask what it reveals about your real priorities, not your stated "
+            "ones. Fear as data doesn't just help you decide; it tells you something true about yourself "
+            "first."
+        ),
+    },
+    "2026-11-02": {
+        "title": "Count the Decisions AI Touched This Week — Then Count How Many You'd Defend in Writing",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Force multiplication is easy to praise in the abstract and hard to audit in practice, so make "
+            "it concrete: tally every decision this week where AI output shaped the outcome, then ask how "
+            "many of those you'd be willing to defend, in writing, with your name on it. The gap between "
+            "the two numbers is your real exposure — not a hypothetical risk, but the actual distance "
+            "between what you're amplifying and what you'd stand behind."
+        ),
+    },
+    "2026-11-03": {
+        "title": "The Compounding Tribe: What's Actually Compounding, and What's Just Accumulating?",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Trust compounds when each interaction makes the next one easier and cheaper — but plenty of "
+            "activity just accumulates without ever compounding, adding hours without ever adding leverage. "
+            "Look at what your tribe has built over the last quarter and separate the two: what's making "
+            "next quarter faster, and what's just more of the same effort repeated. Only one of those is "
+            "actually the asset the tribe model promises."
+        ),
+    },
+    "2026-11-04": {
+        "title": "The Gap Between What You Know and What You Practice",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Knowledge accumulates fast in a programme like this one — practice doesn't, and the two are "
+            "easy to confuse right up until a real decision exposes the difference. Pick the single idea "
+            "from this course you'd most confidently explain to someone else, and then ask when you last "
+            "actually applied it, specifically, under real stakes. The explaining is not the possessing."
+        ),
+    },
+    "2026-11-05": {
+        "title": "The Three Patterns in Your Last Conflict — Who Played Which Role?",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "Every real conflict in a tribe has all three patterns present at once, usually without anyone "
+            "naming them: someone extracting a short-term win, someone absorbing cost quietly to hold the "
+            "system together, and someone going along to avoid the friction of choosing a side. Replay your "
+            "most recent real conflict and cast the three roles honestly, including your own. The pattern "
+            "you played is more informative than the outcome."
+        ),
+    },
+    "2026-11-06": {
+        "title": "Revisit Your Last Manifesto Commitment — Did You Actually Run the Experiment?",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "Ninety days is long enough to forget a commitment was ever made and short enough that the "
+            "person you told it to probably hasn't. Go back to the last specific commitment you wrote down "
+            "under this chapter's exercise and score yourself against it, out loud, to the person who "
+            "witnessed it. The re-scoring is the actual manifesto — the writing was just the opening move."
+        ),
+    },
+    "2026-11-07": {
+        "title": "Does Your Standard Hold When You're Rushed, or Only When You Have Time?",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "A standard you only maintain when there's time to spare isn't a standard — it's a preference "
+            "that happens to survive easy conditions. Think of your next genuinely rushed deadline this "
+            "week and decide, in advance, which specific standard you will not compromise no matter how "
+            "tight the timeline gets. Craft is measured under pressure, not in the calm weeks when holding "
+            "it costs nothing."
+        ),
+    },
+    "2026-11-08": {
+        "title": "Delegation as a Test of Which Philosophy You Actually Trust",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "What you delegate, and how much latitude you give the person you delegate to, is a better "
+            "test of your real operating philosophy than anything you'd say in an interview. Notice the "
+            "next decision you're tempted to keep tightly controlled and ask whether you're protecting "
+            "quality, or just protecting the credit. The trader delegates because the system is "
+            "trustworthy. The prince delegates only the parts that can't be blamed on him."
+        ),
+    },
+    "2026-11-09": {
+        "title": "What Would the Perfect Merchant Have Refused This Quarter That You Didn't?",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "Every quarter carries at least one deal, hire, or shortcut that got taken because refusing it "
+            "looked expensive in the moment — even though a genuinely principled operator would have walked "
+            "away. Name that one thing from this quarter, specifically, not in the abstract. The perfect "
+            "merchant isn't defined by the deals taken; it's defined by the one that got refused when "
+            "refusing it was inconvenient."
+        ),
+    },
 }
 
 
@@ -2862,6 +3518,39 @@ TALI_STEPS = {
             "what a processed fear looks like once it's built into a decision instead of denied by one. The "
             "Vanguard move: before your tribe's next AI prompt, write down what you're actually afraid of in "
             "one sentence. If you can't, you haven't processed it — you're about to prompt from it instead."
+        ),
+    },
+
+    "2026-09-11": {
+        "step": "AI as Force Multiplier — The Five-Question Test",
+        "title": "Test After, Not Before",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503726185168908288/",
+        "focus": (
+            "Chapter 9 asks you to run the five-question test after deployment, not before: did the AI tool "
+            "you shipped forge the essence you want, amplified, or did it just quietly spend reputational "
+            "capital while amplifying busyness? Anthropic's own economic model makes the same point at "
+            "national scale — AI could push GDP up 32% by 2030 in its extreme scenario, but knowledge-worker "
+            "wages could fall over 10% in that same scenario, proof that force multiplication amplifies "
+            "whatever direction you already pointed it in. Dr. Tali's 'Recipe to build a website in 2 hours' "
+            "post is the five-question test in miniature — a specific, checkable claim about what got "
+            "amplified, not a vague promise."
+        ),
+        "question": (
+            "Chapter 9 asks you to run the five-question test on an AI tool after it's deployed, not before "
+            "— did it forge the essence you wanted, amplified, or did it just amplify busyness? Anthropic's "
+            "own economic model shows AI could add trillions to GDP while cutting knowledge-worker wages in "
+            "the very same scenario. Pick the last AI tool your tribe actually shipped: which of the five "
+            "questions would it fail if you ran the test honestly right now?"
+        ),
+        "model_answer": (
+            "Most teams run the five-question test at the pitch stage, when everyone's incentivized to answer "
+            "yes — the real test is after deployment, when the tool's actual effects are visible instead of "
+            "promised. Anthropic's GDP scenarios make the stakes concrete: the extreme scenario isn't the one "
+            "where AI fails, it's the one where AI succeeds at scale and still leaves knowledge workers over "
+            "10% worse off on wages, because force multiplication was never guaranteed to point in a "
+            "direction that helps the people using it. The Vanguard move: take the AI tool you shipped last "
+            "week and answer honestly — did it build reputational capital or quietly spend it, and would you "
+            "have given the same answer in the proposal meeting?"
         ),
     },
 
@@ -5481,8 +6170,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Qualcomm signed a multi-generation AI chip partnership with Amazon, issuing warrants worth up to $4 billion tied to as much as $60 billion in future AI inference chip purchases",
-    "source": "CNBC",
+    "headline": "Anthropic released an interactive model showing AI could push 2030 US GDP to $44.4 trillion — 32.4% above baseline — in its extreme scenario, while knowledge-worker wages fall more than 10% in that same scenario as capital's share of income rises from 40% to nearly 55%",
+    "source": "Anthropic",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -5545,6 +6234,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Qualcomm signed a multi-generation AI chip partnership with Amazon, issuing warrants worth up to $4 billion tied to as much as $60 billion in future AI inference chip purchases",
         "source": "CNBC",
         "url": "https://www.cnbc.com/2026/09/08/qualcomm-amazon-data-center-infrastructure-deal.html",
+    },
+    "2026-09-11": {
+        "headline": "Anthropic released an interactive model showing AI could push 2030 US GDP to $44.4 trillion — 32.4% above baseline — in its extreme scenario, while knowledge-worker wages fall more than 10% in that same scenario as capital's share of income rises from 40% to nearly 55%",
+        "source": "Anthropic",
+        "url": "https://www.anthropic.com/institute/econ-scenarios",
     },
 }
 
