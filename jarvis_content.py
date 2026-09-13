@@ -3554,6 +3554,40 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-14": {
+        "step": "The Three Patterns — Wolf, Sheepdog, Sheep",
+        "title": "Name the Sheep Moment",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504103403690819584/",
+        "focus": (
+            "Chapter 12 names three patterns running simultaneously in every tribe: wolves optimize for "
+            "visible wins that become hidden costs, sheepdogs optimize for invisible wins — the disaster "
+            "that never happened, and sheep aren't a problem to fix, they need direction and safety to "
+            "contribute. GreyNoise's report on AI agents compromising 395 organizations in hours is wolf "
+            "behavior at machine speed — extractive, fast, and only structural once the reputational cost "
+            "lands. Dr. Tali's post asks the sharper personal question: what does it actually cost me — "
+            "because the sheep pattern is the one nobody wants to admit they're running."
+        ),
+        "question": (
+            "Chapter 12 argues the sheep pattern is the quietest of the three because it looks like "
+            "cooperation — going along with a decision you privately doubt because objecting costs more "
+            "than compliance in the moment. GreyNoise just showed how fast wolf behavior moves once nobody's "
+            "holding the line — 11 organizations compromised in 26 seconds. Name one recent decision in "
+            "your tribe where you personally played the sheep — what did staying quiet actually cost?"
+        ),
+        "model_answer": (
+            "The wolf and sheepdog patterns get all the attention because they're visible — one is loud "
+            "and extractive, the other is loud and protective. The sheep pattern is invisible by design: "
+            "it's every meeting where you nodded at a decision you didn't actually believe in, because the "
+            "cost of objecting in that moment felt higher than the cost of going along. GreyNoise's PaperCut "
+            "campaign is what happens when nobody's playing sheepdog at scale — a criminal's AI agents "
+            "went from empty workspace to domain admin in under six hours, compromising organizations in "
+            "seconds once launched, because the perimeter had no one actually holding it. The Vanguard move: "
+            "name the specific decision where you played sheep this month, then ask what it would have cost "
+            "you to say the uncomfortable thing instead — because that cost is usually smaller than the "
+            "one compounding quietly right now."
+        ),
+    },
+
 
 
 
@@ -6158,9 +6192,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/pulse/ai-agents-built-tribe-drazen-kapusta-ifhce/",
-    "title": "The AI Agents Built a Tribe",
-    "description": "Topic and URL given directly by Nardus for 1 Sept; carried forward unchanged for 2 Sept (no new post given). Headline now displayed as visible text in the briefing per Nardus's 2 Sept feedback.",
+    "url": "https://www.linkedin.com/events/7504486127333056512/",
+    "title": "CDayZ \u2013 AI eXperience & Networking \u00b7 Zadar",
+    "description": "Updated 14 Sept per Nardus's literal B50/B51 override (previously 'The AI Agents Built a Tribe', given 1 Sept and carried forward unchanged since).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6170,8 +6204,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic released an interactive model showing AI could push 2030 US GDP to $44.4 trillion — 32.4% above baseline — in its extreme scenario, while knowledge-worker wages fall more than 10% in that same scenario as capital's share of income rises from 40% to nearly 55%",
-    "source": "Anthropic",
+    "headline": "GreyNoise traced a likely Russian-speaking threat actor using hundreds of AI agents — built on OpenAI's Codex harness and a DeepSeek model — to compromise at least 440 PaperCut instances across 395 organizations in 48 countries, going from an empty workspace to remote code execution in under four hours and compromising 11 organizations in 26 seconds at peak",
+    "source": "GreyNoise",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6239,6 +6273,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic released an interactive model showing AI could push 2030 US GDP to $44.4 trillion — 32.4% above baseline — in its extreme scenario, while knowledge-worker wages fall more than 10% in that same scenario as capital's share of income rises from 40% to nearly 55%",
         "source": "Anthropic",
         "url": "https://www.anthropic.com/institute/econ-scenarios",
+    },
+    "2026-09-14": {
+        "headline": "GreyNoise traced a likely Russian-speaking threat actor using hundreds of AI agents — built on OpenAI's Codex harness and a DeepSeek model — to compromise at least 440 PaperCut instances across 395 organizations in 48 countries, going from an empty workspace to remote code execution in under four hours and compromising 11 organizations in 26 seconds at peak",
+        "source": "GreyNoise",
+        "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
     },
 }
 

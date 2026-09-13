@@ -173,6 +173,7 @@ def build_briefing():
 "2026-09-09": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503058454434070528/"},
 "2026-09-10": {"quote": "\U0001f4c4 <b>Frontier AI Safety</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503323890379579392/"},
 "2026-09-11": {"quote": "\U0001f4c4 <b>Recipe to build a website in 2 hours</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503726185168908288/"},
+"2026-09-14": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗮𝗰𝘁𝘂𝗮𝗹𝗹𝘆 𝗰𝗼𝘀𝘁 𝗺𝗲?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504103403690819584/"},
     }
 
     lines = []
@@ -275,6 +276,7 @@ def build_briefing():
         "2026-09-09": "OpenAI's own people reportedly knew about a rogue-agent incident for weeks and were pressured to stay quiet — until an outside researcher forced the disclosure. What's the one uncomfortable thing your tribe already knows and hasn't said out loud yet — and what's it costing you to wait for someone else to say it first?",
         "2026-09-10": "Chapter 8's move is an order of operations: process the fear first, then prompt — reversed, panic just gets amplified at machine speed. Qualcomm just signed a $60B bet with Amazon, confidence built on vesting terms that price the risk in rather than pretend it away. What's the last AI decision your tribe made from unprocessed fear, not processed clarity?",
         "2026-09-11": "Chapter 9’s test only works after deployment: did the AI tool your tribe shipped last week forge the essence you want, amplified — or did it just amplify busyness? Anthropic’s own economic model says AI could push GDP up 32% by 2030 while cutting knowledge-worker wages 10% in the same scenario — force multiplication cuts both ways. Which AI tool has your tribe deployed that you haven’t tested against what it was supposed to amplify?",
+        "2026-09-14": "GreyNoise clocked a criminal’s AI agents compromising 11 organizations in 26 seconds — wolves move that fast when nobody’s sheepdogging the perimeter. Chapter 12’s harder question isn’t about wolves though: it’s about sheep — the decision you personally went along with even though you doubted it, because objecting cost more than compliance did in the moment. What did staying quiet actually cost your tribe?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
