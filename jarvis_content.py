@@ -3588,6 +3588,37 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-15": {
+        "step": "The Sheepdog Manifesto — Witnessed Commitment",
+        "title": "Name It, Date It, Tell Someone",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505157858104176641/",
+        "focus": (
+            "Chapter 13 argues a manifesto only counts once it stops being private and becomes a dated "
+            "commitment someone else knows about. Amodei's essay does exactly that in public: a specific, "
+            "falsifiable commitment — permanent employee-level access for third-party evaluators — "
+            "published where Altman and Musk had to either agree or stay silent, and both chose to agree "
+            "within hours. Dr. Tali's 'Lumina Agents' post is the same discipline scaled down to one person: "
+            "name the thing, put it where someone can check it."
+        ),
+        "question": (
+            "Chapter 13 argues an unwitnessed commitment is just a preference with better branding — it "
+            "only counts once it's dated and someone else knows about it. Amodei's essay did exactly that: "
+            "one specific commitment, published publicly, with Altman and Musk forced to respond within "
+            "hours. Pick one axiom your tribe runs inconsistently — what's the exact behavior you'd "
+            "change, and who would you tell today, not eventually?"
+        ),
+        "model_answer": (
+            "Most commitments die quietly because they never leave the privacy of your own head — you "
+            "decide something in the shower and by lunch it's already negotiable again. Amodei's essay is "
+            "the opposite structure: a specific, checkable claim, a public timestamp, and two of his biggest "
+            "competitors forced to either match it or explain why not — both chose to match it within "
+            "hours, because a witnessed commitment carries a cost to breaking that a private one never does. "
+            "The Vanguard move: pick the axiom you run inconsistently, write the exact behavior change and a "
+            "date ninety days out, and send it to one person before you close this app — not because "
+            "they'll enforce it, but because now it costs something to quietly let it slide."
+        ),
+    },
+
 
 
 
@@ -6204,8 +6235,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "GreyNoise traced a likely Russian-speaking threat actor using hundreds of AI agents — built on OpenAI's Codex harness and a DeepSeek model — to compromise at least 440 PaperCut instances across 395 organizations in 48 countries, going from an empty workspace to remote code execution in under four hours and compromising 11 organizations in 26 seconds at peak",
-    "source": "GreyNoise",
+    "headline": "Anthropic CEO Dario Amodei published a 3,900-word essay calling for the AI industry to slow down, committing Anthropic unilaterally to giving third-party evaluators permanent, employee-level access to verify its safety measures — within hours, OpenAI's Sam Altman and Elon Musk both publicly endorsed the call",
+    "source": "Dario Amodei",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6278,6 +6309,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "GreyNoise traced a likely Russian-speaking threat actor using hundreds of AI agents — built on OpenAI's Codex harness and a DeepSeek model — to compromise at least 440 PaperCut instances across 395 organizations in 48 countries, going from an empty workspace to remote code execution in under four hours and compromising 11 organizations in 26 seconds at peak",
         "source": "GreyNoise",
         "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
+    },
+    "2026-09-15": {
+        "headline": "Anthropic CEO Dario Amodei published a 3,900-word essay calling for the AI industry to slow down, committing Anthropic unilaterally to giving third-party evaluators permanent, employee-level access to verify its safety measures — within hours, OpenAI's Sam Altman and Elon Musk both publicly endorsed the call",
+        "source": "Dario Amodei",
+        "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
     },
 }
 
