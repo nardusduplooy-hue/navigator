@@ -3619,6 +3619,37 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-16": {
+        "step": "Shokunin Discipline — The Ten-Thousandth Rep",
+        "title": "Do It Once Like It Still Matters",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505566625849356288/",
+        "focus": (
+            "Chapter 1 argues shokunin mastery isn't built on novelty — it's the same disciplined thing "
+            "done thousands of times with undiminished attention, the opposite of how most operators treat "
+            "routine work once it stops being new. Trump's response to Amodei's pacing call was pure "
+            "velocity — 'whoever wins AI wins' — the exact orientation the chapter warns against: "
+            "optimizing for speed at the expense of the attention that actually compounds. Dr. Tali's post is "
+            "the quieter counter-example: a specific claim that only works if someone actually did the "
+            "unglamorous work of building it that way."
+        ),
+        "question": (
+            "Chapter 1 argues shokunin mastery is built by treating your ten-thousandth rep like your first "
+            "— the opposite of Trump's 'whoever wins AI wins' framing, which treats speed itself as the "
+            "whole argument. Name the task in your role that's become purely mechanical. What would it look "
+            "like to do it once this week as if it still mattered?"
+        ),
+        "model_answer": (
+            "The craft isn't in the hard problems — anyone pays attention to the hard problem, because "
+            "it's still new and still scary. The craft is in the ten-thousandth rep of the easy thing, the "
+            "report you've written two hundred times, the client call you could do half-asleep — because "
+            "that's exactly where attention quietly goes slack and nobody notices until the quality has "
+            "already drifted. Trump's 'whoever wins AI wins' is the industrial-scale version of the same "
+            "failure: optimizing for who moves fastest, not who's still paying attention at rep ten "
+            "thousand. The Vanguard move: pick the one task you've gone mechanical on, and do it once this "
+            "week with the same care you gave it the first time — then notice what you'd stopped seeing."
+        ),
+    },
+
 
 
 
@@ -6235,8 +6266,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic CEO Dario Amodei published a 3,900-word essay calling for the AI industry to slow down, committing Anthropic unilaterally to giving third-party evaluators permanent, employee-level access to verify its safety measures — within hours, OpenAI's Sam Altman and Elon Musk both publicly endorsed the call",
-    "source": "Dario Amodei",
+    "headline": "President Trump publicly rejected Dario Amodei's call to slow AI development, saying ‘whoever wins AI wins’ and warning against ceding ground to China, while China's Foreign Ministry and state media dismissed the warnings as ‘fear mongering’ and a ‘self-serving’ bid to contain Chinese AI development",
+    "source": "CNBC",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6314,6 +6345,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic CEO Dario Amodei published a 3,900-word essay calling for the AI industry to slow down, committing Anthropic unilaterally to giving third-party evaluators permanent, employee-level access to verify its safety measures — within hours, OpenAI's Sam Altman and Elon Musk both publicly endorsed the call",
         "source": "Dario Amodei",
         "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+    },
+    "2026-09-16": {
+        "headline": "President Trump publicly rejected Dario Amodei's call to slow AI development, saying ‘whoever wins AI wins’ and warning against ceding ground to China, while China's Foreign Ministry and state media dismissed the warnings as ‘fear mongering’ and a ‘self-serving’ bid to contain Chinese AI development",
+        "source": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
     },
 }
 

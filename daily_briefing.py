@@ -175,6 +175,7 @@ def build_briefing():
 "2026-09-11": {"quote": "\U0001f4c4 <b>Recipe to build a website in 2 hours</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7503726185168908288/"},
 "2026-09-14": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗮𝗰𝘁𝘂𝗮𝗹𝗹𝘆 𝗰𝗼𝘀𝘁 𝗺𝗲?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504103403690819584/"},
 "2026-09-15": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505157858104176641/"},
+"2026-09-16": {"quote": "\U0001f4c4 𝗧𝗵𝗲 𝗖𝘂𝗿𝗮𝘁𝗼𝗿 𝗻𝗼𝘄 𝗵𝗮𝘀 𝗶𝘁𝘀 𝗼𝘄𝗻 𝘄𝗲𝗯𝘀𝗶𝘁𝗲, 𝗮𝗻𝗱 𝗶𝘁𝘀 𝗳𝗿𝗼𝗻𝘁 𝗱𝗼𝗼𝗿 𝗶𝘀 𝗮 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗮𝘁𝗶𝗼𝗻, 𝗻𝗼𝘁 𝗮 𝗽𝗮𝗿𝗮𝗴𝗿𝗮𝗽𝗵.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505566625849356288/"},
     }
 
     lines = []
@@ -279,6 +280,7 @@ def build_briefing():
         "2026-09-11": "Chapter 9’s test only works after deployment: did the AI tool your tribe shipped last week forge the essence you want, amplified — or did it just amplify busyness? Anthropic’s own economic model says AI could push GDP up 32% by 2030 while cutting knowledge-worker wages 10% in the same scenario — force multiplication cuts both ways. Which AI tool has your tribe deployed that you haven’t tested against what it was supposed to amplify?",
         "2026-09-14": "GreyNoise clocked a criminal’s AI agents compromising 11 organizations in 26 seconds — wolves move that fast when nobody’s sheepdogging the perimeter. Chapter 12’s harder question isn’t about wolves though: it’s about sheep — the decision you personally went along with even though you doubted it, because objecting cost more than compliance did in the moment. What did staying quiet actually cost your tribe?",
         "2026-09-15": "Amodei didn’t just think the AI industry should slow down — he wrote 3,900 words, named the specific commitment (third-party evaluators, employee-level access), and published it where Altman and Musk could publicly agree within hours. Chapter 13’s whole point is that an unwitnessed commitment is just a preference with better branding. What axiom does your tribe run inconsistently that you’d actually write down and tell someone today?",
+        "2026-09-16": "Trump’s answer to ‘should AI slow down’ was ‘whoever wins AI wins’ — speed as the whole argument. Chapter 1 makes the opposite case: mastery isn’t built on speed, it’s built on treating your ten-thousandth rep with the same attention as your first. Name the task in your role that’s gone purely mechanical — what would it look like to do it once this week like it still mattered?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -787,6 +789,7 @@ def build_briefing():
                 "2026-09-03": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
                 "2026-09-04": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
 "2026-09-05": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501571013474922496/"},
+                "2026-09-16": {"quote": "\U0001f4c4 <b>Two AI stories on X this week are actually one story.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505499278082101249/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
