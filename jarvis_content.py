@@ -3650,6 +3650,38 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-17": {
+        "step": "Prince or Trader — Audit the Ratio",
+        "title": "The Post Isn't the Test",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505930993565036547/",
+        "focus": (
+            "Chapter 2 argues it's easy to claim the trader's philosophy in a values statement and run the "
+            "prince's playbook under real pressure, because the prince's moves are faster and look more "
+            "decisive. Zuckerberg's post is a textbook trader claim — trust and alignment will be the "
+            "competitive differentiator, no mandate required — but the honest test isn't the post, it's "
+            "the ratio of his last ten hard calls. Dr. Tali's 'Every Product needs a home' post makes the "
+            "same point at a smaller scale: a claim only counts once it's actually built somewhere, not just "
+            "stated."
+        ),
+        "question": (
+            "Chapter 2 argues the philosophy you state and the philosophy you run under pressure are usually "
+            "different things — the prince's moves are just faster and look more decisive. Zuckerberg "
+            "just staked Meta's whole position on trust as the differentiator, no mandate needed. Go through "
+            "your own last ten genuinely hard calls: extraction or trust-building, short-term optics or "
+            "long-term ledger? What's the actual ratio?"
+        ),
+        "model_answer": (
+            "Every values statement claims the trader's philosophy, because nobody writes 'we optimize for "
+            "short-term extraction' into a mission statement — the tell is never the statement, it's what "
+            "happens when a hard call forces a choice between the two. Zuckerberg's argument is that market "
+            "pressure will do the enforcing for him: labs that don't build trust will lose users to labs that "
+            "do. That might be true eventually, but it's also exactly what a prince says while making prince "
+            "moves, because the trader's philosophy is cheap to claim and expensive to run when a deadline is "
+            "bearing down. The Vanguard move: skip your own values statement and go straight to your last ten "
+            "hard calls. Count them honestly. The ratio is the only philosophy that was actually operating."
+        ),
+    },
+
 
 
 
@@ -6266,8 +6298,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "President Trump publicly rejected Dario Amodei's call to slow AI development, saying ‘whoever wins AI wins’ and warning against ceding ground to China, while China's Foreign Ministry and state media dismissed the warnings as ‘fear mongering’ and a ‘self-serving’ bid to contain Chinese AI development",
-    "source": "CNBC",
+    "headline": "Meta CEO Mark Zuckerberg publicly pushed back against Dario Amodei's call to slow AI development, arguing in a post on X that market incentives and legal liability — not a coordinated industry pact — are the right way to manage AI's risks, saying 'any lab that doesn't focus on alignment will fall behind'",
+    "source": "AFP",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6350,6 +6382,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "President Trump publicly rejected Dario Amodei's call to slow AI development, saying ‘whoever wins AI wins’ and warning against ceding ground to China, while China's Foreign Ministry and state media dismissed the warnings as ‘fear mongering’ and a ‘self-serving’ bid to contain Chinese AI development",
         "source": "CNBC",
         "url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
+    },
+    "2026-09-17": {
+        "headline": "Meta CEO Mark Zuckerberg publicly pushed back against Dario Amodei's call to slow AI development, arguing in a post on X that market incentives and legal liability — not a coordinated industry pact — are the right way to manage AI's risks, saying 'any lab that doesn't focus on alignment will fall behind'",
+        "source": "AFP",
+        "url": "https://www.freemalaysiatoday.com/category/business/2026/09/16/meta-chief-pushes-back-on-ai-slowdown-calls",
     },
 }
 

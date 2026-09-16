@@ -176,6 +176,7 @@ def build_briefing():
 "2026-09-14": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁 𝗱𝗼𝗲𝘀 𝗶𝘁 𝗮𝗰𝘁𝘂𝗮𝗹𝗹𝘆 𝗰𝗼𝘀𝘁 𝗺𝗲?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7504103403690819584/"},
 "2026-09-15": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505157858104176641/"},
 "2026-09-16": {"quote": "\U0001f4c4 𝗧𝗵𝗲 𝗖𝘂𝗿𝗮𝘁𝗼𝗿 𝗻𝗼𝘄 𝗵𝗮𝘀 𝗶𝘁𝘀 𝗼𝘄𝗻 𝘄𝗲𝗯𝘀𝗶𝘁𝗲, 𝗮𝗻𝗱 𝗶𝘁𝘀 𝗳𝗿𝗼𝗻𝘁 𝗱𝗼𝗼𝗿 𝗶𝘀 𝗮 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗮𝘁𝗶𝗼𝗻, 𝗻𝗼𝘁 𝗮 𝗽𝗮𝗿𝗮𝗴𝗿𝗮𝗽𝗵.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505566625849356288/"},
+"2026-09-17": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505930993565036547/"},
     }
 
     lines = []
@@ -281,6 +282,7 @@ def build_briefing():
         "2026-09-14": "GreyNoise clocked a criminal’s AI agents compromising 11 organizations in 26 seconds — wolves move that fast when nobody’s sheepdogging the perimeter. Chapter 12’s harder question isn’t about wolves though: it’s about sheep — the decision you personally went along with even though you doubted it, because objecting cost more than compliance did in the moment. What did staying quiet actually cost your tribe?",
         "2026-09-15": "Amodei didn’t just think the AI industry should slow down — he wrote 3,900 words, named the specific commitment (third-party evaluators, employee-level access), and published it where Altman and Musk could publicly agree within hours. Chapter 13’s whole point is that an unwitnessed commitment is just a preference with better branding. What axiom does your tribe run inconsistently that you’d actually write down and tell someone today?",
         "2026-09-16": "Trump’s answer to ‘should AI slow down’ was ‘whoever wins AI wins’ — speed as the whole argument. Chapter 1 makes the opposite case: mastery isn’t built on speed, it’s built on treating your ten-thousandth rep with the same attention as your first. Name the task in your role that’s gone purely mechanical — what would it look like to do it once this week like it still mattered?",
+        "2026-09-17": "Zuckerberg’s pitch is pure trader philosophy — alignment and trust will be the competitive differentiator, no mandate needed. Chapter 2’s test isn’t the post though: it’s whether your last ten hard calls back it up. Meta delayed Muse for safety, but also just settled years of liability lawsuits over addictive design. Go through your own last ten hard calls — extraction or trust-building? The ratio is the real answer.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
