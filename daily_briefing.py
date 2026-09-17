@@ -177,6 +177,7 @@ def build_briefing():
 "2026-09-15": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505157858104176641/"},
 "2026-09-16": {"quote": "\U0001f4c4 𝗧𝗵𝗲 𝗖𝘂𝗿𝗮𝘁𝗼𝗿 𝗻𝗼𝘄 𝗵𝗮𝘀 𝗶𝘁𝘀 𝗼𝘄𝗻 𝘄𝗲𝗯𝘀𝗶𝘁𝗲, 𝗮𝗻𝗱 𝗶𝘁𝘀 𝗳𝗿𝗼𝗻𝘁 𝗱𝗼𝗼𝗿 𝗶𝘀 𝗮 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗮𝘁𝗶𝗼𝗻, 𝗻𝗼𝘁 𝗮 𝗽𝗮𝗿𝗮𝗴𝗿𝗮𝗽𝗵.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505566625849356288/"},
 "2026-09-17": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505930993565036547/"},
+"2026-09-18": {"quote": "\U0001f4c4 <b>Lumina agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506264921656107008/"},
     }
 
     lines = []
@@ -283,6 +284,7 @@ def build_briefing():
         "2026-09-15": "Amodei didn’t just think the AI industry should slow down — he wrote 3,900 words, named the specific commitment (third-party evaluators, employee-level access), and published it where Altman and Musk could publicly agree within hours. Chapter 13’s whole point is that an unwitnessed commitment is just a preference with better branding. What axiom does your tribe run inconsistently that you’d actually write down and tell someone today?",
         "2026-09-16": "Trump’s answer to ‘should AI slow down’ was ‘whoever wins AI wins’ — speed as the whole argument. Chapter 1 makes the opposite case: mastery isn’t built on speed, it’s built on treating your ten-thousandth rep with the same attention as your first. Name the task in your role that’s gone purely mechanical — what would it look like to do it once this week like it still mattered?",
         "2026-09-17": "Zuckerberg’s pitch is pure trader philosophy — alignment and trust will be the competitive differentiator, no mandate needed. Chapter 2’s test isn’t the post though: it’s whether your last ten hard calls back it up. Meta delayed Muse for safety, but also just settled years of liability lawsuits over addictive design. Go through your own last ten hard calls — extraction or trust-building? The ratio is the real answer.",
+        "2026-09-18": "OpenAI just put ads inside ChatGPT — Sponsored Agents that run in the same interface users go to for independent answers. Chapter 3’s test isn’t whether that works commercially: it’s whether OpenAI is serving a real need or extracting from the trust relationship it spent years building. Before your next significant client interaction, decide which version you’re running — and check afterward whether you actually ran it.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -339,13 +341,31 @@ def build_briefing():
                     "We look forward to learning, exploring, and building on these ideas together.</blockquote>"
                 )
                 lines.append("")
-            elif date_key >= "2026-09-06":
-                # Estimated date given by Nardus 9 Sep for the 10 Sep briefing — no
-                # confirmed Zoom link/meeting ID yet, so none is invented here. Update
-                # with the real link/ID once Nardus provides it, and revisit this branch
-                # once 19 Sep passes so it doesn't go stale.
+            elif "2026-09-06" <= date_key <= "2026-09-18":
+                # Confirmed Zoom details provided by Nardus 18 Sep for the 19 Sep session.
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-                lines.append("<i>Estimated Saturday 19 September 2026 — details to follow</i>")
+                lines.append("<i>New Series of Lectures</i>")
+                lines.append("Cotrugli is inviting you to a scheduled Zoom meeting.")
+                lines.append("\u2022 \U0001f5d3 Saturday 19 September 2026 @ 17:00 CET")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/28/?wwm1&mi=83494076631'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 834 9407 6631 | <b>Passcode:</b> 938637")
+                lines.append("We look forward to learning, exploring, and building on these ideas together.")
+                lines.append("")
+            elif date_key == "2026-09-19":
+                lines.append(
+                    "<blockquote>📅 <b>NEXT ZOOM SESSION — TODAY</b>\n"
+                    "<i>New Series of Lectures</i>\n"
+                    "Cotrugli is inviting you to a scheduled Zoom meeting.\n"
+                    "\u2022 \U0001f5d3 Today, Saturday 19 September 2026 @ 17:00 CET\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/28/?wwm1&mi=83494076631'>\u2192 Join Zoom Meeting</a>\n"
+                    "<b>Meeting ID:</b> 834 9407 6631 | <b>Passcode:</b> 938637\n"
+                    "We look forward to learning, exploring, and building on these ideas together.</blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-09-20":
+                # Revisit once next session details are confirmed.
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>Watch this space — details for the next session to follow</i>")
                 lines.append("")
             elif date_key >= "2026-07-12":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")

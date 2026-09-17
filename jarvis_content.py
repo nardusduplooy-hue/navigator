@@ -3682,6 +3682,40 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-18": {
+        "step": "The Perfect Merchant for the NEO Era — Service or Extraction",
+        "title": "Decide Before the Interaction",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506264921656107008/",
+        "focus": (
+            "Chapter 3 argues the perfect merchant treats commerce as service to a real need, not as an "
+            "opportunity to extract the maximum the market will bear — and the difference is invisible in "
+            "the pitch but obvious in the outcome a year later. OpenAI's Sponsored Agents put ads inside "
+            "ChatGPT — the same interface users trust for independent answers — and the service-or-"
+            "extraction question is live the moment you decide whether that monetizes a trust relationship "
+            "or deepens it. Dr. Tali's 'Lumina agents' post is the same discipline in a different register: "
+            "a specific product decision that either serves a real need or extracts from the relationship."
+        ),
+        "question": (
+            "Chapter 3 says the perfect merchant decides in advance which version they're running — "
+            "service or extraction — and checks their own behavior afterward. OpenAI just put ads inside "
+            "ChatGPT using the trust relationship its users built with the tool for independent answers. "
+            "Before your next significant client interaction, which version are you actually planning to "
+            "run — and how will you check afterward whether you ran it?"
+        ),
+        "model_answer": (
+            "Most people discover the service-or-extraction gap only when someone else points it out first "
+            "— the pitch felt like service, the outcome a year later looked like extraction, and there "
+            "was no decision point in between because there was no decision made in advance. OpenAI's "
+            "Sponsored Agents is the large-scale version of the same question: the company spent years "
+            "building a trust relationship with users as a tool for independent answers, and the moment "
+            "that relationship becomes an ad delivery surface, the extraction reading is available whether "
+            "or not OpenAI intends it. The Vanguard move: before your next significant client interaction, "
+            "write down in one sentence which version you're running — not as a values statement, as a "
+            "commitment. Then check your actual behavior against it afterward. The gap between those two "
+            "is where your tribe's real philosophy lives."
+        ),
+    },
+
 
 
 
@@ -6298,8 +6332,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Meta CEO Mark Zuckerberg publicly pushed back against Dario Amodei's call to slow AI development, arguing in a post on X that market incentives and legal liability — not a coordinated industry pact — are the right way to manage AI's risks, saying 'any lab that doesn't focus on alignment will fall behind'",
-    "source": "AFP",
+    "headline": "OpenAI launched Sponsored Agents on September 16 — ads inside ChatGPT that open a separate business-sponsored conversation when clicked, with HubSpot as its first CRM partner and Shopify as its first ecommerce partner, putting advertising workflows inside the same interface users rely on for independent answers",
+    "source": "Unite.AI",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6387,6 +6421,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Meta CEO Mark Zuckerberg publicly pushed back against Dario Amodei's call to slow AI development, arguing in a post on X that market incentives and legal liability — not a coordinated industry pact — are the right way to manage AI's risks, saying 'any lab that doesn't focus on alignment will fall behind'",
         "source": "AFP",
         "url": "https://www.freemalaysiatoday.com/category/business/2026/09/16/meta-chief-pushes-back-on-ai-slowdown-calls",
+    },
+    "2026-09-18": {
+        "headline": "OpenAI launched Sponsored Agents on September 16 — ads inside ChatGPT that open a separate business-sponsored conversation when clicked, with HubSpot as its first CRM partner and Shopify as its first ecommerce partner, putting advertising workflows inside the same interface users rely on for independent answers",
+        "source": "Unite.AI",
+        "url": "https://www.unite.ai/openai-tests-sponsored-agents-and-rolls-out-ai-tools-for-chatgpt-ads/",
     },
 }
 
