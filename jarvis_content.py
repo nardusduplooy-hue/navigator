@@ -3716,6 +3716,42 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-21": {
+        "step": "Business as Warfare — OODA Loop Audit",
+        "title": "Time the Bottleneck",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506982238413103104/",
+        "focus": (
+            "Chapter 6 argues most delay in the OODA Loop hides in Orient and Decide, not in Observe or "
+            "Act — meaning the bottleneck usually isn't information, it's the internal debate about what "
+            "the information means. Canada and Germany just committed $300M to build a monitoring AI "
+            "(LawZero's Scientist AI) specifically designed to shorten that Orient phase — a transparent-"
+            "reasoning guardrail that helps humans understand what other AIs are doing before the Decide "
+            "step happens. Dr. Tali's 'Every Product needs a home' post is the same insight at a smaller "
+            "scale: the product exists, the home takes orientation to figure out."
+        ),
+        "question": (
+            "Chapter 6 says to take your most significant decision this week and time-audit it through "
+            "Observe-Orient-Decide-Act: how long from noticing something mattered to actually doing "
+            "something about it? Canada and Germany just committed $300M to shorten other AIs' Orient "
+            "phase because they observed that frontier deployment is moving faster than human sensemaking "
+            "can keep up. In your own most significant decision this week — where did the most time "
+            "actually go, and was the delay in Orient, or in Decide?"
+        ),
+        "model_answer": (
+            "Most leaders assume their bottleneck is Observe — they think they don't have enough "
+            "information yet, which is why they wait. The chapter's point is that the information gap "
+            "usually closes fast; what doesn't close is the internal debate about what the information "
+            "means, because Orient is where your mental models, assumptions, and prior experiences all "
+            "argue with each other before a decision is possible. Canada and Germany's $300M bet is "
+            "essentially a public admission that their Orient phase on frontier AI has been too slow — "
+            "they observed the risks building for years, but sensemaking (orientation) didn't produce a "
+            "decision until Amodei's essay and a week of public pressure made the cost of delay visible. "
+            "The Vanguard move: pick the decision that's been sitting in your to-do list longest and ask "
+            "honestly whether it's waiting on information you don't have, or on a debate you haven't "
+            "finished having internally yet. That distinction tells you which part of the loop to shorten."
+        ),
+    },
+
 
 
 
@@ -6332,8 +6368,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI launched Sponsored Agents on September 16 — ads inside ChatGPT that open a separate business-sponsored conversation when clicked, with HubSpot as its first CRM partner and Shopify as its first ecommerce partner, putting advertising workflows inside the same interface users rely on for independent answers",
-    "source": "Unite.AI",
+    "headline": "Canada and Germany announced up to CAD $300M in joint funding for LawZero, a Montreal-based non-profit founded by AI pioneer Yoshua Bengio, to develop Scientist AI — a safe-by-design model that reasons transparently without pursuing its own goals and is intended to serve as a monitoring guardrail for other AI systems",
+    "source": "Globe and Mail",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6426,6 +6462,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI launched Sponsored Agents on September 16 — ads inside ChatGPT that open a separate business-sponsored conversation when clicked, with HubSpot as its first CRM partner and Shopify as its first ecommerce partner, putting advertising workflows inside the same interface users rely on for independent answers",
         "source": "Unite.AI",
         "url": "https://www.unite.ai/openai-tests-sponsored-agents-and-rolls-out-ai-tools-for-chatgpt-ads/",
+    },
+    "2026-09-21": {
+        "headline": "Canada and Germany announced up to CAD $300M in joint funding for LawZero, a Montreal-based non-profit founded by AI pioneer Yoshua Bengio, to develop Scientist AI — a safe-by-design model that reasons transparently without pursuing its own goals and is intended to serve as a monitoring guardrail for other AI systems",
+        "source": "Globe and Mail",
+        "url": "https://www.theglobeandmail.com/business/article-yoshua-bengio-lawzero-receives-300-million-from-canada-germany/",
     },
 }
 

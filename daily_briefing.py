@@ -178,6 +178,7 @@ def build_briefing():
 "2026-09-16": {"quote": "\U0001f4c4 𝗧𝗵𝗲 𝗖𝘂𝗿𝗮𝘁𝗼𝗿 𝗻𝗼𝘄 𝗵𝗮𝘀 𝗶𝘁𝘀 𝗼𝘄𝗻 𝘄𝗲𝗯𝘀𝗶𝘁𝗲, 𝗮𝗻𝗱 𝗶𝘁𝘀 𝗳𝗿𝗼𝗻𝘁 𝗱𝗼𝗼𝗿 𝗶𝘀 𝗮 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗮𝘁𝗶𝗼𝗻, 𝗻𝗼𝘁 𝗮 𝗽𝗮𝗿𝗮𝗴𝗿𝗮𝗽𝗵.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505566625849356288/"},
 "2026-09-17": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505930993565036547/"},
 "2026-09-18": {"quote": "\U0001f4c4 <b>Lumina agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506264921656107008/"},
+"2026-09-21": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506982238413103104/"},
     }
 
     lines = []
@@ -285,6 +286,7 @@ def build_briefing():
         "2026-09-16": "Trump’s answer to ‘should AI slow down’ was ‘whoever wins AI wins’ — speed as the whole argument. Chapter 1 makes the opposite case: mastery isn’t built on speed, it’s built on treating your ten-thousandth rep with the same attention as your first. Name the task in your role that’s gone purely mechanical — what would it look like to do it once this week like it still mattered?",
         "2026-09-17": "Zuckerberg’s pitch is pure trader philosophy — alignment and trust will be the competitive differentiator, no mandate needed. Chapter 2’s test isn’t the post though: it’s whether your last ten hard calls back it up. Meta delayed Muse for safety, but also just settled years of liability lawsuits over addictive design. Go through your own last ten hard calls — extraction or trust-building? The ratio is the real answer.",
         "2026-09-18": "OpenAI just put ads inside ChatGPT — Sponsored Agents that run in the same interface users go to for independent answers. Chapter 3’s test isn’t whether that works commercially: it’s whether OpenAI is serving a real need or extracting from the trust relationship it spent years building. Before your next significant client interaction, decide which version you’re running — and check afterward whether you actually ran it.",
+        "2026-09-21": "Canada and Germany just committed $300M to a monitoring AI designed to shorten the Orient phase of other AIs’ OODA loops — a system that reasons transparently so humans understand what AI is doing before it’s too late to act. Chapter 6’s audit: take your most significant decision this week and time it through Observe-Orient-Decide-Act. Where did the delay actually live?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -388,7 +390,7 @@ def build_briefing():
             if date_key >= "2026-07-03":
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")
-                lines.append("\U0001f3a7 <b>Business as Warfare — Module 1</b>")
+                lines.append("\U0001f3a7 <b>Business as Warfare \u2014 " + ("Module 2" if date_key >= "2026-09-21" else "Module 1") + "</b>")
                 # Podcast links removed 2 Sep onward per Nardus's explicit "remove" flags
                 if date_key < "2026-09-02":
                     lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
@@ -399,8 +401,12 @@ def build_briefing():
                         lines.append("<a href='https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3'>\u2192 Composite Warfare podcast</a>")
                 if date_key >= "2026-08-04":
                     lines.append("")
-                    lines.append("\U0001f4e1 <b>BAW Capstone — Daily Intelligence Sweep</b>")
-                    lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 — track what supports them, what weakens them, and watch the picture shift in real time.")
+                    if date_key >= "2026-09-21":
+                        lines.append("\U0001f4e1 <b>The Commander\u2019s Mindset</b>")
+                        lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 2</a>.")
+                    else:
+                        lines.append("\U0001f4e1 <b>BAW Capstone \u2014 Daily Intelligence Sweep</b>")
+                        lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time.")
                 if date_key == "2026-07-19":
                     lines.append("\u26a0\ufe0f <b>Three actions DUE TODAY, 7pm CET</b> \u2014 full detail at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 1</a>.")
                 elif "2026-07-07" <= date_key <= "2026-07-19":
@@ -737,7 +743,19 @@ def build_briefing():
 
     # MODULE 2 ASSIGNMENT — from 15 June onwards
     if date_key >= "2026-06-15":
-        if date_key >= "2026-07-03":
+        if date_key >= "2026-09-21":
+            lines.append("\U0001f4cb <b>AI in B2B Sales \u2014 Module 3</b>")
+            lines.append("<i>Tribal Architecture</i>")
+            lines.append("<i>Saša Pavlaković</i>")
+            lines.append("\U0001f4fa <b>Recording:</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/tribal-architecture/'>\u2192 Watch here</a>")
+            lines.append("")
+            lines.append("\U0001f4ca <b>Analytics</b> \u2014 own tempo")
+            lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>\u2192 Start here</a>")
+            lines.append("")
+            lines.append("\U0001f9d8 <b>Self Awareness &amp; Personal Enlightenment</b> \u2014 own tempo")
+            lines.append("<a href='https://cotrugli.online/courses/selfawareness-personalenlightenment/'>\u2192 Start here</a>")
+            lines.append("")
+        elif date_key >= "2026-07-03":
             lines.append("\U0001f4cb <b>AI in B2B Sales — Module 2</b>")
             lines.append("<i>Saša Pavlaković</i>")
             lines.append("\U0001f4fa <b>Recording:</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
@@ -852,10 +870,21 @@ def build_briefing():
                     "<i>This week: what did your tribe ship?</i></blockquote>"
                 )
                 lines.append("")
-            elif date_key >= "2026-09-11":
+            elif "2026-09-11" <= date_key < "2026-09-21":
                 lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
                 lines.append(
                     "<blockquote><i>All Chiefs · All Tribes · Sprint 6 in progress</i>\n\n"
+                    "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
+                    "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
+                    "product, for a real market, with real deliverables. More modules will integrate as the "
+                    "programme progresses.\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-09-21":
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 7 in progress</i>\n\n"
                     "The Vanguard Sprint Programme runs across Chasing Jarvis, AI in B2B Sales and Entrepreneurship "
                     "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
                     "product, for a real market, with real deliverables. More modules will integrate as the "
