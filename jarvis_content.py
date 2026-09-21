@@ -3752,6 +3752,42 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-22": {
+        "step": "The NEO Leadership Challenge — Three Simultaneous Demands",
+        "title": "Name the One You’re Neglecting",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/",
+        "focus": (
+            "Chapter 7 argues the NEO Leadership Challenge is holding speed, integrity, and adaptability "
+            "all at once — and most leaders are decent at two of the three and quietly weak on the one "
+            "that's hardest for their personal style. The US military's AI chatbot story is the large-scale "
+            "version: an analyst got speed (fast intelligence output), lost integrity (the report was "
+            "entirely false), and the system had no adaptability mechanism built in — planes were in the "
+            "air before anyone checked. Dr. Tali's post asks the sharper question about the reader, not the "
+            "tech: what's changing right now is the one who decides how to use it."
+        ),
+        "question": (
+            "Chapter 7's challenge is holding speed, integrity, and adaptability simultaneously — most "
+            "leaders are decent at two and quietly neglect the hardest one for their personal style. The "
+            "US military's AI chatbot produced a report that was “entirely false” and “almost started "
+            "a war” — they chose speed, lost integrity, and had no adaptability backstop until it was "
+            "almost too late. Name the demand you’re currently neglecting, specifically, not in the "
+            "abstract. The honest answer is usually the one you'd be slightly embarrassed to say out loud."
+        ),
+        "model_answer": (
+            "The three demands aren't equal in difficulty for everyone: a leader who runs on speed tends "
+            "to quietly let integrity slide when pressure is high, because checking your own work slows the "
+            "loop down; a leader who runs on integrity tends to let adaptability slide, because changing "
+            "course once you've committed feels like an integrity violation; a leader who runs on "
+            "adaptability tends to let speed slide, because every new input seems like a reason to pause "
+            "and reconsider. The US military's AI chatbot story is the integrity failure version at scale "
+            "— speed was the explicit goal, GenAI.Mil is pitched as unprecedented-speed analysis, and "
+            "integrity (the verification step) was the one that quietly got left out of the workflow. The "
+            "Vanguard move: name the one you're neglecting out loud, not in a reflection journal, but to "
+            "someone in your tribe who can actually observe whether it's true — because the neglected "
+            "demand never feels neglected from the inside."
+        ),
+    },
+
 
 
 
@@ -6368,8 +6404,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Canada and Germany announced up to CAD $300M in joint funding for LawZero, a Montreal-based non-profit founded by AI pioneer Yoshua Bengio, to develop Scientist AI — a safe-by-design model that reasons transparently without pursuing its own goals and is intended to serve as a monitoring guardrail for other AI systems",
-    "source": "Globe and Mail",
+    "headline": "A US Special Operations Command analyst used an AI chatbot to analyze a Chinese ship’s manifest — the bot fused open-source and classified intelligence and wrongly concluded the ship carried nuclear weapons components, sending armed military members to board it and planes into the air before the report was found to be entirely false, sources told CNN, and “almost started a war”",
+    "source": "CNN",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6467,6 +6503,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Canada and Germany announced up to CAD $300M in joint funding for LawZero, a Montreal-based non-profit founded by AI pioneer Yoshua Bengio, to develop Scientist AI — a safe-by-design model that reasons transparently without pursuing its own goals and is intended to serve as a monitoring guardrail for other AI systems",
         "source": "Globe and Mail",
         "url": "https://www.theglobeandmail.com/business/article-yoshua-bengio-lawzero-receives-300-million-from-canada-germany/",
+    },
+    "2026-09-22": {
+        "headline": "A US Special Operations Command analyst used an AI chatbot to analyze a Chinese ship’s manifest — the bot fused open-source and classified intelligence and wrongly concluded the ship carried nuclear weapons components, sending armed military members to board it and planes into the air before the report was found to be entirely false, sources told CNN, and “almost started a war”",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
     },
 }
 

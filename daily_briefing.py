@@ -179,6 +179,7 @@ def build_briefing():
 "2026-09-17": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505930993565036547/"},
 "2026-09-18": {"quote": "\U0001f4c4 <b>Lumina agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506264921656107008/"},
 "2026-09-21": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506982238413103104/"},
+"2026-09-22": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁'𝘀 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄 𝗶𝘀 𝗻𝗼𝘁 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵, 𝗶𝘁'𝘀 𝘁𝗵𝗲 𝗿𝗲𝗮𝗱𝗲𝗿.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/"},
     }
 
     lines = []
@@ -287,6 +288,7 @@ def build_briefing():
         "2026-09-17": "Zuckerberg’s pitch is pure trader philosophy — alignment and trust will be the competitive differentiator, no mandate needed. Chapter 2’s test isn’t the post though: it’s whether your last ten hard calls back it up. Meta delayed Muse for safety, but also just settled years of liability lawsuits over addictive design. Go through your own last ten hard calls — extraction or trust-building? The ratio is the real answer.",
         "2026-09-18": "OpenAI just put ads inside ChatGPT — Sponsored Agents that run in the same interface users go to for independent answers. Chapter 3’s test isn’t whether that works commercially: it’s whether OpenAI is serving a real need or extracting from the trust relationship it spent years building. Before your next significant client interaction, decide which version you’re running — and check afterward whether you actually ran it.",
         "2026-09-21": "Canada and Germany just committed $300M to a monitoring AI designed to shorten the Orient phase of other AIs’ OODA loops — a system that reasons transparently so humans understand what AI is doing before it’s too late to act. Chapter 6’s audit: take your most significant decision this week and time it through Observe-Orient-Decide-Act. Where did the delay actually live?",
+        "2026-09-22": "The US military’s AI chatbot produced a report that was “entirely false” and “almost started a war” — they got speed but quietly sacrificed integrity, and planes were already in the air before anyone checked. Chapter 7: hold speed, integrity, and adaptability all at once. Name the demand you’re currently neglecting. The honest answer is usually the one you’d be slightly embarrassed to say out loud in a leadership review.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -404,6 +406,12 @@ def build_briefing():
                     if date_key >= "2026-09-21":
                         lines.append("\U0001f4e1 <b>The Commander\u2019s Mindset</b>")
                         lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 2</a>.")
+                        lines.append("")
+                        lines.append("\U0001f3a7 <b>2016 Letter to Shareholders</b>")
+                        lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp3'>\u2192 Listen (MP3)</a>")
+                        lines.append("")
+                        lines.append("\U0001f3a7 <b>Insights and Best Practices \u2014 Mission Command</b>")
+                        lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
                     else:
                         lines.append("\U0001f4e1 <b>BAW Capstone \u2014 Daily Intelligence Sweep</b>")
                         lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time.")
@@ -775,6 +783,39 @@ def build_briefing():
                 lines.append("<i>Prof. Primž Hvala</i>")
                 lines.append("Upload at <a href='https://cotrugli.online/'>Alumni Portal</a> — name at top of document.")
                 lines.append("")
+        elif date_key >= "2026-06-18":
+            lines.append("\U0001f4cb <b>AI in B2B Sales: MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
+            lines.append("<i>Saša Pavlaković</i>")
+            if date_key >= "2026-06-27":
+                lines.append("\U0001f4fa <b>RECORDING OF SESSION 2</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
+                lines.append("")
+            if date_key >= "2026-06-28":
+                lines.append("\U0001f4dd <b>SALES MANAGEMENT — EXAMINATION DEADLINE</b>")
+                lines.append("<i>Prof. Prim\u017e Hvala</i>")
+                lines.append("")
+                lines.append("Upload your final exam at the <a href='https://cotrugli.online/'>Alumni Portal</a> by <b>Sunday 12 July 2026, midnight</b>.")
+                if date_key < "2026-07-02":
+                    lines.append("\u2022 Put your name at the beginning of the exam")
+                    lines.append("\u2022 Sales Management materials available at Alumni Portal")
+                    lines.append("\u2022 Please complete the <b>module evaluation</b> at Alumni Portal")
+                lines.append("")
+            lines.append("")
+            if date_key < "2026-06-26":
+                lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
+                lines.append("")
+                lines.append("\u2022 Include the exact prompts you used")
+                lines.append("\u2022 Show the real output (anonymised if needed)")
+                lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
+                lines.append("")
+                lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
+                lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
+            lines.append("")
+        else:
+            lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
+            lines.append("<i>Saša Pavlaković</i>")
+            lines.append("")
+
+        if date_key >= "2026-07-03":  # CJ + Sprint — runs for all dates, extracted from elif so Sep 21+ branch gets it too
             # Chasing Jarvis inside Running Courses from 3 July
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
@@ -892,37 +933,6 @@ def build_briefing():
                     "<i>This week: what did your tribe ship?</i></blockquote>"
                 )
                 lines.append("")
-        elif date_key >= "2026-06-18":
-            lines.append("\U0001f4cb <b>AI in B2B Sales: MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
-            lines.append("<i>Saša Pavlaković</i>")
-            if date_key >= "2026-06-27":
-                lines.append("\U0001f4fa <b>RECORDING OF SESSION 2</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/the-thesis-landscape/'>→ Watch here</a>")
-                lines.append("")
-            if date_key >= "2026-06-28":
-                lines.append("\U0001f4dd <b>SALES MANAGEMENT — EXAMINATION DEADLINE</b>")
-                lines.append("<i>Prof. Prim\u017e Hvala</i>")
-                lines.append("")
-                lines.append("Upload your final exam at the <a href='https://cotrugli.online/'>Alumni Portal</a> by <b>Sunday 12 July 2026, midnight</b>.")
-                if date_key < "2026-07-02":
-                    lines.append("\u2022 Put your name at the beginning of the exam")
-                    lines.append("\u2022 Sales Management materials available at Alumni Portal")
-                    lines.append("\u2022 Please complete the <b>module evaluation</b> at Alumni Portal")
-                lines.append("")
-            lines.append("")
-            if date_key < "2026-06-26":
-                lines.append("Document one AI sales workflow you actually tested. Pick any single workflow from the module — prospecting via Apollo, LLM-augmented outreach, the Otter post-meeting flow, or the MEDDICC pipeline audit — and walk through 3–5 steps with screenshots or a short Loom recording.")
-                lines.append("")
-                lines.append("\u2022 Include the exact prompts you used")
-                lines.append("\u2022 Show the real output (anonymised if needed)")
-                lines.append("\u2022 One honest paragraph: what worked, what didn\u2019t, what you\u2019d change")
-                lines.append("")
-                lines.append("<b>Graded on:</b> Workflow specificity (30%) \u00b7 Prompt quality (25%) \u00b7 Honest reflection (25%) \u00b7 Polish (20%)")
-                lines.append("<b>Bonus:</b> Connect one tool to Claude and let it make a live CRM write — bring that to Module 3 as a tribal seed.")
-            lines.append("")
-        else:
-            lines.append("\U0001f4cb <b>MODULE 2 ASSIGNMENT — AI as Force Multiplier</b>")
-            lines.append("<i>Saša Pavlaković</i>")
-            lines.append("")
 
     # SALES MANAGEMENT WEEKEND MARATHON — shown in zoom slot from 14 June onwards
     if date_key >= "2026-06-14":
