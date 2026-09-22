@@ -180,6 +180,7 @@ def build_briefing():
 "2026-09-18": {"quote": "\U0001f4c4 <b>Lumina agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506264921656107008/"},
 "2026-09-21": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506982238413103104/"},
 "2026-09-22": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁'𝘀 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄 𝗶𝘀 𝗻𝗼𝘁 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵, 𝗶𝘁'𝘀 𝘁𝗵𝗲 𝗿𝗲𝗮𝗱𝗲𝗿.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/"},
+"2026-09-23": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁'𝘀 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄 𝗶𝘀 𝗻𝗼𝘁 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵, 𝗶𝘁'𝘀 𝘁𝗵𝗲 𝗿𝗲𝗮𝗱𝗲𝗿.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/"},
     }
 
     lines = []
@@ -289,6 +290,7 @@ def build_briefing():
         "2026-09-18": "OpenAI just put ads inside ChatGPT — Sponsored Agents that run in the same interface users go to for independent answers. Chapter 3’s test isn’t whether that works commercially: it’s whether OpenAI is serving a real need or extracting from the trust relationship it spent years building. Before your next significant client interaction, decide which version you’re running — and check afterward whether you actually ran it.",
         "2026-09-21": "Canada and Germany just committed $300M to a monitoring AI designed to shorten the Orient phase of other AIs’ OODA loops — a system that reasons transparently so humans understand what AI is doing before it’s too late to act. Chapter 6’s audit: take your most significant decision this week and time it through Observe-Orient-Decide-Act. Where did the delay actually live?",
         "2026-09-22": "The US military’s AI chatbot produced a report that was “entirely false” and “almost started a war” — they got speed but quietly sacrificed integrity, and planes were already in the air before anyone checked. Chapter 7: hold speed, integrity, and adaptability all at once. Name the demand you’re currently neglecting. The honest answer is usually the one you’d be slightly embarrassed to say out loud in a leadership review.",
+        "2026-09-23": "Anthropic just published the number: Claude leads 26% of its own model R&D — up from effectively zero in February. That’s the fear the whole industry has been processing at low volume. Chapter 8’s steps applied: name it (AI helping build its successor), separate the real threat from the catastrophizing (26% with full supervision, 1 in 47,000 agent actions blocked). What’s the fear you’ve been processing at low volume that you haven’t named yet?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -392,7 +394,12 @@ def build_briefing():
             if date_key >= "2026-07-03":
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")
-                lines.append("\U0001f3a7 <b>Business as Warfare \u2014 " + ("Module 2" if date_key >= "2026-09-21" else "Module 1") + "</b>")
+                if date_key >= "2026-09-23":
+                    lines.append("\U0001f3a7 <b>Business as Warfare \u2014 Modules 2 \u0026 3</b>")
+                elif date_key >= "2026-09-21":
+                    lines.append("\U0001f3a7 <b>Business as Warfare \u2014 Module 2</b>")
+                else:
+                    lines.append("\U0001f3a7 <b>Business as Warfare \u2014 Module 1</b>")
                 # Podcast links removed 2 Sep onward per Nardus's explicit "remove" flags
                 if date_key < "2026-09-02":
                     lines.append("<a href='https://stream.redcircle.com/episodes/80e855e2-4cef-48da-b7fe-e6fd58e69e7e/stream.mp3'>\u2192 PayPal Mafia podcast</a>")
@@ -412,6 +419,13 @@ def build_briefing():
                         lines.append("")
                         lines.append("\U0001f3a7 <b>Insights and Best Practices \u2014 Mission Command</b>")
                         lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
+                        if date_key >= "2026-09-23":
+                            lines.append("")
+                            lines.append("\U0001f4c5 <b>DEADLINES</b>")
+                            lines.append("\u2022 Module 2 pre-deployment task \u2014 due 24 September")
+                            lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/lessons/pre-deployment-for-module-2-vanguard/'>\u2192 Open task</a>")
+                            lines.append("\u2022 Module 3 pre-deployment task \u2014 due 1 October")
+                            lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-2-the-commanders-mindset-and-decentralized-execution/'>\u2192 Open task</a>")
                     else:
                         lines.append("\U0001f4e1 <b>BAW Capstone \u2014 Daily Intelligence Sweep</b>")
                         lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time.")
@@ -820,7 +834,14 @@ def build_briefing():
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
             lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
-            if date_key >= "2026-09-02":
+            if date_key >= "2026-09-23":
+                # Deadline row removed per Nardus's B40 "remove deadline row" flag 23 Sep.
+                # Body text and full guide link remain.
+                lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
+                lines.append("Build a real, working agent — By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.")
+                lines.append("<a href='https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md'>→ Full guide</a>")
+                lines.append("")
+            elif date_key >= "2026-09-02":
                 # From 2 Sep onward: deadline has passed — Nardus gave "catch up" copy,
                 # extended (5 Sep) to cover every date after the deadline rather than
                 # falling back to the stale "Deadline: 1 September 2026" unstyled text

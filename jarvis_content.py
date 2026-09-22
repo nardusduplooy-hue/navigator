@@ -3788,6 +3788,44 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-23": {
+        "step": "Fear as Data — Six Steps Applied",
+        "title": "Name the Fear You’re Avoiding",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/",
+        "focus": (
+            "Chapter 8 asks you to pick the fear you’re least willing to look at and walk all six steps "
+            "deliberately: name it, identify the pattern, separate the real threat from the catastrophizing, "
+            "generate three options, commit at 40-60% information, extract the lesson afterward. Anthropic's "
+            "September 17 disclosure is a public case study in the same discipline: the fear (AI helping "
+            "build its successor) named explicitly, the real threat separated from the catastrophizing "
+            "(26% with full human supervision, 1 in 47,000 agent actions blocked), and the commitment made "
+            "at well under full certainty — with a framework published so others can run the same check. "
+            "Dr. Tali's post is the reader's version: what's changing is not the tech, it's the one deciding "
+            "what to do with it."
+        ),
+        "question": (
+            "Chapter 8 says most people stop at step one — they name the fear once, call that having "
+            "handled it, and never separate the real threat from the catastrophizing, generate real options, "
+            "or commit. Anthropic just ran all six steps on the fear the whole AI industry has been "
+            "processing at low volume: Claude leads 26% of its own model R&D, up from zero in February, "
+            "with 30,000 agents running and 1 in 47,000 actions blocked. Pick the fear you’re currently "
+            "least willing to look at directly — which step do you always stop at?"
+        ),
+        "model_answer": (
+            "The chapter's structure is precise because each step does something the previous one can't: "
+            "naming doesn't separate the catastrophizing, separating doesn't generate options, and generating "
+            "options doesn't actually commit you to one. Most people stop after naming because it feels like "
+            "the fear has been handled once it's spoken, but the real work is step 3 — pulling the actual "
+            "risk out from the story the fear has built around it. Anthropic's disclosure is worth reading "
+            "carefully for how they do step 3: the number is 26%, not 100%; the oversight is 1 billion "
+            "decisions monitored in August alone with humans reviewing 50 high-priority cases per week; the "
+            "fear is real, the catastrophized version is that it's already ungoverned. The Vanguard move: "
+            "pick your worst current fear, write the actual risk on one line (not the story, the risk), "
+            "write the catastrophized version next to it, and ask which one your decisions are currently "
+            "being made in response to — because they’re rarely the same."
+        ),
+    },
+
 
 
 
@@ -6404,8 +6442,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A US Special Operations Command analyst used an AI chatbot to analyze a Chinese ship’s manifest — the bot fused open-source and classified intelligence and wrongly concluded the ship carried nuclear weapons components, sending armed military members to board it and planes into the air before the report was found to be entirely false, sources told CNN, and “almost started a war”",
-    "source": "CNN",
+    "headline": "Anthropic disclosed on September 17 that Claude now leads 26% of its model R&D work — up from effectively zero in February 2026 — with roughly 30,000 internal agents running simultaneously, 1 in 47,000 agent actions blocked by oversight systems, and 6% of R&D compute allocated to safety research",
+    "source": "Engadget",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6508,6 +6546,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A US Special Operations Command analyst used an AI chatbot to analyze a Chinese ship’s manifest — the bot fused open-source and classified intelligence and wrongly concluded the ship carried nuclear weapons components, sending armed military members to board it and planes into the air before the report was found to be entirely false, sources told CNN, and “almost started a war”",
         "source": "CNN",
         "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+    },
+    "2026-09-23": {
+        "headline": "Anthropic disclosed on September 17 that Claude now leads 26% of its model R&D work — up from effectively zero in February 2026 — with roughly 30,000 internal agents running simultaneously, 1 in 47,000 agent actions blocked by oversight systems, and 6% of R&D compute allocated to safety research",
+        "source": "Engadget",
+        "url": "https://www.engadget.com/2261909/anthropic-says-claude-leads-26-percent-of-its-ai-research-and-development/",
     },
 }
 
