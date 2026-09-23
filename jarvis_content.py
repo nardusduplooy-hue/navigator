@@ -3826,6 +3826,44 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-24": {
+        "step": "AI as Force Multiplier — The Uncomfortable Version",
+        "title": "What Does It Amplify That You Wouldn’t Want Amplified?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508413246932971520/",
+        "focus": (
+            "Chapter 9 argues force multiplication doesn't discriminate between your best instincts and "
+            "your worst ones — it just makes whatever pattern you already have run faster and louder. "
+            "The UN Security Council meeting is the large-scale version: Altman, Anthropic, DeepSeek and "
+            "Moonshot at the same table for the first time, because every major power recognizes that AI is "
+            "amplifying their competitive instincts alongside any cooperative ones, and the uncomfortable "
+            "question is which one is running louder. Dr. Tali's 'Understanding your customer' post is the "
+            "same discipline applied locally: the tool amplifies what you already know about your customer "
+            "— which means it also amplifies the gaps."
+        ),
+        "question": (
+            "Chapter 9 says the tools that quietly amplify impatience or corner-cutting look identical in "
+            "a demo to the ones amplifying judgment. The UN Security Council's first AI session brought "
+            "frontier US and Chinese labs together because every government is asking the same question: "
+            "not what could this AI achieve for us, but what instinct of ours is it already making louder? "
+            "Before your next significant AI deployment, name one thing about your own working pattern — "
+            "a shortcut, a blind spot, an impatience — that this tool would scale up alongside the good "
+            "work. Would you still deploy it?"
+        ),
+        "model_answer": (
+            "The demo always shows the force multiplication working on your best intentions — because the "
+            "demo is built to do exactly that, and because the person running the demo also has good "
+            "intentions in the room. What doesn't show in the demo is which of your existing patterns get "
+            "amplified at 3am on a deadline, or when a customer is frustrating, or when the shortcut is "
+            "tempting and the AI makes it 10x faster than it used to be. The UN Security Council's first "
+            "AI session exists because world powers have noticed that the same technology amplifies "
+            "surveillance capacity, military decision speed, and disinformation production with the same "
+            "indifference to intent as it amplifies customer service or drug discovery. The Vanguard move: "
+            "before your next AI deployment, write one sentence about what lazy or impatient version of "
+            "your work this tool could accelerate — and decide in advance whether you’ve built in the "
+            "check that keeps that version from running."
+        ),
+    },
+
 
 
 
@@ -6442,8 +6480,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Anthropic disclosed on September 17 that Claude now leads 26% of its model R&D work — up from effectively zero in February 2026 — with roughly 30,000 internal agents running simultaneously, 1 in 47,000 agent actions blocked by oversight systems, and 6% of R&D compute allocated to safety research",
-    "source": "Engadget",
+    "headline": "France convened the first UN Security Council session on AI and international security on September 23 — OpenAI CEO Sam Altman and senior Anthropic representatives sat alongside DeepSeek and Moonshot in the first direct meeting of frontier Chinese and US AI developers at the Security Council, to discuss shared safety concerns",
+    "source": "SiliconAngle",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6551,6 +6589,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Anthropic disclosed on September 17 that Claude now leads 26% of its model R&D work — up from effectively zero in February 2026 — with roughly 30,000 internal agents running simultaneously, 1 in 47,000 agent actions blocked by oversight systems, and 6% of R&D compute allocated to safety research",
         "source": "Engadget",
         "url": "https://www.engadget.com/2261909/anthropic-says-claude-leads-26-percent-of-its-ai-research-and-development/",
+    },
+    "2026-09-24": {
+        "headline": "France convened the first UN Security Council session on AI and international security on September 23 — OpenAI CEO Sam Altman and senior Anthropic representatives sat alongside DeepSeek and Moonshot in the first direct meeting of frontier Chinese and US AI developers at the Security Council, to discuss shared safety concerns",
+        "source": "SiliconAngle",
+        "url": "https://siliconangle.com/2026/09/23/un-security-council-holds-first-meeting-on-ai-and-international-security/",
     },
 }
 

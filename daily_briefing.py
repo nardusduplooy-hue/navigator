@@ -181,6 +181,8 @@ def build_briefing():
 "2026-09-21": {"quote": "\U0001f4c4 <b>Every Product needs a home</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506982238413103104/"},
 "2026-09-22": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁'𝘀 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄 𝗶𝘀 𝗻𝗼𝘁 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵, 𝗶𝘁'𝘀 𝘁𝗵𝗲 𝗿𝗲𝗮𝗱𝗲𝗿.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/"},
 "2026-09-23": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁'𝘀 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄 𝗶𝘀 𝗻𝗼𝘁 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵, 𝗶𝘁'𝘀 𝘁𝗵𝗲 𝗿𝗲𝗮𝗱𝗲𝗿.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/"},
+
+"2026-09-24": {"quote": "\U0001f4c4 <b>Understanding your customer</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508413246932971520/"},
     }
 
     lines = []
@@ -291,6 +293,7 @@ def build_briefing():
         "2026-09-21": "Canada and Germany just committed $300M to a monitoring AI designed to shorten the Orient phase of other AIs’ OODA loops — a system that reasons transparently so humans understand what AI is doing before it’s too late to act. Chapter 6’s audit: take your most significant decision this week and time it through Observe-Orient-Decide-Act. Where did the delay actually live?",
         "2026-09-22": "The US military’s AI chatbot produced a report that was “entirely false” and “almost started a war” — they got speed but quietly sacrificed integrity, and planes were already in the air before anyone checked. Chapter 7: hold speed, integrity, and adaptability all at once. Name the demand you’re currently neglecting. The honest answer is usually the one you’d be slightly embarrassed to say out loud in a leadership review.",
         "2026-09-23": "Anthropic just published the number: Claude leads 26% of its own model R&D — up from effectively zero in February. That’s the fear the whole industry has been processing at low volume. Chapter 8’s steps applied: name it (AI helping build its successor), separate the real threat from the catastrophizing (26% with full supervision, 1 in 47,000 agent actions blocked). What’s the fear you’ve been processing at low volume that you haven’t named yet?",
+        "2026-09-24": "The UN Security Council just convened its first session on AI and international security — Altman, Anthropic, DeepSeek and Moonshot at the same table, because every major power is now asking Chapter 9’s uncomfortable question: not what could this AI achieve for us, but what competitive instinct is it already amplifying? Before your next deployment, ask the same version. What habit or blind spot of yours does this tool scale up alongside the good work?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
