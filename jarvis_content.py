@@ -3864,6 +3864,44 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-25": {
+        "step": "Tribe as Coordination — Find the Real Example",
+        "title": "One Instance, or Its Absence",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/",
+        "focus": (
+            "Chapter 10 argues the tribe model's claim — that coordination doesn't require a chain of "
+            "command — is only as good as the last real example of it working. Cisco Talos's disclosure "
+            "of the first autonomous AI command-and-control malware is the darkest possible proof of "
+            "concept: multiple models coordinating without a human operator, adapting behavior in real time, "
+            "with no hierarchy needed. If adversarial AI can self-coordinate that effectively, the question "
+            "for your tribe is whether your own coordination is actually working or just appearing to work "
+            "because you're still in the chain. Dr. Tali's 'The Context Engine' and 'Eye Tracking' posts "
+            "both make the same underlying point: what's actually being coordinated, and by whom?"
+        ),
+        "question": (
+            "Chapter 10 says the tribe model's coordination claim is only as good as your last real example "
+            "of it working. Cisco Talos just showed autonomous AI models coordinating without any human "
+            "in the loop — on the malware side. This week: find one instance where two people in your "
+            "tribe made a joined-up decision without either of them checking with you first. What made that "
+            "coordination possible? And if you can't find one, what does that tell you about how much of "
+            "your tribe's coordination actually runs through you?"
+        ),
+        "model_answer": (
+            "Most leaders claim their tribe coordinates — and most of the time they're right, but the "
+            "coordination is running through them rather than between people in the tribe, which means it "
+            "scales to their own bandwidth and collapses when they're unavailable. Chapter 10's test is "
+            "specific: not whether the tribe works when you're present, but whether it makes joined-up "
+            "decisions when you're not. Cisco Talos's autonomous malware is a bleak mirror: multiple AI "
+            "models coordinating in real time, adapting together without human input, because the "
+            "architecture was built for it. The question for your tribe is whether you've built the "
+            "equivalent — shared context, shared decision criteria, and the psychological safety to act "
+            "on them without checking up the chain. The Vanguard move: pick two people in your tribe who "
+            "work together regularly and ask each of them independently when they last made a significant "
+            "decision together without looping you in. The gap between what they say and what you remember "
+            "is your real coordination picture."
+        ),
+    },
+
 
 
 
@@ -6480,8 +6518,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "France convened the first UN Security Council session on AI and international security on September 23 — OpenAI CEO Sam Altman and senior Anthropic representatives sat alongside DeepSeek and Moonshot in the first direct meeting of frontier Chinese and US AI developers at the Security Council, to discuss shared safety concerns",
-    "source": "SiliconAngle",
+    "headline": "Cisco Talos disclosed the first fully autonomous AI command-and-control malware implant — a piece of malware that runs multiple AI models simultaneously and needs no human operator to execute, coordinate, or adapt its behaviour, with Cisco simultaneously releasing a detection toolkit for hunting it",
+    "source": "Build Fast With AI",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6594,6 +6632,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "France convened the first UN Security Council session on AI and international security on September 23 — OpenAI CEO Sam Altman and senior Anthropic representatives sat alongside DeepSeek and Moonshot in the first direct meeting of frontier Chinese and US AI developers at the Security Council, to discuss shared safety concerns",
         "source": "SiliconAngle",
         "url": "https://siliconangle.com/2026/09/23/un-security-council-holds-first-meeting-on-ai-and-international-security/",
+    },
+    "2026-09-25": {
+        "headline": "Cisco Talos disclosed the first fully autonomous AI command-and-control malware implant — a piece of malware that runs multiple AI models simultaneously and needs no human operator to execute, coordinate, or adapt its behaviour, with Cisco simultaneously releasing a detection toolkit for hunting it",
+        "source": "Build Fast With AI",
+        "url": "https://blog.buildfastwithai.com/ai-news-today-september-23-2026",
     },
 }
 

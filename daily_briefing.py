@@ -183,6 +183,8 @@ def build_briefing():
 "2026-09-23": {"quote": "\U0001f4c4 𝗪𝗵𝗮𝘁'𝘀 𝗰𝗵𝗮𝗻𝗴𝗶𝗻𝗴 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄 𝗶𝘀 𝗻𝗼𝘁 𝘁𝗵𝗲 𝘁𝗲𝗰𝗵, 𝗶𝘁'𝘀 𝘁𝗵𝗲 𝗿𝗲𝗮𝗱𝗲𝗿.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507720092017704960/"},
 
 "2026-09-24": {"quote": "\U0001f4c4 <b>Understanding your customer</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508413246932971520/"},
+
+"2026-09-25": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/"},
     }
 
     lines = []
@@ -294,6 +296,7 @@ def build_briefing():
         "2026-09-22": "The US military’s AI chatbot produced a report that was “entirely false” and “almost started a war” — they got speed but quietly sacrificed integrity, and planes were already in the air before anyone checked. Chapter 7: hold speed, integrity, and adaptability all at once. Name the demand you’re currently neglecting. The honest answer is usually the one you’d be slightly embarrassed to say out loud in a leadership review.",
         "2026-09-23": "Anthropic just published the number: Claude leads 26% of its own model R&D — up from effectively zero in February. That’s the fear the whole industry has been processing at low volume. Chapter 8’s steps applied: name it (AI helping build its successor), separate the real threat from the catastrophizing (26% with full supervision, 1 in 47,000 agent actions blocked). What’s the fear you’ve been processing at low volume that you haven’t named yet?",
         "2026-09-24": "The UN Security Council just convened its first session on AI and international security — Altman, Anthropic, DeepSeek and Moonshot at the same table, because every major power is now asking Chapter 9’s uncomfortable question: not what could this AI achieve for us, but what competitive instinct is it already amplifying? Before your next deployment, ask the same version. What habit or blind spot of yours does this tool scale up alongside the good work?",
+        "2026-09-25": "Cisco Talos just disclosed the first fully autonomous AI command-and-control malware — multiple models coordinating together, no human operator needed. That’s Chapter 10’s core claim on the wrong side: coordination without hierarchy, at machine speed. This week: find one instance where two people in your tribe made a joined-up decision without checking with you first. If you can’t find one, that absence is more informative than any coordination framework.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -417,11 +420,18 @@ def build_briefing():
                         lines.append("\U0001f4e1 <b>The Commander\u2019s Mindset</b>")
                         lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 2</a>.")
                         lines.append("")
-                        lines.append("\U0001f3a7 <b>2016 Letter to Shareholders</b>")
-                        lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp3'>\u2192 Listen (MP3)</a>")
-                        lines.append("")
-                        lines.append("\U0001f3a7 <b>Insights and Best Practices \u2014 Mission Command</b>")
-                        lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
+                        if date_key >= "2026-09-25":
+                            lines.append("\U0001f3a7 <b>Psychology of Intelligent Analysis</b>")
+                            lines.append("<a href='https://stream.redcircle.com/episodes/632bc2ba-6b9f-411e-b438-7da81c4cf2a1/stream.mp3'>\u2192 Listen (MP3)</a>")
+                            lines.append("")
+                            lines.append("\U0001f3a7 <b>Five-Phase Model of the Intelligence Cycle of Competitive Intelligence</b>")
+                            lines.append("<a href='https://stream.redcircle.com/episodes/1b6c68fe-223c-4aea-abb3-7847372770c1/stream.mp3'>\u2192 Listen (MP3)</a>")
+                        else:
+                            lines.append("\U0001f3a7 <b>2016 Letter to Shareholders</b>")
+                            lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp3'>\u2192 Listen (MP3)</a>")
+                            lines.append("")
+                            lines.append("\U0001f3a7 <b>Insights and Best Practices \u2014 Mission Command</b>")
+                            lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
                         if date_key >= "2026-09-23":
                             lines.append("")
                             lines.append("\U0001f4c5 <b>DEADLINES</b>")
@@ -895,6 +905,7 @@ def build_briefing():
                 "2026-09-04": {"quote": "\U0001f4c4 <b>Lumina Agents</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7500444050383183872/"},
 "2026-09-05": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501571013474922496/"},
                 "2026-09-16": {"quote": "\U0001f4c4 <b>Two AI stories on X this week are actually one story.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505499278082101249/"},
+                "2026-09-25": {"quote": "\U0001f4c4 <b>Eye Tracking</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508811254296395776/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
