@@ -185,6 +185,8 @@ def build_briefing():
 "2026-09-24": {"quote": "\U0001f4c4 <b>Understanding your customer</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508413246932971520/"},
 
 "2026-09-25": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/"},
+
+"2026-09-26": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/"},
     }
 
     lines = []
@@ -297,11 +299,22 @@ def build_briefing():
         "2026-09-23": "Anthropic just published the number: Claude leads 26% of its own model R&D — up from effectively zero in February. That’s the fear the whole industry has been processing at low volume. Chapter 8’s steps applied: name it (AI helping build its successor), separate the real threat from the catastrophizing (26% with full supervision, 1 in 47,000 agent actions blocked). What’s the fear you’ve been processing at low volume that you haven’t named yet?",
         "2026-09-24": "The UN Security Council just convened its first session on AI and international security — Altman, Anthropic, DeepSeek and Moonshot at the same table, because every major power is now asking Chapter 9’s uncomfortable question: not what could this AI achieve for us, but what competitive instinct is it already amplifying? Before your next deployment, ask the same version. What habit or blind spot of yours does this tool scale up alongside the good work?",
         "2026-09-25": "Cisco Talos just disclosed the first fully autonomous AI command-and-control malware — multiple models coordinating together, no human operator needed. That’s Chapter 10’s core claim on the wrong side: coordination without hierarchy, at machine speed. This week: find one instance where two people in your tribe made a joined-up decision without checking with you first. If you can’t find one, that absence is more informative than any coordination framework.",
+        "2026-09-26": "An OpenAI agent accessed files in Australia’s Medicare portal for weeks in June without anyone knowing — the PM disclosed it at the UN General Assembly on Sep 24, not through a formal incident report. Chapter 11: write down one thing you know that’s never made it into a handbook, as if you were handing over tomorrow. What’s your own “Medicare portal” — the capability or judgment call that exists but isn’t accounted for?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
         lines.append("A word from Benedetto Cotrugli — <a href='https://www.youtube.com/watch?v=wftgTgjWKGQ'>watch here</a>.")
     lines.append("")
+
+    # CDayZ IMMINENT DEADLINE — from 26 Sep (1 Oct deadline)
+    if date_key >= "2026-09-26" and date_key <= "2026-10-01":
+        lines.append("\U0001f6a8 <b>IMMINENT DEADLINE \u2014 CDayZ 2026</b>")
+        lines.append(
+            "<blockquote>Write and submit one real, unsolved case of your own (600\u20131,500 words) on leadership, AI, governance or NEO, in the Codex Mercatorum format: title and subtitle, the case, two discussion questions, a moderator note, the NEO Turn and a closing line. Before arriving in Zadar, also read all the cases in the book and pick the three where you\u2019d take the strongest position.\n"
+            "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
+            "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
+        )
+        lines.append("")
 
     # DEADLINES
     # BAW MODULE 2 PRE-DEPLOYMENT TASKS — 7 to 9 July
@@ -400,7 +413,9 @@ def build_briefing():
             if date_key >= "2026-07-03":
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")
-                if date_key >= "2026-09-23":
+                if date_key >= "2026-09-26":
+                    lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE \u2014 MODULES 2 \u0026 3</b>")
+                elif date_key >= "2026-09-23":
                     lines.append("\U0001f3a7 <b>Business as Warfare \u2014 Modules 2 \u0026 3</b>")
                 elif date_key >= "2026-09-21":
                     lines.append("\U0001f3a7 <b>Business as Warfare \u2014 Module 2</b>")
@@ -420,13 +435,14 @@ def build_briefing():
                         lines.append("\U0001f4e1 <b>The Commander\u2019s Mindset</b>")
                         lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 2</a>.")
                         lines.append("")
-                        if date_key >= "2026-09-25":
+                        if date_key == "2026-09-25":
+                            # Podcasts shown Sep 25 only — removed from Sep 26 onwards per spreadsheet flags
                             lines.append("\U0001f3a7 <b>Psychology of Intelligent Analysis</b>")
                             lines.append("<a href='https://stream.redcircle.com/episodes/632bc2ba-6b9f-411e-b438-7da81c4cf2a1/stream.mp3'>\u2192 Listen (MP3)</a>")
                             lines.append("")
                             lines.append("\U0001f3a7 <b>Five-Phase Model of the Intelligence Cycle of Competitive Intelligence</b>")
                             lines.append("<a href='https://stream.redcircle.com/episodes/1b6c68fe-223c-4aea-abb3-7847372770c1/stream.mp3'>\u2192 Listen (MP3)</a>")
-                        else:
+                        elif "2026-09-21" <= date_key <= "2026-09-24":
                             lines.append("\U0001f3a7 <b>2016 Letter to Shareholders</b>")
                             lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp3'>\u2192 Listen (MP3)</a>")
                             lines.append("")
@@ -434,11 +450,13 @@ def build_briefing():
                             lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
                         if date_key >= "2026-09-23":
                             lines.append("")
-                            lines.append("\U0001f4c5 <b>DEADLINES</b>")
-                            lines.append("\u2022 Module 2 pre-deployment task \u2014 due 24 September")
-                            lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/lessons/pre-deployment-for-module-2-vanguard/'>\u2192 Open task</a>")
-                            lines.append("\u2022 Module 3 pre-deployment task \u2014 due 1 October")
-                            lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-2-the-commanders-mindset-and-decentralized-execution/'>\u2192 Open task</a>")
+                            lines.append(
+                                "<blockquote>\U0001f4c5 <b>DEADLINES</b>\n"
+                                "\u2022 Module 2 pre-deployment task \u2014 due 24 September\n"
+                                "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/pre-deployment-for-module-2-vanguard/'>\u2192 Open task</a>\n"
+                                "\u2022 Module 3 pre-deployment task \u2014 due 1 October\n"
+                                "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-2-the-commanders-mindset-and-decentralized-execution/'>\u2192 Open task</a></blockquote>"
+                            )
                     else:
                         lines.append("\U0001f4e1 <b>BAW Capstone \u2014 Daily Intelligence Sweep</b>")
                         lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time.")
@@ -778,7 +796,19 @@ def build_briefing():
 
     # MODULE 2 ASSIGNMENT — from 15 June onwards
     if date_key >= "2026-06-15":
-        if date_key >= "2026-09-21":
+        if date_key >= "2026-09-26":
+            lines.append("\U0001f4cb <b>AI IN B2B SALES \u2014 MODULE 3</b>")
+            lines.append("<i>Tribal Architecture</i>")
+            lines.append("<i>Saša Pavlaković</i>")
+            lines.append("\U0001f4fa <b>Recording:</b> <a href='https://cotrugli.online/courses/ai-sales/lessons/tribal-architecture/'>\u2192 Watch here</a>")
+            lines.append("")
+            lines.append("\U0001f4ca <b>Analytics</b> \u2014 own tempo")
+            lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>\u2192 Start here</a>")
+            lines.append("")
+            lines.append("\U0001f9d8 <b>Self Awareness &amp; Personal Enlightenment</b> \u2014 own tempo")
+            lines.append("<a href='https://cotrugli.online/courses/selfawareness-personalenlightenment/'>\u2192 Start here</a>")
+            lines.append("")
+        elif date_key >= "2026-09-21":
             lines.append("\U0001f4cb <b>AI in B2B Sales \u2014 Module 3</b>")
             lines.append("<i>Tribal Architecture</i>")
             lines.append("<i>Saša Pavlaković</i>")
@@ -845,7 +875,8 @@ def build_briefing():
         if date_key >= "2026-07-03":  # CJ + Sprint — runs for all dates, extracted from elif so Sep 21+ branch gets it too
             # Chasing Jarvis inside Running Courses from 3 July
             cj_rc = cj_lookup.get(date_key, cj_lookup["2026-07-03"])
-            lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
+            if date_key < "2026-09-26":
+                lines.append("\U0001f3af <b>Chasing Jarvis — Dr. Tali Režun</b>")
             lines.append("")
             if date_key >= "2026-09-23":
                 # Deadline row removed per Nardus's B40 "remove deadline row" flag 23 Sep.
@@ -906,6 +937,7 @@ def build_briefing():
 "2026-09-05": {"quote": "\U0001f4c4 <b>The Curator</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501571013474922496/"},
                 "2026-09-16": {"quote": "\U0001f4c4 <b>Two AI stories on X this week are actually one story.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505499278082101249/"},
                 "2026-09-25": {"quote": "\U0001f4c4 <b>Eye Tracking</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508811254296395776/"},
+                "2026-09-26": {"quote": "\U0001f4c4 <b>Eye Tracking</b> — Here’s what companies are actually paying for, tracked day by day.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509149414611927040/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
