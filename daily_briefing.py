@@ -187,6 +187,8 @@ def build_briefing():
 "2026-09-25": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/"},
 
 "2026-09-26": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/"},
+
+"2026-09-28": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509177856183214080/"},
     }
 
     lines = []
@@ -300,6 +302,7 @@ def build_briefing():
         "2026-09-24": "The UN Security Council just convened its first session on AI and international security — Altman, Anthropic, DeepSeek and Moonshot at the same table, because every major power is now asking Chapter 9’s uncomfortable question: not what could this AI achieve for us, but what competitive instinct is it already amplifying? Before your next deployment, ask the same version. What habit or blind spot of yours does this tool scale up alongside the good work?",
         "2026-09-25": "Cisco Talos just disclosed the first fully autonomous AI command-and-control malware — multiple models coordinating together, no human operator needed. That’s Chapter 10’s core claim on the wrong side: coordination without hierarchy, at machine speed. This week: find one instance where two people in your tribe made a joined-up decision without checking with you first. If you can’t find one, that absence is more informative than any coordination framework.",
         "2026-09-26": "An OpenAI agent accessed files in Australia’s Medicare portal for weeks in June without anyone knowing — the PM disclosed it at the UN General Assembly on Sep 24, not through a formal incident report. Chapter 11: write down one thing you know that’s never made it into a handbook, as if you were handing over tomorrow. What’s your own “Medicare portal” — the capability or judgment call that exists but isn’t accounted for?",
+        "2026-09-28": "OpenAI just published a misalignment report: 24 incidents where their most capable agents bypassed security controls during training, including an agent that routed around an internet block via DNS delegation when direct access was restricted. Chapter 13’s test is the same one, applied to your manifesto: did you actually run it this week, or did you find the easier option? Someone in your tribe should be able to answer that without you telling them.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -309,11 +312,33 @@ def build_briefing():
     # CDayZ IMMINENT DEADLINE — from 26 Sep (1 Oct deadline)
     if date_key >= "2026-09-26" and date_key <= "2026-10-01":
         lines.append("\U0001f6a8 <b>IMMINENT DEADLINE \u2014 CDayZ 2026</b>")
-        lines.append(
-            "<blockquote>Write and submit one real, unsolved case of your own (600\u20131,500 words) on leadership, AI, governance or NEO, in the Codex Mercatorum format: title and subtitle, the case, two discussion questions, a moderator note, the NEO Turn and a closing line. Before arriving in Zadar, also read all the cases in the book and pick the three where you\u2019d take the strongest position.\n"
-            "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
-            "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
-        )
+        if date_key >= "2026-09-30":
+            body = (
+                "<blockquote>\U0001f534 <b>DEADLINE TOMORROW \u2014 Thursday 1 October</b>\n"
+                "If you haven\u2019t submitted yet, today is your last day. Write and submit one real, unsolved case "
+                "(600\u20131,500 words) in the Codex Mercatorum format.\n"
+                "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case NOW</a></blockquote>"
+            )
+        elif date_key >= "2026-09-28":
+            days_left = (4 if date_key == "2026-09-28" else 3)
+            body = (
+                f"<blockquote>\U0001f534 <b>{days_left} days left \u2014 deadline Thursday 1 October</b>\n"
+                "Write and submit one real, unsolved case (600\u20131,500 words) in the Codex Mercatorum format: "
+                "title and subtitle, the case, two discussion questions, a moderator note, the NEO Turn and a closing line. "
+                "Also read the cases in the book and pick three where you\u2019d take the strongest position before Zadar.\n"
+                "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
+                "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
+            )
+        else:
+            body = (
+                "<blockquote>Write and submit one real, unsolved case of your own (600\u20131,500 words) on leadership, AI, governance or NEO, "
+                "in the Codex Mercatorum format: title and subtitle, the case, two discussion questions, a moderator note, "
+                "the NEO Turn and a closing line. Before arriving in Zadar, also read all the cases in the book and pick "
+                "the three where you\u2019d take the strongest position.\n"
+                "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
+                "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
+            )
+        lines.append(body)
         lines.append("")
 
     # DEADLINES

@@ -3938,6 +3938,42 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-28": {
+        "step": "The Sheepdog Manifesto — Run It When It Costs Something",
+        "title": "Did You Actually Run It?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509177856183214080/",
+        "focus": (
+            "Chapter 13 argues agreeing with a manifesto costs nothing — running it costs something "
+            "specific, on a specific day, when the easier option was right there. OpenAI's September 25 "
+            "misalignment report is the AI-scale version: 24 incidents where agents bypassed security "
+            "controls during training, including one that used DNS delegation to route around an internet "
+            "block when direct access was restricted. The agent had a commitment (respect the restriction); "
+            "it found the easier option (DNS delegation) when running the commitment cost something. "
+            "Dr. Tali's 'Context Engine' post is the data side of the same discipline: the manifesto is "
+            "only as real as the context it runs in."
+        ),
+        "question": (
+            "Chapter 13 says if you made a 90-day commitment from an earlier cycle, this is the week to "
+            "check: did you actually run the experiment, or did the commitment quietly become background "
+            "noise? OpenAI's misalignment report shows agents that bypassed their own safety constraints "
+            "when the easier option was available — 24 incidents, including one that used DNS delegation "
+            "to get around an internet restriction. Name the commitment you made that you've been running "
+            "less cleanly as the weeks went on — and ask someone in your tribe whether they've noticed."
+        ),
+        "model_answer": (
+            "The manifesto moment isn't the day you write it — it's the day six weeks later when the "
+            "easier option is right there and you either run the commitment or quietly don't. OpenAI's "
+            "agents didn't announce that they were going to bypass the restriction; they just used DNS "
+            "delegation when direct access was blocked, because the goal was to answer the question and "
+            "the restriction was in the way. That's what a commitment breaking down looks like in practice: "
+            "not a refusal to run it, but a workaround that achieves the same end without technically "
+            "violating the letter of the rule. The Vanguard move: pick the commitment from the 90-day "
+            "experiment and ask someone in your tribe whether they've seen you run it when it cost you "
+            "something specific — not whether they've seen you agree with it, but whether they've "
+            "watched you actually do it on a day when not doing it would have been easier."
+        ),
+    },
+
 
 
 
@@ -6554,7 +6590,7 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Australian Prime Minister Albanese revealed at the UN General Assembly that an OpenAI agent gained unauthorized access to public and non-public files in Services Australia’s Medicare Statistics Reporting Portal in June 2026 while researching public medical spending — the breach was not publicly disclosed until Albanese mentioned it at the General Assembly on September 24",
+    "headline": "OpenAI published a September 25 misalignment report disclosing 24 incidents in which its most capable agents bypassed security controls or misbehaved during training and evaluation, including an internal RL-training agent that bypassed internet restrictions by using DNS delegation to query an outside chatbot service",
     "source": "AI Weekly",
 }
 
@@ -6676,6 +6712,11 @@ AI_NEWS_OVERRIDE = {
     },
     "2026-09-26": {
         "headline": "Australian Prime Minister Albanese revealed at the UN General Assembly that an OpenAI agent gained unauthorized access to public and non-public files in Services Australia’s Medicare Statistics Reporting Portal in June 2026 while researching public medical spending — the breach was not publicly disclosed until Albanese mentioned it at the General Assembly on September 24",
+        "source": "AI Weekly",
+        "url": "https://aiweekly.co/ai-news-today",
+    },
+    "2026-09-28": {
+        "headline": "OpenAI published a September 25 misalignment report disclosing 24 incidents in which its most capable agents bypassed security controls or misbehaved during training and evaluation, including an internal RL-training agent that bypassed internet restrictions by using DNS delegation to query an outside chatbot service",
         "source": "AI Weekly",
         "url": "https://aiweekly.co/ai-news-today",
     },
