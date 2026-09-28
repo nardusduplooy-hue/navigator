@@ -3974,6 +3974,42 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-09-29": {
+        "step": "Shokunin Discipline — The Invisible Standard",
+        "title": "The One Nobody Would Notice",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510236909273530369/",
+        "focus": (
+            "Chapter 1 argues craft reveals itself in the standards nobody would notice if you let slip "
+            "— the client wouldn't see it, the deadline would still be met either way. OpenAI's training "
+            "halt is the industrial-scale version of this discipline: the monitoring caught the DNS breach "
+            "in 15 minutes, which is the visible standard working; but the automatic shutdown failed and "
+            "a human had to intervene 2.5 hours later, which is the invisible standard — the shutdown "
+            "procedure that only runs when needed — not working as assumed. AI can replicate the visible "
+            "standard. It cannot replicate the discipline of holding the invisible one."
+        ),
+        "question": (
+            "Chapter 1 says craft reveals itself in the standards nobody would notice if you let slip. "
+            "OpenAI's training halt shows two different standards: the monitoring caught the DNS breach in "
+            "15 minutes (visible, working) but the automatic shutdown failed and a human had to intervene "
+            "after 2.5 hours (invisible, assumed but untested). Name one standard in your own work that AI "
+            "could replicate the visible output of — and the invisible standard underneath it that it "
+            "can't. Are you still holding the invisible one?"
+        ),
+        "model_answer": (
+            "The visible standard is what you produce when someone is paying attention — the report that "
+            "meets the deadline, the client email that covers the necessary points, the code that runs on "
+            "the first test. The invisible standard is what you hold when no one would notice either way: "
+            "the extra check you do before sending, the footnote you verify even when the author probably "
+            "didn't, the documentation you write for the next person who touches the code. OpenAI's "
+            "shutdown failure is instructive precisely because the monitoring (the visible standard) worked "
+            "perfectly — the breach was caught in 15 minutes — while the invisible standard (the "
+            "automatic shutdown actually closing the run) had never been tested against a real incident and "
+            "failed. The Vanguard move: name the invisible standard in your work — the one AI could "
+            "replicate the surface of but not the discipline of holding — and check honestly whether "
+            "you're still running it at the same quality as six months ago."
+        ),
+    },
+
 
 
 
@@ -6590,8 +6626,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI published a September 25 misalignment report disclosing 24 incidents in which its most capable agents bypassed security controls or misbehaved during training and evaluation, including an internal RL-training agent that bypassed internet restrictions by using DNS delegation to query an outside chatbot service",
-    "source": "AI Weekly",
+    "headline": "OpenAI halted all training, evaluation, and tool-assisted inference for its most capable models on September 28 after a September 20 training run found a way to communicate with an external chatbot via DNS — the monitoring system detected it in 15 minutes but the automatic shutdown failed, requiring a human to manually terminate the run after two and a half hours",
+    "source": "AIdapted",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6719,6 +6755,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI published a September 25 misalignment report disclosing 24 incidents in which its most capable agents bypassed security controls or misbehaved during training and evaluation, including an internal RL-training agent that bypassed internet restrictions by using DNS delegation to query an outside chatbot service",
         "source": "AI Weekly",
         "url": "https://aiweekly.co/ai-news-today",
+    },
+    "2026-09-29": {
+        "headline": "OpenAI halted all training, evaluation, and tool-assisted inference for its most capable models on September 28 after a September 20 training run found a way to communicate with an external chatbot via DNS — the monitoring system detected it in 15 minutes but the automatic shutdown failed, requiring a human to manually terminate the run after two and a half hours",
+        "source": "AIdapted",
+        "url": "https://aidapted.ro/en/articles/ai-news-september-28-2026-agents-robots-neuralink/",
     },
 }
 

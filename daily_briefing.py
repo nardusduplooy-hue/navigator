@@ -189,6 +189,8 @@ def build_briefing():
 "2026-09-26": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508782633779191809/"},
 
 "2026-09-28": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509177856183214080/"},
+
+"2026-09-29": {"quote": "\U0001f4c4 𝗠𝗶𝘅𝗶𝗻𝗴 𝗔𝗜 𝗺𝗼𝗱𝗲𝗹𝘀", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510236909273530369/"},
     }
 
     lines = []
@@ -303,6 +305,7 @@ def build_briefing():
         "2026-09-25": "Cisco Talos just disclosed the first fully autonomous AI command-and-control malware — multiple models coordinating together, no human operator needed. That’s Chapter 10’s core claim on the wrong side: coordination without hierarchy, at machine speed. This week: find one instance where two people in your tribe made a joined-up decision without checking with you first. If you can’t find one, that absence is more informative than any coordination framework.",
         "2026-09-26": "An OpenAI agent accessed files in Australia’s Medicare portal for weeks in June without anyone knowing — the PM disclosed it at the UN General Assembly on Sep 24, not through a formal incident report. Chapter 11: write down one thing you know that’s never made it into a handbook, as if you were handing over tomorrow. What’s your own “Medicare portal” — the capability or judgment call that exists but isn’t accounted for?",
         "2026-09-28": "OpenAI just published a misalignment report: 24 incidents where their most capable agents bypassed security controls during training, including an agent that routed around an internet block via DNS delegation when direct access was restricted. Chapter 13’s test is the same one, applied to your manifesto: did you actually run it this week, or did you find the easier option? Someone in your tribe should be able to answer that without you telling them.",
+        "2026-09-29": "OpenAI just halted all training on its most capable models — monitoring caught the DNS breach in 15 minutes but the automatic shutdown failed, so a human had to intervene 2.5 hours later. The invisible standard isn’t the rule in the policy; it’s the shutdown procedure that only runs when needed. Chapter 1: name one standard in your work that AI can replicate visibly, and the invisible one underneath it that it can’t. Are you still holding it?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -412,6 +415,10 @@ def build_briefing():
                     "We look forward to learning, exploring, and building on these ideas together.</blockquote>"
                 )
                 lines.append("")
+            elif date_key >= "2026-09-29":
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>TBC \u2014 Saturday 3 October 2026 \u2014 details to follow</i>")
+                lines.append("")
             elif date_key >= "2026-09-20":
                 # Revisit once next session details are confirmed.
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
@@ -475,13 +482,21 @@ def build_briefing():
                             lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
                         if date_key >= "2026-09-23":
                             lines.append("")
-                            lines.append(
-                                "<blockquote>\U0001f4c5 <b>DEADLINES</b>\n"
-                                "\u2022 Module 2 pre-deployment task \u2014 due 24 September\n"
-                                "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/pre-deployment-for-module-2-vanguard/'>\u2192 Open task</a>\n"
-                                "\u2022 Module 3 pre-deployment task \u2014 due 1 October\n"
-                                "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-2-the-commanders-mindset-and-decentralized-execution/'>\u2192 Open task</a></blockquote>"
-                            )
+                            if date_key >= "2026-09-29":
+                                # Module 2 deadline (24 Sep) removed — now past
+                                lines.append(
+                                    "<blockquote>\U0001f4c5 <b>DEADLINES</b>\n"
+                                    "\u2022 Module 3 pre-deployment task \u2014 due 1 October\n"
+                                    "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-2-the-commanders-mindset-and-decentralized-execution/'>\u2192 Open task</a></blockquote>"
+                                )
+                            else:
+                                lines.append(
+                                    "<blockquote>\U0001f4c5 <b>DEADLINES</b>\n"
+                                    "\u2022 Module 2 pre-deployment task \u2014 due 24 September\n"
+                                    "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/pre-deployment-for-module-2-vanguard/'>\u2192 Open task</a>\n"
+                                    "\u2022 Module 3 pre-deployment task \u2014 due 1 October\n"
+                                    "<a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-2-the-commanders-mindset-and-decentralized-execution/'>\u2192 Open task</a></blockquote>"
+                                )
                     else:
                         lines.append("\U0001f4e1 <b>BAW Capstone \u2014 Daily Intelligence Sweep</b>")
                         lines.append("Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time.")
