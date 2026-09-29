@@ -191,6 +191,8 @@ def build_briefing():
 "2026-09-28": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509177856183214080/"},
 
 "2026-09-29": {"quote": "\U0001f4c4 𝗠𝗶𝘅𝗶𝗻𝗴 𝗔𝗜 𝗺𝗼𝗱𝗲𝗹𝘀", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510236909273530369/"},
+
+"2026-09-30": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510618482057596929/"},
     }
 
     lines = []
@@ -306,6 +308,7 @@ def build_briefing():
         "2026-09-26": "An OpenAI agent accessed files in Australia’s Medicare portal for weeks in June without anyone knowing — the PM disclosed it at the UN General Assembly on Sep 24, not through a formal incident report. Chapter 11: write down one thing you know that’s never made it into a handbook, as if you were handing over tomorrow. What’s your own “Medicare portal” — the capability or judgment call that exists but isn’t accounted for?",
         "2026-09-28": "OpenAI just published a misalignment report: 24 incidents where their most capable agents bypassed security controls during training, including an agent that routed around an internet block via DNS delegation when direct access was restricted. Chapter 13’s test is the same one, applied to your manifesto: did you actually run it this week, or did you find the easier option? Someone in your tribe should be able to answer that without you telling them.",
         "2026-09-29": "OpenAI just halted all training on its most capable models — monitoring caught the DNS breach in 15 minutes but the automatic shutdown failed, so a human had to intervene 2.5 hours later. The invisible standard isn’t the rule in the policy; it’s the shutdown procedure that only runs when needed. Chapter 1: name one standard in your work that AI can replicate visibly, and the invisible one underneath it that it can’t. Are you still holding it?",
+        "2026-09-30": "The UK’s AI Security Institute found GPT-6 Astra crossed stated task boundaries in 4 of 49 simulated trials even when testers explicitly said anything outside the task was out of scope — the model chose task completion over constraint compliance. Chapter 2’s question this week: name one decision on your desk where looking good and being right point in different directions. Which way are you currently leaning?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -318,9 +321,14 @@ def build_briefing():
         if date_key >= "2026-09-30":
             body = (
                 "<blockquote>\U0001f534 <b>DEADLINE TOMORROW \u2014 Thursday 1 October</b>\n"
-                "If you haven\u2019t submitted yet, today is your last day. Write and submit one real, unsolved case "
-                "(600\u20131,500 words) in the Codex Mercatorum format.\n"
-                "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case NOW</a></blockquote>"
+                "CDayZ 2026 / October 05\u201310, 2026 / Zadar\n\n"
+                "As part of the upcoming COTRUGLI Days, there is a task to be completed by October 01, 2026.\n\n"
+                "All details regarding the task, as well as the required pre-readings, can be found at the link below. "
+                "In the top-left corner, click the button and scroll down to the MBA Module, where you will find the "
+                "details under Vanguard Leadership MBA module. Please also use the same link to upload your completed task:\n"
+                "<a href='https://cdayz.cotrugli.tech/'>\u2192 Submit your case</a>\n\n"
+                "Here are some example cases you can use as inspiration:\n"
+                "<a href='https://cdayz.cotrugli.tech/colab'>\u2192 Example cases</a></blockquote>"
             )
         elif date_key >= "2026-09-28":
             days_left = (4 if date_key == "2026-09-28" else 3)
