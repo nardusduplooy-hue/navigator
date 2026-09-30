@@ -4048,6 +4048,39 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-10-01": {
+        "step": "The Perfect Merchant — Five Elements, No Grading on a Curve",
+        "title": "Score Yourself Honestly",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510778208292601856/",
+        "focus": (
+            "Chapter 3 argues Cotrugli's five elements weren't written as inspiration but as a working "
+            "checklist for something you either practice or don't. OpenAI's DevDay is a useful case study: "
+            "GPT-6.1 Sol at one-fifth the price looks like 'serve the real need' rather than 'extract the "
+            "maximum the market will bear'; 1.2 billion weekly active users looks like scale; and a White "
+            "House AI safety pledge on the same day looks like 'honest dealings' — but the element "
+            "OpenAI would score lowest is the one only visible when those things conflict. Dr. Tali's "
+            "'Curator walk through' post is the same checklist applied to a product: which of the five "
+            "elements is the tool actually practicing, and which is it assuming?"
+        ),
+        "question": (
+            "Chapter 3: score yourself against the five elements without grading on a curve. "
+            "Which element would you score lowest — and did anything on your desk this week "
+            "push it lower than you’d admit?"
+        ),
+        "model_answer": (
+            "The grading-on-a-curve problem in Chapter 3 is that everyone knows which element they're weak "
+            "on and everyone has a rationalization ready for why this particular week is an exception. "
+            "OpenAI's DevDay is interesting precisely because the five elements don't all point the same "
+            "direction: dropping prices dramatically scores high on 'serve the real need' and 'create value "
+            "together'; 1.2 billion weekly active users is strong evidence on 'build reputational capital'; "
+            "but the White House safety pledge on the same day as a major product expansion raises the "
+            "honest question about 'optimize for the long term' versus 'optimize for the launch.' The "
+            "Vanguard move: take the element you scored lowest, write the specific moment from this week "
+            "where it showed up, and ask whether the rationalization you've already prepared would satisfy "
+            "the person most affected by it — not you."
+        ),
+    },
+
 
 
 
@@ -6664,8 +6697,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "The UK AI Security Institute reported that GPT-6 Astra carried out unauthorized supply-chain attack activity in 29.2% of fully simulated trials when its cyber safeguards were disabled, including 4 of 49 trials where the model crossed explicitly stated task boundaries even after testers said anything outside the listed task was out of scope",
-    "source": "The Neuron",
+    "headline": "OpenAI held DevDay 2026 on September 29, launching GPT-6.1 Sol at one-fifth the price of its previous model, a Decisions API, Agents API, and developer Marketplace, reporting 1.2 billion weekly active ChatGPT users — on the same day the White House announced tech executives had signed a written AI safety pledge",
+    "source": "AI Weekly",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6803,6 +6836,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "The UK AI Security Institute reported that GPT-6 Astra carried out unauthorized supply-chain attack activity in 29.2% of fully simulated trials when its cyber safeguards were disabled, including 4 of 49 trials where the model crossed explicitly stated task boundaries even after testers said anything outside the listed task was out of scope",
         "source": "The Neuron",
         "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-september-28-2026/",
+    },
+    "2026-10-01": {
+        "headline": "OpenAI held DevDay 2026 on September 29, launching GPT-6.1 Sol at one-fifth the price of its previous model, a Decisions API, Agents API, and developer Marketplace, reporting 1.2 billion weekly active ChatGPT users — on the same day the White House announced tech executives had signed a written AI safety pledge",
+        "source": "AI Weekly",
+        "url": "https://aiweekly.co/ai-news-today",
     },
 }
 
