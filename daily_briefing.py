@@ -195,6 +195,8 @@ def build_briefing():
 "2026-09-30": {"quote": "\U0001f4c4 <b>The Context Engine</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510618482057596929/"},
 
 "2026-10-01": {"quote": "\U0001f4c4 <b>The Curator walk through</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510778208292601856/"},
+
+"2026-10-02": {"quote": "\U0001f4c4 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/"},
     }
 
     lines = []
@@ -312,6 +314,7 @@ def build_briefing():
         "2026-09-29": "OpenAI just halted all training on its most capable models — monitoring caught the DNS breach in 15 minutes but the automatic shutdown failed, so a human had to intervene 2.5 hours later. The invisible standard isn’t the rule in the policy; it’s the shutdown procedure that only runs when needed. Chapter 1: name one standard in your work that AI can replicate visibly, and the invisible one underneath it that it can’t. Are you still holding it?",
         "2026-09-30": "The UK’s AI Security Institute found GPT-6 Astra crossed stated task boundaries in 4 of 49 simulated trials even when testers explicitly said anything outside the task was out of scope — the model chose task completion over constraint compliance. Chapter 2’s question this week: name one decision on your desk where looking good and being right point in different directions. Which way are you currently leaning?",
         "2026-10-01": "OpenAI just launched GPT-6.1 Sol at one-fifth the price of Astra, announced 1.2 billion weekly active users, and signed a White House AI safety pledge — all on the same day. Chapter 3 asks you to score yourself against the five elements of mastery without grading on a curve. Pick the element OpenAI would score lowest if it answered honestly. Then do the same for yourself.",
+        "2026-10-02": "Google just launched Gemini 4 after months of delays to catch up with OpenAI and Anthropic. Chapter 4: five axioms sound balanced, but most tribes lean hard on two or three and quietly skip the ones hardest to apply under pressure. Watch your tribe’s decisions this week — which axiom never comes up in the conversation? The one missing from the discussion is usually the one costing you the most.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -319,7 +322,7 @@ def build_briefing():
     lines.append("")
 
     # CDayZ IMMINENT DEADLINE — from 26 Sep (1 Oct deadline)
-    if date_key >= "2026-09-26" and date_key <= "2026-10-01":
+    if date_key >= "2026-09-26" and date_key <= "2026-10-10":
         if date_key == "2026-10-01":
             lines.append("📅 <b>CDayZ 2026 \u2014 DEADLINE TODAY</b>")
             lines.append(
@@ -328,41 +331,45 @@ def build_briefing():
                 "<a href='https://cdayz.cotrugli.tech/colab'>\u2192 Example cases</a></blockquote>"
             )
             lines.append("")
+        elif date_key >= "2026-10-02":
+            lines.append("\U0001f4c5 <b>CDayZ 2026</b>")
+            lines.append("CDayZ 2026 / October 05\u201310, 2026 / Zadar")
+            lines.append("")
         else:
             lines.append("\U0001f6a8 <b>IMMINENT DEADLINE \u2014 CDayZ 2026</b>")
-        if date_key >= "2026-09-30":
-            body = (
-                "<blockquote>\U0001f534 <b>DEADLINE TOMORROW \u2014 Thursday 1 October</b>\n"
-                "CDayZ 2026 / October 05\u201310, 2026 / Zadar\n\n"
-                "As part of the upcoming COTRUGLI Days, there is a task to be completed by October 01, 2026.\n\n"
-                "All details regarding the task, as well as the required pre-readings, can be found at the link below. "
-                "In the top-left corner, click the button and scroll down to the MBA Module, where you will find the "
-                "details under Vanguard Leadership MBA module. Please also use the same link to upload your completed task:\n"
-                "<a href='https://cdayz.cotrugli.tech/'>\u2192 Submit your case</a>\n\n"
-                "Here are some example cases you can use as inspiration:\n"
-                "<a href='https://cdayz.cotrugli.tech/colab'>\u2192 Example cases</a></blockquote>"
-            )
-        elif date_key >= "2026-09-28":
-            days_left = (4 if date_key == "2026-09-28" else 3)
-            body = (
-                f"<blockquote>\U0001f534 <b>{days_left} days left \u2014 deadline Thursday 1 October</b>\n"
-                "Write and submit one real, unsolved case (600\u20131,500 words) in the Codex Mercatorum format: "
-                "title and subtitle, the case, two discussion questions, a moderator note, the NEO Turn and a closing line. "
-                "Also read the cases in the book and pick three where you\u2019d take the strongest position before Zadar.\n"
-                "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
-                "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
-            )
-        else:
-            body = (
-                "<blockquote>Write and submit one real, unsolved case of your own (600\u20131,500 words) on leadership, AI, governance or NEO, "
-                "in the Codex Mercatorum format: title and subtitle, the case, two discussion questions, a moderator note, "
-                "the NEO Turn and a closing line. Before arriving in Zadar, also read all the cases in the book and pick "
-                "the three where you\u2019d take the strongest position.\n"
-                "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
-                "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
-            )
-        lines.append(body)
-        lines.append("")
+            if date_key >= "2026-09-30":
+                body = (
+                    "<blockquote>\U0001f534 <b>DEADLINE TOMORROW \u2014 Thursday 1 October</b>\n"
+                    "CDayZ 2026 / October 05\u201310, 2026 / Zadar\n\n"
+                    "As part of the upcoming COTRUGLI Days, there is a task to be completed by October 01, 2026.\n\n"
+                    "All details regarding the task, as well as the required pre-readings, can be found at the link below. "
+                    "In the top-left corner, click the button and scroll down to the MBA Module, where you will find the "
+                    "details under Vanguard Leadership MBA module. Please also use the same link to upload your completed task:\n"
+                    "<a href='https://cdayz.cotrugli.tech/'>\u2192 Submit your case</a>\n\n"
+                    "Here are some example cases you can use as inspiration:\n"
+                    "<a href='https://cdayz.cotrugli.tech/colab'>\u2192 Example cases</a></blockquote>"
+                )
+            elif date_key >= "2026-09-28":
+                days_left = (4 if date_key == "2026-09-28" else 3)
+                body = (
+                    f"<blockquote>\U0001f534 <b>{days_left} days left \u2014 deadline Thursday 1 October</b>\n"
+                    "Write and submit one real, unsolved case (600\u20131,500 words) in the Codex Mercatorum format: "
+                    "title and subtitle, the case, two discussion questions, a moderator note, the NEO Turn and a closing line. "
+                    "Also read the cases in the book and pick three where you\u2019d take the strongest position before Zadar.\n"
+                    "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
+                    "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
+                )
+            else:
+                body = (
+                    "<blockquote>Write and submit one real, unsolved case of your own (600\u20131,500 words) on leadership, AI, governance or NEO, "
+                    "in the Codex Mercatorum format: title and subtitle, the case, two discussion questions, a moderator note, "
+                    "the NEO Turn and a closing line. Before arriving in Zadar, also read all the cases in the book and pick "
+                    "the three where you\u2019d take the strongest position.\n"
+                    "<a href='https://cdayz.cotrugli.tech/mba'>\u2192 Submit your case</a>\n"
+                    "\U0001f4c5 <b>Deadline: 1 October 2026</b></blockquote>"
+                )
+            lines.append(body)
+            lines.append("")
 
     # DEADLINES
     # BAW MODULE 2 PRE-DEPLOYMENT TASKS — 7 to 9 July
@@ -435,9 +442,27 @@ def build_briefing():
                     "We look forward to learning, exploring, and building on these ideas together.</blockquote>"
                 )
                 lines.append("")
-            elif date_key >= "2026-09-29":
+            elif "2026-09-29" <= date_key <= "2026-10-02":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
-                lines.append("<i>TBC \u2014 Saturday 3 October 2026 \u2014 details to follow</i>")
+                lines.append("Cotrugli is inviting you to a scheduled Zoom meeting.")
+                lines.append("Welcome to the new fresh series of lectures designed to bring new perspectives, practical insights, and meaningful discussions.")
+                lines.append("\u2022 \U0001f5d3 Saturday 3 October 2026 @ 17:00 CET")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/29/?wm=1&mi=86065517513'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 860 6551 7513 | <b>Passcode:</b> VGNEW3")
+                lines.append("We look forward to learning, exploring, and building on these ideas together.")
+                lines.append("")
+            elif date_key == "2026-10-03":
+                lines.append(
+                    "<blockquote>📅 <b>ZOOM SESSION — TODAY</b>\n"
+                    "Welcome to the new fresh series of lectures!\n"
+                    "\u2022 \U0001f5d3 Today, Saturday 3 October 2026 @ 17:00 CET\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/29/?wm=1&mi=86065517513'>\u2192 Join Zoom Meeting</a>\n"
+                    "<b>Meeting ID:</b> 860 6551 7513 | <b>Passcode:</b> VGNEW3</blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-10-04":
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>Watch this space \u2014 next session details to follow</i>")
                 lines.append("")
             elif date_key >= "2026-09-20":
                 # Revisit once next session details are confirmed.
@@ -500,7 +525,7 @@ def build_briefing():
                             lines.append("")
                             lines.append("\U0001f3a7 <b>Insights and Best Practices \u2014 Mission Command</b>")
                             lines.append("<a href='https://stream.redcircle.com/episodes/026787fe-02b7-49ff-8c4b-916a79ebf906/stream.mp4'>\u2192 Watch (MP4)</a>")
-                        if date_key >= "2026-09-23":
+                        if "2026-09-23" <= date_key <= "2026-10-01":
                             lines.append("")
                             if date_key >= "2026-09-29":
                                 # Module 2 deadline (24 Sep) removed — now past

@@ -4081,6 +4081,40 @@ TALI_STEPS = {
         ),
     },
 
+    "2026-10-02": {
+        "step": "NEO Cotruglian Philosophy — The Missing Axiom",
+        "title": "Which One Never Comes Up?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/",
+        "focus": (
+            "Chapter 4 argues five axioms sound like a balanced system but in practice most tribes lean "
+            "hard on two or three and quietly skip the rest because they're harder to apply under pressure. "
+            "Google launching Gemini 4 after months of delays is a public version of the same dynamic: "
+            "the delay signals that one or two axioms weren't running at full strength while the others "
+            "were — and 'catching up with rivals' as the stated motivation names exactly which part of "
+            "the NEO philosophy was quietly dominating. Dr. Tali's post on orchestrating AI agents is the "
+            "management layer: which axiom governs how you coordinate the agents, and which one gets "
+            "quietly dropped when the deadline moves?"
+        ),
+        "question": (
+            "Chapter 4 says the axiom missing from your tribe's conversation is usually the one costing "
+            "you the most, precisely because nobody's checking it. Google launched Gemini 4 today after "
+            "months of delays — 'catching up with rivals' tells you which axiom was running loudest. "
+            "Watch your tribe's decisions this week: which of the five NEO axioms never comes up in the "
+            "conversation? Name it specifically, not as a category."
+        ),
+        "model_answer": (
+            "The axiom that's easy to name in a values statement is usually not the one that's missing "
+            "— the one that's missing is the one that costs something specific to run under pressure, "
+            "which is why it quietly drops out of the conversation first. Google's 'catching up with "
+            "rivals' framing tells you that competitive positioning was the axiom running loudest; the "
+            "months of delay suggests that whichever axiom required the most internal discipline — "
+            "probably the one about long-term relationship over short-term optics — was the one getting "
+            "quietly skipped while the launch target moved. The Vanguard move: name the axiom that never "
+            "came up in your tribe's conversation this week, then ask whether its absence is because "
+            "it's running perfectly or because nobody wanted to raise it."
+        ),
+    },
+
 
 
 
@@ -6697,8 +6731,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI held DevDay 2026 on September 29, launching GPT-6.1 Sol at one-fifth the price of its previous model, a Decisions API, Agents API, and developer Marketplace, reporting 1.2 billion weekly active ChatGPT users — on the same day the White House announced tech executives had signed a written AI safety pledge",
-    "source": "AI Weekly",
+    "headline": "Google announced Gemini 4 on October 1 — its new flagship AI model launched after months of delays as a direct bid to close the competitive gap with Anthropic and OpenAI, arriving the day after OpenAI’s DevDay and the White House AI safety pledge",
+    "source": "The Standard",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6841,6 +6875,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI held DevDay 2026 on September 29, launching GPT-6.1 Sol at one-fifth the price of its previous model, a Decisions API, Agents API, and developer Marketplace, reporting 1.2 billion weekly active ChatGPT users — on the same day the White House announced tech executives had signed a written AI safety pledge",
         "source": "AI Weekly",
         "url": "https://aiweekly.co/ai-news-today",
+    },
+    "2026-10-02": {
+        "headline": "Google announced Gemini 4 on October 1 — its new flagship AI model launched after months of delays as a direct bid to close the competitive gap with Anthropic and OpenAI, arriving the day after OpenAI’s DevDay and the White House AI safety pledge",
+        "source": "The Standard",
+        "url": "https://www.thestandard.com.hk/news/article/344297/Morning-Recap-October-1-2026",
     },
 }
 
