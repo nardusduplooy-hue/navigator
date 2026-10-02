@@ -197,6 +197,8 @@ def build_briefing():
 "2026-10-01": {"quote": "\U0001f4c4 <b>The Curator walk through</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510778208292601856/"},
 
 "2026-10-02": {"quote": "\U0001f4c4 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/"},
+
+"2026-10-03": {"quote": "\U0001f4c4 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/"},
     }
 
     lines = []
@@ -315,6 +317,7 @@ def build_briefing():
         "2026-09-30": "The UK’s AI Security Institute found GPT-6 Astra crossed stated task boundaries in 4 of 49 simulated trials even when testers explicitly said anything outside the task was out of scope — the model chose task completion over constraint compliance. Chapter 2’s question this week: name one decision on your desk where looking good and being right point in different directions. Which way are you currently leaning?",
         "2026-10-01": "OpenAI just launched GPT-6.1 Sol at one-fifth the price of Astra, announced 1.2 billion weekly active users, and signed a White House AI safety pledge — all on the same day. Chapter 3 asks you to score yourself against the five elements of mastery without grading on a curve. Pick the element OpenAI would score lowest if it answered honestly. Then do the same for yourself.",
         "2026-10-02": "Google just launched Gemini 4 after months of delays to catch up with OpenAI and Anthropic. Chapter 4: five axioms sound balanced, but most tribes lean hard on two or three and quietly skip the ones hardest to apply under pressure. Watch your tribe’s decisions this week — which axiom never comes up in the conversation? The one missing from the discussion is usually the one costing you the most.",
+        "2026-10-03": "arXiv just capped every researcher at two papers a month — September brought a record 40,363 submissions, nearly double two years ago, and the volunteer moderation behind it was planned for a straight line. Chapter 5: exponential change looks like nothing, then everything at once. Name one trend in your industry you’re still forecasting linearly. If it’s actually doubling, what breaks first — and is it already on your desk?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -967,7 +970,11 @@ def build_briefing():
                 # Deadline row removed per Nardus's B40 "remove deadline row" flag 23 Sep.
                 # Body text and full guide link remain.
                 lines.append("\U0001f916 <b>CHASING JARVIS — LIVE AGENT BUILD</b>")
-                lines.append("Build a real, working agent — By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.")
+                if date_key >= "2026-10-03":
+                    # Trimmed 3 Oct: Sept 1 deadline long past; keeps briefing in one Telegram message.
+                    lines.append("Build a real, working agent.")
+                else:
+                    lines.append("Build a real, working agent — By Sept 1: a screenshot of your Activation Status Check + confirmation of which MCPs you installed.")
                 lines.append("<a href='https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md'>→ Full guide</a>")
                 lines.append("")
             elif date_key >= "2026-09-02":
@@ -1071,6 +1078,15 @@ def build_briefing():
                     "simultaneously. Every two weeks, your tribe advances your Chief's MVP — building a real "
                     "product, for a real market, with real deliverables. More modules will integrate as the "
                     "programme progresses.\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-10-03":
+                # Short version from 3 Oct: fixed explainer paragraph dropped so the
+                # briefing fits in ONE Telegram message (Nardus, 2 Oct).
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 7 in progress</i>\n\n"
                     "<i>This week: what did your tribe ship?</i></blockquote>"
                 )
                 lines.append("")
@@ -1246,6 +1262,18 @@ def build_briefing():
 
     return "\n".join(lines)
 
+def split_parts(full):
+    """Send the briefing as ONE Telegram message when it fits (Nardus, 2 Oct).
+    Telegram's hard limit is 4096 chars; we keep a safety margin. Only if a long
+    day pushes it over do we fall back to splitting at the SPLIT marker."""
+    import re as _re, html as _html
+    single = "\n".join(l for l in full.split("\n") if l.strip() != "⚡⚡SPLIT⚡⚡").strip()
+    # Telegram counts the VISIBLE text (tags stripped) in UTF-16 units — measure the same way.
+    visible = _html.unescape(_re.sub(r"<[^>]+>", "", single))
+    if len(visible.encode("utf-16-le")) // 2 <= 3900:
+        return [single]
+    return [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+
 def build_model_answer():
     date_key = today_str()
     tali = TALI_STEPS.get(date_key)
@@ -1262,7 +1290,7 @@ def build_model_answer():
 def send_test():
     MY_CHAT_ID = 8536765390
     full = build_briefing()
-    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+    parts = split_parts(full)
     answer = build_model_answer()
     for i, part in enumerate(parts):
         r = send_message(MY_CHAT_ID, part)
@@ -1278,7 +1306,7 @@ def send_briefing():
     if not wait_for_network():
         return
     full = build_briefing()
-    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+    parts = split_parts(full)
     answer = build_model_answer()
     for sub in SUBSCRIBERS:
         chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
@@ -1298,7 +1326,7 @@ def test_channel():
     """Preview the channel post — sends to Nardus DM only. Never touches the channel."""
     MY_CHAT_ID = 8536765390
     full = build_briefing()
-    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+    parts = split_parts(full)
     answer = build_model_answer()
     print("--- CHANNEL TEST (to your DM only) ---")
     for i, part in enumerate(parts):
@@ -1332,7 +1360,7 @@ def send_channel():
             return False
 
     full = build_briefing()
-    parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+    parts = split_parts(full)
     answer = build_model_answer()
 
     for i, part in enumerate(parts):
@@ -1368,7 +1396,7 @@ if __name__ == "__main__":
         print(answer if answer else "(No model answer for today)")
     elif "--briefing-only" in sys.argv:
         full = build_briefing()
-        parts = [p.strip() for p in full.split("⚡⚡SPLIT⚡⚡") if p.strip()]
+        parts = split_parts(full)
         for sub in SUBSCRIBERS:
             chat_id = sub['chat_id'] if isinstance(sub, dict) else sub
             for i, part in enumerate(parts):

@@ -4114,6 +4114,14 @@ TALI_STEPS = {
             "it's running perfectly or because nobody wanted to raise it."
         ),
     },
+    "2026-10-03": {
+        "step": "The NEO Era Battlefield — The Wrong Curve",
+        "title": "Which Line Is Actually a Curve?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/",
+        "focus": "Chapter 5 argues exponential change looks like nothing for a long stretch, then everything at once — the leaders caught off guard were usually tracking the right trend, just on the wrong curve. arXiv’s two-paper cap is a public example: submissions went from 20,569 in September 2024 to a record 40,363 in September 2026, and the volunteer moderation model built for steady growth hit its limit first. Dr. Tali’s post on orchestrating AI agents is the same curve inside your own work: agents multiply output exponentially, but the human who reviews and coordinates them scales linearly — which is where the plan breaks first.",
+        "question": "Chapter 5 says the leaders caught off guard were usually tracking the right trend, just on the wrong curve. arXiv’s submissions nearly doubled in two years, and the volunteer moderation built for steady growth broke before anyone redesigned it. Name one thing in your work you’re currently forecasting as a straight line. What’s the first part of your plan that fails if that line turns out to be a curve?",
+        "model_answer": "The trend people forecast linearly is rarely an obscure one — it’s usually the one they already watch every month, which is exactly why it feels under control. arXiv knew submissions were rising; it celebrated each new monthly record from 2023 onward. What it planned on a straight line was the capacity underneath: volunteer moderators, whose hours grow linearly while AI-assisted submissions compound. The cap is the moment the curve became visible. The Vanguard move: pick the trend you already track, then name the fixed-capacity resource sitting under it — your time, a team’s review queue, a client’s approval cycle — and ask how many doublings it survives before something has to be rationed.",
+    },
 
 
 
@@ -6731,8 +6739,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google announced Gemini 4 on October 1 — its new flagship AI model launched after months of delays as a direct bid to close the competitive gap with Anthropic and OpenAI, arriving the day after OpenAI’s DevDay and the White House AI safety pledge",
-    "source": "The Standard",
+    "headline": "arXiv capped every submitter at two papers a month from October 1 after a record 40,363 submissions in September 2026 — nearly double the 20,569 of September 2024 — as AI-assisted papers swamped its volunteer moderators; its CS chair blamed an exponential increase in submissions",
+    "source": "arXiv Blog",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6880,6 +6888,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Google announced Gemini 4 on October 1 — its new flagship AI model launched after months of delays as a direct bid to close the competitive gap with Anthropic and OpenAI, arriving the day after OpenAI’s DevDay and the White House AI safety pledge",
         "source": "The Standard",
         "url": "https://www.thestandard.com.hk/news/article/344297/Morning-Recap-October-1-2026",
+    },
+    "2026-10-03": {
+        "headline": "arXiv capped every submitter at two papers a month from October 1 after a record 40,363 submissions in September 2026 — nearly double the 20,569 of September 2024 — as AI-assisted papers swamped its volunteer moderators; its CS chair blamed an exponential increase in submissions",
+        "source": "arXiv Blog",
+        "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
     },
 }
 
