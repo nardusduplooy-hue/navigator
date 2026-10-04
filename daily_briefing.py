@@ -199,6 +199,8 @@ def build_briefing():
 "2026-10-02": {"quote": "\U0001f4c4 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/"},
 
 "2026-10-03": {"quote": "\U0001f4c4 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511326291187367937/"},
+
+"2026-10-05": {"quote": "📄 𝗘𝘃𝗲𝗿𝘆 𝗰𝗼𝗺𝗽𝗮𝗻𝘆 𝗜 𝘁𝗮𝗹𝗸 𝘁𝗼 𝗶𝘀 𝘀𝗼𝗺𝗲𝘄𝗵𝗲𝗿𝗲 𝗶𝗻 𝘁𝗵𝗶𝘀 𝘀𝘁𝗼𝗿𝘆", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511803227315679232/"},
     }
 
     lines = []
@@ -318,6 +320,7 @@ def build_briefing():
         "2026-10-01": "OpenAI just launched GPT-6.1 Sol at one-fifth the price of Astra, announced 1.2 billion weekly active users, and signed a White House AI safety pledge — all on the same day. Chapter 3 asks you to score yourself against the five elements of mastery without grading on a curve. Pick the element OpenAI would score lowest if it answered honestly. Then do the same for yourself.",
         "2026-10-02": "Google just launched Gemini 4 after months of delays to catch up with OpenAI and Anthropic. Chapter 4: five axioms sound balanced, but most tribes lean hard on two or three and quietly skip the ones hardest to apply under pressure. Watch your tribe’s decisions this week — which axiom never comes up in the conversation? The one missing from the discussion is usually the one costing you the most.",
         "2026-10-03": "arXiv just capped every researcher at two papers a month — September brought a record 40,363 submissions, nearly double two years ago, and the volunteer moderation behind it was planned for a straight line. Chapter 5: exponential change looks like nothing, then everything at once. Name one trend in your industry you’re still forecasting linearly. If it’s actually doubling, what breaks first — and is it already on your desk?",
+        "2026-10-05": "OpenAI cancelled its next flagship model on the eve of its biggest conference of the year, after tests showed it overstepping its authority. Reversing a public decision costs credibility in the moment. Chapter 7 asks when you last actually changed your mind on something that mattered. Name one decision your tribe made this year that new evidence now argues against. What would it cost to reverse it this week?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -493,7 +496,9 @@ def build_briefing():
             if date_key >= "2026-07-03":
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")
-                if date_key >= "2026-09-26":
+                if date_key >= "2026-10-05":
+                    lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE \u2014 MODULES 3 \u0026 4</b>")
+                elif date_key >= "2026-09-26":
                     lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE \u2014 MODULES 2 \u0026 3</b>")
                 elif date_key >= "2026-09-23":
                     lines.append("\U0001f3a7 <b>Business as Warfare \u2014 Modules 2 \u0026 3</b>")
@@ -511,7 +516,12 @@ def build_briefing():
                         lines.append("<a href='https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3'>\u2192 Composite Warfare podcast</a>")
                 if date_key >= "2026-08-04":
                     lines.append("")
-                    if date_key >= "2026-09-21":
+                    if date_key >= "2026-10-05":
+                        # 5 Oct: Module 3 lesson + 7 podcasts (Nardus sheet B18–B26)
+                        lines.append("\U0001f4e1 <b>Information Dominance and the Intelligence Cycle</b>")
+                        lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-3-information-dominance-and-the-intelligence-cycle/'>Business as Warfare \u2014 Module 3</a>.")
+                        lines.append("\U0001f3a7 <b>Podcasts:</b> <a href='https://stream.redcircle.com/episodes/61d5bcab-df5c-4078-8626-52bd83718511/stream.mp3'>1</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0434e123-0ca4-4f05-8c62-5e3ebdfdea1b/stream.mp3'>2</a> \u00b7 <a href='https://stream.redcircle.com/episodes/268e9021-e905-46aa-8c68-e0ed36eae73f/stream.mp3'>3</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0966a01d-5876-4ae5-bdf4-0a9f555e0360/stream.mp3'>4</a> \u00b7 <a href='https://stream.redcircle.com/episodes/ac845d2e-3c0a-4358-97d4-426d5eed4415/stream.mp3'>5</a> \u00b7 <a href='https://stream.redcircle.com/episodes/884cf5c5-7075-4c01-96d6-b4f82e996e7f/stream.mp3'>6</a> \u00b7 <a href='https://stream.redcircle.com/episodes/d86cf22c-cbf6-49b0-8fa2-f94d76156980/stream.mp3'>7</a>")
+                    elif date_key >= "2026-09-21":
                         lines.append("\U0001f4e1 <b>The Commander\u2019s Mindset</b>")
                         lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://nardusduplooy-hue.github.io/navigator/navigator_app.html'>Business as Warfare \u2014 Module 2</a>.")
                         lines.append("")
@@ -884,7 +894,26 @@ def build_briefing():
 
     # MODULE 2 ASSIGNMENT — from 15 June onwards
     if date_key >= "2026-06-15":
-        if date_key >= "2026-09-26":
+        if date_key >= "2026-10-05":
+            # 5 Oct: Module 4 + final project summary (Saša's slide, Nardus sheet B28–B31)
+            lines.append("\U0001f4cb <b>AI IN B2B SALES \u2014 MODULE 4</b>")
+            lines.append("<i>Orchestration &amp; Risk \u00b7 Saša Pavlaković</i> \u00b7 <a href='https://cotrugli.online/courses/ai-sales/lessons/orchestration-risk/'>\u2192 Module 4</a>")
+            lines.append("<blockquote><b>Final project \u2014 AI Sales Strategy for your company</b>\n"
+                         "10\u201315 page document, defended in 15 minutes to the cohort. Due 3 weeks after the Module 4 session.\n"
+                         "1 Diagnosis: honest friction map (Module 1 funnel)\n"
+                         "2 Stack: tools, order, why (Module 2)\n"
+                         "3 Architecture: standards, library, rituals (Module 3)\n"
+                         "4 Governance: RACI, decision gates, kill switches (Module 4)\n"
+                         "5 ROI model: Layer 1/2/3 metrics vs one explicit baseline\n"
+                         "6 Risk register: top 3 company risks + your response</blockquote>")
+            lines.append("")
+            lines.append("\U0001f4ca <b>Analytics</b> \u2014 own tempo")
+            lines.append("<a href='https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/'>\u2192 Start here</a>")
+            lines.append("")
+            lines.append("\U0001f9d8 <b>Self Awareness &amp; Personal Enlightenment</b> \u2014 own tempo")
+            lines.append("<a href='https://cotrugli.online/courses/selfawareness-personalenlightenment/'>\u2192 Start here</a>")
+            lines.append("")
+        elif date_key >= "2026-09-26":
             lines.append("\U0001f4cb <b>AI IN B2B SALES \u2014 MODULE 3</b>")
             lines.append("<i>Tribal Architecture</i>")
             lines.append("<i>Saša Pavlaković</i>")
@@ -1081,6 +1110,13 @@ def build_briefing():
                     "<i>This week: what did your tribe ship?</i></blockquote>"
                 )
                 lines.append("")
+            elif date_key >= "2026-10-05":
+                lines.append("\U0001f680 <b>VANGUARD SPRINT PROGRAMME</b>")
+                lines.append(
+                    "<blockquote><i>All Chiefs · All Tribes · Sprint 8 in progress</i>\n\n"
+                    "<i>This week: what did your tribe ship?</i></blockquote>"
+                )
+                lines.append("")
             elif date_key >= "2026-10-03":
                 # Short version from 3 Oct: fixed explainer paragraph dropped so the
                 # briefing fits in ONE Telegram message (Nardus, 2 Oct).
@@ -1224,7 +1260,8 @@ def build_briefing():
             elif date_key >= "2026-07-06":
                 if KAPUSTA_TODAY.get("title"):
                     lines.append("\U0001f4c4 <b>" + KAPUSTA_TODAY["title"] + "</b>")
-                lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
+                _k_label = "→ Watch on YouTube — Dra\u017een Kapusta" if "youtu" in KAPUSTA_TODAY["url"] else "→ Read more on LinkedIn — Dra\u017een Kapusta"
+                lines.append("<a href='" + KAPUSTA_TODAY["url"] + "'>" + _k_label + "</a>")
             elif date_key >= "2026-05-30":
                 lines.append("<a href='https://www.linkedin.com/pulse/neo-cotruglian-philosophy-leadership-operating-system-drazen-kapusta-z03of/?trackingId=yjbjhb2qREidGPz36JtTRQ%3D%3D'>→ Read more on LinkedIn — Dra\u017een Kapusta</a>")
             else:
