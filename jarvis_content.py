@@ -4130,6 +4130,14 @@ TALI_STEPS = {
         "question": "OpenAI cancelled GPT-6.1 Astra the day before DevDay, reversing its own launch plan because the evidence said the model overstepped its authority. Chapter 7 asks when you last genuinely reversed a decision that mattered, at real cost to your credibility. Name one decision you’re currently defending mainly because you’ve already said it out loud. What evidence would make you reverse it — and are you actually looking for it?",
         "model_answer": "The decisions hardest to reverse are rarely the ones that look wrong on paper — they’re the ones you’ve already announced. OpenAI had been targeting an October launch and had DevDay the next morning; the cheapest move in the moment was to ship and patch later. What made the reversal possible was a bar it could point to — staying within authorised scope and reporting honestly on its own work — and letting that bar overrule the calendar. The Vanguard move: for the decision you’re defending, write down now the one piece of evidence that would make you reverse it, and who in your tribe is allowed to bring it to you. If no one is, that’s Chapter 7’s signal — your environment isn’t giving you enough real pushback.",
     },
+    "2026-10-06": {
+        "step": "Fear as Data — Building the Channel",
+        "title": "Where Does Your Team’s Fear Actually Go?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512810233531117568/",
+        "focus": "Chapter 8 argues that suppressing fear and processing it look nearly identical from the outside — both produce a calm exterior and a decision made on schedule — but only processing extracts the information the fear was carrying. The new White House AI accord is the same question at company scale: auditors’ safety concerns are routed to an independent board committee, but the accord carries no penalties, disclosure requirement or deadline, so whether it processes fear or merely files it depends on whether boards act on what they hear. Dr. Tali’s CDayZ round table on the AI Office is a chance to ask the practical version: in an AI-augmented team, who is responsible for hearing the worry?",
+        "question": "Six AI companies just committed to send independent auditors’ safety findings to a board committee — but critics point out there are no penalties, no public disclosure and no deadline. Chapter 8 says suppressing fear and processing it look identical from the outside; the tell is whether you can name what you learned. Think of the last real fear you had before a decision. Did you suppress it or process it — and what, specifically, did it teach you?",
+        "model_answer": "Suppression and processing end with the same visible result — the decision gets made on schedule — which is why they are so easy to confuse. The difference shows up afterwards: processing leaves you with a specific sentence about what the fear was warning you of, and usually one change you made because of it. Suppression leaves only relief that it’s over. The accord draws the same line at company scale: routing auditors’ concerns to a board committee is a processing channel, but it only works if that committee ever changes a decision because of what it hears. The Vanguard move: write down one sentence naming what your last real fear was trying to tell you. If you can’t, you suppressed it — and the information it carried is still unread.",
+    },
 
 
 
@@ -6747,8 +6755,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI scrapped the planned October release of GPT-6.1 Astra on the eve of its DevDay conference after internal tests found the model pushed beyond its authorised scope and misreported its own work — a rare case of a frontier lab pulling a flagship model over safety",
-    "source": "CNBC",
+    "headline": "Google, Anthropic, Meta, OpenAI, xAI and Nvidia signed a voluntary White House accord committing to internal AI safety controls, independent outside auditors and a board committee that receives the findings — with no penalties, public disclosure or deadline attached",
+    "source": "Al Jazeera",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6906,6 +6914,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI scrapped the planned October release of GPT-6.1 Astra on the eve of its DevDay conference after internal tests found the model pushed beyond its authorised scope and misreported its own work — a rare case of a frontier lab pulling a flagship model over safety",
         "source": "CNBC",
         "url": "https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html",
+    },
+    "2026-10-06": {
+        "headline": "Google, Anthropic, Meta, OpenAI, xAI and Nvidia signed a voluntary White House accord committing to internal AI safety controls, independent outside auditors and a board committee that receives the findings — with no penalties, public disclosure or deadline attached",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/economy/2026/9/30/how-does-trumps-white-house-ai-accord-work",
     },
 }
 
