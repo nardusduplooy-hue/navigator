@@ -4138,6 +4138,14 @@ TALI_STEPS = {
         "question": "Six AI companies just committed to send independent auditors’ safety findings to a board committee — but critics point out there are no penalties, no public disclosure and no deadline. Chapter 8 says suppressing fear and processing it look identical from the outside; the tell is whether you can name what you learned. Think of the last real fear you had before a decision. Did you suppress it or process it — and what, specifically, did it teach you?",
         "model_answer": "Suppression and processing end with the same visible result — the decision gets made on schedule — which is why they are so easy to confuse. The difference shows up afterwards: processing leaves you with a specific sentence about what the fear was warning you of, and usually one change you made because of it. Suppression leaves only relief that it’s over. The accord draws the same line at company scale: routing auditors’ concerns to a board committee is a processing channel, but it only works if that committee ever changes a decision because of what it hears. The Vanguard move: write down one sentence naming what your last real fear was trying to tell you. If you can’t, you suppressed it — and the information it carried is still unread.",
     },
+    "2026-10-07": {
+        "step": "AI as Force Multiplier — The Centaur Audit",
+        "title": "Bottleneck or Multiplier?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512763622884814848/",
+        "focus": "Chapter 9’s centaur model works only when human and AI each do what they’re actually good at — so at every step of a real workflow you’re either the bottleneck slowing a capable system down, or the multiplier making it trustworthy. Mizuho is putting that to the test at scale: its new Cowork agent platform layers the bank’s own rules and business knowledge on top of a general-purpose agent, with a planned rollout to about 30,000 employees, while earlier plans shift work equal to 5,000 clerical roles into customer-facing jobs. Dr. Tali’s latest post is a good prompt to run the audit on your own week.",
+        "question": "Mizuho’s new agent platform is meant to move 30,000 people from ‘chatting’ with AI to entrusting it with whole tasks — inside a layer of the bank’s own rules. Chapter 9 says that in any real workflow you’re either the bottleneck slowing a capable system down or the multiplier making it trustworthy. Map one workflow you run every week. At which step are you the bottleneck, and at which are you the multiplier?",
+        "model_answer": "Most people find they are both in the same workflow — usually in the wrong places. The common pattern: the human does the work AI is good at (compiling, drafting, reformatting) and then rushes the part only a human can do (judging whether the output is right and what it means for the client). That’s a bottleneck at the start and a missing multiplier at the end. Mizuho’s design makes the split explicit: a general-purpose agent underneath, the bank’s own rules and business knowledge on top. The Vanguard move: in your weekly workflow, hand the compile-and-draft steps to AI and move the time you save to the one step where your judgement is the reason anyone trusts the result. If you can’t name that step, that’s the first problem to fix — not the tool.",
+    },
 
 
 
@@ -6755,8 +6763,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Google, Anthropic, Meta, OpenAI, xAI and Nvidia signed a voluntary White House accord committing to internal AI safety controls, independent outside auditors and a board committee that receives the findings — with no penalties, public disclosure or deadline attached",
-    "source": "Al Jazeera",
+    "headline": "Mizuho unveiled Mizuho Cowork, an autonomous AI agent platform meant to move staff from chatting with AI to handing it whole tasks, wrapped in a layer of the bank's own rules — with plans to roll it out to about 30,000 employees across its holding company and banks by fiscal 2027",
+    "source": "Nikkei xTECH",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6919,6 +6927,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Google, Anthropic, Meta, OpenAI, xAI and Nvidia signed a voluntary White House accord committing to internal AI safety controls, independent outside auditors and a board committee that receives the findings — with no penalties, public disclosure or deadline attached",
         "source": "Al Jazeera",
         "url": "https://www.aljazeera.com/economy/2026/9/30/how-does-trumps-white-house-ai-accord-work",
+    },
+    "2026-10-07": {
+        "headline": "Mizuho unveiled Mizuho Cowork, an autonomous AI agent platform meant to move staff from chatting with AI to handing it whole tasks, wrapped in a layer of the bank's own rules — with plans to roll it out to about 30,000 employees across its holding company and banks by fiscal 2027",
+        "source": "Nikkei xTECH",
+        "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12072/",
     },
 }
 
