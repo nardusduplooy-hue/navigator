@@ -208,7 +208,7 @@ def build_briefing():
 
 "2026-10-08": {"quote": "📄 𝗠𝘆 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝗶𝗻 𝗭𝗮𝗱𝗮𝗿 𝘁𝗵𝗶𝘀 𝘄𝗲𝗲𝗸.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513533271696101376/"},
 
-"2026-10-14": {"quote": "📄 𝗖𝗹𝗮𝘂𝗱𝗲 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝘀 𝗶𝗻𝘀𝗶𝗱𝗲 𝗚𝗼𝗼𝗴𝗹𝗲", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/"},
+"2026-10-14": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it", "source": "Substack"},
     }
 
     lines = []
@@ -905,7 +905,7 @@ def build_briefing():
         lines.append("<i>Dr. Tali Re\u017eun</i>")
         lines.append("")
         lines.append(cj["quote"])
-        lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Re\u017eun on LinkedIn</a>")
+        lines.append("<a href='" + cj["url"] + "'>" + _tali_label(cj["url"]) + "</a>")
         lines.append("")
 
     # MODULE 2 ASSIGNMENT — from 15 June onwards
@@ -1076,11 +1076,12 @@ def build_briefing():
                 "2026-09-25": {"quote": "\U0001f4c4 <b>Eye Tracking</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508811254296395776/"},
                 "2026-09-26": {"quote": "\U0001f4c4 <b>Eye Tracking</b> — Here’s what companies are actually paying for, tracked day by day.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509149414611927040/"},
                 "2026-10-08": {"quote": "\U0001f4c4 <b>Claude now works inside Google</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/"},
+                "2026-10-14": {"quote": "\U0001f4c4 <b>The Curator</b> — open source", "url": "https://github.com/talirezun/the-curator"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
                 lines.append(extra_cj["quote"])
-                lines.append("<a href='" + extra_cj["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
+                lines.append("<a href='" + extra_cj["url"] + "'>" + _tali_label(extra_cj["url"]) + "</a>")
                 lines.append("")
             # VANGUARD SPRINT PROGRAMME — Sprint 3 from 8 July, Sprint 4 from 17 Aug, Sprint 5 from 31 Aug onwards
             if "2026-07-08" <= date_key < "2026-08-17":
@@ -1204,7 +1205,7 @@ def build_briefing():
         lines.append("<i>Dr. Tali Režun</i>")
         lines.append("")
         lines.append(cj["quote"])
-        lines.append("<a href='" + cj["url"] + "'>→ Dr. Tali Režun on LinkedIn</a>")
+        lines.append("<a href='" + cj["url"] + "'>" + _tali_label(cj["url"]) + "</a>")
         lines.append("")
 
     # STUDENT LINKEDIN ARTICLES — from 2 July, removed from 18 Aug onward per Nardus;
@@ -1315,6 +1316,12 @@ def build_briefing():
     lines.append("⚡ Navigator out.")
 
     return "\n".join(lines)
+
+def _tali_label(url):
+    """Link label that matches where the link goes (Nardus, 13 Oct)."""
+    if "substack.com" in url: return "→ Read the article — Dr. Tali Režun"
+    if "github.com" in url: return "→ Open on GitHub"
+    return "→ Dr. Tali Režun on LinkedIn"
 
 def split_parts(full):
     """Send the briefing as ONE Telegram message when it fits (Nardus, 2 Oct).
