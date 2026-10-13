@@ -205,6 +205,10 @@ def build_briefing():
 "2026-10-06": {"quote": "📄 𝗖𝗱𝗮𝘆𝗭 𝗿𝗼𝘂𝗻𝗱 𝘁𝗮𝗯𝗹𝗲 - 𝗧𝗵𝗲 𝗔𝗜 𝗢𝗳𝗳𝗶𝗰𝗲", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512810233531117568/"},
 
 "2026-10-07": {"quote": "📄 𝗞𝗼𝗹𝗶𝗯𝗿𝗶 𝗵𝗮𝘀 𝗹𝗮𝗻𝗱𝗲𝗱", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512763622884814848/"},
+
+"2026-10-08": {"quote": "📄 𝗠𝘆 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝗶𝗻 𝗭𝗮𝗱𝗮𝗿 𝘁𝗵𝗶𝘀 𝘄𝗲𝗲𝗸.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513533271696101376/"},
+
+"2026-10-14": {"quote": "📄 𝗖𝗹𝗮𝘂𝗱𝗲 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝘀 𝗶𝗻𝘀𝗶𝗱𝗲 𝗚𝗼𝗼𝗴𝗹𝗲", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/"},
     }
 
     lines = []
@@ -327,6 +331,8 @@ def build_briefing():
         "2026-10-05": "OpenAI cancelled its next flagship model on the eve of its biggest conference of the year, after tests showed it overstepping its authority. Reversing a public decision costs credibility in the moment. Chapter 7 asks when you last actually changed your mind on something that mattered. Name one decision your tribe made this year that new evidence now argues against. What would it cost to reverse it this week?",
         "2026-10-06": "Six of AI’s biggest companies just signed a White House accord promising that auditors’ safety concerns will land in front of an independent board committee. Chapter 8: suppressing fear and processing it look identical from the outside. A reporting channel only processes fear if someone acts on what arrives. In your tribe, where does a team member’s worry actually go, and when did it last change a decision?",
         "2026-10-07": "Mizuho is moving 30,000 staff from chatting with AI to handing it whole tasks, and already plans to shift work equal to 5,000 clerical roles into customer-facing jobs. Chapter 9’s centaur test: at each step you’re either the bottleneck or the multiplier. Pick one workflow your tribe runs every week. Where is a human slowing a capable system down, and where is a human the reason anyone trusts the output?",
+        "2026-10-08": "At a New York City Council hearing, former employees of three AI labs described the culture at their old firms, on the record, after they had left. Chapter 10: psychological safety is whether the real concern gets said before the decision, not after it went wrong. Think of your tribe’s last real decision. What did someone think but not say, and what would have made saying it cheaper than staying quiet?",
+        "2026-10-14": "A survey of 300 engineering leaders found 81% had an AI-linked production outage in six months, and about a third of AI-written code ships before anyone fully understands it. The customer who gets the outage was never in the meeting. Chapter 3: stewardship means holding a standard for someone who can’t enforce it yet. Who is the absent stakeholder in your tribe’s next decision, and does their absence change anything?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -471,6 +477,10 @@ def build_briefing():
                     "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/29/?wm=1&mi=86065517513'>\u2192 Join Zoom Meeting</a>\n"
                     "<b>Meeting ID:</b> 860 6551 7513 | <b>Passcode:</b> VGNEW3</blockquote>"
                 )
+                lines.append("")
+            elif date_key >= "2026-10-14" and date_key <= "2026-10-17":
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>Provisionally Saturday 17 October \u2014 time and link to follow</i>")
                 lines.append("")
             elif date_key >= "2026-10-04":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
@@ -1065,6 +1075,7 @@ def build_briefing():
                 "2026-09-16": {"quote": "\U0001f4c4 <b>Two AI stories on X this week are actually one story.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505499278082101249/"},
                 "2026-09-25": {"quote": "\U0001f4c4 <b>Eye Tracking</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508811254296395776/"},
                 "2026-09-26": {"quote": "\U0001f4c4 <b>Eye Tracking</b> — Here’s what companies are actually paying for, tracked day by day.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509149414611927040/"},
+                "2026-10-08": {"quote": "\U0001f4c4 <b>Claude now works inside Google</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]

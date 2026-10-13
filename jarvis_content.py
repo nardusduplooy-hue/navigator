@@ -4146,6 +4146,22 @@ TALI_STEPS = {
         "question": "Mizuho’s new agent platform is meant to move 30,000 people from ‘chatting’ with AI to entrusting it with whole tasks — inside a layer of the bank’s own rules. Chapter 9 says that in any real workflow you’re either the bottleneck slowing a capable system down or the multiplier making it trustworthy. Map one workflow you run every week. At which step are you the bottleneck, and at which are you the multiplier?",
         "model_answer": "Most people find they are both in the same workflow — usually in the wrong places. The common pattern: the human does the work AI is good at (compiling, drafting, reformatting) and then rushes the part only a human can do (judging whether the output is right and what it means for the client). That’s a bottleneck at the start and a missing multiplier at the end. Mizuho’s design makes the split explicit: a general-purpose agent underneath, the bank’s own rules and business knowledge on top. The Vanguard move: in your weekly workflow, hand the compile-and-draft steps to AI and move the time you save to the one step where your judgement is the reason anyone trusts the result. If you can’t name that step, that’s the first problem to fix — not the tool.",
     },
+    "2026-10-08": {
+        "step": "Tribe as Coordination — The Unsaid Thing",
+        "title": "What Didn’t Get Said?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513533271696101376/",
+        "focus": "Chapter 10 measures psychological safety not by how polite a meeting is, but by whether the thing everyone was actually thinking got said before the decision was made. This week New York City’s Council heard former employees of Anthropic, OpenAI and Google DeepMind describe the culture at their old firms — in public, after leaving — while company representatives testified the same day that safety is their focus. Whichever account you find more persuasive, the pattern is the chapter’s: by the time a concern is said on the record outside, the cheapest moment to act on it inside has passed. Dr. Tali’s message to Zadar this week is a good moment to ask what your own tribe still hasn’t said out loud.",
+        "question": "This week former employees of Anthropic, OpenAI and Google DeepMind described their old firms’ culture to New York’s City Council — after they had left. Chapter 10 says psychological safety is measured by whether the thing everyone was thinking got said before the decision, not after it went wrong. Name, specifically, what didn’t get said in your last significant meeting. What made saying it costlier than staying quiet?",
+        "model_answer": "The unsaid thing is rarely a secret — usually half the room was thinking it. What makes it costly is timing: said early, it sounds like an accusation; said late, it sounds like hindsight. So people wait for evidence strong enough to feel safe, and by then the decision is made. Public testimony from people who have already left is the far end of that scale: by the time a concern is said on the record outside, the cheapest moment to act on it inside has passed. The Vanguard move: in your next tribe meeting, before any decision, ask one explicit question — ‘What would make this wrong?’ — and give the first answer yourself. A leader who goes first lowers the cost for everyone else. If no one ever answers, that silence is your data.",
+    },
+    "2026-10-14": {
+        "step": "The Perfect Merchant — The Absent Stakeholder",
+        "title": "Who Isn’t in the Room?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/",
+        "focus": "Chapter 3 defines the perfect merchant by stewardship — holding a standard on behalf of someone who can’t enforce it yet: a future client, a future hire, a version of the business that doesn’t exist. A new survey of 300 senior engineering leaders makes that concrete: 81% had a production outage linked to AI coding tools in six months, and about a third of AI-written code reaches production before engineers fully understand it. The people who absorb those outages — customers, the on-call engineer next quarter — weren’t in the room when the speed-versus-understanding trade was made. The survey comes from a debugging-tools vendor, so treat the numbers as a prompt to test against your own team rather than a verdict.",
+        "question": "A survey of 300 engineering leaders found that about a third of AI-written code reaches production before anyone fully understands it — and 81% had an AI-linked outage in six months. The customers who absorbed those outages had no vote when the trade-off was made. Chapter 3 asks: name one decision you’re facing where the person most affected has no vote in the room. Does their absence change your decision at all — and if not, why not?",
+        "model_answer": "Most decisions have an absent stakeholder, and the honest answer is usually that their absence changes nothing, because no one in the room is responsible for representing them. Speed has a sponsor in every meeting; the future customer, the next hire, or the engineer on call in six months does not. That is how code ends up shipped before anyone understands it: no one decided to accept the risk — it simply had no advocate. The perfect merchant’s move is to give the absent party a seat. Before your next decision, name the person most affected who isn’t present, write down the one standard they would insist on — a test, a review, a delay — and ask the room to argue against it explicitly. If no one can, keep the standard.",
+    },
 
 
 
@@ -6763,8 +6779,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Mizuho unveiled Mizuho Cowork, an autonomous AI agent platform meant to move staff from chatting with AI to handing it whole tasks, wrapped in a layer of the bank's own rules — with plans to roll it out to about 30,000 employees across its holding company and banks by fiscal 2027",
-    "source": "Nikkei xTECH",
+    "headline": "A survey of 300 senior engineering leaders for debugging-tools firm Undo found 81% had a production incident or outage linked to AI coding tools in the past six months, about a third of AI-written code reaches production before engineers fully understand it, and 79% say releases are no faster",
+    "source": "LeadDev",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6932,6 +6948,16 @@ AI_NEWS_OVERRIDE = {
         "headline": "Mizuho unveiled Mizuho Cowork, an autonomous AI agent platform meant to move staff from chatting with AI to handing it whole tasks, wrapped in a layer of the bank's own rules — with plans to roll it out to about 30,000 employees across its holding company and banks by fiscal 2027",
         "source": "Nikkei xTECH",
         "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12072/",
+    },
+    "2026-10-08": {
+        "headline": "Former employees of Anthropic, OpenAI and Google DeepMind told a New York City Council hearing their old firms are racing to build technology they don't know how to control, while company representatives testified the same day that safety is their focus and they are open to regulation",
+        "source": "Associated Press",
+        "url": "https://washingtontimes.com/news/2026/oct/5/local-governments-take-safety-concerns-ai-industry-insiders-voice",
+    },
+    "2026-10-14": {
+        "headline": "A survey of 300 senior engineering leaders for debugging-tools firm Undo found 81% had a production incident or outage linked to AI coding tools in the past six months, about a third of AI-written code reaches production before engineers fully understand it, and 79% say releases are no faster",
+        "source": "LeadDev",
+        "url": "https://leaddev.com/ai/ai-code-causes-real-world-production-outages",
     },
 }
 
