@@ -209,6 +209,8 @@ def build_briefing():
 "2026-10-08": {"quote": "📄 𝗠𝘆 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝗶𝗻 𝗭𝗮𝗱𝗮𝗿 𝘁𝗵𝗶𝘀 𝘄𝗲𝗲𝗸.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513533271696101376/"},
 
 "2026-10-14": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it", "source": "Substack"},
+
+"2026-10-15": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it", "source": "Substack"},
     }
 
     lines = []
@@ -333,6 +335,7 @@ def build_briefing():
         "2026-10-07": "Mizuho is moving 30,000 staff from chatting with AI to handing it whole tasks, and already plans to shift work equal to 5,000 clerical roles into customer-facing jobs. Chapter 9’s centaur test: at each step you’re either the bottleneck or the multiplier. Pick one workflow your tribe runs every week. Where is a human slowing a capable system down, and where is a human the reason anyone trusts the output?",
         "2026-10-08": "At a New York City Council hearing, former employees of three AI labs described the culture at their old firms, on the record, after they had left. Chapter 10: psychological safety is whether the real concern gets said before the decision, not after it went wrong. Think of your tribe’s last real decision. What did someone think but not say, and what would have made saying it cheaper than staying quiet?",
         "2026-10-14": "A survey of 300 engineering leaders found 81% had an AI-linked production outage in six months, and about a third of AI-written code ships before anyone fully understands it. The customer who gets the outage was never in the meeting. Chapter 3: stewardship means holding a standard for someone who can’t enforce it yet. Who is the absent stakeholder in your tribe’s next decision, and does their absence change anything?",
+        "2026-10-15": "After just 17 days, the US reportedly reversed its request that AI labs hold new models back from UK safety testers. Whichever side you think was right, a decision was run again and changed. Chapter 4: pick a decision your tribe already suspects was wrong and run it through all five axioms. Which one did you actually skip, not the one you’d cite in the retrospective?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

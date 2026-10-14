@@ -4162,6 +4162,14 @@ TALI_STEPS = {
         "question": "A survey of 300 engineering leaders found that about a third of AI-written code reaches production before anyone fully understands it — and 81% had an AI-linked outage in six months. The customers who absorbed those outages had no vote when the trade-off was made. Chapter 3 asks: name one decision you’re facing where the person most affected has no vote in the room. Does their absence change your decision at all — and if not, why not?",
         "model_answer": "Most decisions have an absent stakeholder, and the honest answer is usually that their absence changes nothing, because no one in the room is responsible for representing them. Speed has a sponsor in every meeting; the future customer, the next hire, or the engineer on call in six months does not. That is how code ends up shipped before anyone understands it: no one decided to accept the risk — it simply had no advocate. The perfect merchant’s move is to give the absent party a seat. Before your next decision, name the person most affected who isn’t present, write down the one standard they would insist on — a test, a review, a delay — and ask the room to argue against it explicitly. If no one can, keep the standard.",
     },
+    "2026-10-15": {
+        "step": "NEO Cotruglian Philosophy — The Axiom Test in Reverse",
+        "title": "Which Axiom Got Skipped?",
+        "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it",
+        "focus": "Chapter 4 offers a diagnostic for decisions you already suspect were wrong: run them back through all five axioms — Essence Through Craft, Reputational Capital Compounds, Virtue as Competitive Architecture, Long-Term Dominates and Positive-Sum Wins. Usually one axiom was clearly skipped, and the others were recruited afterwards to justify the call. This week gave a public example of a decision being revisited: after 17 days, the US reportedly reversed its request that OpenAI and Anthropic hold new models back from the UK’s AI Security Institute until US officials had reviewed them. The White House had argued that US systems should be secured first; UK officials argued that AI risks don’t stop at national borders. You don’t need to pick a side to use the case: a decision was made, tested against reality and changed. Dr. Tali’s article, The Right Context, Not All of It, carries the same lesson for agents — what you write down at the time is all the next session gets, so record why you decided, not just what.",
+        "question": "After 17 days, the US reportedly reversed its request that AI labs hold new models back from UK safety testers. Whatever you think of either position, the decision was revisited in public. Chapter 4 asks: pick a decision from the last few months that you already suspect was wrong and run it through all five axioms. Which one did you actually skip — and which ones did you use afterwards to justify it?",
+        "model_answer": "The axiom that gets skipped is most often Long-Term Dominates or Positive-Sum Wins, because both ask you to accept a visible cost now for a benefit that has no sponsor in the room. The others are easy to recruit afterwards: a hurried decision gets described as craft, a defensive one as protecting the reputation. That is why most retrospectives miss the real gap — they audit the story, not the decision. The honest test is what you knew at the time, not what you know now. If the information that would have changed the call was available and ignored, an axiom was skipped. If it wasn’t available, the decision may have been sound and the outcome unlucky. The Vanguard move: for your next significant decision, write one line naming the axiom it costs you most to honour, and when you review the decision, check that line rather than your memory.",
+    },
 
 
 
@@ -6767,9 +6775,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://youtu.be/wftgTgjWKGQ",
-    "title": "Intro to The Art of Business",
-    "description": "Updated 4 Oct per Nardus sheet B60/B61 (previously CDayZ Zadar LinkedIn event).",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516024325712433152/",
+    "title": "Chasing Jarvis",
+    "description": "Updated 15 Oct per Nardus sheet B57/B58 (previously Intro to The Art of Business on YouTube).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6779,8 +6787,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of 300 senior engineering leaders for debugging-tools firm Undo found 81% had a production incident or outage linked to AI coding tools in the past six months, about a third of AI-written code reaches production before engineers fully understand it, and 79% say releases are no faster",
-    "source": "LeadDev",
+    "headline": "The UK says its AI Security Institute has regained pre-release access to OpenAI, Anthropic and Google DeepMind models after a 17-day pause; the White House had asked labs to let US officials review new models first, citing security, while UK officials argued AI risks don’t stop at national borders",
+    "source": "The Next Web",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6958,6 +6966,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of 300 senior engineering leaders for debugging-tools firm Undo found 81% had a production incident or outage linked to AI coding tools in the past six months, about a third of AI-written code reaches production before engineers fully understand it, and 79% say releases are no faster",
         "source": "LeadDev",
         "url": "https://leaddev.com/ai/ai-code-causes-real-world-production-outages",
+    },
+    "2026-10-15": {
+        "headline": "The UK says its AI Security Institute has regained pre-release access to OpenAI, Anthropic and Google DeepMind models after a 17-day pause; the White House had asked labs to let US officials review new models first, citing security, while UK officials argued AI risks don’t stop at national borders",
+        "source": "The Next Web",
+        "url": "https://thenextweb.com/news/uk-ai-security-institute-pre-release-access-openai-anthropic",
     },
 }
 
