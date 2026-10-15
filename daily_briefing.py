@@ -211,6 +211,8 @@ def build_briefing():
 "2026-10-14": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it", "source": "Substack"},
 
 "2026-10-15": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it", "source": "Substack"},
+
+"2026-10-16": {"quote": "📄 𝗚𝗲𝗺𝗶𝗻𝗶 𝟰 𝗔𝗿𝗴𝗼𝗻 𝗶𝘀 𝗼𝘂𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516004585820520448/"},
     }
 
     lines = []
@@ -336,6 +338,7 @@ def build_briefing():
         "2026-10-08": "At a New York City Council hearing, former employees of three AI labs described the culture at their old firms, on the record, after they had left. Chapter 10: psychological safety is whether the real concern gets said before the decision, not after it went wrong. Think of your tribe’s last real decision. What did someone think but not say, and what would have made saying it cheaper than staying quiet?",
         "2026-10-14": "A survey of 300 engineering leaders found 81% had an AI-linked production outage in six months, and about a third of AI-written code ships before anyone fully understands it. The customer who gets the outage was never in the meeting. Chapter 3: stewardship means holding a standard for someone who can’t enforce it yet. Who is the absent stakeholder in your tribe’s next decision, and does their absence change anything?",
         "2026-10-15": "After just 17 days, the US reportedly reversed its request that AI labs hold new models back from UK safety testers. Whichever side you think was right, a decision was run again and changed. Chapter 4: pick a decision your tribe already suspects was wrong and run it through all five axioms. Which one did you actually skip, not the one you’d cite in the retrospective?",
+        "2026-10-16": "DXC’s AI agents act alone only inside set authority limits: reversible steps they decide themselves, irreversible ones wait for a human. Chapter 5 asks the same of leaders. Name one outcome your tribe depends on from people you don’t command. Have you agreed what they can decide without you, or are you orchestrating by hoping?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1080,6 +1083,7 @@ def build_briefing():
                 "2026-09-26": {"quote": "\U0001f4c4 <b>Eye Tracking</b> — Here’s what companies are actually paying for, tracked day by day.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509149414611927040/"},
                 "2026-10-08": {"quote": "\U0001f4c4 <b>Claude now works inside Google</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/"},
                 "2026-10-14": {"quote": "\U0001f4c4 <b>The Curator</b> — open source", "url": "https://github.com/talirezun/the-curator"},
+                "2026-10-16": {"quote": "\U0001f4c4 <b>The Right Context, Not All of It</b>", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]

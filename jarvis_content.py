@@ -4170,6 +4170,14 @@ TALI_STEPS = {
         "question": "After 17 days, the US reportedly reversed its request that AI labs hold new models back from UK safety testers. Whatever you think of either position, the decision was revisited in public. Chapter 4 asks: pick a decision from the last few months that you already suspect was wrong and run it through all five axioms. Which one did you actually skip — and which ones did you use afterwards to justify it?",
         "model_answer": "The axiom that gets skipped is most often Long-Term Dominates or Positive-Sum Wins, because both ask you to accept a visible cost now for a benefit that has no sponsor in the room. The others are easy to recruit afterwards: a hurried decision gets described as craft, a defensive one as protecting the reputation. That is why most retrospectives miss the real gap — they audit the story, not the decision. The honest test is what you knew at the time, not what you know now. If the information that would have changed the call was available and ignored, an axiom was skipped. If it wasn’t available, the decision may have been sound and the outcome unlucky. The Vanguard move: for your next significant decision, write one line naming the axiom it costs you most to honour, and when you review the decision, check that line rather than your memory.",
     },
+    "2026-10-16": {
+        "step": "The NEO Era Battlefield — Orchestration Without Command",
+        "title": "Where Does Your Authority Actually End?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516004585820520448/",
+        "focus": "Chapter 5 defines orchestration as producing a coherent outcome across people, partners and systems you don’t directly command — a different discipline from management, and one most leaders were never trained in. This week DXC and LangChain gave a concrete design for it. In DXC’s OASIS platform, AI agents act alone only within defined authority limits: every action is weighed on how reversible it is, its impact, whether it can be verified and the agent’s track record, and sensitive actions pause for human approval. DXC reports 95% faster resolution across more than 500 use cases; these are company figures, with limited methodology disclosed. The lesson travels well beyond software: orchestration is not giving up control, it is deciding in advance which decisions travel and which stay with you.",
+        "question": "DXC’s orchestration platform lets AI agents act alone only within set limits: each action is weighed on how reversible it is, its impact, whether it can be checked and the agent’s track record, and sensitive actions wait for a human. Name one outcome you’re responsible for that depends on people or partners you don’t command. What would those four tests say about where your authority should end, and where theirs should begin?",
+        "model_answer": "Most leaders treat orchestration as a choice between control and trust. DXC’s design suggests a third option: decide in advance which kinds of decisions travel and which stay. Reversible, low-impact, checkable actions can be delegated fully, because a mistake is cheap and visible. Irreversible or high-impact actions need a checkpoint, not because the other party is untrustworthy, but because the cost of being wrong is lopsided. Track record is what moves the line over time: autonomy is earned in steps, not granted all at once. Applied to people, this turns hoping into orchestrating. For a partner or colleague you depend on, write down three decisions they can make without you, one they must bring to you, and what evidence would let you move that one across. If you can’t name the checkpoint, you aren’t delegating; you’re just absent.",
+    },
 
 
 
@@ -6775,9 +6783,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516024325712433152/",
-    "title": "Chasing Jarvis",
-    "description": "Updated 15 Oct per Nardus sheet B57/B58 (previously Intro to The Art of Business on YouTube).",
+    "url": "https://youtu.be/wftgTgjWKGQ",
+    "title": "The Art of Business intro by Drazen Kapusta",
+    "description": "Updated 16 Oct per Nardus sheet B56/B57 (previously Chasing Jarvis LinkedIn post).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6787,8 +6795,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "The UK says its AI Security Institute has regained pre-release access to OpenAI, Anthropic and Google DeepMind models after a 17-day pause; the White House had asked labs to let US officials review new models first, citing security, while UK officials argued AI risks don’t stop at national borders",
-    "source": "The Next Web",
+    "headline": "DXC and LangChain have partnered on OASIS, an orchestration platform where AI agents act only within set authority limits: each action is weighed on reversibility, impact and the agent’s track record, and sensitive steps pause for human sign-off. DXC reports 95% faster resolution across 500+ use cases (company figures)",
+    "source": "DXC Technology",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6971,6 +6979,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "The UK says its AI Security Institute has regained pre-release access to OpenAI, Anthropic and Google DeepMind models after a 17-day pause; the White House had asked labs to let US officials review new models first, citing security, while UK officials argued AI risks don’t stop at national borders",
         "source": "The Next Web",
         "url": "https://thenextweb.com/news/uk-ai-security-institute-pre-release-access-openai-anthropic",
+    },
+    "2026-10-16": {
+        "headline": "DXC and LangChain have partnered on OASIS, an orchestration platform where AI agents act only within set authority limits: each action is weighed on reversibility, impact and the agent’s track record, and sensitive steps pause for human sign-off. DXC reports 95% faster resolution across 500+ use cases (company figures)",
+        "source": "DXC Technology",
+        "url": "https://dxc.com/newsroom/10132026-dxc-and-langchain-advance-agentic-ai-harnesses",
     },
 }
 
