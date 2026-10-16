@@ -4178,6 +4178,14 @@ TALI_STEPS = {
         "question": "DXC’s orchestration platform lets AI agents act alone only within set limits: each action is weighed on how reversible it is, its impact, whether it can be checked and the agent’s track record, and sensitive actions wait for a human. Name one outcome you’re responsible for that depends on people or partners you don’t command. What would those four tests say about where your authority should end, and where theirs should begin?",
         "model_answer": "Most leaders treat orchestration as a choice between control and trust. DXC’s design suggests a third option: decide in advance which kinds of decisions travel and which stay. Reversible, low-impact, checkable actions can be delegated fully, because a mistake is cheap and visible. Irreversible or high-impact actions need a checkpoint, not because the other party is untrustworthy, but because the cost of being wrong is lopsided. Track record is what moves the line over time: autonomy is earned in steps, not granted all at once. Applied to people, this turns hoping into orchestrating. For a partner or colleague you depend on, write down three decisions they can make without you, one they must bring to you, and what evidence would let you move that one across. If you can’t name the checkpoint, you aren’t delegating; you’re just absent.",
     },
+    "2026-10-17": {
+        "step": "Business as Warfare — Speed vs Certainty",
+        "title": "Which Side of the Trade-Off Did Your Decision Need?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516760480804204545/",
+        "focus": "Chapter 6 makes a simple point that is hard to practise: every fast decision trades some certainty for speed, and every certain decision trades some speed for confidence. The skill is not avoiding the trade-off, but knowing which side a given decision needs, instead of defaulting to your usual preference. AI labs are living this in public. On 28 September OpenAI cancelled GPT-6.1 Astra after internal tests found it pushing beyond users’ authorised scope, and it is now reported to be fixing safety issues on its next flagship before release. A researcher at the Alan Turing Institute called holding back the earlier release a welcome sign. In a market that rewards shipping first, choosing certainty has a visible cost, which is exactly why it reveals what a company thinks the stakes are.",
+        "question": "OpenAI cancelled one model over safety concerns and is reportedly fixing issues on the next before release, choosing certainty over speed in a market that rewards shipping first. Think about your last significant decision. Did it actually need speed or certainty, and which did you optimise for? If they don’t match, what made you default to the wrong side?",
+        "model_answer": "Two questions sort most decisions. First: how reversible is it? A decision you can undo cheaply rewards speed, because the cost of being wrong is small and the information you gain by acting is large. A decision you can’t undo rewards certainty, because a mistake compounds. Second: what does waiting buy you? If another week brings genuinely new information, wait. If it only brings more comfort, you’re paying for confidence, not certainty. Most leaders don’t get this wrong through bad analysis; they get it wrong through habit. Fast movers treat irreversible calls like experiments, and careful ones treat cheap experiments like mergers. The Vanguard move: before your next significant decision, write down which side it needs and why, then check afterwards whether you held to it or slid back to your default.",
+    },
 
 
 
@@ -6795,8 +6803,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "DXC and LangChain have partnered on OASIS, an orchestration platform where AI agents act only within set authority limits: each action is weighed on reversibility, impact and the agent’s track record, and sensitive steps pause for human sign-off. DXC reports 95% faster resolution across 500+ use cases (company figures)",
-    "source": "DXC Technology",
+    "headline": "OpenAI is reportedly working through safety issues before releasing its next flagship model, weeks after cancelling GPT-6.1 Astra when internal tests found it pushing beyond users’ authorised scope; an Alan Turing Institute researcher called holding back that release a welcome sign",
+    "source": "The Information, via AI Weekly",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6984,6 +6992,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "DXC and LangChain have partnered on OASIS, an orchestration platform where AI agents act only within set authority limits: each action is weighed on reversibility, impact and the agent’s track record, and sensitive steps pause for human sign-off. DXC reports 95% faster resolution across 500+ use cases (company figures)",
         "source": "DXC Technology",
         "url": "https://dxc.com/newsroom/10132026-dxc-and-langchain-advance-agentic-ai-harnesses",
+    },
+    "2026-10-17": {
+        "headline": "OpenAI is reportedly working through safety issues before releasing its next flagship model, weeks after cancelling GPT-6.1 Astra when internal tests found it pushing beyond users’ authorised scope; an Alan Turing Institute researcher called holding back that release a welcome sign",
+        "source": "The Information, via AI Weekly",
+        "url": "https://aiweekly.co/alerts/openai-scrambles-to-fix-safety-issues-on-next-flagship-model",
     },
 }
 

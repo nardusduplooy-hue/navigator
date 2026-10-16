@@ -35,6 +35,9 @@ _DATE_OVERRIDE = None
 # Set via --force-weekend to send on a Saturday/Sunday when Nardus explicitly wants to.
 _FORCE_WEEKEND_SEND = False
 
+# Weekend dates Nardus has asked to send automatically (e.g. Zoom-session Saturdays).
+_WEEKEND_SEND_DATES = {"2026-10-17"}
+
 def _is_weekend():
     d = datetime.strptime(today_str(), "%Y-%m-%d")
     return d.weekday() >= 5  # 5=Saturday, 6=Sunday
@@ -213,6 +216,8 @@ def build_briefing():
 "2026-10-15": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it", "source": "Substack"},
 
 "2026-10-16": {"quote": "📄 𝗚𝗲𝗺𝗶𝗻𝗶 𝟰 𝗔𝗿𝗴𝗼𝗻 𝗶𝘀 𝗼𝘂𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516004585820520448/"},
+
+"2026-10-17": {"quote": "📄 𝗧𝗲𝘀𝗹𝗮 𝗥𝗼𝗮𝗱𝘀𝘁𝗲𝗿 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗿𝗲𝘃𝗲𝗮𝗹", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516760480804204545/"},
     }
 
     lines = []
@@ -339,6 +344,7 @@ def build_briefing():
         "2026-10-14": "A survey of 300 engineering leaders found 81% had an AI-linked production outage in six months, and about a third of AI-written code ships before anyone fully understands it. The customer who gets the outage was never in the meeting. Chapter 3: stewardship means holding a standard for someone who can’t enforce it yet. Who is the absent stakeholder in your tribe’s next decision, and does their absence change anything?",
         "2026-10-15": "After just 17 days, the US reportedly reversed its request that AI labs hold new models back from UK safety testers. Whichever side you think was right, a decision was run again and changed. Chapter 4: pick a decision your tribe already suspects was wrong and run it through all five axioms. Which one did you actually skip, not the one you’d cite in the retrospective?",
         "2026-10-16": "DXC’s AI agents act alone only inside set authority limits: reversible steps they decide themselves, irreversible ones wait for a human. Chapter 5 asks the same of leaders. Name one outcome your tribe depends on from people you don’t command. Have you agreed what they can decide without you, or are you orchestrating by hoping?",
+        "2026-10-17": "Weeks after cancelling one model over safety concerns, OpenAI is reportedly fixing issues on its next flagship before release, choosing certainty over speed. Chapter 6: take your tribe’s last significant decision. Did it need speed or certainty, and which did you actually optimise for? If the answer is ‘whatever we usually do’, that’s the gap.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -484,9 +490,21 @@ def build_briefing():
                     "<b>Meeting ID:</b> 860 6551 7513 | <b>Passcode:</b> VGNEW3</blockquote>"
                 )
                 lines.append("")
-            elif date_key >= "2026-10-14" and date_key <= "2026-10-17":
+            elif date_key >= "2026-10-14" and date_key <= "2026-10-16":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
                 lines.append("<i>Provisionally Saturday 17 October \u2014 time and link to follow</i>")
+                lines.append("")
+            elif date_key == "2026-10-17":
+                # Confirmed Zoom details from Nardus sheet B83-B99, 16 Oct.
+                lines.append(
+                    "<blockquote>📅 <b>ZOOM SESSION — TODAY</b>\n"
+                    "<i>New Series of Lectures</i>\n"
+                    "\u2022 \U0001f5d3 Today, Saturday 17 October 2026 @ 17:00 Belgrade / Ljubljana (17:00 SA time)\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/30/?wm=1&mi=81062300116'>\u2192 Join Zoom Meeting</a> | "
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/30/?wm=1&mi=81062300116&mynotes=on'>Join and take notes</a> | "
+                    "<a href='https://cotrugli.zoom.us/launch/jc/81062300116'>Meeting chat</a>\n"
+                    "<b>Meeting ID:</b> 810 6230 0116 | <b>Passcode:</b> VGNEW4</blockquote>"
+                )
                 lines.append("")
             elif date_key >= "2026-10-04":
                 lines.append("📅 <b>NEXT ZOOM SESSION</b>")
@@ -1084,11 +1102,18 @@ def build_briefing():
                 "2026-10-08": {"quote": "\U0001f4c4 <b>Claude now works inside Google</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513476211113820160/"},
                 "2026-10-14": {"quote": "\U0001f4c4 <b>The Curator</b> — open source", "url": "https://github.com/talirezun/the-curator"},
                 "2026-10-16": {"quote": "\U0001f4c4 <b>The Right Context, Not All of It</b>", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it"},
+                "2026-10-17": {"quote": "\U0001f4c4 <b>The Right Context, Not All of It</b>", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]
                 lines.append(extra_cj["quote"])
                 lines.append("<a href='" + extra_cj["url"] + "'>" + _tali_label(extra_cj["url"]) + "</a>")
+                lines.append("")
+            # AI INVESTMENT LAB — LinkedIn post from Nardus sheet B46/B47, 16 Oct
+            if date_key == "2026-10-17":
+                lines.append("\U0001f4c8 <b>AI INVESTMENT LAB — Prof. Dan Ye</b>")
+                lines.append("\U0001f4c4 Prof. Dan Ye on Fox News")
+                lines.append("<a href='https://www.linkedin.com/feed/update/urn:li:activity:7467246062169366529/'>\u2192 Watch on LinkedIn</a>")
                 lines.append("")
             # VANGUARD SPRINT PROGRAMME — Sprint 3 from 8 July, Sprint 4 from 17 Aug, Sprint 5 from 31 Aug onwards
             if "2026-07-08" <= date_key < "2026-08-17":
@@ -1368,7 +1393,7 @@ def send_test():
         print("Answer sent: OK" if r else "Answer sent: FAILED")
 
 def send_briefing():
-    if _is_weekend() and not _FORCE_WEEKEND_SEND:
+    if _is_weekend() and not _FORCE_WEEKEND_SEND and today_str() not in _WEEKEND_SEND_DATES:
         print(f"Skipping send — {today_label()} is a weekend and the weekday-only policy is active. Use --force-weekend to override.")
         return
     if not wait_for_network():
