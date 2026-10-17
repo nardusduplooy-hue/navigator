@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20261017-1000">
+<meta name="app-version" content="20261017-1200">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -542,6 +542,20 @@ textarea::placeholder { color: var(--text-muted); }
   background:var(--bg-elevated);color:var(--text-muted);font-size:12px;
 }
 .course-name { font-size:12px;color:var(--text);line-height:1.4;flex:1; }
+
+/* BEN FLOATING BUTTON + PANEL */
+#ben-fab { position: fixed; right: 12px; bottom: calc(var(--nav-h) + var(--safe-bottom) + 10px); width: 46px; height: 46px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.9); background: linear-gradient(135deg,#c8a84b,#8b6914); color: #fff; font-size: 21px; opacity: 0.94; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 120; box-shadow: 0 6px 18px rgba(26,46,74,0.35); transition: transform 0.15s, opacity 0.2s; padding: 0; }
+#ben-fab:active { transform: scale(0.93); }
+#ben-fab.hidden { opacity: 0 !important; pointer-events: none; }
+#ben-panel { display: none; position: fixed; inset: 0; z-index: 150; background: rgba(15,23,42,0.5); backdrop-filter: blur(4px); align-items: flex-end; justify-content: center; }
+#ben-panel.open { display: flex; }
+.ben-sheet { width: 100%; max-width: 480px; height: 88vh; height: 88dvh; background: var(--bg-surface, #fff); border-radius: 24px 24px 0 0; display: flex; flex-direction: column; overflow: hidden; animation: slideUp 0.28s ease; }
+.ben-head { background: linear-gradient(135deg,#1a3a6b 0%,#0f2044 100%); padding: 14px 16px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.ben-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 14px 16px 6px; }
+.ben-foot { flex-shrink: 0; padding: 8px 16px calc(10px + var(--safe-bottom)); border-top: 1px solid var(--border); background: var(--bg-surface, #fff); }
+#ben-panel .qa-messages { max-height: none; overflow: visible; }
+@media (min-width: 600px) { #ben-fab { right: calc(50% - 240px + 12px); } }
+#app-body .tab-panel { padding-bottom: 84px; }
 </style>
 </head>
 <body>
@@ -854,61 +868,14 @@ textarea::placeholder { color: var(--text-muted); }
   <!-- TAB 4: ENGAGE -->
   <section id="tab-engage" class="tab-panel">
 
-    <!-- BEN — top of Engage, always visible -->
-    <div id="engage-ask">
-      <div style="background:linear-gradient(135deg,#1a3a6b 0%,#0f2044 100%);border-radius:var(--radius);padding:20px;margin-bottom:12px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;"></div>
-        <div style="position:absolute;bottom:-20px;left:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.03);pointer-events:none;"></div>
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">
-          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#c8a84b,#8b6914);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 12px rgba(200,168,75,0.3);">⚓</div>
-          <div>
-            <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#ffffff;letter-spacing:0.02em;">Ben</div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px;">Benedetto Cotrugli · Vanguard Muse · 1458</div>
-          </div>
-        </div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.65;font-style:italic;">"The merchant who builds trust outlasts the merchant who extracts from it. Virtue is not a constraint on commerce — it is the engine of it."</div>
-        <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;">
-          <span style="font-size:10px;background:rgba(200,168,75,0.2);color:#c8a84b;border:1px solid rgba(200,168,75,0.3);padding:3px 8px;border-radius:20px;">Sheepdog Archetype</span>
-          <span style="font-size:10px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12);padding:3px 8px;border-radius:20px;">Cotruglian Ethics</span>
-          <span style="font-size:10px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12);padding:3px 8px;border-radius:20px;">Exponential Trust</span>
-          <span style="font-size:10px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.12);padding:3px 8px;border-radius:20px;">NEO Era</span>
-        </div>
+    <!-- Ben now lives in the floating button -->
+    <div onclick="openBen()" style="display:flex;align-items:center;gap:12px;padding:12px 14px;background:linear-gradient(135deg,#1a2e4a,#0d1b2e);border:1px solid rgba(200,168,75,0.4);border-radius:10px;cursor:pointer;margin-bottom:14px;">
+      <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#c8a84b,#8b6914);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">⚓</div>
+      <div style="flex:1;">
+        <div style="font-size:12px;font-weight:700;color:#ffffff;">Ben is now one tap away, on every tab</div>
+        <div style="font-size:10px;color:rgba(200,168,75,0.85);margin-top:2px;">Tap the ⚓ button (bottom right) or here to ask Ben anything</div>
       </div>
-      <div class="starter-chips" style="margin-bottom:8px;">
-        <div class="chip" onclick="askKnowledge(this)">How do I navigate a team conflict?</div>
-        <div class="chip" onclick="askKnowledge(this)">What would a sheepdog do here?</div>
-        <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
-        <div class="chip" onclick="askKnowledge(this)">Explain the NEO Era</div>
-        <div class="chip" onclick="askKnowledge(this)">What is Cotruglian ethics?</div>
-      </div>
-      <div onclick="openUrl('https://youtu.be/wftgTgjWKGQ')" style="display:flex;align-items:center;gap:12px;padding:12px 14px;background:linear-gradient(135deg,#1a2e4a,#0d1b2e);border:1px solid rgba(200,168,75,0.4);border-radius:10px;cursor:pointer;margin-bottom:8px;">
-        <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#c8a84b,#8b6914);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">▶</div>
-        <div style="flex:1;">
-          <div style="font-size:12px;font-weight:700;color:#ffffff;">Benedetto Cotrugli — Intro to Vanguard Leadership</div>
-          <div style="font-size:10px;color:rgba(200,168,75,0.8);margin-top:2px;">Watch on YouTube · Avatar presentation</div>
-        </div>
-        <span style="font-size:14px;color:rgba(200,168,75,0.6);">›</span>
-      </div>
-      <div class="starter-chips" style="display:none;">
-        <div class="chip" onclick="askKnowledge(this)">How do I build exponential trust?</div>
-      </div>
-      <div class="qa-messages" id="kv-qa-messages" style="min-height:80px;">
-        <div class="msg-nav"><strong>Ben</strong> is ready. Ask me anything — about your programme, a decision you're facing, a framework you want to understand, or how to lead through disruption. I will always answer as a true Vanguard would.</div>
-      </div>
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <textarea id="kv-qa-input" rows="2" placeholder="Ask Ben anything..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:13px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);"></textarea>
-        <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </div>
-      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Ben draws from the Vanguard Second Brain · Powered by The Curator + Claude</div>
-    </div>
-
-    <!-- DIVIDER -->
-    <div style="margin:20px 0 14px;display:flex;align-items:center;gap:10px;">
-      <div style="flex:1;height:1px;background:var(--border);"></div>
-      <span style="font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">LinkedIn Engage</span>
-      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:14px;color:rgba(200,168,75,0.6);">›</span>
     </div>
 
     <div style="background:linear-gradient(135deg,#1a56db 0%,#1e3a8a 100%);border-radius:var(--radius);padding:16px;margin-bottom:10px;position:relative;overflow:hidden;">
@@ -1069,7 +1036,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261017-1000</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261017-1200</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1118,6 +1085,51 @@ textarea::placeholder { color: var(--text-muted); }
     <button class="btn btn-primary btn-full" onclick="saveSettings()">Save Settings</button>
     <div style="height:10px;"></div>
     <button class="btn btn-ghost btn-full" onclick="clearQAHistory()">Clear Q&A History</button>
+  </div>
+</div>
+
+<!-- BEN: floating button + chat panel (root level, outside all tab sections) -->
+<button id="ben-fab" onclick="openBen()" aria-label="Ask Ben">⚓</button>
+<div id="ben-panel" onclick="if(event.target===this)closeBen()">
+  <div class="ben-sheet">
+    <div class="ben-head">
+      <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#c8a84b,#8b6914);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">⚓</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#ffffff;">Ben</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.65);margin-top:1px;">Benedetto Cotrugli · Vanguard Muse · 1458</div>
+      </div>
+      <button onclick="openSettings(true)" aria-label="Settings" style="background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:11px;font-weight:600;padding:6px 10px;border-radius:14px;cursor:pointer;">Settings</button>
+      <button onclick="closeBen()" aria-label="Close" style="background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:20px;line-height:1;width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+    </div>
+    <div class="ben-body" id="ben-body">
+      <div class="starter-chips" style="margin-bottom:10px;">
+        <div class="chip" onclick="askKnowledge(this)">How do I navigate a team conflict?</div>
+        <div class="chip" onclick="askKnowledge(this)">What would a sheepdog do here?</div>
+        <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
+        <div class="chip" onclick="askKnowledge(this)">Explain the NEO Era</div>
+        <div class="chip" onclick="askKnowledge(this)">What is Cotruglian ethics?</div>
+      </div>
+      <div onclick="openUrl('https://youtu.be/wftgTgjWKGQ')" style="display:flex;align-items:center;gap:12px;padding:10px 12px;background:linear-gradient(135deg,#1a2e4a,#0d1b2e);border:1px solid rgba(200,168,75,0.4);border-radius:10px;cursor:pointer;margin-bottom:12px;">
+        <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#c8a84b,#8b6914);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;color:#fff;">▶</div>
+        <div style="flex:1;">
+          <div style="font-size:12px;font-weight:700;color:#ffffff;">Benedetto Cotrugli — Intro to Vanguard Leadership</div>
+          <div style="font-size:10px;color:rgba(200,168,75,0.8);margin-top:2px;">Watch on YouTube · Avatar presentation</div>
+        </div>
+        <span style="font-size:14px;color:rgba(200,168,75,0.6);">›</span>
+      </div>
+      <div class="qa-messages" id="kv-qa-messages" style="min-height:80px;">
+        <div class="msg-nav"><strong>Ben</strong> is ready. Ask me anything — about your programme, a decision you're facing, a framework you want to understand, or how to lead through disruption. I will always answer as a true Vanguard would.</div>
+      </div>
+    </div>
+    <div class="ben-foot">
+      <div style="display:flex;gap:8px;">
+        <textarea id="kv-qa-input" rows="2" placeholder="Ask Ben anything..." style="flex:1;resize:none;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-xs);font-size:16px;font-family:'DM Sans',sans-serif;background:var(--bg-elevated);color:var(--text);outline:none;"></textarea>
+        <button class="qa-send" onclick="sendKvQA()" style="align-self:flex-end;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);text-align:center;margin-top:6px;">Ben draws from the Vanguard Second Brain · Powered by The Curator + Claude</div>
+    </div>
   </div>
 </div>
 
@@ -2922,7 +2934,7 @@ async function sendKvQA() {
   loader.className = 'msg-nav';
   loader.innerHTML = '<span class="spinner"></span> Searching Second Brain...';
   messages.appendChild(loader);
-  messages.scrollTop = messages.scrollHeight;
+  (document.getElementById('ben-body')||messages).scrollTop = (document.getElementById('ben-body')||messages).scrollHeight;
   try {
     const proxyRes = await fetch(`${CURATOR_PROXY_URL}/ask`, {
       method: 'POST',
@@ -2936,7 +2948,7 @@ async function sendKvQA() {
         loader.className = 'msg-nav';
         loader.innerHTML = proxyData.answer.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>') +
           `<div style="font-size:10px;color:var(--text-muted);margin-top:6px;">⚓ Ben · Vanguard Muse · ${proxyData.sources || 0} sources</div>`;
-        messages.scrollTop = messages.scrollHeight;
+        (document.getElementById('ben-body')||messages).scrollTop = (document.getElementById('ben-body')||messages).scrollHeight;
         return;
       }
     }
@@ -2990,7 +3002,7 @@ ${vaultContext}`;
   } catch(err) {
     loader.className = 'msg-nav'; loader.style.color = 'var(--red)'; loader.textContent = 'Error: ' + err.message;
   }
-  messages.scrollTop = messages.scrollHeight;
+  (document.getElementById('ben-body')||messages).scrollTop = (document.getElementById('ben-body')||messages).scrollHeight;
 }
 
 function askEngageStarter(el) {
@@ -3408,9 +3420,21 @@ if (_engageQaInput) _engageQaInput.addEventListener('keydown', e => { if (e.key 
 const _kvQaInput = document.getElementById('kv-qa-input');
 if (_kvQaInput) _kvQaInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendKvQA(); } });
 
-function openSettings() {
+function openBen() {
+  document.getElementById('ben-panel').classList.add('open');
+  document.getElementById('ben-fab').classList.add('hidden');
+  const m = document.getElementById('kv-qa-messages');
+  const body = document.getElementById('ben-body');
+  if (body) setTimeout(() => { body.scrollTop = body.scrollHeight; }, 50);
+}
+function closeBen() {
+  document.getElementById('ben-panel').classList.remove('open');
+  document.getElementById('ben-fab').classList.remove('hidden');
+}
+
+function openSettings(force) {
   const activeTab = storage.get('cn_active_tab') || 'northstar';
-  if (activeTab !== 'engage' && activeTab !== 'knowledge') return;
+  if (force !== true && activeTab !== 'engage' && activeTab !== 'knowledge') return;
   document.getElementById('s-api-key').value = storage.get('cn_api_key') || '';
   document.getElementById('s-gh-token').value = storage.get('cn_github_token') || '';
   document.getElementById('s-gist-id').value = storage.get('cn_gist_id') || '';
