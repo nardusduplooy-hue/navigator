@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20261017-1400">
+<meta name="app-version" content="20261017-1600">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -556,6 +556,17 @@ textarea::placeholder { color: var(--text-muted); }
 #ben-panel .qa-messages { max-height: none; overflow: visible; }
 @media (min-width: 600px) { #ben-fab { right: calc(50% - 240px + 12px); } }
 #app-body .tab-panel { padding-bottom: 84px; }
+
+/* GLOBAL MINI PLAYER */
+#nav-player { display: none; position: fixed; left: 0; right: 0; bottom: calc(var(--nav-h) + var(--safe-bottom)); z-index: 130; background: #0d1b2e; color: #fff; padding: 8px 12px; align-items: center; gap: 10px; border-top: 1px solid rgba(200,168,75,0.45); }
+#nav-player.on { display: flex; }
+#nav-player button { background: none; border: none; color: #fff; cursor: pointer; padding: 0; }
+#np-toggle { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg,#c8a84b,#8b6914) !important; font-size: 14px; flex-shrink: 0; }
+#np-title { font-size: 12px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#np-sub { font-size: 10px; color: rgba(200,168,75,0.85); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+body.player-on #ben-fab { bottom: calc(var(--nav-h) + var(--safe-bottom) + 62px); }
+body.player-on #app-body .tab-panel { padding-bottom: 150px; }
+@media (min-width: 600px) { #nav-player { width: 480px; left: 50%; right: auto; transform: translateX(-50%); } }
 </style>
 </head>
 <body>
@@ -1036,7 +1047,7 @@ textarea::placeholder { color: var(--text-muted); }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261017-1400</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261017-1600</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1088,6 +1099,13 @@ textarea::placeholder { color: var(--text-muted); }
   </div>
 </div>
 
+<div id="nav-player">
+  <button id="np-toggle" onclick="npToggle()" aria-label="Play or pause">&#9654;</button>
+  <div style="flex:1;min-width:0;"><div id="np-title"></div><div id="np-sub"></div></div>
+  <button onclick="npClose()" aria-label="Close player" style="font-size:20px;line-height:1;width:28px;">&times;</button>
+  <audio id="nav-audio" preload="none"></audio>
+</div>
+
 <!-- BEN: floating button + chat panel (root level, outside all tab sections) -->
 <button id="ben-fab" onclick="openBen()" aria-label="Ask Ben">⚓</button>
 <div id="ben-panel" onclick="if(event.target===this)closeBen()">
@@ -1103,6 +1121,7 @@ textarea::placeholder { color: var(--text-muted); }
     </div>
     <div class="ben-body" id="ben-body">
       <div class="starter-chips" style="margin-bottom:10px;">
+        <div class="chip" onclick="askKnowledge(this)">Play the PayPal Mafia podcast</div>
         <div class="chip" onclick="askKnowledge(this)">How do I navigate a team conflict?</div>
         <div class="chip" onclick="askKnowledge(this)">What would a sheepdog do here?</div>
         <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
@@ -2950,6 +2969,165 @@ function isProgrammeQuestion(q) {
   return /\b(zoom|session|sessions|due|deadline|assignment|assignments|task|tasks|sprint|schedule|module|course|courses|today|tomorrow|this week|next week|when is|when's|what is next|what's next)\b/i.test(q);
 }
 
+// ===== PODCAST VOICE/TEXT COMMANDS + MINI PLAYER =====
+let _epCatalog = null;
+function getEpisodeCatalog() {
+  if (_epCatalog) return _epCatalog;
+  const out = [];
+  (PROGRAMME_DATA.podcastGroups || []).forEach(g => {
+    (g.episodes || []).forEach(e => out.push({ title: e.title, author: e.author || '', url: e.url, group: g.label, module: '' }));
+    (g.modules || []).forEach(m => (m.episodes || []).forEach(e => out.push({ title: e.title, author: e.author || '', url: e.url, group: g.label, module: m.label || '' })));
+  });
+  out.forEach(e => { e.isAudio = /stream\.redcircle\.com/.test(e.url || '') && /\.mp3$/.test(e.url || ''); });
+  _epCatalog = out;
+  return out;
+}
+function normText(t) { return String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); }
+const _PLAY_STOP = new Set(['me','the','a','an','podcast','podcasts','episode','episodes','about','on','of','for','to','some','that','this','one','please','audio','called','titled','named','from','in','my','with','and','as','is','it','ben','can','you','could','would','will','something']);
+
+function parsePlayIntent(msg) {
+  const m = String(msg).trim();
+  if (/^(pause|stop)( the)?( podcast| episode| audio| playing| playback| music| it)?\s*[.!]?$/i.test(m)) return { type: 'pause' };
+  const pm = m.match(/^(?:(?:hey |ok |okay )?ben[, ]+)?(?:please )?(?:can you |could you |would you |will you )?(?:please )?(play|put on|listen to|stream)\b(.*)$/i);
+  if (!pm) return null;
+  const explicit = /podcast|episode|audio|listen|chapter|module|recording/i.test(m);
+  const tokens = normText(pm[2]).split(' ').filter(w => w.length > 1 && !_PLAY_STOP.has(w));
+  return { type: 'play', tokens, explicit, raw: pm[2].trim() };
+}
+
+function findEpisodes(tokens) {
+  const cat = getEpisodeCatalog();
+  const res = [];
+  cat.forEach((e, i) => {
+    const t = ' ' + normText(e.title) + ' ';
+    const ag = ' ' + normText(e.author + ' ' + e.group + ' ' + e.module) + ' ';
+    let score = 0, matched = 0;
+    tokens.forEach(tok => {
+      if (t.includes(' ' + tok + ' ')) { score += 4; matched++; }
+      else if (t.includes(tok)) { score += 3; matched++; }
+      else if (ag.includes(' ' + tok + ' ') || ag.includes(tok)) { score += 1; matched++; }
+    });
+    if (tokens.length && matched >= Math.ceil(tokens.length * 0.6) && score > 0) res.push({ i, score });
+  });
+  res.sort((a, b) => b.score - a.score);
+  return res;
+}
+
+function npSetState(playing) {
+  const b = document.getElementById('np-toggle');
+  if (b) b.innerHTML = playing ? '&#10074;&#10074;' : '&#9654;';
+}
+function npToggle() {
+  const a = document.getElementById('nav-audio');
+  if (!a || !a.src) return;
+  if (a.paused) a.play().catch(() => {}); else a.pause();
+}
+function npClose() {
+  const a = document.getElementById('nav-audio');
+  if (a) { a.pause(); a.removeAttribute('src'); a.load(); }
+  document.getElementById('nav-player').classList.remove('on');
+  document.body.classList.remove('player-on');
+}
+(function initNavAudio() {
+  const a = document.getElementById('nav-audio');
+  if (!a) return;
+  a.addEventListener('play', () => npSetState(true));
+  a.addEventListener('pause', () => npSetState(false));
+  a.addEventListener('ended', () => npSetState(false));
+})();
+
+function playEpisode(i) {
+  const e = getEpisodeCatalog()[i];
+  if (!e) return Promise.resolve('missing');
+  if (!e.isAudio) { openUrl(e.url); return Promise.resolve('opened'); }
+  const a = document.getElementById('nav-audio');
+  document.querySelectorAll('audio').forEach(x => { if (x !== a) x.pause(); });
+  a.src = e.url;
+  document.getElementById('np-title').textContent = e.title;
+  document.getElementById('np-sub').textContent = e.author + (e.module ? ' \u00b7 ' + e.group + ', ' + e.module : ' \u00b7 ' + e.group);
+  document.getElementById('nav-player').classList.add('on');
+  document.body.classList.add('player-on');
+  try {
+    if ('mediaSession' in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: e.title, artist: e.author, album: e.group });
+  } catch (err) {}
+  return a.play().then(() => 'playing').catch(err => (err && err.name === 'NotAllowedError') ? 'blocked' : 'error');
+}
+
+function benSay(messagesEl, build) {
+  const d = document.createElement('div');
+  d.className = 'msg-nav';
+  build(d);
+  messagesEl.appendChild(d);
+  const body = document.getElementById('ben-body') || messagesEl;
+  body.scrollTop = body.scrollHeight;
+  return d;
+}
+function benLine(parent, text, bold) {
+  const el = document.createElement(bold ? 'strong' : 'span');
+  el.textContent = text;
+  parent.appendChild(el);
+  return el;
+}
+
+// returns true if the message was handled as a podcast command
+function handlePodcastIntent(intent, messagesEl) {
+  if (intent.type === 'pause') {
+    const a = document.getElementById('nav-audio');
+    const playing = a && a.src && !a.paused;
+    if (playing) a.pause();
+    benSay(messagesEl, d => benLine(d, playing ? '\u2693 Paused. Tap \u25B6 in the player to resume.' : 'Nothing is playing right now.'));
+    return true;
+  }
+  if (!intent.tokens.length) {
+    if (!intent.explicit) return false;
+    benSay(messagesEl, d => benLine(d, 'Which podcast would you like? Try "play the PayPal Mafia podcast" or name a topic, author or module.'));
+    return true;
+  }
+  const hits = findEpisodes(intent.tokens);
+  if (!hits.length) {
+    if (!intent.explicit) return false;
+    benSay(messagesEl, d => benLine(d, 'I could not find an episode matching "' + intent.raw + '". Try a word from the title, the author, or the course name, or browse the Sessions tab.'));
+    return true;
+  }
+  const cat = getEpisodeCatalog();
+  const top = hits[0], second = hits[1];
+  const clear = !second || (top.score >= 3 && top.score >= second.score * 2);
+  if (clear) {
+    const e = cat[top.i];
+    const bubble = benSay(messagesEl, d => {
+      benLine(d, e.isAudio ? '\u2693 Playing ' : '\u2693 Opening ');
+      benLine(d, e.title, true);
+      benLine(d, ' \u2014 ' + e.author + ' \u00b7 ' + e.group + (e.module ? ', ' + e.module : ''));
+    });
+    playEpisode(top.i).then(r => {
+      if (r === 'blocked' || r === 'error') {
+        const b = document.createElement('div');
+        b.style.cssText = 'margin-top:6px;font-size:11px;color:var(--text-muted);';
+        b.textContent = r === 'blocked'
+          ? 'Your phone blocked autoplay. Tap \u25B6 in the player bar to start.'
+          : 'That episode did not start. Check your connection and tap \u25B6 in the player bar to retry.';
+        bubble.appendChild(b);
+      }
+    });
+    return true;
+  }
+  benSay(messagesEl, d => {
+    benLine(d, 'I found a few matches. Tap one to play:');
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'display:flex;flex-direction:column;gap:6px;margin-top:8px;';
+    hits.slice(0, 5).forEach(h => {
+      const e = cat[h.i];
+      const c = document.createElement('div');
+      c.className = 'chip';
+      c.textContent = (e.isAudio ? '\u25B6 ' : '\u2197 ') + e.title + ' \u00b7 ' + (e.module ? e.group + ' ' + e.module : e.group);
+      c.onclick = () => { playEpisode(h.i); };
+      wrap.appendChild(c);
+    });
+    d.appendChild(wrap);
+  });
+  return true;
+}
+
 async function sendKvQA() {
   const input = document.getElementById('kv-qa-input');
   const msg = input.value.trim();
@@ -2957,6 +3135,8 @@ async function sendKvQA() {
   const messages = document.getElementById('kv-qa-messages');
   messages.innerHTML += `<div class="msg-user">${msg}</div>`;
   input.value = '';
+  const _intent = parsePlayIntent(msg);
+  if (_intent && handlePodcastIntent(_intent, messages)) return;
   const loader = document.createElement('div');
   loader.className = 'msg-nav';
   loader.innerHTML = '<span class="spinner"></span> Searching Second Brain...';
