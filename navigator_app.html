@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20261017-1800">
+<meta name="app-version" content="20261018-2100">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -567,6 +567,38 @@ textarea::placeholder { color: var(--text-muted); }
 body.player-on #ben-fab { bottom: calc(var(--nav-h) + var(--safe-bottom) + 62px); }
 body.player-on #app-body .tab-panel { padding-bottom: 150px; }
 @media (min-width: 600px) { #nav-player { width: 480px; left: 50%; right: auto; transform: translateX(-50%); } }
+
+/* DEADLINES */
+#dl-badge { display: none; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; cursor: pointer; border: 1px solid; margin-right: 8px; white-space: nowrap; }
+#dl-badge.on { display: flex; }
+#dl-badge.dl-red { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+#dl-badge.dl-amber { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+#dl-badge.dl-blue { background: var(--accent-light); color: var(--accent); border-color: #bfdbfe; }
+#dl-panel { display: none; position: fixed; inset: 0; z-index: 155; background: rgba(15,23,42,0.5); backdrop-filter: blur(4px); align-items: flex-end; justify-content: center; }
+#dl-panel.open { display: flex; }
+.dl-hdrow { display: flex; align-items: center; gap: 8px; }
+.dl-sum { background: linear-gradient(135deg,#1a2e4a,#1e3a8a); color: #fff; border-radius: 14px; padding: 14px 16px; margin-bottom: 12px; }
+.dl-sum .big { font-family: 'Syne',sans-serif; font-size: 18px; font-weight: 800; }
+.dl-sum .sub { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; line-height: 1.4; }
+.dl-btn { background: var(--bg-elevated); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 11px; font-weight: 600; padding: 7px 10px; cursor: pointer; }
+.dl-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.dl-btn.done { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+.dl-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 14px; }
+.dl-day { text-align: center; padding: 5px 0 4px; border-radius: 8px; background: var(--bg-elevated); border: 1px solid transparent; }
+.dl-day.today { border-color: var(--accent); }
+.dl-day .w { font-size: 8px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.dl-day .n { font-size: 13px; font-weight: 700; color: var(--text); }
+.dl-day .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); margin: 3px auto 0; }
+.dl-day .nodot { height: 6px; margin-top: 3px; }
+.dl-group { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 14px 2px 8px; }
+.dl-card { background: var(--bg-card); border: 1px solid var(--border); border-left-width: 4px; border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+.dl-card.red { border-left-color: var(--red); } .dl-card.amber { border-left-color: var(--amber); }
+.dl-card.blue { border-left-color: var(--accent); } .dl-card.grey { border-left-color: var(--text-dim); opacity: 0.75; }
+.dl-card .t { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.35; }
+.dl-card .d { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+.dl-card .cd { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.dl-card .notes { font-size: 11px; color: var(--text-dim); line-height: 1.55; margin-top: 8px; display: none; }
+.dl-card .acts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -578,13 +610,17 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
     </svg>
     <div class="wordmark">COTRUGLI<span class="sub">NAVIGATOR</span></div>
   </div>
-  <div id="cat-clock" onclick="openSettings()">--:-- CAT</div>
+  <div style="display:flex;align-items:center;">
+    <div id="dl-badge" onclick="openDeadlines()" aria-label="Deadlines"></div>
+    <div id="cat-clock" onclick="openSettings()">--:-- CAT</div>
+  </div>
 </header>
 
 <main id="app-body">
 
   <!-- TAB 1: NORTH STAR -->
   <section id="tab-northstar" class="tab-panel active">
+    <div id="dl-banner" style="display:none;"></div>
     <div class="focus-hero">
       <div class="focus-date" id="ns-date-label">LOADING...</div>
       <div class="focus-day" id="ns-day-label">—</div>
@@ -765,10 +801,15 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
     </div>
 
     <div class="pill-tabs" id="work-tabs">
-      <button class="pill-tab active" data-wpane="schedule" onclick="switchWorkPane('schedule',this)">My Schedule</button>
+      <button class="pill-tab active" data-wpane="schedule" onclick="switchWorkPane('schedule',this)">Schedule</button>
+      <button class="pill-tab" data-wpane="deadlines" onclick="switchWorkPane('deadlines',this)">Deadlines</button>
       <button class="pill-tab" data-wpane="courses" onclick="switchWorkPane('courses',this)">Courses</button>
       <button class="pill-tab" data-wpane="tasks" onclick="switchWorkPane('tasks',this)">Tasks</button>
       <button class="pill-tab" data-wpane="readings" onclick="switchWorkPane('readings',this)">Readings</button>
+    </div>
+
+    <div id="work-pane-deadlines" class="work-pane" style="display:none;">
+      <div id="work-deadlines-body"></div>
     </div>
 
     <div id="work-pane-courses" class="work-pane" style="display:none;">
@@ -1047,7 +1088,7 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261017-1800</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261018-2100</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1096,6 +1137,20 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
     <button class="btn btn-primary btn-full" onclick="saveSettings()">Save Settings</button>
     <div style="height:10px;"></div>
     <button class="btn btn-ghost btn-full" onclick="clearQAHistory()">Clear Q&A History</button>
+  </div>
+</div>
+
+<!-- DEADLINES PANEL (root level) -->
+<div id="dl-panel" onclick="if(event.target===this)closeDeadlines()">
+  <div class="ben-sheet">
+    <div class="ben-head">
+      <div style="flex:1;min-width:0;">
+        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#ffffff;">Deadlines</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.65);margin-top:1px;">What to submit, and by when</div>
+      </div>
+      <button onclick="closeDeadlines()" aria-label="Close" style="background:rgba(255,255,255,0.1);border:none;color:#fff;font-size:20px;line-height:1;width:32px;height:32px;border-radius:50%;cursor:pointer;">&times;</button>
+    </div>
+    <div class="ben-body" id="dl-body" style="padding-bottom:24px;"></div>
   </div>
 </div>
 
@@ -1163,10 +1218,10 @@ const PROGRAMME_DATA = {
   role: "Vanguard Chief",
 
   activeSprint: {
-    number: 6,
-    label: "Sprint #6",
-    dates: "11 Sep 2026 – onward (no confirmed end date yet in source)",
-    start: "2026-09-11",
+    number: 8,
+    label: "Sprint #8",
+    dates: "In progress \u2014 end date to be confirmed",
+    start: "",
     end: "",
     tracks: [
       { id: "mvp", label: "MVP Development", icon: "\uD83D\uDE80", course: "Chasing Jarvis", url: "https://cotrugli.online/courses/chasing-jarvis/" },
@@ -1176,39 +1231,30 @@ const PROGRAMME_DATA = {
   },
 
   activeCourses: [
-    { id: "cj", name: "Chasing Jarvis", module: "Module 5 \u2014 Build your MVP", icon: "\uD83C\uDFAF", url: "https://cotrugli.online/courses/chasing-jarvis/" },
-    { id: "b2b", name: "AI in B2B Sales", module: "Module 2 \u2014 AI as Force Multiplier", icon: "\uD83D\uDCCA", url: "https://cotrugli.online/courses/ai-sales/" },
-    { id: "baw", name: "Business as Warfare", module: "Module 1 \u2014 New Rules of Engagement", icon: "\u2694\uFE0F", url: "https://cotrugli.online/courses/business-as-warfare/" },
+    { id: "cj", name: "Chasing Jarvis", module: "Live Agent Build", icon: "\uD83C\uDFAF", url: "https://cotrugli.online/courses/chasing-jarvis/" },
+    { id: "b2b", name: "AI in B2B Sales", module: "Module 4 \u2014 Orchestration & Risk", icon: "\uD83D\uDCCA", url: "https://cotrugli.online/courses/ai-sales/" },
+    { id: "baw", name: "Business as Warfare", module: "Modules 3 & 4", icon: "\u2694\uFE0F", url: "https://cotrugli.online/courses/business-as-warfare/" },
     { id: "analytics", name: "Analytics", module: "Module 1 \u2014 Own tempo", icon: "\uD83D\uDCC8", url: "https://cotrugli.online/courses/analytics/" },
     { id: "selfaware", name: "Self Awareness \u0026 Personal Enlightenment", module: "Own tempo", icon: "\uD83E\uDDD8", url: "https://cotrugli.online/courses/self-awareness/" }
   ],
 
   currentModule: {
-    name: "Chasing Jarvis \u2014 Module 5",
-    subtitle: "Building an MVP: From Concept to Deployment",
-    week: 13,
-    sprint: "Sprint 13",
+    name: "Chasing Jarvis \u2014 Live Agent Build",
+    subtitle: "Build a real, working agent",
     notesUrl: "https://cotrugli.online/courses/chasing-jarvis/",
     readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-    preReadingsUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-    coreReading: { title: "Dr. Tali Re\u017eun \u2014 How I AI", author: "Dr. Tali Re\u017eun", url: "https://www.linkedin.com/in/talirezun/" },
-    preReading: { title: "From Prototype to Production: Building an AI Widget Platform in 30 Days", author: "Dr. Tali Re\u017eun", url: "https://medium.com/@talirezun", note: "Real-world case study of AI-assisted development. Essential before the session." },
-    readings: [
-      { title: "Firebase Hosting Documentation", url: "https://firebase.google.com/docs/hosting" },
-      { title: "Digital Ocean Tutorials", url: "https://www.digitalocean.com/community/tutorials" },
-      { title: "Firebase Studio", url: "https://studio.firebase.google.com" }
-    ]
+    preReadingsUrl: "https://cotrugli.online/courses/chasing-jarvis/"
   },
 
   assignments: [
     {
-      id: "cj5-mvp-build",
+      id: "cj-live-agent-build",
       type: "academic",
-      name: "Chasing Jarvis Module 5 \u2014 Build your MVP",
+      name: "Chasing Jarvis \u2014 Live Agent Build",
       dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-      notes: "Read the pre-reading defined in the module. Build a functional MVP using AI tools (Claude, Augment Code, Google AI Studio, Firebase Studio or Antigravity). Understand the core technology stack of modern web applications. Deploy to a production hosting platform if desired. Test systematically for functionality, usability, and performance. Iterate based on feedback. Present your MVP effectively to technical and non-technical audiences."
+      notes: "Build a real, working agent. The full guide is on the Cotrugli portal."
     },
     {
       id: "self-aware-m1",
@@ -1229,62 +1275,73 @@ const PROGRAMME_DATA = {
       notes: "Analytics course now open. Start at Alumni Portal. Data without context is noise \u2014 context without data is intuition."
     },
     {
-      id: "baw-m1-active",
+      id: "baw-m2-assignment",
       type: "academic",
-      name: "Business as Warfare \u2014 Module 1: The New Rules of Engagement",
-      dueDate: "",
+      name: "Business as Warfare \u2014 Module 2 assignment",
+      dueDate: "2026-10-23T23:59:00+02:00",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
-      notes: "Active module with Dr. Zrinko Petener. Core concepts: OODA loops, mission command, power to the edge. PayPal Mafia podcast in Sessions tab."
+      notes: "Outstanding \u2014 due Friday 23 October. Upload your Module 2 assignment file directly to the course portal before the deadline. Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
     },
     {
-      id: "b2b-m2-workflow",
+      id: "baw-m3-assignment",
       type: "academic",
-      name: "AI in B2B Sales \u2014 Module 2 Assignment: AI Workflow Documentation",
+      name: "Business as Warfare \u2014 Module 3 assignment",
+      dueDate: "2026-10-23T23:59:00+02:00",
+      status: "in-progress",
+      prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
+      notes: "Outstanding \u2014 due Friday 23 October. Upload your Module 3 assignment file directly to the course portal before the deadline. Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
+    },
+    {
+      id: "baw-m4-assignment",
+      type: "academic",
+      name: "Business as Warfare \u2014 Module 4 assignment",
+      dueDate: "2026-10-23T23:59:00+02:00",
+      status: "in-progress",
+      prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
+      notes: "Outstanding \u2014 due Friday 23 October. Upload your Module 4 assignment file directly to the course portal before the deadline. Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
+    },
+    {
+      id: "b2b-final-project",
+      type: "academic",
+      name: "AI in B2B Sales \u2014 Final project: AI Sales Strategy for your company",
       dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/ai-sales/",
-      notes: "Document one AI sales workflow you actually tested. Walk through 3\u20135 steps with screenshots or Loom. Include exact prompts, real output, honest reflection. Submit to sasa.pavlakovic@cotrugli.eu."
+      notes: "10\u201315 page document, defended in 15 minutes to the cohort. Due 3 weeks after the Module 4 session. Sections: 1 Diagnosis (honest friction map, Module 1 funnel); 2 Stack (tools, order, why, Module 2); 3 Architecture (standards, library, rituals, Module 3); 4 Governance (RACI, decision gates, kill switches, Module 4); 5 ROI model (Layer 1/2/3 metrics vs one explicit baseline); 6 Risk register (top 3 company risks + your response)."
     }
   ],
 
-  sessions: [
-    {
-      id: "session-19",
-      name: "Vanguard \u2014 Intro to New Series of Lectures",
-      datetime: "2026-09-05T17:00:00+02:00",
-      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/27/?wm=1&mi=88467586296",
-      recordingUrl: "",
-      zoomId: "884 6758 6296",
-      zoomPass: "VAN2SEM"
-    }
-  ],
+  sessions: [],
 
   toolOfDay: {
     name: "Firebase Studio \u2014 Build and deploy your MVP",
     url: "https://studio.firebase.google.com"
   },
 
-  teamsQuote: "Chapter 9’s test only works after deployment: did the AI tool your tribe shipped last week forge the essence you want, amplified — or did it just amplify busyness? Anthropic’s own economic model says AI could push GDP up 32% by 2030 while cutting knowledge-worker wages 10% in the same scenario — force multiplication cuts both ways. Which AI tool has your tribe deployed that you haven’t tested against what it was supposed to amplify?",
+  teamsQuote: "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
 
   chasingJarvisQuote: {
-    quote: "📄 Recipe to build a website in 2 hours",
-    author: "Dr. Tali Režun",
-    url: "https://www.linkedin.com/feed/update/urn:li:activity:7503726185168908288/"
+    quote: "\ud83d\udcc4 The right context - not all of it",
+    author: "Dr. Tali Re\u017eun",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/"
   },
 
   dailyTask: {
-    course: "Business as Warfare \u2014 Module 1",
-    title: "BAW Capstone \u2014 Daily Intelligence Sweep",
-    body: "Each cohort member should spend 5 minutes daily checking their Google Alerts and logging any relevant signals on the PayPal Mafia network to their intelligence tracker. The goal is to build a live evidence base that tests your three strategic assumptions before Module 2 \u2014 track what supports them, what weakens them, and watch the picture shift in real time."
+    course: "Business as Warfare \u2014 Modules 3 & 4",
+    title: "BAW \u2014 Urgent: Three Outstanding Tasks Due Friday 23 October",
+    body: "Upload your Module 2, 3, and 4 assignment files directly to the course portal before the deadline \u2014 links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
   },
 
   studentPosts: [],
 
   kapustaReading: {
-    title: "Run the Five-Question Test on the AI Tool You Deployed Last Week",
-    subtitle: "Chapter 9: AI as Force Multiplier. Pick the most recent AI tool or workflow your team actually shipped and run it through the five-question test after the fact, not before: did it forge the essence you want, amplified? Build reputational capital or quietly spend it? Amplify honesty, reliability, prudence? Optimize for the long term? Create value together? A test run only after deployment tells you something a pre-launch checklist never will — whether the answers you'd have given in the proposal meeting were actually true.",
-    url: "https://www.linkedin.com/in/cotrugli/"
+    title: "The Decision You\u2019d Make Differently With the Same Information",
+    subtitle: "Chapter 7: The NEO Leadership Challenge. Pick a real decision from the last quarter and ask the sharper version of the retrospective question: not what would you do differently with better information, but what would you do differently with the exact same information you actually had. If the honest answer is nothing, you made the right call even if it went wrong. If it isn\u2019t nothing, that\u2019s the one worth sitting with.",
+    url: "https://www.linkedin.com/in/cotrugli/",
+    docTitle: "The Art of Business Chapter 1 by Drazen Kapusta",
+    watchUrl: "https://youtu.be/6kDfM7nw5UM",
+    watchLabel: "Watch on YouTube \u2014 Dra\u017een Kapusta"
   },
 
   futureLab: [
@@ -1294,12 +1351,12 @@ const PROGRAMME_DATA = {
   ],
 
   neoWorldArticle: {
-    title: "Anthropic released an interactive model showing AI could push 2030 US GDP to $44.4 trillion — 32.4% above baseline — in its extreme scenario, while knowledge-worker wages fall more than 10% in that same scenario as capital's share of income rises from 40% to nearly 55%",
-    source: "Anthropic",
-    url: "https://www.anthropic.com/institute/econ-scenarios"
+    title: "OpenAI is reportedly working through safety issues before releasing its next flagship model, weeks after cancelling GPT-6.1 Astra when internal tests found it pushing beyond users\u2019 authorised scope; an Alan Turing Institute researcher called holding back that release a welcome sign",
+    source: "The Information, via AI Weekly",
+    url: ""
   },
 
-  briefingDate: "Wednesday, 11 September 2026",
+  briefingDate: "Monday, 19 October 2026",
 
   status: [
     "All JTBDs current",
@@ -1308,11 +1365,11 @@ const PROGRAMME_DATA = {
     "Module 4: Context Engineering \u2014 Completed"
   ],
 
-  knowledgeQuestion: "Chapter 9 asks you to run the five-question test on an AI tool after it's deployed, not before — did it forge the essence you wanted, amplified, or did it just amplify busyness? Anthropic's own economic model shows AI could add trillions to GDP while cutting knowledge-worker wages in the very same scenario. Pick the last AI tool your tribe actually shipped: which of the five questions would it fail if you ran the test honestly right now?",
+  knowledgeQuestion: "Chapter 7 asks the sharper retrospective question: not what you would do differently with better information, but what you would do differently with the exact same information you actually had. Pick a real decision from last quarter. Of everything you knew at the time, which two or three facts really drove the call, and which were noise? Then flip it: if you handed those same facts to an AI agent, what authority would you give it to act on them?",
 
-  modelAnswer: "Most teams run the five-question test at the pitch stage, when everyone's incentivized to answer yes — the real test is after deployment, when the tool's actual effects are visible instead of promised. Anthropic's GDP scenarios make the stakes concrete: the extreme scenario isn't the one where AI fails, it's the one where AI succeeds at scale and still leaves knowledge workers over 10% worse off on wages, because force multiplication was never guaranteed to point in a direction that helps the people using it. The Vanguard move: take the AI tool you shipped last week and answer honestly — did it build reputational capital or quietly spend it, and would you have given the same answer in the proposal meeting?",
+  modelAnswer: "Start by separating what you had from what you used. Most retrospectives blame missing data, but the honest audit usually finds the opposite: the decision turned on two or three facts and the rest was noise that felt like diligence. That is the right context, not all of it \u2014 the leader\u2019s skill is knowing which facts earn a place in the decision. If the honest answer is that you would decide the same way, the call was sound even if the outcome was not. The agent angle matters now: reports this week that OpenAI held back a model after tests found it pushing beyond users\u2019 authorised scope show the same discipline applied to machines. Give an agent the context it needs and the authority you can defend, not everything it can reach.",
 
-  todaysFocus: "Sprint 6 active. Running courses: BAW Module 1, AI in B2B Sales Module 2, Analytics (own tempo), Self Awareness & Personal Enlightenment (own tempo), Chasing Jarvis Module 5. This week: what did your tribe ship? Next Zoom session date is estimated (19 Sep) but not yet confirmed — watch Telegram.",
+  todaysFocus: "Sprint 8 in progress. Business as Warfare: three assignments (Modules 2, 3 and 4) are due Friday 23 October. AI in B2B Sales Module 4 \u2014 Orchestration & Risk, with the final project under way. Chasing Jarvis: build a real, working agent. Analytics and Self Awareness at your own tempo. This week: what did your tribe ship? Next Zoom session details to follow.",
 
   podcastGroups: [
     {
@@ -1327,7 +1384,8 @@ const PROGRAMME_DATA = {
         { title: 'Calculate your AI agent replacement risk', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/ec4b85f5-7e86-45b5-a1e5-baf775163b74/stream.mp3' },
         { title: 'Vanguard Intel System', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/5060d367-bf59-41dc-81d8-c9c0c2ab0cfc/stream.mp3' },
         { title: 'The Fog of Federation', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/a4ec0d32-bd16-4f77-b5dc-b50646b03239/stream.mp3' },
-        { title: 'India Hormuz', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/9a98d489-57e3-4c1e-8f39-c92570d518b4/stream.mp3' }
+        { title: 'India Hormuz', author: 'Dra\u017een Kapusta', url: 'https://stream.redcircle.com/episodes/9a98d489-57e3-4c1e-8f39-c92570d518b4/stream.mp3' },
+        { title: '\u25b6 The Art of Business \u2014 Chapter 1', author: 'Dra\u017een Kapusta \u00b7 Watch on YouTube', url: 'https://youtu.be/6kDfM7nw5UM' }
       ]
     },
     {
@@ -1509,6 +1567,7 @@ const PROGRAMME_DATA = {
       name: "Dr. Tali Režun",
       profileUrl: "https://www.linkedin.com/in/talirezun/",
       posts: [
+        { title: "The right context - not all of it", url: "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/" },
         { title: "Three Philosophies, One Goal: Augment Code vs Claude Code vs Codex CLI", url: "https://www.linkedin.com/feed/update/urn:li:activity:7448631044594995200/" },
         { title: "My First AI Product Is Live", url: "https://www.linkedin.com/posts/talirezun_my-first-ai-product-is-live-after-two-activity-7414290097354817537-GyfJ" },
         { title: "AI & Customer Experience", url: "https://www.linkedin.com/posts/talirezun_ai-artificialintelligence-customerexperience-activity-7415369024944926720-MVbC" },
@@ -2564,7 +2623,7 @@ function getCountdown(isoDate) {
 function getNextSession() {
   const now = new Date();
   const upcoming = PROGRAMME_DATA.sessions.filter(s => new Date(s.datetime) > now);
-  return upcoming.length > 0 ? upcoming[0] : PROGRAMME_DATA.sessions[PROGRAMME_DATA.sessions.length - 1];
+  return upcoming.length > 0 ? upcoming[0] : null;
 }
 
 function formatDate(isoDate) {
@@ -2572,6 +2631,11 @@ function formatDate(isoDate) {
 }
 function formatTime(isoDate) {
   return new Date(isoDate).toLocaleTimeString('en-ZA', { timeZone: 'Africa/Johannesburg', hour: '2-digit', minute: '2-digit', hour12: false }) + ' CAT';
+}
+
+function formatDue(iso) {
+  const t = formatTime(iso);
+  return formatDate(iso) + (t.startsWith('23:59') ? '' : ' \u00b7 ' + t);
 }
 
 function renderNorthStar() {
@@ -2583,6 +2647,7 @@ function renderNorthStar() {
   document.getElementById('ns-date-label').textContent = cat.getDate() + ' ' + months[cat.getMonth()].toUpperCase() + ' ' + cat.getFullYear();
   document.getElementById('ns-day-label').textContent = days[cat.getDay()];
   document.getElementById('stat-sprint').textContent = PROGRAMME_DATA.activeSprint.number;
+  renderDeadlineBadge();
   const nsCoursesEl = document.getElementById('ns-active-courses');
   if (nsCoursesEl) {
     nsCoursesEl.innerHTML = (PROGRAMME_DATA.activeCourses || []).map(c => `<div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:rgba(255,255,255,0.09);border-radius:6px;cursor:pointer;"><div style="display:flex;align-items:center;gap:7px;"><span style="font-size:13px;">${c.icon}</span><div><div style="font-size:11px;font-weight:700;color:#ffffff;">${c.name}</div><div style="font-size:9px;color:rgba(255,255,255,0.45);">${c.module}</div></div></div><span style="font-size:12px;color:rgba(255,255,255,0.4);">›</span></div>`).join('');
@@ -2592,7 +2657,7 @@ function renderNorthStar() {
   priEl.innerHTML = '';
   const urgencyColor = { urgent: '#fca5a5', warning: '#fcd34d', safe: '#86efac', past: 'rgba(255,255,255,0.3)', current: '#86efac' };
 
-  const deadlineAssignments = PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && a.dueDate && a.dueDate !== '' && a.status !== 'submitted').slice(0, 2);
+  const deadlineAssignments = PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && a.dueDate && a.dueDate !== '' && !isDeadlineDone(a)).slice(0, 2);
   deadlineAssignments.forEach(a => {
     const cd = getCountdown(a.dueDate);
     priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:${urgencyColor[cd.urgency]};"></div><span class="priority-name">${a.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
@@ -2600,8 +2665,9 @@ function renderNorthStar() {
   PROGRAMME_DATA.assignments.filter(a => a.type === 'linkedin' && a.status !== 'commented' && a.status !== 'submitted').slice(0,1).forEach(a => {
     priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#93c5fd;"></div><span class="priority-name">💬 ${a.postTitle || a.name}</span><span class="priority-countdown safe">Comment</span></div>`;
   });
-  if (PROGRAMME_DATA.sessions.length > 0) {
-    const s = getNextSession();
+  const _nextS = getNextSession();
+  if (_nextS) {
+    const s = _nextS;
     const cd = getCountdown(s.datetime);
     priEl.innerHTML += `<div class="priority-item"><div class="priority-dot" style="background:#fde68a;"></div><span class="priority-name">${s.name}</span><span class="priority-countdown ${cd.urgency}">${cd.display}</span></div>`;
   }
@@ -2620,16 +2686,16 @@ function renderNorthStar() {
   });
 
   // Academic assignments with dates
-  PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && a.dueDate && a.status !== 'submitted').forEach(a => {
+  PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && a.dueDate && !isDeadlineDone(a)).forEach(a => {
     const cd = getCountdown(a.dueDate);
     const diff = new Date(a.dueDate) - nowDl;
     const days = diff / 86400000;
     let tier = days <= 1 ? 'today' : days <= 7 ? 'week' : days <= 14 ? 'next' : 'radar';
-    allItems.push({ label: a.name, sub: `Due ${formatDate(a.dueDate)} · ${formatTime(a.dueDate)}`, tier, dot: days <= 1 ? 'var(--red)' : days <= 7 ? 'var(--amber)' : days <= 14 ? '#fde68a' : 'var(--green)', countdown: cd.display, urgency: cd.urgency });
+    allItems.push({ label: a.name, sub: `Due ${formatDue(a.dueDate)}`, tier, dot: days <= 1 ? 'var(--red)' : days <= 7 ? 'var(--amber)' : days <= 14 ? '#fde68a' : 'var(--green)', countdown: cd.display, urgency: cd.urgency });
   });
 
   // Ongoing (no date) academic
-  PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && (!a.dueDate || a.dueDate === '') && a.status !== 'submitted').forEach(a => {
+  PROGRAMME_DATA.assignments.filter(a => a.type !== 'linkedin' && (!a.dueDate || a.dueDate === '') && !isDeadlineDone(a)).forEach(a => {
     allItems.push({ label: a.name, sub: 'Ongoing — no deadline set', tier: 'ongoing', dot: 'var(--text-muted)', countdown: 'Current' });
   });
 
@@ -2693,9 +2759,9 @@ function renderWork() {
   const tracksEl = document.getElementById('work-sprint-tracks');
   if (sprintEl) sprintEl.textContent = sp.label;
   if (datesEl)  datesEl.textContent  = sp.dates;
-  const sprintEnd = new Date(sp.end + 'T23:59:00');
-  const daysLeft  = Math.max(0, Math.ceil((sprintEnd - new Date()) / 86400000));
-  if (badgeEl) badgeEl.textContent = daysLeft > 0 ? daysLeft + 'd left' : 'Sprint complete';
+  const sprintEnd = sp.end ? new Date(sp.end + 'T23:59:00') : null;
+  const daysLeft  = sprintEnd ? Math.max(0, Math.ceil((sprintEnd - new Date()) / 86400000)) : null;
+  if (badgeEl) badgeEl.textContent = daysLeft === null ? 'In progress' : (daysLeft > 0 ? daysLeft + 'd left' : 'Sprint complete');
   if (tracksEl) {
     tracksEl.innerHTML = sp.tracks.map(t => `<div onclick="openUrl('${t.url}')" style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:rgba(255,255,255,0.09);border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.08);"><span style="font-size:16px;">${t.icon}</span><div style="flex:1;"><div style="font-size:12px;font-weight:700;color:#ffffff;">${t.label}</div><div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;">${t.course}</div></div><span style="font-size:14px;color:rgba(255,255,255,0.4);">›</span></div>`).join('');
   }
@@ -2711,8 +2777,8 @@ function renderWork() {
   PROGRAMME_DATA.assignments.forEach(a => {
     const hasDue = a.dueDate && a.dueDate !== '';
     const cd = hasDue ? getCountdown(a.dueDate) : { urgency: 'safe', display: 'Current' };
-    const dueText = hasDue ? `Due ${formatDate(a.dueDate)} \u00b7 ${formatTime(a.dueDate)}` : 'Current \u2014 no deadline set';
-    const isDone = a.status === 'submitted' || a.status === 'commented';
+    const dueText = hasDue ? `Due ${formatDue(a.dueDate)}` : 'Current \u2014 no deadline set';
+    const isDone = a.status === 'submitted' || a.status === 'commented' || isDeadlineDone(a);
 
     if (a.type === 'linkedin') {
       el.innerHTML += `<div class="card" style="border-color:rgba(10,102,194,0.3);background:#f0f7ff;opacity:${isDone ? '0.6' : '1'};">
@@ -2735,9 +2801,27 @@ function renderWork() {
   });
 }
 
+let _zoomTimer = null;
+function renderZoomEmpty() {
+  document.getElementById('zoom-session-name').textContent = 'Next session \u2014 details to follow';
+  document.getElementById('zoom-date-display').textContent = 'Watch this space';
+  document.getElementById('zoom-time-display').textContent = 'Date and time to be confirmed';
+  document.getElementById('zoom-countdown-sm').textContent = 'TBC';
+  const _u = document.querySelector('.zoom-ring-unit'); if (_u) _u.textContent = '';
+  const metaEl = document.getElementById('zoom-meeting-meta');
+  if (metaEl) metaEl.innerHTML = '';
+  const arc = document.getElementById('zoom-ring-arc');
+  if (arc) arc.setAttribute('stroke-dashoffset', '213.6');
+  const joinBtn = document.getElementById('zoom-join-btn');
+  if (joinBtn) { joinBtn.disabled = true; joinBtn.style.opacity = '0.45'; joinBtn.style.cursor = 'default'; joinBtn.textContent = 'ZOOM LINK PENDING'; }
+}
+
 function renderSessions() {
   const s = getNextSession();
-  if (!s) return;
+  if (_zoomTimer) { clearInterval(_zoomTimer); _zoomTimer = null; }
+  if (!s) { renderZoomEmpty(); }
+  else {
+  const _u2 = document.querySelector('.zoom-ring-unit'); if (_u2) _u2.textContent = 'left';
   document.getElementById('zoom-session-name').textContent = s.name;
   document.getElementById('zoom-date-display').textContent = formatDate(s.datetime);
   document.getElementById('zoom-time-display').textContent = formatTime(s.datetime);
@@ -2765,10 +2849,14 @@ function renderSessions() {
     if (arc) arc.setAttribute('stroke-dashoffset', (213.6 * (1 - pct)).toFixed(1));
   }
   updateZoomCountdown();
-  setInterval(updateZoomCountdown, 60000);
+  _zoomTimer = setInterval(updateZoomCountdown, 60000);
+  }
 
   const sl = document.getElementById('sessions-list');
   sl.innerHTML = '';
+  if (!PROGRAMME_DATA.sessions.length) {
+    sl.innerHTML = '<div style="padding:14px 4px;font-size:13px;color:var(--text-muted);line-height:1.5;">No sessions scheduled yet. Next session details to follow \u2014 watch Telegram and this space.</div>';
+  }
   PROGRAMME_DATA.sessions.forEach(sess => {
     if (sess.zoomUrl) {
       sl.innerHTML += `<div class="link-row" onclick="openUrl('${sess.zoomUrl}')"><div><div class="link-row-label">${sess.name}</div><div class="link-row-meta">${formatDate(sess.datetime)} · ${formatTime(sess.datetime)}</div></div><span class="chevron">›</span></div>`;
@@ -2954,13 +3042,17 @@ function buildProgrammeContext() {
   lines.push('Active courses:');
   (d.activeCourses || []).forEach(c => lines.push('- ' + c.name + ' \u2014 ' + c.module));
   lines.push('Tasks and assignments:');
-  (d.assignments || []).forEach(a => lines.push('- ' + a.name + ' [' + (a.status || 'unknown') + '] due: ' + (a.dueDate || 'no due date set in the app') + (a.notes ? ' \u2014 ' + String(a.notes).slice(0, 220) : '')));
+  (d.assignments || []).forEach(a => lines.push('- ' + a.name + ' [' + (isDeadlineDone(a) ? 'marked done by the user' : (a.status || 'unknown')) + '] due: ' + (a.dueDate ? longDate(a.dueDate.slice(0, 10)) : 'no due date set in the app') + (a.notes ? ' \u2014 ' + String(a.notes).slice(0, 220) : '')));
   const upcoming = (d.sessions || []).filter(x => new Date(x.datetime) > now);
   const past = (d.sessions || []).filter(x => new Date(x.datetime) <= now);
   lines.push('Upcoming Zoom sessions:');
   if (upcoming.length) upcoming.forEach(x => lines.push('- ' + x.name + ' \u2014 ' + fmt(x.datetime) + (x.zoomUrl ? ' (Zoom link is on the Sessions tab)' : ' (Zoom link not yet published)')));
   else lines.push('- None scheduled in the app right now.');
   if (past.length) lines.push('Most recent past session listed: ' + past[past.length - 1].name + ' \u2014 ' + fmt(past[past.length - 1].datetime));
+  const sched = Object.values(getSchedule()).filter(v => v.date >= isoFromDate(new Date())).sort((x, y) => x.date.localeCompare(y.date)).slice(0, 20);
+  lines.push('My Schedule (the user\'s own diary, upcoming):');
+  if (sched.length) sched.forEach(v => lines.push('- ' + v.date + ': ' + v.title + (v.course ? ' (' + v.course + ')' : '')));
+  else lines.push('- Nothing diarised yet.');
   if (d.currentModule) lines.push('Current module: ' + d.currentModule.name + ' \u2014 ' + (d.currentModule.subtitle || ''));
   return lines.join('\n');
 }
@@ -2992,14 +3084,14 @@ function parsePlayIntent(msg) {
   const rm = m.match(/^(?:(?:hey |ok |okay )?ben[, ]+)?(?:please )?(?:can you |could you |would you |will you )?(?:please )?(continue|resume|carry on|pick up|go back to)\b(.*)$/i);
   if (rm) {
     const explicitR = /podcast|episode|audio|listen|left off|where i (?:last )?(?:left|ended|stopped|was)/i.test(m);
-    const tk = normText(rm[2]).split(' ').filter(w => w.length > 1 && !_PLAY_STOP.has(w) && !_RESUME_STOP.has(w));
+    const tk = normText(rm[2]).split(' ').filter(w => (w.length > 1 || /\d/.test(w)) && !_PLAY_STOP.has(w) && !_RESUME_STOP.has(w));
     return { type: 'resume', tokens: tk, explicit: explicitR };
   }
   if (/^(pause|stop)( the)?( podcast| episode| audio| playing| playback| music| it)?\s*[.!]?$/i.test(m)) return { type: 'pause' };
   const pm = m.match(/^(?:(?:hey |ok |okay )?ben[, ]+)?(?:please )?(?:can you |could you |would you |will you )?(?:please )?(play|put on|listen to|stream)\b(.*)$/i);
   if (!pm) return null;
   const explicit = /podcast|episode|audio|listen|chapter|module|recording/i.test(m);
-  const tokens = normText(pm[2]).split(' ').filter(w => w.length > 1 && !_PLAY_STOP.has(w));
+  const tokens = normText(pm[2]).split(' ').filter(w => (w.length > 1 || /\d/.test(w)) && !_PLAY_STOP.has(w));
   return { type: 'play', tokens, explicit, raw: pm[2].trim() };
 }
 
@@ -3012,8 +3104,8 @@ function findEpisodes(tokens) {
     let score = 0, matched = 0;
     tokens.forEach(tok => {
       if (t.includes(' ' + tok + ' ')) { score += 4; matched++; }
-      else if (t.includes(tok)) { score += 3; matched++; }
-      else if (ag.includes(' ' + tok + ' ') || ag.includes(tok)) { score += 1; matched++; }
+      else if (tok.length > 2 && t.includes(tok)) { score += 3; matched++; }
+      else if (ag.includes(' ' + tok + ' ') || (tok.length > 2 && ag.includes(tok))) { score += 1; matched++; }
     });
     if (tokens.length && matched >= Math.ceil(tokens.length * 0.6) && score > 0) res.push({ i, score });
   });
@@ -3270,6 +3362,479 @@ function handlePodcastIntent(intent, messagesEl) {
   return true;
 }
 
+// ===== DIARY COMMANDS (diarise / what's on my schedule) =====
+const _MONTHS = { jan:0, january:0, feb:1, february:1, mar:2, march:2, apr:3, april:3, may:4, jun:5, june:5, jul:6, july:6, aug:7, august:7, sep:8, sept:8, september:8, oct:9, october:9, nov:10, november:10, dec:11, december:11 };
+const _WEEKDAYS = { sunday:0, sun:0, monday:1, mon:1, tuesday:2, tue:2, tues:2, wednesday:3, wed:3, thursday:4, thu:4, thur:4, thurs:4, friday:5, fri:5, saturday:6, sat:6 };
+function isoFromDate(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+function longDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()] + ', ' + d.getDate() + ' ' + ['January','February','March','April','May','June','July','August','September','October','November','December'][d.getMonth()] + ' ' + d.getFullYear();
+}
+
+function parseDatePhrase(text) {
+  const t = String(text).toLowerCase().replace(/,/g, ' ');
+  const now = new Date(); now.setHours(12, 0, 0, 0);
+  const todayIso = isoFromDate(now);
+  const out = (dt, matched, note) => ({ iso: isoFromDate(dt), matched, note: note || '' });
+  const fromDM = (day, mon, yr, matched) => {
+    let note = '';
+    let y = yr || now.getFullYear();
+    let c = new Date(y, mon, day, 12);
+    if (c.getMonth() !== mon || day < 1) return null;
+    if (!yr && isoFromDate(c) < todayIso) { y += 1; c = new Date(y, mon, day, 12); note = ' (that date has already passed this year, so I used ' + y + ')'; }
+    return out(c, matched, note);
+  };
+  let m;
+  if ((m = t.match(/\b(\d{4})-(\d{2})-(\d{2})\b/))) return out(new Date(+m[1], +m[2] - 1, +m[3], 12), m[0]);
+  if ((m = t.match(/\b(\d{1,2})[\/.](\d{1,2})(?:[\/.](\d{2,4}))?\b/)) && +m[2] >= 1 && +m[2] <= 12 && +m[1] <= 31) {
+    const yr = m[3] ? (m[3].length === 2 ? 2000 + (+m[3]) : +m[3]) : null;
+    const r = fromDM(+m[1], +m[2] - 1, yr, m[0]); if (r) return r;
+  }
+  for (const mm of t.matchAll(/\b(\d{1,2})(?:st|nd|rd|th)?\s*(?:of\s+)?([a-z]{3,9})(?:\s+(\d{4}))?\b/g)) {
+    if (_MONTHS[mm[2]] !== undefined) { const r = fromDM(+mm[1], _MONTHS[mm[2]], mm[3] ? +mm[3] : null, mm[0]); if (r) return r; }
+  }
+  for (const mm of t.matchAll(/\b([a-z]{3,9})\s+(\d{1,2})(?:st|nd|rd|th)?(?:\s+(\d{4}))?\b/g)) {
+    if (_MONTHS[mm[1]] !== undefined) { const r = fromDM(+mm[2], _MONTHS[mm[1]], mm[3] ? +mm[3] : null, mm[0]); if (r) return r; }
+  }
+  const add = n => { const c = new Date(now); c.setDate(c.getDate() + n); return c; };
+  if ((m = t.match(/\bday after tomorrow\b/))) return out(add(2), m[0]);
+  if ((m = t.match(/\btomorrow\b/))) return out(add(1), m[0]);
+  if ((m = t.match(/\b(today|tonight)\b/))) return out(add(0), m[0]);
+  if ((m = t.match(/\bin (\d{1,2}) (day|days|week|weeks)\b/))) return out(add(+m[1] * (m[2].startsWith('week') ? 7 : 1)), m[0]);
+  if ((m = t.match(/\b(?:(next|this|on)\s+)?(sunday|monday|tuesday|wednesday|thursday|friday|saturday|sun|mon|tues|tue|wed|thurs|thur|thu|fri|sat)\b/))) {
+    const target = _WEEKDAYS[m[2]];
+    let diff = (target - now.getDay() + 7) % 7;
+    if (diff === 0 && m[1] !== 'this') diff = 7;
+    return out(add(diff), m[0]);
+  }
+  return null;
+}
+
+function cleanDiaryText(rest, dateMatched) {
+  let x = rest;
+  if (dateMatched) x = x.replace(new RegExp(dateMatched.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), ' ');
+  x = x.replace(/\b(?:to|in|into|on|onto)\s+(?:my\s+)?(?:schedule|calendar|diary|agenda)\b/gi, ' ')
+       .replace(/\b(?:my\s+)?(?:schedule|calendar|diary|agenda)\b/gi, ' ')
+       .replace(/\b(?:for|on|by|at|due)\s*$/i, ' ')
+       .replace(/[<>]/g, '')
+       .replace(/\s+/g, ' ').replace(/^[\s:,-]+|[\s:,.?!-]+$/g, '');
+  return x.replace(/^(?:to|that)\s+/i, '').trim();
+}
+
+const _DIARY_STOP = new Set(['assignment','assignments','task','tasks','due','deadline','submit','work','schedule','calendar','diary','agenda','remind','reminder','my','set','add','put','book','block','diarise','diarize']);
+
+let _benPending = null;
+
+function writeDiaryEntry(item, iso) {
+  const sched = getSchedule();
+  const existed = !!sched[item.id];
+  sched[item.id] = { date: iso, title: item.title, course: item.course, type: item.type };
+  saveSchedule(sched);
+  renderCalendar();
+  return existed;
+}
+
+function openScheduleFromBen(iso) {
+  closeBen();
+  const btn = document.querySelector('[data-tab="work"]');
+  if (btn) switchTab('work', btn);
+  const pb = document.querySelector('#work-tabs [data-wpane="schedule"]');
+  switchWorkPane('schedule', pb);
+  if (iso) {
+    const d = new Date(iso + 'T12:00:00');
+    _calMonth = d.getMonth(); _calYear = d.getFullYear();
+    renderCalendar();
+    openDayDetail(iso);
+  }
+}
+
+function finishDiarise(messagesEl, item, dateObj) {
+  const existed = writeDiaryEntry(item, dateObj.iso);
+  benSay(messagesEl, d => {
+    benLine(d, existed ? '\u2693 Moved ' : '\u2693 Diarised ');
+    benLine(d, item.title, true);
+    benLine(d, ' to ' + longDate(dateObj.iso) + '.' + (dateObj.note || ''));
+    const c = document.createElement('div');
+    c.className = 'chip';
+    c.style.cssText = 'display:inline-block;margin-top:8px;';
+    c.textContent = 'Open in My Schedule \u203A';
+    c.onclick = () => openScheduleFromBen(dateObj.iso);
+    d.appendChild(document.createElement('br'));
+    d.appendChild(c);
+  });
+}
+
+function askForDate(messagesEl, item) {
+  _benPending = { item, ts: Date.now() };
+  benSay(messagesEl, d => {
+    benLine(d, 'Which date should I put ');
+    benLine(d, item.title, true);
+    benLine(d, ' on? You can say tomorrow, Friday, or 25 October.');
+  });
+}
+
+function pickDiaryItem(messagesEl, items, dateObj) {
+  const choose = it => { if (dateObj) finishDiarise(messagesEl, it, dateObj); else askForDate(messagesEl, it); };
+  if (items.length === 1) { choose(items[0]); return; }
+  benSay(messagesEl, d => {
+    benLine(d, 'Which one should I diarise? Tap to choose:');
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'display:flex;flex-direction:column;gap:6px;margin-top:8px;';
+    items.slice(0, 5).forEach(it => {
+      const c = document.createElement('div');
+      c.className = 'chip';
+      c.textContent = it.title;
+      c.onclick = () => choose(it);
+      wrap.appendChild(c);
+    });
+    d.appendChild(wrap);
+  });
+}
+
+function matchAssignments(tokens) {
+  const res = [];
+  (PROGRAMME_DATA.assignments || []).forEach(a => {
+    const h = ' ' + normText(a.name + ' ' + a.id) + ' ';
+    let sc = 0;
+    tokens.forEach(tk => { if (h.includes(' ' + tk + ' ')) sc += 3; else if (tk.length > 2 && h.includes(tk)) sc += 2; });
+    if (tokens.length && sc >= Math.ceil(tokens.length * 0.6) * 2) res.push({ a, sc });
+  });
+  res.sort((x, y) => y.sc - x.sc);
+  return res;
+}
+
+function handleDiariseIntent(msg, messagesEl) {
+  const vm = msg.trim().match(/^(?:(?:hey |ok |okay )?ben[, ]+)?(?:please )?(?:can you |could you |would you |will you )?(?:please )?(diarise|diarize|schedule|add|put|book|block|remind me to|remind me|set a reminder to|set a reminder for|set a reminder)\b(.*)$/i);
+  if (!vm) return false;
+  const verb = vm[1].toLowerCase();
+  const rest = vm[2];
+  const calNoun = /\b(schedule|calendar|diary|agenda)\b/i.test(msg);
+  const dateObj = parseDatePhrase(msg);
+  const strong = /^(diarise|diarize|remind|set a reminder)/.test(verb);
+  if (!(strong || calNoun || (dateObj && /^(schedule|book|block)/.test(verb)))) return false;
+
+  const free = cleanDiaryText(rest, dateObj && dateObj.matched);
+  const podHint = /podcast|episode|listen/i.test(msg);
+  const tokens = normText(free).split(' ').filter(w => (w.length > 1 || /\d/.test(w)) && !_PLAY_STOP.has(w) && !_DIARY_STOP.has(w));
+
+  if (!tokens.length) {
+    if (verb === 'schedule' && !strong && !calNoun) return false;
+    const open = (PROGRAMME_DATA.assignments || []).map(a => ({ id: 'ben-asg-' + a.id, title: a.name, course: 'Assignment', type: 'assignment' }));
+    if (!open.length) { benSay(messagesEl, d => benLine(d, 'What would you like me to diarise, and for which date?')); return true; }
+    benSay(messagesEl, d => {
+      benLine(d, 'What should I diarise' + (dateObj ? ' for ' + longDate(dateObj.iso) : '') + '? Tap one of your assignments, or tell me the item and date.');
+      const wrap = document.createElement('div');
+      wrap.style.cssText = 'display:flex;flex-direction:column;gap:6px;margin-top:8px;';
+      open.slice(0, 6).forEach(it => {
+        const c = document.createElement('div');
+        c.className = 'chip'; c.textContent = it.title;
+        c.onclick = () => { if (dateObj) finishDiarise(messagesEl, it, dateObj); else askForDate(messagesEl, it); };
+        wrap.appendChild(c);
+      });
+      d.appendChild(wrap);
+    });
+    return true;
+  }
+
+  const asg = matchAssignments(tokens);
+  const pods = findEpisodes(tokens);
+  const cat = getEpisodeCatalog();
+  const podItem = h => ({ id: 'ben-pod-' + h.i, title: cat[h.i].title, course: 'Podcast: ' + cat[h.i].group, type: 'podcast' });
+  const asgItem = x => ({ id: 'ben-asg-' + x.a.id, title: x.a.name, course: 'Assignment', type: 'assignment' });
+  const strongPod = pods.length && pods[0].score >= 6 && (!pods[1] || pods[0].score >= pods[1].score * 2);
+
+  if (podHint && pods.length) { pickDiaryItem(messagesEl, pods.slice(0, 5).map(podItem), dateObj); return true; }
+  if (asg.length) {
+    const exact = asg[0].sc >= tokens.length * 3 && (!asg[1] || asg[0].sc > asg[1].sc);
+    pickDiaryItem(messagesEl, (exact ? [asg[0]] : asg.slice(0, 5)).map(asgItem), dateObj);
+    return true;
+  }
+  if (strongPod) { pickDiaryItem(messagesEl, [podItem(pods[0])], dateObj); return true; }
+  if (free.length >= 3) {
+    const item = { id: 'manual-' + Date.now(), title: free.charAt(0).toUpperCase() + free.slice(1), course: 'Manual entry', type: 'manual' };
+    if (dateObj) finishDiarise(messagesEl, item, dateObj); else askForDate(messagesEl, item);
+    return true;
+  }
+  return false;
+}
+
+function handleAgendaIntent(msg, messagesEl) {
+  const t = msg.toLowerCase();
+  const asks = /\b(what'?s|what is|what do i have|what have i got|show|list|check|read)\b/.test(t) || /what am i doing/.test(t);
+  const mine = /\bmy (schedule|diary|calendar|agenda)\b/.test(t) || /what do i have (on|today|tomorrow|this week|next week)/.test(t) || /what am i doing/.test(t);
+  if (!(asks && mine)) return false;
+  const now = new Date(); now.setHours(12, 0, 0, 0);
+  const addD = (base, n) => { const c = new Date(base); c.setDate(c.getDate() + n); return c; };
+  let from = now, to = addD(now, 13), label = 'in the next two weeks';
+  if (/next week/.test(t)) { const dow = (now.getDay() + 6) % 7; from = addD(now, 7 - dow); to = addD(from, 6); label = 'next week'; }
+  else if (/this week/.test(t)) { to = addD(now, 6); label = 'over the next 7 days'; }
+  else {
+    const dp = parseDatePhrase(t);
+    if (dp) { from = new Date(dp.iso + 'T12:00:00'); to = from; label = 'on ' + longDate(dp.iso); }
+  }
+  const a = isoFromDate(from), b = isoFromDate(to);
+  const items = Object.entries(getSchedule()).concat(getDeadlineEntries()).filter(([, v]) => v.date >= a && v.date <= b).sort((x, y) => x[1].date.localeCompare(y[1].date));
+  benSay(messagesEl, d => {
+    if (!items.length) { benLine(d, '\u2693 Nothing is in your diary ' + label + '.'); }
+    else {
+      benLine(d, '\u2693 Your diary ' + label + ':');
+      items.slice(0, 15).forEach(([, v]) => {
+        d.appendChild(document.createElement('br'));
+        benLine(d, formatScheduleDate(v.date) + ' \u2014 ');
+        benLine(d, v.title, true);
+        if (v.course) benLine(d, ' (' + v.course + ')');
+      });
+    }
+    const c = document.createElement('div');
+    c.className = 'chip';
+    c.style.cssText = 'display:inline-block;margin-top:8px;';
+    c.textContent = 'Open My Schedule \u203A';
+    c.onclick = () => openScheduleFromBen(null);
+    d.appendChild(document.createElement('br'));
+    d.appendChild(c);
+  });
+  return true;
+}
+
+// ===== DEADLINES =====
+const DL_DONE_KEY = 'cn_deadlines_done';
+function getDoneMap() { return storage.getJSON(DL_DONE_KEY) || {}; }
+function isDeadlineDone(a) { return a.status === 'submitted' || a.status === 'commented' || !!getDoneMap()[a.id]; }
+function dlEsc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function dlKey(a) { return a.dueDate ? String(a.dueDate).slice(0, 10) : ''; }
+
+function getDeadlines() {
+  const now = new Date();
+  return (PROGRAMME_DATA.assignments || [])
+    .filter(a => a.type !== 'linkedin' && a.dueDate)
+    .map(a => ({ a, key: dlKey(a), done: isDeadlineDone(a), diff: new Date(a.dueDate) - now }))
+    .sort((x, y) => new Date(x.a.dueDate) - new Date(y.a.dueDate));
+}
+function getUndatedAssignments() {
+  return (PROGRAMME_DATA.assignments || []).filter(a => a.type !== 'linkedin' && !a.dueDate && !isDeadlineDone(a));
+}
+function dlGroupOf(d) {
+  if (d.done) return 'done';
+  if (d.diff < 0) return 'overdue';
+  const days = d.diff / 86400000;
+  return days <= 7 ? 'week' : days <= 14 ? 'next' : 'later';
+}
+function dlTone(d) {
+  if (d.done) return 'grey';
+  if (d.diff < 0 || d.diff < 3 * 86400000) return 'red';
+  return d.diff < 7 * 86400000 ? 'amber' : 'blue';
+}
+function getDeadlineEntries() {
+  return getDeadlines().filter(d => !d.done).map(d => ['dl-' + d.a.id, { date: d.key, title: d.a.name, course: 'Deadline \u2014 due this day', type: 'deadline', locked: true }]);
+}
+
+function renderDeadlineBadge() {
+  const badge = document.getElementById('dl-badge');
+  if (!badge) return;
+  const open = getDeadlines().filter(d => !d.done);
+  const overdue = open.filter(d => d.diff < 0);
+  const soon = open.filter(d => d.diff >= 0 && d.diff <= 7 * 86400000);
+  badge.className = '';
+  if (!overdue.length && !soon.length) { badge.textContent = ''; return; }
+  const worst = overdue.length ? 'red' : (soon.some(d => d.diff < 3 * 86400000) ? 'red' : 'amber');
+  badge.classList.add('on', worst === 'red' ? 'dl-red' : 'dl-amber');
+  badge.textContent = overdue.length ? '\u23F0 ' + overdue.length + ' overdue' : '\u23F0 ' + soon.length + ' due';
+  // banner: anything due in 3 days or overdue, once per day
+  const ban = document.getElementById('dl-banner');
+  if (!ban) return;
+  const urgent = open.filter(d => d.diff <= 3 * 86400000);
+  if (!urgent.length || storage.get('cn_dl_banner_day') === todayISO()) { ban.style.display = 'none'; return; }
+  const first = urgent[0];
+  ban.style.cssText = 'display:flex;align-items:center;gap:10px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:10px 12px;margin-bottom:12px;';
+  ban.innerHTML = '<div onclick="openDeadlines()" style="flex:1;cursor:pointer;font-size:12px;color:#991b1b;line-height:1.4;"><strong>\u23F0 ' + urgent.length + (urgent.length === 1 ? ' deadline' : ' deadlines') + ' due soon.</strong> ' + dlEsc(first.a.name) + (first.diff < 0 ? ' is overdue.' : ' is due ' + formatDate(first.a.dueDate) + '.') + ' Tap to view.</div><button onclick="dismissDlBanner()" aria-label="Dismiss" style="background:none;border:none;color:#991b1b;font-size:18px;cursor:pointer;">&times;</button>';
+}
+function dismissDlBanner() { storage.set('cn_dl_banner_day', todayISO()); document.getElementById('dl-banner').style.display = 'none'; }
+
+function toggleDeadlineDone(id) {
+  const m = getDoneMap();
+  if (m[id]) delete m[id]; else m[id] = Date.now();
+  storage.setJSON(DL_DONE_KEY, m);
+  refreshDeadlines();
+}
+function toggleDlNotes(id) {
+  document.querySelectorAll('[data-dl-notes="' + id + '"]').forEach(el => { el.style.display = el.style.display === 'block' ? 'none' : 'block'; });
+}
+function refreshDeadlines() {
+  const body = document.getElementById('dl-body');
+  if (body && document.getElementById('dl-panel').classList.contains('open')) renderDeadlinesInto(body);
+  const wb = document.getElementById('work-deadlines-body');
+  if (wb) renderDeadlinesInto(wb);
+  renderDeadlineBadge();
+  try { renderNorthStar(); renderWork(); renderBriefing(); renderCalendar(); } catch (e) {}
+}
+
+function renderDeadlinesInto(el) {
+  if (!el) return;
+  const all = getDeadlines();
+  const open = all.filter(d => !d.done);
+  const done = all.filter(d => d.done);
+  const undated = getUndatedAssignments();
+  const weekN = open.filter(d => d.diff >= 0 && d.diff <= 7 * 86400000).length;
+  const overN = open.filter(d => d.diff < 0).length;
+  let h = '';
+  // summary
+  const next = open.find(d => d.diff >= 0) || open[0];
+  h += '<div class="dl-sum"><div class="big">' + (open.length ? (overN ? overN + ' overdue \u00b7 ' : '') + weekN + ' due in the next 7 days' : 'Nothing due right now') + '</div>';
+  if (next) h += '<div class="sub">Next: <strong>' + dlEsc(next.a.name) + '</strong><br>' + formatDate(next.a.dueDate) + (next.diff >= 0 ? ' \u00b7 ' + getCountdown(next.a.dueDate).display + ' left' : ' \u00b7 overdue') + '</div>';
+  else h += '<div class="sub">No dated deadlines are in the app yet.</div>';
+  if (open.length) h += '<div style="margin-top:10px;"><button class="dl-btn primary" onclick="downloadDeadlineICS(null)">Add all to my calendar</button></div>';
+  h += '</div>';
+  // 14-day strip
+  const wd = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  const base = new Date(); base.setHours(12, 0, 0, 0);
+  h += '<div class="dl-strip">';
+  for (let i = 0; i < 14; i++) {
+    const dt = new Date(base); dt.setDate(base.getDate() + i);
+    const iso = isoFromDate(dt);
+    const cnt = open.filter(d => d.key === iso).length;
+    h += '<div class="dl-day' + (i === 0 ? ' today' : '') + '"><div class="w">' + wd[dt.getDay()] + '</div><div class="n">' + dt.getDate() + '</div>' + (cnt ? '<div class="dot"></div>' : '<div class="nodot"></div>') + '</div>';
+  }
+  h += '</div>';
+  const groups = [
+    ['overdue', 'Overdue', '#b91c1c'], ['week', 'Due in the next 7 days', '#b45309'],
+    ['next', 'Following week', '#a16207'], ['later', 'Later', 'var(--text-muted)']
+  ];
+  const card = d => {
+    const a = d.a, tone = dlTone(d);
+    const cdTxt = d.done ? 'Done' : (d.diff < 0 ? 'Overdue' : getCountdown(a.dueDate).display);
+    const cdStyle = { red: 'background:#fef2f2;color:#b91c1c;', amber: 'background:#fffbeb;color:#b45309;', blue: 'background:var(--accent-light);color:var(--accent);', grey: 'background:var(--bg-elevated);color:var(--text-muted);' }[tone];
+    return '<div class="dl-card ' + tone + '"><div class="dl-hdrow"><div style="flex:1;min-width:0;"><div class="t">' + dlEsc(a.name) + '</div><div class="d">Due ' + formatDue(a.dueDate) + '</div></div><span class="cd" style="' + cdStyle + '">' + cdTxt + '</span></div>' +
+      (a.notes ? '<div class="notes" data-dl-notes="' + dlEsc(a.id) + '">' + dlEsc(a.notes) + '</div>' : '') +
+      '<div class="acts">' +
+      (a.notes ? '<button class="dl-btn" onclick="toggleDlNotes(\'' + dlEsc(a.id) + '\')">What to do</button>' : '') +
+      (a.prepUrl ? '<button class="dl-btn" onclick="openUrl(\'' + dlEsc(a.prepUrl) + '\')">Open portal \u203A</button>' : '') +
+      '<button class="dl-btn" onclick="downloadDeadlineICS(\'' + dlEsc(a.id) + '\')">+ Calendar</button>' +
+      '<button class="dl-btn' + (d.done ? ' done' : '') + '" onclick="toggleDeadlineDone(\'' + dlEsc(a.id) + '\')">' + (d.done ? '\u2713 Done (undo)' : '\u2713 Mark done') + '</button>' +
+      '</div></div>';
+  };
+  groups.forEach(([gid, label, color]) => {
+    const items = open.filter(d => dlGroupOf(d) === gid);
+    if (!items.length) return;
+    h += '<div class="dl-group" style="color:' + color + ';">' + label + ' (' + items.length + ')</div>' + items.map(card).join('');
+  });
+  if (!open.length) h += '<div style="font-size:13px;color:var(--text-muted);padding:6px 2px 10px;line-height:1.5;">You are clear. New deadlines appear here as soon as they are added to the app.</div>';
+  if (undated.length) {
+    h += '<div class="dl-group" style="color:var(--text-muted);">Date to be confirmed (' + undated.length + ')</div>';
+    h += undated.map(a => '<div class="dl-card grey"><div class="t">' + dlEsc(a.name) + '</div><div class="d">No deadline set in the app yet</div>' + (a.prepUrl ? '<div class="acts"><button class="dl-btn" onclick="openUrl(\'' + dlEsc(a.prepUrl) + '\')">Open portal \u203A</button></div>' : '') + '</div>').join('');
+  }
+  if (done.length) {
+    h += '<div class="dl-group" style="color:#15803d;">Done (' + done.length + ')</div>' + done.map(card).join('');
+    h += '<div style="font-size:10px;color:var(--text-dim);margin-top:4px;">Done marks are saved on this device only.</div>';
+  }
+  el.innerHTML = h;
+}
+
+function openDeadlines() {
+  renderDeadlinesInto(document.getElementById('dl-body'));
+  document.getElementById('dl-panel').classList.add('open');
+  const b = document.getElementById('dl-body'); if (b) b.scrollTop = 0;
+}
+function closeDeadlines() { document.getElementById('dl-panel').classList.remove('open'); }
+
+// ----- calendar file (.ics) with reminders -----
+function icsEsc(t) { return String(t || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+function icsFold(line) { const out = []; let l = line; while (l.length > 60) { out.push(l.slice(0, 60)); l = ' ' + l.slice(60); } out.push(l); return out.join('\r\n'); }
+function icsDate(iso) { return iso.replace(/-/g, ''); }
+function buildDeadlineICS(list) {
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+  const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Cotrugli Navigator//Deadlines//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+  list.forEach(d => {
+    const a = d.a;
+    const nd = new Date(d.key + 'T12:00:00'); nd.setDate(nd.getDate() + 1);
+    L.push('BEGIN:VEVENT', 'UID:' + a.id + '-' + d.key + '@cotrugli-navigator', 'DTSTAMP:' + stamp,
+      'DTSTART;VALUE=DATE:' + icsDate(d.key), 'DTEND;VALUE=DATE:' + icsDate(isoFromDate(nd)),
+      icsFold('SUMMARY:DUE: ' + icsEsc(a.name)),
+      icsFold('DESCRIPTION:' + icsEsc((a.notes || '') + (a.prepUrl ? '\n' + a.prepUrl : ''))));
+    if (a.prepUrl) L.push(icsFold('URL:' + a.prepUrl));
+    [['-P2DT15H', 'Due in 3 days'], ['-PT15H', 'Due tomorrow'], ['PT9H', 'Due today']].forEach(([trig, txt]) => {
+      L.push('BEGIN:VALARM', 'ACTION:DISPLAY', icsFold('DESCRIPTION:' + icsEsc(txt + ': ' + a.name)), 'TRIGGER:' + trig, 'END:VALARM');
+    });
+    L.push('END:VEVENT');
+  });
+  L.push('END:VCALENDAR');
+  return L.join('\r\n');
+}
+function downloadDeadlineICS(id) {
+  const list = getDeadlines().filter(d => !d.done && (!id || d.a.id === id));
+  if (!list.length) { showToast('Nothing to add'); return; }
+  const blob = new Blob([buildDeadlineICS(list)], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = id ? 'deadline.ics' : 'navigator-deadlines.ics';
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 4000);
+  showToast('Calendar file ready \u2014 open it to add reminders');
+}
+
+// ----- Ben: deadline commands -----
+function handleDeadlineIntent(msg, messagesEl) {
+  const t = msg.toLowerCase();
+  const asksList = (/\b(what'?s|what is|what do i have|what have i got|show|list|any|upcoming|check)\b/.test(t) && /\b(due|deadlines?)\b/.test(t)) || /^(my )?deadlines?\b/.test(t) || /what do i (need|have) to (submit|hand in|upload)/.test(t) || /what (must|should) i (submit|hand in|upload)/.test(t);
+  if (asksList) {
+    const open = getDeadlines().filter(d => !d.done);
+    const win = /next week/.test(t) ? 14 : /this week|next 7|week/.test(t) ? 7 : 60;
+    const items = open.filter(d => d.diff < 0 || d.diff <= win * 86400000);
+    benSay(messagesEl, d => {
+      if (!items.length) benLine(d, '\u2693 No deadlines in that window.');
+      else {
+        benLine(d, '\u2693 Your deadlines:');
+        items.slice(0, 10).forEach(x => {
+          d.appendChild(document.createElement('br'));
+          benLine(d, formatDate(x.a.dueDate) + ' \u2014 ');
+          benLine(d, x.a.name, true);
+          benLine(d, x.diff < 0 ? ' (overdue)' : ' (' + getCountdown(x.a.dueDate).display + ' left)');
+        });
+      }
+      const c = document.createElement('div');
+      c.className = 'chip'; c.style.cssText = 'display:inline-block;margin-top:8px;';
+      c.textContent = 'Open Deadlines \u203A';
+      c.onclick = () => { closeBen(); openDeadlines(); };
+      d.appendChild(document.createElement('br')); d.appendChild(c);
+    });
+    return true;
+  }
+  const dm = msg.trim().match(/^(?:i(?:'ve| have)\s+)?(mark|tick off|submitted|handed in|hand in|completed|finished)\b(.*)$/i);
+  if (dm) {
+    const tokens = normText(dm[2]).split(' ').filter(w => (w.length > 1 || /\d/.test(w)) && !_PLAY_STOP.has(w) && !_DIARY_STOP.has(w) && !['done','complete','completed','submitted','finished','handed','hand','tick','off','have','ive'].includes(w));
+    if (!tokens.length) return false;
+    const hits = matchAssignments(tokens).filter(x => getDeadlines().some(d => d.a.id === x.a.id && !d.done));
+    if (!hits.length) return false;
+    const setDone = x => {
+      const m = getDoneMap(); m[x.a.id] = Date.now(); storage.setJSON(DL_DONE_KEY, m); refreshDeadlines();
+      benSay(messagesEl, d => { benLine(d, '\u2693 Marked done: '); benLine(d, x.a.name, true); benLine(d, '. Nice work. You can undo it in Deadlines.'); });
+    };
+    if (hits.length === 1 || hits[0].sc >= hits[1].sc * 2 || (hits[0].sc >= tokens.length * 3 && hits[0].sc > hits[1].sc)) { setDone(hits[0]); return true; }
+    benSay(messagesEl, d => {
+      benLine(d, 'Which one is done? Tap to mark it:');
+      const wrap = document.createElement('div'); wrap.style.cssText = 'display:flex;flex-direction:column;gap:6px;margin-top:8px;';
+      hits.slice(0, 5).forEach(x => { const c = document.createElement('div'); c.className = 'chip'; c.textContent = x.a.name; c.onclick = () => setDone(x); wrap.appendChild(c); });
+      d.appendChild(wrap);
+    });
+    return true;
+  }
+  return false;
+}
+
+function handleDiaryCommands(msg, messagesEl) {
+  if (_benPending) {
+    const pending = _benPending;
+    _benPending = null;
+    if (Date.now() - pending.ts < 600000) {
+      const dp = parseDatePhrase(msg);
+      if (dp) { finishDiarise(messagesEl, pending.item, dp); return true; }
+      if (/^(cancel|never ?mind|forget it|no|stop)\b/i.test(msg.trim())) { benSay(messagesEl, d => benLine(d, 'Okay, I have not diarised anything.')); return true; }
+    }
+  }
+  if (handleDeadlineIntent(msg, messagesEl)) return true;
+  if (handleAgendaIntent(msg, messagesEl)) return true;
+  return handleDiariseIntent(msg, messagesEl);
+}
+
 async function sendKvQA() {
   const input = document.getElementById('kv-qa-input');
   const msg = input.value.trim();
@@ -3277,6 +3842,7 @@ async function sendKvQA() {
   const messages = document.getElementById('kv-qa-messages');
   messages.innerHTML += `<div class="msg-user">${msg}</div>`;
   input.value = '';
+  if (handleDiaryCommands(msg, messages)) return;
   const _intent = parsePlayIntent(msg);
   if (_intent && handlePodcastIntent(_intent, messages)) return;
   const loader = document.createElement('div');
@@ -3712,13 +4278,14 @@ function renderBriefing() {
 
   if (d.teamsQuote) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🏆</span><div class="briefing-content"><div class="briefing-title">Vanguard Teams</div>${d.teamsQuote}</div></div>`);
 
-  const pendingAssignments = d.assignments.filter(a => a.status !== 'submitted');
+  const pendingAssignments = d.assignments.filter(a => !isDeadlineDone(a));
   if (pendingAssignments.length) {
     rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔴</span><div class="briefing-content"><div class="briefing-title">Deadlines</div>${
       pendingAssignments.map(a => `<strong>${a.name}</strong>${a.dueDate ? ` \u2014 due ${formatDate(a.dueDate)}` : ' \u2014 Current'}<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${a.notes}</div>`).join('<br>')
     }</div></div>`);
   }
 
+  if (!s) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📅</span><div class="briefing-content"><div class="briefing-title">Next Zoom Session</div>Watch this space \u2014 next session details to follow</div></div>`);
   if (s) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📅</span><div class="briefing-content"><div class="briefing-title">Next Zoom Session</div><strong>${s.name}</strong> — ${formatDate(s.datetime)} at ${formatTime(s.datetime)}${s.recordingUrl ? ` · <a href="${s.recordingUrl}" style="color:var(--accent);">Zoom Recordings</a>` : ''}</div></div>`);
 
   if (d.status && d.status.length) rows.push(`<div class="briefing-row"><span class="briefing-emoji">✅</span><div class="briefing-content"><div class="briefing-title">Status</div>${d.status.join('<br>')}</div></div>`);
@@ -3738,6 +4305,7 @@ function renderBriefing() {
       if (d.currentModule.preReading) focusHtml += `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module Reading</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>`;
     }
     if (d.currentModule.readings && d.currentModule.readings.length) focusHtml += `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r=>`→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>`;
+    if (d.currentModule.notesUrl) focusHtml += `<div style="margin-top:8px;"><a href="${d.currentModule.notesUrl}" style="color:var(--accent);">\u2192 Full guide</a></div>`;
     focusHtml += `</div></div>`;
     rows.push(focusHtml);
   }
@@ -3750,14 +4318,14 @@ function renderBriefing() {
 
   rows.push(`<div class="briefing-row"><span class="briefing-emoji">🗺️</span><div class="briefing-content"><div class="briefing-title">Navigable Path</div>Turning complexity into a navigable path — <a href="${d.toolOfDay.url}" style="color:var(--accent);">${d.toolOfDay.name}</a> — create an account and explore</div></div>`);
 
-  if (d.kapustaReading) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🏛️</span><div class="briefing-content"><div class="briefing-title">Vanguard Leadership &amp; NEO World — Kapusta</div><a href="${d.kapustaReading.url}" style="color:var(--accent);font-weight:600;">${d.kapustaReading.title}</a>${d.kapustaReading.subtitle ? `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.kapustaReading.subtitle}</div>` : ''}</div></div>`);
+  if (d.kapustaReading) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🏛️</span><div class="briefing-content"><div class="briefing-title">Vanguard Leadership &amp; NEO World — Kapusta</div><a href="${d.kapustaReading.url}" style="color:var(--accent);font-weight:600;">${d.kapustaReading.title}</a>${d.kapustaReading.subtitle ? `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.kapustaReading.subtitle}</div>` : ''}${d.kapustaReading.docTitle ? `<div style="margin-top:8px;">📄 ${d.kapustaReading.docTitle}</div>` : ''}${d.kapustaReading.watchUrl ? `<div style="margin-top:4px;"><a href="${d.kapustaReading.watchUrl}" style="color:var(--accent);">→ ${d.kapustaReading.watchLabel || 'Watch on YouTube'}</a></div>` : ''}</div></div>`);
 
   if (d.futureLab) {
     const flItems = Array.isArray(d.futureLab) ? d.futureLab : [d.futureLab];
     rows.push(`<div class="briefing-row"><span class="briefing-emoji">🔬</span><div class="briefing-content"><div class="briefing-title">Future Lab Learning</div>${flItems.map(fl => `<div style="margin-bottom:6px;"><a href="${fl.url}" style="color:var(--accent);font-weight:500;">${fl.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:1px;">${fl.source}</div></div>`).join('')}</div></div>`);
   }
 
-  if (d.neoWorldArticle) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🌐</span><div class="briefing-content"><div class="briefing-title">AI News — ${d.neoWorldArticle.source || 'VentureBeat'}</div><a href="${d.neoWorldArticle.url}" style="color:var(--accent);">${d.neoWorldArticle.title}</a></div></div>`);
+  if (d.neoWorldArticle) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🌐</span><div class="briefing-content"><div class="briefing-title">AI News — ${d.neoWorldArticle.source || 'VentureBeat'}</div>${d.neoWorldArticle.url ? `<a href="${d.neoWorldArticle.url}" style="color:var(--accent);">${d.neoWorldArticle.title}</a>` : d.neoWorldArticle.title}</div></div>`);
 
   if (d.knowledgeQuestion) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🧠</span><div class="briefing-content"><div class="briefing-title">Knowledge Question</div>${d.knowledgeQuestion}</div></div>`);
 
@@ -4134,7 +4702,7 @@ init();
 
 function getSchedule() { return storage.getJSON('reading_schedule') || {}; }
 function saveSchedule(s) { storage.setJSON('reading_schedule', s); }
-function todayISO() { return new Date().toISOString().split('T')[0]; }
+function todayISO() { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
 
 function formatScheduleDate(iso) {
   const d = new Date(iso + 'T00:00:00');
@@ -4150,6 +4718,7 @@ function switchWorkPane(name, btn) {
   document.querySelectorAll('#work-tabs .pill-tab').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
   if (name === 'schedule') { renderCalendar(); updateScheduleMeta(); }
+  if (name === 'deadlines') renderDeadlinesInto(document.getElementById('work-deadlines-body'));
 }
 
 function toggleScheduleAccordion() {
@@ -4201,14 +4770,14 @@ function renderCalendar() {
   }
   for (let d = 1; d <= daysInMonth; d++) {
     const iso = _calYear + '-' + String(_calMonth + 1).padStart(2,'0') + '-' + String(d).padStart(2,'0');
-    const items = Object.entries(schedule).filter(([k,v]) => v.date === iso);
+    const items = Object.entries(schedule).concat(getDeadlineEntries()).filter(([k,v]) => v.date === iso);
     const isToday = iso === today;
     const hasDot = items.length > 0;
     html += '<div onclick="openDayDetail(\'' + iso + '\')" style="cursor:pointer;text-align:center;padding:5px 2px;border-radius:8px;position:relative;' +
       (isToday ? 'background:var(--accent);' : 'background:transparent;') + '">';
     html += '<div style="font-size:12px;font-weight:' + (isToday ? '700' : '400') + ';color:' + (isToday ? '#fff' : 'var(--text)') + ';">' + d + '</div>';
     if (hasDot) {
-      html += '<div style="width:5px;height:5px;border-radius:50%;background:' + (isToday ? '#fff' : 'var(--accent)') + ';margin:2px auto 0;"></div>';
+      html += '<div style="width:5px;height:5px;border-radius:50%;background:' + (items.some(([k,v]) => v.type === 'deadline') ? (isToday ? '#fecaca' : 'var(--red)') : (isToday ? '#fff' : 'var(--accent)')) + ';margin:2px auto 0;"></div>';
     } else {
       html += '<div style="width:5px;height:5px;margin:2px auto 0;"></div>';
     }
@@ -4223,7 +4792,7 @@ function renderCalendar() {
 
 function openDayDetail(iso) {
   const schedule = getSchedule();
-  const items = Object.entries(schedule).filter(([k,v]) => v.date === iso);
+  const items = Object.entries(schedule).concat(getDeadlineEntries()).filter(([k,v]) => v.date === iso);
   const modal = document.getElementById('day-detail-modal');
   const title = document.getElementById('day-detail-title');
   const list = document.getElementById('day-detail-list');
@@ -4236,11 +4805,11 @@ function openDayDetail(iso) {
     list.innerHTML = items.map(([id, v]) => {
       const isManual = id.startsWith('manual-');
       return '<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:0.5px solid var(--border);">' +
-        '<span style="font-size:16px;flex-shrink:0;">' + (isManual ? '\u270f\ufe0f' : v.type === 'podcast' ? '\uD83C\uDFA7' : '\uD83D\uDCDA') + '</span>' +
+        '<span style="font-size:16px;flex-shrink:0;">' + (isManual ? '\u270f\ufe0f' : v.type === 'deadline' ? '\uD83D\uDD34' : v.type === 'assignment' ? '\uD83D\uDCDD' : v.type === 'podcast' ? '\uD83C\uDFA7' : '\uD83D\uDCDA') + '</span>' +
         '<div style="flex:1;min-width:0;">' +
         '<div style="font-size:13px;font-weight:500;color:var(--text);line-height:1.3;">' + v.title + '</div>' +
         '<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">' + v.course + '</div></div>' +
-        '<button onclick="removeSchedule(\'' + id + '\');closeDayDetail();openDayDetail(\'' + iso + '\');" style="background:none;border:none;color:var(--text-muted);font-size:18px;cursor:pointer;padding:2px 4px;flex-shrink:0;">\u00d7</button>' +
+        (v.locked ? '' : '<button onclick="removeSchedule(\'' + id + '\');closeDayDetail();openDayDetail(\'' + iso + '\');" style="background:none;border:none;color:var(--text-muted);font-size:18px;cursor:pointer;padding:2px 4px;flex-shrink:0;">\u00d7</button>') +
         '</div>';
     }).join('');
   }
