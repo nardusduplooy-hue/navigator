@@ -4186,6 +4186,14 @@ TALI_STEPS = {
         "question": "OpenAI cancelled one model over safety concerns and is reportedly fixing issues on the next before release, choosing certainty over speed in a market that rewards shipping first. Think about your last significant decision. Did it actually need speed or certainty, and which did you optimise for? If they don’t match, what made you default to the wrong side?",
         "model_answer": "Two questions sort most decisions. First: how reversible is it? A decision you can undo cheaply rewards speed, because the cost of being wrong is small and the information you gain by acting is large. A decision you can’t undo rewards certainty, because a mistake compounds. Second: what does waiting buy you? If another week brings genuinely new information, wait. If it only brings more comfort, you’re paying for confidence, not certainty. Most leaders don’t get this wrong through bad analysis; they get it wrong through habit. Fast movers treat irreversible calls like experiments, and careful ones treat cheap experiments like mergers. The Vanguard move: before your next significant decision, write down which side it needs and why, then check afterwards whether you held to it or slid back to your default.",
     },
+    "2026-10-19": {
+        "step": "Fear as Data — The Signal Nobody Reports",
+        "title": "What Is Your Tribe Hiding, and Why?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/",
+        "focus": "Chapter 8 argues that fear processed as data becomes useful information, while fear left unnamed becomes an atmosphere everyone operates inside without acknowledging it. A new workplace survey shows what that costs. In Glean’s Work AI Index 2026, a survey of 6,000 digital workers in the US, UK and Australia, 36% of the highest AI users said they hide how much AI helps them and 38% said they downplay it to their manager, typically because they fear faster work will mean higher targets or fewer colleagues. Glean sells enterprise AI tools, though the study had academic co-authors. The point for leaders is not the percentage: fear didn’t stop people using AI, it only removed the information from view. Norway took the opposite route this month, with government, employers and unions agreeing to adopt AI openly and with worker participation.",
+        "question": "Over a third of the heaviest AI users in a 6,000-person survey hide how much AI helps them, because they fear what their employer will do with the answer. Think about your own tribe or team. What is the one thing people are quietly not saying, and what would you have to change for it to be safe to say out loud?",
+        "model_answer": "Hidden behaviour is a symptom; the fear behind it is the data. People conceal AI gains for a rational reason: they expect the reward for speed to be more work or fewer colleagues. Asking them to be more open won’t change that, because the incentive hasn’t changed. The useful move is to name the fear yourself and say what will and won’t happen. For example: ‘Time saved goes to the backlog we never get to, not to cutting the team.’ Then keep that promise visibly, because one broken promise teaches people to hide again. The same applies beyond AI. If a risk, a client or a number never comes up in meetings, ask what someone fears would happen if they raised it. That answer tells you more about your culture than the risk itself. The Vanguard move: this week, name one unspoken fear in your tribe and say what you will do with the information if people share it.",
+    },
 
 
 
@@ -6791,9 +6799,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://youtu.be/wftgTgjWKGQ",
-    "title": "The Art of Business intro by Drazen Kapusta",
-    "description": "Updated 16 Oct per Nardus sheet B56/B57 (previously Chasing Jarvis LinkedIn post).",
+    "url": "https://youtu.be/6kDfM7nw5UM",
+    "title": "The Art of Business Chapter 1 by Drazen Kapusta",
+    "description": "Updated 19 Oct per Nardus sheet B54/B55 (previously The Art of Business intro).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6803,8 +6811,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI is reportedly working through safety issues before releasing its next flagship model, weeks after cancelling GPT-6.1 Astra when internal tests found it pushing beyond users’ authorised scope; an Alan Turing Institute researcher called holding back that release a welcome sign",
-    "source": "The Information, via AI Weekly",
+    "headline": "In a survey of 6,000 digital workers for enterprise-AI firm Glean, over a third of top AI users say they hide how much AI helps them, fearing faster work brings higher targets or job cuts. Separately, Norway’s government and eight employer and labour groups signed a pact on open, worker-involved AI adoption",
+    "source": "TokenPost",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -6997,6 +7005,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI is reportedly working through safety issues before releasing its next flagship model, weeks after cancelling GPT-6.1 Astra when internal tests found it pushing beyond users’ authorised scope; an Alan Turing Institute researcher called holding back that release a welcome sign",
         "source": "The Information, via AI Weekly",
         "url": "https://aiweekly.co/alerts/openai-scrambles-to-fix-safety-issues-on-next-flagship-model",
+    },
+    "2026-10-19": {
+        "headline": "In a survey of 6,000 digital workers for enterprise-AI firm Glean, over a third of top AI users say they hide how much AI helps them, fearing faster work brings higher targets or job cuts. Separately, Norway’s government and eight employer and labour groups signed a pact on open, worker-involved AI adoption",
+        "source": "TokenPost",
+        "url": "https://www.tokenpost.com/news/technology/31647",
     },
 }
 

@@ -218,6 +218,8 @@ def build_briefing():
 "2026-10-16": {"quote": "📄 𝗚𝗲𝗺𝗶𝗻𝗶 𝟰 𝗔𝗿𝗴𝗼𝗻 𝗶𝘀 𝗼𝘂𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516004585820520448/"},
 
 "2026-10-17": {"quote": "📄 𝗧𝗲𝘀𝗹𝗮 𝗥𝗼𝗮𝗱𝘀𝘁𝗲𝗿 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗿𝗲𝘃𝗲𝗮𝗹", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516760480804204545/"},
+
+"2026-10-19": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/"},
     }
 
     lines = []
@@ -345,6 +347,7 @@ def build_briefing():
         "2026-10-15": "After just 17 days, the US reportedly reversed its request that AI labs hold new models back from UK safety testers. Whichever side you think was right, a decision was run again and changed. Chapter 4: pick a decision your tribe already suspects was wrong and run it through all five axioms. Which one did you actually skip, not the one you’d cite in the retrospective?",
         "2026-10-16": "DXC’s AI agents act alone only inside set authority limits: reversible steps they decide themselves, irreversible ones wait for a human. Chapter 5 asks the same of leaders. Name one outcome your tribe depends on from people you don’t command. Have you agreed what they can decide without you, or are you orchestrating by hoping?",
         "2026-10-17": "Weeks after cancelling one model over safety concerns, OpenAI is reportedly fixing issues on its next flagship before release, choosing certainty over speed. Chapter 6: take your tribe’s last significant decision. Did it need speed or certainty, and which did you actually optimise for? If the answer is ‘whatever we usually do’, that’s the gap.",
+        "2026-10-19": "A survey of 6,000 digital workers found over a third of the heaviest AI users hide how much it helps them, afraid faster work means higher targets or fewer colleagues. Fear doesn’t stop the behaviour; it just takes the data off the table. Chapter 8: what is your tribe quietly not saying, and what would you learn if someone said it out loud?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -556,7 +559,16 @@ def build_briefing():
                         lines.append("<a href='https://stream.redcircle.com/episodes/0d914971-dfa1-4aa4-84b0-a558dbfa6646/stream.mp3'>\u2192 Composite Warfare podcast</a>")
                 if date_key >= "2026-08-04":
                     lines.append("")
-                    if date_key >= "2026-10-05":
+                    if date_key >= "2026-10-19":
+                        # 19 Oct: urgent deadline notice replaces Module 3 lesson lines (Nardus sheet B13, B15, B16)
+                        if date_key <= "2026-10-23":
+                            lines.append(
+                                "<blockquote>\U0001f534 <b>URGENT — Three Outstanding Tasks Due Friday 23 October</b>\n"
+                                "Upload your Module 2, 3 and 4 assignment files directly to the course portal before the deadline. "
+                                "Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel.</blockquote>"
+                            )
+                        lines.append("\U0001f3a7 <b>Podcasts:</b> <a href='https://stream.redcircle.com/episodes/61d5bcab-df5c-4078-8626-52bd83718511/stream.mp3'>1</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0434e123-0ca4-4f05-8c62-5e3ebdfdea1b/stream.mp3'>2</a> \u00b7 <a href='https://stream.redcircle.com/episodes/268e9021-e905-46aa-8c68-e0ed36eae73f/stream.mp3'>3</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0966a01d-5876-4ae5-bdf4-0a9f555e0360/stream.mp3'>4</a> \u00b7 <a href='https://stream.redcircle.com/episodes/ac845d2e-3c0a-4358-97d4-426d5eed4415/stream.mp3'>5</a> \u00b7 <a href='https://stream.redcircle.com/episodes/884cf5c5-7075-4c01-96d6-b4f82e996e7f/stream.mp3'>6</a> \u00b7 <a href='https://stream.redcircle.com/episodes/d86cf22c-cbf6-49b0-8fa2-f94d76156980/stream.mp3'>7</a>")
+                    elif date_key >= "2026-10-05":
                         # 5 Oct: Module 3 lesson + 7 podcasts (Nardus sheet B18–B26)
                         lines.append("\U0001f4e1 <b>Information Dominance and the Intelligence Cycle</b>")
                         lines.append("BAW Module 3 Prep | Draft 3 to 5 Priority Intelligence Requirements (PIRs) on the PayPal Mafia\u2019s strategic intent and review Chapter 8 of Psychology of Intelligence Analysis for the ACH method \u2014 full guidance at <a href='https://cotrugli.online/courses/business-as-warfare/lessons/module-3-information-dominance-and-the-intelligence-cycle/'>Business as Warfare \u2014 Module 3</a>.")
