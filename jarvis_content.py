@@ -4194,6 +4194,14 @@ TALI_STEPS = {
         "question": "Over a third of the heaviest AI users in a 6,000-person survey hide how much AI helps them, because they fear what their employer will do with the answer. Think about your own tribe or team. What is the one thing people are quietly not saying, and what would you have to change for it to be safe to say out loud?",
         "model_answer": "Hidden behaviour is a symptom; the fear behind it is the data. People conceal AI gains for a rational reason: they expect the reward for speed to be more work or fewer colleagues. Asking them to be more open won’t change that, because the incentive hasn’t changed. The useful move is to name the fear yourself and say what will and won’t happen. For example: ‘Time saved goes to the backlog we never get to, not to cutting the team.’ Then keep that promise visibly, because one broken promise teaches people to hide again. The same applies beyond AI. If a risk, a client or a number never comes up in meetings, ask what someone fears would happen if they raised it. That answer tells you more about your culture than the risk itself. The Vanguard move: this week, name one unspoken fear in your tribe and say what you will do with the information if people share it.",
     },
+    "2026-10-20": {
+        "step": "AI as Force Multiplier — Speed Without Judgment",
+        "title": "Which Speed-Up Served the Decision, and Which Only Looked Good?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517860302902788096/",
+        "focus": "Chapter 9 warns that not every process deserves to be faster. Some work is slow because the slowness is doing a job: cooling tempers, surfacing objections, letting judgment catch up with impulse. A force multiplier amplifies whatever it is pointed at, and it doesn’t know the difference. A new academic study of a contact centre shows the pattern. Chats handled by AI alone were much shorter, but customer ratings were 0.858 points lower, and the drop was steepest when a frustrated customer needed a person. When a human stepped in after the AI reached its limit, chats took longer but ratings held. Shorter chats looked like progress on a dashboard while the customer experience got worse. Dr. Tali’s post today, Build with one AI model. Audit with another, points at one safeguard: let a second check catch what the fast one misses.",
+        "question": "In a contact-centre study, AI made customer chats much shorter, but ratings fell, most of all when frustrated customers needed a human. Name one thing AI has made faster in your work over the last quarter. Did the speed serve the outcome, or only the appearance of momentum? And what signal would tell you it had gone too fast?",
+        "model_answer": "The trap is that speed is easy to measure and judgment isn’t. Handle time, turnaround and tickets closed all go on a dashboard; a customer who felt brushed off doesn’t, until they leave. So the useful test is to ask what the slow version was doing that nobody wrote down. In the study, the human in the loop wasn’t a delay. They were the part that recognised frustration and changed course. If you can name that hidden job, you can decide whether to keep it, move it or hand it to a second check, which is the point of building with one model and auditing with another. If you can’t name it, you’ve probably removed it. The Vanguard move: pick one process AI has sped up, write down what the slow version used to catch, and add one measure of quality next to the measure of speed.",
+    },
 
 
 
@@ -6811,8 +6819,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "In a survey of 6,000 digital workers for enterprise-AI firm Glean, over a third of top AI users say they hide how much AI helps them, fearing faster work brings higher targets or job cuts. Separately, Norway’s government and eight employer and labour groups signed a pact on open, worker-involved AI adoption",
-    "source": "TokenPost",
+    "headline": "A study of a contact centre using agentic AI (Wang et al., arXiv) found chats handled by AI alone were much shorter but scored 0.858 points lower in customer ratings, with the steepest drop when frustrated customers needed a person; chats where a human stepped in after the AI hit its limit kept ratings about the same",
+    "source": "Grit Daily",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7010,6 +7018,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "In a survey of 6,000 digital workers for enterprise-AI firm Glean, over a third of top AI users say they hide how much AI helps them, fearing faster work brings higher targets or job cuts. Separately, Norway’s government and eight employer and labour groups signed a pact on open, worker-involved AI adoption",
         "source": "TokenPost",
         "url": "https://www.tokenpost.com/news/technology/31647",
+    },
+    "2026-10-20": {
+        "headline": "A study of a contact centre using agentic AI (Wang et al., arXiv) found chats handled by AI alone were much shorter but scored 0.858 points lower in customer ratings, with the steepest drop when frustrated customers needed a person; chats where a human stepped in after the AI hit its limit kept ratings about the same",
+        "source": "Grit Daily",
+        "url": "https://gritdaily.com/contact-center-ai-sped-up-chats-but-ratings-fell/",
     },
 }
 

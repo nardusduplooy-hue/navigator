@@ -220,6 +220,8 @@ def build_briefing():
 "2026-10-17": {"quote": "📄 𝗧𝗲𝘀𝗹𝗮 𝗥𝗼𝗮𝗱𝘀𝘁𝗲𝗿 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗿𝗲𝘃𝗲𝗮𝗹", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516760480804204545/"},
 
 "2026-10-19": {"quote": "📄 𝗧𝗵𝗲 𝗥𝗶𝗴𝗵𝘁 𝗖𝗼𝗻𝘁𝗲𝘅𝘁, 𝗡𝗼𝘁 𝗔𝗹𝗹 𝗼𝗳 𝗜𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/"},
+
+"2026-10-20": {"quote": "📄 𝗕𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵 𝗼𝗻𝗲 𝗔𝗜 𝗺𝗼𝗱𝗲𝗹. 𝗔𝘂𝗱𝗶𝘁 𝘄𝗶𝘁𝗵 𝗮𝗻𝗼𝘁𝗵𝗲𝗿", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517860302902788096/"},
     }
 
     lines = []
@@ -348,6 +350,7 @@ def build_briefing():
         "2026-10-16": "DXC’s AI agents act alone only inside set authority limits: reversible steps they decide themselves, irreversible ones wait for a human. Chapter 5 asks the same of leaders. Name one outcome your tribe depends on from people you don’t command. Have you agreed what they can decide without you, or are you orchestrating by hoping?",
         "2026-10-17": "Weeks after cancelling one model over safety concerns, OpenAI is reportedly fixing issues on its next flagship before release, choosing certainty over speed. Chapter 6: take your tribe’s last significant decision. Did it need speed or certainty, and which did you actually optimise for? If the answer is ‘whatever we usually do’, that’s the gap.",
         "2026-10-19": "A survey of 6,000 digital workers found over a third of the heaviest AI users hide how much it helps them, afraid faster work means higher targets or fewer colleagues. Fear doesn’t stop the behaviour; it just takes the data off the table. Chapter 8: what is your tribe quietly not saying, and what would you learn if someone said it out loud?",
+        "2026-10-20": "A new contact-centre study found AI made customer chats much shorter, but ratings fell, most of all when frustrated customers needed a human. Chapter 9: name one thing AI has made faster in your tribe over the last quarter. Did the speed serve the decision, or just the appearance of momentum? Who would notice if it had gone too fast?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
