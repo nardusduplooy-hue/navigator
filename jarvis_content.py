@@ -4202,6 +4202,14 @@ TALI_STEPS = {
         "question": "In a contact-centre study, AI made customer chats much shorter, but ratings fell, most of all when frustrated customers needed a human. Name one thing AI has made faster in your work over the last quarter. Did the speed serve the outcome, or only the appearance of momentum? And what signal would tell you it had gone too fast?",
         "model_answer": "The trap is that speed is easy to measure and judgment isn’t. Handle time, turnaround and tickets closed all go on a dashboard; a customer who felt brushed off doesn’t, until they leave. So the useful test is to ask what the slow version was doing that nobody wrote down. In the study, the human in the loop wasn’t a delay. They were the part that recognised frustration and changed course. If you can name that hidden job, you can decide whether to keep it, move it or hand it to a second check, which is the point of building with one model and auditing with another. If you can’t name it, you’ve probably removed it. The Vanguard move: pick one process AI has sped up, write down what the slow version used to catch, and add one measure of quality next to the measure of speed.",
     },
+    "2026-10-21": {
+        "step": "Tribe as Coordination — Trust at Speed",
+        "title": "How Long Does Your Tribe Take to Move Together?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518220383901306880/",
+        "focus": "Chapter 10 argues that the NEO era doesn’t reward tribes that eventually get aligned; it rewards tribes that can move together fast, because the network exposes the gap between claimed and actual alignment almost immediately. The AI industry is showing that gap in public. On 6 October, Meta and Sierra announced the Personal Agent Protocol with launch partners including Shopify, Stripe and Walmart: an open standard for how a person’s AI agent identifies itself and acts with a business. The first version of the specification was promised for October, but as of 10 October it had not shipped, and vendors were filling the gap with their own extensions. The announcement was the claimed alignment; the extensions are the actual behaviour. Dr. Tali’s post today, Our AI agents can’t talk to each other. I’m building the fix., comes at the same problem from the builder’s side.",
+        "question": "Meta, Shopify, Stripe and Walmart announced a shared standard for AI agents, yet vendors kept building their own add-ons while the specification waited. Think about your tribe’s last non-trivial decision. How long did it take from first disagreement to committed action, and where did the time actually go?",
+        "model_answer": "Most of the time in a slow decision isn’t spent disagreeing; it’s spent in the gap after people appear to agree. Everyone nods in the meeting, then each person carries on with their own version, just as vendors keep shipping their own extensions while a shared standard waits. The agreement was real, but nobody owned the moment of commitment. So measure from first disagreement to the first action everyone takes the same way, not to the meeting where the decision was announced. Then look for the waiting points: a person nobody wanted to overrule, a detail left for later, a deadline with no owner. Each one is a trust problem disguised as a process problem. The Vanguard move: for your tribe’s next decision, name one owner for the commitment, set a date for the first shared action, and time the whole thing.",
+    },
 
 
 
@@ -6807,9 +6815,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://youtu.be/6kDfM7nw5UM",
-    "title": "The Art of Business Chapter 1 by Drazen Kapusta",
-    "description": "Updated 19 Oct per Nardus sheet B54/B55 (previously The Art of Business intro).",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517913731780087808/",
+    "title": "The Art of Business by Drazen Kapusta",
+    "description": "Updated 21 Oct per Nardus sheet B54 (previously Chapter 1 on YouTube).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6819,8 +6827,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A study of a contact centre using agentic AI (Wang et al., arXiv) found chats handled by AI alone were much shorter but scored 0.858 points lower in customer ratings, with the steepest drop when frustrated customers needed a person; chats where a human stepped in after the AI hit its limit kept ratings about the same",
-    "source": "Grit Daily",
+    "headline": "Two weeks after Meta and Sierra announced the Personal Agent Protocol with Shopify, Stripe and Walmart, an open standard for how AI agents deal with businesses, its v0.1 spec had not shipped as of 10 Oct, and vendors were filling the gap with their own extensions that fragment the stack",
+    "source": "AI Agent Store",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7023,6 +7031,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A study of a contact centre using agentic AI (Wang et al., arXiv) found chats handled by AI alone were much shorter but scored 0.858 points lower in customer ratings, with the steepest drop when frustrated customers needed a person; chats where a human stepped in after the AI hit its limit kept ratings about the same",
         "source": "Grit Daily",
         "url": "https://gritdaily.com/contact-center-ai-sped-up-chats-but-ratings-fell/",
+    },
+    "2026-10-21": {
+        "headline": "Two weeks after Meta and Sierra announced the Personal Agent Protocol with Shopify, Stripe and Walmart, an open standard for how AI agents deal with businesses, its v0.1 spec had not shipped as of 10 Oct, and vendors were filling the gap with their own extensions that fragment the stack",
+        "source": "AI Agent Store",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
     },
 }
 
