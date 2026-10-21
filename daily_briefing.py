@@ -224,6 +224,8 @@ def build_briefing():
 "2026-10-20": {"quote": "📄 𝗕𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵 𝗼𝗻𝗲 𝗔𝗜 𝗺𝗼𝗱𝗲𝗹. 𝗔𝘂𝗱𝗶𝘁 𝘄𝗶𝘁𝗵 𝗮𝗻𝗼𝘁𝗵𝗲𝗿", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517860302902788096/"},
 
 "2026-10-21": {"quote": "📄 𝗢𝘂𝗿 𝗔𝗜 𝗮𝗴𝗲𝗻𝘁𝘀 𝗰𝗮𝗻’𝘁 𝘁𝗮𝗹𝗸 𝘁𝗼 𝗲𝗮𝗰𝗵 𝗼𝘁𝗵𝗲𝗿. 𝗜’𝗺 𝗯𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝘁𝗵𝗲 𝗳𝗶𝘅.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518220383901306880/"},
+
+"2026-10-22": {"quote": "📄 𝗔𝗜 𝗰𝗼𝗱𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀 𝗮𝗿𝗲 𝗹𝗲𝗮𝘃𝗶𝗻𝗴 𝘁𝗵𝗲 𝗹𝗮𝗽𝘁𝗼𝗽", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518543567691227137/"},
     }
 
     lines = []
@@ -354,6 +356,7 @@ def build_briefing():
         "2026-10-19": "A survey of 6,000 digital workers found over a third of the heaviest AI users hide how much it helps them, afraid faster work means higher targets or fewer colleagues. Fear doesn’t stop the behaviour; it just takes the data off the table. Chapter 8: what is your tribe quietly not saying, and what would you learn if someone said it out loud?",
         "2026-10-20": "A new contact-centre study found AI made customer chats much shorter, but ratings fell, most of all when frustrated customers needed a human. Chapter 9: name one thing AI has made faster in your tribe over the last quarter. Did the speed serve the decision, or just the appearance of momentum? Who would notice if it had gone too fast?",
         "2026-10-21": "Meta, Shopify, Stripe and Walmart announced a shared standard for AI agents, yet days later vendors were still building their own add-ons while the spec waited. Agreement is easy to announce; moving together is the hard part. Chapter 10: how long did your tribe take, from first disagreement to committed action, on its last real decision?",
+        "2026-10-22": "A new study of 1,015 Quebec workers found most would rather build their skills around AI than change jobs. Building is the easy part to claim. Chapter 11: name one thing your tribe can now do, notice or decide that it genuinely couldn’t three months ago, something you’ve used under pressure and would trust again. If it takes long to answer, sit with that.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1121,6 +1124,7 @@ def build_briefing():
                 "2026-10-14": {"quote": "\U0001f4c4 <b>The Curator</b> — open source", "url": "https://github.com/talirezun/the-curator"},
                 "2026-10-16": {"quote": "\U0001f4c4 <b>The Right Context, Not All of It</b>", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it"},
                 "2026-10-17": {"quote": "\U0001f4c4 <b>The Right Context, Not All of It</b>", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it"},
+                "2026-10-22": {"quote": "\U0001f4c4 <b>Our AI agents can’t talk to each other. I’m building the fix.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518220383901306880/"},
             }
             if date_key in extra_cj_entries:
                 extra_cj = extra_cj_entries[date_key]

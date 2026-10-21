@@ -4210,6 +4210,14 @@ TALI_STEPS = {
         "question": "Meta, Shopify, Stripe and Walmart announced a shared standard for AI agents, yet vendors kept building their own add-ons while the specification waited. Think about your tribe’s last non-trivial decision. How long did it take from first disagreement to committed action, and where did the time actually go?",
         "model_answer": "Most of the time in a slow decision isn’t spent disagreeing; it’s spent in the gap after people appear to agree. Everyone nods in the meeting, then each person carries on with their own version, just as vendors keep shipping their own extensions while a shared standard waits. The agreement was real, but nobody owned the moment of commitment. So measure from first disagreement to the first action everyone takes the same way, not to the meeting where the decision was announced. Then look for the waiting points: a person nobody wanted to overrule, a detail left for later, a deadline with no owner. Each one is a trust problem disguised as a process problem. The Vanguard move: for your tribe’s next decision, name one owner for the commitment, set a date for the first shared action, and time the whole thing.",
     },
+    "2026-10-22": {
+        "step": "What You Now Possess — Capability, Not Credential",
+        "title": "What Can You Do Now That You Couldn’t Three Months Ago?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518543567691227137/",
+        "focus": "Chapter 11 separates possession from credentials. A framework you can recite or a certificate you can show is not the same as a capability you have exercised under pressure and would trust again. The test is uncomfortable on purpose: name one thing you can now do, notice or decide that you genuinely could not three months ago. A new study from Montreal frames why this matters now. IVADO and CRIMT surveyed 1,015 Quebec workers, with funding from Canada’s Future Skills Centre, and found that 43% use AI at work and most are more inclined to develop their skills and adapt than to change jobs or careers. Intending to adapt is the easy part. What counts is the specific capability you can point to afterwards, and the moment you actually used it. Dr. Tali’s new post, AI coding agents are leaving the laptop, is a reminder of how quickly the tools you are learning to use keep moving.",
+        "question": "A new study of 1,015 Quebec workers found most would rather build their skills around AI than change jobs. Chapter 11 asks for evidence, not intention. Name one thing you can now do, notice or decide that you genuinely could not three months ago. When did you last use it under pressure, and would you trust it again?",
+        "model_answer": "A useful answer is specific enough that someone else could check it. ‘I understand AI better’ is a feeling. ‘I can now spot when a model’s confident answer is unsupported, and I caught one in a client report last month’ is a possession. The difference is a moment: a real situation where the capability changed what you did. If your answer is a course you finished or a framework you can describe, that is preparation, not possession yet. If nothing comes quickly, that is also useful information. It usually means you have been collecting inputs without testing them. The fix is not more learning but one deliberate use: pick a decision this week where your new capability should matter, apply it on purpose, and note what happened. The Vanguard move: write down one capability you own, the date you last used it under pressure, and one you are still only practising.",
+    },
 
 
 
@@ -6827,8 +6835,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Two weeks after Meta and Sierra announced the Personal Agent Protocol with Shopify, Stripe and Walmart, an open standard for how AI agents deal with businesses, its v0.1 spec had not shipped as of 10 Oct, and vendors were filling the gap with their own extensions that fragment the stack",
-    "source": "AI Agent Store",
+    "headline": "A new IVADO and CRIMT study of 1,015 Quebec workers, funded through Canada’s Future Skills Centre, finds 43% use AI at work and most would rather develop their skills and adapt than change jobs; the researchers say AI has yet to transform the full range of tasks workers do",
+    "source": "IVADO",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7036,6 +7044,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Two weeks after Meta and Sierra announced the Personal Agent Protocol with Shopify, Stripe and Walmart, an open standard for how AI agents deal with businesses, its v0.1 spec had not shipped as of 10 Oct, and vendors were filling the gap with their own extensions that fragment the stack",
         "source": "AI Agent Store",
         "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+    },
+    "2026-10-22": {
+        "headline": "A new IVADO and CRIMT study of 1,015 Quebec workers, funded through Canada’s Future Skills Centre, finds 43% use AI at work and most would rather develop their skills and adapt than change jobs; the researchers say AI has yet to transform the full range of tasks workers do",
+        "source": "IVADO",
+        "url": "https://ivado.ca/en/2026/10/15/ai-at-work-mass-job-displacement-is-not-imminent/",
     },
 }
 
