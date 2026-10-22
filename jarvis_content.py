@@ -4218,6 +4218,14 @@ TALI_STEPS = {
         "question": "A new study of 1,015 Quebec workers found most would rather build their skills around AI than change jobs. Chapter 11 asks for evidence, not intention. Name one thing you can now do, notice or decide that you genuinely could not three months ago. When did you last use it under pressure, and would you trust it again?",
         "model_answer": "A useful answer is specific enough that someone else could check it. ‘I understand AI better’ is a feeling. ‘I can now spot when a model’s confident answer is unsupported, and I caught one in a client report last month’ is a possession. The difference is a moment: a real situation where the capability changed what you did. If your answer is a course you finished or a framework you can describe, that is preparation, not possession yet. If nothing comes quickly, that is also useful information. It usually means you have been collecting inputs without testing them. The fix is not more learning but one deliberate use: pick a decision this week where your new capability should matter, apply it on purpose, and note what happened. The Vanguard move: write down one capability you own, the date you last used it under pressure, and one you are still only practising.",
     },
+    "2026-10-23": {
+        "step": "The Three Patterns — What Your System Rewards",
+        "title": "Which Pattern Is Your Onboarding Training People Into?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518904572082282496/",
+        "focus": "Chapter 12 argues that culture is set faster in a newcomer’s first ninety days than in any all-hands speech, because people learn what actually gets rewarded by watching, not by being told. Whatever a process implicitly celebrates, whether speed, visibility or deference, it quietly trains people towards one of the three patterns. Big Tech has just run this experiment with AI adoption. Meta and Amazon built internal leaderboards ranking staff by how many AI tokens they consumed, and some employees began running pointless AI tasks simply to climb them. Both companies pulled the leaderboards, and Meta has since said token counts won’t count in performance reviews. As Bernard Marr notes in an analysis this week, the measure became the goal. Nobody announced that consumption mattered more than results; the leaderboard said it for them.",
+        "question": "Meta and Amazon ranked staff by how many AI tokens they used, and some ran pointless tasks just to climb the leaderboard. Look at how your tribe or team brings new people in. What does that process quietly reward — speed, visibility or deference — and which pattern is it training them into, whatever your stated values say?",
+        "model_answer": "Start with what a newcomer sees in their first month, not what they’re told. Who gets praised in public, and for what? Whose questions get answered quickly, and whose get ignored? What happens to the person who raises a problem? Those moments are the real onboarding, and they set the pattern far faster than any values statement. If visibility is rewarded, you’ll grow people who perform activity, the human version of tokenmaxxing. If deference is rewarded, you’ll grow people who wait to be told. If only speed is rewarded, you’ll grow people who cut the corner nobody is checking. The fix is rarely a new policy. It is changing what gets noticed: praise the person who flagged the risk, not just the one who shipped first. The Vanguard move: list three things your process celebrated in the last month, then ask which pattern each one rewards.",
+    },
 
 
 
@@ -6835,8 +6843,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A new IVADO and CRIMT study of 1,015 Quebec workers, funded through Canada’s Future Skills Centre, finds 43% use AI at work and most would rather develop their skills and adapt than change jobs; the researchers say AI has yet to transform the full range of tasks workers do",
-    "source": "IVADO",
+    "headline": "Tokenmaxxing, analysed this week by Bernard Marr: after Meta and Amazon ranked staff on internal leaderboards by how many AI tokens they used, some employees ran pointless AI tasks to climb them; both companies pulled the leaderboards, and Meta now says token counts won’t count in performance reviews",
+    "source": "Bernard Marr",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7049,6 +7057,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A new IVADO and CRIMT study of 1,015 Quebec workers, funded through Canada’s Future Skills Centre, finds 43% use AI at work and most would rather develop their skills and adapt than change jobs; the researchers say AI has yet to transform the full range of tasks workers do",
         "source": "IVADO",
         "url": "https://ivado.ca/en/2026/10/15/ai-at-work-mass-job-displacement-is-not-imminent/",
+    },
+    "2026-10-23": {
+        "headline": "Tokenmaxxing, analysed this week by Bernard Marr: after Meta and Amazon ranked staff on internal leaderboards by how many AI tokens they used, some employees ran pointless AI tasks to climb them; both companies pulled the leaderboards, and Meta now says token counts won’t count in performance reviews",
+        "source": "Bernard Marr",
+        "url": "https://bernardmarr.com/tokenmaxxing-the-dangerous-new-ai-trend-businesses-need-to-stop",
     },
 }
 
