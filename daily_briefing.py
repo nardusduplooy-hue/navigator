@@ -228,6 +228,8 @@ def build_briefing():
 "2026-10-22": {"quote": "📄 𝗔𝗜 𝗰𝗼𝗱𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀 𝗮𝗿𝗲 𝗹𝗲𝗮𝘃𝗶𝗻𝗴 𝘁𝗵𝗲 𝗹𝗮𝗽𝘁𝗼𝗽", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518543567691227137/"},
 
 "2026-10-23": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗯𝗶𝗴𝗴𝗲𝘀𝘁 𝗔𝗜 𝗹𝗮𝗯𝘀 𝗻𝗼𝘄 𝘀𝗵𝗶𝗽 𝘁𝗵𝗲 𝘀𝗮𝗺𝗲 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗰𝗮𝘁𝗲𝗴𝗼𝗿𝘆: 𝗮 𝗽𝗿𝗼𝗮𝗰𝘁𝗶𝘃𝗲 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518904572082282496/"},
+
+"2026-10-26": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝘁𝗲𝗿𝗺𝘀 𝘁𝗵𝗮𝘁 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘄𝗵𝗮𝘁 “𝘀𝗹𝗼𝘄” 𝗺𝗲𝗮𝗻𝘀, 𝗮𝗻𝗱 𝗮 𝗳𝗼𝘂𝗿𝘁𝗵 𝘁𝗵𝗮𝘁 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝗯𝘂𝗶𝗹𝗱𝗲𝗿 𝘀𝗵𝗼𝘂𝗹𝗱 𝗮𝗱𝗱.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/"},
     }
 
     lines = []
@@ -360,6 +362,7 @@ def build_briefing():
         "2026-10-21": "Meta, Shopify, Stripe and Walmart announced a shared standard for AI agents, yet days later vendors were still building their own add-ons while the spec waited. Agreement is easy to announce; moving together is the hard part. Chapter 10: how long did your tribe take, from first disagreement to committed action, on its last real decision?",
         "2026-10-22": "A new study of 1,015 Quebec workers found most would rather build their skills around AI than change jobs. Building is the easy part to claim. Chapter 11: name one thing your tribe can now do, notice or decide that it genuinely couldn’t three months ago, something you’ve used under pressure and would trust again. If it takes long to answer, sit with that.",
         "2026-10-23": "When Meta and Amazon ranked staff by how much AI they used, some ran pointless AI tasks just to climb the leaderboard. People learn what a system rewards by watching, not by being told. Chapter 12: what does your tribe’s onboarding quietly celebrate — speed, visibility or deference — and which of the three patterns is it training new members into?",
+        "2026-10-26": "From tomorrow the FTC starts refunding $15.8 million to over two million Cleo AI customers, after alleging the app overpromised cash advances and made cancelling hard; Cleo settled without admitting wrongdoing. Chapter 2: name one shortcut your tribe is taking now. If it surfaced next week, how much trust would you need to rebuild?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -551,7 +554,10 @@ def build_briefing():
             if date_key >= "2026-07-03":
                 lines.append("\U0001f4da <b>RUNNING COURSES</b>")
                 lines.append("")
-                if date_key >= "2026-10-05":
+                if date_key >= "2026-10-26":
+                    # 26 Oct: heading per Nardus sheet B13
+                    lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE \u2014 MODULE 5</b>")
+                elif date_key >= "2026-10-05":
                     lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE \u2014 MODULES 3 \u0026 4</b>")
                 elif date_key >= "2026-09-26":
                     lines.append("\U0001f3a7 <b>BUSINESS AS WARFARE \u2014 MODULES 2 \u0026 3</b>")

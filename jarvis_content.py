@@ -4226,6 +4226,14 @@ TALI_STEPS = {
         "question": "Meta and Amazon ranked staff by how many AI tokens they used, and some ran pointless tasks just to climb the leaderboard. Look at how your tribe or team brings new people in. What does that process quietly reward — speed, visibility or deference — and which pattern is it training them into, whatever your stated values say?",
         "model_answer": "Start with what a newcomer sees in their first month, not what they’re told. Who gets praised in public, and for what? Whose questions get answered quickly, and whose get ignored? What happens to the person who raises a problem? Those moments are the real onboarding, and they set the pattern far faster than any values statement. If visibility is rewarded, you’ll grow people who perform activity, the human version of tokenmaxxing. If deference is rewarded, you’ll grow people who wait to be told. If only speed is rewarded, you’ll grow people who cut the corner nobody is checking. The fix is rarely a new policy. It is changing what gets noticed: praise the person who flagged the risk, not just the one who shipped first. The Vanguard move: list three things your process celebrated in the last month, then ask which pattern each one rewards.",
     },
+    "2026-10-26": {
+        "step": "Prince or Trader — The Real Price of a Shortcut",
+        "title": "How Much Trust Would You Need to Rebuild?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/",
+        "focus": "Chapter 2 makes an uncomfortable point about shortcuts that trade trust for speed: they feel reversible right up until someone discovers them, and then the cost is rarely proportional to how small the shortcut seemed. A case reaching customers this week shows the arithmetic. From 27 October, the US Federal Trade Commission begins sending more than $15.8 million in refunds to over 2.1 million customers of Cleo AI, an AI-powered cash-advance app. The FTC alleged that Cleo advertised advances of hundreds of dollars that almost nobody received, charged extra fees for instant advances that often arrived late, and made subscriptions hard to cancel. Cleo agreed to pay $17 million to settle, without admitting wrongdoing, and has denied the allegations. Whatever the merits, the shape is familiar: small frictions and generous promises that looked like growth tactics, then a public bill measured in millions of customers.",
+        "question": "From 27 October, the FTC starts refunding $15.8 million to over two million Cleo AI customers, after alleging the app overpromised and made cancelling hard; Cleo settled without admitting wrongdoing. Name one shortcut you or your team are taking right now. If it surfaced publicly next week, how much trust would you need to rebuild, and with whom?",
+        "model_answer": "The honest test is to describe the shortcut the way an outsider would, not the way you justify it internally. Inside, it is ‘simplifying the cancellation flow’ or ‘leading with our best-case number’. Outside, it reads as ‘they made it hard to leave’ or ‘they promised what almost nobody got’. If the outside description makes you wince, the trust cost is already larger than the benefit. Then estimate the rebuild in concrete terms: which clients would need a call, which colleagues would stop taking your word, how long it would take. Shortcuts rarely look large at the moment they are taken, which is exactly why they compound. The Prince keeps a standard nobody is checking; the Trader optimises for the transaction in front of him. The Vanguard move: write the outsider’s description of one shortcut you are taking, and decide this week whether to keep it, fix it or disclose it.",
+    },
 
 
 
@@ -6843,8 +6851,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Tokenmaxxing, analysed this week by Bernard Marr: after Meta and Amazon ranked staff on internal leaderboards by how many AI tokens they used, some employees ran pointless AI tasks to climb them; both companies pulled the leaderboards, and Meta now says token counts won’t count in performance reviews",
-    "source": "Bernard Marr",
+    "headline": "The FTC begins sending $15.8M in refunds to 2.1M Cleo AI customers on 27 Oct, after alleging the cash-advance app advertised amounts almost no one received, charged hidden fees for instant advances and made cancelling hard; Cleo paid $17M to settle without admitting wrongdoing",
+    "source": "US Federal Trade Commission",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7062,6 +7070,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Tokenmaxxing, analysed this week by Bernard Marr: after Meta and Amazon ranked staff on internal leaderboards by how many AI tokens they used, some employees ran pointless AI tasks to climb them; both companies pulled the leaderboards, and Meta now says token counts won’t count in performance reviews",
         "source": "Bernard Marr",
         "url": "https://bernardmarr.com/tokenmaxxing-the-dangerous-new-ai-trend-businesses-need-to-stop",
+    },
+    "2026-10-26": {
+        "headline": "The FTC begins sending $15.8M in refunds to 2.1M Cleo AI customers on 27 Oct, after alleging the cash-advance app advertised amounts almost no one received, charged hidden fees for instant advances and made cancelling hard; Cleo paid $17M to settle without admitting wrongdoing",
+        "source": "US Federal Trade Commission",
+        "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-returns-more-158-million-consumers-misled-cash-advance-app-company-cleo-ai",
     },
 }
 
