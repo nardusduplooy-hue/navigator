@@ -4234,6 +4234,14 @@ TALI_STEPS = {
         "question": "From 27 October, the FTC starts refunding $15.8 million to over two million Cleo AI customers, after alleging the app overpromised and made cancelling hard; Cleo settled without admitting wrongdoing. Name one shortcut you or your team are taking right now. If it surfaced publicly next week, how much trust would you need to rebuild, and with whom?",
         "model_answer": "The honest test is to describe the shortcut the way an outsider would, not the way you justify it internally. Inside, it is ‘simplifying the cancellation flow’ or ‘leading with our best-case number’. Outside, it reads as ‘they made it hard to leave’ or ‘they promised what almost nobody got’. If the outside description makes you wince, the trust cost is already larger than the benefit. Then estimate the rebuild in concrete terms: which clients would need a call, which colleagues would stop taking your word, how long it would take. Shortcuts rarely look large at the moment they are taken, which is exactly why they compound. The Prince keeps a standard nobody is checking; the Trader optimises for the transaction in front of him. The Vanguard move: write the outsider’s description of one shortcut you are taking, and decide this week whether to keep it, fix it or disclose it.",
     },
+    "2026-10-27": {
+        "step": "The Perfect Merchant — Your Reputational Ledger",
+        "title": "Which of This Week’s Entries Were Withdrawals?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/",
+        "focus": "Chapter 3 treats reputation as capital that compounds like any other: through small deposits and withdrawals that nobody tracks in real time, until the balance suddenly matters. The exercise is to list the actual entries from this week and sort them honestly, including the ones you are not sure about. A consumer survey published this week shows how quietly withdrawals can happen. In a study of about 1,000 US consumers by research-tech firm Cint with Advertising Week, 74% said brands have a duty to disclose AI use in advertising, 44% said undisclosed AI would lower their trust, and 46% said they dislike AI-generated people in ads. Few brands would record a missing AI label as a reputational event. Their customers apparently would.",
+        "question": "A new consumer survey found 44% say undisclosed AI in ads would lower their trust in a brand, the kind of withdrawal that rarely gets written down. List this week’s entries in your own reputational ledger. Which interactions were deposits, which were withdrawals, and which are you not sure about yet?",
+        "model_answer": "The deposits are usually easy to list, because they felt good: a promise kept early, a problem flagged before anyone asked, credit given to someone else. The withdrawals are harder, because most of them didn’t feel like events at the time. A reply that was slightly evasive, a deadline quietly moved, a number presented in its best light, an AI-drafted message sent without a second read. None of them looks like a scandal; together they set the balance. The uncertain entries matter most. If you hesitate over one, you usually already suspect it was a withdrawal and are hoping nobody noticed. Treat that hesitation as data. The repair is cheapest now, while it is still small: a short clarification, a corrected figure, a disclosed shortcut. The Vanguard move: write down one uncertain entry from this week and decide by Friday whether to repair it or let it stand.",
+    },
 
 
 
@@ -6851,8 +6859,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "The FTC begins sending $15.8M in refunds to 2.1M Cleo AI customers on 27 Oct, after alleging the cash-advance app advertised amounts almost no one received, charged hidden fees for instant advances and made cancelling hard; Cleo paid $17M to settle without admitting wrongdoing",
-    "source": "US Federal Trade Commission",
+    "headline": "A survey of about 1,000 US consumers by research-tech firm Cint with Advertising Week found 74% say brands have a duty to disclose AI use in ads, 44% say undisclosed AI would lower their trust, and 46% dislike AI-generated people in ads",
+    "source": "Insight Innovation (Cint survey)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7075,6 +7083,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "The FTC begins sending $15.8M in refunds to 2.1M Cleo AI customers on 27 Oct, after alleging the cash-advance app advertised amounts almost no one received, charged hidden fees for instant advances and made cancelling hard; Cleo paid $17M to settle without admitting wrongdoing",
         "source": "US Federal Trade Commission",
         "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-returns-more-158-million-consumers-misled-cash-advance-app-company-cleo-ai",
+    },
+    "2026-10-27": {
+        "headline": "A survey of about 1,000 US consumers by research-tech firm Cint with Advertising Week found 74% say brands have a duty to disclose AI use in ads, 44% say undisclosed AI would lower their trust, and 46% dislike AI-generated people in ads",
+        "source": "Insight Innovation (Cint survey)",
+        "url": "https://insightinnovationventures.substack.com/p/what-caught-our-eye-this-week-october-a35",
     },
 }
 

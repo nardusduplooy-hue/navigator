@@ -230,6 +230,8 @@ def build_briefing():
 "2026-10-23": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗯𝗶𝗴𝗴𝗲𝘀𝘁 𝗔𝗜 𝗹𝗮𝗯𝘀 𝗻𝗼𝘄 𝘀𝗵𝗶𝗽 𝘁𝗵𝗲 𝘀𝗮𝗺𝗲 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗰𝗮𝘁𝗲𝗴𝗼𝗿𝘆: 𝗮 𝗽𝗿𝗼𝗮𝗰𝘁𝗶𝘃𝗲 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518904572082282496/"},
 
 "2026-10-26": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝘁𝗲𝗿𝗺𝘀 𝘁𝗵𝗮𝘁 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘄𝗵𝗮𝘁 “𝘀𝗹𝗼𝘄” 𝗺𝗲𝗮𝗻𝘀, 𝗮𝗻𝗱 𝗮 𝗳𝗼𝘂𝗿𝘁𝗵 𝘁𝗵𝗮𝘁 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝗯𝘂𝗶𝗹𝗱𝗲𝗿 𝘀𝗵𝗼𝘂𝗹𝗱 𝗮𝗱𝗱.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/"},
+
+"2026-10-27": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝘁𝗲𝗿𝗺𝘀 𝘁𝗵𝗮𝘁 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘄𝗵𝗮𝘁 “𝘀𝗹𝗼𝘄” 𝗺𝗲𝗮𝗻𝘀, 𝗮𝗻𝗱 𝗮 𝗳𝗼𝘂𝗿𝘁𝗵 𝘁𝗵𝗮𝘁 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝗯𝘂𝗶𝗹𝗱𝗲𝗿 𝘀𝗵𝗼𝘂𝗹𝗱 𝗮𝗱𝗱.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/"},
     }
 
     lines = []
@@ -363,6 +365,7 @@ def build_briefing():
         "2026-10-22": "A new study of 1,015 Quebec workers found most would rather build their skills around AI than change jobs. Building is the easy part to claim. Chapter 11: name one thing your tribe can now do, notice or decide that it genuinely couldn’t three months ago, something you’ve used under pressure and would trust again. If it takes long to answer, sit with that.",
         "2026-10-23": "When Meta and Amazon ranked staff by how much AI they used, some ran pointless AI tasks just to climb the leaderboard. People learn what a system rewards by watching, not by being told. Chapter 12: what does your tribe’s onboarding quietly celebrate — speed, visibility or deference — and which of the three patterns is it training new members into?",
         "2026-10-26": "From tomorrow the FTC starts refunding $15.8 million to over two million Cleo AI customers, after alleging the app overpromised cash advances and made cancelling hard; Cleo settled without admitting wrongdoing. Chapter 2: name one shortcut your tribe is taking now. If it surfaced next week, how much trust would you need to rebuild?",
+        "2026-10-27": "A new survey of about 1,000 US consumers found 44% say undisclosed AI in ads would lower their trust in a brand. Most reputational withdrawals are made quietly, like that. Chapter 3: list this week’s entries in your tribe’s ledger. Which were deposits, which were withdrawals, and which are you not sure about yet? The uncertain ones usually tell you most.",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -587,6 +590,10 @@ def build_briefing():
                                 "Upload your Module 2, 3 and 4 assignment files directly to the course portal before the deadline. "
                                 "Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel.</blockquote>"
                             )
+                        if date_key >= "2026-10-27":
+                            # Module 5 capstone, Nardus sheet B14 (27 Oct)
+                            lines.append("\U0001f3af <b>The Capstone Campaign</b>")
+                            lines.append("Each team must deliver a 5-minute Commander’s Brief presenting their finalized Target Intelligence Estimate on the PayPal Mafia, structured as Situation, Intelligence, Evidence, and Critical Gap, followed by rapid-fire Q&amp;A from faculty and peers. Before the session, complete your ACH matrix scoring all collected data points against your three hypotheses, and prepare to defend your analytical logic under cross-examination.")
                         lines.append("\U0001f3a7 <b>Podcasts:</b> <a href='https://stream.redcircle.com/episodes/61d5bcab-df5c-4078-8626-52bd83718511/stream.mp3'>1</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0434e123-0ca4-4f05-8c62-5e3ebdfdea1b/stream.mp3'>2</a> \u00b7 <a href='https://stream.redcircle.com/episodes/268e9021-e905-46aa-8c68-e0ed36eae73f/stream.mp3'>3</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0966a01d-5876-4ae5-bdf4-0a9f555e0360/stream.mp3'>4</a> \u00b7 <a href='https://stream.redcircle.com/episodes/ac845d2e-3c0a-4358-97d4-426d5eed4415/stream.mp3'>5</a> \u00b7 <a href='https://stream.redcircle.com/episodes/884cf5c5-7075-4c01-96d6-b4f82e996e7f/stream.mp3'>6</a> \u00b7 <a href='https://stream.redcircle.com/episodes/d86cf22c-cbf6-49b0-8fa2-f94d76156980/stream.mp3'>7</a>")
                     elif date_key >= "2026-10-05":
                         # 5 Oct: Module 3 lesson + 7 podcasts (Nardus sheet B18–B26)
