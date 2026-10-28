@@ -232,6 +232,10 @@ def build_briefing():
 "2026-10-26": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝘁𝗲𝗿𝗺𝘀 𝘁𝗵𝗮𝘁 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘄𝗵𝗮𝘁 “𝘀𝗹𝗼𝘄” 𝗺𝗲𝗮𝗻𝘀, 𝗮𝗻𝗱 𝗮 𝗳𝗼𝘂𝗿𝘁𝗵 𝘁𝗵𝗮𝘁 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝗯𝘂𝗶𝗹𝗱𝗲𝗿 𝘀𝗵𝗼𝘂𝗹𝗱 𝗮𝗱𝗱.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/"},
 
 "2026-10-27": {"quote": "📄 𝗧𝗵𝗿𝗲𝗲 𝘁𝗲𝗿𝗺𝘀 𝘁𝗵𝗮𝘁 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘄𝗵𝗮𝘁 “𝘀𝗹𝗼𝘄” 𝗺𝗲𝗮𝗻𝘀, 𝗮𝗻𝗱 𝗮 𝗳𝗼𝘂𝗿𝘁𝗵 𝘁𝗵𝗮𝘁 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝗯𝘂𝗶𝗹𝗱𝗲𝗿 𝘀𝗵𝗼𝘂𝗹𝗱 𝗮𝗱𝗱.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/"},
+
+"2026-10-28": {"quote": "📄 𝗢𝗻𝗲 𝗙𝗼𝘂𝗻𝗱𝗲𝗿, 𝗘𝗶𝗴𝗵𝘁 𝗪𝗲𝗲𝗸𝘀, 𝗙𝗼𝘂𝗿 𝗛𝘂𝗻𝗱𝗿𝗲𝗱 𝗔𝗴𝗲𝗻𝘁𝘀", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"},
+
+"2026-10-29": {"quote": "📄 𝗢𝗻𝗲 𝗙𝗼𝘂𝗻𝗱𝗲𝗿, 𝗘𝗶𝗴𝗵𝘁 𝗪𝗲𝗲𝗸𝘀, 𝗙𝗼𝘂𝗿 𝗛𝘂𝗻𝗱𝗿𝗲𝗱 𝗔𝗴𝗲𝗻𝘁𝘀", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"},
     }
 
     lines = []
@@ -366,6 +370,8 @@ def build_briefing():
         "2026-10-23": "When Meta and Amazon ranked staff by how much AI they used, some ran pointless AI tasks just to climb the leaderboard. People learn what a system rewards by watching, not by being told. Chapter 12: what does your tribe’s onboarding quietly celebrate — speed, visibility or deference — and which of the three patterns is it training new members into?",
         "2026-10-26": "From tomorrow the FTC starts refunding $15.8 million to over two million Cleo AI customers, after alleging the app overpromised cash advances and made cancelling hard; Cleo settled without admitting wrongdoing. Chapter 2: name one shortcut your tribe is taking now. If it surfaced next week, how much trust would you need to rebuild?",
         "2026-10-27": "A new survey of about 1,000 US consumers found 44% say undisclosed AI in ads would lower their trust in a brand. Most reputational withdrawals are made quietly, like that. Chapter 3: list this week’s entries in your tribe’s ledger. Which were deposits, which were withdrawals, and which are you not sure about yet? The uncertain ones usually tell you most.",
+        "2026-10-28": "A new survey found 70% of workers report pushback against AI projects at their company, and the top reason is data privacy, not job fears. Resistance tends to land where an idea is hardest to apply. Chapter 4: explain the five axioms to someone newer in your tribe this week. Where did they push back, and what did that show you?",
+        "2026-10-29": "A new survey of 801 senior US executives found their companies run an average of 183 AI tools, and three in five say the sprawl has stalled strategy. Chapter 5: sketch where your business actually sits on the battlefield today, not where the strategy deck says it’s heading. Can your tribe agree on the current coordinates?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -977,7 +983,14 @@ def build_briefing():
             # 5 Oct: Module 4 + final project summary (Saša's slide, Nardus sheet B28–B31)
             lines.append("\U0001f4cb <b>AI IN B2B SALES \u2014 MODULE 4</b>")
             lines.append("<i>Orchestration &amp; Risk \u00b7 Saša Pavlaković</i> \u00b7 <a href='https://cotrugli.online/courses/ai-sales/lessons/orchestration-risk/'>\u2192 Module 4</a>")
-            lines.append("<blockquote><b>Final project \u2014 AI Sales Strategy for your company</b>\n"
+            if date_key >= "2026-10-29":
+                # 29 Oct: final-project box rewritten per Nardus sheet B22, B24, B26
+                lines.append("<blockquote><b>Final project \u2014 AI Sales Strategy for your company</b>\n"
+                             "Final project: an AI Sales Strategy for your own real company, 10–15 pages, submitted as a PDF through the portal.\n"
+                             "Six sections — diagnosis, stack, architecture, governance, ROI model, risk register — pulling your Module 1–3 work together with the Module 4 governance and ROI, plus a recommended 90-day rollout plan.\n"
+                             "Assessed on specificity to your company, realism, honest treatment of risk, and discipline of measurement: if it could fit any company, rewrite it.</blockquote>")
+            else:
+              lines.append("<blockquote><b>Final project \u2014 AI Sales Strategy for your company</b>\n"
                          "10\u201315 page document, defended in 15 minutes to the cohort. Due 3 weeks after the Module 4 session.\n"
                          "1 Diagnosis: honest friction map (Module 1 funnel)\n"
                          "2 Stack: tools, order, why (Module 2)\n"

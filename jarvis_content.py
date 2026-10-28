@@ -4242,6 +4242,22 @@ TALI_STEPS = {
         "question": "A new consumer survey found 44% say undisclosed AI in ads would lower their trust in a brand, the kind of withdrawal that rarely gets written down. List this week’s entries in your own reputational ledger. Which interactions were deposits, which were withdrawals, and which are you not sure about yet?",
         "model_answer": "The deposits are usually easy to list, because they felt good: a promise kept early, a problem flagged before anyone asked, credit given to someone else. The withdrawals are harder, because most of them didn’t feel like events at the time. A reply that was slightly evasive, a deadline quietly moved, a number presented in its best light, an AI-drafted message sent without a second read. None of them looks like a scandal; together they set the balance. The uncertain entries matter most. If you hesitate over one, you usually already suspect it was a withdrawal and are hoping nobody noticed. Treat that hesitation as data. The repair is cheapest now, while it is still small: a short clarification, a corrected figure, a disclosed shortcut. The Vanguard move: write down one uncertain entry from this week and decide by Friday whether to repair it or let it stand.",
     },
+    "2026-10-28": {
+        "step": "NEO Cotruglian Philosophy — Teaching the Five Axioms",
+        "title": "Where Do Newcomers Push Back on the Axioms?",
+        "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw",
+        "focus": "Chapter 4 suggests a test of how well you really hold the five axioms: explain them to someone newer to your tribe, in your own words, and watch where they push back. Their resistance usually lands where an axiom is hardest to apply, not where it is hardest to understand, and that friction point teaches you more than a polished explanation. Workplace research published this week shows the same pattern with AI. In a survey by software firm Sombra, reported by Forbes, 70% of workers described moderate to strong internal pushback against AI projects, and nearly a third said it had delayed recent rollouts. The leading reason was data privacy and security, cited by 58%, ahead of fear of job loss at 47%. People were not rejecting the idea of AI; they were pointing at the place where applying it safely is hardest.",
+        "question": "A new survey found 70% of workers report pushback against AI projects at their company, and the top reason is data privacy, not job fears. This week, explain the five axioms to someone newer to your tribe in your own words. Where did they push back, and which axiom does that tell you is hardest to apply in practice?",
+        "model_answer": "Pay attention to the kind of pushback, not just whether it happened. ‘I don’t understand’ means the explanation needs work. ‘That sounds right, but how would it work when…’ means you have found the place where the axiom meets real constraints, and that is the valuable part. Most people nod along to Long-Term Dominates and Positive-Sum Wins in principle, then push back the moment you apply them to a quarterly target or a competitor. That is not a failure of the axiom or the listener; it is the axiom’s real cost becoming visible. Resist the urge to defend. Ask a follow-up question instead: what would make it workable in their situation? Their answer often tells you what the axiom needs in practice — a rule, a safeguard or a time horizon — far better than another explanation would. The Vanguard move: write down the exact question that made you pause, and bring it to your tribe.",
+    },
+    "2026-10-29": {
+        "step": "The NEO Era Battlefield — The Map Exercise",
+        "title": "Where Are You Actually Positioned Right Now?",
+        "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw",
+        "focus": "Chapter 5 proposes a fifteen-minute exercise: sketch where your business actually sits on the networked, exponential, orchestrated battlefield today, not where the strategy deck says it is heading. Most leaders describe the destination fluently and struggle to name their current coordinates, and the gap between the two is usually where the real risk hides. New research makes the gap visible. In a survey of 801 senior executives at large US companies by digital agency Code and Theory with WSJ Intelligence, firms reported running an average of 183 AI tools, 85% said their AI technology stacks are disconnected, and three in five said the spread of tools had stalled strategy. Each tool was presumably bought to move towards the destination. Taken together, they describe where these companies actually are: busy, fragmented and less orchestrated than the plan assumes.",
+        "question": "Executives at large US firms report an average of 183 AI tools, and three in five say the sprawl has stalled strategy. Take fifteen minutes: sketch where your business or team actually sits today, not where the plan says it is heading. What is the biggest difference between your current coordinates and the destination, and who would disagree with your map?",
+        "model_answer": "Start with evidence, not aspiration. List what you actually do today: which tools are in daily use, which relationships produce results, which decisions take longest and why. Then place yourself honestly. Are you networked, or still running on a few key people? Moving at exponential speed, or linear with better software? Orchestrating partners, or coordinating them by email? The tool count in the survey is a useful warning: activity can look like progress while the operation underneath stays fragmented. The biggest gap is usually the one you describe most confidently in strategy meetings, because confidence has replaced checking. Then ask who would draw your map differently: a client, a junior colleague, a competitor. Their version is often closer to the truth. The Vanguard move: sketch your map, show it to one person outside your tribe, and write down where they moved you.",
+    },
 
 
 
@@ -6848,8 +6864,8 @@ TOOL_SPOTLIGHT = {
 
 KAPUSTA_TODAY = {
     "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517913731780087808/",
-    "title": "The Art of Business by Drazen Kapusta",
-    "description": "Updated 21 Oct per Nardus sheet B54 (previously Chapter 1 on YouTube).",
+    "title": "The true strength of the COTRUGLI network",
+    "description": "Updated 28 Oct per Nardus sheet B54/B55 (title for the LinkedIn post added 21 Oct).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6859,8 +6875,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of about 1,000 US consumers by research-tech firm Cint with Advertising Week found 74% say brands have a duty to disclose AI use in ads, 44% say undisclosed AI would lower their trust, and 46% dislike AI-generated people in ads",
-    "source": "Insight Innovation (Cint survey)",
+    "headline": "A survey of 801 senior US executives by digital agency Code and Theory with WSJ Intelligence found their companies run an average of 183 AI tools, 85% say their AI stacks are disconnected, and three in five say the tool sprawl has stalled strategy",
+    "source": "IT Brief UK",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7088,6 +7104,16 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of about 1,000 US consumers by research-tech firm Cint with Advertising Week found 74% say brands have a duty to disclose AI use in ads, 44% say undisclosed AI would lower their trust, and 46% dislike AI-generated people in ads",
         "source": "Insight Innovation (Cint survey)",
         "url": "https://insightinnovationventures.substack.com/p/what-caught-our-eye-this-week-october-a35",
+    },
+    "2026-10-28": {
+        "headline": "A survey by software firm Sombra found 70% of workers report moderate to strong internal pushback against AI projects, and nearly a third say it delayed recent rollouts; 58% cite data privacy and security as the main obstacle, ahead of fear of job loss at 47%",
+        "source": "Forbes",
+        "url": "https://www.forbes.com/sites/bryanrobinson/2026/10/21/as-ai-panic-reaches-the-workplace-is-employee-pushback-sabotage/",
+    },
+    "2026-10-29": {
+        "headline": "A survey of 801 senior US executives by digital agency Code and Theory with WSJ Intelligence found their companies run an average of 183 AI tools, 85% say their AI stacks are disconnected, and three in five say the tool sprawl has stalled strategy",
+        "source": "IT Brief UK",
+        "url": "https://itbrief.co.uk/story/ai-tool-sprawl-leaves-us-executives-facing-orchestration-gap",
     },
 }
 
