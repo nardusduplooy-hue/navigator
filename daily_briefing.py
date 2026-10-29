@@ -36,7 +36,7 @@ _DATE_OVERRIDE = None
 _FORCE_WEEKEND_SEND = False
 
 # Weekend dates Nardus has asked to send automatically (e.g. Zoom-session Saturdays).
-_WEEKEND_SEND_DATES = {"2026-10-17"}
+_WEEKEND_SEND_DATES = {"2026-10-17", "2026-10-31"}
 
 def _is_weekend():
     d = datetime.strptime(today_str(), "%Y-%m-%d")
@@ -236,6 +236,8 @@ def build_briefing():
 "2026-10-28": {"quote": "📄 𝗢𝗻𝗲 𝗙𝗼𝘂𝗻𝗱𝗲𝗿, 𝗘𝗶𝗴𝗵𝘁 𝗪𝗲𝗲𝗸𝘀, 𝗙𝗼𝘂𝗿 𝗛𝘂𝗻𝗱𝗿𝗲𝗱 𝗔𝗴𝗲𝗻𝘁𝘀", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"},
 
 "2026-10-29": {"quote": "📄 𝗢𝗻𝗲 𝗙𝗼𝘂𝗻𝗱𝗲𝗿, 𝗘𝗶𝗴𝗵𝘁 𝗪𝗲𝗲𝗸𝘀, 𝗙𝗼𝘂𝗿 𝗛𝘂𝗻𝗱𝗿𝗲𝗱 𝗔𝗴𝗲𝗻𝘁𝘀", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"},
+"2026-10-30": {"quote": "📄 𝗚𝗼𝗼𝗴𝗹𝗲 𝗵𝗮𝘀 𝗯𝘂𝗶𝗹𝘁 𝗶𝘁𝘀 𝘄𝗵𝗼𝗹𝗲 𝘀𝘁𝗮𝗰𝗸 𝗮𝗿𝗼𝘂𝗻𝗱 𝗼𝗻𝗲 𝘀𝗸𝗶𝗹𝗹: 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
+"2026-10-31": {"quote": "📄 𝗚𝗼𝗼𝗴𝗹𝗲 𝗵𝗮𝘀 𝗯𝘂𝗶𝗹𝘁 𝗶𝘁𝘀 𝘄𝗵𝗼𝗹𝗲 𝘀𝘁𝗮𝗰𝗸 𝗮𝗿𝗼𝘂𝗻𝗱 𝗼𝗻𝗲 𝘀𝗸𝗶𝗹𝗹: 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
     }
 
     lines = []
@@ -372,6 +374,8 @@ def build_briefing():
         "2026-10-27": "A new survey of about 1,000 US consumers found 44% say undisclosed AI in ads would lower their trust in a brand. Most reputational withdrawals are made quietly, like that. Chapter 3: list this week’s entries in your tribe’s ledger. Which were deposits, which were withdrawals, and which are you not sure about yet? The uncertain ones usually tell you most.",
         "2026-10-28": "A new survey found 70% of workers report pushback against AI projects at their company, and the top reason is data privacy, not job fears. Resistance tends to land where an idea is hardest to apply. Chapter 4: explain the five axioms to someone newer in your tribe this week. Where did they push back, and what did that show you?",
         "2026-10-29": "A new survey of 801 senior US executives found their companies run an average of 183 AI tools, and three in five say the sprawl has stalled strategy. Chapter 5: sketch where your business actually sits on the battlefield today, not where the strategy deck says it’s heading. Can your tribe agree on the current coordinates?",
+        "2026-10-30": "A new survey found 77% of firms have already been hurt by ungoverned AI agents, and one executive warned that governance “can’t live in a policy document”. Chapter 6: name the one approval step in your operation that adds delay every day but no longer catches anything important. What does keeping it cost, and what would removing it risk?",
+        "2026-10-31": "New G2 research found two-thirds of firms now run AI agents in production, yet 45% say checking and correcting them eats more than a quarter of the gains. Trust and verification pull against each other. Chapter 7: where is your tribe holding a real contradiction this week, such as speed versus care, and which side are you quietly letting win?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -531,6 +535,23 @@ def build_briefing():
                     "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/30/?wm=1&mi=81062300116&mynotes=on'>Join and take notes</a> | "
                     "<a href='https://cotrugli.zoom.us/launch/jc/81062300116'>Meeting chat</a>\n"
                     "<b>Meeting ID:</b> 810 6230 0116 | <b>Passcode:</b> VGNEW4</blockquote>"
+                )
+                lines.append("")
+            elif date_key == "2026-10-30":
+                # Zoom details from Nardus sheet B9-B17, 29 Oct. 17:00 Belgrade = 18:00 SA (Europe back on CET from 25 Oct).
+                lines.append("📅 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>New Series of Lectures</i>")
+                lines.append("\u2022 \U0001f5d3 Saturday 31 October 2026 @ 17:00 Belgrade / Ljubljana (18:00 SA time)")
+                lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/31/?wm=1&amp;mi=89651107877'>\u2192 Join Zoom Meeting</a>")
+                lines.append("<b>Meeting ID:</b> 896 5110 7877 | <b>Passcode:</b> VANGUR27")
+                lines.append("")
+            elif date_key == "2026-10-31":
+                lines.append(
+                    "<blockquote>📅 <b>ZOOM SESSION — TODAY</b>\n"
+                    "<i>New Series of Lectures</i>\n"
+                    "\u2022 \U0001f5d3 Today, Saturday 31 October 2026 @ 17:00 Belgrade / Ljubljana (18:00 SA time)\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/31/?wm=1&amp;mi=89651107877'>\u2192 Join Zoom Meeting</a>\n"
+                    "<b>Meeting ID:</b> 896 5110 7877 | <b>Passcode:</b> VANGUR27</blockquote>"
                 )
                 lines.append("")
             elif date_key >= "2026-10-04":
@@ -1157,12 +1178,19 @@ def build_briefing():
                 "2026-10-17": {"quote": "\U0001f4c4 <b>The Right Context, Not All of It</b>", "url": "https://talirezun.substack.com/p/the-right-context-not-all-of-it"},
                 "2026-10-22": {"quote": "\U0001f4c4 <b>Our AI agents can’t talk to each other. I’m building the fix.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518220383901306880/"},
                 "2026-10-23": {"quote": "\U0001f4c4 𝗚𝗶𝘃𝗲 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝘁𝗵𝗲 𝗿𝗶𝗴𝗵𝘁 𝗰𝗼𝗻𝘁𝗲𝘅𝘁, 𝗮𝗻𝗱 𝗻𝗼𝘁 𝗮𝗹𝗹 𝗼𝗳 𝗶𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518953093959458817/"},
+                "2026-10-30": [{"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"},
+                               {"quote": "\U0001f4c4 <b>One Founder, Eight Weeks, Four Hundred Agents</b>", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"}],
+                "2026-10-31": [{"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"},
+                               {"quote": "\U0001f4c4 <b>One Founder, Eight Weeks, Four Hundred Agents</b>", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"}],
             }
             if date_key in extra_cj_entries:
-                extra_cj = extra_cj_entries[date_key]
-                lines.append(extra_cj["quote"])
-                lines.append("<a href='" + extra_cj["url"] + "'>" + _tali_label(extra_cj["url"]) + "</a>")
-                lines.append("")
+                _extras = extra_cj_entries[date_key]
+                if isinstance(_extras, dict):
+                    _extras = [_extras]  # 30 Oct: a date may now hold a list of extra posts
+                for extra_cj in _extras:
+                    lines.append(extra_cj["quote"])
+                    lines.append("<a href='" + extra_cj["url"] + "'>" + _tali_label(extra_cj["url"]) + "</a>")
+                    lines.append("")
             # AI INVESTMENT LAB — LinkedIn post from Nardus sheet B46/B47, 16 Oct
             if date_key == "2026-10-17":
                 lines.append("\U0001f4c8 <b>AI INVESTMENT LAB — Prof. Dan Ye</b>")

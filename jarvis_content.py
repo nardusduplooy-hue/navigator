@@ -4258,6 +4258,22 @@ TALI_STEPS = {
         "question": "Executives at large US firms report an average of 183 AI tools, and three in five say the sprawl has stalled strategy. Take fifteen minutes: sketch where your business or team actually sits today, not where the plan says it is heading. What is the biggest difference between your current coordinates and the destination, and who would disagree with your map?",
         "model_answer": "Start with evidence, not aspiration. List what you actually do today: which tools are in daily use, which relationships produce results, which decisions take longest and why. Then place yourself honestly. Are you networked, or still running on a few key people? Moving at exponential speed, or linear with better software? Orchestrating partners, or coordinating them by email? The tool count in the survey is a useful warning: activity can look like progress while the operation underneath stays fragmented. The biggest gap is usually the one you describe most confidently in strategy meetings, because confidence has replaced checking. Then ask who would draw your map differently: a client, a junior colleague, a competitor. Their version is often closer to the truth. The Vanguard move: sketch your map, show it to one person outside your tribe, and write down where they moved you.",
     },
+    "2026-10-30": {
+        "step": "Business as Warfare — The Chain of Command",
+        "title": "The Approval Step Nobody Questions",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/",
+        "focus": "Chapter 6 asks you to look at your own chain of command. Every organisation has at least one approval step that exists because it once mattered and now mostly adds delay. Nobody challenges it, because removing it looks like a risk, even though keeping it costs time every day. New research shows that slow sign-offs and real protection are not the same thing. In a survey of 300 senior technology, risk and AI leaders in the US, Canada and the UK for automation software firm Redwood Software, reported by CFO Dive, 77% said ungoverned AI agents had already caused negative consequences, most often unexpected cloud costs, followed by operational disruption and compliance problems. Only about 58% said they have a formal AI governance policy that is consistently enforced. Redwood’s Charles Crouchman argued that governance “can’t live in a policy document or wait for a post-incident review.” The risks that matter move faster than a sign-off queue; the controls have to sit where the work happens.",
+        "question": "A new survey found 77% of firms have already been hurt by ungoverned AI agents, even though most organisations still run approval steps that slow everything else down. Name one approval step in your operation that exists because it once mattered and now mainly adds delay. What does keeping it cost each week, and what would you put in its place?",
+        "model_answer": "Start by tracing one routine request from start to finish and noting every point where it waits for a signature. For each step, ask two questions: what has this step actually caught in the last six months, and what would happen if it disappeared tomorrow? A step that has caught nothing is not protection; it is a habit with a queue attached. Then count the cost honestly: hours of waiting, the client who heard back a day late, the good people who stopped proposing things because the process wears them out. Removing a step is not the same as removing control. Often the better move is to replace a blanket approval with a clear rule, a spending limit or an automatic check, and keep human sign-off for the decisions that really carry risk. The survey makes the point from the other side: the dangers that hurt firms were the ones no approval queue was watching. The Vanguard move: pick one step, propose a replacement rule to whoever owns it, and agree a 30-day trial.",
+    },
+    "2026-10-31": {
+        "step": "The NEO Leadership Challenge — Holding Two Truths",
+        "title": "Holding Two Contradictory Truths at Once",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/",
+        "focus": "Chapter 7 describes a demand of NEO-era leadership that rarely appears in job descriptions: holding two things that feel contradictory, such as moving fast and being careful, or trusting your tribe and verifying outcomes, without collapsing into either extreme for comfort. Research from software review platform G2 shows the same tension inside companies adopting AI. In a survey of more than 1,000 B2B software buyers, 66% said their organisations now run AI agents in limited or scaled production. Yet 52% require human quality review before agents go live, 31% say staff spend six or more hours a week overseeing agent work, and 45% say overseeing and correcting agents consumes more than a quarter of the productivity gains they expected. G2 calls this the “distrust tax”. Dropping the checks would be fast and reckless; checking everything would erase the gains. The skill is holding both.",
+        "question": "G2 research found that 45% of firms say checking and correcting their AI agents eats more than a quarter of the expected gains, yet few are ready to stop checking. Name one place this week where you are holding a real contradiction, such as speed versus care or trust versus verification. Which side are you tempted to let win, and why?",
+        "model_answer": "The honest answer usually starts with discomfort. If a situation feels easy, you have probably already resolved the contradiction by favouring one side. Look for the place where you keep switching positions: one day you push the team to move faster, the next you ask for another review. That is not inconsistency; it is the contradiction showing itself. Name both truths explicitly, for example: “We need this live by month-end” and “A mistake here would damage a key client.” Then decide how to honour each one, rather than which one to drop: move fast on the parts that are reversible, and slow down on the one or two that are not. The same logic applies to trust. Trust people with the work, and verify the outcomes that matter most, not every step. The G2 numbers show what happens when checking becomes the default: the cost quietly eats the benefit. The Vanguard move: write down your contradiction as two sentences, and share with your tribe which parts you will move fast on and which you will protect.",
+    },
 
 
 
@@ -6875,8 +6891,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of 801 senior US executives by digital agency Code and Theory with WSJ Intelligence found their companies run an average of 183 AI tools, 85% say their AI stacks are disconnected, and three in five say the tool sprawl has stalled strategy",
-    "source": "IT Brief UK",
+    "headline": "A survey of 300 senior technology, risk and AI leaders in the US, Canada and UK for automation software firm Redwood Software found 77% have suffered negative consequences from ungoverned AI agents, most often unexpected cloud costs, while only about 58% have a consistently enforced AI governance policy",
+    "source": "CFO Dive (Redwood Software survey)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7114,6 +7130,16 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of 801 senior US executives by digital agency Code and Theory with WSJ Intelligence found their companies run an average of 183 AI tools, 85% say their AI stacks are disconnected, and three in five say the tool sprawl has stalled strategy",
         "source": "IT Brief UK",
         "url": "https://itbrief.co.uk/story/ai-tool-sprawl-leaves-us-executives-facing-orchestration-gap",
+    },
+    "2026-10-30": {
+        "headline": "A survey of 300 senior technology, risk and AI leaders in the US, Canada and UK for automation software firm Redwood Software found 77% have suffered negative consequences from ungoverned AI agents, most often unexpected cloud costs, while only about 58% have a consistently enforced AI governance policy",
+        "source": "CFO Dive (Redwood Software survey)",
+        "url": "https://cfodive.com/news/77percent-enterprises-report-fallout-ungoverned-ai-agents/872836",
+    },
+    "2026-10-31": {
+        "headline": "A survey of more than 1,000 B2B software buyers by review platform G2 found 66% now run AI agents in production, but 52% require human review before agents go live and 45% say overseeing and correcting agents eats more than a quarter of the expected productivity gains",
+        "source": "G2",
+        "url": "https://company.g2.com/news/2026-ai-agents-report",
     },
 }
 
