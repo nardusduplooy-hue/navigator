@@ -237,7 +237,7 @@ def build_briefing():
 
 "2026-10-29": {"quote": "📄 𝗢𝗻𝗲 𝗙𝗼𝘂𝗻𝗱𝗲𝗿, 𝗘𝗶𝗴𝗵𝘁 𝗪𝗲𝗲𝗸𝘀, 𝗙𝗼𝘂𝗿 𝗛𝘂𝗻𝗱𝗿𝗲𝗱 𝗔𝗴𝗲𝗻𝘁𝘀", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"},
 "2026-10-30": {"quote": "📄 𝗚𝗼𝗼𝗴𝗹𝗲 𝗵𝗮𝘀 𝗯𝘂𝗶𝗹𝘁 𝗶𝘁𝘀 𝘄𝗵𝗼𝗹𝗲 𝘀𝘁𝗮𝗰𝗸 𝗮𝗿𝗼𝘂𝗻𝗱 𝗼𝗻𝗲 𝘀𝗸𝗶𝗹𝗹: 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
-"2026-10-31": {"quote": "📄 𝗚𝗼𝗼𝗴𝗹𝗲 𝗵𝗮𝘀 𝗯𝘂𝗶𝗹𝘁 𝗶𝘁𝘀 𝘄𝗵𝗼𝗹𝗲 𝘀𝘁𝗮𝗰𝗸 𝗮𝗿𝗼𝘂𝗻𝗱 𝗼𝗻𝗲 𝘀𝗸𝗶𝗹𝗹: 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
+"2026-10-31": {"quote": "📄 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 𝗶𝘀 𝗻𝗼𝘁 𝗮 𝘁𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝘀𝗸𝗶𝗹𝗹. 𝗜𝘁 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521823517353582592/"},
     }
 
     lines = []
@@ -1180,8 +1180,8 @@ def build_briefing():
                 "2026-10-23": {"quote": "\U0001f4c4 𝗚𝗶𝘃𝗲 𝗲𝘃𝗲𝗿𝘆 𝗮𝗴𝗲𝗻𝘁 𝘁𝗵𝗲 𝗿𝗶𝗴𝗵𝘁 𝗰𝗼𝗻𝘁𝗲𝘅𝘁, 𝗮𝗻𝗱 𝗻𝗼𝘁 𝗮𝗹𝗹 𝗼𝗳 𝗶𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518953093959458817/"},
                 "2026-10-30": [{"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"},
                                {"quote": "\U0001f4c4 <b>One Founder, Eight Weeks, Four Hundred Agents</b>", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"}],
-                "2026-10-31": [{"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"},
-                               {"quote": "\U0001f4c4 <b>One Founder, Eight Weeks, Four Hundred Agents</b>", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"}],
+                "2026-10-31": [{"quote": "\U0001f4c4 <b>Google has built its whole stack around one skill: orchestrating agents.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
+                               {"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"}],
             }
             if date_key in extra_cj_entries:
                 _extras = extra_cj_entries[date_key]

@@ -4269,7 +4269,7 @@ TALI_STEPS = {
     "2026-10-31": {
         "step": "The NEO Leadership Challenge — Holding Two Truths",
         "title": "Holding Two Contradictory Truths at Once",
-        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521823517353582592/",
         "focus": "Chapter 7 describes a demand of NEO-era leadership that rarely appears in job descriptions: holding two things that feel contradictory, such as moving fast and being careful, or trusting your tribe and verifying outcomes, without collapsing into either extreme for comfort. Research from software review platform G2 shows the same tension inside companies adopting AI. In a survey of more than 1,000 B2B software buyers, 66% said their organisations now run AI agents in limited or scaled production. Yet 52% require human quality review before agents go live, 31% say staff spend six or more hours a week overseeing agent work, and 45% say overseeing and correcting agents consumes more than a quarter of the productivity gains they expected. G2 calls this the “distrust tax”. Dropping the checks would be fast and reckless; checking everything would erase the gains. The skill is holding both.",
         "question": "G2 research found that 45% of firms say checking and correcting their AI agents eats more than a quarter of the expected gains, yet few are ready to stop checking. Name one place this week where you are holding a real contradiction, such as speed versus care or trust versus verification. Which side are you tempted to let win, and why?",
         "model_answer": "The honest answer usually starts with discomfort. If a situation feels easy, you have probably already resolved the contradiction by favouring one side. Look for the place where you keep switching positions: one day you push the team to move faster, the next you ask for another review. That is not inconsistency; it is the contradiction showing itself. Name both truths explicitly, for example: “We need this live by month-end” and “A mistake here would damage a key client.” Then decide how to honour each one, rather than which one to drop: move fast on the parts that are reversible, and slow down on the one or two that are not. The same logic applies to trust. Trust people with the work, and verify the outcomes that matter most, not every step. The G2 numbers show what happens when checking becomes the default: the cost quietly eats the benefit. The Vanguard move: write down your contradiction as two sentences, and share with your tribe which parts you will move fast on and which you will protect.",
@@ -6879,9 +6879,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517913731780087808/",
-    "title": "The true strength of the COTRUGLI network",
-    "description": "Updated 28 Oct per Nardus sheet B54/B55 (title for the LinkedIn post added 21 Oct).",
+    "url": "https://www.linkedin.com/posts/cotrugli_cdayz-leadership-nvidia-ugcPost-7521841362649092096-5NK8/?utm_source=share&amp;utm_medium=member_android&amp;rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
+    "title": "What happens when the extraordinary becomes a weekly occurrence?",
+    "description": "Updated 30 Oct per Nardus sheet B58/B60 (for 31 Oct).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
