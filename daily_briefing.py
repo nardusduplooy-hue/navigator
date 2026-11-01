@@ -238,6 +238,7 @@ def build_briefing():
 "2026-10-29": {"quote": "📄 𝗢𝗻𝗲 𝗙𝗼𝘂𝗻𝗱𝗲𝗿, 𝗘𝗶𝗴𝗵𝘁 𝗪𝗲𝗲𝗸𝘀, 𝗙𝗼𝘂𝗿 𝗛𝘂𝗻𝗱𝗿𝗲𝗱 𝗔𝗴𝗲𝗻𝘁𝘀", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"},
 "2026-10-30": {"quote": "📄 𝗚𝗼𝗼𝗴𝗹𝗲 𝗵𝗮𝘀 𝗯𝘂𝗶𝗹𝘁 𝗶𝘁𝘀 𝘄𝗵𝗼𝗹𝗲 𝘀𝘁𝗮𝗰𝗸 𝗮𝗿𝗼𝘂𝗻𝗱 𝗼𝗻𝗲 𝘀𝗸𝗶𝗹𝗹: 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
 "2026-10-31": {"quote": "📄 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 𝗶𝘀 𝗻𝗼𝘁 𝗮 𝘁𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝘀𝗸𝗶𝗹𝗹. 𝗜𝘁 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521823517353582592/"},
+"2026-11-02": {"quote": "📄 𝗧𝗵𝗲 𝗺𝗼𝘀𝘁 𝘃𝗮𝗹𝘂𝗮𝗯𝗹𝗲 𝘁𝗵𝗶𝗻𝗴 𝗳𝗼𝗿 𝗺𝘆 𝘀𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗻𝗼𝘁𝗵𝗲𝗿 𝘁𝗲𝘀𝘁. 𝗜𝘁 𝗶𝘀 𝗮 𝘂𝘀𝗲𝗿 𝘁𝗲𝗹𝗹𝗶𝗻𝗴 𝗺𝗲 𝘄𝗵𝗮𝘁 𝗳𝗲𝗲𝗹𝘀 𝘄𝗿𝗼𝗻𝗴.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"},
     }
 
     lines = []
@@ -376,6 +377,7 @@ def build_briefing():
         "2026-10-29": "A new survey of 801 senior US executives found their companies run an average of 183 AI tools, and three in five say the sprawl has stalled strategy. Chapter 5: sketch where your business actually sits on the battlefield today, not where the strategy deck says it’s heading. Can your tribe agree on the current coordinates?",
         "2026-10-30": "A new survey found 77% of firms have already been hurt by ungoverned AI agents, and one executive warned that governance “can’t live in a policy document”. Chapter 6: name the one approval step in your operation that adds delay every day but no longer catches anything important. What does keeping it cost, and what would removing it risk?",
         "2026-10-31": "New G2 research found two-thirds of firms now run AI agents in production, yet 45% say checking and correcting them eats more than a quarter of the gains. Trust and verification pull against each other. Chapter 7: where is your tribe holding a real contradiction this week, such as speed versus care, and which side are you quietly letting win?",
+        "2026-11-02": "A new survey found 70% of organisations now let AI make decisions that needed human approval a year ago, yet only 49% can audit every action it takes. Chapter 9: count the decisions AI shaped for you this week, then count how many you’d defend in writing with your name on them. What explains the gap?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -621,6 +623,10 @@ def build_briefing():
                             # Module 5 capstone, Nardus sheet B14 (27 Oct)
                             lines.append("\U0001f3af <b>The Capstone Campaign</b>")
                             lines.append("Each team must deliver a 5-minute Commander’s Brief presenting their finalized Target Intelligence Estimate on the PayPal Mafia, structured as Situation, Intelligence, Evidence, and Critical Gap, followed by rapid-fire Q&amp;A from faculty and peers. Before the session, complete your ACH matrix scoring all collected data points against your three hypotheses, and prepare to defend your analytical logic under cross-examination.")
+                            if date_key >= "2026-11-02":
+                                # 2 Nov: Nardus sheet B16/B17
+                                lines.append("\U0001f4dd <b>Assignment 5:</b> prepare the final report, the fruit of all the previous exercises.")
+                                lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/'>\u2192 Slides for Modules 1\u20134</a>")
                         lines.append("\U0001f3a7 <b>Podcasts:</b> <a href='https://stream.redcircle.com/episodes/61d5bcab-df5c-4078-8626-52bd83718511/stream.mp3'>1</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0434e123-0ca4-4f05-8c62-5e3ebdfdea1b/stream.mp3'>2</a> \u00b7 <a href='https://stream.redcircle.com/episodes/268e9021-e905-46aa-8c68-e0ed36eae73f/stream.mp3'>3</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0966a01d-5876-4ae5-bdf4-0a9f555e0360/stream.mp3'>4</a> \u00b7 <a href='https://stream.redcircle.com/episodes/ac845d2e-3c0a-4358-97d4-426d5eed4415/stream.mp3'>5</a> \u00b7 <a href='https://stream.redcircle.com/episodes/884cf5c5-7075-4c01-96d6-b4f82e996e7f/stream.mp3'>6</a> \u00b7 <a href='https://stream.redcircle.com/episodes/d86cf22c-cbf6-49b0-8fa2-f94d76156980/stream.mp3'>7</a>")
                     elif date_key >= "2026-10-05":
                         # 5 Oct: Module 3 lesson + 7 podcasts (Nardus sheet B18–B26)

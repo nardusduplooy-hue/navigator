@@ -4274,6 +4274,14 @@ TALI_STEPS = {
         "question": "G2 research found that 45% of firms say checking and correcting their AI agents eats more than a quarter of the expected gains, yet few are ready to stop checking. Name one place this week where you are holding a real contradiction, such as speed versus care or trust versus verification. Which side are you tempted to let win, and why?",
         "model_answer": "The honest answer usually starts with discomfort. If a situation feels easy, you have probably already resolved the contradiction by favouring one side. Look for the place where you keep switching positions: one day you push the team to move faster, the next you ask for another review. That is not inconsistency; it is the contradiction showing itself. Name both truths explicitly, for example: “We need this live by month-end” and “A mistake here would damage a key client.” Then decide how to honour each one, rather than which one to drop: move fast on the parts that are reversible, and slow down on the one or two that are not. The same logic applies to trust. Trust people with the work, and verify the outcomes that matter most, not every step. The G2 numbers show what happens when checking becomes the default: the cost quietly eats the benefit. The Vanguard move: write down your contradiction as two sentences, and share with your tribe which parts you will move fast on and which you will protect.",
     },
+    "2026-11-02": {
+        "step": "AI as Force Multiplier — The Accountability Count",
+        "title": "How Many AI-Shaped Decisions Would You Defend in Writing?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/",
+        "focus": "Chapter 9 turns the idea of AI as a force multiplier into an audit. Tally every decision this week where AI output shaped the outcome, then ask how many of those you would defend in writing, with your name on it. The gap between the two numbers is your real exposure: the distance between what you are amplifying and what you would stand behind. New research suggests that gap is widening fast. In a survey of 1,100 IT and security decision-makers in ten markets, conducted by Sapio Research for cybersecurity firm Illumio, 70% said their organisations now let AI handle decisions and actions that required human approval a year ago. Only 49% said they can see and audit every action an AI agent takes, and 35% said AI had recommended an action that would have created a security risk if followed. Delegation is racing ahead; the ability to stand behind it is not.",
+        "question": "A new survey found 70% of organisations now let AI make decisions that needed human approval a year ago, yet only 49% can audit every action it takes. Count the decisions this week where AI output shaped the outcome. How many would you defend in writing with your name on them, and what do the others have in common?",
+        "model_answer": "Most people are surprised by the first number. Once you count drafts that became emails, summaries that shaped a meeting, figures pulled into a proposal and suggestions you accepted without much thought, AI touched far more decisions than it felt like. The second number is usually smaller, and the reasons tend to repeat. You did not check the source. You could not explain how the answer was reached. Or you accepted it because it sounded confident and you were busy. Those patterns matter more than the count. They show where AI is multiplying your speed without multiplying your judgment. The fix is not to stop using AI on those decisions; it is to add one step that would let you sign them: a quick source check, a second opinion, or a sentence explaining why you agree. Where that step is not worth it, the decision probably should not carry your name. The Vanguard move: take one decision you could not defend, apply that step, and share with your tribe what changed.",
+    },
 
 
 
@@ -6891,8 +6899,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of 300 senior technology, risk and AI leaders in the US, Canada and UK for automation software firm Redwood Software found 77% have suffered negative consequences from ungoverned AI agents, most often unexpected cloud costs, while only about 58% have a consistently enforced AI governance policy",
-    "source": "CFO Dive (Redwood Software survey)",
+    "headline": "A survey of 1,100 IT and security decision-makers by Sapio Research for cybersecurity firm Illumio found 70% now let AI handle decisions that required human approval a year ago, but only 49% can see and audit every action an AI agent takes",
+    "source": "Illumio (Sapio Research survey)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7140,6 +7148,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of more than 1,000 B2B software buyers by review platform G2 found 66% now run AI agents in production, but 52% require human review before agents go live and 45% say overseeing and correcting agents eats more than a quarter of the expected productivity gains",
         "source": "G2",
         "url": "https://company.g2.com/news/2026-ai-agents-report",
+    },
+    "2026-11-02": {
+        "headline": "A survey of 1,100 IT and security decision-makers by Sapio Research for cybersecurity firm Illumio found 70% now let AI handle decisions that required human approval a year ago, but only 49% can see and audit every action an AI agent takes",
+        "source": "Illumio (Sapio Research survey)",
+        "url": "https://www.illumio.com/news/70-of-organizations-now-delegate-human-decisions-to-ai-but-half-cannot-fully-audit-what-it-does",
     },
 }
 
