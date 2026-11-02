@@ -4282,6 +4282,14 @@ TALI_STEPS = {
         "question": "A new survey found 70% of organisations now let AI make decisions that needed human approval a year ago, yet only 49% can audit every action it takes. Count the decisions this week where AI output shaped the outcome. How many would you defend in writing with your name on them, and what do the others have in common?",
         "model_answer": "Most people are surprised by the first number. Once you count drafts that became emails, summaries that shaped a meeting, figures pulled into a proposal and suggestions you accepted without much thought, AI touched far more decisions than it felt like. The second number is usually smaller, and the reasons tend to repeat. You did not check the source. You could not explain how the answer was reached. Or you accepted it because it sounded confident and you were busy. Those patterns matter more than the count. They show where AI is multiplying your speed without multiplying your judgment. The fix is not to stop using AI on those decisions; it is to add one step that would let you sign them: a quick source check, a second opinion, or a sentence explaining why you agree. Where that step is not worth it, the decision probably should not carry your name. The Vanguard move: take one decision you could not defend, apply that step, and share with your tribe what changed.",
     },
+    "2026-11-03": {
+        "step": "Tribe as Coordination — Compounding vs Accumulating",
+        "title": "What Is Actually Compounding in Your Tribe?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522917137791991808/",
+        "focus": "Chapter 10 draws a line between two things that both look like progress. Trust compounds when each interaction makes the next one easier and cheaper. Plenty of activity only accumulates: it adds hours without adding leverage. The exercise is to look at what your tribe built over the last quarter and separate the two. New research shows how easily gains accumulate without compounding. In a survey of 1,068 US office workers commissioned by workforce-analytics firm Hubstaff, 76% of AI users who reported savings said they save at least an hour a week, and 32% save four hours or more. Yet only 26% use that time to take on more work, 39% simply finish earlier, and 45% spend an hour or more each week reviewing or correcting colleagues’ AI-generated work. Hubstaff’s CEO put it plainly: AI is giving time back to individuals, but most organisations are not capturing it as capacity.",
+        "question": "A new survey found 76% of AI users save at least an hour a week, yet only 26% turn that time into extra capacity, and 45% spend an hour or more fixing colleagues’ AI work. Look at what your tribe built this quarter. What is making next quarter faster, and what is just the same effort repeated?",
+        "model_answer": "Start with a simple test for each thing your tribe produced: will it make next quarter’s work easier, faster or cheaper without anyone redoing it? A shared template, a working agent, an agreed way of making decisions, a client relationship that now runs on trust: those compound. A pile of one-off reports, meetings that end with the same open questions, and documents nobody reuses: those accumulate. They took real effort, but next quarter starts from the same place. Expect the list to be uncomfortable. Most tribes find that much of their effort is accumulation, often because nobody stopped to turn a good piece of work into something reusable. The survey shows the same pattern with AI: hours saved by individuals vanish unless someone decides where they go. The fix is usually small. Take one thing that worked and make it repeatable: write the process down, save the prompt, share the tool. The Vanguard move: name one compounding asset and one accumulating habit, and agree with your tribe which to invest in and which to stop.",
+    },
 
 
 
@@ -6899,8 +6907,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of 1,100 IT and security decision-makers by Sapio Research for cybersecurity firm Illumio found 70% now let AI handle decisions that required human approval a year ago, but only 49% can see and audit every action an AI agent takes",
-    "source": "Illumio (Sapio Research survey)",
+    "headline": "A survey of 1,068 US office workers commissioned by workforce-analytics firm Hubstaff found 76% of AI users who save time gain at least an hour a week, yet only 26% use it to take on more work, and 45% spend an hour or more weekly correcting colleagues’ AI-generated work",
+    "source": "Yahoo Finance (Hubstaff survey)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7153,6 +7161,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of 1,100 IT and security decision-makers by Sapio Research for cybersecurity firm Illumio found 70% now let AI handle decisions that required human approval a year ago, but only 49% can see and audit every action an AI agent takes",
         "source": "Illumio (Sapio Research survey)",
         "url": "https://www.illumio.com/news/70-of-organizations-now-delegate-human-decisions-to-ai-but-half-cannot-fully-audit-what-it-does",
+    },
+    "2026-11-03": {
+        "headline": "A survey of 1,068 US office workers commissioned by workforce-analytics firm Hubstaff found 76% of AI users who save time gain at least an hour a week, yet only 26% use it to take on more work, and 45% spend an hour or more weekly correcting colleagues’ AI-generated work",
+        "source": "Yahoo Finance (Hubstaff survey)",
+        "url": "https://finance.yahoo.com/technology/ai/articles/ai-saving-employees-time-employers-153100877.html",
     },
 }
 

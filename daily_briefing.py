@@ -239,6 +239,7 @@ def build_briefing():
 "2026-10-30": {"quote": "📄 𝗚𝗼𝗼𝗴𝗹𝗲 𝗵𝗮𝘀 𝗯𝘂𝗶𝗹𝘁 𝗶𝘁𝘀 𝘄𝗵𝗼𝗹𝗲 𝘀𝘁𝗮𝗰𝗸 𝗮𝗿𝗼𝘂𝗻𝗱 𝗼𝗻𝗲 𝘀𝗸𝗶𝗹𝗹: 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗻𝗴 𝗮𝗴𝗲𝗻𝘁𝘀.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
 "2026-10-31": {"quote": "📄 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 𝗶𝘀 𝗻𝗼𝘁 𝗮 𝘁𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝘀𝗸𝗶𝗹𝗹. 𝗜𝘁 𝗶𝘀 𝗮 𝗺𝗮𝗻𝗮𝗴𝗲𝗺𝗲𝗻𝘁 𝘀𝗸𝗶𝗹𝗹", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521823517353582592/"},
 "2026-11-02": {"quote": "📄 𝗧𝗵𝗲 𝗺𝗼𝘀𝘁 𝘃𝗮𝗹𝘂𝗮𝗯𝗹𝗲 𝘁𝗵𝗶𝗻𝗴 𝗳𝗼𝗿 𝗺𝘆 𝘀𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗻𝗼𝘁𝗵𝗲𝗿 𝘁𝗲𝘀𝘁. 𝗜𝘁 𝗶𝘀 𝗮 𝘂𝘀𝗲𝗿 𝘁𝗲𝗹𝗹𝗶𝗻𝗴 𝗺𝗲 𝘄𝗵𝗮𝘁 𝗳𝗲𝗲𝗹𝘀 𝘄𝗿𝗼𝗻𝗴.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"},
+"2026-11-03": {"quote": "📄 𝗦𝗶𝘅 𝗱𝗮𝘆𝘀. 𝗜𝗻 𝘁𝗵𝗲 𝗲𝗻𝗱, 𝘆𝗼𝘂 𝗱𝗼𝗻'𝘁 𝘁𝗮𝗸𝗲 𝗻𝗼𝘁𝗲𝘀, 𝗯𝘂𝘁 𝗮 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗽𝗿𝗼𝗱𝘂𝗰𝘁.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522917137791991808/"},
     }
 
     lines = []
@@ -378,6 +379,7 @@ def build_briefing():
         "2026-10-30": "A new survey found 77% of firms have already been hurt by ungoverned AI agents, and one executive warned that governance “can’t live in a policy document”. Chapter 6: name the one approval step in your operation that adds delay every day but no longer catches anything important. What does keeping it cost, and what would removing it risk?",
         "2026-10-31": "New G2 research found two-thirds of firms now run AI agents in production, yet 45% say checking and correcting them eats more than a quarter of the gains. Trust and verification pull against each other. Chapter 7: where is your tribe holding a real contradiction this week, such as speed versus care, and which side are you quietly letting win?",
         "2026-11-02": "A new survey found 70% of organisations now let AI make decisions that needed human approval a year ago, yet only 49% can audit every action it takes. Chapter 9: count the decisions AI shaped for you this week, then count how many you’d defend in writing with your name on them. What explains the gap?",
+        "2026-11-03": "A new survey found three in four AI users save at least an hour a week, yet only 26% turn that time into extra capacity, and 45% spend an hour or more fixing colleagues’ AI work. Chapter 10: look at what your tribe built this quarter. What is making next quarter faster, and what is just the same effort repeated?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -622,7 +624,11 @@ def build_briefing():
                         if date_key >= "2026-10-27":
                             # Module 5 capstone, Nardus sheet B14 (27 Oct)
                             lines.append("\U0001f3af <b>The Capstone Campaign</b>")
-                            lines.append("Each team must deliver a 5-minute Commander’s Brief presenting their finalized Target Intelligence Estimate on the PayPal Mafia, structured as Situation, Intelligence, Evidence, and Critical Gap, followed by rapid-fire Q&amp;A from faculty and peers. Before the session, complete your ACH matrix scoring all collected data points against your three hypotheses, and prepare to defend your analytical logic under cross-examination.")
+                            if date_key >= "2026-11-03":
+                                # 3 Nov: Nardus sheet B16, deadline extended
+                                lines.append("<blockquote>\U0001f4c5 <b>BAW Final Report: Deadline Extended to 15 November 2026</b>\nThe deadline was prolonged by one week, so study the Module 5 slides closely and follow the instructions strictly: one integrated report of at most 15 pages, the four common PIRs, distinct ACH matrices, and a five-minute briefing. Re-submit your final work even if nothing has changed.</blockquote>")
+                            else:
+                                lines.append("Each team must deliver a 5-minute Commander’s Brief presenting their finalized Target Intelligence Estimate on the PayPal Mafia, structured as Situation, Intelligence, Evidence, and Critical Gap, followed by rapid-fire Q&amp;A from faculty and peers. Before the session, complete your ACH matrix scoring all collected data points against your three hypotheses, and prepare to defend your analytical logic under cross-examination.")
                             if date_key >= "2026-11-02":
                                 # 2 Nov: Nardus sheet B16/B17
                                 lines.append("\U0001f4dd <b>Assignment 5:</b> prepare the final report, the fruit of all the previous exercises.")
@@ -1188,6 +1194,7 @@ def build_briefing():
                                {"quote": "\U0001f4c4 <b>One Founder, Eight Weeks, Four Hundred Agents</b>", "url": "https://talirezun.substack.com/p/one-founder-eight-weeks-four-hundred?r=68m2cw"}],
                 "2026-10-31": [{"quote": "\U0001f4c4 <b>Google has built its whole stack around one skill: orchestrating agents.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/"},
                                {"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"}],
+                "2026-11-03": {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"},
             }
             if date_key in extra_cj_entries:
                 _extras = extra_cj_entries[date_key]
