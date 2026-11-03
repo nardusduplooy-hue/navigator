@@ -4290,6 +4290,14 @@ TALI_STEPS = {
         "question": "A new survey found 76% of AI users save at least an hour a week, yet only 26% turn that time into extra capacity, and 45% spend an hour or more fixing colleagues’ AI work. Look at what your tribe built this quarter. What is making next quarter faster, and what is just the same effort repeated?",
         "model_answer": "Start with a simple test for each thing your tribe produced: will it make next quarter’s work easier, faster or cheaper without anyone redoing it? A shared template, a working agent, an agreed way of making decisions, a client relationship that now runs on trust: those compound. A pile of one-off reports, meetings that end with the same open questions, and documents nobody reuses: those accumulate. They took real effort, but next quarter starts from the same place. Expect the list to be uncomfortable. Most tribes find that much of their effort is accumulation, often because nobody stopped to turn a good piece of work into something reusable. The survey shows the same pattern with AI: hours saved by individuals vanish unless someone decides where they go. The fix is usually small. Take one thing that worked and make it repeatable: write the process down, save the prompt, share the tool. The Vanguard move: name one compounding asset and one accumulating habit, and agree with your tribe which to invest in and which to stop.",
     },
+    "2026-11-04": {
+        "step": "What You Now Possess — Knowing vs Practising",
+        "title": "The Gap Between What You Know and What You Practise",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/",
+        "focus": "Chapter 11 warns against confusing two things that grow at very different speeds. Knowledge accumulates fast in a programme like this one; practice does not, and the difference often stays hidden until a real decision exposes it. The test is simple: pick the idea you would most confidently explain to someone else, then ask when you last applied it, specifically, under real stakes. Explaining is not possessing. New research on AI at work shows the same gap. ZipRecruiter’s 2026 AI Worker Report, based on a survey of more than 1,500 US workers in September, found that 82.5% use AI at work, but only 28.9% receive extensive training from their employer and 37.2% teach themselves entirely. Meanwhile 44.6% say AI is making their technical skills go out of date faster, rising to 67.3% among daily users. The people practising most are the ones who notice how quickly knowing goes stale.",
+        "question": "ZipRecruiter found 82.5% of US workers use AI at work, yet only 28.9% get extensive training, and daily users are the most likely to feel their skills going stale. Pick the idea from this programme you could explain most confidently. When did you last apply it under real stakes, and what did that teach you that the explanation did not?",
+        "model_answer": "Most people pick an idea they like rather than one they use. OODA loops, mission command, the five axioms: all easy to explain, and all easy to leave on the page. The honest answer to ‘when did I last apply it’ is often vague, a meeting where it ‘sort of’ shaped the discussion. That vagueness is the gap. Real application leaves evidence: a decision made differently, a step removed, a conversation you would otherwise have avoided. If you find that evidence, look at what practice added. Usually it is the awkward detail the explanation skips: the colleague who resisted, the moment you had to act before you felt ready, the trade-off the theory never mentioned. That detail is what you now possess. If you find no evidence, do not treat it as failure; treat it as your next assignment. The survey points the same way: the people who use AI daily are the ones who see how fast their knowledge ages. The Vanguard move: choose one idea, apply it deliberately to a real decision this week, and tell your tribe what the theory left out.",
+    },
 
 
 
@@ -6907,8 +6915,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of 1,068 US office workers commissioned by workforce-analytics firm Hubstaff found 76% of AI users who save time gain at least an hour a week, yet only 26% use it to take on more work, and 45% spend an hour or more weekly correcting colleagues’ AI-generated work",
-    "source": "Yahoo Finance (Hubstaff survey)",
+    "headline": "ZipRecruiter’s 2026 AI Worker Report, a survey of 1,500+ US workers, found 82.5% use AI at work but only 28.9% get extensive employer training and 37.2% teach themselves entirely, while 44.6% say AI is making their technical skills outdated faster",
+    "source": "ZipRecruiter Economic Research",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7166,6 +7174,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of 1,068 US office workers commissioned by workforce-analytics firm Hubstaff found 76% of AI users who save time gain at least an hour a week, yet only 26% use it to take on more work, and 45% spend an hour or more weekly correcting colleagues’ AI-generated work",
         "source": "Yahoo Finance (Hubstaff survey)",
         "url": "https://finance.yahoo.com/technology/ai/articles/ai-saving-employees-time-employers-153100877.html",
+    },
+    "2026-11-04": {
+        "headline": "ZipRecruiter’s 2026 AI Worker Report, a survey of 1,500+ US workers, found 82.5% use AI at work but only 28.9% get extensive employer training and 37.2% teach themselves entirely, while 44.6% say AI is making their technical skills outdated faster",
+        "source": "ZipRecruiter Economic Research",
+        "url": "https://www.ziprecruiter-research.org/economic-insights-research/2026-ai-worker-report",
     },
 }
 
