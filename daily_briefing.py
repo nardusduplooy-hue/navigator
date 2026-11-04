@@ -241,6 +241,7 @@ def build_briefing():
 "2026-11-02": {"quote": "📄 𝗧𝗵𝗲 𝗺𝗼𝘀𝘁 𝘃𝗮𝗹𝘂𝗮𝗯𝗹𝗲 𝘁𝗵𝗶𝗻𝗴 𝗳𝗼𝗿 𝗺𝘆 𝘀𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗶𝘀 𝗻𝗼𝘁 𝗮𝗻𝗼𝘁𝗵𝗲𝗿 𝘁𝗲𝘀𝘁. 𝗜𝘁 𝗶𝘀 𝗮 𝘂𝘀𝗲𝗿 𝘁𝗲𝗹𝗹𝗶𝗻𝗴 𝗺𝗲 𝘄𝗵𝗮𝘁 𝗳𝗲𝗲𝗹𝘀 𝘄𝗿𝗼𝗻𝗴.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"},
 "2026-11-03": {"quote": "📄 𝗦𝗶𝘅 𝗱𝗮𝘆𝘀. 𝗜𝗻 𝘁𝗵𝗲 𝗲𝗻𝗱, 𝘆𝗼𝘂 𝗱𝗼𝗻'𝘁 𝘁𝗮𝗸𝗲 𝗻𝗼𝘁𝗲𝘀, 𝗯𝘂𝘁 𝗮 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗽𝗿𝗼𝗱𝘂𝗰𝘁.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522917137791991808/"},
 "2026-11-04": {"quote": "📄 𝗪𝗶𝗻𝗱𝗼𝘄𝘀 𝘂𝘀𝗲𝗿𝘀, 𝘁𝗵𝗶𝘀 𝗼𝗻𝗲’𝘀 𝗳𝗼𝗿 𝘆𝗼𝘂.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/"},
+"2026-11-05": {"quote": "📄 𝗠𝘆 𝗵𝘂𝗯 𝗶𝘀 𝗹𝗶𝘃𝗲: talirezun.com", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/"},
     }
 
     lines = []
@@ -382,6 +383,7 @@ def build_briefing():
         "2026-11-02": "A new survey found 70% of organisations now let AI make decisions that needed human approval a year ago, yet only 49% can audit every action it takes. Chapter 9: count the decisions AI shaped for you this week, then count how many you’d defend in writing with your name on them. What explains the gap?",
         "2026-11-03": "A new survey found three in four AI users save at least an hour a week, yet only 26% turn that time into extra capacity, and 45% spend an hour or more fixing colleagues’ AI work. Chapter 10: look at what your tribe built this quarter. What is making next quarter faster, and what is just the same effort repeated?",
         "2026-11-04": "ZipRecruiter’s new AI Worker Report found 82.5% of US workers use AI at work, yet only 28.9% get extensive training and 37% teach themselves. Chapter 11: pick the idea from this programme you could explain most confidently. When did you last actually apply it under real stakes, and what did it teach you?",
+        "2026-11-05": "A new survey found nearly one in five US workers replaced by AI were later asked to come back, and 30% would want an apology before returning. Chapter 12: replay your most recent real conflict. Who took the short-term win, who quietly absorbed the cost, and who went along to avoid choosing? Which role did you play?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1198,6 +1200,8 @@ def build_briefing():
                                {"quote": "\U0001f4c4 <b>AgentLink: your agent talks to their agent, and you keep the proof</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/"}],
                 "2026-11-03": {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"},
                 "2026-11-04": [{"quote": "\U0001f4c4 <b>Six days. In the end, you don't take notes, but a working product.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522917137791991808/"},
+                               {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"}],
+                "2026-11-05": [{"quote": "\U0001f4c4 <b>Windows users, this one’s for you.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/"},
                                {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"}],
             }
             if date_key in extra_cj_entries:

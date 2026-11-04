@@ -4298,6 +4298,14 @@ TALI_STEPS = {
         "question": "ZipRecruiter found 82.5% of US workers use AI at work, yet only 28.9% get extensive training, and daily users are the most likely to feel their skills going stale. Pick the idea from this programme you could explain most confidently. When did you last apply it under real stakes, and what did that teach you that the explanation did not?",
         "model_answer": "Most people pick an idea they like rather than one they use. OODA loops, mission command, the five axioms: all easy to explain, and all easy to leave on the page. The honest answer to ‘when did I last apply it’ is often vague, a meeting where it ‘sort of’ shaped the discussion. That vagueness is the gap. Real application leaves evidence: a decision made differently, a step removed, a conversation you would otherwise have avoided. If you find that evidence, look at what practice added. Usually it is the awkward detail the explanation skips: the colleague who resisted, the moment you had to act before you felt ready, the trade-off the theory never mentioned. That detail is what you now possess. If you find no evidence, do not treat it as failure; treat it as your next assignment. The survey points the same way: the people who use AI daily are the ones who see how fast their knowledge ages. The Vanguard move: choose one idea, apply it deliberately to a real decision this week, and tell your tribe what the theory left out.",
     },
+    "2026-11-05": {
+        "step": "The Three Patterns — Wolf, Sheepdog, Sheep",
+        "title": "Who Played Which Role in Your Last Conflict?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/",
+        "focus": "Chapter 12 argues that every real conflict in a tribe contains all three patterns at once, usually without anyone naming them: someone extracting a short-term win, someone quietly absorbing cost to hold the system together, and someone going along to avoid the friction of choosing a side. The exercise is to replay your most recent conflict and cast the three roles honestly, including your own. New research shows the patterns playing out around AI job cuts. In a survey of more than 1,000 workers each in the US and UK, run by Propeller Insights for talent-assessment firm SHL, nearly one in five US workers said they had been laid off or replaced by AI and then asked to return. Almost half would want a significant pay rise to come back, 43% written job-security guarantees, 40% transparency about AI in their roles, and 30% an apology from leadership. A short-term saving was booked; someone else was left to carry the cost.",
+        "question": "A new survey found nearly one in five US workers replaced by AI were later asked to come back, and 30% would want an apology first. Replay your most recent real conflict at work. Who took the short-term win, who quietly absorbed the cost, and who went along to avoid choosing a side? Which role did you play, honestly?",
+        "model_answer": "Start with yourself, because that is where the exercise usually goes wrong. Most people cast themselves as the sheepdog, the one who absorbed cost to keep things together, and give the wolf role to someone else. Test that against what you actually did. Did you speak up when it mattered, or only afterwards? Did you carry extra work without saying what it cost you, which protects the system but also hides the problem? Or did you go along because choosing a side felt expensive? There is no shame in finding the sheep pattern; it is the most common one, and it is the easiest to change. Then look at the wolf role more carefully. The short-term win is rarely taken by a villain; it is usually someone under pressure taking the easy number. The survey shows the result: the saving gets booked, and the cost lands on someone else later. The Vanguard move: name the role you played, decide what the sheepdog move would have been, and use it in your next conflict.",
+    },
 
 
 
@@ -6915,8 +6923,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "ZipRecruiter’s 2026 AI Worker Report, a survey of 1,500+ US workers, found 82.5% use AI at work but only 28.9% get extensive employer training and 37.2% teach themselves entirely, while 44.6% say AI is making their technical skills outdated faster",
-    "source": "ZipRecruiter Economic Research",
+    "headline": "A survey of 1,000+ US and UK workers by Propeller Insights for talent-assessment firm SHL found nearly one in five US workers laid off or replaced by AI were later asked to return; almost half would demand a big pay rise, 43% written job guarantees and 30% an apology from leadership",
+    "source": "People Matters (SHL survey)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7179,6 +7187,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "ZipRecruiter’s 2026 AI Worker Report, a survey of 1,500+ US workers, found 82.5% use AI at work but only 28.9% get extensive employer training and 37.2% teach themselves entirely, while 44.6% say AI is making their technical skills outdated faster",
         "source": "ZipRecruiter Economic Research",
         "url": "https://www.ziprecruiter-research.org/economic-insights-research/2026-ai-worker-report",
+    },
+    "2026-11-05": {
+        "headline": "A survey of 1,000+ US and UK workers by Propeller Insights for talent-assessment firm SHL found nearly one in five US workers laid off or replaced by AI were later asked to return; almost half would demand a big pay rise, 43% written job guarantees and 30% an apology from leadership",
+        "source": "People Matters (SHL survey)",
+        "url": "https://www.peoplematters.in/news/business/nearly-1-in-5-workers-laid-off-due-to-ai-are-asked-to-return-survey-finds-53098",
     },
 }
 
