@@ -4306,6 +4306,14 @@ TALI_STEPS = {
         "question": "A new survey found nearly one in five US workers replaced by AI were later asked to come back, and 30% would want an apology first. Replay your most recent real conflict at work. Who took the short-term win, who quietly absorbed the cost, and who went along to avoid choosing a side? Which role did you play, honestly?",
         "model_answer": "Start with yourself, because that is where the exercise usually goes wrong. Most people cast themselves as the sheepdog, the one who absorbed cost to keep things together, and give the wolf role to someone else. Test that against what you actually did. Did you speak up when it mattered, or only afterwards? Did you carry extra work without saying what it cost you, which protects the system but also hides the problem? Or did you go along because choosing a side felt expensive? There is no shame in finding the sheep pattern; it is the most common one, and it is the easiest to change. Then look at the wolf role more carefully. The short-term win is rarely taken by a villain; it is usually someone under pressure taking the easy number. The survey shows the result: the saving gets booked, and the cost lands on someone else later. The Vanguard move: name the role you played, decide what the sheepdog move would have been, and use it in your next conflict.",
     },
+    "2026-11-06": {
+        "step": "The Sheepdog Manifesto — Re-scoring the Commitment",
+        "title": "Did You Actually Run the Experiment?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524019853964304384/",
+        "focus": "Chapter 13 makes a demanding point about commitments: ninety days is long enough to forget one was ever made, and short enough that the person you told probably has not. The exercise is to go back to the last specific commitment you wrote down, score yourself against it, and say the score out loud to the person who witnessed it. The re-scoring is the real manifesto; the writing was only the opening move. Large organisations face the same test in public. Several of the biggest tech firms set net-zero goals before the AI boom. A new analysis by the environmental group Sierra Club, reported by Bloomberg, projects that planned AI data centres could push US power-sector CO2 emissions to 2.1 billion tonnes by 2030, about 42% above 2025 levels. Other forecasters disagree: Rhodium Group still expects sector emissions to fall as renewables get cheaper, and analysts note many projects may be delayed or cancelled. Either way, commitments made years ago are now being scored against reality.",
+        "question": "A new Sierra Club analysis says AI data centres could push US power emissions 42% higher by 2030, years after big tech firms pledged net zero, though other forecasters expect emissions to keep falling. Go back to your last written commitment. What is your honest score, and who will you say it to out loud this week?",
+        "model_answer": "Start by finding the actual words you wrote, not your memory of them. Memory edits commitments quietly; it softens the deadline and widens the definition until almost anything counts. Then score it plainly: done, partly done, or not done, with one sentence of evidence for each. The hard part is saying it out loud to the person who witnessed it. That conversation feels exposing, which is exactly why it works. It turns a private intention into a public record, and it usually goes better than you fear: most people respect an honest ‘I didn’t do it, and here is why’ far more than silence. If the score is low, avoid two easy exits. Do not quietly drop the commitment, and do not rewrite it so you appear to have passed. Either recommit with a smaller first step and a date, or say clearly that circumstances changed and replace it with something you will actually do. The Vanguard move: re-score your commitment, tell your witness the score this week, and agree on the next checkpoint together.",
+    },
 
 
 
@@ -6923,8 +6931,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A survey of 1,000+ US and UK workers by Propeller Insights for talent-assessment firm SHL found nearly one in five US workers laid off or replaced by AI were later asked to return; almost half would demand a big pay rise, 43% written job guarantees and 30% an apology from leadership",
-    "source": "People Matters (SHL survey)",
+    "headline": "A Sierra Club analysis reported by Bloomberg projects planned AI data centres could lift US power-sector CO2 emissions about 42% above 2025 levels by 2030; other forecasters, including Rhodium Group, still expect emissions to fall as renewables get cheaper, and analysts say many projects may be delayed",
+    "source": "Bloomberg via Energy Connects",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7192,6 +7200,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A survey of 1,000+ US and UK workers by Propeller Insights for talent-assessment firm SHL found nearly one in five US workers laid off or replaced by AI were later asked to return; almost half would demand a big pay rise, 43% written job guarantees and 30% an apology from leadership",
         "source": "People Matters (SHL survey)",
         "url": "https://www.peoplematters.in/news/business/nearly-1-in-5-workers-laid-off-due-to-ai-are-asked-to-return-survey-finds-53098",
+    },
+    "2026-11-06": {
+        "headline": "A Sierra Club analysis reported by Bloomberg projects planned AI data centres could lift US power-sector CO2 emissions about 42% above 2025 levels by 2030; other forecasters, including Rhodium Group, still expect emissions to fall as renewables get cheaper, and analysts say many projects may be delayed",
+        "source": "Bloomberg via Energy Connects",
+        "url": "https://www.energyconnects.com/news/renewables/2026/october/new-us-data-centers-projected-to-emit-more-carbon-than-all-of-mexico/",
     },
 }
 

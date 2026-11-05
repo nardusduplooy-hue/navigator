@@ -242,6 +242,7 @@ def build_briefing():
 "2026-11-03": {"quote": "📄 𝗦𝗶𝘅 𝗱𝗮𝘆𝘀. 𝗜𝗻 𝘁𝗵𝗲 𝗲𝗻𝗱, 𝘆𝗼𝘂 𝗱𝗼𝗻'𝘁 𝘁𝗮𝗸𝗲 𝗻𝗼𝘁𝗲𝘀, 𝗯𝘂𝘁 𝗮 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗽𝗿𝗼𝗱𝘂𝗰𝘁.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522917137791991808/"},
 "2026-11-04": {"quote": "📄 𝗪𝗶𝗻𝗱𝗼𝘄𝘀 𝘂𝘀𝗲𝗿𝘀, 𝘁𝗵𝗶𝘀 𝗼𝗻𝗲’𝘀 𝗳𝗼𝗿 𝘆𝗼𝘂.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/"},
 "2026-11-05": {"quote": "📄 𝗠𝘆 𝗵𝘂𝗯 𝗶𝘀 𝗹𝗶𝘃𝗲: talirezun.com", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/"},
+"2026-11-06": {"quote": "📄 𝗪𝗲 𝘀𝘁𝗮𝗿𝘁 𝗼𝗻 𝗠𝗼𝗻𝗱𝗮𝘆, 𝗡𝗼𝘃𝗲𝗺𝗯𝗲𝗿 𝟵𝘁𝗵. 𝗔 𝗳𝗲𝘄 𝗽𝗹𝗮𝗰𝗲𝘀 𝗮𝗿𝗲 𝘀𝘁𝗶𝗹𝗹 𝘃𝗮𝗰𝗮𝗻𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524019853964304384/"},
     }
 
     lines = []
@@ -384,6 +385,7 @@ def build_briefing():
         "2026-11-03": "A new survey found three in four AI users save at least an hour a week, yet only 26% turn that time into extra capacity, and 45% spend an hour or more fixing colleagues’ AI work. Chapter 10: look at what your tribe built this quarter. What is making next quarter faster, and what is just the same effort repeated?",
         "2026-11-04": "ZipRecruiter’s new AI Worker Report found 82.5% of US workers use AI at work, yet only 28.9% get extensive training and 37% teach themselves. Chapter 11: pick the idea from this programme you could explain most confidently. When did you last actually apply it under real stakes, and what did it teach you?",
         "2026-11-05": "A new survey found nearly one in five US workers replaced by AI were later asked to come back, and 30% would want an apology before returning. Chapter 12: replay your most recent real conflict. Who took the short-term win, who quietly absorbed the cost, and who went along to avoid choosing? Which role did you play?",
+        "2026-11-06": "A new Sierra Club analysis says AI data centres could push US power emissions 42% higher by 2030, years after tech giants pledged net zero, though other forecasters disagree. Chapter 13: go back to your last written commitment and score yourself against it, out loud, to the person who witnessed it. What is the honest score?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1203,6 +1205,7 @@ def build_briefing():
                                {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"}],
                 "2026-11-05": [{"quote": "\U0001f4c4 <b>Windows users, this one’s for you.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/"},
                                {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"}],
+                "2026-11-06": {"quote": "\U0001f4c4 𝗠𝘆 𝗵𝘂𝗯 𝗶𝘀 𝗹𝗶𝘃𝗲: talirezun.com", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/"},
             }
             if date_key in extra_cj_entries:
                 _extras = extra_cj_entries[date_key]
