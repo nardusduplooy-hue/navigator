@@ -243,6 +243,7 @@ def build_briefing():
 "2026-11-04": {"quote": "📄 𝗪𝗶𝗻𝗱𝗼𝘄𝘀 𝘂𝘀𝗲𝗿𝘀, 𝘁𝗵𝗶𝘀 𝗼𝗻𝗲’𝘀 𝗳𝗼𝗿 𝘆𝗼𝘂.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/"},
 "2026-11-05": {"quote": "📄 𝗠𝘆 𝗵𝘂𝗯 𝗶𝘀 𝗹𝗶𝘃𝗲: talirezun.com", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/"},
 "2026-11-06": {"quote": "📄 𝗪𝗲 𝘀𝘁𝗮𝗿𝘁 𝗼𝗻 𝗠𝗼𝗻𝗱𝗮𝘆, 𝗡𝗼𝘃𝗲𝗺𝗯𝗲𝗿 𝟵𝘁𝗵. 𝗔 𝗳𝗲𝘄 𝗽𝗹𝗮𝗰𝗲𝘀 𝗮𝗿𝗲 𝘀𝘁𝗶𝗹𝗹 𝘃𝗮𝗰𝗮𝗻𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524019853964304384/"},
+"2026-11-09": {"quote": "📄 𝗧𝗵𝗶𝗿𝘁𝘆 𝘆𝗲𝗮𝗿𝘀 𝗮𝘁 𝘁𝗵𝗲 𝗲𝗱𝗴𝗲 𝗼𝗳 𝗲𝘃𝗲𝗿𝘆 𝘁𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘄𝗮𝘃𝗲.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/"},
     }
 
     lines = []
@@ -386,6 +387,7 @@ def build_briefing():
         "2026-11-04": "ZipRecruiter’s new AI Worker Report found 82.5% of US workers use AI at work, yet only 28.9% get extensive training and 37% teach themselves. Chapter 11: pick the idea from this programme you could explain most confidently. When did you last actually apply it under real stakes, and what did it teach you?",
         "2026-11-05": "A new survey found nearly one in five US workers replaced by AI were later asked to come back, and 30% would want an apology before returning. Chapter 12: replay your most recent real conflict. Who took the short-term win, who quietly absorbed the cost, and who went along to avoid choosing? Which role did you play?",
         "2026-11-06": "A new Sierra Club analysis says AI data centres could push US power emissions 42% higher by 2030, years after tech giants pledged net zero, though other forecasters disagree. Chapter 13: go back to your last written commitment and score yourself against it, out loud, to the person who witnessed it. What is the honest score?",
+        "2026-11-09": "Oracle has reportedly walked away from a $7bn AI chip deal with Tencent, though only after US officials raised concerns. Chapter 3: name the one deal, hire or shortcut from this quarter that a principled operator would have refused, even with nobody forcing the decision. Why did you take it, and would you take it again?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

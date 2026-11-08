@@ -4314,6 +4314,14 @@ TALI_STEPS = {
         "question": "A new Sierra Club analysis says AI data centres could push US power emissions 42% higher by 2030, years after big tech firms pledged net zero, though other forecasters expect emissions to keep falling. Go back to your last written commitment. What is your honest score, and who will you say it to out loud this week?",
         "model_answer": "Start by finding the actual words you wrote, not your memory of them. Memory edits commitments quietly; it softens the deadline and widens the definition until almost anything counts. Then score it plainly: done, partly done, or not done, with one sentence of evidence for each. The hard part is saying it out loud to the person who witnessed it. That conversation feels exposing, which is exactly why it works. It turns a private intention into a public record, and it usually goes better than you fear: most people respect an honest ‘I didn’t do it, and here is why’ far more than silence. If the score is low, avoid two easy exits. Do not quietly drop the commitment, and do not rewrite it so you appear to have passed. Either recommit with a smaller first step and a date, or say clearly that circumstances changed and replace it with something you will actually do. The Vanguard move: re-score your commitment, tell your witness the score this week, and agree on the next checkpoint together.",
     },
+    "2026-11-09": {
+        "step": "The Perfect Merchant — The Deal You Should Have Refused",
+        "title": "What Would the Perfect Merchant Have Refused This Quarter?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/",
+        "focus": "Chapter 3 defines the perfect merchant not by the deals taken but by the one refused when refusing was inconvenient. Every quarter carries at least one deal, hire or shortcut that got taken because saying no looked expensive in the moment, even though a principled operator would have walked away. The exercise is to name that one thing from this quarter, specifically. A large refusal made headlines this week, with an important twist. The Financial Times reported, citing two people familiar with the matter, that Oracle cancelled a five-year deal worth an estimated $7 billion to rent Tencent access to about 100,000 advanced AI chips in Southeast Asian data centres, after US officials raised concerns. Neither company has confirmed the report or given a reason. Whatever the full story, it was a refusal reportedly prompted by outside pressure. The merchant’s test is harder: the refusal nobody required of you.",
+        "question": "Oracle has reportedly cancelled a $7bn AI chip deal with Tencent, but only after US officials raised concerns. Think about this quarter. Name the one deal, hire or shortcut a principled operator would have refused, even with nobody forcing the decision. What made saying yes feel cheaper at the time?",
+        "model_answer": "The thing you need to name usually comes to mind quickly, and then you start explaining it away. That reflex is the signal. It might be a client you kept despite how they treated your team, a hire made for speed rather than fit, a discount that bought a deal you knew would be painful to deliver, or a corner cut on quality because the deadline was close. At the time, each looked sensible: the revenue was real, the gap was urgent, the risk seemed small. What made yes feel cheaper was that its costs arrived later and landed on someone else, while the cost of no was immediate and yours. Refusals forced by a regulator, a policy or a boss do not test character; they test compliance. The perfect merchant’s refusals are the voluntary ones. You cannot undo this quarter’s yes, but you can decide what you would do next time, and write the rule down before the next tempting offer arrives. The Vanguard move: name the deal, write one sentence on the rule it broke, and share that rule with your tribe.",
+    },
 
 
 
@@ -6919,9 +6927,9 @@ TOOL_SPOTLIGHT = {
 }
 
 KAPUSTA_TODAY = {
-    "url": "https://www.linkedin.com/posts/cotrugli_cdayz-leadership-nvidia-ugcPost-7521841362649092096-5NK8/?utm_source=share&amp;utm_medium=member_android&amp;rcm=ACoAAABVXjQBjD1rAkelAiZQjLIpnQRQFS6tooE",
-    "title": "What happens when the extraordinary becomes a weekly occurrence?",
-    "description": "Updated 30 Oct per Nardus sheet B58/B60 (for 31 Oct).",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525160237922844672/",
+    "title": "14 days for your 1st working agent",
+    "description": "Updated 8 Nov per Nardus (for 9 Nov).",
 }
 
 SUPPLEMENTARY_RESOURCE = {
@@ -6931,8 +6939,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A Sierra Club analysis reported by Bloomberg projects planned AI data centres could lift US power-sector CO2 emissions about 42% above 2025 levels by 2030; other forecasters, including Rhodium Group, still expect emissions to fall as renewables get cheaper, and analysts say many projects may be delayed",
-    "source": "Bloomberg via Energy Connects",
+    "headline": "Oracle has cancelled a reported $7bn, five-year deal to rent Tencent about 100,000 advanced AI chips in Southeast Asian data centres after US officials raised concerns, the Financial Times reported, citing two people familiar with the matter; neither company has confirmed it",
+    "source": "24/7 Wall St. (citing the Financial Times)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7205,6 +7213,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A Sierra Club analysis reported by Bloomberg projects planned AI data centres could lift US power-sector CO2 emissions about 42% above 2025 levels by 2030; other forecasters, including Rhodium Group, still expect emissions to fall as renewables get cheaper, and analysts say many projects may be delayed",
         "source": "Bloomberg via Energy Connects",
         "url": "https://www.energyconnects.com/news/renewables/2026/october/new-us-data-centers-projected-to-emit-more-carbon-than-all-of-mexico/",
+    },
+    "2026-11-09": {
+        "headline": "Oracle has cancelled a reported $7bn, five-year deal to rent Tencent about 100,000 advanced AI chips in Southeast Asian data centres after US officials raised concerns, the Financial Times reported, citing two people familiar with the matter; neither company has confirmed it",
+        "source": "24/7 Wall St. (citing the Financial Times)",
+        "url": "https://247wallst.com/investing/2026/11/05/oracle-just-walked-away-from-a-7-billion-tencent-ai-deal/",
     },
 }
 
