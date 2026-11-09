@@ -1870,6 +1870,148 @@ VANGUARD_SUMMARIES = {
             "refusing it was inconvenient."
         ),
     },
+    "2026-11-10": {
+        "title": "Which Axiom Gave Way First the Last Time You Were Under Pressure?",
+        "chapter": "Chapter 4: NEO Cotruglian Philosophy (5 Axioms)",
+        "summary": (
+            "Under real deadline pressure, the five axioms rarely fail together. One gives way first, "
+            "usually Long-Term Dominates or Positive-Sum Wins, because the short-term, zero-sum option is "
+            "the one sitting right there. Think back to the last time you were genuinely squeezed and name "
+            "the axiom that cracked first, and what exactly the pressure was. That axiom is the one that is "
+            "still a preference for you, not yet a rule."
+        ),
+    },
+    "2026-11-11": {
+        "title": "Who Is Coordinating Faster Than You, and Why Haven't You Noticed?",
+        "chapter": "Chapter 5: The NEO Era Battlefield",
+        "summary": (
+            "On a networked, orchestrated battlefield, the most dangerous competitor is rarely the biggest "
+            "one. It is the one coordinating partners, tools and talent faster than you can, often without "
+            "looking like a threat until the gap is already wide. Name one player in your market who has "
+            "quietly started moving faster this year. Then ask what they are coordinating that you are still "
+            "trying to do alone."
+        ),
+    },
+    "2026-11-12": {
+        "title": "Could Your Team Repeat Your Intent in One Sentence?",
+        "chapter": "Chapter 6: Business as Warfare",
+        "summary": (
+            "Mission command only works if people know the intent well enough to act on it without asking. "
+            "Most leaders believe their intent is clear because it is clear to them. Write your current "
+            "priority as one sentence, then ask two people on your team to state it in their own words, "
+            "without prompting. The distance between the three versions is how much of your direction is "
+            "actually reaching the edge."
+        ),
+    },
+    "2026-11-13": {
+        "title": "Where Are You Pretending to Know What Happens Next?",
+        "chapter": "Chapter 7: The NEO Leadership Challenge",
+        "summary": (
+            "NEO-era leadership means making real decisions in conditions nobody can forecast with "
+            "confidence, and the temptation is to project certainty because the team seems to want it. Find "
+            "one place this week where you are presenting a plan as more predictable than it really is. Ask "
+            "what would change if you told your tribe the honest version: what you know, what you are "
+            "betting on, and when you will check."
+        ),
+    },
+    "2026-11-14": {
+        "title": "The Fear You Keep Calling Prudence",
+        "chapter": "Chapter 8: Fear as Data",
+        "summary": (
+            "Some of the most persistent fears never get examined because they have been relabelled as "
+            "caution, standards or good judgment. The test is whether the ‘prudent’ choice keeps protecting "
+            "you personally more than it protects the work or the people relying on it. Name one decision "
+            "you keep delaying for sensible-sounding reasons. If the reasons have not changed in months, the "
+            "fear underneath them is the real data."
+        ),
+    },
+    "2026-11-15": {
+        "title": "The Task You Handed to AI That You No Longer Understand",
+        "chapter": "Chapter 9: AI as Force Multiplier",
+        "summary": (
+            "Force multiplication has a quiet cost: the work you delegate to AI often stops being work you "
+            "could still do, check or explain yourself. That is fine for tasks that do not matter, and "
+            "dangerous for the ones that do. Name one task you now run mostly through AI. Could you still "
+            "spot a serious mistake in its output, and explain why it was wrong? If not, you have multiplied "
+            "your speed and divided your judgment."
+        ),
+    },
+    "2026-11-16": {
+        "title": "Who in Your Tribe Would You Trust With a Decision You Can't Review?",
+        "chapter": "Chapter 10: Tribe as Coordination",
+        "summary": (
+            "Coordination at speed depends on trusting people to decide things you will never see in time to "
+            "check. Most leaders say they trust their tribe; fewer could name the specific decisions they "
+            "would genuinely hand over unreviewed. Name one person and one decision you would let them make "
+            "without you this month. If no name comes, the tribe is still coordinating through you, and you "
+            "are the bottleneck it was built to remove."
+        ),
+    },
+    "2026-11-17": {
+        "title": "What Can You Now Do That You Couldn't in September?",
+        "chapter": "Chapter 11: What You Now Possess",
+        "summary": (
+            "Possession shows up as capability, not vocabulary. After months in this programme, it is easy "
+            "to list new concepts and harder to name what you can now actually do differently under "
+            "pressure. Write down one thing you can do today that you could not do in September, with a "
+            "specific moment you did it. If the list is all ideas and no moments, the next step is practice, "
+            "not more reading."
+        ),
+    },
+    "2026-11-18": {
+        "title": "Where Are You Choosing Comfort Over Choosing a Side?",
+        "chapter": "Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)",
+        "summary": (
+            "The sheep pattern rarely feels like weakness from the inside. It feels like keeping the peace, "
+            "staying professional, or giving people the benefit of the doubt. Name one live disagreement in "
+            "your tribe or business where you have stayed neutral mainly because taking a position would be "
+            "uncomfortable. Ask who is absorbing the cost of your neutrality while you wait for it to "
+            "resolve itself."
+        ),
+    },
+    "2026-11-19": {
+        "title": "Write One Principle for the Next Agent You Deploy",
+        "chapter": "Chapter 13: The Sheepdog Manifesto",
+        "summary": (
+            "The Sheepdog Manifesto was written as a blueprint for any intelligence, human or artificial. "
+            "Make that practical: before you deploy your next AI agent or automation, write one principle it "
+            "must follow even when breaking it would be faster or cheaper. Then check whether you follow "
+            "that same principle yourself. If you would not hold yourself to it, the agent will not be the "
+            "weak link."
+        ),
+    },
+    "2026-11-20": {
+        "title": "The Detail Only You Would Notice: Do You Still Fix It?",
+        "chapter": "Chapter 1: Business as Craft & Shokunin",
+        "summary": (
+            "Craft lives in the details nobody else would catch: the slightly wrong number in an appendix, "
+            "the awkward sentence in a client email, the step in a process everyone works around. As people "
+            "get busier and better, those details are usually the first thing to slip, because nobody "
+            "complains. Name one detail you used to fix every time and now let pass. Shokunin is the choice "
+            "to fix it anyway."
+        ),
+    },
+    "2026-11-21": {
+        "title": "The Relationship You're Treating as a Transaction",
+        "chapter": "Chapter 2: Prince or Trader",
+        "summary": (
+            "The trader optimises each exchange; the prince invests in relationships that outlast any single "
+            "deal. Most leaders are princes with their best clients and traders with everyone else, without "
+            "ever deciding to be. Name one relationship, a supplier, colleague or smaller client, that you "
+            "have been handling purely transactionally. What would change if you treated it as something you "
+            "expect to still matter in five years?"
+        ),
+    },
+    "2026-11-22": {
+        "title": "Would You Want This Week's Dealings Read Aloud to Your Best Client?",
+        "chapter": "Chapter 3: The Perfect Merchant for the NEO Era",
+        "summary": (
+            "The perfect merchant runs a simple test on every dealing: would I be comfortable if my most "
+            "important client heard exactly how this was done? Not the outcome, the method: the pressure "
+            "applied, the detail left out, the promise made loosely. Look back at this week and pick the one "
+            "exchange you would least want read aloud. That is where your reputation is quietly being spent."
+        ),
+    },
 }
 
 
@@ -4321,6 +4463,14 @@ TALI_STEPS = {
         "focus": "Chapter 3 defines the perfect merchant not by the deals taken but by the one refused when refusing was inconvenient. Every quarter carries at least one deal, hire or shortcut that got taken because saying no looked expensive in the moment, even though a principled operator would have walked away. The exercise is to name that one thing from this quarter, specifically. A large refusal made headlines this week, with an important twist. The Financial Times reported, citing two people familiar with the matter, that Oracle cancelled a five-year deal worth an estimated $7 billion to rent Tencent access to about 100,000 advanced AI chips in Southeast Asian data centres, after US officials raised concerns. Neither company has confirmed the report or given a reason. Whatever the full story, it was a refusal reportedly prompted by outside pressure. The merchant’s test is harder: the refusal nobody required of you.",
         "question": "Oracle has reportedly cancelled a $7bn AI chip deal with Tencent, but only after US officials raised concerns. Think about this quarter. Name the one deal, hire or shortcut a principled operator would have refused, even with nobody forcing the decision. What made saying yes feel cheaper at the time?",
         "model_answer": "The thing you need to name usually comes to mind quickly, and then you start explaining it away. That reflex is the signal. It might be a client you kept despite how they treated your team, a hire made for speed rather than fit, a discount that bought a deal you knew would be painful to deliver, or a corner cut on quality because the deadline was close. At the time, each looked sensible: the revenue was real, the gap was urgent, the risk seemed small. What made yes feel cheaper was that its costs arrived later and landed on someone else, while the cost of no was immediate and yours. Refusals forced by a regulator, a policy or a boss do not test character; they test compliance. The perfect merchant’s refusals are the voluntary ones. You cannot undo this quarter’s yes, but you can decide what you would do next time, and write the rule down before the next tempting offer arrives. The Vanguard move: name the deal, write one sentence on the rule it broke, and share that rule with your tribe.",
+    },
+    "2026-11-10": {
+        "step": "NEO Cotruglian Philosophy — The Axiom That Gives Way",
+        "title": "Which Axiom Gave Way First Under Pressure?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/",
+        "focus": "Chapter 4’s five axioms are easy to hold when nothing is at stake. Under real deadline pressure they rarely fail together: one gives way first, usually Long-Term Dominates or Positive-Sum Wins, because the short-term, zero-sum option is the one sitting right there. Naming which axiom cracked first, and what the pressure was, shows you which one is still a preference rather than a rule. A new survey shows how pressure bends behaviour at work. In a poll of 1,000 US adults by Dynata for payment-security firm Trustmi, 53% of employed respondents said pressure to work faster or do more with AI had led them to use a tool they were not sure was approved. 68% said they were likely to spend less time verifying whether a request was legitimate when under pressure, and 71% had found an error or suspicious detail only after acting on it. Nobody planned to cut those corners; the pressure chose for them.",
+        "question": "A new survey found 53% of US workers used an AI tool they weren’t sure was approved because of pressure to work faster, and 68% verify less under pressure. Think of the last time you were truly squeezed at work. Which of the five axioms gave way first, and what exactly was the pressure that made it give way?",
+        "model_answer": "Be specific about the moment. ‘I was busy’ is not an answer; ‘the client wanted the proposal by Friday and I promised a delivery date I knew was risky’ is. Then match it to an axiom. A rushed promise usually breaks Long-Term Dominates. Squeezing a supplier or keeping information from a partner to win the round breaks Positive-Sum Wins. Shipping something you knew was not ready breaks Essence Through Craft. Most people find the same axiom gives way repeatedly, and the trigger is usually the same kind of pressure: a deadline, a number or a person they do not want to disappoint. That pattern is useful. It tells you exactly where to put a rule in place before the pressure arrives, because nobody makes good principled decisions in the moment of squeeze. The survey shows the same thing: people verify less precisely when it matters most. The Vanguard move: name your weak axiom and its trigger, write one rule that protects it, and tell your tribe so they can hold you to it.",
     },
 
 
@@ -6939,8 +7089,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Oracle has cancelled a reported $7bn, five-year deal to rent Tencent about 100,000 advanced AI chips in Southeast Asian data centres after US officials raised concerns, the Financial Times reported, citing two people familiar with the matter; neither company has confirmed it",
-    "source": "24/7 Wall St. (citing the Financial Times)",
+    "headline": "A Dynata poll of 1,000 US adults for payment-security firm Trustmi found 53% of employed respondents used an AI tool they weren’t sure was approved because of pressure to work faster, 68% verify requests less carefully under pressure, and 71% caught an error only after acting on it",
+    "source": "SecurityBrief (Trustmi survey)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7218,6 +7368,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Oracle has cancelled a reported $7bn, five-year deal to rent Tencent about 100,000 advanced AI chips in Southeast Asian data centres after US officials raised concerns, the Financial Times reported, citing two people familiar with the matter; neither company has confirmed it",
         "source": "24/7 Wall St. (citing the Financial Times)",
         "url": "https://247wallst.com/investing/2026/11/05/oracle-just-walked-away-from-a-7-billion-tencent-ai-deal/",
+    },
+    "2026-11-10": {
+        "headline": "A Dynata poll of 1,000 US adults for payment-security firm Trustmi found 53% of employed respondents used an AI tool they weren’t sure was approved because of pressure to work faster, 68% verify requests less carefully under pressure, and 71% caught an error only after acting on it",
+        "source": "SecurityBrief (Trustmi survey)",
+        "url": "https://securitybrief.news/story/pressure-drives-workers-to-use-unapproved-ai-tools",
     },
 }
 

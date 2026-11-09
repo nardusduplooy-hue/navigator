@@ -244,6 +244,7 @@ def build_briefing():
 "2026-11-05": {"quote": "📄 𝗠𝘆 𝗵𝘂𝗯 𝗶𝘀 𝗹𝗶𝘃𝗲: talirezun.com", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/"},
 "2026-11-06": {"quote": "📄 𝗪𝗲 𝘀𝘁𝗮𝗿𝘁 𝗼𝗻 𝗠𝗼𝗻𝗱𝗮𝘆, 𝗡𝗼𝘃𝗲𝗺𝗯𝗲𝗿 𝟵𝘁𝗵. 𝗔 𝗳𝗲𝘄 𝗽𝗹𝗮𝗰𝗲𝘀 𝗮𝗿𝗲 𝘀𝘁𝗶𝗹𝗹 𝘃𝗮𝗰𝗮𝗻𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524019853964304384/"},
 "2026-11-09": {"quote": "📄 𝗧𝗵𝗶𝗿𝘁𝘆 𝘆𝗲𝗮𝗿𝘀 𝗮𝘁 𝘁𝗵𝗲 𝗲𝗱𝗴𝗲 𝗼𝗳 𝗲𝘃𝗲𝗿𝘆 𝘁𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘄𝗮𝘃𝗲.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/"},
+"2026-11-10": {"quote": "📄 𝗧𝗵𝗶𝗿𝘁𝘆 𝘆𝗲𝗮𝗿𝘀 𝗮𝘁 𝘁𝗵𝗲 𝗲𝗱𝗴𝗲 𝗼𝗳 𝗲𝘃𝗲𝗿𝘆 𝘁𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘄𝗮𝘃𝗲.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/"},
     }
 
     lines = []
@@ -388,6 +389,7 @@ def build_briefing():
         "2026-11-05": "A new survey found nearly one in five US workers replaced by AI were later asked to come back, and 30% would want an apology before returning. Chapter 12: replay your most recent real conflict. Who took the short-term win, who quietly absorbed the cost, and who went along to avoid choosing? Which role did you play?",
         "2026-11-06": "A new Sierra Club analysis says AI data centres could push US power emissions 42% higher by 2030, years after tech giants pledged net zero, though other forecasters disagree. Chapter 13: go back to your last written commitment and score yourself against it, out loud, to the person who witnessed it. What is the honest score?",
         "2026-11-09": "Oracle has reportedly walked away from a $7bn AI chip deal with Tencent, though only after US officials raised concerns. Chapter 3: name the one deal, hire or shortcut from this quarter that a principled operator would have refused, even with nobody forcing the decision. Why did you take it, and would you take it again?",
+        "2026-11-10": "A new survey found 53% of US workers used an AI tool they weren’t sure was approved because of pressure to work faster, and 68% check things less carefully under pressure. Chapter 4: think of the last time you were truly squeezed. Which of the five axioms gave way first, and what exactly was the pressure?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
