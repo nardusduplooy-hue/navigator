@@ -245,6 +245,7 @@ def build_briefing():
 "2026-11-06": {"quote": "📄 𝗪𝗲 𝘀𝘁𝗮𝗿𝘁 𝗼𝗻 𝗠𝗼𝗻𝗱𝗮𝘆, 𝗡𝗼𝘃𝗲𝗺𝗯𝗲𝗿 𝟵𝘁𝗵. 𝗔 𝗳𝗲𝘄 𝗽𝗹𝗮𝗰𝗲𝘀 𝗮𝗿𝗲 𝘀𝘁𝗶𝗹𝗹 𝘃𝗮𝗰𝗮𝗻𝘁", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524019853964304384/"},
 "2026-11-09": {"quote": "📄 𝗧𝗵𝗶𝗿𝘁𝘆 𝘆𝗲𝗮𝗿𝘀 𝗮𝘁 𝘁𝗵𝗲 𝗲𝗱𝗴𝗲 𝗼𝗳 𝗲𝘃𝗲𝗿𝘆 𝘁𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘄𝗮𝘃𝗲.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/"},
 "2026-11-10": {"quote": "📄 𝗧𝗵𝗶𝗿𝘁𝘆 𝘆𝗲𝗮𝗿𝘀 𝗮𝘁 𝘁𝗵𝗲 𝗲𝗱𝗴𝗲 𝗼𝗳 𝗲𝘃𝗲𝗿𝘆 𝘁𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘄𝗮𝘃𝗲.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/"},
+"2026-11-11": {"quote": "📄 𝗪𝗵𝗶𝗰𝗵 𝗖𝗹𝗮𝘂𝗱𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗵𝗼𝘂𝗹𝗱 𝘆𝗼𝘂 𝗯𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
     }
 
     lines = []
@@ -390,6 +391,7 @@ def build_briefing():
         "2026-11-06": "A new Sierra Club analysis says AI data centres could push US power emissions 42% higher by 2030, years after tech giants pledged net zero, though other forecasters disagree. Chapter 13: go back to your last written commitment and score yourself against it, out loud, to the person who witnessed it. What is the honest score?",
         "2026-11-09": "Oracle has reportedly walked away from a $7bn AI chip deal with Tencent, though only after US officials raised concerns. Chapter 3: name the one deal, hire or shortcut from this quarter that a principled operator would have refused, even with nobody forcing the decision. Why did you take it, and would you take it again?",
         "2026-11-10": "A new survey found 53% of US workers used an AI tool they weren’t sure was approved because of pressure to work faster, and 68% check things less carefully under pressure. Chapter 4: think of the last time you were truly squeezed. Which of the five axioms gave way first, and what exactly was the pressure?",
+        "2026-11-11": "Gartner’s latest risk survey ranks AI-driven competitive displacement among the top five enterprise risks, alongside misjudging AI strategy. Chapter 5: name one player in your market who has quietly started moving faster this year. What are they coordinating with partners or AI that you are still trying to do on your own?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1417,6 +1419,12 @@ def build_briefing():
         if date_key not in ("2026-05-28",):
             if date_key == "2026-08-05":
                 lines.append("<a href='https://stream.redcircle.com/episodes/93987263-20df-456e-80b9-afed8f1e7c68/stream.mp3'>→ Vanguard Leadership intro Podcast — Dra\u017een Kapusta</a>")
+            elif date_key >= "2026-11-11":
+                # 11 Nov: eX community app summary replaces the Kapusta LinkedIn post (Nardus sheet B52/B53, B71-B113)
+                lines.append("\U0001f4f1 <b>eX \u2014 the COTRUGLI community app</b>")
+                lines.append("<blockquote>eX (ex.cotrugli.tech) is COTRUGLI’s community app: members meet in person to share business experience and thank each other with tokens, and it holds the Vanguard Leadership lessons, the dilemma of the week, the 14-day Task-to-Agent course and audiobooks. "
+                             "To join the private Vanguard room, send /ex to @CotruglieXbot in a private chat, or, if you are already in eX from CDayZ, send /vec and your eX name. "
+                             "Then add eX to your home screen, turn on notifications and use your 10 starting tokens to join or host a meetup.</blockquote>")
             elif date_key >= "2026-07-06":
                 if KAPUSTA_TODAY.get("title"):
                     lines.append("\U0001f4c4 <b>" + KAPUSTA_TODAY["title"] + "</b>")

@@ -4472,6 +4472,14 @@ TALI_STEPS = {
         "question": "A new survey found 53% of US workers used an AI tool they weren’t sure was approved because of pressure to work faster, and 68% verify less under pressure. Think of the last time you were truly squeezed at work. Which of the five axioms gave way first, and what exactly was the pressure that made it give way?",
         "model_answer": "Be specific about the moment. ‘I was busy’ is not an answer; ‘the client wanted the proposal by Friday and I promised a delivery date I knew was risky’ is. Then match it to an axiom. A rushed promise usually breaks Long-Term Dominates. Squeezing a supplier or keeping information from a partner to win the round breaks Positive-Sum Wins. Shipping something you knew was not ready breaks Essence Through Craft. Most people find the same axiom gives way repeatedly, and the trigger is usually the same kind of pressure: a deadline, a number or a person they do not want to disappoint. That pattern is useful. It tells you exactly where to put a rule in place before the pressure arrives, because nobody makes good principled decisions in the moment of squeeze. The survey shows the same thing: people verify less precisely when it matters most. The Vanguard move: name your weak axiom and its trigger, write one rule that protects it, and tell your tribe so they can hold you to it.",
     },
+    "2026-11-11": {
+        "step": "The NEO Era Battlefield — Who Is Moving Faster",
+        "title": "Who Is Coordinating Faster Than You?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/",
+        "focus": "Chapter 5 describes a battlefield that is networked, exponential and orchestrated. On that kind of battlefield the most dangerous competitor is rarely the biggest one. It is the one coordinating partners, tools and talent faster than you, often without looking like a threat until the gap is already wide. The exercise is to name one player in your market who has quietly started moving faster this year, and ask what they are coordinating that you are still trying to do alone. Risk leaders are starting to see the same danger. Gartner’s latest Quarterly Emerging Risk Report, based on responses from 308 enterprise risk leaders, auditors and senior executives, ranks AI strategy miscalculation third and AI-driven competitive displacement fourth among the top emerging enterprise risks. Meanwhile, in Gartner’s 2026 CFO survey, only 17% said more than half of their AI projects had delivered measurable revenue growth or cost savings. Being displaced and spending without results are two sides of the same gap.",
+        "question": "Gartner’s latest risk survey ranks AI-driven competitive displacement among the top five enterprise risks, and only 17% of CFOs say most of their AI projects delivered measurable results. Name one player in your market who has quietly started moving faster this year. What are they coordinating that you are still doing alone?",
+        "model_answer": "Look beyond the obvious rival. The player moving faster is often a smaller firm, a new entrant or even a supplier or partner that has started doing part of your job. The signs are practical: they respond to clients in hours rather than days, launch things you are still discussing, or win work with a team half your size. Then ask what they are coordinating. Usually it is not one brilliant tool but a combination: partners who handle what they do not, AI agents that take routine work off their people, and a decision process with fewer approval layers. What you are doing alone is often what you have always done in-house out of habit, control or pride. The answer is rarely to copy them directly. It is to choose one area where coordination would beat ownership, and test it. The Gartner numbers explain the urgency: displacement risk rises while internal AI spending struggles to deliver. The Vanguard move: name the competitor, name the one thing they coordinate better, and pick one partner, tool or person you could bring in this month.",
+    },
 
 
 
@@ -7089,8 +7097,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A Dynata poll of 1,000 US adults for payment-security firm Trustmi found 53% of employed respondents used an AI tool they weren’t sure was approved because of pressure to work faster, 68% verify requests less carefully under pressure, and 71% caught an error only after acting on it",
-    "source": "SecurityBrief (Trustmi survey)",
+    "headline": "Gartner’s latest Quarterly Emerging Risk Report ranks AI strategy miscalculation and AI-driven competitive displacement as the No. 3 and No. 4 enterprise risks; only 17% of CFOs say most of their AI projects delivered measurable results",
+    "source": "Help Net Security (Gartner)",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7373,6 +7381,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A Dynata poll of 1,000 US adults for payment-security firm Trustmi found 53% of employed respondents used an AI tool they weren’t sure was approved because of pressure to work faster, 68% verify requests less carefully under pressure, and 71% caught an error only after acting on it",
         "source": "SecurityBrief (Trustmi survey)",
         "url": "https://securitybrief.news/story/pressure-drives-workers-to-use-unapproved-ai-tools",
+    },
+    "2026-11-11": {
+        "headline": "Gartner’s latest Quarterly Emerging Risk Report ranks AI strategy miscalculation and AI-driven competitive displacement as the No. 3 and No. 4 enterprise risks; only 17% of CFOs say most of their AI projects delivered measurable results",
+        "source": "Help Net Security (Gartner)",
+        "url": "https://www.helpnetsecurity.com/2026/11/04/ai-strategy-miscalculation-gartner-report/",
     },
 }
 
