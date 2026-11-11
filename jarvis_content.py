@@ -4480,6 +4480,14 @@ TALI_STEPS = {
         "question": "Gartner’s latest risk survey ranks AI-driven competitive displacement among the top five enterprise risks, and only 17% of CFOs say most of their AI projects delivered measurable results. Name one player in your market who has quietly started moving faster this year. What are they coordinating that you are still doing alone?",
         "model_answer": "Look beyond the obvious rival. The player moving faster is often a smaller firm, a new entrant or even a supplier or partner that has started doing part of your job. The signs are practical: they respond to clients in hours rather than days, launch things you are still discussing, or win work with a team half your size. Then ask what they are coordinating. Usually it is not one brilliant tool but a combination: partners who handle what they do not, AI agents that take routine work off their people, and a decision process with fewer approval layers. What you are doing alone is often what you have always done in-house out of habit, control or pride. The answer is rarely to copy them directly. It is to choose one area where coordination would beat ownership, and test it. The Gartner numbers explain the urgency: displacement risk rises while internal AI spending struggles to deliver. The Vanguard move: name the competitor, name the one thing they coordinate better, and pick one partner, tool or person you could bring in this month.",
     },
+    "2026-11-12": {
+        "step": "Business as Warfare — Commander’s Intent",
+        "title": "Could Your Team Repeat Your Intent in One Sentence?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/",
+        "focus": "Chapter 6 rests on mission command: people can act at the edge without asking only if they know the intent well enough to act on it. Most leaders believe their intent is clear because it is clear to them. The exercise is to write your current priority as one sentence, then ask two people on your team to state it in their own words. The distance between the three versions shows how much of your direction is actually reaching the edge. Research on AI at work shows how large that distance can be. In a Workday survey of nearly 6,000 workers worldwide, senior leaders were 2.5 times more likely than individual contributors to say they understood AI agents well. 88% of senior leaders had used agentic AI to complete tasks, against 54% of individual contributors, and 66% of leaders trusted their employer’s approach to AI, compared with only 32% of individual contributors. The strategy is clear at the top; it is not yet clear at the edge.",
+        "question": "A Workday survey found 66% of senior leaders trust their company’s AI approach, but only 32% of individual contributors do. Write your current top priority as one sentence. Then ask two people on your team to state it in their own words, without prompting. How far apart are the three versions, and what does the gap tell you?",
+        "model_answer": "Expect the versions to differ, and pay attention to how. If your team describes the activity (‘we’re rolling out the new system’) while you described the purpose (‘we’re cutting client response time in half’), they know what to do but not why, so they will ask permission whenever the plan meets reality. If their versions name different priorities altogether, the intent is competing with other messages, often from you. And if they hesitate or answer with a question, the intent has not reached them at all. None of this is their failure. Intent travels through repetition and through decisions people see you make, not through one announcement. The fix is to rewrite the sentence so it states the outcome and the reason, use the same words every time you talk about it, and point to it when you make a call. The survey shows the cost of skipping this: trust in the strategy halves on the way down. The Vanguard move: run the exercise this week, rewrite your sentence, and test it again in two weeks with the same two people.",
+    },
 
 
 
@@ -7097,8 +7105,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Gartner’s latest Quarterly Emerging Risk Report ranks AI strategy miscalculation and AI-driven competitive displacement as the No. 3 and No. 4 enterprise risks; only 17% of CFOs say most of their AI projects delivered measurable results",
-    "source": "Help Net Security (Gartner)",
+    "headline": "A Workday survey of nearly 6,000 workers found senior leaders are 2.5 times more likely than individual contributors to understand AI agents, and 66% of leaders trust their employer’s AI approach versus only 32% of individual contributors",
+    "source": "Workday",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7386,6 +7394,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Gartner’s latest Quarterly Emerging Risk Report ranks AI strategy miscalculation and AI-driven competitive displacement as the No. 3 and No. 4 enterprise risks; only 17% of CFOs say most of their AI projects delivered measurable results",
         "source": "Help Net Security (Gartner)",
         "url": "https://www.helpnetsecurity.com/2026/11/04/ai-strategy-miscalculation-gartner-report/",
+    },
+    "2026-11-12": {
+        "headline": "A Workday survey of nearly 6,000 workers found senior leaders are 2.5 times more likely than individual contributors to understand AI agents, and 66% of leaders trust their employer’s AI approach versus only 32% of individual contributors",
+        "source": "Workday",
+        "url": "https://www.workday.com/en-us/perspectives/ai/ai-at-work-october.html",
     },
 }
 
