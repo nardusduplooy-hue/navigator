@@ -1907,8 +1907,8 @@ VANGUARD_SUMMARIES = {
         "title": "Where Are You Pretending to Know What Happens Next?",
         "chapter": "Chapter 7: The NEO Leadership Challenge",
         "summary": (
-            "NEO-era leadership means making real decisions in conditions nobody can forecast with "
-            "confidence, and the temptation is to project certainty because the team seems to want it. Find "
+            "Nobody can forecast today’s conditions with confidence, yet leaders are tempted to project "
+            "certainty because the team seems to want it. Find "
             "one place this week where you are presenting a plan as more predictable than it really is. Ask "
             "what would change if you told your tribe the honest version: what you know, what you are "
             "betting on, and when you will check."
@@ -4487,6 +4487,14 @@ TALI_STEPS = {
         "focus": "Chapter 6 rests on mission command: people can act at the edge without asking only if they know the intent well enough to act on it. Most leaders believe their intent is clear because it is clear to them. The exercise is to write your current priority as one sentence, then ask two people on your team to state it in their own words. The distance between the three versions shows how much of your direction is actually reaching the edge. Research on AI at work shows how large that distance can be. In a Workday survey of nearly 6,000 workers worldwide, senior leaders were 2.5 times more likely than individual contributors to say they understood AI agents well. 88% of senior leaders had used agentic AI to complete tasks, against 54% of individual contributors, and 66% of leaders trusted their employer’s approach to AI, compared with only 32% of individual contributors. The strategy is clear at the top; it is not yet clear at the edge.",
         "question": "A Workday survey found 66% of senior leaders trust their company’s AI approach, but only 32% of individual contributors do. Write your current top priority as one sentence. Then ask two people on your team to state it in their own words, without prompting. How far apart are the three versions, and what does the gap tell you?",
         "model_answer": "Expect the versions to differ, and pay attention to how. If your team describes the activity (‘we’re rolling out the new system’) while you described the purpose (‘we’re cutting client response time in half’), they know what to do but not why, so they will ask permission whenever the plan meets reality. If their versions name different priorities altogether, the intent is competing with other messages, often from you. And if they hesitate or answer with a question, the intent has not reached them at all. None of this is their failure. Intent travels through repetition and through decisions people see you make, not through one announcement. The fix is to rewrite the sentence so it states the outcome and the reason, use the same words every time you talk about it, and point to it when you make a call. The survey shows the cost of skipping this: trust in the strategy halves on the way down. The Vanguard move: run the exercise this week, rewrite your sentence, and test it again in two weeks with the same two people.",
+    },
+    "2026-11-13": {
+        "step": "The NEO Leadership Challenge — The Honest Forecast",
+        "title": "Where Are You Pretending to Know What Happens Next?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/",
+        "focus": "Chapter 7 names a quiet temptation of NEO-era leadership. Real decisions now have to be made in conditions nobody can forecast with confidence, and leaders often project certainty because the team seems to want it. The exercise is to find one place this week where you are presenting a plan as more predictable than it really is, and to imagine telling your tribe the honest version: what you know, what you are betting on, and when you will check. New research shows how far confident plans can drift. In a Capgemini Research Institute survey of 500 senior executives at companies with revenues above $1 billion, 59% said their AI spending over the past year had come in significantly above expectations or budget, on average by 24%. Only 56% were fully confident they could forecast how AI costs will change as adoption grows, and half said AI spending is approved without full visibility of its costs. The budgets looked certain; the reality was not.",
+        "question": "A new Capgemini survey found 59% of large companies overspent their AI budgets, by an average of 24%, and only 56% are confident they can forecast AI costs. Where are you presenting a plan as more predictable than it really is? What would the honest version say about what you know, what you are betting on, and when you will check?",
+        "model_answer": "Look for the plan you describe most smoothly. Fluency is often a sign that the uncertainty has been edited out for the audience. It might be a launch date that depends on a supplier you do not control, a revenue target built on one optimistic assumption, or a timeline for an AI rollout nobody has tested at scale. Then write the honest version in three parts. What we know: the facts you would bet your reputation on. What we are betting on: the assumptions that must hold for the plan to work. When we will check: a specific date or signal that tells you whether the bet is paying off. Most leaders fear this will look weak. In practice, it usually builds trust, because the team already senses the uncertainty and is relieved to hear it named. It also makes adjustment easier: when the check comes, changing course is part of the plan, not an admission of failure. The survey shows the cost of the alternative: budgets presented as certain, then overrun. The Vanguard move: rewrite one plan in this three-part format and share it with your tribe this week.",
     },
 
 
@@ -7105,8 +7113,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A Workday survey of nearly 6,000 workers found senior leaders are 2.5 times more likely than individual contributors to understand AI agents, and 66% of leaders trust their employer’s AI approach versus only 32% of individual contributors",
-    "source": "Workday",
+    "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+    "source": "Capgemini Research Institute",
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7399,6 +7407,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A Workday survey of nearly 6,000 workers found senior leaders are 2.5 times more likely than individual contributors to understand AI agents, and 66% of leaders trust their employer’s AI approach versus only 32% of individual contributors",
         "source": "Workday",
         "url": "https://www.workday.com/en-us/perspectives/ai/ai-at-work-october.html",
+    },
+    "2026-11-13": {
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
     },
 }
 

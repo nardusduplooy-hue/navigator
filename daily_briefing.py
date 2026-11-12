@@ -247,6 +247,7 @@ def build_briefing():
 "2026-11-10": {"quote": "📄 𝗧𝗵𝗶𝗿𝘁𝘆 𝘆𝗲𝗮𝗿𝘀 𝗮𝘁 𝘁𝗵𝗲 𝗲𝗱𝗴𝗲 𝗼𝗳 𝗲𝘃𝗲𝗿𝘆 𝘁𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘄𝗮𝘃𝗲.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/"},
 "2026-11-11": {"quote": "📄 𝗪𝗵𝗶𝗰𝗵 𝗖𝗹𝗮𝘂𝗱𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗵𝗼𝘂𝗹𝗱 𝘆𝗼𝘂 𝗯𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
 "2026-11-12": {"quote": "📄 𝗪𝗵𝗶𝗰𝗵 𝗖𝗹𝗮𝘂𝗱𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗵𝗼𝘂𝗹𝗱 𝘆𝗼𝘂 𝗯𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
+"2026-11-13": {"quote": "📄 <b>Which Claude model should you build with?</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
     }
 
     lines = []
@@ -394,6 +395,7 @@ def build_briefing():
         "2026-11-10": "A new survey found 53% of US workers used an AI tool they weren’t sure was approved because of pressure to work faster, and 68% check things less carefully under pressure. Chapter 4: think of the last time you were truly squeezed. Which of the five axioms gave way first, and what exactly was the pressure?",
         "2026-11-11": "Gartner’s latest risk survey ranks AI-driven competitive displacement among the top five enterprise risks, alongside misjudging AI strategy. Chapter 5: name one player in your market who has quietly started moving faster this year. What are they coordinating with partners or AI that you are still trying to do on your own?",
         "2026-11-12": "A new Workday survey found 66% of senior leaders trust their company’s AI approach, but only 32% of individual contributors do. Chapter 6: write your current priority as one sentence, then ask two people on your team to state it in their own words, without prompting. How far apart are the three versions?",
+        "2026-11-13": "A new Capgemini survey found 59% of large companies overspent their AI budgets in the past year, by an average of 24%, and only 56% are confident they can forecast AI costs. Chapter 7: where are you presenting a plan as more predictable than it really is? What would the honest version tell your tribe?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1215,6 +1217,8 @@ def build_briefing():
                                {"quote": "\U0001f4c4 <b>The most valuable thing for my software is not another test. It is a user telling me what feels wrong.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/"}],
                 "2026-11-06": {"quote": "\U0001f4c4 𝗠𝘆 𝗵𝘂𝗯 𝗶𝘀 𝗹𝗶𝘃𝗲: talirezun.com", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/"},
                 "2026-11-12": {"quote": "\U0001f4c4 𝗬𝗼𝘂𝗿 𝗔𝗜 𝗰𝗮𝗻 𝗻𝗼𝘄 𝘁𝗮𝗹𝗸 𝘁𝗼 𝗼𝘁𝗵𝗲𝗿 𝗽𝗲𝗼𝗽𝗹𝗲'𝘀 𝗔𝗜.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
+                "2026-11-13": [{"quote": "\U0001f4c4 <b>Your AI can now talk to other people's AI.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
+                               {"quote": "\U0001f4c4 <b>Four webs. Four verbs. One question nobody asks about the history of the internet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526579376985960448/"}],
             }
             if date_key in extra_cj_entries:
                 _extras = extra_cj_entries[date_key]
