@@ -4496,6 +4496,30 @@ TALI_STEPS = {
         "question": "A new Capgemini survey found 59% of large companies overspent their AI budgets, by an average of 24%, and only 56% are confident they can forecast AI costs. Where are you presenting a plan as more predictable than it really is? What would the honest version say about what you know, what you are betting on, and when you will check?",
         "model_answer": "Look for the plan you describe most smoothly. Fluency is often a sign that the uncertainty has been edited out for the audience. It might be a launch date that depends on a supplier you do not control, a revenue target built on one optimistic assumption, or a timeline for an AI rollout nobody has tested at scale. Then write the honest version in three parts. What we know: the facts you would bet your reputation on. What we are betting on: the assumptions that must hold for the plan to work. When we will check: a specific date or signal that tells you whether the bet is paying off. Most leaders fear this will look weak. In practice, it usually builds trust, because the team already senses the uncertainty and is relieved to hear it named. It also makes adjustment easier: when the check comes, changing course is part of the plan, not an admission of failure. The survey shows the cost of the alternative: budgets presented as certain, then overrun. The Vanguard move: rewrite one plan in this three-part format and share it with your tribe this week.",
     },
+    "2026-11-14": {
+        "step": "Fear as Data — The Fear Disguised as Prudence",
+        "title": "The Fear You Keep Calling Prudence",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/",
+        "focus": "Chapter 8 treats fear as information, but some fears never get examined because they have been relabelled as caution, standards or good judgment. The test is simple: does the ‘prudent’ choice keep protecting you personally more than it protects the work or the people relying on it? Name one decision you keep delaying for sensible-sounding reasons. If the reasons have not changed in months, the fear underneath them is the real data. Fear can also push the other way. In the Capgemini Research Institute survey released this week, 59% of executives at large companies said their AI spending over the past year had come in significantly above expectations or budget, and half said AI spending is approved without full visibility of its costs. Some of that spending was likely driven by fear of falling behind. Fear of acting and fear of missing out are both data, and both deserve a closer look before they make the decision for you.",
+        "question": "Name one decision you keep delaying for sensible-sounding reasons: waiting for more data, the right timing, or someone else’s sign-off. If those reasons have not changed in months, what fear is really doing the deciding, and what does that fear tell you about what you actually value?",
+        "model_answer": "The delayed decision usually announces itself: the conversation you keep rescheduling, the hire or exit you are ‘still thinking about’, the project you neither kill nor fund. Write down the reasons you give for waiting, then ask of each one whether it was also true three months ago. If it was, it is not a reason; it is cover. Underneath is usually one of a few fears: being seen to fail, losing someone’s approval, making a choice you cannot undo, or discovering that the thing you built is not as good as you hoped. Name yours plainly. Then read it as data: a fear of losing approval tells you that relationship matters more to you than you admit; a fear of irreversibility tells you the decision is bigger than you are treating it. Neither means you should act recklessly. It means you should decide on purpose rather than by default, perhaps with a smaller, reversible first step. The Vanguard move: name the decision and the fear, choose one reversible step, and take it before next Friday.",
+    },
+    "2026-11-15": {
+        "step": "AI as Force Multiplier — The Quiet Cost of Delegation",
+        "title": "Could You Still Catch the Mistake?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7527627111742803982/",
+        "focus": "Chapter 9 treats AI as a force multiplier, but multiplication cuts both ways: the work you hand off often stops being work you could still do, check or explain yourself. That is harmless for tasks that do not matter, and dangerous for the ones that do. Dr. Tali's framing this week makes the same point about data: context without data is intuition, data without context is noise — the analytics layer only helps a leader who can still read what it is telling them, not one who has stopped checking.",
+        "question": "Name one task you now run mostly through AI — reporting, drafting, analysis, triage. Could you still catch a serious mistake in its output and explain in plain terms why it was wrong? If you couldn't, what does that say about how closely you're actually supervising it?",
+        "model_answer": "Pick something real, not a toy example: the monthly report you no longer build line by line, the proposal draft you barely edit, the dashboard commentary you paste in and forward. Now imagine the output is subtly wrong — a number transposed, a conclusion that doesn't follow from the data, a recommendation built on a stale assumption. Could you spot it without redoing the work yourself? Most people find the honest answer is no, not from carelessness, but because speed quietly replaced understanding somewhere along the way. That is force multiplication doing exactly what it promises on the tasks that don't matter, and eroding judgement on the ones that do. The fix isn't to slow down everywhere — it's to decide, deliberately, which AI-run tasks are allowed to stay a black box and which earn a standing rule: you check the reasoning, not just the output, before it goes out under your name. The Vanguard move: name that one task today, and write the one check you will never skip on it.",
+    },
+    "2026-11-17": {
+        "step": "Plain Words In — What You Now Possess",
+        "title": "What Can You Now Do That You Couldn't in September?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/",
+        "focus": "Chapter 11 treats possession as capability, not vocabulary — what you can now actually do differently under pressure, not what you can now talk about. Dr. Tali's post this week makes the same point from the other direction: plain words in, and you approve what counts. A leader who can't restate a decision in plain language, stripped of jargon, usually can't tell yet whether it is any good.",
+        "question": "Write down one thing you can do today that you could not do in September, tied to a specific moment you did it. Now restate it in plain words, the way you'd explain it to someone outside this programme. If the plain version sounds thinner than the jargon version, what does that tell you about how solid the capability actually is?",
+        "model_answer": "Most people's first answer is a concept, not a capability — 'I understand AI agents better' rather than 'I built a workflow that drafts my weekly client update and I now only edit it instead of writing it.' The second version names a moment, an output and a measurable change; the first could be said by someone who read one article. Write yours the second way. Then say it out loud in plain words, the way you would to someone who has never heard the programme's vocabulary. If it survives that translation intact, it is a real capability. If it collapses into vague confidence, you have language, not possession, and the honest next step is to go practise the thing itself, not read about it again. The Vanguard move: name the one capability you are most unsure is real, and test it this week on something that actually matters.",
+    },
 
 
 
@@ -7409,6 +7433,22 @@ AI_NEWS_OVERRIDE = {
         "url": "https://www.workday.com/en-us/perspectives/ai/ai-at-work-october.html",
     },
     "2026-11-13": {
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-14": {
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-15": {
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-17": {
+        # 16 Nov: Nardus — no spreadsheet, carried forward unchanged (only Tali's post changes for 17 Nov)
         "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
         "source": "Capgemini Research Institute",
         "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",

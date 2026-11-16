@@ -36,7 +36,7 @@ _DATE_OVERRIDE = None
 _FORCE_WEEKEND_SEND = False
 
 # Weekend dates Nardus has asked to send automatically (e.g. Zoom-session Saturdays).
-_WEEKEND_SEND_DATES = {"2026-10-17", "2026-10-31"}
+_WEEKEND_SEND_DATES = {"2026-10-17", "2026-10-31", "2026-11-14", "2026-11-15"}
 
 def _is_weekend():
     d = datetime.strptime(today_str(), "%Y-%m-%d")
@@ -248,6 +248,9 @@ def build_briefing():
 "2026-11-11": {"quote": "📄 𝗪𝗵𝗶𝗰𝗵 𝗖𝗹𝗮𝘂𝗱𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗵𝗼𝘂𝗹𝗱 𝘆𝗼𝘂 𝗯𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
 "2026-11-12": {"quote": "📄 𝗪𝗵𝗶𝗰𝗵 𝗖𝗹𝗮𝘂𝗱𝗲 𝗺𝗼𝗱𝗲𝗹 𝘀𝗵𝗼𝘂𝗹𝗱 𝘆𝗼𝘂 𝗯𝘂𝗶𝗹𝗱 𝘄𝗶𝘁𝗵?", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
 "2026-11-13": {"quote": "📄 <b>Which Claude model should you build with?</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/"},
+"2026-11-14": {"quote": "📄 <b>Four webs. Four verbs. One question nobody asks about the history of the internet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526579376985960448/"},
+"2026-11-15": {"quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7527627111742803982/"},
+"2026-11-17": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
     }
 
     lines = []
@@ -396,6 +399,8 @@ def build_briefing():
         "2026-11-11": "Gartner’s latest risk survey ranks AI-driven competitive displacement among the top five enterprise risks, alongside misjudging AI strategy. Chapter 5: name one player in your market who has quietly started moving faster this year. What are they coordinating with partners or AI that you are still trying to do on your own?",
         "2026-11-12": "A new Workday survey found 66% of senior leaders trust their company’s AI approach, but only 32% of individual contributors do. Chapter 6: write your current priority as one sentence, then ask two people on your team to state it in their own words, without prompting. How far apart are the three versions?",
         "2026-11-13": "A new Capgemini survey found 59% of large companies overspent their AI budgets in the past year, by an average of 24%, and only 56% are confident they can forecast AI costs. Chapter 7: where are you presenting a plan as more predictable than it really is? What would the honest version tell your tribe?",
+        "2026-11-14": "Capgemini found 59% of large companies overspent their AI budgets this year, yet few will say what they feared when they approved the spend. Chapter 8: name one decision you keep delaying for sensible-sounding reasons. If those reasons haven’t changed in months, what fear is really doing the deciding?",
+        "2026-11-15": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -565,6 +570,13 @@ def build_briefing():
                 lines.append("<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/31/?wm=1&amp;mi=89651107877'>\u2192 Join Zoom Meeting</a>")
                 lines.append("<b>Meeting ID:</b> 896 5110 7877 | <b>Passcode:</b> VANGUR27")
                 lines.append("")
+            elif date_key == "2026-11-14":
+                # 13 Nov: Nardus — the expected Saturday Zoom session was cancelled
+                lines.append(
+                    "<blockquote>\U0001f534 <b>NO ZOOM SESSION TODAY \u2014 Saturday 14 November</b>\n"
+                    "Today\u2019s expected Zoom session has been cancelled. Details of the next session will follow.</blockquote>"
+                )
+                lines.append("")
             elif date_key == "2026-10-31":
                 lines.append(
                     "<blockquote>📅 <b>ZOOM SESSION — TODAY</b>\n"
@@ -640,15 +652,17 @@ def build_briefing():
                         if date_key >= "2026-10-27":
                             # Module 5 capstone, Nardus sheet B14 (27 Oct)
                             lines.append("\U0001f3af <b>The Capstone Campaign</b>")
-                            if date_key >= "2026-11-03":
-                                # 3 Nov: Nardus sheet B16, deadline extended
+                            if date_key >= "2026-11-15":
+                                # 15 Nov: Nardus — final assignment submitted, defence to follow in Zoom
+                                lines.append("You have submitted your final assignment, so be ready to defend it in the next Zoom session.")
+                            elif date_key >= "2026-11-03":
                                 lines.append("<blockquote>\U0001f4c5 <b>BAW Final Report: Deadline Extended to 15 November 2026</b>\nThe deadline was prolonged by one week, so study the Module 5 slides closely and follow the instructions strictly: one integrated report of at most 15 pages, the four common PIRs, distinct ACH matrices, and a five-minute briefing. Re-submit your final work even if nothing has changed.</blockquote>")
                             else:
                                 lines.append("Each team must deliver a 5-minute Commander’s Brief presenting their finalized Target Intelligence Estimate on the PayPal Mafia, structured as Situation, Intelligence, Evidence, and Critical Gap, followed by rapid-fire Q&amp;A from faculty and peers. Before the session, complete your ACH matrix scoring all collected data points against your three hypotheses, and prepare to defend your analytical logic under cross-examination.")
-                            if date_key >= "2026-11-02":
-                                # 2 Nov: Nardus sheet B16/B17
+                            if "2026-11-02" <= date_key < "2026-11-15":
+                                # 2 Nov: Nardus sheet B16/B17 — stops once the report is submitted (15 Nov)
                                 lines.append("\U0001f4dd <b>Assignment 5:</b> prepare the final report, the fruit of all the previous exercises.")
-                                lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/'>\u2192 Slides for Modules 1\u20134</a>")
+                                lines.append("<a href='https://cotrugli.online/courses/business-as-warfare/'>→ Slides for Modules 1–4</a>")
                         lines.append("\U0001f3a7 <b>Podcasts:</b> <a href='https://stream.redcircle.com/episodes/61d5bcab-df5c-4078-8626-52bd83718511/stream.mp3'>1</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0434e123-0ca4-4f05-8c62-5e3ebdfdea1b/stream.mp3'>2</a> \u00b7 <a href='https://stream.redcircle.com/episodes/268e9021-e905-46aa-8c68-e0ed36eae73f/stream.mp3'>3</a> \u00b7 <a href='https://stream.redcircle.com/episodes/0966a01d-5876-4ae5-bdf4-0a9f555e0360/stream.mp3'>4</a> \u00b7 <a href='https://stream.redcircle.com/episodes/ac845d2e-3c0a-4358-97d4-426d5eed4415/stream.mp3'>5</a> \u00b7 <a href='https://stream.redcircle.com/episodes/884cf5c5-7075-4c01-96d6-b4f82e996e7f/stream.mp3'>6</a> \u00b7 <a href='https://stream.redcircle.com/episodes/d86cf22c-cbf6-49b0-8fa2-f94d76156980/stream.mp3'>7</a>")
                     elif date_key >= "2026-10-05":
                         # 5 Oct: Module 3 lesson + 7 podcasts (Nardus sheet B18–B26)
@@ -1032,7 +1046,10 @@ def build_briefing():
             # 5 Oct: Module 4 + final project summary (Saša's slide, Nardus sheet B28–B31)
             lines.append("\U0001f4cb <b>AI IN B2B SALES \u2014 MODULE 4</b>")
             lines.append("<i>Orchestration &amp; Risk \u00b7 Saša Pavlaković</i> \u00b7 <a href='https://cotrugli.online/courses/ai-sales/lessons/orchestration-risk/'>\u2192 Module 4</a>")
-            if date_key >= "2026-10-29":
+            if date_key >= "2026-11-15":
+                # 15 Nov: Nardus — final project submitted, defence to follow in Zoom
+                lines.append("You have submitted your final assignment, so be ready to defend it in the next Zoom session.")
+            elif date_key >= "2026-10-29":
                 # 29 Oct: final-project box rewritten per Nardus sheet B22, B24, B26
                 lines.append("<blockquote><b>Final project \u2014 AI Sales Strategy for your company</b>\n"
                              "Final project: an AI Sales Strategy for your own real company, 10–15 pages, submitted as a PDF through the portal.\n"
@@ -1219,6 +1236,7 @@ def build_briefing():
                 "2026-11-12": {"quote": "\U0001f4c4 𝗬𝗼𝘂𝗿 𝗔𝗜 𝗰𝗮𝗻 𝗻𝗼𝘄 𝘁𝗮𝗹𝗸 𝘁𝗼 𝗼𝘁𝗵𝗲𝗿 𝗽𝗲𝗼𝗽𝗹𝗲'𝘀 𝗔𝗜.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
                 "2026-11-13": [{"quote": "\U0001f4c4 <b>Your AI can now talk to other people's AI.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
                                {"quote": "\U0001f4c4 <b>Four webs. Four verbs. One question nobody asks about the history of the internet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526579376985960448/"}],
+                "2026-11-14": {"quote": "\U0001f4c4 <b>Your AI can now talk to other people's AI.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
             }
             if date_key in extra_cj_entries:
                 _extras = extra_cj_entries[date_key]
