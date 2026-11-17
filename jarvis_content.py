@@ -4520,6 +4520,14 @@ TALI_STEPS = {
         "question": "Write down one thing you can do today that you could not do in September, tied to a specific moment you did it. Now restate it in plain words, the way you'd explain it to someone outside this programme. If the plain version sounds thinner than the jargon version, what does that tell you about how solid the capability actually is?",
         "model_answer": "Most people's first answer is a concept, not a capability — 'I understand AI agents better' rather than 'I built a workflow that drafts my weekly client update and I now only edit it instead of writing it.' The second version names a moment, an output and a measurable change; the first could be said by someone who read one article. Write yours the second way. Then say it out loud in plain words, the way you would to someone who has never heard the programme's vocabulary. If it survives that translation intact, it is a real capability. If it collapses into vague confidence, you have language, not possession, and the honest next step is to go practise the thing itself, not read about it again. The Vanguard move: name the one capability you are most unsure is real, and test it this week on something that actually matters.",
     },
+    "2026-11-18": {
+        "step": "Bring the AI You Already Use — Taking a Side",
+        "title": "Where Are You Choosing Comfort Over Choosing a Side?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528363826338033664/",
+        "focus": "Chapter 12 names the sheep pattern: staying neutral because taking a position is uncomfortable, while someone else absorbs the cost. Dr. Tali's new post makes the same point about tools, not people — leaving the AI you already use siloed, unconnected to anything else, is its own comfortable default. Enabling agent-to-agent communication means picking a side: that your tools should actually talk to each other, even if it's more work to set up and something could go wrong.",
+        "question": "Name one place in your own work where you've kept two systems, tools or people from talking to each other directly, because connecting them felt like taking a side or owning the outcome. Who is absorbing the cost of that disconnection while you stay neutral?",
+        "model_answer": "The disconnection usually hides behind a reasonable-sounding habit: you relay information between two tools or two people yourself instead of letting them talk directly, because you want to control what crosses, or because connecting them properly means admitting whose process wins. Name the specific relay you're running. Then ask who pays for it — often it's you, in time spent copying and translating, or it's whoever is waiting on the slower, manual version of something that could be instant. Staying in the middle feels like keeping control, but it is usually just keeping the discomfort of choosing at bay. The Vanguard move: pick the one connection you've been avoiding, make it direct this week, and accept that something might need fixing afterward — that is the cost of actually taking a side.",
+    },
 
 
 
@@ -7449,6 +7457,12 @@ AI_NEWS_OVERRIDE = {
     },
     "2026-11-17": {
         # 16 Nov: Nardus — no spreadsheet, carried forward unchanged (only Tali's post changes for 17 Nov)
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-18": {
+        # 18 Nov: no new story given, carried forward unchanged
         "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
         "source": "Capgemini Research Institute",
         "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",

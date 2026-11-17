@@ -251,6 +251,7 @@ def build_briefing():
 "2026-11-14": {"quote": "📄 <b>Four webs. Four verbs. One question nobody asks about the history of the internet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526579376985960448/"},
 "2026-11-15": {"quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7527627111742803982/"},
 "2026-11-17": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
+"2026-11-18": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
     }
 
     lines = []
@@ -584,6 +585,20 @@ def build_briefing():
                     "\u2022 \U0001f5d3 Today, Saturday 31 October 2026 @ 17:00 Belgrade / Ljubljana (18:00 SA time)\n"
                     "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/31/?wm=1&amp;mi=89651107877'>\u2192 Join Zoom Meeting</a>\n"
                     "<b>Meeting ID:</b> 896 5110 7877 | <b>Passcode:</b> VANGUR27</blockquote>"
+                )
+                lines.append("")
+            elif date_key >= "2026-11-18":
+                # 18 Nov: Nardus — AI Development and Management module announcement, added under the Zoom section
+                lines.append("\U0001f4c5 <b>NEXT ZOOM SESSION</b>")
+                lines.append("<i>Watch this space \u2014 next session details to follow</i>")
+                lines.append("")
+                lines.append(
+                    "<blockquote>\U0001f4c5 <b>Upcoming Module — AI Development and Management</b>\n"
+                    "Dr. Tali Režun &amp; Srđan Jovanović, 27–29 November, online via Zoom (daily, 3 sessions).\n"
+                    "• \U0001f5d3 27 Nov 2026, 09:00 Belgrade / Bratislava / Ljubljana, repeating daily through 29 Nov\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/32/?wm=1&amp;mi=83445885712'>\u2192 Join Zoom Meeting</a>\n"
+                    "<b>Meeting ID:</b> 834 4588 5712 | <b>Passcode:</b> AIDM26\n"
+                    "<a href='https://cotrugli.online/courses/ai-development-and-management-vng/'>\u2192 Syllabus &amp; pre-readings — review before the module</a></blockquote>"
                 )
                 lines.append("")
             elif date_key >= "2026-10-04":
@@ -1237,6 +1252,7 @@ def build_briefing():
                 "2026-11-13": [{"quote": "\U0001f4c4 <b>Your AI can now talk to other people's AI.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
                                {"quote": "\U0001f4c4 <b>Four webs. Four verbs. One question nobody asks about the history of the internet</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526579376985960448/"}],
                 "2026-11-14": {"quote": "\U0001f4c4 <b>Your AI can now talk to other people's AI.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/"},
+                "2026-11-18": {"quote": "\U0001f4c4 <b>Bring the AI you already use. Enable free agent-to-agent communication.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528363826338033664/"},
             }
             if date_key in extra_cj_entries:
                 _extras = extra_cj_entries[date_key]
