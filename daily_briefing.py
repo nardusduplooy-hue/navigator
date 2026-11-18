@@ -252,6 +252,7 @@ def build_briefing():
 "2026-11-15": {"quote": "“Data without context is noise. Context without data is intuition. The Vanguard leader needs both — and the analytics layer is where they meet.”", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7527627111742803982/"},
 "2026-11-17": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
 "2026-11-18": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
+"2026-11-19": {"quote": "📄 <b>My website answers questions now. Only from what I wrote.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528714230280122368/"},
     }
 
     lines = []
@@ -588,10 +589,9 @@ def build_briefing():
                 )
                 lines.append("")
             elif date_key >= "2026-11-18":
-                # 18 Nov: Nardus — AI Development and Management module announcement, added under the Zoom section
+                # 18 Nov: Nardus — AI Development and Management module announcement.
+                # 19 Nov: Nardus — remove the "Watch this space" placeholder now that there is a real next session.
                 lines.append("\U0001f4c5 <b>NEXT ZOOM SESSION</b>")
-                lines.append("<i>Watch this space \u2014 next session details to follow</i>")
-                lines.append("")
                 lines.append(
                     "<blockquote>\U0001f4c5 <b>Upcoming Module — AI Development and Management</b>\n"
                     "Dr. Tali Režun &amp; Srđan Jovanović, 27–29 November, online via Zoom (daily, 3 sessions).\n"

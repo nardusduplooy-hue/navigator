@@ -4528,6 +4528,14 @@ TALI_STEPS = {
         "question": "Name one place in your own work where you've kept two systems, tools or people from talking to each other directly, because connecting them felt like taking a side or owning the outcome. Who is absorbing the cost of that disconnection while you stay neutral?",
         "model_answer": "The disconnection usually hides behind a reasonable-sounding habit: you relay information between two tools or two people yourself instead of letting them talk directly, because you want to control what crosses, or because connecting them properly means admitting whose process wins. Name the specific relay you're running. Then ask who pays for it — often it's you, in time spent copying and translating, or it's whoever is waiting on the slower, manual version of something that could be instant. Staying in the middle feels like keeping control, but it is usually just keeping the discomfort of choosing at bay. The Vanguard move: pick the one connection you've been avoiding, make it direct this week, and accept that something might need fixing afterward — that is the cost of actually taking a side.",
     },
+    "2026-11-19": {
+        "step": "Only From What I Wrote — A Guardrail as a Principle",
+        "title": "Write One Principle for the Next Agent You Deploy",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528714230280122368/",
+        "focus": "Chapter 13, the Sheepdog Manifesto, closes the programme by asking you to write one principle any intelligence — human or artificial — must follow before you deploy it. Dr. Tali's new post is that principle made concrete: his website only answers from what he actually wrote, nothing invented, nothing pulled from elsewhere. That is a guardrail chosen in advance, not discovered after something went wrong.",
+        "question": "Before you deploy your next AI agent or automation, write one principle it must follow even when breaking it would be faster or cheaper — something like 'only answer from what I actually wrote.' What would that principle be for your agent, and would you hold yourself to the same standard?",
+        "model_answer": "A real principle is specific enough to catch a real violation, not a mission-statement platitude. 'Be helpful' catches nothing; 'only answer from the three documents I gave you, and say so when you don't know' catches a clear failure the moment the agent makes something up. Write yours that concretely — the agent action it rules out, by name. Then run the second half of the test: would you hold yourself to it? If your own standard for a client email, a report or a decision is looser than the one you just wrote for a machine, the principle is really a leash for the agent and an excuse for you, and it won't survive contact with a deadline. The Vanguard move: write the one-sentence principle, apply it to the agent this week, and apply the same sentence to one thing you do yourself.",
+    },
 
 
 
@@ -7463,6 +7471,12 @@ AI_NEWS_OVERRIDE = {
     },
     "2026-11-18": {
         # 18 Nov: no new story given, carried forward unchanged
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-19": {
+        # 19 Nov: no new story given, carried forward unchanged
         "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
         "source": "Capgemini Research Institute",
         "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
