@@ -36,7 +36,7 @@ _DATE_OVERRIDE = None
 _FORCE_WEEKEND_SEND = False
 
 # Weekend dates Nardus has asked to send automatically (e.g. Zoom-session Saturdays).
-_WEEKEND_SEND_DATES = {"2026-10-17", "2026-10-31", "2026-11-14", "2026-11-15"}
+_WEEKEND_SEND_DATES = {"2026-10-17", "2026-10-31", "2026-11-14", "2026-11-15", "2026-11-21"}
 
 def _is_weekend():
     d = datetime.strptime(today_str(), "%Y-%m-%d")
@@ -253,6 +253,7 @@ def build_briefing():
 "2026-11-17": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
 "2026-11-18": {"quote": "📄 <b>Plain words in. You approve what counts.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/"},
 "2026-11-19": {"quote": "📄 <b>My website answers questions now. Only from what I wrote.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528714230280122368/"},
+"2026-11-21": {"quote": "📄 <b>Chasing Jarvis starts next Friday at COTRUGLI Business School in Zagreb</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529104632682565632/"},
     }
 
     lines = []
@@ -403,6 +404,7 @@ def build_briefing():
         "2026-11-13": "A new Capgemini survey found 59% of large companies overspent their AI budgets in the past year, by an average of 24%, and only 56% are confident they can forecast AI costs. Chapter 7: where are you presenting a plan as more predictable than it really is? What would the honest version tell your tribe?",
         "2026-11-14": "Capgemini found 59% of large companies overspent their AI budgets this year, yet few will say what they feared when they approved the spend. Chapter 8: name one decision you keep delaying for sensible-sounding reasons. If those reasons haven’t changed in months, what fear is really doing the deciding?",
         "2026-11-15": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
+        "2026-11-21": "Chasing Jarvis kicks off in Zagreb next week. Chapter 2: which relationship are you still treating as a one-off transaction instead of one built to last?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -1466,6 +1468,13 @@ def build_briefing():
                 lines.append("<blockquote>eX (ex.cotrugli.tech) is COTRUGLI’s community app: members meet in person to share business experience and thank each other with tokens, and it holds the Vanguard Leadership lessons, the dilemma of the week, the 14-day Task-to-Agent course and audiobooks. "
                              "To join the private Vanguard room, send /ex to @CotruglieXbot in a private chat, or, if you are already in eX from CDayZ, send /vec and your eX name. "
                              "Then add eX to your home screen, turn on notifications and use your 10 starting tokens to join or host a meetup.</blockquote>")
+                kapusta_extra_entries = {
+                    "2026-11-21": {"quote": "\U0001f4c4 <b>Chasing Jarvis starts on Friday 27 November in Zagreb–Buzin.</b>\nThree practical days, 27–29 November, to develop and test an AI-powered prototype, with Dr Tali Režun and Srđan Jovanović.", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529091347404918784/"},
+                }
+                if date_key in kapusta_extra_entries:
+                    _ke = kapusta_extra_entries[date_key]
+                    lines.append(_ke["quote"])
+                    lines.append("<a href='" + _ke["url"] + "'>\u2192 Dražen Kapusta on LinkedIn</a>")
             elif date_key >= "2026-07-06":
                 if KAPUSTA_TODAY.get("title"):
                     lines.append("\U0001f4c4 <b>" + KAPUSTA_TODAY["title"] + "</b>")

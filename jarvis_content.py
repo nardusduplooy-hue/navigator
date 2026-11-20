@@ -4536,6 +4536,14 @@ TALI_STEPS = {
         "question": "Before you deploy your next AI agent or automation, write one principle it must follow even when breaking it would be faster or cheaper — something like 'only answer from what I actually wrote.' What would that principle be for your agent, and would you hold yourself to the same standard?",
         "model_answer": "A real principle is specific enough to catch a real violation, not a mission-statement platitude. 'Be helpful' catches nothing; 'only answer from the three documents I gave you, and say so when you don't know' catches a clear failure the moment the agent makes something up. Write yours that concretely — the agent action it rules out, by name. Then run the second half of the test: would you hold yourself to it? If your own standard for a client email, a report or a decision is looser than the one you just wrote for a machine, the principle is really a leash for the agent and an excuse for you, and it won't survive contact with a deadline. The Vanguard move: write the one-sentence principle, apply it to the agent this week, and apply the same sentence to one thing you do yourself.",
     },
+    "2026-11-21": {
+        "step": "Chasing Jarvis in Zagreb — Prince or Trader",
+        "title": "Which Relationship Are You Treating as a Transaction?",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529104632682565632/",
+        "focus": "Chapter 2 names two postures: the trader optimises each exchange, the prince invests in relationships that outlast any single deal. Chasing Jarvis moving in person to Zagreb next week is a prince's choice — travel, cost and three full days, instead of staying comfortably remote, because some relationships are worth building face to face.",
+        "question": "Chasing Jarvis is moving in person to Zagreb next week — a costlier, less convenient choice than staying online, made because some relationships are worth the trip. Name one relationship, a supplier, colleague or smaller client, that you've been handling purely transactionally. What would change if you treated it as something you expect to still matter in five years?",
+        "model_answer": "The transactional relationships are usually the ones with the least friction attached to walking away — a vendor you'd swap for a slightly cheaper one, a colleague in another department you only contact when you need something, a smaller client you serve adequately but never surprise. None of this is dishonest; it's just optimised for the single exchange rather than the decade. Pick one and ask what a prince would do differently this month: call instead of emailing, share something useful before being asked, show up somewhere you don't strictly need to. It usually costs more now and pays out later, or not at all — which is exactly why traders don't do it and why it's rare enough to be remembered. The Vanguard move: name the relationship, and make the one prince-like move this week that a purely transactional version of you would skip.",
+    },
 
 
 
@@ -7477,6 +7485,12 @@ AI_NEWS_OVERRIDE = {
     },
     "2026-11-19": {
         # 19 Nov: no new story given, carried forward unchanged
+        "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
+        "source": "Capgemini Research Institute",
+        "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-21": {
+        # 21 Nov: no new story given, carried forward unchanged
         "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
         "source": "Capgemini Research Institute",
         "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
