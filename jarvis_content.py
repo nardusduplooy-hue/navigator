@@ -2012,6 +2012,97 @@ VANGUARD_SUMMARIES = {
             "exchange you would least want read aloud. That is where your reputation is quietly being spent."
         ),
     },
+    '2026-11-24': {
+        "title": 'What Have You Given Before You Ask?',
+        "chapter": 'Chapter 3: The Perfect Merchant for the NEO Era',
+        "summary": (
+            "Cotrugli's perfect merchant earned the right to trade by being useful first: honest advice, fair dealing, a reputation that arrived before he did. The NEO version is the same rule at network speed. Before your next pitch, proposal or request, look at the person on the other side and ask what you have given them that had nothing to do with the sale. If the honest answer is nothing, you are not ready to ask yet."
+        ),
+    },
+    '2026-11-25': {
+        "title": 'Which Axiom Would Your Clients Say You Live By?',
+        "chapter": 'Chapter 4: NEO Cotruglian Philosophy (5 Axioms)',
+        "summary": (
+            "The five axioms are easy to recite and hard to be seen practising. Ask three people who deal with you regularly, a client, a colleague and someone junior, which of these best describes how you operate: craft, reputation, virtue, long-term thinking or positive-sum dealing. Don't explain the list first. The axiom they pick is the one you actually live; the one nobody picks is the one you only talk about."
+        ),
+    },
+    '2026-11-26': {
+        "title": 'The Signal You Are Dismissing Because It Is Small',
+        "chapter": 'Chapter 5: The NEO Era Battlefield',
+        "summary": (
+            'On the NEO battlefield, threats rarely arrive at full size. They show up as a small competitor winning one deal on speed, a client trying an AI tool instead of calling you, a junior colleague doing in an hour what took your team a week. Each looks too small to act on. List the three smallest signals you noticed this month and ask which one would worry you if it doubled every quarter. That is the one to act on now.'
+        ),
+    },
+    '2026-11-27': {
+        "title": 'Know the Ground Before You Commit the Troops',
+        "chapter": 'Chapter 6: Business as Warfare',
+        "summary": (
+            "Every serious campaign starts with reconnaissance, not action. Before your next major commitment of budget, people or reputation, write down what you actually know about the ground: the client's real constraints, the competitor's real position, your team's real capacity. Then mark which of those you have verified and which you are assuming. Most failed campaigns were lost in the gap between the two, long before the first move."
+        ),
+    },
+    '2026-11-28': {
+        "title": 'The Decision You Are Waiting for Someone Else to Make',
+        "chapter": 'Chapter 7: The NEO Leadership Challenge',
+        "summary": (
+            'NEO leadership asks you to decide with incomplete information, at a speed that feels uncomfortable, and then own the outcome in public. The common escape is to wait: for more data, for a meeting, for someone more senior to go first. Name one decision sitting on your desk that is really yours but that you have been quietly hoping someone else will make. Set a date for it this week, and tell one person what the date is.'
+        ),
+    },
+    '2026-11-29': {
+        "title": 'The Fear You Are Calling Prudence',
+        "chapter": 'Chapter 8: Fear as Data',
+        "summary": (
+            'Some caution is wisdom; some is fear wearing a sensible suit. The test is whether the reason changes. Prudence updates when new information arrives; fear finds a new reason when the old one is answered. Pick one thing you have postponed more than twice and write down each reason you gave. If the reasons keep changing but the decision never does, the data you are looking at is fear, and the useful question is what exactly you are afraid of losing.'
+        ),
+    },
+    '2026-11-30': {
+        "title": 'Multiply the Right Thing',
+        "chapter": 'Chapter 9: AI as Force Multiplier',
+        "summary": (
+            'AI multiplies whatever it is pointed at: a clear process becomes faster, a confused one becomes faster confusion. Before you add another tool, pick one workflow you are tempted to automate and write the steps on one page, as you would explain them to a new hire. If you cannot do it cleanly, fix the process first. A force multiplier on a weak position only gets you to the wrong place sooner.'
+        ),
+    },
+    '2026-12-01': {
+        "title": 'Who Do You Only Hear From When Something Is Wrong?',
+        "chapter": 'Chapter 10: Tribe as Coordination',
+        "summary": (
+            'Coordination breaks down in the quiet spaces, with the people you only contact when there is a problem. Every such exchange starts with friction because there is no trust in the account to draw on. Name one person in your tribe, team or client base you only hear from in a crisis. Reach out this week with something useful and no request attached. The next difficult conversation will start from a different place.'
+        ),
+    },
+    '2026-12-02': {
+        "title": "What Can You Do Now That You Couldn't in January?",
+        "chapter": 'Chapter 11: What You Now Possess',
+        "summary": (
+            'Progress in a programme like this is easy to underestimate because it arrives one session at a time. Take ten minutes and list what you can actually do now, not what you have read: decisions you make differently, tools you use without thinking, conversations you no longer avoid. Then pick the one item you have not yet used at work under real stakes. Possession only counts once it has been tested.'
+        ),
+    },
+    '2026-12-03': {
+        "title": 'When Did You Last Play the Wolf?',
+        "chapter": 'Chapter 12: The Three Patterns (Wolf/Sheepdog/Sheep)',
+        "summary": (
+            'It is comfortable to see yourself as the sheepdog and others as wolves or sheep. The harder exercise is to find the moment you played the wolf: took credit, pushed a cost onto someone who could not push back, won a point that weakened the tribe. Everyone has one. Name yours from the last month, without justifying it, and decide what repairing it would take. Sheepdogs are not people who never bite; they are people who notice when they did.'
+        ),
+    },
+    '2026-12-04': {
+        "title": 'One Line You Would Sign in Public',
+        "chapter": 'Chapter 13: The Sheepdog Manifesto',
+        "summary": (
+            'A manifesto only matters if it changes behaviour when no one is checking. Write one sentence about how you will treat clients, colleagues or the AI systems you deploy, specific enough that someone could catch you breaking it. Then share it with one person who will see you work next week. A principle held privately is a preference; one stated to a witness becomes a standard.'
+        ),
+    },
+    '2026-12-05': {
+        "title": 'The Work You Would Put Your Name On',
+        "chapter": 'Chapter 1: Business as Craft & Shokunin',
+        "summary": (
+            "A craftsman's mark means the work can be traced back to its maker, for better or worse. Look at what you delivered this week, a report, a proposal, a piece of code, an email to a client, and ask which of it you would be proud to have traced back to you in five years. Pick the weakest piece and improve it, even though no one asked. Shokunin is not perfectionism; it is refusing to let your name ride on work you know is unfinished."
+        ),
+    },
+    '2026-12-06': {
+        "title": 'The Deal You Would Win as a Trader and Lose as a Prince',
+        "chapter": 'Chapter 2: Prince or Trader',
+        "summary": (
+            'Some opportunities only look good if you ignore what comes after: a price you know the client misunderstood, a commitment your team cannot really meet, a win that costs a partner more than it should. The trader takes it; the prince asks what the relationship looks like a year later. Look at your pipeline and find the one deal that only works if the other side does not look too closely. Decide now how you would handle it as a prince.'
+        ),
+    },
 }
 
 
@@ -4543,6 +4634,14 @@ TALI_STEPS = {
         "focus": "Chapter 2 names two postures: the trader optimises each exchange, the prince invests in relationships that outlast any single deal. Chasing Jarvis moving in person to Zagreb next week is a prince's choice — travel, cost and three full days, instead of staying comfortably remote, because some relationships are worth building face to face.",
         "question": "Chasing Jarvis is moving in person to Zagreb next week — a costlier, less convenient choice than staying online, made because some relationships are worth the trip. Name one relationship, a supplier, colleague or smaller client, that you've been handling purely transactionally. What would change if you treated it as something you expect to still matter in five years?",
         "model_answer": "The transactional relationships are usually the ones with the least friction attached to walking away — a vendor you'd swap for a slightly cheaper one, a colleague in another department you only contact when you need something, a smaller client you serve adequately but never surprise. None of this is dishonest; it's just optimised for the single exchange rather than the decade. Pick one and ask what a prince would do differently this month: call instead of emailing, share something useful before being asked, show up somewhere you don't strictly need to. It usually costs more now and pays out later, or not at all — which is exactly why traders don't do it and why it's rare enough to be remembered. The Vanguard move: name the relationship, and make the one prince-like move this week that a purely transactional version of you would skip.",
+    },
+    "2026-11-24": {
+        'step': 'Building in Public — The Perfect Merchant',
+        'title': 'Contribute Before You Announce',
+        'url': 'https://www.linkedin.com/feed/update/urn:li:activity:7530540483778039809/',
+        'focus': "Dr. Tali's rule for building in public, contribute before you announce, is Chapter 3's perfect merchant in modern form: reputation is earned by being useful first, and honest promotion shows real work and lets people decide. Today's AI News shows the cost of skipping that step: Adobe found 45% of consumers would lose trust when products don't match marketing claims, while only 18% of marketers rank that as a top concern.",
+        'question': 'Dr. Tali draws a line between deception (pretending interest in someone so you can sell to them) and healthy promotion (showing real work honestly and letting people decide). Think of your next pitch, proposal or announcement. What have you contributed to that audience before asking for anything, and which side of his line does your current message sit on?',
+        'model_answer': "Most pitches fail his test quietly rather than dramatically: nobody is lying, but the first real contact is a request, and the value is promised rather than shown. Look at the audience for your next ask and list what they have already received from you that had nothing to do with the sale: a useful introduction, honest advice, a piece of work they could use for free. If the list is empty, the pitch will be heard as noise, however good the product. Then check the message against the Adobe gap: does every claim match what your product or service actually does today, not what it will do after the next release? The perfect merchant's reputation arrived before he did. The Vanguard move: before you send the next pitch, give that person one useful thing with no request attached, and cut any claim you could not demonstrate on the spot.",
     },
 
 
@@ -7161,8 +7260,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
-    "source": "Capgemini Research Institute",
+    "headline": "Adobe, which sells AI marketing tools, surveyed 1,011 US consumers and 502 marketers: 45% of consumers would lose trust in a brand whose products don't match its marketing claims, but only 18% of marketers rank inaccurate claims as a top trust concern",
+    "source": 'Small Business Trends',
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7494,6 +7593,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "A Capgemini Research Institute survey of 500 large-company executives found 59% overspent their AI budgets in the past year, by 24% on average; only 56% are confident they can forecast AI costs",
         "source": "Capgemini Research Institute",
         "url": "https://www.globenewswire.com/news-release/2026/11/12/3401256/0/en/most-organizations-plan-to-adopt-a-multi-model-ai-strategy-as-nearly-six-in-ten-faced-significantly-higher-ai-costs-than-expected.html",
+    },
+    "2026-11-24": {
+        "headline": "Adobe, which sells AI marketing tools, surveyed 1,011 US consumers and 502 marketers: 45% of consumers would lose trust in a brand whose products don't match its marketing claims, but only 18% of marketers rank inaccurate claims as a top trust concern",
+        "source": 'Small Business Trends',
+        "url": 'https://smallbiztrends.com/marketers-embrace-ai-as-consumer-trust-gap-widens-for-2027',
     },
 }
 
