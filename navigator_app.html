@@ -9,7 +9,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="app-version" content="20261018-2100">
+<meta name="app-version" content="20261124-1300">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="apple-touch-icon.png">
 <title>Cotrugli Navigator</title>
@@ -650,133 +650,11 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
     <div id="courses-accordion-header" onclick="toggleCourses()" style="display:flex;align-items:center;justify-content:space-between;background:var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-top:8px;margin-bottom:0;cursor:pointer;user-select:none;">
       <div style="display:flex;align-items:center;gap:8px;">
         <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#ffffff;letter-spacing:0.06em;text-transform:uppercase;">Course Status</span>
-        <span style="font-size:10px;color:rgba(255,255,255,0.65);font-weight:400;text-transform:none;letter-spacing:0;">— updated manually each sprint</span>
+        <span style="font-size:10px;color:rgba(255,255,255,0.65);font-weight:400;text-transform:none;letter-spacing:0;">— tap a course to change its status</span>
       </div>
       <span id="courses-chevron" style="font-size:18px;color:#ffffff;transition:transform 0.25s;display:inline-block;">›</span>
     </div>
-    <div id="ns-courses" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;">
-      <div style="background:var(--bg-card);border-radius:0 0 var(--radius-sm) var(--radius-sm);border:1px solid var(--border);border-top:none;padding:8px 0;">
-
-        <div style="padding:8px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;">Completed</div>
-        <div class="course-row" onclick="toggleCourse('c1')">
-          <span class="course-check" id="chk-c1">✓</span>
-          <span class="course-name">VANGUARD MBA – HULT PRIZE Preparations</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c2')">
-          <span class="course-check" id="chk-c2">✓</span>
-          <span class="course-name">VANGUARD MBA Complete Program Design</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c3')">
-          <span class="course-check" id="chk-c3">✓</span>
-          <span class="course-name">VANGUARD MBA Field Manual</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c4')">
-          <span class="course-check" id="chk-c4">✓</span>
-          <span class="course-name">VANGUARD MBA Leading and Building in the NEO Era</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c5')">
-          <span class="course-check" id="chk-c5">✓</span>
-          <span class="course-name">VANGUARD MBA The Future of Work</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c7')">
-          <span class="course-check" id="chk-c7">✓</span>
-          <span class="course-name">VANGUARD MBA Business Agility</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c13')">
-          <span class="course-check" id="chk-c13">✓</span>
-          <span class="course-name">VANGUARD MBA Sales Management</span>
-        </div>
-
-        <div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;border-top:1px solid var(--border);margin-top:4px;">In Progress</div>
-        <div class="course-row" onclick="toggleCourse('c6')">
-          <span class="course-check in-progress" id="chk-c6">◑</span>
-          <span class="course-name">Chasing Jarvis</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c8')">
-          <span class="course-check in-progress" id="chk-c8">◑</span>
-          <span class="course-name">AI in B2B Sales</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c14')">
-          <span class="course-check in-progress" id="chk-c14">◑</span>
-          <span class="course-name">VANGUARD MBA Business as Warfare</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c15')">
-          <span class="course-check in-progress" id="chk-c15">◑</span>
-          <span class="course-name">Analytics</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c20')">
-          <span class="course-check in-progress" id="chk-c20">◑</span>
-          <span class="course-name">Self Awareness &amp; Personal Enlightenment</span>
-        </div>
-
-        <div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;border-top:1px solid var(--border);margin-top:4px;">Upcoming</div>
-        <div class="course-row" onclick="toggleCourse('c9')">
-          <span class="course-check locked" id="chk-c9">🔒</span>
-          <span class="course-name">Intro To NEO World</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c10')">
-          <span class="course-check locked" id="chk-c10">🔒</span>
-          <span class="course-name">Introduction</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c11')">
-          <span class="course-check locked" id="chk-c11">🔒</span>
-          <span class="course-name">Action Management</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c12')">
-          <span class="course-check locked" id="chk-c12">🔒</span>
-          <span class="course-name">Agile Management</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c13')">
-          <span class="course-check locked" id="chk-c13">🔒</span>
-          <span class="course-name">AI Hackathon</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c14')">
-          <span class="course-check locked" id="chk-c14">🔒</span>
-          <span class="course-name">AI-Embedded Innovation Boot Camp</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c16')">
-          <span class="course-check locked" id="chk-c16">🔒</span>
-          <span class="course-name">Business Battle Ground Boot Camp</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c17')">
-          <span class="course-check locked" id="chk-c17">🔒</span>
-          <span class="course-name">Entrepreneurship Boot Camp & Final Defense</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c18')">
-          <span class="course-check locked" id="chk-c18">🔒</span>
-          <span class="course-name">Finance 360</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c19')">
-          <span class="course-check locked" id="chk-c19">🔒</span>
-          <span class="course-name">Future of Work</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c20')">
-          <span class="course-check locked" id="chk-c20">🔒</span>
-          <span class="course-name">Marketing</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c21')">
-          <span class="course-check locked" id="chk-c21">🔒</span>
-          <span class="course-name">Operations Management</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c22')">
-          <span class="course-check locked" id="chk-c22">🔒</span>
-          <span class="course-name">Sales</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c23')">
-          <span class="course-check locked" id="chk-c23">🔒</span>
-          <span class="course-name">SDG Boot Camp</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c24')">
-          <span class="course-check locked" id="chk-c24">🔒</span>
-          <span class="course-name">Strategizing With Frontier TECH</span>
-        </div>
-        <div class="course-row" onclick="toggleCourse('c25')">
-          <span class="course-check locked" id="chk-c25">🔒</span>
-          <span class="course-name">Vanguard Leadership 1</span>
-        </div>
-
-      </div>
-    </div>
+    <div id="ns-courses" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;"><div style="background:var(--bg-card);border-radius:0 0 var(--radius-sm) var(--radius-sm);border:1px solid var(--border);border-top:none;padding:8px 0;"><div id="ns-courses-body"></div></div></div>
     <div style="display:flex;align-items:center;justify-content:center;padding:40px 24px 20px;">
       <span style="font-family:'DM Sans',sans-serif;font-size:16px;font-style:italic;font-weight:700;color:var(--accent);letter-spacing:0.01em;text-align:center;line-height:1.5;">"Prosperity through ethical excellence"</span>
     </div>
@@ -894,10 +772,11 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
         </div>
       </div>
     </div>
+    <div id="zoom-extras"></div>
     <div class="pill-tabs" id="sessions-filter-tabs">
-      <button class="pill-tab active" onclick="filterSessions('today',this)">Today</button>
+      <button class="pill-tab" onclick="filterSessions('today',this)">Today</button>
       <button class="pill-tab" onclick="filterSessions('week',this)">Week</button>
-      <button class="pill-tab" onclick="filterSessions('month',this)">Month</button>
+      <button class="pill-tab active" onclick="filterSessions('month',this)">Month</button>
     </div>
     <div id="sessions-list"></div>
     <div class="section-label">Recordings</div>
@@ -1088,7 +967,7 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
 
 </main>
 
-<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261018-2100</div>
+<div style="text-align:center;padding:4px;font-size:9px;color:rgba(0,0,0,0.2);letter-spacing:0.05em;">v20261124-1300</div>
 <nav id="bottom-nav">
   <button class="nav-btn active" data-tab="northstar" onclick="switchTab('northstar',this)">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.5 7.5L21 12l-7.5 1.5L12 21l-1.5-7.5L3 12l7.5-1.5z"/></svg>
@@ -1176,9 +1055,10 @@ body.player-on #app-body .tab-panel { padding-bottom: 150px; }
     </div>
     <div class="ben-body" id="ben-body">
       <div class="starter-chips" style="margin-bottom:10px;">
+        <div class="chip" onclick="askKnowledge(this)">When is the next Zoom session?</div>
+        <div class="chip" onclick="askKnowledge(this)">What is due this week?</div>
         <div class="chip" onclick="askKnowledge(this)">Play the PayPal Mafia podcast</div>
         <div class="chip" onclick="askKnowledge(this)">How do I navigate a team conflict?</div>
-        <div class="chip" onclick="askKnowledge(this)">What would a sheepdog do here?</div>
         <div class="chip" onclick="askKnowledge(this)">What is the Centaur Doctrine?</div>
         <div class="chip" onclick="askKnowledge(this)">Explain the NEO Era</div>
         <div class="chip" onclick="askKnowledge(this)">What is Cotruglian ethics?</div>
@@ -1230,31 +1110,35 @@ const PROGRAMME_DATA = {
     ]
   },
 
-  activeCourses: [
-    { id: "cj", name: "Chasing Jarvis", module: "Live Agent Build", icon: "\uD83C\uDFAF", url: "https://cotrugli.online/courses/chasing-jarvis/" },
-    { id: "b2b", name: "AI in B2B Sales", module: "Module 4 \u2014 Orchestration & Risk", icon: "\uD83D\uDCCA", url: "https://cotrugli.online/courses/ai-sales/" },
-    { id: "baw", name: "Business as Warfare", module: "Modules 3 & 4", icon: "\u2694\uFE0F", url: "https://cotrugli.online/courses/business-as-warfare/" },
-    { id: "analytics", name: "Analytics", module: "Module 1 \u2014 Own tempo", icon: "\uD83D\uDCC8", url: "https://cotrugli.online/courses/analytics/" },
-    { id: "selfaware", name: "Self Awareness \u0026 Personal Enlightenment", module: "Own tempo", icon: "\uD83E\uDDD8", url: "https://cotrugli.online/courses/self-awareness/" }
-  ],
 
   currentModule: {
-    name: "Chasing Jarvis \u2014 Live Agent Build",
-    subtitle: "Build a real, working agent",
-    notesUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-    readingListUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-    preReadingsUrl: "https://cotrugli.online/courses/chasing-jarvis/"
+    name: "Chasing Jarvis \u2014 AI Development and Management",
+    subtitle: "27\u201329 November with Dr. Tali Re\u017eun and Sr\u0111an Jovanovi\u0107, online via Zoom",
+    syllabusUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+    guideUrl: "https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md",
+    notesUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+    readingListUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+    preReadingsUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/"
   },
 
   assignments: [
+    {
+      id: "cj-prereadings",
+      type: "academic",
+      name: "Chasing Jarvis \u2014 AI Development and Management: pre-readings",
+      dueDate: "2026-11-26T23:59:00+02:00",
+      status: "in-progress",
+      prepUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+      notes: "Review the syllabus and pre-readings before the module starts on Friday 27 November (with Dr. Tali Re\u017eun and Sr\u0111an Jovanovi\u0107, daily 27\u201329 November, 09:00 Zagreb time which is 10:00 in South Africa, on Zoom)."
+    },
     {
       id: "cj-live-agent-build",
       type: "academic",
       name: "Chasing Jarvis \u2014 Live Agent Build",
       dueDate: "",
       status: "in-progress",
-      prepUrl: "https://cotrugli.online/courses/chasing-jarvis/",
-      notes: "Build a real, working agent. The full guide is on the Cotrugli portal."
+      prepUrl: "https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md",
+      notes: "Build a real, working agent. The full guide is the Vanguard Agent Lab Guide on GitHub."
     },
     {
       id: "self-aware-m1",
@@ -1262,7 +1146,7 @@ const PROGRAMME_DATA = {
       name: "Self Awareness \u0026 Personal Enlightenment",
       dueDate: "",
       status: "in-progress",
-      prepUrl: "https://cotrugli.online/courses/self-awareness/",
+      prepUrl: "https://cotrugli.online/courses/selfawareness-personalenlightenment/",
       notes: "Own tempo course. Start when ready at Alumni Portal."
     },
     {
@@ -1271,7 +1155,7 @@ const PROGRAMME_DATA = {
       name: "Analytics \u2014 Module 1",
       dueDate: "",
       status: "in-progress",
-      prepUrl: "https://alumni.cotrugli.eu",
+      prepUrl: "https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/",
       notes: "Analytics course now open. Start at Alumni Portal. Data without context is noise \u2014 context without data is intuition."
     },
     {
@@ -1279,69 +1163,127 @@ const PROGRAMME_DATA = {
       type: "academic",
       name: "Business as Warfare \u2014 Module 2 assignment",
       dueDate: "2026-10-23T23:59:00+02:00",
-      status: "in-progress",
+      status: "submitted",
       prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
-      notes: "Outstanding \u2014 due Friday 23 October. Upload your Module 2 assignment file directly to the course portal before the deadline. Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
+      notes: "Submitted. Module 2 assignment file uploaded to the course portal."
     },
     {
       id: "baw-m3-assignment",
       type: "academic",
       name: "Business as Warfare \u2014 Module 3 assignment",
       dueDate: "2026-10-23T23:59:00+02:00",
-      status: "in-progress",
+      status: "submitted",
       prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
-      notes: "Outstanding \u2014 due Friday 23 October. Upload your Module 3 assignment file directly to the course portal before the deadline. Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
+      notes: "Submitted. Module 3 assignment file uploaded to the course portal."
     },
     {
       id: "baw-m4-assignment",
       type: "academic",
       name: "Business as Warfare \u2014 Module 4 assignment",
       dueDate: "2026-10-23T23:59:00+02:00",
+      status: "submitted",
+      prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
+      notes: "Submitted. Module 4 assignment file uploaded to the course portal."
+    },
+    {
+      id: "baw-m5-final-report",
+      type: "academic",
+      name: "Business as Warfare \u2014 Module 5 final report",
+      dueDate: "2026-11-15T23:59:00+02:00",
+      status: "submitted",
+      prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
+      notes: "One integrated report, max 15 pages. Submitted. Be ready to defend it in the next Zoom session."
+    },
+    {
+      id: "baw-defence",
+      type: "academic",
+      name: "Defend your Business as Warfare final report",
+      dueDate: "",
       status: "in-progress",
       prepUrl: "https://cotrugli.online/courses/business-as-warfare/",
-      notes: "Outstanding \u2014 due Friday 23 October. Upload your Module 4 assignment file directly to the course portal before the deadline. Links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
+      notes: "Be ready to defend your submitted final report in the next Zoom session. Date to be confirmed."
     },
     {
       id: "b2b-final-project",
       type: "academic",
       name: "AI in B2B Sales \u2014 Final project: AI Sales Strategy for your company",
       dueDate: "",
+      status: "submitted",
+      prepUrl: "https://cotrugli.online/courses/ai-sales/lessons/orchestration-risk/",
+      notes: "Submitted as a PDF through the portal: an AI Sales Strategy for your own real company, 10\u201315 pages."
+    },
+    {
+      id: "b2b-defence",
+      type: "academic",
+      name: "Defend your AI Sales final project",
+      dueDate: "",
       status: "in-progress",
-      prepUrl: "https://cotrugli.online/courses/ai-sales/",
-      notes: "10\u201315 page document, defended in 15 minutes to the cohort. Due 3 weeks after the Module 4 session. Sections: 1 Diagnosis (honest friction map, Module 1 funnel); 2 Stack (tools, order, why, Module 2); 3 Architecture (standards, library, rituals, Module 3); 4 Governance (RACI, decision gates, kill switches, Module 4); 5 ROI model (Layer 1/2/3 metrics vs one explicit baseline); 6 Risk register (top 3 company risks + your response)."
+      prepUrl: "https://cotrugli.online/courses/ai-sales/lessons/orchestration-risk/",
+      notes: "Be ready to defend your submitted final project (15 minutes to the cohort) in the next Zoom session. Date to be confirmed."
     }
   ],
 
-  sessions: [],
+  sessions: [
+    {
+      id: "aidm-1",
+      name: "AI Development and Management \u2014 Day 1 of 3",
+      datetime: "2026-11-27T10:00:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/32/?wm=1&mi=83445885712",
+      recordingUrl: "",
+      zoomId: "834 4588 5712",
+      zoomPass: "AIDM26",
+      syllabusUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+      note: "Chasing Jarvis module with Dr. Tali Re\u017eun and Sr\u0111an Jovanovi\u0107. Daily from 09:00 Belgrade, Bratislava and Ljubljana time, which is 10:00 in South Africa."
+    },
+    {
+      id: "aidm-2",
+      name: "AI Development and Management \u2014 Day 2 of 3",
+      datetime: "2026-11-28T10:00:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/32/?wm=1&mi=83445885712",
+      recordingUrl: "",
+      zoomId: "834 4588 5712",
+      zoomPass: "AIDM26",
+      syllabusUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+      note: "Chasing Jarvis module with Dr. Tali Re\u017eun and Sr\u0111an Jovanovi\u0107. Daily from 09:00 Belgrade, Bratislava and Ljubljana time, which is 10:00 in South Africa."
+    },
+    {
+      id: "aidm-3",
+      name: "AI Development and Management \u2014 Day 3 of 3",
+      datetime: "2026-11-29T10:00:00+02:00",
+      zoomUrl: "https://cotrugli.online/groups/vanguard/zoom/meetings/32/?wm=1&mi=83445885712",
+      recordingUrl: "",
+      zoomId: "834 4588 5712",
+      zoomPass: "AIDM26",
+      syllabusUrl: "https://cotrugli.online/courses/ai-development-and-management-vng/",
+      note: "Chasing Jarvis module with Dr. Tali Re\u017eun and Sr\u0111an Jovanovi\u0107. Daily from 09:00 Belgrade, Bratislava and Ljubljana time, which is 10:00 in South Africa."
+    }
+  ],
 
   toolOfDay: {
     name: "Firebase Studio \u2014 Build and deploy your MVP",
     url: "https://studio.firebase.google.com"
   },
 
-  teamsQuote: "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
+  teamsQuote: "A new Adobe survey found 45% of consumers would lose trust in a brand whose products don't match its marketing claims, yet only 18% of marketers see that as a top risk. Chapter 3: before your next pitch or proposal, what have you given that person that had nothing to do with the sale? Is your reputation arriving before you, or after?",
 
   chasingJarvisQuote: {
-    quote: "\ud83d\udcc4 The right context - not all of it",
+    quote: "📄 Contribute before you announce. That is the golden rule of building in public.",
     author: "Dr. Tali Re\u017eun",
-    url: "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/"
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7530540483778039809/"
   },
 
   dailyTask: {
-    course: "Business as Warfare \u2014 Modules 3 & 4",
-    title: "BAW \u2014 Urgent: Three Outstanding Tasks Due Friday 23 October",
-    body: "Upload your Module 2, 3, and 4 assignment files directly to the course portal before the deadline \u2014 links for each lesson are on the Cotrugli portal and in the BAW Telegram channel."
+    course: "Business as Warfare \u2014 Module 5",
+    title: "The Capstone Campaign",
+    body: "You have submitted your final assignment, so be ready to defend it in the next Zoom session."
   },
 
   studentPosts: [],
 
   kapustaReading: {
-    title: "The Decision You\u2019d Make Differently With the Same Information",
-    subtitle: "Chapter 7: The NEO Leadership Challenge. Pick a real decision from the last quarter and ask the sharper version of the retrospective question: not what would you do differently with better information, but what would you do differently with the exact same information you actually had. If the honest answer is nothing, you made the right call even if it went wrong. If it isn\u2019t nothing, that\u2019s the one worth sitting with.",
-    url: "https://www.linkedin.com/in/cotrugli/",
-    docTitle: "The Art of Business Chapter 1 by Drazen Kapusta",
-    watchUrl: "https://youtu.be/6kDfM7nw5UM",
-    watchLabel: "Watch on YouTube \u2014 Dra\u017een Kapusta"
+    title: "What Have You Given Before You Ask?",
+    subtitle: "Chapter 3: The Perfect Merchant for the NEO Era. Cotrugli's perfect merchant earned the right to trade by being useful first: honest advice, fair dealing, a reputation that arrived before he did. The NEO version is the same rule at network speed. Before your next pitch, proposal or request, look at the person on the other side and ask what you have given them that had nothing to do with the sale. If the honest answer is nothing, you are not ready to ask yet.",
+    url: "https://www.linkedin.com/in/cotrugli/"
   },
 
   futureLab: [
@@ -1350,26 +1292,32 @@ const PROGRAMME_DATA = {
     { title: "Vanguard Intelligence Systems (VIS): An AI-Augmented Framework for Decision-Making in the NEO Era", source: "Kapusta & Stru\u010di\u0107", url: "https://docs.google.com/document/d/1dkpoE_F7jrg0frnzQfyOldkM0fifjXkZ/edit" }
   ],
 
-  neoWorldArticle: {
-    title: "OpenAI is reportedly working through safety issues before releasing its next flagship model, weeks after cancelling GPT-6.1 Astra when internal tests found it pushing beyond users\u2019 authorised scope; an Alan Turing Institute researcher called holding back that release a welcome sign",
-    source: "The Information, via AI Weekly",
-    url: ""
+  exApp: {
+    title: "eX \u2014 the COTRUGLI community app",
+    body: "eX (ex.cotrugli.tech) is COTRUGLI’s community app: members meet in person to share business experience and thank each other with tokens, and it holds the Vanguard Leadership lessons, the dilemma of the week, the 14-day Task-to-Agent course and audiobooks. To join the private Vanguard room, send /ex to @CotruglieXbot in a private chat, or, if you are already in eX from CDayZ, send /vec and your eX name. Then add eX to your home screen, turn on notifications and use your 10 starting tokens to join or host a meetup.",
+    url: "https://ex.cotrugli.tech"
   },
 
-  briefingDate: "Monday, 19 October 2026",
+  neoWorldArticle: {
+    title: "Adobe, which sells AI marketing tools, surveyed 1,011 US consumers and 502 marketers: 45% of consumers would lose trust in a brand whose products don't match its marketing claims, but only 18% of marketers rank inaccurate claims as a top trust concern",
+    source: "Small Business Trends",
+    url: "https://smallbiztrends.com/marketers-embrace-ai-as-consumer-trust-gap-widens-for-2027"
+  },
+
+  briefingDate: "Tuesday, 24 November 2026",
 
   status: [
-    "All JTBDs current",
-    "Awaiting Future of Work multiple choice exam results",
-    "Future of Work Essay \u2014 Submitted, awaiting results and feedback",
-    "Module 4: Context Engineering \u2014 Completed"
+    "Business as Warfare Module 5 final report \u2014 submitted",
+    "AI in B2B Sales final project \u2014 submitted",
+    "Next: defend both final assignments in the next Zoom session (date to be confirmed)",
+    "Next module: AI Development and Management, 27\u201329 November"
   ],
 
-  knowledgeQuestion: "Chapter 7 asks the sharper retrospective question: not what you would do differently with better information, but what you would do differently with the exact same information you actually had. Pick a real decision from last quarter. Of everything you knew at the time, which two or three facts really drove the call, and which were noise? Then flip it: if you handed those same facts to an AI agent, what authority would you give it to act on them?",
+  knowledgeQuestion: "Dr. Tali draws a line between deception (pretending interest in someone so you can sell to them) and healthy promotion (showing real work honestly and letting people decide). Think of your next pitch, proposal or announcement. What have you contributed to that audience before asking for anything, and which side of his line does your current message sit on?",
 
-  modelAnswer: "Start by separating what you had from what you used. Most retrospectives blame missing data, but the honest audit usually finds the opposite: the decision turned on two or three facts and the rest was noise that felt like diligence. That is the right context, not all of it \u2014 the leader\u2019s skill is knowing which facts earn a place in the decision. If the honest answer is that you would decide the same way, the call was sound even if the outcome was not. The agent angle matters now: reports this week that OpenAI held back a model after tests found it pushing beyond users\u2019 authorised scope show the same discipline applied to machines. Give an agent the context it needs and the authority you can defend, not everything it can reach.",
+  modelAnswer: "Most pitches fail his test quietly rather than dramatically: nobody is lying, but the first real contact is a request, and the value is promised rather than shown. Look at the audience for your next ask and list what they have already received from you that had nothing to do with the sale: a useful introduction, honest advice, a piece of work they could use for free. If the list is empty, the pitch will be heard as noise, however good the product. Then check the message against the Adobe gap: does every claim match what your product or service actually does today, not what it will do after the next release? The perfect merchant's reputation arrived before he did. The Vanguard move: before you send the next pitch, give that person one useful thing with no request attached, and cut any claim you could not demonstrate on the spot.",
 
-  todaysFocus: "Sprint 8 in progress. Business as Warfare: three assignments (Modules 2, 3 and 4) are due Friday 23 October. AI in B2B Sales Module 4 \u2014 Orchestration & Risk, with the final project under way. Chasing Jarvis: build a real, working agent. Analytics and Self Awareness at your own tempo. This week: what did your tribe ship? Next Zoom session details to follow.",
+  todaysFocus: "Sprint 8 in progress. Next module: AI Development and Management (Chasing Jarvis), 27–29 November, daily from 10:00 South African time on Zoom. Review the syllabus and pre-readings before Friday. Business as Warfare and AI in B2B Sales: your final assignments are submitted, so be ready to defend them in the next Zoom session. This week: what did your tribe ship?",
 
   podcastGroups: [
     {
@@ -1534,6 +1482,11 @@ const PROGRAMME_DATA = {
       name: "Dražen Kapusta",
       profileUrl: "https://www.linkedin.com/in/cotrugli/",
       posts: [
+        { title: "Chasing Jarvis starts Friday 27 November in Zagreb-Buzin. Three practical days to develop and test an AI-powered prototype, with @tali and S…", url: "https://www.linkedin.com/feed/update/urn:li:activity:7529091347404918784/" },
+        { title: "14 days for your 1st working agent", url: "https://www.linkedin.com/feed/update/urn:li:activity:7525160237922844672/" },
+        { title: "What happens when the extraordinary becomes a weekly occurrence?", url: "https://www.linkedin.com/posts/cotrugli_cdayz-leadership-nvidia-ugcPost-7521841362649092096-5NK8/" },
+        { title: "The Art of Business", url: "https://www.linkedin.com/feed/update/urn:li:activity:7517913731780087808/" },
+        { title: "Chasing Jarvis", url: "https://www.linkedin.com/feed/update/urn:li:activity:7516024325712433152/" },
         { title: "The Joker, The Ace of Hearts, the Merchant Republic, and the 5-Month Siege", url: "https://www.linkedin.com/pulse/joker-ace-hearts-merchant-republic-5-month-siege-drazen-kapusta-uttif/" },
         { title: "Intro to the NEO Era", url: "https://www.linkedin.com/pulse/intro-neo-era-drazen-kapusta-veb2f/" },
         { title: "From Prediction to Reality — Genesis Mission Strategic Pivot", url: "https://www.linkedin.com/pulse/from-prediction-reality-genesis-mission-strategic-pivot-kapusta-ubf6f/" },
@@ -1567,6 +1520,31 @@ const PROGRAMME_DATA = {
       name: "Dr. Tali Režun",
       profileUrl: "https://www.linkedin.com/in/talirezun/",
       posts: [
+        { title: "Chasing Jarvis starts next Friday at COTRUGLI Business School in Zagreb.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7529104632682565632/" },
+        { title: "My website answers questions now. Only from what I wrote.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7528714230280122368/" },
+        { title: "Bring the AI you already use. Enable free agent-to-agent communication.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7528363826338033664/" },
+        { title: "Plain words in. You approve what counts.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7528079656315609088/" },
+        { title: "Data without context is noise. Context without data is intuition. The Vanguard leader needs both - and the analytics layer is where they mee…", url: "https://www.linkedin.com/feed/update/urn:li:activity:7527627111742803982/" },
+        { title: "Four webs. Four verbs. One question nobody asks about the history of the internet", url: "https://www.linkedin.com/feed/update/urn:li:activity:7526579376985960448/" },
+        { title: "Your AI can now talk to other people's AI.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7526192582322712578/" },
+        { title: "Which Claude model should you build with?", url: "https://www.linkedin.com/feed/update/urn:li:activity:7525796883135475713/" },
+        { title: "Thirty years at the edge of every technology wave.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7525131165662658562/" },
+        { title: "We start on Monday, November 9th. A few places are still vacant", url: "https://www.linkedin.com/feed/update/urn:li:activity:7524019853964304384/" },
+        { title: "My hub is live: talirezun.com", url: "https://www.linkedin.com/feed/update/urn:li:activity:7523644722943258624/" },
+        { title: "Windows users, this one's for you.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7523324377317187584/" },
+        { title: "Six days. In the end, you don't take notes, but a working product.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7522917137791991808/" },
+        { title: "The most valuable thing for my software is not another test. It is a user telling me what feels wrong.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7522516310073815040/" },
+        { title: "Orchestration is not a technical skill. It is a management skill", url: "https://www.linkedin.com/feed/update/urn:li:activity:7521823517353582592/" },
+        { title: "Google has built its whole stack around one skill: orchestrating agents.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7521473805039546369/" },
+        { title: "AgentLink: your agent talks to their agent, and you keep the proof", url: "https://www.linkedin.com/feed/update/urn:li:activity:7521225724310020096/" },
+        { title: "Three terms that explain most of what \"slow\" means, and a fourth that every agent builder should add.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7519788415286992896/" },
+        { title: "Three of the biggest AI labs now ship the same product category: a proactive assistant.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7518904572082282496/" },
+        { title: "Give every agent the right context, and not all of it", url: "https://www.linkedin.com/feed/update/urn:li:activity:7518953093959458817/" },
+        { title: "AI coding agents are leaving the laptop", url: "https://www.linkedin.com/feed/update/urn:li:activity:7518543567691227137/" },
+        { title: "Our AI agents can't talk to each other. I'm building the fix.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7518220383901306880/" },
+        { title: "Build with one AI model. Audit with another", url: "https://www.linkedin.com/feed/update/urn:li:activity:7517860302902788096/" },
+        { title: "Tesla Roadster product reveal", url: "https://www.linkedin.com/feed/update/urn:li:activity:7516760480804204545/" },
+        { title: "Gemini 4 Argon is out", url: "https://www.linkedin.com/feed/update/urn:li:activity:7516004585820520448/" },
         { title: "The right context - not all of it", url: "https://www.linkedin.com/feed/update/urn:li:activity:7517113226409668608/" },
         { title: "Three Philosophies, One Goal: Augment Code vs Claude Code vs Codex CLI", url: "https://www.linkedin.com/feed/update/urn:li:activity:7448631044594995200/" },
         { title: "My First AI Product Is Live", url: "https://www.linkedin.com/posts/talirezun_my-first-ai-product-is-live-after-two-activity-7414290097354817537-GyfJ" },
@@ -2483,6 +2461,16 @@ const PROGRAMME_DATA = {
       icon: '\ud83e\udd16',
       modules: [
         {
+          id: 'cj-aidm',
+          label: 'AI Development and Management \u2014 27\u201329 Nov',
+          required: [
+            { id: 'cj-aidm-r1', title: 'Syllabus & pre-readings', author: 'Cotrugli Business School', url: 'https://cotrugli.online/courses/ai-development-and-management-vng/' }
+          ],
+          supplemental: [
+            { id: 'cj-aidm-s1', title: 'Vanguard Agent Lab Guide', author: 'Dr. Tali Re\u017eun', url: 'https://github.com/talirezun/conduit-agent/blob/main/use-cases/cotrugli-business-school/Vanguard_Agent_Lab_Guide.md' }
+          ]
+        },
+        {
           id: 'cj-m5',
           label: 'Module 5 \u2014 Building an MVP',
           required: [
@@ -2650,7 +2638,7 @@ function renderNorthStar() {
   renderDeadlineBadge();
   const nsCoursesEl = document.getElementById('ns-active-courses');
   if (nsCoursesEl) {
-    nsCoursesEl.innerHTML = (PROGRAMME_DATA.activeCourses || []).map(c => `<div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:rgba(255,255,255,0.09);border-radius:6px;cursor:pointer;"><div style="display:flex;align-items:center;gap:7px;"><span style="font-size:13px;">${c.icon}</span><div><div style="font-size:11px;font-weight:700;color:#ffffff;">${c.name}</div><div style="font-size:9px;color:rgba(255,255,255,0.45);">${c.module}</div></div></div><span style="font-size:12px;color:rgba(255,255,255,0.4);">›</span></div>`).join('');
+    nsCoursesEl.innerHTML = getActiveCourses().map(c => `<div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:rgba(255,255,255,0.09);border-radius:6px;cursor:pointer;"><div style="display:flex;align-items:center;gap:7px;"><span style="font-size:13px;">${c.icon}</span><div><div style="font-size:11px;font-weight:700;color:#ffffff;">${c.name}</div><div style="font-size:9px;color:rgba(255,255,255,0.45);">${c.module}</div></div></div><span style="font-size:12px;color:rgba(255,255,255,0.4);">›</span></div>`).join('');
   }
 
   const priEl = document.getElementById('ns-priorities');
@@ -2767,14 +2755,14 @@ function renderWork() {
   }
   const coursesEl = document.getElementById('work-active-courses');
   if (coursesEl) {
-    coursesEl.innerHTML = (PROGRAMME_DATA.activeCourses || []).map(c => `<div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;cursor:pointer;"><span style="font-size:16px;">${c.icon}</span><div style="flex:1;"><div style="font-size:12px;font-weight:700;color:var(--text);">${c.name}</div><div style="font-size:10px;color:var(--text-muted);margin-top:1px;">${c.module}</div></div><span style="font-size:14px;color:var(--text-muted);">›</span></div>`).join('');
+    coursesEl.innerHTML = getActiveCourses().map(c => `<div onclick="openUrl('${c.url}')" style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;cursor:pointer;"><span style="font-size:16px;">${c.icon}</span><div style="flex:1;"><div style="font-size:12px;font-weight:700;color:var(--text);">${c.name}</div><div style="font-size:10px;color:var(--text-muted);margin-top:1px;">${c.module}</div></div><span style="font-size:14px;color:var(--text-muted);">›</span></div>`).join('');
   }
   const el = document.getElementById('work-assignments');
   el.innerHTML = '';
   const statusMap = { pending: 'badge-pending', 'in-progress': 'badge-progress', submitted: 'badge-done', commented: 'badge-done' };
   const statusLabel = { pending: 'Pending', 'in-progress': 'In Progress', submitted: 'Submitted \u2713', commented: 'Commented \u2713' };
 
-  PROGRAMME_DATA.assignments.forEach(a => {
+  [...PROGRAMME_DATA.assignments].sort((x, y) => (isDeadlineDone(x) ? 1 : 0) - (isDeadlineDone(y) ? 1 : 0)).forEach(a => {
     const hasDue = a.dueDate && a.dueDate !== '';
     const cd = hasDue ? getCountdown(a.dueDate) : { urgency: 'safe', display: 'Current' };
     const dueText = hasDue ? `Due ${formatDue(a.dueDate)}` : 'Current \u2014 no deadline set';
@@ -2819,6 +2807,7 @@ function renderZoomEmpty() {
 function renderSessions() {
   const s = getNextSession();
   if (_zoomTimer) { clearInterval(_zoomTimer); _zoomTimer = null; }
+  renderZoomExtras(s);
   if (!s) { renderZoomEmpty(); }
   else {
   const _u2 = document.querySelector('.zoom-ring-unit'); if (_u2) _u2.textContent = 'left';
@@ -2854,10 +2843,11 @@ function renderSessions() {
 
   const sl = document.getElementById('sessions-list');
   sl.innerHTML = '';
-  if (!PROGRAMME_DATA.sessions.length) {
-    sl.innerHTML = '<div style="padding:14px 4px;font-size:13px;color:var(--text-muted);line-height:1.5;">No sessions scheduled yet. Next session details to follow \u2014 watch Telegram and this space.</div>';
+  const _shown = sessionsForFilter();
+  if (!_shown.length) {
+    sl.innerHTML = '<div style="padding:14px 4px;font-size:13px;color:var(--text-muted);line-height:1.5;">' + (PROGRAMME_DATA.sessions.length ? 'No sessions ' + (_sessFilter === 'today' ? 'today' : _sessFilter === 'week' ? 'in the next 7 days' : 'in the next month') + '. Try a wider range.' : 'No sessions scheduled yet. Next session details to follow \u2014 watch Telegram and this space.') + '</div>';
   }
-  PROGRAMME_DATA.sessions.forEach(sess => {
+  _shown.forEach(sess => {
     if (sess.zoomUrl) {
       sl.innerHTML += `<div class="link-row" onclick="openUrl('${sess.zoomUrl}')"><div><div class="link-row-label">${sess.name}</div><div class="link-row-meta">${formatDate(sess.datetime)} · ${formatTime(sess.datetime)}</div></div><span class="chevron">›</span></div>`;
     } else {
@@ -2926,10 +2916,61 @@ function renderSessions() {
   });
 }
 
+let _sessFilter = 'month';
 function filterSessions(period, btn) {
+  _sessFilter = period;
   document.getElementById('sessions-filter-tabs').querySelectorAll('.pill-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderSessions();
+}
+function sessionsForFilter() {
+  const now = new Date();
+  const cutoff = new Date(now.getTime() - 2 * 3600000);
+  const dayKey = d => new Date(d).toLocaleDateString('en-CA', { timeZone: 'Africa/Johannesburg' });
+  const span = _sessFilter === 'today' ? 0 : _sessFilter === 'week' ? 7 : 31;
+  return (PROGRAMME_DATA.sessions || []).filter(x => {
+    const t = new Date(x.datetime);
+    if (t < cutoff) return false;
+    if (_sessFilter === 'today') return dayKey(t) === dayKey(now);
+    return t.getTime() - now.getTime() <= span * 86400000;
+  });
+}
+function renderZoomExtras(s) {
+  const el = document.getElementById('zoom-extras');
+  if (!el) return;
+  if (!s) { el.innerHTML = ''; return; }
+  const upcoming = (PROGRAMME_DATA.sessions || []).filter(x => new Date(x.datetime) > new Date());
+  let h = '<div style="display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 12px;">';
+  if (s.syllabusUrl) h += '<button class="dl-btn" onclick="openUrl(\'' + dlEsc(s.syllabusUrl) + '\')">Syllabus &amp; pre-readings \u203A</button>';
+  if (upcoming.length) h += '<button class="dl-btn primary" onclick="downloadSessionICS()">+ Add ' + (upcoming.length > 1 ? 'all ' + upcoming.length + ' sessions' : 'session') + ' to my calendar</button>';
+  h += '</div>';
+  if (s.note) h += '<div style="font-size:11px;color:var(--text-muted);line-height:1.5;margin:0 2px 12px;">' + dlEsc(s.note) + '</div>';
+  el.innerHTML = h;
+}
+function downloadSessionICS() {
+  const list = (PROGRAMME_DATA.sessions || []).filter(x => new Date(x.datetime) > new Date());
+  if (!list.length) { showToast('No upcoming sessions'); return; }
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+  const utc = iso => new Date(iso).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+  const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Cotrugli Navigator//Sessions//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+  list.forEach(x => {
+    const desc = (x.note || '') + (x.zoomId ? '\nMeeting ID: ' + x.zoomId + '  Passcode: ' + x.zoomPass : '') + (x.zoomUrl ? '\nJoin: ' + x.zoomUrl : '') + (x.syllabusUrl ? '\nSyllabus: ' + x.syllabusUrl : '') + '\n(End time is not published in the app, so this block is a placeholder length.)';
+    L.push('BEGIN:VEVENT', 'UID:' + x.id + '@cotrugli-navigator', 'DTSTAMP:' + stamp, 'DTSTART:' + utc(x.datetime), 'DURATION:PT1H',
+      icsFold('SUMMARY:' + icsEsc(x.name)), icsFold('DESCRIPTION:' + icsEsc(desc)));
+    if (x.zoomUrl) L.push(icsFold('URL:' + x.zoomUrl));
+    [['-P1D', 'Starts tomorrow'], ['-PT30M', 'Starts in 30 minutes']].forEach(([trig, txt]) => {
+      L.push('BEGIN:VALARM', 'ACTION:DISPLAY', icsFold('DESCRIPTION:' + icsEsc(txt + ': ' + x.name)), 'TRIGGER:' + trig, 'END:VALARM');
+    });
+    L.push('END:VEVENT');
+  });
+  L.push('END:VCALENDAR');
+  const blob = new Blob([L.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'navigator-sessions.ics';
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 4000);
+  showToast('Calendar file ready \u2014 open it to add the sessions');
 }
 function togglePodcastGroup(id) {
   const body = document.getElementById('pg-body-' + id);
@@ -2963,45 +3004,70 @@ function toggleCourses() {
   ch.style.transform = _coursesOpen ? 'rotate(90deg)' : 'rotate(0deg)';
 }
 
-// Default states: c1-c5 complete, c6-c7 in-progress, c8-c25 locked
-const COURSE_DEFAULTS = {
-  c1:'complete',c2:'complete',c3:'complete',c4:'complete',c5:'complete',
-  c6:'in-progress',c7:'complete',c8:'in-progress',
-  c9:'locked',c10:'locked',c11:'locked',c12:'locked',c13:'locked',c14:'locked',
-  c15:'locked',c16:'locked',c17:'locked',c18:'locked',c19:'locked',c20:'locked',
-  c21:'locked',c22:'locked',c23:'locked',c24:'locked',c25:'locked'
-};
-const COURSE_CYCLE = ['locked','in-progress','complete'];
+// ===== COURSES: one list drives Course Status AND Active Courses =====
+const COURSE_CATALOG = [
+  { id: 'hult', name: 'VANGUARD MBA \u2013 HULT PRIZE Preparations', status: 'complete' },
+  { id: 'design', name: 'VANGUARD MBA Complete Program Design', status: 'complete' },
+  { id: 'field', name: 'VANGUARD MBA Field Manual', status: 'complete' },
+  { id: 'neo', name: 'VANGUARD MBA Leading and Building in the NEO Era', status: 'complete' },
+  { id: 'fow', name: 'VANGUARD MBA The Future of Work', status: 'complete' },
+  { id: 'agility', name: 'VANGUARD MBA Business Agility', status: 'complete' },
+  { id: 'salesmgmt', name: 'VANGUARD MBA Sales Management', status: 'complete' },
+  { id: 'cj', name: 'Chasing Jarvis', short: 'Chasing Jarvis', status: 'progress', icon: '\uD83C\uDFAF', module: 'AI Development and Management \u00b7 27\u201329 Nov', url: 'https://cotrugli.online/courses/ai-development-and-management-vng/' },
+  { id: 'b2b', name: 'AI in B2B Sales', short: 'AI in B2B Sales', status: 'progress', icon: '\uD83D\uDCCA', module: 'Module 4 \u2014 Orchestration & Risk \u00b7 final project submitted', url: 'https://cotrugli.online/courses/ai-sales/lessons/orchestration-risk/' },
+  { id: 'baw', name: 'VANGUARD MBA Business as Warfare', short: 'Business as Warfare', status: 'progress', icon: '\u2694\uFE0F', module: 'Module 5 \u00b7 final report submitted', url: 'https://cotrugli.online/courses/business-as-warfare/' },
+  { id: 'analytics', name: 'Analytics', short: 'Analytics', status: 'progress', icon: '\uD83D\uDCC8', module: 'Own tempo', url: 'https://cotrugli.online/courses/vanguard-mba-analytics/lessons/introduction/' },
+  { id: 'selfaware', name: 'Self Awareness & Personal Enlightenment', short: 'Self Awareness & Personal Enlightenment', status: 'progress', icon: '\uD83E\uDDD8', module: 'Own tempo', url: 'https://cotrugli.online/courses/selfawareness-personalenlightenment/' },
+  { id: 'u-neoworld', name: 'Intro To NEO World', status: 'locked' },
+  { id: 'u-intro', name: 'Introduction', status: 'locked' },
+  { id: 'u-action', name: 'Action Management', status: 'locked' },
+  { id: 'u-agile', name: 'Agile Management', status: 'locked' },
+  { id: 'u-hackathon', name: 'AI Hackathon', status: 'locked' },
+  { id: 'u-bootcamp-ai', name: 'AI-Embedded Innovation Boot Camp', status: 'locked' },
+  { id: 'u-bootcamp-bbg', name: 'Business Battle Ground Boot Camp', status: 'locked' },
+  { id: 'u-entrepreneurship', name: 'Entrepreneurship Boot Camp & Final Defense', status: 'locked' },
+  { id: 'u-finance', name: 'Finance 360', status: 'locked' },
+  { id: 'u-fow2', name: 'Future of Work', status: 'locked' },
+  { id: 'u-marketing', name: 'Marketing', status: 'locked' },
+  { id: 'u-ops', name: 'Operations Management', status: 'locked' },
+  { id: 'u-sales', name: 'Sales', status: 'locked' },
+  { id: 'u-sdg', name: 'SDG Boot Camp', status: 'locked' },
+  { id: 'u-frontier', name: 'Strategizing With Frontier TECH', status: 'locked' },
+  { id: 'u-vl1', name: 'Vanguard Leadership 1', status: 'locked' }
+];
+const COURSE_CYCLE = ['locked', 'progress', 'complete'];
+function getCourseStates() { return storage.getJSON('cn_courses_v2') || {}; }
+function courseStatus(c) { return getCourseStates()[c.id] || c.status; }
+function getActiveCourses() {
+  return COURSE_CATALOG.filter(c => courseStatus(c) === 'progress').map(c => ({ id: c.id, name: c.short || c.name, module: c.module || 'Own tempo', icon: c.icon || '\uD83D\uDCD8', url: c.url || 'https://cotrugli.online/' }));
+}
 function toggleCourse(id) {
-  const saved = JSON.parse(localStorage.getItem('cn_courses') || '{}');
-  const current = saved[id] || COURSE_DEFAULTS[id] || 'locked';
-  const next = COURSE_CYCLE[(COURSE_CYCLE.indexOf(current) + 1) % COURSE_CYCLE.length];
-  saved[id] = next;
-  localStorage.setItem('cn_courses', JSON.stringify(saved));
-  applyCourseState(id, next);
+  const saved = getCourseStates();
+  const c = COURSE_CATALOG.find(x => x.id === id);
+  if (!c) return;
+  const cur = saved[id] || c.status;
+  saved[id] = COURSE_CYCLE[(COURSE_CYCLE.indexOf(cur) + 1) % COURSE_CYCLE.length];
+  storage.setJSON('cn_courses_v2', saved);
+  renderCourseStatus();
+  try { renderNorthStar(); renderWork(); } catch (e) {}
 }
-function applyCourseState(id, state) {
-  const el = document.getElementById('chk-' + id);
+function renderCourseStatus() {
+  const el = document.getElementById('ns-courses-body');
   if (!el) return;
-  if (state === 'complete') { el.textContent = '✓'; el.className = 'course-check'; }
-  else if (state === 'in-progress') { el.textContent = '◑'; el.className = 'course-check in-progress'; }
-  else { el.textContent = '🔒'; el.className = 'course-check locked'; }
+  const mark = { complete: ['\u2713', ''], progress: ['\u25D1', ' in-progress'], locked: ['\uD83D\uDD12', ' locked'] };
+  const sections = [['complete', 'Completed'], ['progress', 'In Progress'], ['locked', 'Upcoming']];
+  let h = '<div style="padding:4px 16px 8px;font-size:11px;color:var(--text-muted);line-height:1.5;">\u2713 Completed \u00b7 \u25D1 In progress \u00b7 \uD83D\uDD12 Upcoming. Tap a course to change its status. Active Courses follows this list, and your changes are saved on this device only.</div>';
+  sections.forEach(([st, label], idx) => {
+    const items = COURSE_CATALOG.filter(c => courseStatus(c) === st);
+    h += '<div style="padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;' + (idx ? 'border-top:1px solid var(--border);margin-top:4px;' : '') + '">' + label + ' (' + items.length + ')</div>';
+    items.forEach(c => {
+      h += '<div class="course-row" onclick="toggleCourse(\'' + c.id + '\')"><span class="course-check' + mark[st][1] + '">' + mark[st][0] + '</span><span class="course-name">' + dlEsc(c.name) + (st === 'progress' && c.module ? '<span style="display:block;font-size:10px;font-weight:400;color:var(--text-muted);margin-top:1px;">' + dlEsc(c.module) + '</span>' : '') + '</span></div>';
+    });
+  });
+  el.innerHTML = h;
+  if (typeof _coursesOpen !== 'undefined' && _coursesOpen) { const w = document.getElementById('ns-courses'); if (w) w.style.maxHeight = w.scrollHeight + 'px'; }
 }
-function initCourses() {
-  const saved = JSON.parse(localStorage.getItem('cn_courses') || '{}');
-  for (let i = 1; i <= 25; i++) {
-    const id = 'c' + i;
-    applyCourseState(id, saved[id] || COURSE_DEFAULTS[id]);
-  }
-}
-// Force refresh defaults if version changed
-(function() {
-  const ver = '4';
-  if (localStorage.getItem('cn_courses_ver') !== ver) {
-    localStorage.removeItem('cn_courses');
-    localStorage.setItem('cn_courses_ver', ver);
-  }
-})();
+function initCourses() { renderCourseStatus(); }
 function toggleDeadlines() {
   _dlOpen = !_dlOpen;
   const dlEl = document.getElementById('ns-deadlines');
@@ -3040,13 +3106,13 @@ function buildProgrammeContext() {
   lines.push('Student: ' + (d.student || '') + ' \u00b7 ' + (d.team || '') + ' \u00b7 ' + (d.programme || ''));
   if (d.activeSprint) lines.push('Sprint: ' + d.activeSprint.label + ' \u2014 ' + d.activeSprint.dates);
   lines.push('Active courses:');
-  (d.activeCourses || []).forEach(c => lines.push('- ' + c.name + ' \u2014 ' + c.module));
+  getActiveCourses().forEach(c => lines.push('- ' + c.name + ' \u2014 ' + c.module));
   lines.push('Tasks and assignments:');
-  (d.assignments || []).forEach(a => lines.push('- ' + a.name + ' [' + (isDeadlineDone(a) ? 'marked done by the user' : (a.status || 'unknown')) + '] due: ' + (a.dueDate ? longDate(a.dueDate.slice(0, 10)) : 'no due date set in the app') + (a.notes ? ' \u2014 ' + String(a.notes).slice(0, 220) : '')));
+  (d.assignments || []).forEach(a => lines.push('- ' + a.name + ' [' + (a.status === 'submitted' ? 'submitted' : (isDeadlineDone(a) ? 'marked done by the user' : (a.status || 'unknown'))) + '] due: ' + (a.dueDate ? longDate(a.dueDate.slice(0, 10)) : 'no due date set in the app') + (a.notes ? ' \u2014 ' + String(a.notes).slice(0, 220) : '')));
   const upcoming = (d.sessions || []).filter(x => new Date(x.datetime) > now);
   const past = (d.sessions || []).filter(x => new Date(x.datetime) <= now);
   lines.push('Upcoming Zoom sessions:');
-  if (upcoming.length) upcoming.forEach(x => lines.push('- ' + x.name + ' \u2014 ' + fmt(x.datetime) + (x.zoomUrl ? ' (Zoom link is on the Sessions tab)' : ' (Zoom link not yet published)')));
+  if (upcoming.length) upcoming.forEach(x => lines.push('- ' + x.name + ' \u2014 ' + fmt(x.datetime) + (x.zoomUrl ? ' (Zoom link is on the Sessions tab)' : ' (Zoom link not yet published)') + (x.zoomId ? ' \u2014 Meeting ID ' + x.zoomId + ', passcode ' + x.zoomPass : '') + (x.note ? ' \u2014 ' + x.note : '') + (x.syllabusUrl ? ' \u2014 syllabus and pre-readings: ' + x.syllabusUrl : '')));
   else lines.push('- None scheduled in the app right now.');
   if (past.length) lines.push('Most recent past session listed: ' + past[past.length - 1].name + ' \u2014 ' + fmt(past[past.length - 1].datetime));
   const sched = Object.values(getSchedule()).filter(v => v.date >= isoFromDate(new Date())).sort((x, y) => x.date.localeCompare(y.date)).slice(0, 20);
@@ -4286,7 +4352,7 @@ function renderBriefing() {
   }
 
   if (!s) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📅</span><div class="briefing-content"><div class="briefing-title">Next Zoom Session</div>Watch this space \u2014 next session details to follow</div></div>`);
-  if (s) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📅</span><div class="briefing-content"><div class="briefing-title">Next Zoom Session</div><strong>${s.name}</strong> — ${formatDate(s.datetime)} at ${formatTime(s.datetime)}${s.recordingUrl ? ` · <a href="${s.recordingUrl}" style="color:var(--accent);">Zoom Recordings</a>` : ''}</div></div>`);
+  if (s) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📅</span><div class="briefing-content"><div class="briefing-title">Next Zoom Session</div><strong>${s.name}</strong> — ${formatDate(s.datetime)} at ${formatTime(s.datetime)}${s.recordingUrl ? ` · <a href="${s.recordingUrl}" style="color:var(--accent);">Zoom Recordings</a>` : ''}${s.note ? `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${s.note}</div>` : ''}${s.zoomId ? `<div style="font-size:12px;margin-top:6px;">Meeting ID: ${s.zoomId} · Passcode: ${s.zoomPass}</div>` : ''}${s.zoomUrl ? `<div style="margin-top:6px;"><a href="${s.zoomUrl}" style="color:var(--accent);font-weight:600;">→ Join Zoom Meeting</a></div>` : ''}${s.syllabusUrl ? `<div style="margin-top:4px;"><a href="${s.syllabusUrl}" style="color:var(--accent);">→ Syllabus &amp; pre-readings — review before the module</a></div>` : ''}</div></div>`);
 
   if (d.status && d.status.length) rows.push(`<div class="briefing-row"><span class="briefing-emoji">✅</span><div class="briefing-content"><div class="briefing-title">Status</div>${d.status.join('<br>')}</div></div>`);
 
@@ -4305,7 +4371,9 @@ function renderBriefing() {
       if (d.currentModule.preReading) focusHtml += `<div style="margin-top:8px;padding:10px 12px;background:#f5f4ff;border-radius:10px;border-left:3px solid #7F77DD;"><div style="font-size:10px;font-weight:600;color:#534AB7;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Pre-Module Reading</div><a href="${d.currentModule.preReading.url}" style="color:#534AB7;font-weight:500;font-size:13px;">→ ${d.currentModule.preReading.title}</a><div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.currentModule.preReading.note}</div></div>`;
     }
     if (d.currentModule.readings && d.currentModule.readings.length) focusHtml += `<div style="margin-top:8px;"><div style="font-size:10px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Supplementary</div>${d.currentModule.readings.map(r=>`→ <a href="${r.url}" style="color:var(--accent);">${r.title}</a>`).join('<br>')}</div>`;
-    if (d.currentModule.notesUrl) focusHtml += `<div style="margin-top:8px;"><a href="${d.currentModule.notesUrl}" style="color:var(--accent);">\u2192 Full guide</a></div>`;
+    if (d.currentModule.syllabusUrl) focusHtml += `<div style="margin-top:8px;"><a href="${d.currentModule.syllabusUrl}" style="color:var(--accent);">\u2192 Syllabus &amp; pre-readings</a></div>`;
+    if (d.currentModule.guideUrl) focusHtml += `<div style="margin-top:4px;"><a href="${d.currentModule.guideUrl}" style="color:var(--accent);">\u2192 Full guide (Agent Lab)</a></div>`;
+    else if (d.currentModule.notesUrl) focusHtml += `<div style="margin-top:8px;"><a href="${d.currentModule.notesUrl}" style="color:var(--accent);">\u2192 Full guide</a></div>`;
     focusHtml += `</div></div>`;
     rows.push(focusHtml);
   }
@@ -4319,6 +4387,8 @@ function renderBriefing() {
   rows.push(`<div class="briefing-row"><span class="briefing-emoji">🗺️</span><div class="briefing-content"><div class="briefing-title">Navigable Path</div>Turning complexity into a navigable path — <a href="${d.toolOfDay.url}" style="color:var(--accent);">${d.toolOfDay.name}</a> — create an account and explore</div></div>`);
 
   if (d.kapustaReading) rows.push(`<div class="briefing-row"><span class="briefing-emoji">🏛️</span><div class="briefing-content"><div class="briefing-title">Vanguard Leadership &amp; NEO World — Kapusta</div><a href="${d.kapustaReading.url}" style="color:var(--accent);font-weight:600;">${d.kapustaReading.title}</a>${d.kapustaReading.subtitle ? `<div style="font-size:11px;color:var(--text-muted);margin-top:4px;">${d.kapustaReading.subtitle}</div>` : ''}${d.kapustaReading.docTitle ? `<div style="margin-top:8px;">📄 ${d.kapustaReading.docTitle}</div>` : ''}${d.kapustaReading.watchUrl ? `<div style="margin-top:4px;"><a href="${d.kapustaReading.watchUrl}" style="color:var(--accent);">→ ${d.kapustaReading.watchLabel || 'Watch on YouTube'}</a></div>` : ''}</div></div>`);
+
+  if (d.exApp) rows.push(`<div class="briefing-row"><span class="briefing-emoji">📱</span><div class="briefing-content"><div class="briefing-title">${d.exApp.title}</div><div style="font-size:12px;color:var(--text-dim);line-height:1.6;">${d.exApp.body}</div><div style="margin-top:6px;"><a href="${d.exApp.url}" style="color:var(--accent);font-weight:600;">→ Open eX</a></div></div></div>`);
 
   if (d.futureLab) {
     const flItems = Array.isArray(d.futureLab) ? d.futureLab : [d.futureLab];
@@ -4533,10 +4603,11 @@ function renderTribe() {
 function renderTribeTeams() {
   const el = document.getElementById('tribe-teams-list');
   if (!el) return;
-  const compactCard = `<div class="card card-gold" style="margin-bottom:12px;">
+  const _compactBase = `<div class="card card-gold" style="margin-bottom:12px;">
     <div style="font-size:10px;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">\ud83e\udd1d Chiefs\u2019 Compact</div>
     <div style="font-size:13px;color:#78350f;line-height:1.6;">${TRIBE_DATA.compact}</div>
   </div>`;
+  const compactCard = _compactBase + `<div class="card" style="margin-bottom:12px;"><div style="font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">\uD83D\uDCF1 eX \u2014 the COTRUGLI community app</div><div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Send <strong>/ex</strong> to <strong>@CotruglieXbot</strong> in a private chat for your link into the private Vanguard room, then add eX to your home screen.</div><div style="margin-top:8px;"><button class="dl-btn primary" onclick="openUrl('https://ex.cotrugli.tech')">Open eX \u203A</button></div></div>`;
 
   // Sprint 3 Claim Board data
   const sprintSections = [
