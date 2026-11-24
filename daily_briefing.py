@@ -255,6 +255,7 @@ def build_briefing():
 "2026-11-19": {"quote": "📄 <b>My website answers questions now. Only from what I wrote.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528714230280122368/"},
 "2026-11-21": {"quote": "📄 <b>Chasing Jarvis starts next Friday at COTRUGLI Business School in Zagreb</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529104632682565632/"},
 "2026-11-24": {"quote": "📄 <b>Contribute before you announce. That is the golden rule of building in public.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7530540483778039809/"},
+"2026-11-25": {"quote": "📄 <b>Superintelligence is arriving. Who decides how fast, and who is asked?</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7530928180904386560/"},
     }
 
     lines = []
@@ -407,6 +408,7 @@ def build_briefing():
         "2026-11-15": "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?",
         "2026-11-21": "Chasing Jarvis kicks off in Zagreb next week. Chapter 2: which relationship are you still treating as a one-off transaction instead of one built to last?",
         "2026-11-24": "A new Adobe survey found 45% of consumers would lose trust in a brand whose products don't match its marketing claims, yet only 18% of marketers see that as a top risk. Chapter 3: before your next pitch or proposal, what have you given that person that had nothing to do with the sale? Is your reputation arriving before you, or after?",
+        "2026-11-25": "OpenAI's chief scientist has proposed that rival AI labs agree common limits they won't cross until safety monitoring catches up, a positive-sum bet in the middle of a race. Chapter 4: which of the five axioms would the people who deal with you every week say you actually live by, and which one would none of them pick?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":

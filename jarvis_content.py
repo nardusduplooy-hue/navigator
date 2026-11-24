@@ -4643,6 +4643,14 @@ TALI_STEPS = {
         'question': 'Dr. Tali draws a line between deception (pretending interest in someone so you can sell to them) and healthy promotion (showing real work honestly and letting people decide). Think of your next pitch, proposal or announcement. What have you contributed to that audience before asking for anything, and which side of his line does your current message sit on?',
         'model_answer': "Most pitches fail his test quietly rather than dramatically: nobody is lying, but the first real contact is a request, and the value is promised rather than shown. Look at the audience for your next ask and list what they have already received from you that had nothing to do with the sale: a useful introduction, honest advice, a piece of work they could use for free. If the list is empty, the pitch will be heard as noise, however good the product. Then check the message against the Adobe gap: does every claim match what your product or service actually does today, not what it will do after the next release? The perfect merchant's reputation arrived before he did. The Vanguard move: before you send the next pitch, give that person one useful thing with no request attached, and cut any claim you could not demonstrate on the spot.",
     },
+    "2026-11-25": {
+        'step': 'Who Sets the Pace — The Five Axioms',
+        'title': 'What You Can Control in Your Own Work',
+        'url': 'https://www.linkedin.com/feed/update/urn:li:activity:7530928180904386560/',
+        'focus': "Dr. Tali splits the superintelligence question into what sets the pace, what worries him, and what he can control: a human reviews every result, his knowledge lives in plain files he owns, and no single lab's decision is his only option. Chapter 4's axioms make the same move at personal scale: you cannot set the industry's pace, but you can set your own operating rules. Today's AI News shows the industry version: OpenAI's chief scientist proposing common limits rival labs would agree not to cross.",
+        'question': "Dr. Tali can't decide how fast superintelligence arrives, so he lists what he can control: a human reviews every AI result, his knowledge lives in plain files he owns, and no single vendor is his only option. Write your own three-line version for how you work with AI. Which of the five axioms does each line protect?",
+        'model_answer': "Good lines are specific enough that you could catch yourself breaking them. 'I review every client-facing AI output before it leaves my desk' protects Reputational Capital Compounds, because one confident error sent under your name costs more than the hour it saved. 'My notes, templates and data live in files I own, not inside one tool' protects Long-Term Dominates: the vendor that is cheapest this year is not guaranteed to be there, or affordable, in three. 'I can do the core task with a second tool if the first one changes its terms' protects Positive-Sum Wins, because you can only cooperate freely with a partner you are not trapped by. If one of your three lines protects no axiom at all, it is a habit, not a principle. The Vanguard move: write the three lines today, and check this week's AI work against them before Friday's module starts.",
+    },
 
 
 
@@ -7260,8 +7268,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "Adobe, which sells AI marketing tools, surveyed 1,011 US consumers and 502 marketers: 45% of consumers would lose trust in a brand whose products don't match its marketing claims, but only 18% of marketers rank inaccurate claims as a top trust concern",
-    "source": 'Small Business Trends',
+    "headline": "OpenAI chief scientist Jakub Pachocki proposed that frontier AI labs agree common limits they would not cross until AI monitoring reaches set safety milestones; it is a proposal, not a binding agreement, and Microsoft AI's Mustafa Suleyman has already reported a score on the same test",
+    "source": 'OpenAI',
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7598,6 +7606,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "Adobe, which sells AI marketing tools, surveyed 1,011 US consumers and 502 marketers: 45% of consumers would lose trust in a brand whose products don't match its marketing claims, but only 18% of marketers rank inaccurate claims as a top trust concern",
         "source": 'Small Business Trends',
         "url": 'https://smallbiztrends.com/marketers-embrace-ai-as-consumer-trust-gap-widens-for-2027',
+    },
+    "2026-11-25": {
+        "headline": "OpenAI chief scientist Jakub Pachocki proposed that frontier AI labs agree common limits they would not cross until AI monitoring reaches set safety milestones; it is a proposal, not a binding agreement, and Microsoft AI's Mustafa Suleyman has already reported a score on the same test",
+        "source": 'OpenAI',
+        "url": 'https://openai.com/index/perplexity-and-intelligence/',
     },
 }
 
