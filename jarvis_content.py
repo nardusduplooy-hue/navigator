@@ -4651,6 +4651,14 @@ TALI_STEPS = {
         'question': "Dr. Tali can't decide how fast superintelligence arrives, so he lists what he can control: a human reviews every AI result, his knowledge lives in plain files he owns, and no single vendor is his only option. Write your own three-line version for how you work with AI. Which of the five axioms does each line protect?",
         'model_answer': "Good lines are specific enough that you could catch yourself breaking them. 'I review every client-facing AI output before it leaves my desk' protects Reputational Capital Compounds, because one confident error sent under your name costs more than the hour it saved. 'My notes, templates and data live in files I own, not inside one tool' protects Long-Term Dominates: the vendor that is cheapest this year is not guaranteed to be there, or affordable, in three. 'I can do the core task with a second tool if the first one changes its terms' protects Positive-Sum Wins, because you can only cooperate freely with a partner you are not trapped by. If one of your three lines protects no axiom at all, it is a habit, not a principle. The Vanguard move: write the three lines today, and check this week's AI work against them before Friday's module starts.",
     },
+    "2026-11-26": {
+        'step': 'Domain Expert + AI — The NEO Era Battlefield',
+        'title': 'A Domain Expert Powered by AI Becomes Superhuman',
+        'url': 'https://www.linkedin.com/feed/update/urn:li:activity:7531298348130275328/',
+        'focus': "Dr. Tali now opens every programme with one sentence: a domain expert powered by AI becomes superhuman. He sees it in the room: a finance lead, a logistics advisor, a founder with no technical background working as if they had a team, once they learn to give agents the right context. That is Chapter 5's battlefield signal: the new threat is one expert with agents, not a bigger rival. Today's AI News shows how fast that spreads: OpenAI now pays local experts to coach independent small businesses for free.",
+        'question': "Dr. Tali's condition is honest: AI does not make a domain expert superhuman out of the box; you have to learn to give agents the right context. Pick the area at work where you are the expert. What context would an agent need from you to do one real task in it well, and what has stopped you from writing that down?",
+        'model_answer': "Most of what makes you the expert is context you have never had to write down: which clients need a phone call before an invoice, which numbers in a report are usually wrong, which exceptions the process quietly allows. An agent without that context produces confident, average work, which is why experts often conclude AI 'doesn't understand our business'. It doesn't, until you tell it. Pick one recurring task and write a one-page brief: the goal, the inputs, the rules you apply without thinking, and two examples of good output. That page is the asset; the model is replaceable. What usually stops people is not time but the discomfort of seeing their intuition as a list. The Vanguard move: write that one page before Friday's Chasing Jarvis session, and bring the task you want an agent to run with it.",
+    },
 
 
 
@@ -7268,8 +7276,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI chief scientist Jakub Pachocki proposed that frontier AI labs agree common limits they would not cross until AI monitoring reaches set safety milestones; it is a proposal, not a binding agreement, and Microsoft AI's Mustafa Suleyman has already reported a score on the same test",
-    "source": 'OpenAI',
+    "headline": "OpenAI launched OpenWorks, paying AI-savvy local partners up to $8,000 a month to give independent US small businesses free hands-on AI help plus three months of ChatGPT Business; results so far are self-reported, and OpenAI hasn't said what follows the free period",
+    "source": 'Decrypt',
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7611,6 +7619,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI chief scientist Jakub Pachocki proposed that frontier AI labs agree common limits they would not cross until AI monitoring reaches set safety milestones; it is a proposal, not a binding agreement, and Microsoft AI's Mustafa Suleyman has already reported a score on the same test",
         "source": 'OpenAI',
         "url": 'https://openai.com/index/perplexity-and-intelligence/',
+    },
+    "2026-11-26": {
+        "headline": "OpenAI launched OpenWorks, paying AI-savvy local partners up to $8,000 a month to give independent US small businesses free hands-on AI help plus three months of ChatGPT Business; results so far are self-reported, and OpenAI hasn't said what follows the free period",
+        "source": 'Decrypt',
+        "url": 'https://decrypt.co/383848/openai-will-pay-8k-preach-ai-gospel-small-businesses',
     },
 }
 
