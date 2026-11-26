@@ -2033,11 +2033,11 @@ VANGUARD_SUMMARIES = {
             'On the NEO battlefield, threats rarely arrive at full size. They show up as a small competitor winning one deal on speed, a client trying an AI tool instead of calling you, a junior colleague doing in an hour what took your team a week. Each looks too small to act on. List the three smallest signals you noticed this month and ask which one would worry you if it doubled every quarter. That is the one to act on now.'
         ),
     },
-    '2026-11-27': {
-        "title": 'Know the Ground Before You Commit the Troops',
+    "2026-11-27": {
+        "title": 'Three Days in the Field: Arrive With a Mission, Not Just a Laptop',
         "chapter": 'Chapter 6: Business as Warfare',
         "summary": (
-            "Every serious campaign starts with reconnaissance, not action. Before your next major commitment of budget, people or reputation, write down what you actually know about the ground: the client's real constraints, the competitor's real position, your team's real capacity. Then mark which of those you have verified and which you are assuming. Most failed campaigns were lost in the gap between the two, long before the first move."
+            "Mission command starts with an intent clear enough to act on without asking. This weekend's Chasing Jarvis module gives you three days to build and test an AI prototype, and the people who leave with something working will be the ones who arrived knowing what it should do. Before 09:00 Zagreb time, write one sentence: the problem your prototype solves, for whom, and how you will know on Sunday that it works. Then hold yourself to it."
         ),
     },
     '2026-11-28': {
@@ -4659,6 +4659,14 @@ TALI_STEPS = {
         'question': "Dr. Tali's condition is honest: AI does not make a domain expert superhuman out of the box; you have to learn to give agents the right context. Pick the area at work where you are the expert. What context would an agent need from you to do one real task in it well, and what has stopped you from writing that down?",
         'model_answer': "Most of what makes you the expert is context you have never had to write down: which clients need a phone call before an invoice, which numbers in a report are usually wrong, which exceptions the process quietly allows. An agent without that context produces confident, average work, which is why experts often conclude AI 'doesn't understand our business'. It doesn't, until you tell it. Pick one recurring task and write a one-page brief: the goal, the inputs, the rules you apply without thinking, and two examples of good output. That page is the asset; the model is replaceable. What usually stops people is not time but the discomfort of seeing their intuition as a list. The Vanguard move: write that one page before Friday's Chasing Jarvis session, and bring the task you want an agent to run with it.",
     },
+    "2026-11-27": {
+        'step': 'Chasing Jarvis Day 1 — Business as Warfare',
+        'title': 'Arrive With a Mission',
+        'url': 'https://www.linkedin.com/feed/update/urn:li:activity:7531298348130275328/',
+        'focus': "Chasing Jarvis starts today: three days with Dr. Tali Režun and Srđan Jovanović to build and test your own AI prototype. Dr. Tali opens every programme with 'a domain expert powered by AI becomes superhuman', on one condition: you learn to give agents the right context. Chapter 6 adds the discipline of the campaign: intent first, then action. Today's AI News is the warning: an app agency found many AI-built prototypes it was asked to rescue had never launched, and owners didn't always control their own code.",
+        'question': 'By Sunday you should have a working AI prototype. In one sentence: what problem will it solve, for whom, and how will you know on Sunday that it works? Then name the one piece of context about your domain that the agents will need from you on day one.',
+        'model_answer': "A good mission sentence is narrow enough to finish in three days, for example: 'Turn the weekly sales export into a one-page summary for the regional manager that flags the three accounts that dropped most; it works if she would send it on unchanged.' Notice what that rules out: no dashboard, no new data source, no feature you cannot test by Sunday. The context is the part only you can supply: the rules you apply without thinking, what a good output looks like, two real examples, and the exceptions that trip up new people. Write it in plain files you own, and keep your own copy of everything the prototype depends on; the agency study found owners who could not take their own app with them. The Vanguard move: write the sentence and the context file before 09:00 Zagreb time, and test the prototype against that sentence at the end of each day.",
+    },
 
 
 
@@ -7276,8 +7284,8 @@ SUPPLEMENTARY_RESOURCE = {
 }
 
 AI_NEWS_TODAY = {
-    "headline": "OpenAI launched OpenWorks, paying AI-savvy local partners up to $8,000 a month to give independent US small businesses free hands-on AI help plus three months of ChatGPT Business; results so far are self-reported, and OpenAI hasn't said what follows the free period",
-    "source": 'Decrypt',
+    "headline": "An app agency's review of 570 project inquiries found most apps it was asked to rescue had never launched, AI-built prototypes often arrived unfinished, and in five of six recent sales calls owners did not fully control their own code or accounts; the agency says its data isn't representative",
+    "source": 'AppMakers USA',
 }
 
 # AI_NEWS_OVERRIDE — per-date forced AI News, bypassing the live VentureBeat RSS
@@ -7624,6 +7632,11 @@ AI_NEWS_OVERRIDE = {
         "headline": "OpenAI launched OpenWorks, paying AI-savvy local partners up to $8,000 a month to give independent US small businesses free hands-on AI help plus three months of ChatGPT Business; results so far are self-reported, and OpenAI hasn't said what follows the free period",
         "source": 'Decrypt',
         "url": 'https://decrypt.co/383848/openai-will-pay-8k-preach-ai-gospel-small-businesses',
+    },
+    "2026-11-27": {
+        "headline": "An app agency's review of 570 project inquiries found most apps it was asked to rescue had never launched, AI-built prototypes often arrived unfinished, and in five of six recent sales calls owners did not fully control their own code or accounts; the agency says its data isn't representative",
+        "source": 'AppMakers USA',
+        "url": 'https://www.24-7pressrelease.com/press-release/540850/ai-built-app-prototypes-are-reaching-agencies-unfinished-appmakers-usa-inquiry-study-finds',
     },
 }
 

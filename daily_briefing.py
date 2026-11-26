@@ -257,6 +257,7 @@ def build_briefing():
 "2026-11-24": {"quote": "📄 <b>Contribute before you announce. That is the golden rule of building in public.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7530540483778039809/"},
 "2026-11-25": {"quote": "📄 <b>Superintelligence is arriving. Who decides how fast, and who is asked?</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7530928180904386560/"},
 "2026-11-26": {"quote": "📄 <b>A domain expert powered by AI becomes superhuman.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7531298348130275328/"},
+"2026-11-27": {"quote": "📄 <b>A domain expert powered by AI becomes superhuman.</b>", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7531298348130275328/"},
     }
 
     lines = []
@@ -411,6 +412,7 @@ def build_briefing():
         "2026-11-24": "A new Adobe survey found 45% of consumers would lose trust in a brand whose products don't match its marketing claims, yet only 18% of marketers see that as a top risk. Chapter 3: before your next pitch or proposal, what have you given that person that had nothing to do with the sale? Is your reputation arriving before you, or after?",
         "2026-11-25": "OpenAI's chief scientist has proposed that rival AI labs agree common limits they won't cross until safety monitoring catches up, a positive-sum bet in the middle of a race. Chapter 4: which of the five axioms would the people who deal with you every week say you actually live by, and which one would none of them pick?",
         "2026-11-26": "OpenAI will now pay local experts up to $8,000 a month to help independent small businesses adopt AI for free. Chapter 5: next year's dangerous competitor may be a small one getting a coach this month. Which small signal in your market have you dismissed, and would it worry you if it doubled every quarter?",
+        "2026-11-27": "Chasing Jarvis starts today at 09:00 Zagreb time (10:00 SA). A new agency study found most AI-built prototypes it was asked to rescue had never launched, and owners often didn't control their own code. Chapter 6: what single mission will your prototype serve by Sunday, and will you own every file it runs on?",
     }
     lines.append(vanguard_teams_lines.get(date_key, "The reputation you are building today was started by how you showed up last month. What are you adding to the ledger this week?"))
     if date_key == "2026-08-10":
@@ -594,6 +596,18 @@ def build_briefing():
                     "\u2022 \U0001f5d3 Today, Saturday 31 October 2026 @ 17:00 Belgrade / Ljubljana (18:00 SA time)\n"
                     "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/31/?wm=1&amp;mi=89651107877'>\u2192 Join Zoom Meeting</a>\n"
                     "<b>Meeting ID:</b> 896 5110 7877 | <b>Passcode:</b> VANGUR27</blockquote>"
+                )
+                lines.append("")
+            elif date_key == "2026-11-27":
+                # 27 Nov: Day 1 of the AI Development and Management module (Nardus: weekend session is the focus; Zagreb time)
+                lines.append("\U0001f4c5 <b>ZOOM SESSION — TODAY</b>")
+                lines.append(
+                    "<blockquote>\U0001f534 <b>TODAY: Day 1 of 3 — AI Development and Management (Chasing Jarvis)</b>\n"
+                    "Dr. Tali Režun &amp; Srđan Jovanović · build and test your own AI prototype\n"
+                    "• \U0001f5d3 Today, Friday 27 Nov, 09:00 Zagreb time (10:00 SA time) · continues Sat 28 and Sun 29 Nov, same time\n"
+                    "<a href='https://cotrugli.online/groups/vanguard/zoom/meetings/32/?wm=1&amp;mi=83445885712'>\u2192 Join Zoom Meeting</a>\n"
+                    "<b>Meeting ID:</b> 834 4588 5712 | <b>Passcode:</b> AIDM26\n"
+                    "<a href='https://cotrugli.online/courses/ai-development-and-management-vng/'>\u2192 Syllabus &amp; pre-readings</a></blockquote>"
                 )
                 lines.append("")
             elif date_key >= "2026-11-18":
